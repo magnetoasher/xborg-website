@@ -28,17 +28,17 @@ a {
 }
 
 h1 {
-  font-family: $secondary-font-family;
   font-size: 60px;
   line-height: 64px;
-  letter-spacing: 9px;
+  letter-spacing: 6px;
+  font-weight: 900;
 }
 
 h2 {
-  font-family: $secondary-font-family;
+  font-family: "Lexend", sans-serif;
+  font-weight: 900;
   color: $primary100;
   font-size: 40px;
-  font-weight: 600;
   line-height: 50px;
   letter-spacing: 0.1em;
 }

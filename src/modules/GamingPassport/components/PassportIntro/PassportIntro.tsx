@@ -14,6 +14,9 @@ export const PassportIntro = () => {
   return (
     <div className={`passport-intro expand row middle between`}>
       <div className='description'>
+        <div className='logo-icon'>
+          <img src={Images.logofull} alt='' />
+        </div>
         <SectionHead
           title='Gaming Passport'
           description='Get rewarded for playing your favourite games.'

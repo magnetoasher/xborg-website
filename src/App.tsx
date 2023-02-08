@@ -9,6 +9,8 @@ import "swiper/css/pagination";
 
 import "./styles/main.css";
 
+import "vanilla-tilt";
+
 function App() {
   return (
     <BrowserRouter>

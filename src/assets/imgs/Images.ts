@@ -4,6 +4,7 @@ export const Images = {
   chevron_left: require("./chevron-left.svg"),
   chevron_right: require("./chevron-right.svg"),
   arrow_s_down: require("./arrow-square-down.svg"),
+  logofull: require("./logofull.svg").default,
   partners: {
     partner01: require("./partners/swissborg.png"),
     partner02: require("./partners/myria.png"),
@@ -57,7 +58,12 @@ export const Images = {
       member10: require("./team/sean.png"),
     },
     players: {
-      member01: require("./players/Rectangle_289.png"),
+      lex: require("./players/lex.png"),
+      bicboi: require("./players/bicboi.png"),
+      xen0: require("./players/xen0.png"),
+      m2rk: require("./players/m2rk.png"),
+      eskezje: require("./players/eskezje.png"),
+      sjud: require("./players/sjud.png"),
     },
   },
 
@@ -106,9 +112,10 @@ export const Images = {
     gala: require("./XCS/gala.png"),
 
     evio: require("./XCS/evio.png"),
-    hidden02: require("./XCS/hidden02.png"),
+    harvest: require("./XCS/theharvest.png"),
     hidden03: require("./XCS/hidden03.png"),
     hidden04: require("./XCS/hidden04.png"),
+    hidden05: require("./XCS/hidden05.png"),
   },
 
   gamingpassport: {

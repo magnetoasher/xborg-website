@@ -8,6 +8,49 @@
     max-height: 539px;
   }
 
+  .section-head-desc {
+    max-width: 445px;
+  }
+
+  .parallaxed-1 {
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 46.01%;
+      height: 0;
+      width: 0.93%;
+      transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
+      transition-delay: 0.2s;
+      mix-blend-mode: lighten;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 49.72%;
+      height: 0;
+      z-index: 2;
+      width: 5.01%;
+      transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
+      mix-blend-mode: lighten;
+    }
+  }
+
+  .parallaxed.in {
+    .parallaxed-1 {
+      &:after,
+      &:before {
+        background-color: $primary100;
+        box-shadow: 0 0 50px rgba(235, 58, 74, 0.5);
+        height: 82.19%;
+      }
+    }
+  }
+
   @media (max-width: $md-max) {
     flex-direction: column-reverse;
     justify-content: flex-start;

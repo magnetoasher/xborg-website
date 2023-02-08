@@ -15,19 +15,23 @@ export const TierOne = () => {
       <div className='games row'>
         <div className='single-game row middle'>
           <img src={Images.XCS.evio} alt='Ev.io' />
-          <div className='desc'>Mint your free Ev.io NFT</div>
+          <div className='desc'></div>
         </div>
         <div className='single-game row middle'>
-          <img src={Images.XCS.hidden02} alt='Hidden' />
-          <div className='desc'>Announcement on the 10/02</div>
+          <img src={Images.XCS.harvest} alt='The Harvest' />
+          <div className='desc'></div>
         </div>
         <div className='single-game row middle'>
           <img src={Images.XCS.hidden03} alt='Hidden' />
-          <div className='desc'>Announcement on the 08/02</div>
+          <div className='desc'>Announcement on the 10/02</div>
         </div>
         <div className='single-game row middle'>
           <img src={Images.XCS.hidden04} alt='Hidden' />
           <div className='desc'>Announcement on the 14/02</div>
+        </div>
+        <div className='single-game row middle'>
+          <img src={Images.XCS.hidden05} alt='Hidden' />
+          <div className='desc'>Announcement on the 16/02</div>
         </div>
       </div>
     </div>

@@ -8,20 +8,34 @@ import { Link } from "react-router-dom";
 export const OurPlayers = () => {
   const players: SinglePlayerType[] = [
     {
-      image: "",
-      name: "Player Name",
-      description: "Player description goes here...",
+      image: Images.aboutUs.players.lex,
+      name: "Lex",
+      description: "XBorg ev.io captain",
     },
     {
-      image: "",
-      name: "John Doe",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetti...",
+      image: Images.aboutUs.players.eskezje,
+      name: "Eskezje",
+      description: "XBorg ev.io player",
     },
     {
-      image: "",
-      name: "Jane Dao",
-      description: "Player description goes here...",
+      image: Images.aboutUs.players.bicboi,
+      name: "BicBoi",
+      description: "XBorg ev.io player",
+    },
+    {
+      image: Images.aboutUs.players.m2rk,
+      name: "M2rk",
+      description: "XBorg ev.io player",
+    },
+    {
+      image: Images.aboutUs.players.xen0,
+      name: "Xen0",
+      description: "XBorg ev.io player",
+    },
+    {
+      image: Images.aboutUs.players.sjud,
+      name: "SJUD",
+      description: "XBorg Illuvium captain",
     },
   ];
   const tournamentsWon = 34;
@@ -70,7 +84,7 @@ export const OurPlayers = () => {
         >
           {players.map((player: SinglePlayerType, index: number) => (
             <SwiperSlide key={index} className='row column'>
-              <img src={Images.aboutUs.players.member01} alt={player.name} />
+              <img src={player.image} alt={player.name} />
 
               <div className='swiper-name'>{player.name}</div>
               <div className='swiper-description'>{player.description}</div>

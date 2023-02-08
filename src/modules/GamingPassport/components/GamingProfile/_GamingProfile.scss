@@ -11,6 +11,10 @@
     padding-left: 80px;
   }
 
+  .section-head-title {
+    max-width: 410px;
+  }
+
   .section-head-desc {
     max-width: 560px;
   }
@@ -19,6 +23,10 @@
     flex-direction: column-reverse;
     justify-content: flex-start;
     width: 100%;
+
+    .section-head-title {
+      max-width: 250px;
+    }
 
     .description {
       flex: initial;

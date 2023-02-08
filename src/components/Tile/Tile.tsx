@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react";
+import VanillaTilt from "vanilla-tilt";
 import { Images } from "../../assets/imgs/Images";
 
 export type TileType = {
@@ -7,8 +9,18 @@ export type TileType = {
 };
 
 export const Tile = (data: TileType) => {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    if (ref.current) {
+      VanillaTilt.init(ref.current, {
+        scale: 1.1,
+        max: 10,
+      });
+    }
+  }, []);
   return (
-    <div className='tile'>
+    <div className='tile' ref={ref}>
       <div className='image'>
         <img src={data.image ?? Images.noimg} alt='' />
       </div>
