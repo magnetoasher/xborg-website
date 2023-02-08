@@ -159,7 +159,6 @@ export class ScrollViewModel {
       const rounding = 10;
 
       if (Math.ceil(wrapper.scrollTop) < pos - rounding) {
-        console.log("GET INDEX --- ", { scroll: wrapper.scrollTop, pos });
         index = i;
         break;
       }
