@@ -2426,7 +2426,7 @@ h4 {
 }
 
 @media (max-width: 1200px) {
-  .about-us .partners {
+  .about-us .partners .powered-by {
     padding-left: 0;
   }
 }
