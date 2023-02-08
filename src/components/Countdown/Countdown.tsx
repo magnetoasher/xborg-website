@@ -61,13 +61,13 @@ export const Countdown = ({ date }: CountdownType) => {
   // Make arrays and make sure it always have at least
   // 2 numbers in it with 0 in front
   let daysArray = time.days.toString().split("");
-  if (daysArray.length == 1) daysArray.unshift("0");
+  if (daysArray.length === 1) daysArray.unshift("0");
   let hoursArray = time.hours.toString().split("");
-  if (hoursArray.length == 1) hoursArray.unshift("0");
+  if (hoursArray.length === 1) hoursArray.unshift("0");
   let minutesArray = time.minutes.toString().split("");
-  if (minutesArray.length == 1) minutesArray.unshift("0");
+  if (minutesArray.length === 1) minutesArray.unshift("0");
   let secondsArray = time.seconds.toString().split("");
-  if (secondsArray.length == 1) secondsArray.unshift("0");
+  if (secondsArray.length === 1) secondsArray.unshift("0");
 
   return (
     <div className='countdown row'>

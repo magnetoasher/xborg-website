@@ -46,7 +46,7 @@ export class TextScramble {
         output += to;
       } else if (this.frame >= start) {
         if (!char || Math.random() < 0.28) {
-          if (this.queue[i].to == " ") {
+          if (this.queue[i].to === " ") {
             char = " ";
           } else {
             char = this.randomChar();

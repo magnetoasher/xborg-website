@@ -1,15 +1,16 @@
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ObserverContainer, SectionHead } from "../../../../components";
-import { useSelector } from "react-redux";
-import { GlobalState } from "../../../../reducer";
 import { Images } from "../../../../assets/imgs/Images";
 import { SinglePlayerType } from "../../../../redux/aboutUs/types";
+import { playersMock } from "../../../../mocks/players";
+import { Link } from "react-router-dom";
 
 export const OurPlayers = () => {
-  const { tournamentsWon, tournamentWinning, players } = useSelector(
-    (state: GlobalState) => state.aboutUs,
-  );
+  const players = playersMock;
+  const tournamentsWon = 34;
+  const tournamentWinning = 30000;
+
   return (
     <div className={`our-players expand row middle between`}>
       <div className='description expand row column'>
@@ -32,12 +33,12 @@ export const OurPlayers = () => {
         </div>
       </div>
       <ObserverContainer className='expand players-swiper'>
-        <a href='#' className='swiper-prev'>
-          <img src={Images.chevron_left.default} />
-        </a>
-        <a href='#' className='swiper-next'>
-          <img src={Images.chevron_right.default} />
-        </a>
+        <Link to='' className='swiper-prev'>
+          <img src={Images.chevron_left.default} alt='left' />
+        </Link>
+        <Link to='' className='swiper-next'>
+          <img src={Images.chevron_right.default} alt='right' />
+        </Link>
         <Swiper
           parallax
           pagination={{

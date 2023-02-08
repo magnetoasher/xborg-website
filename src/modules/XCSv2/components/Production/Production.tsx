@@ -15,7 +15,7 @@ export const Production = () => {
       list: [
         {
           id: "1",
-          label: "Livestream Finals 27th, 28th, 29th, 30th",
+          label: "Livestream Finals 27th, 28th, 29th, 30th, 31st",
         },
       ],
     },

@@ -19,10 +19,10 @@ export const SectionHead = ({
   const ref = useRef(null);
   const loaded = useSelector((state: GlobalState) => state.site.loaded);
   const [active, setActive] = useState<boolean>(false);
-  const scrollVM = new ScrollViewModel();
 
   useEffect(() => {
     if (ref.current && loaded) {
+      const scrollVM = new ScrollViewModel();
       scrollVM.isInViewPortObserver(ref.current, callbackIn, callbackOut);
     }
   }, [loaded]);

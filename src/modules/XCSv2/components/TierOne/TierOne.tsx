@@ -1,9 +1,5 @@
 import { Images } from "../../../../assets/imgs/Images";
-import {
-  ParallaxLayer,
-  ObserverContainer,
-  SectionHead,
-} from "../../../../components";
+import { SectionHead } from "../../../../components";
 
 export const TierOne = () => {
   return (

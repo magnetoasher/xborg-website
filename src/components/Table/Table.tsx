@@ -1,5 +1,3 @@
-import { Images } from "../../assets/imgs/Images";
-
 export type TableType = {
   data: TableDataColumn[];
 };

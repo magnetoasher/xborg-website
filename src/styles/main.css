@@ -2414,8 +2414,8 @@ h4 {
 }
 
 .about-us .partners .powered-by {
-  max-width: 480px;
   position: relative;
+  padding-left: 50px;
 }
 
 .about-us .partners .main-partner {
@@ -3439,6 +3439,7 @@ h4 {
 .xcs .become-legend .btn-container .btn-primary {
   margin-left: 26px;
   margin-top: 32px;
+  font-weight: 600;
 }
 
 .xcs .become-legend .parallaxed.in .blurred-circle {
@@ -3935,6 +3936,7 @@ h4 {
 .xcs .dont-miss .btn-container .btn-primary {
   margin-left: 22px;
   margin-top: 24px;
+  font-weight: 600;
 }
 
 .xcs .dont-miss .pick-game {

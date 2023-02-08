@@ -1,10 +1,8 @@
-import axios from "axios";
 import { playersMock } from "../../mocks/players";
 import { teamMock } from "../../mocks/team";
 import { GET_TEAM } from "./types";
 
 const ActionCreators = {
-  // Demo API call
   getAboutUs: () => ({
     type: GET_TEAM,
     // payload: axios.get("/get_team"),

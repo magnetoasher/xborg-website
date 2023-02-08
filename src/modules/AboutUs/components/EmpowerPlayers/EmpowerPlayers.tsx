@@ -1,15 +1,12 @@
-import { useSelector } from "react-redux";
 import { Images } from "../../../../assets/imgs/Images";
 import {
   ParallaxLayer,
   ObserverContainer,
   SectionHead,
 } from "../../../../components";
-import { GlobalState } from "../../../../reducer";
 
 export const EmpowerPlayers = () => {
-  const { passportSigns } = useSelector((state: GlobalState) => state.aboutUs);
-
+  const passportSigns = 10000;
   return (
     <div className={`empower-players expand row middle between`}>
       <div className='description expand'>
