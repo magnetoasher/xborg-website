@@ -9,6 +9,8 @@ import {
 import { Countdown } from "../../../../components/Countdown";
 
 export const PassportIntro = () => {
+  const spotsClaimed = 1000;
+  const maxSpots = 1000;
   return (
     <div className={`passport-intro expand row middle between`}>
       <div className='description'>
@@ -18,24 +20,24 @@ export const PassportIntro = () => {
         />
         <div className='wave-details row between'>
           <div className='wave'>
-            <div className='title'>Wave 1</div>
+            <div className='title'>All spots filled</div>
             <div className='subtitle'>Closed Beta</div>
           </div>
           <div className='spots'>
             <div className='title'>Spots Claimed</div>
             <div className='subtitle'>
-              <span>524</span>/1000
+              <span>{spotsClaimed} </span>/{maxSpots}
             </div>
           </div>
         </div>
-        <Progressbar progress={52} />
+        <Progressbar progress={100} />
         <div className='wave-ends row middle center'>
-          <div className='title'>First wave ends in:</div>
-          <Countdown date={new Date("Jan 5, 2024 15:37:25")} />
+          <div className='title'>Public beta ends in:</div>
+          <Countdown date={new Date("Feb 28, 2023 23:59:59")} />
         </div>
 
         <div className='row between middle actions'>
-          <ButtonPrimary label='Get Early Access' />
+          <ButtonPrimary label='Launch App' />
 
           <div className='plus' />
 

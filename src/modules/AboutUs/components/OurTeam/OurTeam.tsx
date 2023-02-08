@@ -6,7 +6,7 @@ export const OurTeam = () => {
   const team: TileType[] = [
     {
       image: Images.aboutUs.team.member01,
-      title: "Lois Regis",
+      title: "Louis Regis",
       desc: "CEO",
     },
     {

@@ -3101,6 +3101,10 @@ h4 {
   max-height: 422px;
 }
 
+.launchpad-page .only-the-best .section-head-desc {
+  max-width: 350px;
+}
+
 @media (max-width: 992px) {
   .launchpad-page .only-the-best {
     -webkit-box-orient: vertical;
@@ -3189,7 +3193,7 @@ h4 {
   }
 }
 
-.launchpad-page .page-section- {
+.launchpad-page .page-section-3 {
   height: 100vh;
 }
 
