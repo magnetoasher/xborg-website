@@ -3,11 +3,27 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { ObserverContainer, SectionHead } from "../../../../components";
 import { Images } from "../../../../assets/imgs/Images";
 import { SinglePlayerType } from "../../../../redux/aboutUs/types";
-import { playersMock } from "../../../../mocks/players";
 import { Link } from "react-router-dom";
 
 export const OurPlayers = () => {
-  const players = playersMock;
+  const players: SinglePlayerType[] = [
+    {
+      image: "",
+      name: "Player Name",
+      description: "Player description goes here...",
+    },
+    {
+      image: "",
+      name: "John Doe",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetti...",
+    },
+    {
+      image: "",
+      name: "Jane Dao",
+      description: "Player description goes here...",
+    },
+  ];
   const tournamentsWon = 34;
   const tournamentWinning = 30000;
 

@@ -28,6 +28,10 @@
     position: absolute;
   }
 
+  @media (max-width: $lg-max) {
+    padding-left: 0;
+  }
+
   @media (max-width: $md-max) {
     .partners-content {
       flex-direction: column;
