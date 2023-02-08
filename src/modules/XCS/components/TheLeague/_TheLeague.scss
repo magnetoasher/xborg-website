@@ -1,0 +1,76 @@
+.the-league {
+  .section-head-title,
+  .section-head-desc {
+    max-width: 410px;
+  }
+
+  .parallaxed {
+    max-width: 500px;
+
+    img {
+      opacity: 0;
+      transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .line {
+      width: 1px;
+      height: 0;
+      background-color: $primary100;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      margin-left: -20px;
+      transition: 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+  }
+
+  .parallaxed-1 img {
+    transform: translate(-200%, 100%);
+    max-width: 435px;
+    max-height: 479px;
+  }
+  .parallaxed-2 img {
+    transform: translate(200%, 100%);
+    max-width: 446px;
+    max-height: 362px;
+  }
+
+  .parallaxed.in {
+    .line {
+      transition-delay: 0.4s;
+      box-shadow: 0 0 10px 0 #eb3a4a;
+      height: 348px;
+    }
+
+    .parallaxed-1 img {
+      transform: translate(-50%, 10%);
+      opacity: 1;
+    }
+    .parallaxed-2 img {
+      transform: translate(50%, 0);
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: $md-max) {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .description {
+      flex: initial;
+      padding-left: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .parallaxed {
+      margin-top: 40px;
+      flex: initial;
+
+      .line {
+        margin: 0;
+      }
+    }
+  }
+}

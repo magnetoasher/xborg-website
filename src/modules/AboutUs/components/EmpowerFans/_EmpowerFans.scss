@@ -1,0 +1,54 @@
+.page-section-1 {
+  height: 100vh;
+}
+
+.empower-fans {
+  .parallaxed img {
+    max-width: 502px;
+    max-height: 539px;
+  }
+
+  .section-head-title {
+    max-width: 450px;
+  }
+
+  .section-head-desc {
+    max-width: 510px;
+  }
+
+  .parallaxed-1 img {
+    opacity: 0;
+    transform: scale(0.7);
+    transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .parallaxed.in {
+    .parallaxed-1 img {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @media (max-width: $md-max) {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+
+    .parallaxed {
+      flex: initial;
+      margin-top: 24px;
+    }
+
+    .description {
+      flex: initial;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $sm-max) {
+    .parallaxed {
+      img {
+        max-width: 302px;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.about-us {
+  .parallaxed {
+    height: 100%;
+    width: 100%;
+  }
+
+  @import "./components/EmpowerPlayers/EmpowerPlayers";
+  @import "./components/EmpowerFans/EmpowerFans";
+  @import "./components/Esports/Esports";
+  @import "./components/Prometheus/Prometheus";
+  @import "./components/OurPlayers/OurPlayers";
+  @import "./components/OurTeam/OurTeam";
+  @import "./components/Partners/Partners";
+  @import "./components/BecomeXplorer/BecomeXplorer";
+}

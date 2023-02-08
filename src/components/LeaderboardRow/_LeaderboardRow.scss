@@ -1,0 +1,73 @@
+.leaderboard-row {
+  padding: 16px;
+  background-color: $neutral900;
+  max-width: 393px;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+
+  .image {
+    width: 56px;
+    height: 56px;
+    margin-left: 32px;
+    margin-right: 16px;
+    background-color: $dark100;
+  }
+
+  .index {
+    font-size: 17px;
+    font-weight: bold;
+    width: 39px;
+    height: 39px;
+  }
+
+  &:first-child {
+    .index {
+      background-image: linear-gradient(90deg, #c19930 0%, #8c6d00 100%);
+      border: 1px solid #cfac2f;
+    }
+  }
+
+  &:nth-child(2) {
+    .index {
+      background-image: linear-gradient(90deg, #9d9d9d 0%, #595959 100%);
+      border: 1px solid #acacac;
+    }
+  }
+
+  &:nth-child(3) {
+    .index {
+      background-image: linear-gradient(90deg, #7d4a2c 0%, #452d18 100%);
+      border: 1px solid #a15917;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .name {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .level {
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 8px;
+    padding: 4px 8px;
+    background-image: linear-gradient(90deg, #1a1c23 0%, #2f323e 100%);
+  }
+
+  .xp {
+    margin-left: 63px;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
+
+    img {
+      width: 16px;
+      margin-right: 12px;
+    }
+  }
+}

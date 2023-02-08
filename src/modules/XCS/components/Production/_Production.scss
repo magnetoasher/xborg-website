@@ -1,0 +1,32 @@
+.production {
+  .parallaxed {
+    img {
+      max-height: 428px;
+      max-width: 428px;
+    }
+  }
+
+  .section-head-title {
+    max-width: 400px;
+  }
+
+  .section-head-desc {
+    max-width: 380px;
+  }
+
+  @media (max-width: $md-max) {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+
+    .description {
+      flex: initial;
+      padding-left: 0;
+      width: 100%;
+    }
+
+    .parallaxed {
+      margin-top: 40px;
+      flex: initial;
+    }
+  }
+}

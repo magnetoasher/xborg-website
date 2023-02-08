@@ -1,0 +1,55 @@
+.have-your-say {
+  .section-head-desc {
+    max-width: 390px;
+  }
+
+  .parallaxed {
+    img {
+      max-width: 460px;
+      max-height: 351px;
+      opacity: 0;
+      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  .parallaxed-1 img {
+    transform: translateY(10%);
+  }
+
+  .parallaxed-4 img {
+    transform: translateY(10%);
+  }
+
+  .parallaxed.in {
+    img {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+
+    .parallaxed-1 img {
+      transition-delay: 0.3s;
+    }
+    .parallaxed-2 img {
+      transition-delay: 1.2s;
+    }
+    .parallaxed-5 img {
+      transition-delay: 0.8s;
+    }
+  }
+
+  @media (max-width: $md-max) {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+
+    .description {
+      flex: initial;
+      padding-left: 0;
+      width: 100%;
+    }
+
+    .parallaxed {
+      margin-top: 40px;
+      flex: initial;
+    }
+  }
+}

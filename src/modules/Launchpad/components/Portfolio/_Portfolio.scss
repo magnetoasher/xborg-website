@@ -1,0 +1,59 @@
+.page-section-4 {
+  height: 100vh;
+}
+
+.portfolio {
+  .list {
+    .tile {
+      width: 20%;
+    }
+  }
+
+  .statistics {
+    margin-top: 100px;
+
+    .stats-label {
+      line-height: 28px;
+      margin-top: 8px;
+    }
+
+    .col {
+      padding: 0 16px;
+      width: 20%;
+    }
+  }
+
+  @media (max-width: $lg-max) {
+    .list {
+      flex-wrap: wrap;
+
+      .tile {
+        width: 33.333%;
+      }
+    }
+
+    .statistics {
+      .col {
+        width: 25%;
+      }
+    }
+  }
+
+  @media (max-width: $md-max) {
+    .list {
+      .tile {
+        width: 50%;
+      }
+    }
+
+    .statistics {
+      flex-wrap: wrap;
+      margin-top: 0;
+
+      .col {
+        width: 50%;
+        margin-top: 30px;
+      }
+    }
+  }
+}

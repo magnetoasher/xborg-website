@@ -1,0 +1,109 @@
+@font-face {
+  font-family: $secondary-font-family;
+  src: url("../assets/fonts/vista_nordic/VistaNordic Black.ttf");
+  src: url("../assets/fonts/vista_nordic/VistaNordic Black.otf");
+}
+
+a {
+  color: $light100;
+  text-decoration: none;
+}
+
+.dud {
+  opacity: 0.5;
+}
+
+.statistics {
+  .stats-value {
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    color: $primary100;
+  }
+
+  .stats-label {
+    font-size: 15px;
+    letter-spacing: 0.1em;
+  }
+}
+
+h1 {
+  font-family: $secondary-font-family;
+  font-size: 60px;
+  line-height: 64px;
+  letter-spacing: 9px;
+}
+
+h2 {
+  font-family: $secondary-font-family;
+  color: $primary100;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 50px;
+  letter-spacing: 0.1em;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 700;
+  color: $primary100;
+}
+
+h4 {
+  font-size: 24px;
+  font-family: $secondary-font-family;
+  letter-spacing: 0.15rem;
+}
+
+.typography {
+  h3 {
+    margin-bottom: 16px;
+    margin-top: 32px;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 32px;
+    color: $light100;
+  }
+
+  ul {
+    list-style-type: disc;
+    letter-spacing: 0.05em;
+    padding-left: 24px;
+    line-height: 26px;
+
+    li {
+      padding-bottom: 4px;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: $md-max) {
+  .statistics {
+    .stats-value {
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  h4 {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .typography {
+    ul {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.tile {
+  padding: 0 16px;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 32px;
+
+  .image {
+    width: 100%;
+    max-width: 202px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-name {
+    margin-top: 16px;
+  }
+
+  &-desc {
+    color: $primary100;
+  }
+}

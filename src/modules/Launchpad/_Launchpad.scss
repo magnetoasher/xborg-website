@@ -1,0 +1,12 @@
+.launchpad-page {
+  .parallaxed {
+    position: relative;
+  }
+
+  @import "./components/InvestGameFi/InvestGameFi";
+  @import "./components/OnlyTheBest/OnlyTheBest";
+  @import "./components/PublicSales/PublicSales";
+  @import "./components/LeaveYourMark/LeaveYourMark";
+  @import "./components/Portfolio/Portfolio";
+  @import "./components/GetStarted/GetStarted";
+}

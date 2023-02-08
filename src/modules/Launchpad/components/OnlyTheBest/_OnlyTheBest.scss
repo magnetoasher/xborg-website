@@ -1,0 +1,28 @@
+.only-the-best {
+  .parallaxed img {
+    max-width: 422px;
+    max-height: 422px;
+  }
+
+  @media (max-width: $md-max) {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+
+    .description {
+      flex: initial;
+      padding-left: 0;
+      width: 100%;
+    }
+
+    .parallaxed {
+      margin-top: 40px;
+      flex: initial;
+    }
+
+    .btn-container {
+      .btn-secondary {
+        width: 100%;
+      }
+    }
+  }
+}

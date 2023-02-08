@@ -1,0 +1,32 @@
+.app-content {
+  position: relative;
+}
+
+.page-section {
+  min-height: 100vh;
+  width: 100vw;
+  padding: $header-xl $container-padding $footer-xl;
+
+  @media all and (device-width: 1024px) and (device-height: 1366px) and (orientation: portrait) {
+    min-height: 50vh;
+  }
+
+  @media (max-height: 580px) {
+    height: auto !important;
+  }
+
+  @media (max-width: $lg-max) {
+    padding: 24px 30px $footer-xl 120px;
+    min-height: 70vh;
+    height: auto !important;
+  }
+
+  @media (max-width: $sm-max) {
+    padding: 0 24px;
+    min-height: 0;
+  }
+
+  @media (max-width: $xxs-max) {
+    padding: 0 10px;
+  }
+}

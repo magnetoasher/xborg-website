@@ -1,0 +1,85 @@
+$btn_primary_transition: 0.15s ease-in-out;
+
+.btn-primary {
+  background-color: $primary100;
+  padding: 16px;
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  line-height: 15px;
+  position: relative;
+  white-space: nowrap;
+  transition: $btn_primary_transition;
+
+  svg {
+    position: relative;
+    margin-left: 10px;
+
+    path {
+      stroke: #fcfcfc;
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    transition: $btn_primary_transition;
+  }
+
+  span {
+    background-image: linear-gradient(
+      to right,
+      $primary100,
+      $primary100 50%,
+      $light200 50%
+    );
+    background-size: 200% 100%;
+    background-position: 100%;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: $btn_primary_transition;
+  }
+
+  &:hover {
+    &:before {
+      width: 100%;
+    }
+
+    span {
+      background-position: 0%;
+    }
+
+    svg path {
+      stroke: $primary100;
+    }
+  }
+
+  &:active,
+  &:focus {
+    &:before {
+      background: $dark100;
+      width: 100%;
+    }
+    span {
+      width: 100%;
+      background-position: 0%;
+    }
+  }
+
+  .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  @media (max-width: $sm-max) {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    padding: 12px 16px;
+  }
+}

@@ -1,0 +1,127 @@
+.page-section-1 {
+  height: 100vh;
+}
+
+.the-league {
+  margin-top: -32px;
+
+  .description {
+    position: relative;
+    z-index: 1;
+  }
+
+  .section-head-title,
+  .section-head-desc {
+    max-width: 410px;
+  }
+
+  .powered-by {
+    margin-top: -32px;
+  }
+
+  .partners {
+    margin-top: 32px;
+
+    img {
+      max-width: 209px;
+      width: 100%;
+      margin-right: 54px;
+    }
+  }
+
+  .title span {
+    color: $primary100;
+  }
+
+  .parallaxed {
+    max-width: 500px;
+
+    img {
+      opacity: 0;
+      transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .line {
+      width: 0;
+      height: 4.99%;
+      background-color: $primary100;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+      z-index: -1;
+    }
+  }
+
+  .parallaxed-1 img {
+    transform: translate(-200%, 100%);
+    max-width: 435px;
+    max-height: 479px;
+  }
+  .parallaxed-2 img {
+    transform: translate(200%, 100%);
+    max-width: 446px;
+    max-height: 362px;
+  }
+
+  .parallaxed.in {
+    .line {
+      transition-delay: 0.4s;
+      box-shadow: 0 0 10px 0 #eb3a4a;
+      width: 120%;
+    }
+
+    .parallaxed-1 img {
+      transform: translate(-50%, 10%);
+      opacity: 1;
+    }
+    .parallaxed-2 img {
+      transform: translate(50%, 0);
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: $lg-max) {
+    .powered-by {
+      margin-top: 0;
+    }
+
+    .partners {
+      img {
+        width: 20%;
+      }
+    }
+  }
+
+  @media (max-width: $md-max) {
+    margin-top: 0px;
+
+    & > .row.expand {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .partners {
+      img {
+        margin-right: 16px;
+      }
+    }
+
+    .description {
+      flex: initial;
+      padding-left: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .parallaxed {
+      margin-top: 40px;
+      flex: initial;
+
+      .line {
+        margin: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.page-section-2 {
+  height: 100vh;
+}
+
+.integrated-experience {
+  .section-head-desc {
+    max-width: 455px;
+  }
+
+  .parallaxed {
+    img {
+      max-width: 471px;
+      max-height: 422px;
+      opacity: 0;
+      transform: translate(10%, -10%);
+      transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    &.in img {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+  @media (max-width: $md-max) {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .description {
+      flex: initial;
+      padding-left: 0;
+      width: 100%;
+    }
+
+    .parallaxed {
+      margin-top: 40px;
+      flex: initial;
+    }
+  }
+}

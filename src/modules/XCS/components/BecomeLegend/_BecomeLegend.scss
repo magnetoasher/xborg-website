@@ -1,0 +1,78 @@
+.page-section-0 {
+  height: 100vh;
+}
+
+.become-legend {
+  .blurred-circle {
+    width: 313px;
+    height: 313px;
+    border-radius: 50%;
+    background-color: $primary100;
+    position: absolute;
+    bottom: -150px;
+    left: 100px;
+    filter: blur(600px);
+    opacity: 0;
+    transition: 0.3s ease-in;
+  }
+
+  .parallaxed {
+    z-index: 2;
+
+    img {
+      max-width: 364px;
+      max-height: 589px;
+    }
+  }
+
+  .section-intro-title {
+    font-size: 96px;
+    line-height: 96px;
+  }
+
+  .section-intro-desc {
+    max-width: 480px;
+  }
+
+  .btn-secondary {
+    margin-left: 26px;
+    margin-top: 24px;
+  }
+
+  .parallaxed.in {
+    .blurred-circle {
+      transition-delay: 0.3s;
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: $md-max) {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+
+    .description {
+      flex: initial;
+      padding-left: 0;
+      width: 100%;
+    }
+
+    .parallaxed {
+      margin-top: 40px;
+      flex: initial;
+    }
+
+    .btn-container {
+      .btn-secondary {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: $xxs-max) {
+    .section-intro-title {
+      font-size: 73px;
+      line-height: 79px;
+    }
+  }
+}

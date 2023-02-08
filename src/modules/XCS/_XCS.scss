@@ -1,0 +1,12 @@
+.xcs {
+  .parallaxed {
+    position: relative;
+  }
+
+  @import "./components/BecomeLegend/BecomeLegend";
+  @import "./components/TheLeague/TheLeague";
+  @import "./components/TierOne/TierOne";
+  @import "./components/BecomingLegend/BecomingLegend";
+  @import "./components/Production/Production";
+  @import "./components/DontMiss/DontMiss";
+}

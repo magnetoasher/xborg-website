@@ -1,0 +1,26 @@
+.page-section- {
+  height: 100vh;
+}
+
+.leave-your-mark {
+  .parallaxed img {
+    max-width: 539px;
+    max-height: 539px;
+  }
+
+  @media (max-width: $md-max) {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+
+    .description {
+      flex: initial;
+      padding-left: 0;
+      width: 100%;
+    }
+
+    .parallaxed {
+      margin-top: 40px;
+      flex: initial;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.becoming-legend {
+  .section-head-title {
+    max-width: 360px;
+  }
+
+  .section-head-desc {
+    max-width: 385px;
+  }
+
+  .episodes {
+    .title {
+      font-family: $secondary-font-family;
+      position: relative;
+      padding-left: 24px;
+      border-left: 2px solid $primary100;
+      margin-bottom: 31px;
+    }
+  }
+
+  .parallaxed {
+    img {
+      max-height: 397px;
+      max-width: 397px;
+      z-index: 2;
+      position: relative;
+    }
+  }
+
+  .parallaxed-1 {
+    & > div {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 27.46%;
+      height: 0;
+      width: 4.79%;
+      background-color: $primary100;
+      transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  .parallaxed.in {
+    .parallaxed-1 {
+      &:after {
+        box-shadow: 0 0 100px 0 rgba(235, 58, 74, 0.5);
+        height: calc(85.39% + 100px);
+        margin-top: 50px;
+      }
+    }
+  }
+
+  @media (max-width: $md-max) {
+    & > .row.expand {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .description {
+      flex: initial;
+      padding-left: 0;
+      width: 100%;
+    }
+
+    .parallaxed {
+      margin-top: 40px;
+      flex: initial;
+    }
+
+    .parallaxed.in {
+      .parallaxed-1:after {
+        height: 85.39%;
+        margin-top: 0;
+      }
+    }
+  }
+}

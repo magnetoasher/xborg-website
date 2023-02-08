@@ -1,0 +1,42 @@
+.faq {
+  padding-bottom: $footer-xl;
+  width: 100%;
+
+  .Collapsible {
+    background: #171717;
+    padding: 32px;
+    position: relative;
+    margin-bottom: 16px;
+
+    &__trigger {
+      font-size: 20px;
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 32px;
+        top: 30px;
+        width: 24px;
+        height: 24px;
+        background: url("../assets/imgs/arrow-square-down.svg");
+        background-size: cover;
+        transition: 0.2s ease-in;
+      }
+
+      &.is-open {
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &__contentInner {
+      margin-top: 16px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}

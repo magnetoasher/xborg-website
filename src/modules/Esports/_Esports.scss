@@ -1,0 +1,12 @@
+.esports-page {
+  .parallaxed {
+    position: relative;
+  }
+
+  @import "./components/Esports30/Esports30";
+  @import "./components/MoreThanFan/MoreThanFan";
+  @import "./components/EarnYourShare/EarnYourShare";
+  @import "./components/IntegratedExperience/IntegratedExperience";
+  @import "./components/HaveYourSay/HaveYourSay";
+  @import "./components/BeTheFirst/BeTheFirst";
+}

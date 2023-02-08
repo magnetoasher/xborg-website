@@ -1,0 +1,29 @@
+.countdown {
+  position: relative;
+
+  .countdown-numbers {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 18px;
+      height: 26px;
+      background-color: $dark300;
+      margin-right: 2px;
+    }
+  }
+
+  .countdown-title {
+    font-size: 8px;
+    line-height: 10px;
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+    margin-right: 8px;
+  }
+}

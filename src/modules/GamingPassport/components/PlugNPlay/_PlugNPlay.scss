@@ -1,0 +1,49 @@
+.plug-n-play {
+  .section-head-desc {
+    max-width: 440px;
+  }
+
+  .parallaxed img {
+    max-width: 303px;
+    max-height: 390px;
+    transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .parallaxed-1 img {
+    transform: translate(-40%, -40%);
+    opacity: 0;
+  }
+  .parallaxed-2 img {
+    transform: translate(40%, 0);
+    opacity: 0;
+  }
+  .parallaxed-3 img {
+    transform: translate(-40%, 40%);
+    opacity: 0;
+  }
+
+  .parallaxed.in {
+    .parallaxed-1 img,
+    .parallaxed-2 img,
+    .parallaxed-3 img {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: $md-max) {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+
+    .description {
+      flex: initial;
+      padding-left: 0;
+      width: 100%;
+    }
+
+    .parallaxed {
+      margin-top: 40px;
+      flex: initial;
+    }
+  }
+}
