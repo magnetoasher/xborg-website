@@ -1,4 +1,4 @@
-import { Layout, LayoutChildType } from "../../components";
+import { Layout } from "../../components";
 import {
   GamingProfile,
   GetRewarded,

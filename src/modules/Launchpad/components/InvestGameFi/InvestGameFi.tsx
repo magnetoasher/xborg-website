@@ -13,7 +13,7 @@ export const InvestGameFi = () => {
         <SectionIntro
           subtitle='Invest In GameFi'
           title='Launchpad'
-          description='Benefit as your esports team succeeds through a built-in profit share system.'
+          description='Access the most promising early stage investment opportunities in GameFi.'
         />
         <div className='row btn-container'>
           <ButtonSecondary label='Enter Launchpad' />

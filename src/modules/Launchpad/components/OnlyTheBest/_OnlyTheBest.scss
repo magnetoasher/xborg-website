@@ -4,6 +4,10 @@
     max-height: 422px;
   }
 
+  .section-head-desc {
+    max-width: 350px;
+  }
+
   @media (max-width: $md-max) {
     flex-direction: column-reverse;
     justify-content: flex-start;

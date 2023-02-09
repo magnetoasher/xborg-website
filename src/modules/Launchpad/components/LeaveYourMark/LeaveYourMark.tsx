@@ -15,6 +15,7 @@ export const LeaveYourMark = () => {
           factorY={0.1}
           speed={0}
           isBase
+          className='parallaxed-1'
         />
       </ObserverContainer>
       <div className='description expand'>

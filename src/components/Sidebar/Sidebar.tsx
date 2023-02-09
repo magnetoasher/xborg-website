@@ -48,7 +48,7 @@ export const Sidebar = ({ active, total }: SidebarType) => {
               onClick={() => scrollVM.scrollToSpecifiedScreen(item)}
             >
               <div
-                className={`scrollspy-item${active == item ? " active" : ""}`}
+                className={`scrollspy-item${active === item ? " active" : ""}`}
               />
             </div>
           </Tippy>

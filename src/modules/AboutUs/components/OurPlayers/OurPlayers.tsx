@@ -1,15 +1,46 @@
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ObserverContainer, SectionHead } from "../../../../components";
-import { useSelector } from "react-redux";
-import { GlobalState } from "../../../../reducer";
 import { Images } from "../../../../assets/imgs/Images";
 import { SinglePlayerType } from "../../../../redux/aboutUs/types";
+import { Link } from "react-router-dom";
 
 export const OurPlayers = () => {
-  const { tournamentsWon, tournamentWinning, players } = useSelector(
-    (state: GlobalState) => state.aboutUs,
-  );
+  const players: SinglePlayerType[] = [
+    {
+      image: Images.aboutUs.players.lex,
+      name: "Lex",
+      description: "XBorg ev.io captain",
+    },
+    {
+      image: Images.aboutUs.players.eskezje,
+      name: "Eskezje",
+      description: "XBorg ev.io player",
+    },
+    {
+      image: Images.aboutUs.players.bicboi,
+      name: "BicBoi",
+      description: "XBorg ev.io player",
+    },
+    {
+      image: Images.aboutUs.players.m2rk,
+      name: "M2rk",
+      description: "XBorg ev.io player",
+    },
+    {
+      image: Images.aboutUs.players.xen0,
+      name: "Xen0",
+      description: "XBorg ev.io player",
+    },
+    {
+      image: Images.aboutUs.players.sjud,
+      name: "SJUD",
+      description: "XBorg Illuvium captain",
+    },
+  ];
+  const tournamentsWon = 34;
+  const tournamentWinning = 30000;
+
   return (
     <div className={`our-players expand row middle between`}>
       <div className='description expand row column'>
@@ -32,12 +63,12 @@ export const OurPlayers = () => {
         </div>
       </div>
       <ObserverContainer className='expand players-swiper'>
-        <a href='#' className='swiper-prev'>
-          <img src={Images.chevron_left.default} />
-        </a>
-        <a href='#' className='swiper-next'>
-          <img src={Images.chevron_right.default} />
-        </a>
+        <Link to='' className='swiper-prev'>
+          <img src={Images.chevron_left.default} alt='left' />
+        </Link>
+        <Link to='' className='swiper-next'>
+          <img src={Images.chevron_right.default} alt='right' />
+        </Link>
         <Swiper
           parallax
           pagination={{
@@ -53,7 +84,7 @@ export const OurPlayers = () => {
         >
           {players.map((player: SinglePlayerType, index: number) => (
             <SwiperSlide key={index} className='row column'>
-              <img src={Images.aboutUs.players.member01} alt={player.name} />
+              <img src={player.image} alt={player.name} />
 
               <div className='swiper-name'>{player.name}</div>
               <div className='swiper-description'>{player.description}</div>

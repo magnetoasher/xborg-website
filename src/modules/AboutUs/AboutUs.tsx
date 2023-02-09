@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Layout } from "../../components";
 import {
   EmpowerPlayers,
@@ -10,17 +9,7 @@ import {
   BecomeXplorer,
   Partners,
 } from "./components";
-import { useDispatch } from "react-redux";
-import { AppDispatch } from "../../store";
-import { AboutUsActions } from "../../redux/aboutUs/actions";
-
 export const AboutUs = () => {
-  const dispatch = useDispatch<AppDispatch>();
-
-  useEffect(() => {
-    dispatch(AboutUsActions.getAboutUs());
-  }, []);
-
   return (
     <Layout
       className='about-us'

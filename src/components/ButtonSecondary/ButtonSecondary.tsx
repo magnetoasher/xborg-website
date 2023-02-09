@@ -1,6 +1,5 @@
 import { MouseEvent } from "react";
 import { Link } from "react-router-dom";
-import { Images } from "../../assets/imgs/Images";
 
 export type ButtonSecondaryType = {
   label: string;

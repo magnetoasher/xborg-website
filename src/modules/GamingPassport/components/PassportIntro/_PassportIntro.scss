@@ -6,6 +6,11 @@
     left: 0;
   }
 
+  .logo-icon {
+    padding-left: 24px;
+    margin-bottom: 16px;
+  }
+
   .description {
     max-width: 470px;
     margin-left: -47px;
@@ -21,9 +26,15 @@
     display: none;
   }
 
+  .section-border {
+    margin-top: -43px;
+    margin-bottom: -40px;
+  }
+
   .section-head-title {
     font-size: 62px;
-    line-height: 68px;
+    line-height: 77px;
+    max-width: 370px;
   }
 
   .actions {
@@ -117,6 +128,7 @@
     .section-head-title {
       font-size: 46px;
       line-height: 58px;
+      max-width: 280px;
     }
 
     .triangle {
@@ -148,6 +160,15 @@
       .btn-primary {
         padding: 16px;
       }
+    }
+
+    .logo-icon {
+      display: none;
+    }
+
+    .section-border {
+      margin-top: 0;
+      margin-bottom: 0;
     }
 
     .wave-details {

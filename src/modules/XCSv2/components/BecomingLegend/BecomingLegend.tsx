@@ -103,7 +103,7 @@ export const BecomingLegend = () => {
         <div className='description expand'>
           <SectionHead
             title='Becoming A Legend'
-            description='A 14 episode docu-series with behind the scenes drama, match-day highlights, and exclusive interviews.'
+            description='A 15 episode docu-series with behind the scenes drama, match-day highlights, and exclusive interviews.'
           >
             <b>Becoming</b> A Legend
           </SectionHead>

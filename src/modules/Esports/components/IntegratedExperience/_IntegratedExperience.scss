@@ -3,6 +3,10 @@
 }
 
 .integrated-experience {
+  .section-head-title {
+    max-width: 380px;
+  }
+
   .section-head-desc {
     max-width: 455px;
   }
@@ -25,6 +29,10 @@
   @media (max-width: $md-max) {
     flex-direction: column;
     justify-content: flex-start;
+
+    .section-head-title {
+      max-width: 245px;
+    }
 
     .description {
       flex: initial;

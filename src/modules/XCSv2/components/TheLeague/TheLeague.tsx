@@ -40,7 +40,7 @@ export const TheLeague = () => {
         <div className='title'>
           <span>Powered by</span> leading organizations
         </div>
-        <div className='partners row middle'>
+        <div className='partners row middle between'>
           <img src={Images.XCS.swissborg} alt='Swissborg' />
           <img src={Images.XCS.brave} alt='Brave' />
           <img src={Images.XCS.communitygaming} alt='Community Gaming' />

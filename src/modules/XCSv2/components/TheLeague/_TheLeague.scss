@@ -10,7 +10,9 @@
     z-index: 1;
   }
 
-  .section-head-title,
+  .section-head-title {
+    max-width: 315px;
+  }
   .section-head-desc {
     max-width: 410px;
   }
@@ -23,9 +25,7 @@
     margin-top: 32px;
 
     img {
-      max-width: 209px;
-      width: 100%;
-      margin-right: 54px;
+      width: 18%;
     }
   }
 
@@ -86,12 +86,6 @@
     .powered-by {
       margin-top: 0;
     }
-
-    .partners {
-      img {
-        width: 20%;
-      }
-    }
   }
 
   @media (max-width: $md-max) {
@@ -100,12 +94,6 @@
     & > .row.expand {
       flex-direction: column;
       justify-content: flex-start;
-    }
-
-    .partners {
-      img {
-        margin-right: 16px;
-      }
     }
 
     .description {

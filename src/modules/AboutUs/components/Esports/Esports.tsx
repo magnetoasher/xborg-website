@@ -4,13 +4,11 @@ import {
   ObserverContainer,
   SectionHead,
 } from "../../../../components";
-import { useSelector } from "react-redux";
-import { GlobalState } from "../../../../reducer";
 
 export const Esports = () => {
-  const { tournamentsOrganized, prizesPaid, participants } = useSelector(
-    (state: GlobalState) => state.aboutUs,
-  );
+  const tournamentsOrganized = 125;
+  const prizesPaid = 30000;
+  const participants = 8000;
 
   return (
     <div className={`esports expand row middle between`}>

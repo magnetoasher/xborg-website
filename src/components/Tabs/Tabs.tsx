@@ -23,7 +23,7 @@ export const Tabs = ({ data }: TabsType) => {
       <div className='heads row'>
         {data.map((tab: SingleTab, index: number) => (
           <div
-            className={`head-item ${active == index ? "active" : "inactive"}`}
+            className={`head-item ${active === index ? "active" : "inactive"}`}
             key={index}
           >
             <Link to='' className='row' onClick={onTabChange(index)}>
@@ -35,7 +35,7 @@ export const Tabs = ({ data }: TabsType) => {
       <div className='body'>
         {data.map((tab: SingleTab, index: number) => (
           <div
-            className={`body-item ${active == index ? "active" : "inactive"}`}
+            className={`body-item ${active === index ? "active" : "inactive"}`}
             key={index}
           >
             {tab.content}

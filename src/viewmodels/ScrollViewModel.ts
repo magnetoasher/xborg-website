@@ -1,8 +1,6 @@
 import { debounce } from "lodash";
 
 export class ScrollViewModel {
-  constructor() {}
-
   // Scrolling states
   allowScrolling: boolean = true;
   maxWidth: number = 1200;
@@ -98,7 +96,7 @@ export class ScrollViewModel {
     const wrapper = this.getScrollingContainer();
     if (!wrapper) return;
 
-    if (wrapper.scrollTop == 0) {
+    if (wrapper.scrollTop === 0) {
       return;
     }
 
@@ -133,7 +131,7 @@ export class ScrollViewModel {
       const currentWithSection =
         currentPosition + (sectionScroll - wrapperHeight);
 
-      if (wrapper.scrollTop == currentWithSection) {
+      if (wrapper.scrollTop === currentWithSection) {
         this.scrollTo(currentWithSection, nextPosition, 0);
         currentSection = nextSection;
       } else {

@@ -15,6 +15,8 @@ export const StartEarningToday = () => {
   const titleRef = useRef(null);
   const scroll = new ScrollViewModel();
   const title = "Start Earning Today";
+  const spotsClaimed = 1000;
+  const maxSpots = 1000;
 
   function onAnimateIn() {
     const ref = titleRef.current;
@@ -55,20 +57,21 @@ export const StartEarningToday = () => {
         <div className='wave-container row column'>
           <div className='wave-details row between'>
             <div className='wave'>
-              <div className='title'>Wave 1</div>
-              <div className='subtitle'>Early ones</div>
+              <div className='title'>All spots filled</div>
+              <div className='subtitle'>Closed Beta</div>
             </div>
             <div className='spots'>
               <div className='title'>Spots Claimed</div>
               <div className='subtitle'>
-                <span>524</span>/1000
+                <span>{spotsClaimed.toLocaleString()}</span>/
+                {maxSpots.toLocaleString()}
               </div>
             </div>
           </div>
-          <Progressbar progress={52} />
+          <Progressbar progress={100} />
           <div className='wave-ends row column middle center'>
-            <div className='title'>First wave ends in:</div>
-            <Countdown date={new Date("Jan 5, 2024 15:37:25")} />
+            <div className='title'>Public beta ends in:</div>
+            <Countdown date={new Date("Feb 28, 2023 23:59:59")} />
           </div>
         </div>
       </div>

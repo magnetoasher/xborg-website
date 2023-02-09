@@ -4,9 +4,8 @@ import { Layout, SectionHead } from "../../components";
 import { ScrollViewModel } from "../../viewmodels/ScrollViewModel";
 
 export const FAQ = () => {
-  const scrollVM = new ScrollViewModel();
-
   useEffect(() => {
+    const scrollVM = new ScrollViewModel();
     scrollVM.removeCustomScrolling();
   }, []);
 
