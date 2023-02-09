@@ -30,7 +30,7 @@ export const Portfolio = () => {
             <div className='stats-label'>Months Time</div>
           </div>
           <div className='col'>
-            <div className='stats-value'>X</div>
+            <div className='stats-value'>290</div>
             <div className='stats-label'>amount of unique investors</div>
           </div>
         </div>
