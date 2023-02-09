@@ -33,9 +33,21 @@ export const PickGame = () => {
   );
   const HarvestButtons = () => (
     <div className="row">
-      <ButtonPrimary label="The Harvest Qualifier 1" icon={<ExternalLink />} />
-      <ButtonPrimary label="The Harvest Qualifier 2" icon={<ExternalLink />} />
-      <ButtonPrimary label="The Harvest Qualifier 3" icon={<ExternalLink />} />
+      <ButtonPrimary
+        label="The Harvest Qualifier 1"
+        icon={<ExternalLink />}
+        to="https://www.communitygaming.io/tournament/xtreme-championship-series-harvest-month-1"
+      />
+      <ButtonPrimary
+        label="The Harvest Qualifier 2"
+        icon={<ExternalLink />}
+        to="https://www.communitygaming.io/tournament/xtreme-championship-series-harvest-month-2"
+      />
+      <ButtonPrimary
+        label="The Harvest Qualifier 3"
+        icon={<ExternalLink />}
+        to="https://www.communitygaming.io/tournament/xtreme-championship-series-harvest-month-3"
+      />
     </div>
   );
   const GodsUnchainedButtons = () => (
@@ -43,22 +55,37 @@ export const PickGame = () => {
       <ButtonPrimary
         label="Gods Unchained Qualifier 1"
         icon={<ExternalLink />}
+        to="https://www.communitygaming.io/tournament/xtreme-championship-series-gu-month-1"
       />
       <ButtonPrimary
         label="Gods Unchained Qualifier 2"
         icon={<ExternalLink />}
+        to="https://www.communitygaming.io/tournament/xtreme-championship-series-gu-month-2"
       />
       <ButtonPrimary
         label="Gods Unchained Qualifier 3"
         icon={<ExternalLink />}
+        to="https://www.communitygaming.io/tournament/xtreme-championship-series-gu-month-3"
       />
     </div>
   );
   const SpiderTanksButtons = () => (
     <div className="row">
-      <ButtonPrimary label="Spider Tanks Qualifier 1" icon={<ExternalLink />} />
-      <ButtonPrimary label="Spider Tanks Qualifier 2" icon={<ExternalLink />} />
-      <ButtonPrimary label="Spider Tanks Qualifier 3" icon={<ExternalLink />} />
+      <ButtonPrimary
+        label="Spider Tanks Qualifier 1"
+        icon={<ExternalLink />}
+        to="https://www.communitygaming.io/tournament/xtreme-championship-series-spider-tanks-month-1"
+      />
+      <ButtonPrimary
+        label="Spider Tanks Qualifier 2"
+        icon={<ExternalLink />}
+        to="https://www.communitygaming.io/tournament/xtreme-championship-series-spider-tanks-month-2"
+      />
+      <ButtonPrimary
+        label="Spider Tanks Qualifier 3"
+        icon={<ExternalLink />}
+        to="https://www.communitygaming.io/tournament/xtreme-championship-series-spider-tanks-month-3"
+      />
     </div>
   );
 
