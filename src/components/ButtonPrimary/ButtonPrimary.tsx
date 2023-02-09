@@ -1,5 +1,4 @@
 import { MouseEvent } from "react";
-import { Link } from "react-router-dom";
 
 export type ButtonPrimaryType = {
   label: string;
