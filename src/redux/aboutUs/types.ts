@@ -1,10 +1,8 @@
-import { TileType } from "../../components/Tile";
+const GET_TOTAL_USERS = "reducers/aboutUs/GET_TOTAL_USERS";
+const GET_TOTAL_USERS_FULFILLED = "reducers/aboutUs/GET_TOTAL_USERS_FULFILLED";
+const GET_TOTAL_USERS_REJECTED = "reducers/aboutUs/GET_TOTAL_USERS_REJECTED";
 
-const GET_TEAM = "reducers/aboutUs/GET_TEAM";
-const GET_TEAM_FULFILLED = "reducers/aboutUs/GET_TEAM_FULFILLED";
-const GET_TEAM_REJECTED = "reducers/aboutUs/GET_TEAM_REJECTED";
-
-export { GET_TEAM, GET_TEAM_FULFILLED, GET_TEAM_REJECTED };
+export { GET_TOTAL_USERS, GET_TOTAL_USERS_FULFILLED, GET_TOTAL_USERS_REJECTED };
 
 export enum STATUS_TYPE {
   FULFILLED = "FULFILLED",
@@ -14,14 +12,7 @@ export enum STATUS_TYPE {
 }
 
 export interface AboutUsInterface {
-  team: TileType[];
-  players: SinglePlayerType[];
-  passportSigns: number;
-  tournamentsOrganized: number;
-  prizesPaid: number;
-  participants: number;
-  tournamentsWon: number;
-  tournamentWinning: number;
+  totalUsers: number;
   status: STATUS_TYPE;
 }
 

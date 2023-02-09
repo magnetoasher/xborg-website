@@ -1,35 +1,27 @@
 import { Action } from "redux";
 import {
   AboutUsInterface,
-  GET_TEAM_FULFILLED,
-  GET_TEAM_REJECTED,
+  GET_TOTAL_USERS,
+  GET_TOTAL_USERS_FULFILLED,
+  GET_TOTAL_USERS_REJECTED,
   STATUS_TYPE,
 } from "./types";
 
 const initialState: AboutUsInterface = {
-  team: [],
-  players: [],
-  passportSigns: 0,
-  tournamentsOrganized: 0,
-  prizesPaid: 0,
-  participants: 0,
-  tournamentsWon: 0,
-  tournamentWinning: 0,
+  totalUsers: 4000,
   status: STATUS_TYPE.UNINITIALIZED,
 };
 
 const Reduction = {
-  team: (
-    state = initialState,
-    data: { type: string; payload: AboutUsInterface },
-  ) => {
+  users: (state = initialState, data: { type: string; payload: any }) => {
     switch (data.type) {
-      case GET_TEAM_FULFILLED:
+      case GET_TOTAL_USERS_FULFILLED:
         return {
-          ...data.payload,
+          ...state,
+          totalUsers: data.payload.data.totalUsers,
           status: STATUS_TYPE.FULFILLED,
         };
-      case GET_TEAM_REJECTED:
+      case GET_TOTAL_USERS_REJECTED:
         return {
           ...state,
           status: STATUS_TYPE.REJECTED,
@@ -53,8 +45,7 @@ const createReducer =
   };
 
 const reducer = createReducer(initialState, {
-  [GET_TEAM_FULFILLED]: Reduction.team,
-  [GET_TEAM_REJECTED]: Reduction.team,
+  [GET_TOTAL_USERS_FULFILLED]: Reduction.users,
 });
 
 export { reducer as AboutUsReducer };

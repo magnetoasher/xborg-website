@@ -4,31 +4,11 @@ import {
   ObserverContainer,
   SectionHead,
 } from "../../../../components";
-import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { GlobalState } from "../../../../reducer";
 
 export const EmpowerPlayers = () => {
-  const [loading, setLoading] = useState<null | boolean>();
-  const [signupData, setSignUpData] = useState<number>(4000);
-
-  useEffect(() => {
-    setLoading(true);
-
-    fetch(`https://gaming.xborg.com/api/analytics/totalusers`)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(response.statusText);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setSignUpData(data.totalUsers);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.log(error.message);
-        setLoading(false);
-      });
-  }, []);
+  const { totalUsers } = useSelector((state: GlobalState) => state.aboutUs);
 
   return (
     <div className={`empower-players expand row middle between`}>
@@ -38,7 +18,7 @@ export const EmpowerPlayers = () => {
           description="We believe that players should be able to own their gaming data and use it to unlock opportunities that truly reward them."
         />
         <div className="statistics row middle">
-          <div className="stats-value">{signupData.toLocaleString()}</div>
+          <div className="stats-value">{totalUsers.toLocaleString()}</div>
           <div className="stats-label">Gaming Passport Signups</div>
         </div>
       </div>
