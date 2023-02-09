@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import VanillaTilt from "vanilla-tilt";
 import { Images } from "../../assets/imgs/Images";
 
 export type TileType = {
@@ -11,6 +10,8 @@ export type TileType = {
 export const Tile = (data: TileType) => {
   const ref = useRef(null);
 
+  {
+    /*
   useEffect(() => {
     if (ref.current) {
       VanillaTilt.init(ref.current, {
@@ -19,13 +20,16 @@ export const Tile = (data: TileType) => {
       });
     }
   }, []);
+
+*/
+  }
   return (
-    <div className='tile' ref={ref}>
-      <div className='image'>
-        <img src={data.image ?? Images.noimg} alt='' />
+    <div className="tile" ref={ref}>
+      <div className="image">
+        <img src={data.image ?? Images.noimg} alt="" />
       </div>
-      <div className='tile-name'>{data.title}</div>
-      {data.desc && <div className='tile-desc'>{data.desc}</div>}
+      <div className="tile-name">{data.title}</div>
+      {data.desc && <div className="tile-desc">{data.desc}</div>}
     </div>
   );
 };

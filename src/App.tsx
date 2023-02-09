@@ -8,8 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import "./styles/main.css";
-
-import "vanilla-tilt";
+//import "vanilla-tilt";
 
 function App() {
   return (
