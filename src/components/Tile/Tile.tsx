@@ -1,11 +1,12 @@
-import { useEffect, useRef } from 'react';
-import VanillaTilt from 'vanilla-tilt';
-import { Images } from '../../assets/imgs/Images';
+import { useEffect, useRef } from "react";
+import VanillaTilt from "vanilla-tilt";
+import { Images } from "../../assets/imgs/Images";
 
 export type TileType = {
   image?: any;
   title: string;
   desc?: string;
+  slug?: string;
 };
 
 export const Tile = (data: TileType) => {
@@ -21,12 +22,16 @@ export const Tile = (data: TileType) => {
   }, []);
 
   return (
-    <div className='tile' ref={ref}>
-      <div className='image'>
-        <img src={data.image ?? Images.noimg} alt='' />
+    <a
+      className="tile"
+      ref={ref}
+      href={`https://launchpad.xborg.com/project/${data.slug}`}
+    >
+      <div className="image">
+        <img src={data.image ?? Images.noimg} alt="" />
       </div>
-      <div className='tile-name'>{data.title}</div>
-      {data.desc && <div className='tile-desc'>{data.desc}</div>}
-    </div>
+      <div className="tile-name">{data.title}</div>
+      {data.desc && <div className="tile-desc">{data.desc}</div>}
+    </a>
   );
 };

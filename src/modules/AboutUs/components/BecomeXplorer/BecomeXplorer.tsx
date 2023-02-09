@@ -8,17 +8,20 @@ import {
 
 export const BecomeXplorer = () => {
   return (
-    <div className='become-xplorer expand row middle'>
-      <div className='description'>
+    <div className="become-xplorer expand row middle">
+      <div className="description">
         <SectionHead
-          title='Become An Xplorer'
-          description='Love what we do? Join us! Pick up your Prometheus NFT to fully benefit from everything we have to offer.'
+          title="Become An Xplorer"
+          description="Love what we do? Join us! Pick up your Prometheus NFT to fully benefit from everything we have to offer."
         />
-        <div className='row btn-container'>
-          <ButtonSecondary label='Buy Now' />
+        <div className="row btn-container">
+          <ButtonSecondary
+            label="Buy Now"
+            to="https://opensea.io/collection/xborg-prometheus"
+          />
         </div>
       </div>
-      <ObserverContainer className='parallaxed-corner'>
+      <ObserverContainer className="parallaxed-corner">
         <ParallaxLayer
           image={Images.aboutUs.smoke01}
           factorX={-0.2}

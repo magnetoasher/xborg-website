@@ -5,52 +5,52 @@ import { ParallaxLayer, ObserverContainer } from "../../../../components";
 export const Prometheus = () => {
   return (
     <div className={`prometheus expand row middle between`}>
-      <ObserverContainer className='parallaxed expand row middle center'>
+      <ObserverContainer className="parallaxed expand row middle center">
         <ParallaxLayer
           image={Images.aboutUs.logo02}
           factorX={-0.1}
           factorY={-0.1}
           speed={7}
           isBase
-          className='parallaxed-1'
+          className="parallaxed-1"
         />
         <ParallaxLayer
           image={Images.aboutUs.smoke1_01}
           factorX={-0.2}
           factorY={-0.1}
           speed={3}
-          className='parallaxed-2'
+          className="parallaxed-2"
         />
         <ParallaxLayer
           image={Images.aboutUs.smoke1_02}
           factorX={-0.1}
           factorY={-0.3}
           speed={3}
-          className='parallaxed-3'
+          className="parallaxed-3"
         />
         <ParallaxLayer
           image={Images.aboutUs.render3d}
           factorX={-0.4}
           factorY={-0.3}
           speed={0}
-          className='parallaxed-4'
+          className="parallaxed-4"
         />
         <ParallaxLayer
           image={Images.aboutUs.sparks}
           factorX={-0.3}
           factorY={-0.3}
           speed={-2}
-          className='parallaxed-5'
+          className="parallaxed-5"
         />
       </ObserverContainer>
-      <div className='description expand'>
+      <div className="description expand">
         <SectionHead
-          title='Prometheus NFT'
-          description='Shape the future of gaming and experience the XBorg ecosystem to the fullest.'
+          title="Prometheus NFT"
+          description="Shape the future of gaming and experience the XBorg ecosystem to the fullest."
         />
 
-        <h4 className='subtitle'>Exclusive Benefits</h4>
-        <div className='typography'>
+        <h4 className="subtitle">Exclusive Benefits</h4>
+        <div className="typography">
           <ul>
             <li>Vested $XBORG token airdrop at token generation event</li>
             <li>Fee-less and early access to all XBorg products</li>
@@ -59,8 +59,11 @@ export const Prometheus = () => {
           </ul>
         </div>
 
-        <div className='row btn-container'>
-          <ButtonSecondary label='Buy Now' />
+        <div className="row btn-container">
+          <ButtonSecondary
+            label="Buy Now"
+            to="https://opensea.io/collection/xborg-prometheus"
+          />
         </div>
       </div>
     </div>

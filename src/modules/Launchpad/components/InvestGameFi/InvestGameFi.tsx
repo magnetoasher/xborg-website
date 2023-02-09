@@ -9,38 +9,41 @@ import {
 export const InvestGameFi = () => {
   return (
     <div className={`invest-gamefi expand row middle between`}>
-      <div className='description expand'>
+      <div className="description expand">
         <SectionIntro
-          subtitle='Invest In GameFi'
-          title='Launchpad'
-          description='Access the most promising early stage investment opportunities in GameFi.'
+          subtitle="Invest In GameFi"
+          title="Launchpad"
+          description="Access the most promising early stage investment opportunities in GameFi."
         />
-        <div className='row btn-container'>
-          <ButtonSecondary label='Enter Launchpad' />
+        <div className="row btn-container">
+          <ButtonSecondary
+            label="Enter Launchpad"
+            to="https://launchpad.xborg.com/"
+          />
         </div>
       </div>
-      <ObserverContainer className='parallaxed expand'>
+      <ObserverContainer className="parallaxed expand">
         <ParallaxLayer
           image={Images.launchpad.bowman}
           factorX={0.1}
           factorY={0.1}
           speed={-3}
           isBase
-          className='parallaxed-1'
+          className="parallaxed-1"
         />
         <ParallaxLayer
           image={Images.launchpad.terrorist}
           factorX={0.2}
           factorY={0.2}
           speed={-7}
-          className='parallaxed-2'
+          className="parallaxed-2"
         />
         <ParallaxLayer
           image={Images.launchpad.tft_penguin}
           factorX={-0.1}
           factorY={-0.1}
           speed={0}
-          className='parallaxed-3'
+          className="parallaxed-3"
         />
       </ObserverContainer>
     </div>
