@@ -60,7 +60,7 @@ export const Navigation = () => {
         ))}
       </nav>
       <div className={`early-access${active ? " active" : ""}`}>
-        <ButtonPrimary label="Launch App" />
+        <ButtonPrimary label="Launch App" to="http://gaming.xborg.com" />
       </div>
       <div
         className="hamburger-menu row middle center"

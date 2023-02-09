@@ -15,9 +15,9 @@ export const ButtonPrimary = ({
   onClick,
 }: ButtonPrimaryType) => {
   return (
-    <Link to={to} onClick={onClick} className="btn-primary row middle center">
+    <a href={to} onClick={onClick} className="btn-primary row middle center">
       <span className="expand">{label}</span>
       {icon}
-    </Link>
+    </a>
   );
 };
