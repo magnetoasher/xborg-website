@@ -12,7 +12,7 @@ import {
 export const GamingPassport = () => {
   return (
     <Layout
-      className='gamingpassport'
+      className="gamingpassport"
       components={[
         <PassportIntro />,
         <GetRewarded />,

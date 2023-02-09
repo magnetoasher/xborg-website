@@ -41,7 +41,7 @@ export const PassportIntro = () => {
         </div>
 
         <div className="row between middle actions">
-          <ButtonPrimary label="Launch App" />
+          <ButtonPrimary label="Launch App" to="http://gaming.xborg.com" />
 
           <div className="plus" />
 
