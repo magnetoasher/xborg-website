@@ -17,21 +17,24 @@ export const DontMiss = () => {
         active ? "active" : "inactive"
       }`}
     >
-      <div className='description expand'>
+      <div className="description expand">
         <SectionHead
-          title='Don’t Miss A Second'
-          description='Stay up to date with all Xtreme Championship Series news, announcements and action.'
+          title="Don’t Miss A Second"
+          description="Stay up to date with all Xtreme Championship Series news, announcements and action."
         >
           Don’t Miss <b>A Second</b>
         </SectionHead>
-        <div className='row btn-container'>
+        <div className="row btn-container">
           <ButtonPrimary
-            label='Register for XCS'
-            onClick={() => setActive(true)}
+            label="Register for XCS"
+            onClick={(e) => {
+              e.preventDefault();
+              setActive(true);
+            }}
           />
         </div>
       </div>
-      <ObserverContainer className='parallaxed row middle center expand'>
+      <ObserverContainer className="parallaxed row middle center expand">
         <ParallaxLayer
           image={Images.XCS.banner2}
           factorX={0.1}
@@ -50,21 +53,21 @@ export const DontMiss = () => {
           factorX={-0.2}
           factorY={-0.2}
           speed={0}
-          className='parallaxed-ico-1'
+          className="parallaxed-ico-1"
         />
         <ParallaxLayer
           image={Images.XCS.banner_twitch}
           factorX={0.3}
           factorY={-0.3}
           speed={0}
-          className='parallaxed-ico-2'
+          className="parallaxed-ico-2"
         />
         <ParallaxLayer
           image={Images.XCS.banner_discord}
           factorX={-0.4}
           factorY={0.4}
           speed={0}
-          className='parallaxed-ico-3'
+          className="parallaxed-ico-3"
         />
       </ObserverContainer>
       <PickGame />

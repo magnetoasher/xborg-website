@@ -17,7 +17,7 @@ export const BecomeLegend = () => {
         active ? "active" : "inactive"
       }`}
     >
-      <ObserverContainer className='parallaxed expand row middle center'>
+      <ObserverContainer className="parallaxed expand row middle center">
         <ParallaxLayer
           image={Images.XCS.banner}
           factorX={0.1}
@@ -32,27 +32,30 @@ export const BecomeLegend = () => {
           speed={0}
         />
       </ObserverContainer>
-      <div className='description expand'>
+      <div className="description expand">
         {active ? (
           <PickGame />
         ) : (
           <>
             <SectionIntro
-              subtitle='Become A Legend'
-              title='XCS'
-              description='Introducing the Xtreme Championship Series, the largest Web3 esports event ever.'
+              subtitle="Become A Legend"
+              title="XCS"
+              description="Introducing the Xtreme Championship Series, the largest Web3 esports event ever."
             />
-            <div className='row btn-container'>
+            <div className="row btn-container">
               <ButtonPrimary
-                label='Register for XCS'
-                onClick={() => setActive(true)}
+                label="Register for XCS"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setActive(true);
+                }}
               />
             </div>
           </>
         )}
       </div>
 
-      <div className='blurred-circle' />
+      <div className="blurred-circle" />
     </div>
   );
 };
