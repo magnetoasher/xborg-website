@@ -12,10 +12,21 @@ export const EmpowerPlayers = () => {
 
   useEffect(() => {
     setLoading(true);
+
     fetch(`https://gaming.xborg.com/api/analytics/totalusers`)
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(response.statusText);
+        }
+        return response.json();
+      })
       .then((data) => {
         setSignUpData(data.totalUsers);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.log(error.message);
+        setLoading(false);
       });
   }, []);
 
