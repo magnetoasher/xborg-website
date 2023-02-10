@@ -45,7 +45,7 @@ export class ScrollViewModel {
           this.removeCustomScrolling();
         }
       }, 300),
-      false,
+      false
     );
   };
 
@@ -56,7 +56,7 @@ export class ScrollViewModel {
 
     wrapper.addEventListener(
       "onwheel" in document.createElement("div") ? "wheel" : "mousewheel",
-      this.handleScrolling,
+      this.handleScrolling
     );
   };
 
@@ -66,7 +66,7 @@ export class ScrollViewModel {
 
     wrapper.removeEventListener(
       "onwheel" in document.createElement("div") ? "wheel" : "mousewheel",
-      this.handleScrolling,
+      this.handleScrolling
     );
   }
 
@@ -208,7 +208,7 @@ export class ScrollViewModel {
     }
   };
 
-  scrollToSpecifiedScreen(index: number, fast?: boolean) {
+  scrollToSpecifiedScreen(index: number, speed?: number) {
     const wrapper = this.getScrollingContainer();
     if (!wrapper) return;
 
@@ -216,8 +216,10 @@ export class ScrollViewModel {
     const currentPosition = this.getPositionByIndex(currentSection);
     const nextPosition = this.getPositionByIndex(index);
 
-    if (!fast) this.scrollTo(currentPosition, nextPosition, 0);
-    else wrapper.scrollTo(0, 0);
+    if (!speed) this.scrollTo(currentPosition, nextPosition, 0);
+    else {
+      setTimeout(() => wrapper.scrollTo(0, 0), speed);
+    }
 
     currentSection = index;
   }
@@ -238,7 +240,7 @@ export class ScrollViewModel {
         root: null,
         rootMargin: "-100px",
         threshold: 0.1,
-      },
+      }
     );
 
     observer.observe(el);

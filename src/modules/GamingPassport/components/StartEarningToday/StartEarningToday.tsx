@@ -27,7 +27,7 @@ export const StartEarningToday = () => {
   }
 
   function onRedirect() {
-    scroll.scrollToSpecifiedScreen(0, true);
+    scroll.scrollToSpecifiedScreen(0, 500);
   }
 
   return (

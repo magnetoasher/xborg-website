@@ -51,7 +51,7 @@ export const Navigation = () => {
             to={link.to}
             className={({ isActive }) => (isActive ? "active" : "")}
             onClick={() => {
-              scrollVM.scrollToSpecifiedScreen(0, true);
+              scrollVM.scrollToSpecifiedScreen(0, 500);
               setActive(false);
             }}
           >
