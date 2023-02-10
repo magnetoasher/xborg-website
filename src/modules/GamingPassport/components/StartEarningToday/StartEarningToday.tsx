@@ -115,15 +115,20 @@ export const StartEarningToday = () => {
       </div>
 
       <div className="links row middle center">
-        <Link to="/terms-and-agreements" onClick={onRedirect}>
+        {/* <Link to="/terms-and-agreements" onClick={onRedirect}>
           Privacy Policy
         </Link>
         <Link to="/terms-and-agreements" onClick={onRedirect}>
           Cookie Policy
         </Link>
-        <Link to="https://docsend.com/documents/8733565" onClick={onRedirect}>
-          White Paper
-        </Link>
+  */}
+
+        <a href="https://firebasestorage.googleapis.com/v0/b/xborg-quest.appspot.com/o/XBorg%20Website%20Terms%20of%20Use.pdf?alt=media&token=ff336d2a-0ca4-45d4-8dbd-6f895b34a8c9">
+          Terms of use
+        </a>
+
+        <a href="https://docsend.com/documents/8733565">White Paper</a>
+
         <Link to="/launchpad" onClick={onRedirect}>
           Launchpad
         </Link>
