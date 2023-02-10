@@ -1189,7 +1189,7 @@ h4 {
 }
 
 .gamingpassport .gaming-profile .section-head-desc {
-  max-width: 560px;
+  max-width: 441px;
 }
 
 @media (max-width: 992px) {
@@ -2921,13 +2921,13 @@ h4 {
 }
 
 .esports-page .have-your-say .parallaxed.in .parallaxed-2 img {
-  -webkit-transition-delay: 1.2s;
-          transition-delay: 1.2s;
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
 }
 
 .esports-page .have-your-say .parallaxed.in .parallaxed-5 img {
-  -webkit-transition-delay: 0.8s;
-          transition-delay: 0.8s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
 }
 
 @media (max-width: 992px) {
