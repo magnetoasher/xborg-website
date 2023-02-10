@@ -41,7 +41,7 @@ export const GetRewarded = () => {
           image={Images.gamingpassport.gun}
           factorX={0.1}
           factorY={0.1}
-          speed={8}
+          speed={0}
           className="parallaxed-4"
         />
       </ObserverContainer>
