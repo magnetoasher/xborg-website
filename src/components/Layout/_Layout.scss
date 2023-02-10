@@ -30,3 +30,29 @@
     padding: 0 10px;
   }
 }
+
+.page-in {
+  animation: 0.5s fadeIn forwards;
+}
+
+.page-out {
+  animation: 0.5s fadeOut forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

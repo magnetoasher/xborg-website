@@ -5209,6 +5209,52 @@ h4 {
   }
 }
 
+.page-in {
+  -webkit-animation: 0.5s fadeIn forwards;
+          animation: 0.5s fadeIn forwards;
+}
+
+.page-out {
+  -webkit-animation: 0.5s fadeOut forwards;
+          animation: 0.5s fadeOut forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .simplebar-container {
   height: 100vh;
 }

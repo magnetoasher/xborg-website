@@ -39,35 +39,35 @@ export const OurPlayers = () => {
     },
   ];
   const tournamentsWon = 34;
-  const tournamentWinning = 30000;
+  const tournamentWinning = 50000;
 
   return (
     <div className={`our-players expand row middle between`}>
-      <div className='description expand row column'>
+      <div className="description expand row column">
         <SectionHead
-          title='Meet Our Players'
-          description='We compete at the highest level across the most competitive games Web3 has to offer.'
+          title="Meet Our Players"
+          description="We compete at the highest level across the most competitive games Web3 has to offer."
         />
 
-        <div className='statistics row between'>
-          <div className='col'>
-            <div className='stats-value'>{tournamentsWon}</div>
-            <div className='stats-label'>Tournaments Won</div>
+        <div className="statistics row between">
+          <div className="col">
+            <div className="stats-value">{tournamentsWon}</div>
+            <div className="stats-label">Tournaments Won</div>
           </div>
-          <div className='col'>
-            <div className='stats-value'>
+          <div className="col">
+            <div className="stats-value">
               ${tournamentWinning.toLocaleString()}
             </div>
-            <div className='stats-label'>Tournament Winnings</div>
+            <div className="stats-label">Tournament Winnings</div>
           </div>
         </div>
       </div>
-      <ObserverContainer className='expand players-swiper'>
-        <Link to='' className='swiper-prev'>
-          <img src={Images.chevron_left.default} alt='left' />
+      <ObserverContainer className="expand players-swiper">
+        <Link to="" className="swiper-prev">
+          <img src={Images.chevron_left.default} alt="left" />
         </Link>
-        <Link to='' className='swiper-next'>
-          <img src={Images.chevron_right.default} alt='right' />
+        <Link to="" className="swiper-next">
+          <img src={Images.chevron_right.default} alt="right" />
         </Link>
         <Swiper
           parallax
@@ -83,11 +83,11 @@ export const OurPlayers = () => {
           }}
         >
           {players.map((player: SinglePlayerType, index: number) => (
-            <SwiperSlide key={index} className='row column'>
+            <SwiperSlide key={index} className="row column">
               <img src={player.image} alt={player.name} />
 
-              <div className='swiper-name'>{player.name}</div>
-              <div className='swiper-description'>{player.description}</div>
+              <div className="swiper-name">{player.name}</div>
+              <div className="swiper-description">{player.description}</div>
             </SwiperSlide>
           ))}
         </Swiper>
