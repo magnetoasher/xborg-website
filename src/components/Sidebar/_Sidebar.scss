@@ -44,11 +44,19 @@
     width: 11px;
     transform: translateY(-50%);
     opacity: 0;
-    transition: 0.3s ease-in;
+    transition: 0.2s ease-in;
 
     &-item-container {
-      padding: 15px;
       cursor: pointer;
+      width: 34px;
+      min-height: 34px;
+
+      &:hover {
+        .scrollspy-item:not(.active) {
+          width: 10px;
+          height: 10px;
+        }
+      }
     }
 
     &-item {
@@ -56,7 +64,7 @@
       height: 2px;
       border: 2px solid transparent;
       background-color: $dark200;
-      transition: 0.3s ease-in;
+      transition: 0.2s ease-in;
       position: relative;
 
       &:after {
@@ -68,7 +76,7 @@
         height: 0;
         margin-top: 15px;
         background-color: $primary100;
-        transition: 0.3s ease-in;
+        transition: 0.2s ease-in;
       }
 
       &.active {
@@ -77,8 +85,11 @@
         border: 2px solid $primary100;
         background-color: transparent;
         margin-bottom: 100px;
+        margin-top: 10px;
+        transition-delay: 0.2s;
 
         &:after {
+          transition-delay: 0.2s;
           height: 80px;
         }
       }
