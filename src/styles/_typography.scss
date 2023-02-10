@@ -35,8 +35,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Lexend", sans-serif;
-  font-weight: 900;
+  font-family: $secondary-font-family;
   color: $primary100;
   font-size: 40px;
   line-height: 50px;
