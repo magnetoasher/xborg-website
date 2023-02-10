@@ -93,34 +93,38 @@ export const BecomingLegend = () => {
           id: "3",
           label: "Episode 14, 19th",
         },
+        {
+          id: "",
+          label: "Episode 15, 26th",
+        },
       ],
     },
   ];
 
   return (
     <div className={`becoming-legend expand row column`}>
-      <div className='row middle between expand'>
-        <div className='description expand'>
+      <div className="row middle between expand">
+        <div className="description expand">
           <SectionHead
-            title='Becoming A Legend'
-            description='A 15 episode docu-series with behind the scenes drama, match-day highlights, and exclusive interviews.'
+            title="Becoming A Legend"
+            description="A 15 episode docu-series with behind the scenes drama, match-day highlights, and exclusive interviews."
           >
             <b>Becoming</b> A Legend
           </SectionHead>
         </div>
-        <ObserverContainer className='parallaxed expand row middle center'>
+        <ObserverContainer className="parallaxed expand row middle center">
           <ParallaxLayer
             image={Images.XCS.camera}
             factorX={0.3}
             factorY={0.3}
             speed={0}
             isBase
-            className='parallaxed-1'
+            className="parallaxed-1"
           />
         </ObserverContainer>
       </div>
-      <div className='episodes'>
-        <h4 className='title'>Episode Dates</h4>
+      <div className="episodes">
+        <h4 className="title">Episode Dates</h4>
         <Table data={episodes} />
       </div>
     </div>
