@@ -1074,6 +1074,12 @@ h4 {
   }
 }
 
+@media (max-width: 400px) {
+  .gamingpassport .passport-intro .wave-details .subtitle {
+    font-size: 14px;
+  }
+}
+
 .gamingpassport .page-section-1 {
   height: 100vh;
 }
@@ -1846,6 +1852,12 @@ h4 {
 @media (max-width: 530px) {
   .gamingpassport .start-earning-today h2 {
     white-space: initial;
+  }
+}
+
+@media (max-width: 400px) {
+  .gamingpassport .start-earning-today .wave-details .subtitle {
+    font-size: 14px;
   }
 }
 

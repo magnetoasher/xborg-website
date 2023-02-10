@@ -254,4 +254,10 @@
       line-height: 36px;
     }
   }
+
+  @media (max-width: 400px) {
+    .wave-details .subtitle {
+      font-size: 14px;
+    }
+  }
 }

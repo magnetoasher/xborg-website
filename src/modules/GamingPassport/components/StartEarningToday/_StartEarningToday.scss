@@ -372,4 +372,10 @@
       white-space: initial;
     }
   }
+
+  @media (max-width: 400px) {
+    .wave-details .subtitle {
+      font-size: 14px;
+    }
+  }
 }
