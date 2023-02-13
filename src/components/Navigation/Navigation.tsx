@@ -27,7 +27,7 @@ export const Navigation = () => {
 
   return (
     <div
-      className={`navigation-container row center middle ${
+      className={`navigation-container container row center middle ${
         loaded ? "in" : "out"
       }`}
     >

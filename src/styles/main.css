@@ -4392,8 +4392,8 @@ h4 {
 .navigation-container {
   position: fixed;
   top: 0;
+  right: 0;
   left: 0;
-  width: 100%;
   padding: 33px 44px 30px 44px;
   height: 107px;
   z-index: 2;
@@ -5342,6 +5342,9 @@ h4 {
 
 .simplebar-container {
   height: 100vh;
+  overflow: hidden;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 .parallaxed-layer {

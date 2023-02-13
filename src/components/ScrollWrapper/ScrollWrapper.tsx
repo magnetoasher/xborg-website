@@ -14,7 +14,7 @@ export const ScrollWrapper = ({
   overrideScroll = true,
 }: ScrollWrapperType) => {
   const [scrollWrap, setScrollWrap] = useState<HTMLElement | undefined>(
-    undefined,
+    undefined
   );
 
   const parentRef = useRef<HTMLDivElement>(null);
@@ -41,8 +41,8 @@ export const ScrollWrapper = ({
   };
 
   return (
-    <div className='simplebar-container expand row' ref={parentRef}>
-      <SimpleBar className='simplebar-init expand' ref={scrollRef}>
+    <div className="simplebar-container expand row container" ref={parentRef}>
+      <SimpleBar className="simplebar-init expand" ref={scrollRef}>
         {scrollWrap && (
           <>
             <ParallaxProvider {...parallaxProviderProps}>
