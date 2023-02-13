@@ -88,6 +88,25 @@ export const PickGame = () => {
       />
     </div>
   );
+  const MojoButtons = () => (
+    <div className="row">
+      <ButtonPrimary
+        label="Planet Mojo Qualifier 1"
+        icon={<ExternalLink />}
+        to="https://www.communitygaming.io/tournament/xtreme-championship-series-mojomelee-month-1"
+      />
+      <ButtonPrimary
+        label="Planet Mojo Qualifier 2"
+        icon={<ExternalLink />}
+        to="https://www.communitygaming.io/tournament/xtreme-championship-series-mojo-melee-month-2"
+      />
+      <ButtonPrimary
+        label="Planet Mojo Qualifier 3"
+        icon={<ExternalLink />}
+        to="https://www.communitygaming.io/tournament/xtreme-championship-series-mojo-melee-month-3"
+      />
+    </div>
+  );
 
   return (
     <ObserverContainer
@@ -115,6 +134,10 @@ export const PickGame = () => {
           {
             label: "Spider Tanks",
             content: SpiderTanksButtons(),
+          },
+          {
+            label: "Planet Mojo",
+            content: MojoButtons(),
           },
         ]}
       />

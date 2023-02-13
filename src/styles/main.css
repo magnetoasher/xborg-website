@@ -1343,19 +1343,17 @@ h4 {
   max-width: 430px;
 }
 
-.gamingpassport .leaderboard .parallaxed {
-  padding-left: 22px;
-}
-
 .gamingpassport .leaderboard .parallaxed .list {
   position: relative;
   padding: 40px 0;
+  -webkit-transform: translateX(-44px);
+          transform: translateX(-44px);
 }
 
 .gamingpassport .leaderboard .parallaxed .list .border {
   position: absolute;
   top: 0px;
-  left: 0;
+  left: 60px;
   height: 0;
   width: 22px;
   -webkit-transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
@@ -1383,21 +1381,108 @@ h4 {
 }
 
 .gamingpassport .leaderboard .parallaxed.in .leaderboard-row:first-child {
-  margin-left: 5px;
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
   -webkit-transition-delay: 0.4s;
           transition-delay: 0.4s;
 }
 
 .gamingpassport .leaderboard .parallaxed.in .leaderboard-row:nth-child(2) {
-  margin-left: 22px;
+  -webkit-transform: translateX(22px);
+          transform: translateX(22px);
   -webkit-transition-delay: 0.6s;
           transition-delay: 0.6s;
 }
 
 .gamingpassport .leaderboard .parallaxed.in .leaderboard-row:nth-child(3) {
-  margin-left: -22px;
+  -webkit-transform: translateX(-22px);
+          transform: translateX(-22px);
   -webkit-transition-delay: 0.8s;
           transition-delay: 0.8s;
+}
+
+.gamingpassport .leaderboard .parallaxed.in .state-1 .leaderboard-row {
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.gamingpassport .leaderboard .parallaxed.in .state-1 .leaderboard-row:nth-child(2) {
+  -webkit-transform: translateY(96px) translateX(-22px);
+          transform: translateY(96px) translateX(-22px);
+}
+
+.gamingpassport .leaderboard .parallaxed.in .state-1 .leaderboard-row:nth-child(2) .index {
+  background: #7d4a2c;
+  border: 1px solid #a15917;
+}
+
+.gamingpassport .leaderboard .parallaxed.in .state-1 .leaderboard-row:nth-child(2) .index:before {
+  content: "3";
+}
+
+.gamingpassport .leaderboard .parallaxed.in .state-1 .leaderboard-row:nth-child(3) {
+  -webkit-transform: translateY(-96px) translateX(22px);
+          transform: translateY(-96px) translateX(22px);
+}
+
+.gamingpassport .leaderboard .parallaxed.in .state-1 .leaderboard-row:nth-child(3) .index {
+  background: #9d9d9d;
+  border: 1px solid #acacac;
+}
+
+.gamingpassport .leaderboard .parallaxed.in .state-1 .leaderboard-row:nth-child(3) .index:before {
+  content: "2";
+}
+
+.gamingpassport .leaderboard .parallaxed.in .state-2 .leaderboard-row {
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.gamingpassport .leaderboard .parallaxed.in .state-2 .leaderboard-row:first-child {
+  -webkit-transform: translateY(96px) translateX(22px);
+          transform: translateY(96px) translateX(22px);
+}
+
+.gamingpassport .leaderboard .parallaxed.in .state-2 .leaderboard-row:first-child .index {
+  background: #9d9d9d;
+  border: 1px solid #acacac;
+}
+
+.gamingpassport .leaderboard .parallaxed.in .state-2 .leaderboard-row:first-child .index:before {
+  content: "2";
+}
+
+.gamingpassport .leaderboard .parallaxed.in .state-2 .leaderboard-row:nth-child(2) {
+  -webkit-transform: translateY(96px) translateX(-22px);
+          transform: translateY(96px) translateX(-22px);
+}
+
+.gamingpassport .leaderboard .parallaxed.in .state-2 .leaderboard-row:nth-child(2) .index {
+  background: #7d4a2c;
+  border: 1px solid #a15917;
+}
+
+.gamingpassport .leaderboard .parallaxed.in .state-2 .leaderboard-row:nth-child(2) .index:before {
+  content: "3";
+}
+
+.gamingpassport .leaderboard .parallaxed.in .state-2 .leaderboard-row:nth-child(3) {
+  -webkit-transform: translateY(-192px) translateX(5px);
+          transform: translateY(-192px) translateX(5px);
+}
+
+.gamingpassport .leaderboard .parallaxed.in .state-2 .leaderboard-row:nth-child(3) .index {
+  background: #c19930;
+  border: 1px solid #cfac2f;
+}
+
+.gamingpassport .leaderboard .parallaxed.in .state-2 .leaderboard-row:nth-child(3) .index:before {
+  content: "1";
 }
 
 @media (max-width: 992px) {
@@ -3645,7 +3730,7 @@ h4 {
 }
 
 .xcs .the-league .section-head-title {
-  max-width: 315px;
+  max-width: 325px;
 }
 
 .xcs .the-league .section-head-desc {
@@ -5539,12 +5624,18 @@ h4 {
 }
 
 .leaderboard-row {
+  position: relative;
+  z-index: 1;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+.leaderboard-row .mouse-parallax {
   padding: 16px;
   background-color: #171717;
   max-width: 393px;
   margin-bottom: 8px;
-  position: relative;
-  z-index: 1;
+  width: 100%;
 }
 
 .leaderboard-row .image {
@@ -5556,28 +5647,61 @@ h4 {
 }
 
 .leaderboard-row .index {
-  font-size: 17px;
-  font-weight: bold;
   width: 39px;
   height: 39px;
+  position: relative;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+.leaderboard-row .index:before {
+  content: "";
+  font-size: 17px;
+  font-weight: bold;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.leaderboard-row .index:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.4)));
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
 }
 
 .leaderboard-row:first-child .index {
-  background-image: -webkit-gradient(linear, left top, right top, from(#c19930), to(#8c6d00));
-  background-image: linear-gradient(90deg, #c19930 0%, #8c6d00 100%);
+  background: #c19930;
   border: 1px solid #cfac2f;
 }
 
+.leaderboard-row:first-child .index:before {
+  content: "1";
+}
+
 .leaderboard-row:nth-child(2) .index {
-  background-image: -webkit-gradient(linear, left top, right top, from(#9d9d9d), to(#595959));
-  background-image: linear-gradient(90deg, #9d9d9d 0%, #595959 100%);
+  background: #9d9d9d;
   border: 1px solid #acacac;
 }
 
+.leaderboard-row:nth-child(2) .index:before {
+  content: "2";
+}
+
 .leaderboard-row:nth-child(3) .index {
-  background-image: -webkit-gradient(linear, left top, right top, from(#7d4a2c), to(#452d18));
-  background-image: linear-gradient(90deg, #7d4a2c 0%, #452d18 100%);
+  background: #7d4a2c;
   border: 1px solid #a15917;
+}
+
+.leaderboard-row:nth-child(3) .index:before {
+  content: "3";
 }
 
 .leaderboard-row:last-child {

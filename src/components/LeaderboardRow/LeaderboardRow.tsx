@@ -17,23 +17,25 @@ export const LeaderboardRow = ({
   xp,
 }: LeaderboardRowType) => {
   return (
-    <MouseParallaxChild
-      factorX={0.1 * (index + 1)}
-      factorY={0}
-      className='leaderboard-row row middle'
-    >
-      <div className='index row middle center'>{index}</div>
-      <div className='image'>
-        <img src={image} alt='' />
-      </div>
-      <div className='row column'>
-        <div className='name'>{name}</div>
-        <div className='level row middle center'>{level} Level</div>
-      </div>
-      <div className='row middle xp'>
-        <img src={Images.gamingpassport.emerald} alt='' />
-        {xp} XP
-      </div>
-    </MouseParallaxChild>
+    <div className="leaderboard-row">
+      <MouseParallaxChild
+        factorX={0.1 * (index + 1)}
+        factorY={0}
+        className="mouse-parallax row middle"
+      >
+        <div className="index row middle center"></div>
+        <div className="image">
+          <img src={image} alt="" />
+        </div>
+        <div className="row column">
+          <div className="name">{name}</div>
+          <div className="level row middle center">{level} Level</div>
+        </div>
+        <div className="row middle xp">
+          <img src={Images.gamingpassport.emerald} alt="" />
+          {xp} XP
+        </div>
+      </MouseParallaxChild>
+    </div>
   );
 };
