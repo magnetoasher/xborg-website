@@ -69,39 +69,20 @@ export const PickGame = () => {
       />
     </div>
   );
-  const SpiderTanksButtons = () => (
-    <div className="row">
-      <ButtonPrimary
-        label="Spider Tanks Qualifier 1"
-        icon={<ExternalLink />}
-        to="https://www.communitygaming.io/tournament/xtreme-championship-series-spider-tanks-month-1"
-      />
-      <ButtonPrimary
-        label="Spider Tanks Qualifier 2"
-        icon={<ExternalLink />}
-        to="https://www.communitygaming.io/tournament/xtreme-championship-series-spider-tanks-month-2"
-      />
-      <ButtonPrimary
-        label="Spider Tanks Qualifier 3"
-        icon={<ExternalLink />}
-        to="https://www.communitygaming.io/tournament/xtreme-championship-series-spider-tanks-month-3"
-      />
-    </div>
-  );
   const MojoButtons = () => (
     <div className="row">
       <ButtonPrimary
-        label="Planet Mojo Qualifier 1"
+        label="Mojo Melee Qualifier 1"
         icon={<ExternalLink />}
         to="https://www.communitygaming.io/tournament/xtreme-championship-series-mojomelee-month-1"
       />
       <ButtonPrimary
-        label="Planet Mojo Qualifier 2"
+        label="Mojo Melee Qualifier 2"
         icon={<ExternalLink />}
         to="https://www.communitygaming.io/tournament/xtreme-championship-series-mojo-melee-month-2"
       />
       <ButtonPrimary
-        label="Planet Mojo Qualifier 3"
+        label="Mojo Melee Qualifier 3"
         icon={<ExternalLink />}
         to="https://www.communitygaming.io/tournament/xtreme-championship-series-mojo-melee-month-3"
       />
@@ -132,11 +113,7 @@ export const PickGame = () => {
             content: GodsUnchainedButtons(),
           },
           {
-            label: "Spider Tanks",
-            content: SpiderTanksButtons(),
-          },
-          {
-            label: "Planet Mojo",
+            label: "Mojo Melee",
             content: MojoButtons(),
           },
         ]}

@@ -31,7 +31,7 @@ export const ScrollWrapper = ({
 
       setScrollWrap(wrapper);
 
-      if (overrideScroll) scrollVM.rewriteDefaultScrolling();
+      // if (overrideScroll) scrollVM.rewriteDefaultScrolling();
     }
   }, []);
 

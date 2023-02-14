@@ -20,15 +20,13 @@ export const TierOne = () => {
           <img src={Images.XCS.harvest} alt="The Harvest" />
         </div>
         <div className="single-game row middle">
-          <img src={Images.XCS.godsunchained} alt="Hidden" />
+          <img src={Images.XCS.godsunchained} alt="Gods Unchained" />
         </div>
         <div className="single-game row middle">
-          <img src={Images.XCS.hidden04} alt="Hidden" />
-          <div className="desc">Announcement on the 14/02</div>
+          <img src={Images.XCS.mojomelee} alt="Mojo Melee" />
         </div>
         <div className="single-game row middle">
           <img src={Images.XCS.hidden05} alt="Hidden" />
-          <div className="desc">Announcement on the 16/02</div>
         </div>
       </div>
     </div>

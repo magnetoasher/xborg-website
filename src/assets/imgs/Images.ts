@@ -114,7 +114,7 @@ export const Images = {
     evio: require("./XCS/evio.png"),
     harvest: require("./XCS/theharvest.png"),
     godsunchained: require("./XCS/godsunchained.png"),
-    hidden04: require("./XCS/hidden04.png"),
+    mojomelee: require("./XCS/mojomelee.png"),
     hidden05: require("./XCS/hidden05.png"),
   },
 
