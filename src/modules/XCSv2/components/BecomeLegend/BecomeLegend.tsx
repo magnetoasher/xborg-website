@@ -40,7 +40,7 @@ export const BecomeLegend = () => {
             <SectionIntro
               subtitle="Become A Legend"
               title="XCS"
-              description="Introducing the Xtreme Championship Series, the largest Web3 esports event ever."
+              description="Introducing the Xtreme Championship Series, the largest Web3 esports event ever created."
             />
             <div className="row btn-container">
               <ButtonPrimary
