@@ -590,6 +590,16 @@ h4 {
   background-color: #2c2c2c;
 }
 
+@media (min-width: 1648px) {
+  .simplebar-track.simplebar-vertical {
+    right: 0px;
+  }
+  .simplebar-track.simplebar-vertical:after {
+    right: 0;
+    left: auto;
+  }
+}
+
 @media (max-width: 1200px) {
   .simplebar-track.simplebar-vertical {
     top: 0;
@@ -908,6 +918,7 @@ h4 {
   bottom: 0;
   right: 0;
   width: 100vw;
+  max-width: 1648px;
   height: 0;
   -webkit-transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
@@ -4514,6 +4525,16 @@ h4 {
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
   opacity: 1;
+}
+
+@media (min-width: 1648px) {
+  .navigation-container {
+    padding-right: 0;
+  }
+  .navigation-container:after {
+    right: 0;
+    left: auto;
+  }
 }
 
 @media (max-width: 1200px) {
