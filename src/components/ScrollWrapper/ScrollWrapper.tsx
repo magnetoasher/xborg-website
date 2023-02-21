@@ -41,7 +41,7 @@ export const ScrollWrapper = ({
   };
 
   return (
-    <div className="simplebar-container expand row container" ref={parentRef}>
+    <div className="simplebar-container expand row" ref={parentRef}>
       <SimpleBar className="simplebar-init expand" ref={scrollRef}>
         {scrollWrap && (
           <>

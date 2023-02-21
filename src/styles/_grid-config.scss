@@ -39,7 +39,7 @@ $xxl-start: ($xl-max + 1); // Generate xxl breakpoint's min width
   }
 
   @media (max-width: $xl-max) {
-    padding: 0 40px;
+    padding: 0;
   }
   @media (max-width: $md-max) {
     max-width: 100%;

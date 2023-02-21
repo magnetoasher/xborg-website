@@ -19,6 +19,10 @@
     padding: 24px 30px $footer-xl 120px;
     min-height: 70vh;
     height: auto !important;
+
+    &.page-section-0 {
+      padding-top: 104px;
+    }
   }
 
   @media (max-width: $sm-max) {

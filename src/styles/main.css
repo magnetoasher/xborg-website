@@ -23,7 +23,7 @@
 
 @media (max-width: 1400px) {
   .container {
-    padding: 0 40px;
+    padding: 0;
   }
 }
 
@@ -976,6 +976,10 @@ h4 {
     line-height: 58px;
     max-width: 280px;
   }
+  .gamingpassport .passport-intro .wave-details .subtitle {
+    font-size: 20px;
+    line-height: 25px;
+  }
   .gamingpassport .passport-intro .triangle {
     display: none;
   }
@@ -1016,10 +1020,6 @@ h4 {
   }
   .gamingpassport .passport-intro .wave-details {
     margin-top: 24px;
-  }
-  .gamingpassport .passport-intro .wave-details .subtitle {
-    font-size: 20px;
-    line-height: 25px;
   }
   .gamingpassport .passport-intro .wave-ends {
     -webkit-box-orient: vertical;
@@ -1833,6 +1833,12 @@ h4 {
   }
 }
 
+@media (max-width: 1290px) {
+  .gamingpassport .start-earning-today .parallaxed-left {
+    left: -5%;
+  }
+}
+
 @media (max-width: 1200px) {
   .gamingpassport .start-earning-today {
     -webkit-box-orient: vertical;
@@ -1917,7 +1923,6 @@ h4 {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     height: auto;
-    margin-bottom: 80px;
     width: 100%;
   }
   .gamingpassport .start-earning-today .links a {
@@ -2704,7 +2709,7 @@ h4 {
 
 @media (max-width: 768px) {
   .about-us .become-xplorer {
-    margin-bottom: 160px;
+    margin-bottom: 80px;
   }
 }
 
@@ -3581,7 +3586,7 @@ h4 {
 
 @media (max-width: 768px) {
   .launchpad-page .get-started {
-    padding-bottom: 160px;
+    padding-bottom: 80px;
   }
 }
 
@@ -4247,7 +4252,7 @@ h4 {
         -ms-flex-pack: start;
             justify-content: flex-start;
     width: 100%;
-    padding-bottom: 160px;
+    padding-bottom: 80px;
   }
   .xcs .dont-miss .description {
     -webkit-box-flex: initial;
@@ -4279,6 +4284,7 @@ h4 {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
+    margin-top: 40px;
   }
   .xcs .dont-miss.active .description {
     max-width: 100%;
@@ -4544,7 +4550,6 @@ h4 {
             justify-content: flex-end;
     padding: 19px 24px;
     height: 80px;
-    position: relative;
   }
   .navigation-container .early-access {
     position: absolute;
@@ -5299,6 +5304,9 @@ h4 {
     padding: 24px 30px 80px 120px;
     min-height: 70vh;
     height: auto !important;
+  }
+  .page-section.page-section-0 {
+    padding-top: 104px;
   }
 }
 
