@@ -16,3 +16,7 @@ export * from "./GamingCard";
 export * from "./LeaderboardRow";
 export * from "./Table";
 export * from "./Tabs";
+export * from "./TextInput";
+export * from "./RadioInput";
+export * from "./SliderInput";
+export * from "./Charts";

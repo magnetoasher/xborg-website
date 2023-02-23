@@ -1,0 +1,138 @@
+.seed {
+  padding-bottom: $footer-xl;
+  width: 100%;
+
+  .title {
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 71px;
+    letter-spacing: 0.05em;
+    color: $primary100;
+    margin: 8px 0;
+  }
+
+  h4 {
+    color: $light100;
+    margin-bottom: 24px;
+  }
+
+  p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    color: $light100;
+  }
+
+  .numbers {
+    margin: 41px 0;
+
+    .value {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 40px;
+      color: $primary100;
+    }
+
+    .label {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 28px;
+      letter-spacing: 0.05em;
+      color: $light100;
+    }
+  }
+
+  .form-label {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0.05em;
+    color: $light100;
+    margin-top: 32px;
+    margin-bottom: 8px;
+
+    span {
+      color: $primary100;
+    }
+  }
+
+  .sublabel {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.05em;
+    color: #7e7e7e;
+  }
+
+  .radios-container {
+    margin: 12px 0 36px;
+  }
+
+  .slider-container {
+    color: $light100;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    margin-top: 16px;
+
+    .slide-label {
+      margin-top: 8px;
+    }
+  }
+
+  .footer {
+    margin-top: 55px;
+
+    .btn-primary {
+      width: 200px;
+      text-align: center;
+    }
+  }
+
+  .switch-view {
+    background-color: #212121;
+    padding: 4px;
+    height: 60px;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      bottom: 4px;
+      width: 107px;
+      background-color: $primary100;
+      pointer-events: none;
+      transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    &.inactive {
+      &:after {
+        left: 111px;
+        width: 159px;
+      }
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $light100;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+      position: relative;
+      z-index: 2;
+
+      &:first-child {
+        width: 107px;
+      }
+      &:last-child {
+        width: 159px;
+      }
+    }
+  }
+}

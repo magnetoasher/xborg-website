@@ -12,8 +12,9 @@ import {
   GamingPassport,
   LaunchpadPage,
   XCSPage,
+  FAQ,
+  Seed,
 } from "../../modules";
-import { FAQ } from "../../modules/FAQ";
 import { TermsAndConditions } from "../../modules/TermsAndConditions";
 
 export enum APP_ROUTER_TRANSITION {
@@ -50,6 +51,7 @@ export const AppRouter = () => {
         <Route path="/gaming-passport" element={<GamingPassport />} />
         <Route path="/terms-and-agreements" element={<TermsAndConditions />} />
         <Route path="/FAQ" element={<FAQ />} />
+        <Route path="/seed" element={<Seed />} />
         <Route path="*" element={<Navigate to="/gaming-passport" />} />
       </Routes>
     </div>

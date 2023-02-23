@@ -21,12 +21,12 @@ export const Portfolio = () => {
           />
           <Tile
             title="The Bornless"
-            image={Images.portfolio.aether}
+            image={Images.portfolio.bornless}
             slug="aether-games"
           />
           <Tile
             title="Aether Games"
-            image={Images.portfolio.bornless}
+            image={Images.portfolio.aether}
             slug="the-bornless"
           />
           <Tile

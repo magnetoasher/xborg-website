@@ -1,3 +1,5 @@
+import { SeedDataRowMappedType, SeedDataRowType } from "../redux/seed/types";
+
 export class AppViewModel {
   constructor() {}
 
@@ -52,5 +54,46 @@ export class AppViewModel {
   setCharAt(str: string, index: number, chr: string) {
     if (index > str.length - 1) return str;
     return str.substring(0, index) + chr + str.substring(index + 1);
+  }
+
+  timeConverter(UNIX_timestamp: number) {
+    const a = new Date(UNIX_timestamp * 1000);
+    const months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    const month = months[a.getMonth()];
+    const date = a.getDate();
+    const time = month + " " + date;
+    return time;
+  }
+
+  remapSeed(seed: SeedDataRowType[]): SeedDataRowMappedType[] {
+    let result: SeedDataRowMappedType[] = [];
+
+    let capital = 0;
+    for (let i = 0; i < seed.length; i++) {
+      const date = this.timeConverter(seed[i].timestamp);
+
+      capital += seed[i].capital;
+      result.push({
+        capital,
+        index: seed[i].index,
+        date,
+      });
+    }
+
+    console.log("result -- ", result);
+    return result;
   }
 }

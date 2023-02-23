@@ -18,6 +18,7 @@
 @import "../modules/XCSv2/XCS";
 @import "../modules/TermsAndConditions/TermsAndConditions";
 @import "../modules/FAQ/FAQ";
+@import "../modules/Seed/Seed";
 
 // Components
 @import "../components/Navigation/Navigation";
@@ -37,3 +38,7 @@
 @import "../components/Table/Table";
 @import "../components/Tabs/Tabs";
 @import "../components/Footer/Footer";
+@import "../components/TextInput/TextInput";
+@import "../components/RadioInput/RadioInput";
+@import "../components/SliderInput/SliderInput";
+@import "../components/Charts/Charts";
