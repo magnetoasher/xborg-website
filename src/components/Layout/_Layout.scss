@@ -2,6 +2,12 @@
   position: relative;
 }
 
+.Toastify__toast {
+  line-height: 1.4;
+  color: $light100;
+  font-size: 12px;
+}
+
 .page-section {
   min-height: 100vh;
   width: 100vw;
