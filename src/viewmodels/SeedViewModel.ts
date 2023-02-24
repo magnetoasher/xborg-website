@@ -37,11 +37,11 @@ export class SeedViewModel {
     },
     {
       value: 175,
-      scaledValue: 500000,
+      scaledValue: 50000,
     },
     {
       value: 200,
-      scaledValue: 1000000,
+      scaledValue: 100000,
     },
   ];
   sendSeed(
@@ -96,14 +96,20 @@ export class SeedViewModel {
   }
 
   scaleSlider = (value: number) => {
-    const previousMarkIndex = Math.floor(value / 25);
+    const multiplier = 24;
+    const previousMarkIndex = Math.floor(value / multiplier);
     const previousMark = this.followersMarks[previousMarkIndex];
-    const remainder = value % 25;
+    const remainder = value % multiplier;
+
     if (remainder === 0) {
-      return previousMark.scaledValue;
+      return Math.round(previousMark.scaledValue);
     }
     const nextMark = this.followersMarks[previousMarkIndex + 1];
-    const increment = (nextMark.scaledValue - previousMark.scaledValue) / 25;
-    return remainder * increment + previousMark.scaledValue;
+    const increment =
+      (nextMark.scaledValue - previousMark.scaledValue) / multiplier;
+    const result = Math.round(remainder * increment + previousMark.scaledValue);
+
+    if (result > 50000) return 50000;
+    return result;
   };
 }

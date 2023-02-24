@@ -166,7 +166,7 @@ export const Seed = () => {
 
               <div className="slider-container">
                 <SliderInput
-                  min={1}
+                  min={0}
                   max={150}
                   defaultValue={"$" + form.capital}
                   onChange={(e) =>
