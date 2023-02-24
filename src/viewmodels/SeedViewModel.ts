@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
+import { toast } from "react-toastify";
 import { closest, handleErrors } from "../helpers/inputs";
 import { SeedFormType } from "../modules";
 import { SeedActions } from "../redux/seed/actions";
@@ -16,7 +17,9 @@ export class SeedViewModel {
   ) {
     sendSeedSchema
       .validate(form, yupOptions)
-      .then(() => {
+      .then(async () => {
+        await this.dispatch(SeedActions.sendSeed(form));
+
         setForm({
           name: "",
           email: "",
@@ -24,9 +27,30 @@ export class SeedViewModel {
           capital: 0,
           how: "",
         });
-        this.dispatch(SeedActions.sendSeed(form));
+        toast.success("Form succesfully sent!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
       })
-      .catch((err) => handleErrors(err, setErrors));
+      .catch((err) => {
+        toast.error("Something went wrong! Please try again.", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+        handleErrors(err, setErrors);
+      });
   }
 
   getSlideValue(value: number): number {

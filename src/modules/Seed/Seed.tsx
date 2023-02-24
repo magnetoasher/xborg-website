@@ -37,7 +37,7 @@ export const Seed = () => {
     name: "",
     email: "",
     isPrometheusOwner: true,
-    capital: 0,
+    capital: 5000,
     how: "",
   });
   const [errors, setErrors] = useState<any>({});
@@ -111,7 +111,7 @@ export const Seed = () => {
               />
 
               <div className="form-label">
-                What’s your <span>name?</span>
+                What’s your <span>email address?</span>
               </div>
               <div className="sublabel">
                 Relevant documents will be shared via email.
@@ -168,6 +168,7 @@ export const Seed = () => {
                 <SliderInput
                   min={1}
                   max={1200}
+                  defaultValue={1150 / 2}
                   onChange={(e) =>
                     setForm({
                       ...form,

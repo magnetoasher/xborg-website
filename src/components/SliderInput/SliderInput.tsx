@@ -6,10 +6,11 @@ type SliderInputType = {
   max: number;
   error?: string;
   onChange: (value: number) => void;
+  defaultValue?: number;
 };
 
 export const SliderInput = (props: SliderInputType) => {
-  const { error, min, max } = props;
+  const { error, min, max, defaultValue } = props;
 
   return (
     <div className={`input-wrapper${error ? " has-error" : ""}`}>
@@ -17,6 +18,7 @@ export const SliderInput = (props: SliderInputType) => {
         className="horizontal-slider"
         thumbClassName="example-thumb"
         trackClassName="example-track"
+        defaultValue={defaultValue}
         max={max}
         min={min}
         onAfterChange={props.onChange}
