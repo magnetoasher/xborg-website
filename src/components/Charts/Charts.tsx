@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { XAxis, Tooltip, AreaChart, Area, ResponsiveContainer } from "recharts";
+import { months } from "../../helpers/time";
 import { AppDispatch } from "../../store";
 import { SeedViewModel } from "../../viewmodels/SeedViewModel";
 
@@ -45,6 +46,7 @@ const CustomTooltip = ({ active, payload, label, data }: any) => {
   const dispatch = useDispatch<AppDispatch>();
   const vm = new SeedViewModel(dispatch);
   const row = vm.findRowByDate(data, label);
+  const dateArray = label?.split("/") || [];
 
   if (active && payload && payload.length) {
     if (!row) return null;
@@ -52,7 +54,9 @@ const CustomTooltip = ({ active, payload, label, data }: any) => {
       <div className="recharts-tooltip">
         <div className="row column middle center">
           <div className="submissions">{row.compounded} submissions</div>
-          <span>Apr 08, 2022</span>
+          <span>
+            {months[dateArray[0] - 1]} {dateArray[1]},{dateArray[2]}
+          </span>
         </div>
       </div>
     );
