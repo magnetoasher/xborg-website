@@ -1,4 +1,4 @@
-import React from "react";
+import Tippy from "@tippyjs/react";
 import ReactSlider from "react-slider";
 
 type SliderInputType = {
@@ -6,7 +6,7 @@ type SliderInputType = {
   max: number;
   error?: string;
   onChange: (value: number) => void;
-  defaultValue?: number;
+  defaultValue?: string;
 };
 
 export const SliderInput = (props: SliderInputType) => {
@@ -18,10 +18,17 @@ export const SliderInput = (props: SliderInputType) => {
         className="horizontal-slider"
         thumbClassName="example-thumb"
         trackClassName="example-track"
-        defaultValue={defaultValue}
-        max={max}
         min={min}
+        step={1}
+        max={max}
         onAfterChange={props.onChange}
+        renderThumb={(props) => {
+          return (
+            <Tippy content={defaultValue} key={"thumb"}>
+              <div {...props}></div>
+            </Tippy>
+          );
+        }}
       />
     </div>
   );

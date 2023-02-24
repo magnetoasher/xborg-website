@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 import { toast } from "react-toastify";
-import { closest, handleErrors } from "../helpers/inputs";
+import { handleErrors } from "../helpers/inputs";
 import { SeedFormType } from "../modules";
 import { SeedActions } from "../redux/seed/actions";
 import { sendSeedSchema } from "../schemas/sendSeedSchema";
@@ -10,6 +10,40 @@ const yupOptions = { abortEarly: false };
 
 export class SeedViewModel {
   constructor(private dispatch: AppDispatch) {}
+  followersMarks = [
+    {
+      value: 25,
+      scaledValue: 500,
+    },
+    {
+      value: 50,
+      scaledValue: 1000,
+    },
+    {
+      value: 75,
+      scaledValue: 2000,
+    },
+    {
+      value: 100,
+      scaledValue: 5000,
+    },
+    {
+      value: 125,
+      scaledValue: 10000,
+    },
+    {
+      value: 150,
+      scaledValue: 20000,
+    },
+    {
+      value: 175,
+      scaledValue: 500000,
+    },
+    {
+      value: 200,
+      scaledValue: 1000000,
+    },
+  ];
   sendSeed(
     form: SeedFormType,
     setForm: Dispatch<SetStateAction<SeedFormType>>,
@@ -53,31 +87,6 @@ export class SeedViewModel {
       });
   }
 
-  getSlideValue(value: number): number {
-    const counts = [0, 200, 350, 600, 720, 1000, 1100];
-    const replacement = [500, 1000, 2000, 5000, 10000, 20000, 50000];
-    const closestValue = closest(value, counts);
-
-    switch (closestValue) {
-      case counts[0]:
-        return replacement[0];
-      case counts[1]:
-        return replacement[1];
-      case counts[2]:
-        return replacement[2];
-      case counts[3]:
-        return replacement[3];
-      case counts[4]:
-        return replacement[4];
-      case counts[5]:
-        return replacement[5];
-      case counts[6]:
-        return replacement[6];
-      default:
-        return replacement[0];
-    }
-  }
-
   findRowByDate(data: any[], label: string) {
     if (!data?.length) return null;
 
@@ -85,4 +94,16 @@ export class SeedViewModel {
 
     return row;
   }
+
+  scaleSlider = (value: number) => {
+    const previousMarkIndex = Math.floor(value / 25);
+    const previousMark = this.followersMarks[previousMarkIndex];
+    const remainder = value % 25;
+    if (remainder === 0) {
+      return previousMark.scaledValue;
+    }
+    const nextMark = this.followersMarks[previousMarkIndex + 1];
+    const increment = (nextMark.scaledValue - previousMark.scaledValue) / 25;
+    return remainder * increment + previousMark.scaledValue;
+  };
 }

@@ -9,7 +9,10 @@ const ActionCreators = {
   }),
   sendSeed: (form: SeedFormType) => ({
     type: SEND_SEED,
-    payload: axios.post("https://gaming.xborg.com/api/seed/post", form),
+    payload: axios.post(
+      "https://gaming.xborg.com/api/seed/post",
+      JSON.stringify(form)
+    ),
   }),
 };
 

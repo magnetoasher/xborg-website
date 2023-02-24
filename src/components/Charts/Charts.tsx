@@ -51,7 +51,7 @@ const CustomTooltip = ({ active, payload, label, data }: any) => {
     return (
       <div className="recharts-tooltip">
         <div className="row column middle center">
-          <div className="submissions">{row.count} submissions</div>
+          <div className="submissions">{row.compounded} submissions</div>
           <span>Apr 08, 2022</span>
         </div>
       </div>

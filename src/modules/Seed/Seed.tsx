@@ -37,7 +37,7 @@ export const Seed = () => {
     name: "",
     email: "",
     isPrometheusOwner: true,
-    capital: 5000,
+    capital: 500,
     how: "",
   });
   const [errors, setErrors] = useState<any>({});
@@ -167,12 +167,12 @@ export const Seed = () => {
               <div className="slider-container">
                 <SliderInput
                   min={1}
-                  max={1200}
-                  defaultValue={1150 / 2}
+                  max={150}
+                  defaultValue={"$" + form.capital}
                   onChange={(e) =>
                     setForm({
                       ...form,
-                      capital: vm.getSlideValue(e),
+                      capital: vm.scaleSlider(e),
                     })
                   }
                 />
