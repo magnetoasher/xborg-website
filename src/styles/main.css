@@ -21,6 +21,10 @@
   max-width: 780px;
 }
 
+.container.container-l {
+  max-width: 672px;
+}
+
 @media (max-width: 1400px) {
   .container {
     padding: 0;
@@ -4411,6 +4415,37 @@ h4 {
   width: 100%;
 }
 
+.seed .container.container-l {
+  padding: 0;
+}
+
+.seed .register-for-seed {
+  text-align: center;
+  padding: 7px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  position: relative;
+}
+
+.seed .register-for-seed:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  background-color: #eb3a4a;
+}
+
+.seed .logo-icon {
+  margin-top: 46px;
+}
+
 .seed .title {
   font-size: 56px;
   font-weight: 900;
@@ -4437,19 +4472,29 @@ h4 {
   margin: 41px 0;
 }
 
+.seed .numbers .col {
+  padding-left: 16px;
+  border-left: 4px solid #eb3a4a;
+}
+
 .seed .numbers .value {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 40px;
   color: #eb3a4a;
 }
 
 .seed .numbers .label {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 28px;
   letter-spacing: 0.05em;
   color: #d1d3d4;
+  max-width: 124px;
+}
+
+.seed .numbers .col:first-child {
+  margin-right: 64px;
 }
 
 .seed .form-label {
@@ -4501,6 +4546,7 @@ h4 {
 }
 
 .seed .switch-view {
+  margin-top: 32px;
   background-color: #212121;
   padding: 4px;
   height: 60px;
@@ -4549,6 +4595,101 @@ h4 {
 
 .seed .switch-view a:last-child {
   width: 159px;
+}
+
+.seed .line-graph {
+  margin-top: 32px;
+}
+
+.seed .single-submission {
+  background-color: #212121;
+  padding: 24px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.seed .single-submission b {
+  font-weight: 600;
+}
+
+.seed .single-submission span {
+  color: #eb3a4a;
+}
+
+.seed .single-submission .time {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #7e7e7e;
+}
+
+.seed .submissions-bottom {
+  margin-top: 25px;
+}
+
+.seed .submissions-bottom .items {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+@media (max-width: 1200px) {
+  .seed h1.title {
+    font-size: 46px;
+    line-height: 58px;
+  }
+}
+
+@media (max-width: 768px) {
+  .seed .submissions-bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .seed .submissions-bottom .items {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .seed .single-submission {
+    padding: 12px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .seed .single-submission .time {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .seed h1.title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .seed .labels {
+    font-size: 7px;
+  }
+  .seed .numbers .col:first-child {
+    margin-right: 14px;
+  }
+  .seed .numbers .value {
+    font-size: 26px;
+  }
+  .seed .numbers .label {
+    font-size: 14px;
+  }
 }
 
 .navigation-container {
@@ -6137,6 +6278,16 @@ footer.footer a:hover svg path {
   opacity: 1;
 }
 
+.input-wrapper.has-error input {
+  border-color: #eb3a4a;
+}
+
+.input-wrapper .input-error {
+  color: #eb3a4a;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
 .radio-container.input-container input {
   position: absolute;
 }
@@ -6231,16 +6382,59 @@ footer.footer a:hover svg path {
 }
 
 .line-graph .recharts-tooltip-wrapper .recharts-tooltip {
+  background-color: #212121;
   border: none;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 14px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #fff;
 }
 
 .line-graph .recharts-tooltip-wrapper .recharts-tooltip span {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 12px;
   line-height: 24px;
-  color: white;
+  color: #878787;
+}
+
+.page-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -4px;
+}
+
+.page-pagination a {
+  height: 32px;
+  width: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 4px;
+  border: 1px solid #202020;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.page-pagination a:hover {
+  border-color: #eb3a4a;
+}
+
+.page-pagination .selected a,
+.page-pagination .next a,
+.page-pagination .previous a {
+  border-color: #eb3a4a;
+  background-color: #eb3a4a;
 }
 /*# sourceMappingURL=main.css.map */

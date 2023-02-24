@@ -1,0 +1,32 @@
+.page-pagination {
+  display: flex;
+  margin: 0 -4px;
+
+  a {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 4px;
+    border: 1px solid #202020;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    transition: 0.2s ease-in;
+
+    &:hover {
+      border-color: $primary100;
+    }
+  }
+
+  .selected,
+  .next,
+  .previous {
+    a {
+      border-color: $primary100;
+      background-color: $primary100;
+    }
+  }
+}

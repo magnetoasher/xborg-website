@@ -1,5 +1,8 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { XAxis, Tooltip, AreaChart, Area, ResponsiveContainer } from "recharts";
+import { AppDispatch } from "../../store";
+import { SeedViewModel } from "../../viewmodels/SeedViewModel";
 
 export type LineGraphProps = {
   data: any;
@@ -16,11 +19,16 @@ export const LineGraph = ({ data }: LineGraphProps) => {
               <stop offset="95%" stopColor="transparent" stopOpacity={0.2} />
             </linearGradient>
           </defs>
-          <Tooltip content={<CustomTooltip />} />
+          <Tooltip
+            content={<CustomTooltip data={data} />}
+            cursorStyle={{
+              stroke: "yellow",
+            }}
+          />
 
           <XAxis dataKey="date" />
           <Area
-            dataKey="capital"
+            dataKey="compounded"
             type="monotone"
             stroke="#eb3a4a"
             strokeWidth={3}
@@ -33,15 +41,19 @@ export const LineGraph = ({ data }: LineGraphProps) => {
   );
 };
 
-const CustomTooltip = ({ active, payload, label }: any) => {
+const CustomTooltip = ({ active, payload, label, data }: any) => {
+  const dispatch = useDispatch<AppDispatch>();
+  const vm = new SeedViewModel(dispatch);
+  const row = vm.findRowByDate(data, label);
+
   if (active && payload && payload.length) {
+    if (!row) return null;
     return (
       <div className="recharts-tooltip">
-        {/* {payload.map((pld) => ( */}
-        <div style={{ display: "inline-block", padding: 10 }}>
-          <span>#1</span> (Apr 12, 2022)
+        <div className="row column middle center">
+          <div className="submissions">{row.count} submissions</div>
+          <span>Apr 08, 2022</span>
         </div>
-        {/* ))} */}
       </div>
     );
   }

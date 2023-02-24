@@ -5,7 +5,7 @@ type SliderInputType = {
   min: number;
   max: number;
   error?: string;
-  // onChange: (value: string) => void;
+  onChange: (value: number) => void;
 };
 
 export const SliderInput = (props: SliderInputType) => {
@@ -19,6 +19,7 @@ export const SliderInput = (props: SliderInputType) => {
         trackClassName="example-track"
         max={max}
         min={min}
+        onAfterChange={props.onChange}
       />
     </div>
   );

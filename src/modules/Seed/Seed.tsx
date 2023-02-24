@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { Images } from "../../assets/imgs/Images";
 import {
   ButtonPrimary,
   Layout,
@@ -9,12 +10,14 @@ import {
   TextInput,
   LineGraph,
 } from "../../components";
+import { Pagination } from "../../components/Pagination";
 import { updateInput } from "../../helpers/inputs";
+import { timeDifference } from "../../helpers/time";
 import { GlobalState } from "../../reducer";
 import { SeedActions } from "../../redux/seed/actions";
 import { AppDispatch } from "../../store";
-import { AppViewModel } from "../../viewmodels/AppViewModel";
 import { ScrollViewModel } from "../../viewmodels/ScrollViewModel";
+import { SeedViewModel } from "../../viewmodels/SeedViewModel";
 
 export type SeedFormType = {
   name: string;
@@ -27,7 +30,8 @@ export type SeedFormType = {
 export const Seed = () => {
   const dispatch = useDispatch<AppDispatch>();
 
-  const seedData = useSelector((state: GlobalState) => state.seed.data);
+  const seedData = useSelector((state: GlobalState) => state.seed.data) || [];
+  const seedSummary = useSelector((state: GlobalState) => state.seed.summary);
 
   const [form, setForm] = useState<SeedFormType>({
     name: "",
@@ -38,8 +42,9 @@ export const Seed = () => {
   });
   const [errors, setErrors] = useState<any>({});
   const [chartView, setChartView] = useState<boolean>(true);
+  const [page, setPage] = useState<number>(0);
 
-  const vm = new AppViewModel();
+  const vm = new SeedViewModel(dispatch);
 
   useEffect(() => {
     const scrollVM = new ScrollViewModel();
@@ -47,13 +52,32 @@ export const Seed = () => {
     dispatch(SeedActions.getSeed());
   }, []);
 
+  const itemsperpage = 10;
+  const itemsfrom = page * itemsperpage + 1;
+  let itemsto = (page + 1) * itemsperpage;
+
+  if (itemsto > seedData.length) itemsto = seedData.length;
+
+  const slicedPage = seedData
+    .sort(function (x, y) {
+      return x.timestamp - y.timestamp;
+    })
+    .reverse()
+    .slice(itemsfrom - 1, itemsto);
+
   return (
     <Layout
       className="seed-layout"
       overrideScroll={false}
       components={[
         <div className="seed">
-          <div className="container container-xl">
+          <div className="register-for-seed">
+            Register for the upcoming seed round.
+          </div>
+          <div className="container container-l">
+            <div className="logo-icon">
+              <img src={Images.logofull} alt="" />
+            </div>
             <h1 className="title">Seed Round</h1>
             <h4>Investment Opportunity</h4>
             <p>
@@ -112,7 +136,7 @@ export const Seed = () => {
               <p>
                 Note that only Prometheus holders will have a guaranteed
                 allocation in the seed round. To purchase a Prometheus NFT,
-                please click here.
+                please <a href="">click here</a>.
               </p>
               <div className="radios-container row middle">
                 <RadioInput
@@ -141,7 +165,16 @@ export const Seed = () => {
               </p>
 
               <div className="slider-container">
-                <SliderInput min={500} max={50000} />
+                <SliderInput
+                  min={1}
+                  max={1200}
+                  onChange={(e) =>
+                    setForm({
+                      ...form,
+                      capital: vm.getSlideValue(e),
+                    })
+                  }
+                />
                 <div className="row between labels">
                   <div className="slide-label">{"<$500"}</div>
                   <div className="slide-label">$1000</div>
@@ -158,21 +191,21 @@ export const Seed = () => {
                 Relevant documents will be shared via email.
               </div>
               <TextInput
-                id="email"
-                onChange={updateInput(
-                  "email",
-                  form,
-                  setForm,
-                  errors,
-                  setErrors
-                )}
+                id="how"
+                onChange={updateInput("how", form, setForm, errors, setErrors)}
                 placeholder="Enter info here"
-                value={form.email}
-                error={errors.email}
+                value={form.how}
+                error={errors.how}
               />
 
               <div className="footer row end bottom">
-                <ButtonPrimary label="Send" />
+                <ButtonPrimary
+                  label="Send"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    vm.sendSeed(form, setForm, setErrors);
+                  }}
+                />
               </div>
 
               <div className="row">
@@ -201,7 +234,40 @@ export const Seed = () => {
                   </Link>
                 </div>
               </div>
-              <LineGraph data={vm.remapSeed(seedData)} />
+              {chartView ? (
+                <LineGraph data={seedSummary?.summary} />
+              ) : (
+                <div className="submissions">
+                  {slicedPage.map((item) => (
+                    <div
+                      className="single-submission row middle between"
+                      key={item.timestamp}
+                    >
+                      <div className="submission-title">
+                        Anonymous user is <span>interested</span> in a $
+                        <b>1’000</b> allocation
+                      </div>
+
+                      <div className="time">
+                        {timeDifference(
+                          new Date(),
+                          new Date(item.timestamp * 1000)
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                  <div className="submissions-bottom row between middle">
+                    <div className="items">
+                      {itemsfrom}-{itemsto} of {seedData.length} Items
+                    </div>
+                    <Pagination
+                      current={page}
+                      pageCount={seedData.length / itemsperpage}
+                      onPageChange={(e) => setPage(e.selected)}
+                    />
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>,

@@ -9,17 +9,19 @@
 
   .recharts-tooltip-wrapper {
     .recharts-tooltip {
-      // background-color: $gray700;
+      background-color: #212121;
       border: none;
       font-size: 12px;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 14px;
-      // color: $gray300;
+      padding: 8px 16px;
+      border-radius: 8px;
+      color: $white;
+
       span {
-        font-size: 14px;
-        font-weight: 700;
+        font-size: 12px;
         line-height: 24px;
-        color: white;
+        color: #878787;
       }
     }
   }

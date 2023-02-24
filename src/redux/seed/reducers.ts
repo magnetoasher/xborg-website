@@ -1,16 +1,14 @@
 import { Action } from "redux";
 import { GET_SEED_FULFILLED, SeedInterface } from "./types";
 
-const initialState: SeedInterface = {
-  data: [],
-};
+const initialState: SeedInterface = {};
 
 const Reduction = {
   seed: (state = initialState, data: any) => {
     switch (data.type) {
       case GET_SEED_FULFILLED:
         return {
-          data: data.payload.data.data,
+          ...data.payload.data,
         };
 
       default:

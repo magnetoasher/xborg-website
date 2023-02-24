@@ -22,4 +22,16 @@
     color: #3d3d3d;
     opacity: 1;
   }
+
+  &.has-error {
+    input {
+      border-color: $primary100;
+    }
+  }
+
+  .input-error {
+    color: $primary100;
+    margin-top: 10px;
+    font-size: 12px;
+  }
 }

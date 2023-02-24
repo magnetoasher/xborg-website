@@ -1,3 +1,4 @@
+import { timeConverter } from "../helpers/time";
 import { SeedDataRowMappedType, SeedDataRowType } from "../redux/seed/types";
 
 export class AppViewModel {
@@ -56,34 +57,12 @@ export class AppViewModel {
     return str.substring(0, index) + chr + str.substring(index + 1);
   }
 
-  timeConverter(UNIX_timestamp: number) {
-    const a = new Date(UNIX_timestamp * 1000);
-    const months = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
-    const month = months[a.getMonth()];
-    const date = a.getDate();
-    const time = month + " " + date;
-    return time;
-  }
-
   remapSeed(seed: SeedDataRowType[]): SeedDataRowMappedType[] {
     let result: SeedDataRowMappedType[] = [];
 
     let capital = 0;
     for (let i = 0; i < seed.length; i++) {
-      const date = this.timeConverter(seed[i].timestamp);
+      const date = timeConverter(seed[i].timestamp);
 
       capital += seed[i].capital;
       result.push({
@@ -93,7 +72,6 @@ export class AppViewModel {
       });
     }
 
-    console.log("result -- ", result);
     return result;
   }
 }
