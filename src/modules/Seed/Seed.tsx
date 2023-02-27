@@ -65,7 +65,6 @@ export const Seed = () => {
     .reverse()
     .slice(itemsfrom - 1, itemsto);
 
-  console.log("SEEED --- ", { seedData, seedSummary });
   return (
     <Layout
       className="seed-layout"
