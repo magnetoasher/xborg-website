@@ -1,16 +1,34 @@
 import Tippy from "@tippyjs/react";
+import { debounce, throttle } from "lodash";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import ReactSlider from "react-slider";
+import { AppDispatch } from "../../store";
+import { SeedViewModel } from "../../viewmodels/SeedViewModel";
 
 type SliderInputType = {
   min: number;
   max: number;
   error?: string;
   onChange: (value: number) => void;
-  defaultValue?: string;
+  defaultValue?: number;
 };
 
-export const SliderInput = (props: SliderInputType) => {
-  const { error, min, max, defaultValue } = props;
+export const SliderInput = ({
+  error,
+  min,
+  max,
+  onChange,
+  defaultValue,
+}: SliderInputType) => {
+  const dispatch = useDispatch<AppDispatch>();
+  const vm = new SeedViewModel(dispatch);
+  const [scaledValue, setScaledValue] = useState<number>(defaultValue ?? 0);
+
+  const onValChange = (val: number) => {
+    setScaledValue(vm.scaleSlider(val));
+    onChange(val);
+  };
 
   return (
     <div className={`input-wrapper${error ? " has-error" : ""}`}>
@@ -21,10 +39,10 @@ export const SliderInput = (props: SliderInputType) => {
         min={min}
         step={1}
         max={max}
-        onAfterChange={props.onChange}
+        onChange={onValChange}
         renderThumb={(props) => {
           return (
-            <Tippy content={defaultValue} key={"thumb"}>
+            <Tippy content={"$" + scaledValue.toLocaleString()} key={"thumb"}>
               <div {...props}></div>
             </Tippy>
           );

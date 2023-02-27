@@ -53,7 +53,9 @@ const CustomTooltip = ({ active, payload, label, data }: any) => {
     return (
       <div className="recharts-tooltip">
         <div className="row column middle center">
-          <div className="submissions">{row.compounded} submissions</div>
+          <div className="submissions">
+            {(row.compounded as number).toLocaleString()} soft committed
+          </div>
           <span>
             {months[dateArray[0] - 1]} {dateArray[1]},{dateArray[2]}
           </span>

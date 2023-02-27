@@ -11,7 +11,7 @@ import {
   LineGraph,
 } from "../../components";
 import { Pagination } from "../../components/Pagination";
-import { updateInput } from "../../helpers/inputs";
+import { formatNumberToK, updateInput } from "../../helpers/inputs";
 import { timeDifference } from "../../helpers/time";
 import { GlobalState } from "../../reducer";
 import { SeedActions } from "../../redux/seed/actions";
@@ -65,6 +65,7 @@ export const Seed = () => {
     .reverse()
     .slice(itemsfrom - 1, itemsto);
 
+  console.log("SEEED --- ", { seedData, seedSummary });
   return (
     <Layout
       className="seed-layout"
@@ -89,11 +90,15 @@ export const Seed = () => {
             </p>
             <div className="row numbers">
               <div className="col">
-                <div className="value">$250K</div>
+                <div className="value">
+                  {seedSummary?.totalCapital
+                    ? formatNumberToK(seedSummary.totalCapital, 1)
+                    : 0}
+                </div>
                 <div className="label">Total soft commitment</div>
               </div>
               <div className="col">
-                <div className="value">100</div>
+                <div className="value">{seedSummary?.nbSubmissions}</div>
                 <div className="label">Total submissions</div>
               </div>
             </div>
@@ -168,7 +173,7 @@ export const Seed = () => {
                 <SliderInput
                   min={0}
                   max={150}
-                  defaultValue={"$" + form.capital}
+                  defaultValue={form.capital}
                   onChange={(e) =>
                     setForm({
                       ...form,

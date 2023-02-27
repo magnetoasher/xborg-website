@@ -19,7 +19,7 @@ export interface SeedInterface {
 }
 
 export type SeedSummaryType = {
-  bSubmissions: number;
+  nbSubmissions: number;
   summary: SeedSummaryRowType[];
   totalCapital: number;
 };
