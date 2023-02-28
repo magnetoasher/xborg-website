@@ -40,6 +40,34 @@ export const Seed = () => {
     capital: 500,
     how: "",
   });
+
+  async function sendForm(form: any, setForm: any) {
+    const currentDate = new Date();
+    const options = {
+      timeZone: "UTC",
+      month: "numeric",
+      day: "numeric",
+      year: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      hour12: false,
+    };
+    const formattedDate = currentDate.toLocaleString("en-US", options as any);
+    form.timestamp = formattedDate;
+
+    const response = await fetch("https://gaming.xborg.com/api/seed/post", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+  }
+
+  console.log(form);
+
   const [errors, setErrors] = useState<any>({});
   const [chartView, setChartView] = useState<boolean>(true);
   const [page, setPage] = useState<number>(0);
@@ -208,7 +236,8 @@ export const Seed = () => {
                   label="Send"
                   onClick={(e) => {
                     e.preventDefault();
-                    vm.sendSeed(form, setForm, setErrors);
+                    sendForm(form, setForm);
+                    //vm.sendSeed(form, setForm, setErrors);
                   }}
                 />
               </div>
@@ -250,7 +279,7 @@ export const Seed = () => {
                     >
                       <div className="submission-title">
                         Anonymous user is <span>interested</span> in a $
-                        <b>1’000</b> allocation
+                        <b>{item.capital}</b> allocation
                       </div>
 
                       <div className="time">
