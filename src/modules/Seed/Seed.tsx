@@ -56,17 +56,29 @@ export const Seed = () => {
     const formattedDate = currentDate.toLocaleString("en-US", options as any);
     form.timestamp = formattedDate;
 
-    const response = await fetch("https://gaming.xborg.com/api/seed/post", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(form),
-    });
-  }
+    try {
+      const response = await fetch("http://localhost:3005/api/seed/post", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
 
-  console.log(form);
+      if (response.ok) {
+        setForm({
+          name: "",
+          email: "",
+          isPrometheusOwner: true,
+          capital: 500,
+          how: "",
+        });
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   const [errors, setErrors] = useState<any>({});
   const [chartView, setChartView] = useState<boolean>(true);
