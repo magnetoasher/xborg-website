@@ -57,7 +57,7 @@ export const Seed = () => {
     form.timestamp = formattedDate;
 
     try {
-      const response = await fetch("http://gaming.xborg.com/api/seed/post", {
+      const response = await fetch("https://gaming.xborg.com/api/seed/post", {
         method: "POST",
         headers: {
           Accept: "application/json",
