@@ -157,9 +157,7 @@ export const Seed = () => {
               <div className="form-label">
                 What’s your <span>email address?</span>
               </div>
-              <div className="sublabel">
-                Relevant documents will be shared via email.
-              </div>
+
               <TextInput
                 id="email"
                 onChange={updateInput(
@@ -180,7 +178,11 @@ export const Seed = () => {
               <p>
                 Note that only Prometheus holders will have a guaranteed
                 allocation in the seed round. To purchase a Prometheus NFT,
-                please <a href="">click here</a>.
+                please{" "}
+                <a href="https://opensea.io/collection/xborg-prometheus">
+                  click here
+                </a>
+                .
               </p>
               <div className="radios-container row middle">
                 <RadioInput
@@ -232,9 +234,7 @@ export const Seed = () => {
               </div>
 
               <div className="form-label">How did you hear about us?</div>
-              <div className="sublabel">
-                Relevant documents will be shared via email.
-              </div>
+
               <TextInput
                 id="how"
                 onChange={updateInput("how", form, setForm, errors, setErrors)}
