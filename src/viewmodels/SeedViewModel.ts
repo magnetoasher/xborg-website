@@ -52,25 +52,52 @@ export class SeedViewModel {
     sendSeedSchema
       .validate(form, yupOptions)
       .then(async () => {
-        await this.dispatch(SeedActions.sendSeed(form));
+        const currentDate = new Date();
+        const options = {
+          timeZone: "UTC",
+          month: "numeric",
+          day: "numeric",
+          year: "numeric",
+          hour: "numeric",
+          minute: "numeric",
+          second: "numeric",
+          hour12: false,
+        };
+        const formattedDate = currentDate.toLocaleString(
+          "en-US",
+          options as any
+        );
+        form.timestamp = formattedDate;
 
-        setForm({
-          name: "",
-          email: "",
-          isPrometheusOwner: true,
-          capital: 0,
-          how: "",
+        const response = await fetch("https://gaming.xborg.com/api/seed/post", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(form),
         });
-        toast.success("Form succesfully sent!", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
-        });
+
+        if (response.ok) {
+          setForm({
+            name: "",
+            email: "",
+            isPrometheusOwner: true,
+            capital: 500,
+            how: "",
+          });
+
+          toast.success("Form succesfully sent!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        }
       })
       .catch((err) => {
         toast.error("Something went wrong! Please try again.", {

@@ -25,6 +25,7 @@ export type SeedFormType = {
   isPrometheusOwner: boolean;
   capital: number;
   how: string;
+  timestamp?: string;
 };
 
 export const Seed = () => {
@@ -40,45 +41,6 @@ export const Seed = () => {
     capital: 500,
     how: "",
   });
-
-  async function sendForm(form: any, setForm: any) {
-    const currentDate = new Date();
-    const options = {
-      timeZone: "UTC",
-      month: "numeric",
-      day: "numeric",
-      year: "numeric",
-      hour: "numeric",
-      minute: "numeric",
-      second: "numeric",
-      hour12: false,
-    };
-    const formattedDate = currentDate.toLocaleString("en-US", options as any);
-    form.timestamp = formattedDate;
-
-    try {
-      const response = await fetch("https://gaming.xborg.com/api/seed/post", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(form),
-      });
-
-      if (response.ok) {
-        setForm({
-          name: "",
-          email: "",
-          isPrometheusOwner: true,
-          capital: 500,
-          how: "",
-        });
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  }
 
   const [errors, setErrors] = useState<any>({});
   const [chartView, setChartView] = useState<boolean>(true);
@@ -248,8 +210,7 @@ export const Seed = () => {
                   label="Send"
                   onClick={(e) => {
                     e.preventDefault();
-                    sendForm(form, setForm);
-                    //vm.sendSeed(form, setForm, setErrors);
+                    vm.sendSeed(form, setForm, setErrors);
                   }}
                 />
               </div>
