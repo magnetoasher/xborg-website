@@ -93,8 +93,8 @@ export const Seed = () => {
               <div className="col">
                 <div className="value">
                   {seedSummary?.totalCapital
-                    ? formatNumberToK(seedSummary.totalCapital, 1)
-                    : 0}
+                    ? `$${formatNumberToK(seedSummary.totalCapital, 1)}`
+                    : `$0`}
                 </div>
                 <div className="label">Total soft commitment</div>
               </div>
