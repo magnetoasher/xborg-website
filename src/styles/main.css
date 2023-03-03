@@ -4410,6 +4410,10 @@ h4 {
   line-height: 24px;
 }
 
+.seed-layout .page-section.page-section-0 {
+  padding-top: 0;
+}
+
 .seed {
   padding-bottom: 80px;
   width: 100%;
@@ -5666,6 +5670,14 @@ h4 {
   overflow: hidden;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
+}
+
+.simplebar-container.navbar-bg {
+  padding-top: 104px;
+}
+
+.simplebar-container.navbar-bg .simplebar-track.simplebar-vertical {
+  top: 64px;
 }
 
 .parallaxed-layer {

@@ -2,4 +2,12 @@
   height: 100vh;
   overflow: hidden;
   transform: translateZ(0);
+
+  &.navbar-bg {
+    padding-top: 104px;
+
+    .simplebar-track.simplebar-vertical {
+      top: 64px;
+    }
+  }
 }

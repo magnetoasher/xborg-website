@@ -8,6 +8,7 @@ export type LayoutType = {
   components: ReactElement<any, any>[];
   className?: string;
   overrideScroll?: boolean;
+  transparentNavbar?: boolean;
 };
 
 export type LayoutChildType = {
@@ -18,6 +19,7 @@ export const Layout = ({
   components,
   className,
   overrideScroll,
+  transparentNavbar,
 }: LayoutType) => {
   const [refs, setRefs] = useState<any[]>([]);
   const [activeScreen, setScreen] = useState<number>(0);
@@ -32,10 +34,13 @@ export const Layout = ({
   }
 
   return (
-    <ScrollWrapper overrideScroll={overrideScroll}>
+    <ScrollWrapper
+      overrideScroll={overrideScroll}
+      transparentNavbar={transparentNavbar}
+    >
       <div className={`flex flex-col${className ? " " + className : ""}`}>
         <Sidebar total={refs.length} active={activeScreen} />
-        <div className='app-content'>
+        <div className="app-content">
           {components.map((component, index) => {
             return (
               <div

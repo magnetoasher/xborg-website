@@ -71,6 +71,7 @@ export const Seed = () => {
     <Layout
       className="seed-layout"
       overrideScroll={false}
+      transparentNavbar={false}
       components={[
         <div className="seed">
           <div className="register-for-seed">

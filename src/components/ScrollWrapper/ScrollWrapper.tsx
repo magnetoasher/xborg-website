@@ -7,11 +7,13 @@ import { ScrollViewModel } from "../../viewmodels/ScrollViewModel";
 export type ScrollWrapperType = {
   children: any;
   overrideScroll?: boolean;
+  transparentNavbar?: boolean;
 };
 
 export const ScrollWrapper = ({
   children,
   overrideScroll = true,
+  transparentNavbar = true,
 }: ScrollWrapperType) => {
   const [scrollWrap, setScrollWrap] = useState<HTMLElement | undefined>(
     undefined
@@ -41,7 +43,12 @@ export const ScrollWrapper = ({
   };
 
   return (
-    <div className="simplebar-container expand row" ref={parentRef}>
+    <div
+      className={`simplebar-container expand row${
+        !transparentNavbar ? " navbar-bg" : ""
+      }`}
+      ref={parentRef}
+    >
       <SimpleBar className="simplebar-init expand" ref={scrollRef}>
         {scrollWrap && (
           <>
