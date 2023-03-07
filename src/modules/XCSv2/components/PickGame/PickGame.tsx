@@ -88,6 +88,25 @@ export const PickGame = () => {
       />
     </div>
   );
+  const CTAButtons = () => (
+    <div className="row">
+      <ButtonPrimary
+        label="CTA Qualifier 1"
+        icon={<ExternalLink />}
+        to="https://www.communitygaming.io/tournament/xtreme-championship-series-cta-month-one"
+      />
+      <ButtonPrimary
+        label="CTA Qualifier 2"
+        icon={<ExternalLink />}
+        to="https://www.communitygaming.io/tournament/xtreme-championship-series-cta-month-2"
+      />
+      <ButtonPrimary
+        label="CTA Qualifier 3"
+        icon={<ExternalLink />}
+        to="https://www.communitygaming.io/tournament/xtreme-championship-series-cta-month-3"
+      />
+    </div>
+  );
 
   return (
     <ObserverContainer
@@ -115,6 +134,10 @@ export const PickGame = () => {
           {
             label: "Mojo Melee",
             content: MojoButtons(),
+          },
+          {
+            label: "Cross the Ages",
+            content: CTAButtons(),
           },
         ]}
       />

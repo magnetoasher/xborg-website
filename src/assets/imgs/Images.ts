@@ -115,7 +115,7 @@ export const Images = {
     harvest: require("./XCS/theharvest.png"),
     godsunchained: require("./XCS/godsunchained.png"),
     mojomelee: require("./XCS/mojomelee.png"),
-    hidden05: require("./XCS/hidden05.png"),
+    cta: require("./XCS/cta.png"),
   },
 
   gamingpassport: {

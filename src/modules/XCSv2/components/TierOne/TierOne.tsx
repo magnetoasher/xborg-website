@@ -26,7 +26,7 @@ export const TierOne = () => {
           <img src={Images.XCS.mojomelee} alt="Mojo Melee" />
         </div>
         <div className="single-game row middle">
-          <img src={Images.XCS.hidden05} alt="Hidden" />
+          <img src={Images.XCS.cta} alt="Cross the Ages" />
         </div>
       </div>
     </div>
