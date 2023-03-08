@@ -9,9 +9,13 @@
 }
 
 .page-section {
-  min-height: 100vh;
+  min-height: calc(100vh - $header-xl);
   width: 100vw;
   padding: $header-xl $container-padding $footer-xl;
+
+  &.page-section-0 {
+    padding-top: 0;
+  }
 
   @media all and (device-width: 1024px) and (device-height: 1366px) and (orientation: portrait) {
     min-height: 50vh;
@@ -25,10 +29,6 @@
     padding: 24px 30px $footer-xl 120px;
     min-height: 70vh;
     height: auto !important;
-
-    &.page-section-0 {
-      padding-top: 104px;
-    }
   }
 
   @media (max-width: $sm-max) {
