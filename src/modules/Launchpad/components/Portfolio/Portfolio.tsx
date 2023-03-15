@@ -12,27 +12,27 @@ export const Portfolio = () => {
           <Tile
             title="The harvest"
             image={Images.portfolio.harvest}
-            slug="the-harvest"
+            href="https://launchpad.xborg.com/project/the-harvest"
           />
           <Tile
             title="Rooniverse"
             image={Images.portfolio.rooniverse}
-            slug="rooniverse"
+            href="https://launchpad.xborg.com/project/rooniverse"
           />
           <Tile
             title="The Bornless"
             image={Images.portfolio.bornless}
-            slug="aether-games"
+            href="https://launchpad.xborg.com/project/aether-games"
           />
           <Tile
             title="Aether Games"
             image={Images.portfolio.aether}
-            slug="the-bornless"
+            href="https://launchpad.xborg.com/project/the-bornless"
           />
           <Tile
             title="Exverse"
             image={Images.portfolio.exverse}
-            slug="exverse"
+            href="https://launchpad.xborg.com/project/exverse"
           />
         </div>
 

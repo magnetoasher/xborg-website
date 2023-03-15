@@ -4,9 +4,9 @@ import { Images } from "../../assets/imgs/Images";
 
 export type TileType = {
   image?: any;
-  title: string;
   desc?: string;
-  slug?: string;
+  title: string;
+  href?: string;
 };
 
 export const Tile = (data: TileType) => {
@@ -22,11 +22,7 @@ export const Tile = (data: TileType) => {
   }, []);
 
   return (
-    <a
-      className="tile"
-      ref={ref}
-      href={`https://launchpad.xborg.com/project/${data.slug}`}
-    >
+    <a className="tile" ref={ref} href={data.href}>
       <div className="image">
         <img src={data.image ?? Images.noimg} alt="" />
       </div>

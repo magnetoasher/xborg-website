@@ -57,10 +57,10 @@ export const OurTeam = () => {
   ];
 
   return (
-    <div className='our-team expand row column'>
-      <SectionHead title='Meet Our Team' />
+    <div className="our-team expand row column">
+      <SectionHead title="Meet Our Team" />
 
-      <div className='team-list row'>
+      <div className="team-list row">
         {team.map((member: TileType, index: number) => (
           <Tile key={index} {...member} />
         ))}
