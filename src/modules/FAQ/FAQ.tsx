@@ -20,14 +20,9 @@ export const FAQ = () => {
             <div className="faqs">
               <Collapsible trigger="What is XBorg? " className="collapsible">
                 <p>
-                  XBorg is a protocol that creates digital identities for gamers
-                  by utilizing a data credential layer. It is also constructing
-                  fan engagement and community applications for Esports and
-                  gaming enthusiasts. With support from more than 10,000 players
-                  in the Esports world, including the best players in the Web3
-                  community, XBorg has established itself as a leading player in
-                  the Web3 gaming space. XBorg has partnered with industry
-                  pioneers such as Ultra, Gala Games, Zilliqa and YGG.
+                  XBorg is an open and composable gaming protocol, building a
+                  gaming credential and application network for players and
+                  Decentralized Gaming Societies.
                 </p>
               </Collapsible>
               <Collapsible
@@ -35,8 +30,8 @@ export const FAQ = () => {
                 className="collapsible"
               >
                 <p>
-                  XBorg is a <a href="www.swissborg.com"> SwissBorg</a> spinoff
-                  and was created in March 2022. The complete list of XBorg team
+                  In March 2022, XBorg was established as a spinoff and the
+                  gaming venture of SwissBorg. The complete list of XBorg team
                   members can be found <a href="/about-us"> here</a>. Most
                   importantly, XBorg is supported by its community of more than
                   10'000 players.
@@ -49,7 +44,7 @@ export const FAQ = () => {
                 <p>
                   The Prometheus collection is a core component of the XBorg
                   ecosystem. It grants holders with governance rights, fee-less
-                  access to all XBorg products and a vested airdrop of XBORG
+                  access to all XBorg products and a vested airdrop of XGB
                   tokens. The Prometheus collection can be viewed and bought{" "}
                   <a href="https://opensea.io/collection/xborg-prometheus">
                     {" "}
@@ -63,9 +58,8 @@ export const FAQ = () => {
               >
                 <p>
                   The XBorg whitepaper V1 is currently in progress and will be
-                  delivered around Q1 2023. The first draft of the whitepaper
-                  can be viewed{" "}
-                  <a href="https://docsend.com/documents/8733565">here.</a>
+                  delivered around Q1 2023. Our public deck can be viewed
+                  <a href="https://docsend.com/view/5dwn74pn6izud3vb">here.</a>
                 </p>
               </Collapsible>
 
@@ -74,7 +68,7 @@ export const FAQ = () => {
                 className="collapsible"
               >
                 <p>
-                  All players and fans of GameFi are invited to participate and
+                  All players and fans of games are invited to participate and
                   become a part of our community. Ongoing discussions are taking
                   place on{" "}
                   <a href="https://discord.com/invite/xborg">Discord</a> and
@@ -88,8 +82,7 @@ export const FAQ = () => {
                 className="collapsible"
               >
                 <p>
-                  XBorg will conduct a private token sale in Q1 2023. All
-                  investment inquiries can be sent via email at louis@xborg.com.
+                  XBorg will conduct a private community token sale in Q1 2023.
                 </p>
               </Collapsible>
 
