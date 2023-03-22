@@ -5,6 +5,7 @@ import {
   SectionHead,
   Table,
   TableDataColumn,
+  ButtonPrimary,
 } from "../../../../components";
 
 export const Production = () => {
@@ -54,17 +55,26 @@ export const Production = () => {
   ];
 
   return (
-    <div className='production expand row column'>
-      <div className='row middle expand'>
-        <div className='description expand'>
-          <SectionHead
-            title='World Class Production'
-            description='Catch all of the action live from our esports studio.'
-          >
-            World Class <b>Production</b>
-          </SectionHead>
+    <div className="production expand row column">
+      <div className="row middle expand">
+        <div>
+          <div className="description expand">
+            <SectionHead
+              title="World Class Production"
+              description="Catch all of the action live on Twitch."
+            >
+              World Class <b>Production</b>
+            </SectionHead>
+          </div>
+
+          <div className="row follow-twitch">
+            <ButtonPrimary
+              label="Follow us on Twitch"
+              to="https://www.twitch.tv/xborgofficial"
+            />
+          </div>
         </div>
-        <ObserverContainer className='parallaxed expand row middle center'>
+        <ObserverContainer className="parallaxed expand row middle center">
           <ParallaxLayer
             image={Images.XCS.production}
             factorX={0.3}
@@ -75,8 +85,8 @@ export const Production = () => {
         </ObserverContainer>
       </div>
 
-      <div className='row column livestreams'>
-        <h4 className='title'>Livestream Dates</h4>
+      <div className="row column livestreams">
+        <h4 className="title">Livestream Dates</h4>
         <Table data={livestreams} />
       </div>
     </div>

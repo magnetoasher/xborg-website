@@ -17,7 +17,7 @@ export const TierOne = () => {
           <img src={Images.XCS.evio} alt="Ev.io" />
         </div>
         <div className="single-game row middle">
-          <img src={Images.XCS.harvest} alt="The Harvest" />
+          <img src={Images.XCS.bornless} alt="Bornless" />
         </div>
         <div className="single-game row middle">
           <img src={Images.XCS.godsunchained} alt="Gods Unchained" />

@@ -2997,12 +2997,15 @@ h4 {
 .xcs .becoming-legend .section-head-desc {
   max-width: 385px;
 }
-.xcs .becoming-legend .episodes .title {
-  font-family: Vista Nordic;
-  position: relative;
-  padding-left: 24px;
-  border-left: 2px solid #eb3a4a;
-  margin-bottom: 31px;
+.xcs .becoming-legend .releasing-date {
+  margin-left: 22px;
+}
+.xcs .becoming-legend .releasing-date p {
+  line-height: 28px;
+  font-size: 15px;
+  color: #d1d3d4;
+  letter-spacing: 0.1rem;
+  margin: 16px 0;
 }
 .xcs .becoming-legend .parallaxed img {
   max-height: 397px;
@@ -3027,8 +3030,7 @@ h4 {
 }
 .xcs .becoming-legend .parallaxed.in .parallaxed-1:after {
   box-shadow: 0 0 100px 0 rgba(235, 58, 74, 0.5);
-  height: calc(85.39% + 100px);
-  margin-top: 50px;
+  height: 85.39%;
 }
 @media (max-width: 992px) {
   .xcs .becoming-legend > .row.expand {
@@ -3061,6 +3063,13 @@ h4 {
 }
 .xcs .production .livestreams .table-entry {
   max-width: 155px;
+}
+.xcs .production .follow-twitch {
+  line-height: 28px;
+  font-size: 15px;
+  color: #d1d3d4;
+  letter-spacing: 0.1rem;
+  margin: 16px 0 16px 22px;
 }
 .xcs .production .parallaxed:after {
   content: "";

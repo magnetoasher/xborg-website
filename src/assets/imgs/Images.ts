@@ -112,10 +112,10 @@ export const Images = {
     gala: require("./XCS/gala.png"),
 
     evio: require("./XCS/evio.png"),
-    harvest: require("./XCS/theharvest.png"),
     godsunchained: require("./XCS/godsunchained.png"),
     mojomelee: require("./XCS/mojomelee.png"),
     cta: require("./XCS/cta.png"),
+    bornless: require("./XCS/bornless.png"),
   },
 
   gamingpassport: {

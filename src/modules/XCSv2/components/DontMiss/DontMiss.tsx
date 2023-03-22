@@ -26,11 +26,8 @@ export const DontMiss = () => {
         </SectionHead>
         <div className="row btn-container">
           <ButtonPrimary
-            label="Register for XCS"
-            onClick={(e) => {
-              e.preventDefault();
-              setActive(true);
-            }}
+            label="Join XCS Discord"
+            to="https://discord.gg/Cb73U6PX"
           />
         </div>
       </div>

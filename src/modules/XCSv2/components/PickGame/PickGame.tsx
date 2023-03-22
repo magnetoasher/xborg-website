@@ -31,25 +31,6 @@ export const PickGame = () => {
       />
     </div>
   );
-  const HarvestButtons = () => (
-    <div className="row">
-      <ButtonPrimary
-        label="The Harvest Qualifier 1"
-        icon={<ExternalLink />}
-        to="https://www.communitygaming.io/tournament/xtreme-championship-series-harvest-month-1"
-      />
-      <ButtonPrimary
-        label="The Harvest Qualifier 2"
-        icon={<ExternalLink />}
-        to="https://www.communitygaming.io/tournament/xtreme-championship-series-harvest-month-2"
-      />
-      <ButtonPrimary
-        label="The Harvest Qualifier 3"
-        icon={<ExternalLink />}
-        to="https://www.communitygaming.io/tournament/xtreme-championship-series-harvest-month-3"
-      />
-    </div>
-  );
   const GodsUnchainedButtons = () => (
     <div className="row">
       <ButtonPrimary
@@ -107,6 +88,20 @@ export const PickGame = () => {
       />
     </div>
   );
+  const BornlessButtons = () => (
+    <div className="row">
+      <ButtonPrimary
+        label="The Bornless Qualifier 1"
+        icon={<ExternalLink />}
+        to="https://www.communitygaming.io/tournament/xtreme-championship-series-bornless-qualifier-1"
+      />
+      <ButtonPrimary
+        label="The Bornless Qualifier 2"
+        icon={<ExternalLink />}
+        to="https://www.communitygaming.io/tournament/xtreme-championship-series-bornless-qualifier-2"
+      />
+    </div>
+  );
 
   return (
     <ObserverContainer
@@ -124,8 +119,8 @@ export const PickGame = () => {
             content: EvioButtons(),
           },
           {
-            label: "The Harvest",
-            content: HarvestButtons(),
+            label: "The Bornless",
+            content: BornlessButtons(),
           },
           {
             label: "Gods Unchained",

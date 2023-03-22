@@ -17,6 +17,14 @@
     }
   }
 
+  .follow-twitch {
+    line-height: 28px;
+    font-size: 15px;
+    color: #d1d3d4;
+    letter-spacing: 0.1rem;
+    margin: 16px 0 16px 22px;
+  }
+
   .parallaxed {
     &:after {
       content: "";

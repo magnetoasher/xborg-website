@@ -5,6 +5,7 @@ import {
   SectionHead,
   Table,
   TableDataColumn,
+  ButtonPrimary,
 } from "../../../../components";
 
 export const BecomingLegend = () => {
@@ -107,10 +108,17 @@ export const BecomingLegend = () => {
         <div className="description expand">
           <SectionHead
             title="Becoming A Legend"
-            description="A 15 episode docu-series with behind the scenes drama, match-day highlights, and exclusive interviews."
+            description="A 10-episode docu-series about Season 1 of the Xtreme Championship Series with behind the scenes drama, match-day highlights and exclusive interviews."
           >
             <b>Becoming</b> A Legend
           </SectionHead>
+          <div className="row column releasing-date start top">
+            <p>Releasing on YouTube in August 2023</p>
+            <ButtonPrimary
+              label="Subscribe to our Youtube"
+              to="https://www.youtube.com/@xborgofficial"
+            />
+          </div>
         </div>
         <ObserverContainer className="parallaxed expand row middle center">
           <ParallaxLayer
@@ -122,10 +130,6 @@ export const BecomingLegend = () => {
             className="parallaxed-1"
           />
         </ObserverContainer>
-      </div>
-      <div className="episodes">
-        <h4 className="title">Episode Dates</h4>
-        <Table data={episodes} />
       </div>
     </div>
   );
