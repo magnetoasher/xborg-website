@@ -1,5 +1,44 @@
 .production {
+  .livestreams {
+    .title {
+      font-family: $secondary-font-family;
+      position: relative;
+      padding-left: 24px;
+      border-left: 2px solid $primary100;
+      margin-bottom: 31px;
+    }
+
+    .table-column {
+      flex: 0 0 20%;
+    }
+
+    .table-entry {
+      max-width: 155px;
+    }
+  }
+
+  .follow-twitch {
+    line-height: 28px;
+    font-size: 15px;
+    color: #d1d3d4;
+    letter-spacing: 0.1rem;
+    margin: 16px 0 16px 22px;
+  }
+
   .parallaxed {
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 41.46%;
+      height: 0;
+      width: 4.79%;
+      z-index: -1;
+      background-color: $primary100;
+      transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
     img {
       max-height: 428px;
       max-width: 428px;
@@ -14,9 +53,27 @@
     max-width: 380px;
   }
 
+  .parallaxed.in {
+    &:after {
+      box-shadow: 0 0 100px 0 rgba(235, 58, 74, 0.5);
+      height: calc(85.39% + 100px);
+      margin-top: 50px;
+    }
+  }
+
+  @media (max-width: $lg-max) {
+    .livestreams .table-column {
+      flex: 0 0 25%;
+    }
+  }
+
   @media (max-width: $md-max) {
-    flex-direction: column-reverse;
-    justify-content: flex-start;
+    height: 100%;
+
+    & > .row.expand {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
 
     .description {
       flex: initial;
@@ -27,6 +84,11 @@
     .parallaxed {
       margin-top: 40px;
       flex: initial;
+    }
+
+    .parallaxed.in:after {
+      height: 85.39%;
+      margin-top: 0;
     }
   }
 }

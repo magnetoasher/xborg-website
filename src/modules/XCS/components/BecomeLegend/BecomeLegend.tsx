@@ -1,15 +1,22 @@
+import { useState } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import {
-  ButtonSecondary,
   ParallaxLayer,
   ObserverContainer,
-  SectionIntro,
+  ButtonPrimary,
 } from "../../../../components";
+import { PickGame } from "../PickGame/PickGame";
 
 export const BecomeLegend = () => {
+  const [active, setActive] = useState<boolean>(false);
+
   return (
-    <div className={`become-legend expand row middle`}>
-      <ObserverContainer className='parallaxed expand row middle center'>
+    <div
+      className={`become-legend expand row middle ${
+        active ? "active" : "inactive"
+      }`}
+    >
+      <ObserverContainer className="parallaxed expand row middle center">
         <ParallaxLayer
           image={Images.XCS.banner}
           factorX={0.1}
@@ -24,18 +31,30 @@ export const BecomeLegend = () => {
           speed={0}
         />
       </ObserverContainer>
-      <div className='description expand'>
-        <SectionIntro
-          subtitle='Become A Legend'
-          title='XCS'
-          description='Introducing the Xtreme Championship Series, the largest Web3 esports event ever.'
-        />
-        <div className='row btn-container'>
-          <ButtonSecondary label='Get Notified' />
-        </div>
+      <div className="description expand">
+        {active ? (
+          <PickGame />
+        ) : (
+          <>
+            {/* <SectionIntro
+              subtitle="Become A Legend"
+              title="XCS"
+              description="Introducing the Xtreme Championship Series, the largest Web3 esports event ever created."
+            /> */}
+            <div className="row btn-container">
+              <ButtonPrimary
+                label="Register for XCS"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setActive(true);
+                }}
+              />
+            </div>
+          </>
+        )}
       </div>
 
-      <div className='blurred-circle' />
+      <div className="blurred-circle" />
     </div>
   );
 };

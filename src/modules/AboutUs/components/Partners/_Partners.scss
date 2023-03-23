@@ -1,74 +1,44 @@
 .partners {
-  .partners-list {
-    max-width: 568px;
+  .description {
+    flex: 0 0 50%;
+  }
 
-    .list {
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
+  .list {
+    margin-top: 56px;
+  }
 
-    .list-item {
-      flex: 0 0 33.333%;
+  .list-item {
+    width: 33.333%;
 
-      img {
-        width: 100%;
-      }
+    img {
+      height: 59px;
     }
   }
 
-  .powered-by {
-    position: relative;
-    padding-left: 50px;
-  }
-
-  .main-partner {
-    width: 103px;
-    top: -25px;
-    right: 0;
-    position: absolute;
-  }
-
-  @media (max-width: $lg-max) {
-    .powered-by {
-      padding-left: 0;
+  .swissborg {
+    img {
+      height: 125px;
+      margin-bottom: 32px;
     }
   }
 
-  @media (max-width: $md-max) {
-    .partners-content {
-      flex-direction: column;
-      justify-content: flex-start;
-    }
+  .swissborg-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.05em;
+    margin-bottom: 16px;
 
-    .partners-list {
-      width: 100%;
-      max-width: 100%;
-    }
-
-    .powered-by {
-      margin-top: 48px;
-
-      .main-partner {
-        width: 73px;
-        height: 73px;
-        right: auto;
-        left: 220px;
-        top: 10px;
-      }
+    span {
+      color: $swissborg100;
     }
   }
 
-  @media (max-width: $sm-max) {
-    .partners-list {
-      margin-top: 48px;
-
-      .list {
-        margin-top: 24px;
-
-        .list-item {
-          flex: 0 0 50%;
-        }
-      }
-    }
+  p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+    max-width: 350px;
   }
 }

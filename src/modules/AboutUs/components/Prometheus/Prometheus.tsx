@@ -1,10 +1,49 @@
 import { Images } from "../../../../assets/imgs/Images";
-import { ButtonSecondary, SectionHead } from "../../../../components";
-import { ParallaxLayer, ObserverContainer } from "../../../../components";
+import {
+  ButtonPrimary,
+  ButtonSecondary,
+  ObserverContainer,
+  ParallaxLayer,
+} from "../../../../components";
+import { Countdown } from "../../../../components/Countdown";
 
 export const Prometheus = () => {
   return (
     <div className={`prometheus expand row middle between`}>
+      <div className="description">
+        <div className={"section-head-container"}>
+          <div className="row section-head">
+            <div className="section-border" />
+            <div className="row column expand">
+              <div className="section-head-top">XBorg Protocol</div>
+
+              <h2 className="section-head-title">
+                <span>Prometheus NFT</span>
+              </h2>
+            </div>
+          </div>
+          <p className="section-head-desc">
+            Shape the future of gaming and experience the XBorg ecosystem to the
+            fullest.
+          </p>
+        </div>
+
+        <div className="typography">
+          <h4>Benefits</h4>
+          <ul>
+            <li>In-app payments & platform fees</li>
+            <li>Governance rights</li>
+            <li>Staking & reward pools</li>
+            <li>Protocol access</li>
+          </ul>
+
+          <div className="row middle actions">
+            <ButtonPrimary label="Purchase a Prometheus NFT" />
+            <ButtonSecondary label="See all perks" />
+          </div>
+        </div>
+      </div>
+
       <ObserverContainer className="parallaxed expand row middle center">
         <ParallaxLayer
           image={Images.aboutUs.logo02}
@@ -43,29 +82,6 @@ export const Prometheus = () => {
           className="parallaxed-5"
         />
       </ObserverContainer>
-      <div className="description expand">
-        <SectionHead
-          title="Prometheus NFT"
-          description="Shape the future of gaming and experience the XBorg ecosystem to the fullest."
-        />
-
-        <h4 className="subtitle">Exclusive Benefits</h4>
-        <div className="typography">
-          <ul>
-            <li>Vested $XBORG token airdrop at token generation event</li>
-            <li>Fee-less and early access to all XBorg products</li>
-            <li>XBorg DAO governance</li>
-            <li>Launchpad Premium</li>
-          </ul>
-        </div>
-
-        <div className="row btn-container">
-          <ButtonSecondary
-            label="Buy Now"
-            to="https://opensea.io/collection/xborg-prometheus"
-          />
-        </div>
-      </div>
     </div>
   );
 };

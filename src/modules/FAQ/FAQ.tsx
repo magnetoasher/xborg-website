@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Collapsible from "react-collapsible";
-import { Layout, SectionHead } from "../../components";
+import { Layout } from "../../components";
 import { ScrollViewModel } from "../../viewmodels/ScrollViewModel";
 
 export const FAQ = () => {
@@ -12,10 +12,9 @@ export const FAQ = () => {
   return (
     <Layout
       className="faq-layout"
-      overrideScroll={false}
       components={[
         <div className="faq">
-          <SectionHead title="FAQs" />
+          {/* <SectionHead title="FAQs" /> */}
           <div className="container container-xl">
             <div className="faqs">
               <Collapsible trigger="What is XBorg? " className="collapsible">

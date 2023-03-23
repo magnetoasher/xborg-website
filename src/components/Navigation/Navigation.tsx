@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { GlobalState } from "../../reducer";
@@ -18,9 +18,7 @@ export const Navigation = () => {
   const scrollVM = new ScrollViewModel();
 
   const links: SingleLinkType[] = [
-    { to: "gaming-passport", label: "Gaming Passport" },
-    { to: "esports", label: "Esports 3.0" },
-    { to: "launchpad", label: "Launchpad" },
+    { to: "", label: "xBorg app" },
     { to: "xtreme-championship-series", label: "Xtreme Championship Series" },
     { to: "about-us", label: "About us" },
   ];
@@ -60,7 +58,7 @@ export const Navigation = () => {
         ))}
       </nav>
       <div className={`early-access${active ? " active" : ""}`}>
-        <ButtonPrimary label="Launch App" to="http://gaming.xborg.com" />
+        <ButtonPrimary label="Launch alpha" to="http://gaming.xborg.com" />
       </div>
       <div
         className="hamburger-menu row middle center"

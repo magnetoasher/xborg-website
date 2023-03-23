@@ -3,11 +3,12 @@ $btn_primary_transition: 0.15s ease-in-out;
 .btn-primary {
   background-color: $primary100;
   padding: 16px;
-  letter-spacing: 0.1em;
-  font-size: 12px;
-  line-height: 15px;
   position: relative;
   white-space: nowrap;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.1em;
   transition: $btn_primary_transition;
 
   svg {

@@ -1,0 +1,9 @@
+.xborg-app {
+  @import "./components/Play/Play";
+  @import "./components/GamingProfile/GamingProfile";
+  @import "./components/GamingBadges/GamingBadges";
+  @import "./components/Meet/Meet";
+  @import "./components/Collectibles/Collectibles";
+  @import "./components/Leaderboard/Leaderboard";
+  @import "./components/StartPlayingToday/StartPlayingToday";
+}

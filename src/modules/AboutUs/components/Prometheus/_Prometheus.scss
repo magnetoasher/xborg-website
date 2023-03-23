@@ -1,21 +1,28 @@
-.page-section-3 {
-  height: 100vh;
-}
-
 .prometheus {
+  .section-head-container {
+    max-width: 550px;
+  }
+
+  h4 {
+    font-family: $main-font-family;
+    margin-top: 56px;
+    margin-bottom: 16px;
+    color: $primary100;
+    font-weight: 700;
+  }
+
+  .actions {
+    margin-top: 32px;
+
+    .btn-primary {
+      margin-right: 24px;
+    }
+  }
+
   .parallaxed img {
     max-width: 639px;
     max-height: 646px;
     transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
-  }
-
-  .subtitle {
-    margin: 44px 0 0 24px;
-  }
-
-  ul {
-    margin-top: 12px;
-    margin-left: 24px;
   }
 
   .parallaxed-1 img {
@@ -51,11 +58,6 @@
     opacity: 0;
   }
 
-  .btn-secondary {
-    margin-top: 24px;
-    margin-left: 22px;
-  }
-
   .parallaxed.in {
     .parallaxed-4 {
       &:after {
@@ -72,37 +74,6 @@
       opacity: 1;
       transform: translate(0, 0);
       transition-delay: 0.4s;
-    }
-  }
-
-  @media (max-width: $md-max) {
-    flex-direction: column-reverse;
-    justify-content: flex-start;
-
-    .description,
-    .parallaxed {
-      flex: initial;
-    }
-
-    .description {
-      width: 100%;
-    }
-
-    .btn-container {
-      .btn-secondary {
-        width: 100%;
-        margin-left: 0;
-      }
-    }
-
-    .subtitle {
-      margin-left: 0;
-      margin-top: 35px;
-    }
-
-    ul {
-      padding-left: 22px;
-      margin-left: 0;
     }
   }
 }

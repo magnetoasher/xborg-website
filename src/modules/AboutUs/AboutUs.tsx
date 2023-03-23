@@ -4,15 +4,15 @@ import { Layout } from "../../components";
 import { AboutUsActions } from "../../redux/aboutUs/actions";
 import { AppDispatch } from "../../store";
 import {
-  EmpowerPlayers,
-  EmpowerFans,
-  Esports,
-  Prometheus,
-  OurPlayers,
-  OurTeam,
-  BecomeXplorer,
+  Community,
   Partners,
+  Prometheus,
+  Protocol,
+  Roadmap,
+  Team,
+  Token,
 } from "./components";
+
 export const AboutUs = () => {
   const dispatch = useDispatch<AppDispatch>();
   useEffect(() => {
@@ -23,14 +23,13 @@ export const AboutUs = () => {
     <Layout
       className="about-us"
       components={[
-        <EmpowerPlayers />,
-        <EmpowerFans />,
-        <Esports />,
+        <Protocol />,
+        <Token />,
         <Prometheus />,
-        <OurPlayers />,
-        <OurTeam />,
+        <Community />,
+        <Team />,
         <Partners />,
-        <BecomeXplorer />,
+        <Roadmap />,
       ]}
     />
   );

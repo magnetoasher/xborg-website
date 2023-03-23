@@ -1,59 +1,28 @@
 .tier-one {
-  .parallaxed {
-    img {
-      max-height: 605px;
-      max-width: 514px;
-      transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
-    }
-  }
-
-  .section-head-desc {
-    max-width: 295px;
-  }
-
-  .parallaxed-1 {
-    &:after {
-      content: "";
-      position: absolute;
-      bottom: 23.47%;
-      right: 0;
-      height: 2.31%;
-      width: 0;
-      background-color: $primary100;
-      transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
-    }
+  .games {
+    flex-wrap: wrap;
+    margin-top: 35px;
 
     img {
-      transform: translate(20%, 20%);
-      opacity: 0;
-    }
-  }
-  .parallaxed-2 img {
-    transform: translate(20%, 0);
-  }
-  .parallaxed-3 img {
-    transform: translate(-20%, 0);
-  }
-
-  .parallaxed.in {
-    .parallaxed-1 img,
-    .parallaxed-2 img,
-    .parallaxed-3 img {
-      opacity: 1;
-      transform: translate(0%, 0);
+      width: 202px;
     }
 
-    .parallaxed-1 {
-      &:after {
-        width: 81.52%;
-        box-shadow: 0 0 100px 0 rgba(235, 58, 74, 0.5);
-      }
+    .single-game {
+      flex: 0 0 50%;
     }
   }
 
   @media (max-width: $md-max) {
-    flex-direction: column-reverse;
-    justify-content: flex-start;
+    & > .row.expand {
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+    }
+
+    .games {
+      .single-game {
+        flex: 0 0 100%;
+      }
+    }
 
     .description {
       flex: initial;
@@ -64,6 +33,18 @@
     .parallaxed {
       margin-top: 40px;
       flex: initial;
+    }
+  }
+
+  @media (max-width: $xs-max) {
+    .games {
+      img {
+        width: 102px;
+      }
+
+      .desc {
+        font-size: 12px;
+      }
     }
   }
 }

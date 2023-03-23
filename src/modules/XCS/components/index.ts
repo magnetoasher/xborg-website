@@ -4,3 +4,4 @@ export * from "./TierOne/TierOne";
 export * from "./BecomingLegend/BecomingLegend";
 export * from "./Production/Production";
 export * from "./DontMiss/DontMiss";
+export * from "./PickGame/PickGame";

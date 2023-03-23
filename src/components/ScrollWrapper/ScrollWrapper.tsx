@@ -2,17 +2,14 @@ import { useState, useRef, useEffect } from "react";
 import SimpleBar from "simplebar-react";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { ParallaxProviderProps } from "react-scroll-parallax/dist/components/ParallaxProvider/types";
-import { ScrollViewModel } from "../../viewmodels/ScrollViewModel";
 
 export type ScrollWrapperType = {
   children: any;
-  overrideScroll?: boolean;
   transparentNavbar?: boolean;
 };
 
 export const ScrollWrapper = ({
   children,
-  overrideScroll = true,
   transparentNavbar = true,
 }: ScrollWrapperType) => {
   const [scrollWrap, setScrollWrap] = useState<HTMLElement | undefined>(
@@ -22,8 +19,6 @@ export const ScrollWrapper = ({
   const parentRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<SimpleBar>(null);
 
-  const scrollVM = new ScrollViewModel();
-
   useEffect(() => {
     const parent = parentRef.current;
 
@@ -32,8 +27,6 @@ export const ScrollWrapper = ({
       const wrapper = bar?.getScrollElement() as HTMLElement;
 
       setScrollWrap(wrapper);
-
-      // if (overrideScroll) scrollVM.rewriteDefaultScrolling();
     }
   }, []);
 

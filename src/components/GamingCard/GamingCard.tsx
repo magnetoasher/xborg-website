@@ -8,20 +8,20 @@ export const GamingCard = () => {
   return (
     <ObserverContainer className="gaming-card">
       <ParallaxLayer
-        image={Images.gamingpassport.profile_bg}
-        factorX={0.5}
-        factorY={0.5}
-        speed={0}
-        className="card-bg"
-      />
-      <ParallaxLayer
-        image={Images.gamingpassport.gaming_profile}
-        factorX={0.2}
-        factorY={0.2}
+        image={Images.xborgapp.badge}
+        factorX={0.3}
+        factorY={0.3}
         speed={0}
         className="card"
       />
-      <div className="card-bottom games-played">
+      <ParallaxLayer
+        image={Images.xborgapp.lights}
+        factorX={0.1}
+        factorY={0.1}
+        speed={0}
+        className="card-lights"
+      />
+      {/* <div className="card-bottom games-played">
         <MouseParallaxChild {...cardBottomProps}>
           <div className="value">{(4345).toLocaleString()}</div>
           <div className="label">Games Played</div>
@@ -72,7 +72,7 @@ export const GamingCard = () => {
           <div className="value">12</div>
           <div className="label">Achievements Claimed</div>
         </MouseParallaxChild>
-      </div>
+      </div> */}
     </ObserverContainer>
   );
 };

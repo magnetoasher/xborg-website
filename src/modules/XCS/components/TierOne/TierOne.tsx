@@ -1,42 +1,32 @@
 import { Images } from "../../../../assets/imgs/Images";
-import {
-  ParallaxLayer,
-  ObserverContainer,
-  SectionHead,
-} from "../../../../components";
 
 export const TierOne = () => {
   return (
-    <div className={`tier-one expand row middle`}>
-      <ObserverContainer className='parallaxed expand row middle center'>
-        <ParallaxLayer
-          image={Images.XCS.erika}
-          factorX={0.1}
-          factorY={0.1}
-          speed={-5}
-          isBase
-          className='parallaxed-1'
-        />
-        <ParallaxLayer
-          image={Images.XCS.robo}
-          factorX={0.3}
-          factorY={0.3}
-          speed={0}
-          className='parallaxed-2'
-        />
-        <ParallaxLayer
-          image={Images.XCS.red_warrior}
-          factorX={-0.1}
-          factorY={-0.1}
-          speed={0}
-          className='parallaxed-3'
-        />
-      </ObserverContainer>
-      <div className='description expand'>
-        <SectionHead
-          title='Tier 1 Esports'
-          description='The biggest, most competitive Web3 games only.'
-        />
+    <div className={`tier-one expand row column center`}>
+      <div className="description">
+        {/* <SectionHead
+          title="Tier 1 Esports"
+          description="The biggest, most competitive Web3 games only."
+        >
+          <b>Tier 1</b> Esports
+        </SectionHead> */}
+      </div>
+      <div className="games row">
+        <div className="single-game row middle">
+          <img src={Images.XCS.evio} alt="Ev.io" />
+        </div>
+        <div className="single-game row middle">
+          <img src={Images.XCS.bornless} alt="Bornless" />
+        </div>
+        <div className="single-game row middle">
+          <img src={Images.XCS.godsunchained} alt="Gods Unchained" />
+        </div>
+        <div className="single-game row middle">
+          <img src={Images.XCS.mojomelee} alt="Mojo Melee" />
+        </div>
+        <div className="single-game row middle">
+          <img src={Images.XCS.cta} alt="Cross the Ages" />
+        </div>
       </div>
     </div>
   );

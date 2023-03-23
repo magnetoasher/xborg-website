@@ -18,11 +18,18 @@
 
   .parallaxed {
     z-index: 2;
+    max-width: 50%;
+    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
 
     img {
       max-width: 364px;
       max-height: 589px;
+      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
     }
+  }
+
+  .tabs {
+    opacity: 0;
   }
 
   .section-intro-title {
@@ -34,9 +41,10 @@
     max-width: 480px;
   }
 
-  .btn-secondary {
+  .btn-container .btn-primary {
     margin-left: 26px;
-    margin-top: 24px;
+    margin-top: 32px;
+    font-weight: 600;
   }
 
   .parallaxed.in {
@@ -46,9 +54,39 @@
     }
   }
 
+  &.active {
+    .parallaxed {
+      max-width: 30%;
+
+      img {
+        max-height: 280px;
+      }
+    }
+
+    .description {
+      max-width: 70%;
+    }
+  }
+
+  .pick-game.in {
+    .tabs {
+      transition-delay: 0.2s;
+      opacity: 1;
+    }
+  }
+
   @media (max-width: $md-max) {
+    .btn-container {
+      .btn-primary {
+        margin-left: 0;
+      }
+    }
+  }
+
+  @media (max-width: $sm-max) {
     flex-direction: column-reverse;
     justify-content: flex-start;
+    width: 100%;
 
     .description {
       flex: initial;
@@ -61,10 +99,26 @@
       flex: initial;
     }
 
-    .btn-container {
-      .btn-secondary {
-        margin-left: 0;
-        width: 100%;
+    .btn-primary {
+      width: 100%;
+      text-align: center;
+    }
+
+    &.active {
+      .description {
+        max-width: 100%;
+      }
+
+      .tabs {
+        transition: 0s ease-in;
+      }
+
+      .parallaxed {
+        max-width: 50%;
+
+        img {
+          max-height: 100%;
+        }
       }
     }
   }
@@ -73,6 +127,12 @@
     .section-intro-title {
       font-size: 73px;
       line-height: 79px;
+    }
+  }
+
+  @media (max-height: 655px) {
+    .parallaxed img {
+      max-height: 400px;
     }
   }
 }

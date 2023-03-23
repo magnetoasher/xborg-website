@@ -1,0 +1,153 @@
+.play-intro {
+  .bg-vector {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+
+  h1 {
+    font-size: 62px;
+    font-weight: 900;
+    line-height: 78px;
+
+    span {
+      color: $primary100;
+    }
+  }
+
+  .subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.05em;
+    margin: 16px 0 32px;
+    max-width: 470px;
+  }
+
+  .statistics {
+    margin-top: 56px;
+  }
+
+  .actions {
+    .btn-primary {
+      margin-right: 32px;
+    }
+  }
+
+  .description {
+    max-width: 520px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .parallaxed-corner {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vh;
+    z-index: 2;
+    pointer-events: none;
+
+    .parallaxed-layer,
+    .parallaxed-base {
+      height: 100%;
+      right: 0;
+
+      img {
+        transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
+        opacity: 0;
+      }
+
+      img,
+      div {
+        height: 100%;
+      }
+    }
+  }
+
+  .triangle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    max-width: 1648px;
+    height: 0;
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    background: $primary100;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0);
+  }
+
+  .parallaxed-1 img {
+    transform: translate(-10%, 20%);
+  }
+
+  .parallaxed-2 img {
+    transform: translate(20%, 0%);
+  }
+
+  .parallaxed-4 img {
+    transform: translate(0%, 20%) scale(0.6);
+  }
+
+  .parallaxed-corner.in {
+    .triangle {
+      height: 98px;
+      transition-delay: 0.5s;
+    }
+
+    .parallaxed-1 img,
+    .parallaxed-2 img,
+    .parallaxed-3 img,
+    .parallaxed-4 img {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+  @media all and (device-width: 1024px) and (device-height: 1366px) and (orientation: portrait) {
+    .parallaxed-corner {
+      right: -50vw;
+    }
+  }
+
+  @media (max-width: $lg-max) {
+    min-height: calc(100vh - 104px);
+
+    .description {
+      margin-left: 0;
+      max-width: 370px;
+    }
+
+    .triangle {
+      display: none;
+    }
+  }
+
+  @media (max-width: $md-max) {
+    flex-direction: column;
+    width: 100%;
+
+    .description {
+      max-width: 100%;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .logo-icon {
+      display: none;
+    }
+
+    .parallaxed-corner {
+      position: relative;
+      height: auto;
+      width: 100vw;
+      margin-top: -20%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

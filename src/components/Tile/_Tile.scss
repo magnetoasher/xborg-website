@@ -21,3 +21,50 @@
     color: $primary100;
   }
 }
+
+.team-tile {
+  padding: 0 16px;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 32px;
+
+  .image {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .tile-name {
+    margin-top: 16px;
+    font-weight: 600;
+  }
+
+  .tile-desc {
+    color: $primary100;
+  }
+
+  .tile-socials {
+    a {
+      padding: 0 5px;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 2px;
+        bottom: 2px;
+        width: 1px;
+        background-color: $light100;
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}

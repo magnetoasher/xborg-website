@@ -7,7 +7,6 @@ import { ScrollWrapper } from "../ScrollWrapper";
 export type LayoutType = {
   components: ReactElement<any, any>[];
   className?: string;
-  overrideScroll?: boolean;
   transparentNavbar?: boolean;
 };
 
@@ -18,7 +17,6 @@ export type LayoutChildType = {
 export const Layout = ({
   components,
   className,
-  overrideScroll,
   transparentNavbar,
 }: LayoutType) => {
   const [refs, setRefs] = useState<any[]>([]);
@@ -34,10 +32,7 @@ export const Layout = ({
   }
 
   return (
-    <ScrollWrapper
-      overrideScroll={overrideScroll}
-      transparentNavbar={transparentNavbar}
-    >
+    <ScrollWrapper transparentNavbar={transparentNavbar}>
       <div className={`flex flex-col${className ? " " + className : ""}`}>
         <Sidebar total={refs.length} active={activeScreen} />
         <div className="app-content">

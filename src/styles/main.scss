@@ -10,12 +10,10 @@
 @import "./tippy";
 
 // Pages
-@import "../modules/GamingPassport/GamingPassport";
+@import "../modules/XborgApp/XborgApp";
 @import "../modules/AboutUs/AboutUs";
-@import "../modules/Esports/Esports";
-@import "../modules/Launchpad/Launchpad";
-// @import "../modules/XCS/XCS";
-@import "../modules/XCSv2/XCS";
+@import "../modules/XCS/XCS";
+
 @import "../modules/TermsAndConditions/TermsAndConditions";
 @import "../modules/FAQ/FAQ";
 @import "../modules/Seed/Seed";
@@ -24,8 +22,6 @@
 @import "../components/Navigation/Navigation";
 @import "../components/ButtonPrimary/ButtonPrimary";
 @import "../components/ButtonSecondary/ButtonSecondary";
-@import "../components/SectionHead/SectionHead";
-@import "../components/SectionIntro/SectionIntro";
 @import "../components/Sidebar/Sidebar";
 @import "../components/Layout/Layout";
 @import "../components/ScrollWrapper/ScrollWrapper";
@@ -43,3 +39,4 @@
 @import "../components/SliderInput/SliderInput";
 @import "../components/Charts/Charts";
 @import "../components/Pagination/Pagination";
+@import "../components/GameTile/GameTile";

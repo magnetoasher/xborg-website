@@ -1,0 +1,43 @@
+.protocol {
+  .section-head-container {
+    max-width: 695px;
+  }
+
+  .statistics {
+    margin-left: 22px;
+    margin-top: 32px;
+  }
+
+  .parallaxed {
+    img {
+      max-width: 369.5px;
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .parallaxed-2 img {
+      transform: translate(-8%, -8%);
+      opacity: 0;
+    }
+
+    .parallaxed-3 img {
+      transform: translate(5%, 5%);
+      opacity: 0;
+      transition-delay: 0.1s;
+    }
+
+    .parallaxed-1 img {
+      transform: translate(-8%, 8%);
+      opacity: 0;
+      transition-delay: 0.2s;
+    }
+
+    &.in {
+      .parallaxed-2 img,
+      .parallaxed-3 img,
+      .parallaxed-1 img {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+    }
+  }
+}

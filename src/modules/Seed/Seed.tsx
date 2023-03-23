@@ -69,7 +69,6 @@ export const Seed = () => {
 
   return (
     <Layout
-      overrideScroll={false}
       transparentNavbar={false}
       components={[
         <div className="seed">

@@ -1,7 +1,36 @@
+.page-section-1 {
+  height: 100vh;
+}
+
 .the-league {
-  .section-head-title,
+  margin-top: -32px;
+
+  .description {
+    position: relative;
+    z-index: 1;
+  }
+
+  .section-head-title {
+    max-width: 325px;
+  }
   .section-head-desc {
     max-width: 410px;
+  }
+
+  .powered-by {
+    margin-top: -32px;
+  }
+
+  .partners {
+    margin-top: 32px;
+
+    img {
+      width: 18%;
+    }
+  }
+
+  .title span {
+    color: $primary100;
   }
 
   .parallaxed {
@@ -13,15 +42,15 @@
     }
 
     .line {
-      width: 1px;
-      height: 0;
+      width: 0;
+      height: 4.99%;
       background-color: $primary100;
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      margin-left: -20px;
       transition: 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+      z-index: -1;
     }
   }
 
@@ -40,7 +69,7 @@
     .line {
       transition-delay: 0.4s;
       box-shadow: 0 0 10px 0 #eb3a4a;
-      height: 348px;
+      width: 120%;
     }
 
     .parallaxed-1 img {
@@ -53,9 +82,19 @@
     }
   }
 
+  @media (max-width: $lg-max) {
+    .powered-by {
+      margin-top: 0;
+    }
+  }
+
   @media (max-width: $md-max) {
-    flex-direction: column;
-    justify-content: flex-start;
+    margin-top: 0px;
+
+    & > .row.expand {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
 
     .description {
       flex: initial;

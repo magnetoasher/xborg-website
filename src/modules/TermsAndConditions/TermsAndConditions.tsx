@@ -1,16 +1,15 @@
-import { Layout, SectionHead } from "../../components";
+import { Layout } from "../../components";
 
 export const TermsAndConditions = () => {
   return (
     <Layout
-      className='tac-layout'
-      overrideScroll={false}
+      className="tac-layout"
       components={[
-        <div className='terms-and-conditions'>
-          <div className='container container-xl'>
-            <SectionHead title='Terms & Agreements' />
+        <div className="terms-and-conditions">
+          <div className="container container-xl">
+            {/* <SectionHead title="Terms & Agreements" /> */}
 
-            <div className='typography'>
+            <div className="typography">
               <h3>Heading text</h3>
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting

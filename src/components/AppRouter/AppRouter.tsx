@@ -8,14 +8,12 @@ import {
 } from "react-router-dom";
 import {
   AboutUs,
-  EsportsPage,
-  GamingPassport,
-  LaunchpadPage,
   XCSPage,
   FAQ,
   Seed,
+  XborgApp,
+  TermsAndConditions,
 } from "../../modules";
-import { TermsAndConditions } from "../../modules/TermsAndConditions";
 
 export enum APP_ROUTER_TRANSITION {
   IN = "page-in",
@@ -44,15 +42,12 @@ export const AppRouter = () => {
   return (
     <div className={`${transitionStage}`} onAnimationEnd={onAnimationEnd}>
       <Routes location={displayLocation}>
+        <Route path="/" element={<XborgApp />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/esports" element={<EsportsPage />} />
-        <Route path="/launchpad" element={<LaunchpadPage />} />
         <Route path="/xtreme-championship-series" element={<XCSPage />} />
-        <Route path="/gaming-passport" element={<GamingPassport />} />
         <Route path="/terms-and-agreements" element={<TermsAndConditions />} />
         <Route path="/FAQ" element={<FAQ />} />
         <Route path="/seed" element={<Seed />} />
-        <Route path="*" element={<Navigate to="/gaming-passport" />} />
       </Routes>
     </div>
   );
