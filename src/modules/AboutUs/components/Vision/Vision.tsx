@@ -5,6 +5,7 @@ import {
   ObserverContainer,
   ParallaxLayer,
   Progressbar,
+  SectionDescription,
 } from "../../../../components";
 
 export const Vision = () => {
@@ -17,13 +18,13 @@ export const Vision = () => {
               <div className="section-border" />
               <h2 className="section-head-title">Our vision</h2>
             </div>
-            <p className="section-head-desc">
+            <SectionDescription className="section-head-desc">
               A gaming world where creativity and innovation thrive and every
               player has an equal opportunity to leave their mark. Our mission
               is to empower players worldwide by increasing their control over
               their data, so they can take ownership of their experiences and
               the communities they belong to.
-            </p>
+            </SectionDescription>
           </div>
         </div>
 
@@ -126,11 +127,11 @@ export const Vision = () => {
                   </div>
                 </div>
 
-                <div className="subtitle">
+                <SectionDescription className="subtitle">
                   Providing players investment opportunities in early-stage Web3
                   games, and developers the platform to access to capital and
                   players.
-                </div>
+                </SectionDescription>
 
                 <div className="enter row">
                   <ButtonSecondary
@@ -142,37 +143,36 @@ export const Vision = () => {
               </div>
 
               <ObserverContainer className="rooniverse row column">
-                <MouseParallaxChild
-                  factorX={-0.2}
-                  factorY={-0.2}
-                  className="parallax-layer-mouse"
-                >
-                  <div className="live">Live</div>
-                  <img src={Images.aboutUs.rooniverse} alt="Rooniverse" />
+                <div className="live">Live</div>
+                <video autoPlay muted loop>
+                  <source
+                    src={require("../../../../assets/videos/rooniverse.mp4")}
+                    type="video/mp4"
+                  />
+                </video>
 
-                  <div className="rooniverse-content">
-                    <div className="row middle tags">
-                      <span>MOBA</span>
-                      <span>Strategic</span>
-                    </div>
-
-                    <div className="intro-title">Rooniverse</div>
-
-                    <div className="rooniverse-desc">
-                      Enter the world of cute and savage Roos who fight to the
-                      DEATH! Showdown in battle arenas, gather resources, and
-                      build your own empire in Rooniverse.
-                    </div>
-
-                    <div className="funding">
-                      <div className="row progress-info">
-                        <span>50% Funded</span>
-                        <span>121 Participants</span>
-                      </div>
-                      <Progressbar progress={50} />
-                    </div>
+                <div className="rooniverse-content">
+                  <div className="row middle tags">
+                    <span>MOBA</span>
+                    <span>Strategic</span>
                   </div>
-                </MouseParallaxChild>
+
+                  <div className="intro-title">Rooniverse</div>
+
+                  <SectionDescription className="rooniverse-desc">
+                    Enter the world of cute and savage Roos who fight to the
+                    DEATH! Showdown in battle arenas, gather resources, and
+                    build your own empire in Rooniverse.
+                  </SectionDescription>
+
+                  <div className="funding">
+                    <div className="row progress-info">
+                      <span>50% Funded</span>
+                      <span>121 Participants</span>
+                    </div>
+                    <Progressbar progress={50} />
+                  </div>
+                </div>
               </ObserverContainer>
             </div>
 
@@ -188,10 +188,10 @@ export const Vision = () => {
                   </div>
                 </div>
 
-                <div className="subtitle">
+                <SectionDescription className="subtitle">
                   Allowing players to unlock collectibles, craft avatars and win
                   exclusive prizes by completing gaming and social challenges.
-                </div>
+                </SectionDescription>
 
                 <div className="enter row">
                   <ButtonSecondary
@@ -232,10 +232,10 @@ export const Vision = () => {
                   </div>
                 </div>
 
-                <div className="desc">
+                <SectionDescription className="desc">
                   Enabling the creation of decentralized gaming societies
                   governed by fans and players.
-                </div>
+                </SectionDescription>
               </div>
 
               <div className="col">
@@ -246,10 +246,10 @@ export const Vision = () => {
                   </div>
                 </div>
 
-                <div className="desc">
+                <SectionDescription className="desc">
                   Providing players with a solution to tokenize their earnings
                   and share their success with the broader gaming community.
-                </div>
+                </SectionDescription>
               </div>
 
               <div className="col">
@@ -260,11 +260,11 @@ export const Vision = () => {
                   </div>
                 </div>
 
-                <div className="desc">
+                <SectionDescription className="desc">
                   XBorg’s Lending Module presents players with the opportunity
                   to lend or borrow valuable gaming assets, contingent on their
                   on-chain reputation.
-                </div>
+                </SectionDescription>
               </div>
             </div>
 
@@ -282,7 +282,11 @@ export const Vision = () => {
                 Want to know where XBorg is headed? Access our newly released
                 public deck.
               </div>
-              <ButtonSecondary label="Get access" />
+              <ButtonSecondary
+                label="Get access"
+                to="https://docsend.com/view/5dwn74pn6izud3vb"
+                target="_blank"
+              />
             </ObserverContainer>
           </div>
         </div>

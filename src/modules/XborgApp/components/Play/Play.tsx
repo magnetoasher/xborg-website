@@ -5,6 +5,8 @@ import {
   ParallaxLayer,
   ObserverContainer,
   ButtonSecondary,
+  SectionDescription,
+  CountUpAnimation,
 } from "../../../../components";
 
 let counter = 0;
@@ -57,10 +59,10 @@ export const Play = () => {
             <br />
             <span>{phrase}</span>
           </h1>
-          <p className="subtitle">
+          <SectionDescription className="subtitle">
             Discover a new meaning to play, connect with your favourite
             communities and build your very own player identity.
-          </p>
+          </SectionDescription>
 
           <div className="actions row middle">
             <ButtonPrimary label={"Launch App"} />
@@ -69,7 +71,9 @@ export const Play = () => {
 
           <div className="row statistics">
             <div className="col">
-              <div className="stats-value">{data.users.toLocaleString()}</div>
+              <div className="stats-value">
+                <CountUpAnimation number={data.users} />
+              </div>
               <div className="stats-label">Active users</div>
             </div>
             <div className="col">

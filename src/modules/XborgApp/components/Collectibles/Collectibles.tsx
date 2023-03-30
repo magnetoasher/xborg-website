@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { Images } from "../../../../assets/imgs/Images";
-import { ObserverContainer, ParallaxLayer } from "../../../../components";
+import {
+  ObserverContainer,
+  ParallaxLayer,
+  SectionDescription,
+} from "../../../../components";
 
 let counter = 0;
 export const Collectibles = () => {
@@ -101,10 +105,10 @@ export const Collectibles = () => {
               </h2>
             </div>
           </div>
-          <p className="section-head-desc">
+          <SectionDescription className="section-head-desc">
             Unlock exclusive collectibles, customise your digital avatar and
             stand out from the crowd.
-          </p>
+          </SectionDescription>
         </div>
       </div>
     </div>

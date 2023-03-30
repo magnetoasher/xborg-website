@@ -8,6 +8,7 @@ import {
   ButtonSecondary,
   ObserverContainer,
   ParallaxLayer,
+  SectionDescription,
   Tabs,
 } from "../../../../components";
 
@@ -124,11 +125,11 @@ export const Community = () => {
                 </h2>
               </div>
             </div>
-            <p className="section-head-desc">
+            <SectionDescription className="section-head-desc">
               XBorg is proud to be the home of the best players, builders and
               GameFi enthusiasts. Discover how we are co-building the next era
               of gaming with them.
-            </p>
+            </SectionDescription>
 
             <div className="row action">
               <ButtonPrimary

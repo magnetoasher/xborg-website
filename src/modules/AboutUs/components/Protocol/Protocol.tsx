@@ -1,12 +1,26 @@
+import { useRef, useEffect } from "react";
 import { Images } from "../../../../assets/imgs/Images";
-import { ObserverContainer, ParallaxLayer } from "../../../../components";
+import {
+  ObserverContainer,
+  ParallaxLayer,
+  SectionDescription,
+} from "../../../../components";
+import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const Protocol = () => {
+  const descriptionRef = useRef(null);
   const data = {
     apps: 2,
     partners: 12,
     users: 10000,
   };
+
+  const textVM = new TextManipulation();
+
+  useEffect(() => {
+    if (descriptionRef.current) textVM.breakText(descriptionRef.current);
+  }, []);
+
   return (
     <div className={`protocol expand row middle between`}>
       <div className="description">
@@ -25,11 +39,11 @@ export const Protocol = () => {
               </h2>
             </div>
           </div>
-          <p className="section-head-desc">
+          <SectionDescription className="section-head-desc">
             A collaborative credential infrastructure on which games, brands and
             communities can build applications and engage with their players and
             fans.
-          </p>
+          </SectionDescription>
 
           <div className="statistics row">
             <div className="col">

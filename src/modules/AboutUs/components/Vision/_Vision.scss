@@ -245,8 +245,10 @@
         margin-right: 16px;
       }
 
-      img {
+      video {
         width: 100%;
+        position: relative;
+        z-index: 2;
       }
 
       .live {
@@ -256,6 +258,7 @@
         font-size: 20px;
         font-weight: 500;
         line-height: 40px;
+        z-index: 3;
       }
 
       .intro-title {

@@ -1,5 +1,5 @@
 import { Images } from "../../../../assets/imgs/Images";
-import { GamingCard } from "../../../../components";
+import { GamingCard, SectionDescription } from "../../../../components";
 
 export const GamingBadges = () => {
   return (
@@ -20,10 +20,10 @@ export const GamingBadges = () => {
               </h2>
             </div>
           </div>
-          <p className="section-head-desc">
+          <SectionDescription className="section-head-desc">
             Create unique gaming badges that showcase your skills, stats, and
             in-game achievements.
-          </p>
+          </SectionDescription>
         </div>
       </div>
     </div>

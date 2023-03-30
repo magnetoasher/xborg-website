@@ -4,6 +4,7 @@ import {
   ButtonSecondary,
   ObserverContainer,
   ParallaxLayer,
+  SectionDescription,
 } from "../../../../components";
 
 export const Prometheus = () => {
@@ -21,10 +22,10 @@ export const Prometheus = () => {
               </h2>
             </div>
           </div>
-          <p className="section-head-desc">
+          <SectionDescription className="section-head-desc">
             Shape the future of gaming and experience the XBorg ecosystem to the
             fullest.
-          </p>
+          </SectionDescription>
         </div>
 
         <div className="typography">

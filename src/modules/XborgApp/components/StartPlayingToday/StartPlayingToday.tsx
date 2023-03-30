@@ -5,6 +5,7 @@ import {
   ObserverContainer,
   ButtonSecondary,
   Links,
+  SectionDescription,
 } from "../../../../components";
 
 export const StartPlayingToday = () => {
@@ -15,9 +16,9 @@ export const StartPlayingToday = () => {
           <span>Start</span> playing <span>today</span>
         </h2>
         <div className="section-head-container">
-          <p className="section-head-desc">
+          <SectionDescription className="section-head-desc">
             Get rewarded for playing your favourite games.
-          </p>
+          </SectionDescription>
         </div>
         <ButtonPrimary
           label="Launch alpha"

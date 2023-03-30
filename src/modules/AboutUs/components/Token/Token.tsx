@@ -3,6 +3,7 @@ import {
   ButtonSecondary,
   ObserverContainer,
   ParallaxLayer,
+  SectionDescription,
 } from "../../../../components";
 import { Countdown } from "../../../../components/Countdown";
 
@@ -21,10 +22,10 @@ export const Token = () => {
               </h2>
             </div>
           </div>
-          <p className="section-head-desc">
+          <SectionDescription className="section-head-desc">
             The native utility token of the XBorg protocol serves as the primary
             means of transaction within the ecosystem.
-          </p>
+          </SectionDescription>
         </div>
 
         <div className="typography">

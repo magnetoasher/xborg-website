@@ -1,4 +1,5 @@
 import { Images } from "../../../../assets/imgs/Images";
+import { SectionDescription } from "../../../../components";
 import { TeamTile, TeamTileType } from "../../../../components/Tile";
 
 export const Team = () => {
@@ -92,12 +93,12 @@ export const Team = () => {
           <div className="row column expand">
             <h2 className="section-head-title">Meet our team</h2>
 
-            <p className="section-head-desc">
+            <SectionDescription className="section-head-desc">
               The XBorg core team is a confluence of gaming enthusiasts and
               seasoned professionals in the realm of software engineering and
               blockchain technologies, all driven by an unwavering ardor for the
               gaming industry.
-            </p>
+            </SectionDescription>
           </div>
         </div>
       </div>

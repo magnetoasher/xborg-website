@@ -20,3 +20,5 @@ export * from "./SliderInput";
 export * from "./Charts";
 export * from "./GameTile";
 export * from "./Links";
+export * from "./SectionDescription";
+export * from "./CountUpAnimation";

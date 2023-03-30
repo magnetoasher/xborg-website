@@ -1,4 +1,5 @@
 import { Images } from "../../../../assets/imgs/Images";
+import { SectionDescription } from "../../../../components";
 
 export const Partners = () => {
   return (
@@ -48,10 +49,10 @@ export const Partners = () => {
         <div className="swissborg-title">
           Powered by <span>SwissBorg</span>
         </div>
-        <p>
+        <SectionDescription className="">
           XBorg is a spin-off of SwissBorg, a crypto wealth management app with
           700'000 users & $1B in Assets Under Management.
-        </p>
+        </SectionDescription>
       </div>
     </div>
   );

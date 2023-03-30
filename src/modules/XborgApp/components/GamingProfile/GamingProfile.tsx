@@ -1,5 +1,9 @@
 import { Images } from "../../../../assets/imgs/Images";
-import { GameTile, ObserverContainer } from "../../../../components";
+import {
+  GameTile,
+  ObserverContainer,
+  SectionDescription,
+} from "../../../../components";
 
 export const GamingProfile = () => {
   return (
@@ -15,10 +19,10 @@ export const GamingProfile = () => {
             </h2>
           </div>
         </div>
-        <p className="section-head-desc">
+        <SectionDescription className="section-head-desc">
           Level up your gaming experience and earn rewards based on your in-game
           skills and esports reputation.
-        </p>
+        </SectionDescription>
       </div>
 
       <ObserverContainer className="background-images-grid row row-wrap middle center">

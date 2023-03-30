@@ -4,6 +4,7 @@ import {
   LeaderboardRow,
   LeaderboardRowType,
   ObserverContainer,
+  SectionDescription,
 } from "../../../../components";
 
 export const Leaderboard = () => {
@@ -55,10 +56,10 @@ export const Leaderboard = () => {
               </h2>
             </div>
           </div>
-          <p className="section-head-desc">
+          <SectionDescription className="section-head-desc">
             Grind your favourite games, complete social quests and climb up the
             leaderboard to unlock exclusive rewards.
-          </p>
+          </SectionDescription>
         </div>
       </div>
       <ObserverContainer

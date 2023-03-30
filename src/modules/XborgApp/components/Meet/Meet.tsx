@@ -1,6 +1,6 @@
 import { MouseParallaxChild } from "react-parallax-mouse";
 import { Images } from "../../../../assets/imgs/Images";
-import { ObserverContainer } from "../../../../components";
+import { ObserverContainer, SectionDescription } from "../../../../components";
 
 export const Meet = () => {
   return (
@@ -17,10 +17,10 @@ export const Meet = () => {
               </h2>
             </div>
           </div>
-          <p className="section-head-desc">
+          <SectionDescription className="section-head-desc">
             Get rewarded for completing quests created by your favourite
             communities, or create your own and rule the virtual world.
-          </p>
+          </SectionDescription>
         </div>
       </div>
 
