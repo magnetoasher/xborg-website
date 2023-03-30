@@ -6,6 +6,7 @@ import { Images } from "../../../../assets/imgs/Images";
 import {
   ButtonPrimary,
   ButtonSecondary,
+  CountUpAnimation,
   ObserverContainer,
   ParallaxLayer,
   SectionDescription,
@@ -258,19 +259,31 @@ export const Community = () => {
             content: (
               <div className="statistics row">
                 <div className="col">
-                  <div className="stats-value">{data.tournaments}+</div>
+                  <div className="stats-value">
+                    <CountUpAnimation
+                      number={data.tournaments}
+                      className="stats-value"
+                      sufix="+"
+                    />
+                  </div>
                   <div className="stats-label">Tournaments Organised</div>
                 </div>
                 <div className="col">
                   <div className="stats-value">
-                    ${data.cash.toLocaleString()}
+                    <CountUpAnimation
+                      number={data.cash}
+                      className="stats-value"
+                      prefix="$"
+                    />
                   </div>
                   <div className="stats-label">Cash Prize Distributed</div>
                 </div>
                 <div className="col">
-                  <div className="stats-value">
-                    {data.participants.toLocaleString()}+
-                  </div>
+                  <CountUpAnimation
+                    number={data.participants}
+                    className="stats-value"
+                    sufix="+"
+                  />
                   <div className="stats-label">Total Participants</div>
                 </div>
               </div>
@@ -324,17 +337,27 @@ export const Community = () => {
             content: (
               <div className="statistics row">
                 <div className="col">
-                  <div className="stats-value">{data.tournamentsWon}</div>
+                  <CountUpAnimation
+                    number={data.tournamentsWon}
+                    className="stats-value"
+                  />
+
                   <div className="stats-label">Tournaments Won</div>
                 </div>
                 <div className="col">
-                  <div className="stats-value">
-                    ${data.winnings.toLocaleString()}
-                  </div>
+                  <CountUpAnimation
+                    number={data.winnings}
+                    prefix="$"
+                    className="stats-value"
+                  />
+
                   <div className="stats-label">Tournament Winnings</div>
                 </div>
                 <div className="col">
-                  <div className="stats-value">{data.ranked1}</div>
+                  <CountUpAnimation
+                    number={data.ranked1}
+                    className="stats-value"
+                  />
                   <div className="stats-label">Web3 titles ranked #1 team</div>
                 </div>
               </div>

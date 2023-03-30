@@ -71,19 +71,22 @@ export const Play = () => {
 
           <div className="row statistics">
             <div className="col">
-              <div className="stats-value">
-                <CountUpAnimation number={data.users} />
-              </div>
+              <CountUpAnimation number={data.users} className="stats-value" />
+
               <div className="stats-label">Active users</div>
             </div>
             <div className="col">
-              <div className="stats-value">{data.quests.toLocaleString()}</div>
+              <CountUpAnimation number={data.quests} className="stats-value" />
+
               <div className="stats-label">Quests completed</div>
             </div>
             <div className="col">
-              <div className="stats-value">
-                ${data.rewards.toLocaleString()}
-              </div>
+              <CountUpAnimation
+                number={data.rewards}
+                className="stats-value"
+                prefix="$"
+              />
+
               <div className="stats-label">Rewards distributed</div>
             </div>
           </div>

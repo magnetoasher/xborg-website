@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import {
+  CountUpAnimation,
   ObserverContainer,
   ParallaxLayer,
   SectionDescription,
@@ -47,15 +48,19 @@ export const Protocol = () => {
 
           <div className="statistics row">
             <div className="col">
-              <div className="stats-value">{data.apps}</div>
+              <CountUpAnimation number={data.apps} className="stats-value" />
+
               <div className="stats-label">Live applications</div>
             </div>
             <div className="col">
-              <div className="stats-value">{data.partners}</div>
+              <CountUpAnimation
+                number={data.partners}
+                className="stats-value"
+              />
               <div className="stats-label">Network partners</div>
             </div>
             <div className="col">
-              <div className="stats-value">{data.users.toLocaleString()}</div>
+              <CountUpAnimation number={data.users} className="stats-value" />
               <div className="stats-label">Active protocol users</div>
             </div>
           </div>
