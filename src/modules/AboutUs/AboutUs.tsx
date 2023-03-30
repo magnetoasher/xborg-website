@@ -15,11 +15,6 @@ import {
 import { Vision } from "./components/Vision/Vision";
 
 export const AboutUs = () => {
-  const dispatch = useDispatch<AppDispatch>();
-  useEffect(() => {
-    dispatch(AboutUsActions.getTotalUsers());
-  }, []);
-
   return (
     <Layout
       className="about-us"
