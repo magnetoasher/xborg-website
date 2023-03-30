@@ -44,4 +44,10 @@
       margin-bottom: 32px;
     }
   }
+
+  @media (max-width: $xs-max) {
+    .section-head-container {
+      margin-top: 128px;
+    }
+  }
 }

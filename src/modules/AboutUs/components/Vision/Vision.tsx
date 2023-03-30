@@ -46,7 +46,7 @@ export const Vision = () => {
 
       <div className="row">
         <div className="page-border" />
-        <div className="row column expand">
+        <div className="row column expand vision-container">
           <div className="credential-network">
             <div className="section-intro">
               <div className="title">Credential network</div>

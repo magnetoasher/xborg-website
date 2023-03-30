@@ -1,4 +1,6 @@
 .community {
+  width: 100%;
+
   .section-head-title {
     max-width: 583px;
   }
@@ -15,6 +17,7 @@
   .tabs {
     margin-left: 22px;
     margin-top: 40px;
+    overflow-x: auto;
 
     .heads {
       max-width: 423px;

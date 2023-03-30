@@ -1784,8 +1784,14 @@ h4 {
     margin: 16px 0 0;
   }
 }
+.about-us .vision {
+  width: 100%;
+}
 .about-us .vision .section-head-desc {
   max-width: 531px;
+}
+.about-us .vision .vision-container {
+  width: 100%;
 }
 .about-us .vision h4 {
   font-family: Lexend, sans-serif;
@@ -2042,9 +2048,11 @@ h4 {
 }
 .about-us .vision .decentralized-societies {
   margin-top: 256px;
+  width: 100%;
 }
 .about-us .vision .decentralized-societies .list {
   max-width: 490px;
+  width: 100%;
 }
 .about-us .vision .decentralized-societies .col {
   margin: 32px 0;
@@ -2148,12 +2156,15 @@ h4 {
   }
 }
 @media (max-width: 768px) {
+  .about-us .vision .page-border {
+    display: none;
+  }
+  .about-us .vision .application-network .app-network-pt2 {
+    margin-top: 64px;
+  }
   .about-us .vision .application-network .section-intro {
     width: auto;
-  }
-  .about-us .vision .big-title-container {
-    flex-direction: column;
-    align-items: flex-start;
+    margin-bottom: 32px;
   }
   .about-us .vision .application-network .parallaxed-2 {
     transform: translateY(-43%) translateX(55%);
@@ -2161,6 +2172,25 @@ h4 {
   .about-us .vision .application-network .big-title {
     margin-left: 0;
     margin-top: 16px;
+  }
+  .about-us .vision .decentralized-societies {
+    margin-top: 128px;
+  }
+  .about-us .vision .big-title-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 360px) {
+  .about-us .vision .credential-network .gaming-credential-layer {
+    width: 100%;
+  }
+  .about-us .vision .list .row.middle {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about-us .vision .list .row.middle .date {
+    margin-bottom: 10px;
   }
 }
 .about-us .token .section-head-container {
@@ -2197,6 +2227,11 @@ h4 {
   .about-us .token .description {
     width: 100%;
     margin-bottom: 32px;
+  }
+}
+@media (max-width: 576px) {
+  .about-us .token .section-head-container {
+    margin-top: 128px;
   }
 }
 .about-us .prometheus .section-head-container {
@@ -2275,6 +2310,12 @@ h4 {
   .about-us .prometheus .actions .btn-primary {
     margin-bottom: 16px;
   }
+  .about-us .prometheus .section-head-container {
+    margin-top: 128px;
+  }
+}
+.about-us .community {
+  width: 100%;
 }
 .about-us .community .section-head-title {
   max-width: 583px;
@@ -2289,6 +2330,7 @@ h4 {
 .about-us .community .tabs {
   margin-left: 22px;
   margin-top: 40px;
+  overflow-x: auto;
 }
 .about-us .community .tabs .heads {
   max-width: 423px;

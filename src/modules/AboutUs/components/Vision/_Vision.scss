@@ -1,6 +1,12 @@
 .vision {
+  width: 100%;
+
   .section-head-desc {
     max-width: 531px;
+  }
+
+  .vision-container {
+    width: 100%;
   }
 
   h4 {
@@ -307,9 +313,11 @@
 
   .decentralized-societies {
     margin-top: 256px;
+    width: 100%;
 
     .list {
       max-width: 490px;
+      width: 100%;
     }
 
     .col {
@@ -436,16 +444,20 @@
   }
 
   @media (max-width: $sm-max) {
-    .application-network .section-intro {
-      width: auto;
-    }
-
-    .big-title-container {
-      flex-direction: column;
-      align-items: flex-start;
+    .page-border {
+      display: none;
     }
 
     .application-network {
+      .app-network-pt2 {
+        margin-top: 64px;
+      }
+
+      .section-intro {
+        width: auto;
+        margin-bottom: 32px;
+      }
+
       .parallaxed-2 {
         transform: translateY(-43%) translateX(55%);
       }
@@ -453,6 +465,32 @@
       .big-title {
         margin-left: 0;
         margin-top: 16px;
+      }
+    }
+
+    .decentralized-societies {
+      margin-top: 128px;
+    }
+
+    .big-title-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: $xxs-max) {
+    .credential-network .gaming-credential-layer {
+      width: 100%;
+    }
+
+    .list {
+      .row.middle {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .date {
+          margin-bottom: 10px;
+        }
       }
     }
   }
