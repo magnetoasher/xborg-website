@@ -24,8 +24,8 @@ export const TeamTile = (data: TeamTileType) => {
   }, []);
 
   return (
-    <Link
-      to={data.linkedin ?? ""}
+    <a
+      href={data.linkedin}
       className="team-tile row column middle center text-center"
       ref={ref}
     >
@@ -48,6 +48,6 @@ export const TeamTile = (data: TeamTileType) => {
           )}
         </div>
       ) : null} */}
-    </Link>
+    </a>
   );
 };
