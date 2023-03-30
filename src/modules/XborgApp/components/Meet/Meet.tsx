@@ -55,8 +55,8 @@ export const Meet = () => {
             </h4>
 
             <div className="reward row column middle center">
-              <img src={Images.xborgapp.orb} alt="Orb" />
-              <span>+ 300 CP</span>
+              <img src={Images.xborgapp.artifact} alt="Artifact" />
+              <span>+ 300 XP</span>
             </div>
           </div>
         </MouseParallaxChild>

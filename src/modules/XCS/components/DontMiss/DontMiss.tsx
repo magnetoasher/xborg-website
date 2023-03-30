@@ -17,17 +17,29 @@ export const DontMiss = () => {
       }`}
     >
       <div className="description expand">
-        {/* <SectionHead
-          title="Don’t Miss A Second"
-          description="Stay up to date with all Xtreme Championship Series news, announcements and action."
-        >
-          Don’t Miss <b>A Second</b>
-        </SectionHead> */}
+        <div className="section-head-container in">
+          <div className="row section-head">
+            <div className="section-border"></div>
+            <div className="row column expand">
+              <img src={Images.logo.default} alt="Don’t Miss A Second" />
+              <h2 className="section-head-title">
+                Don’t Miss <span>A Second</span>
+              </h2>
+            </div>
+          </div>
+          <p className="section-head-desc">
+            Stay up to date with all Xtreme Championship Series news,
+            announcements and action.
+          </p>
+        </div>
         <div className="row btn-container">
-          <ButtonPrimary
-            label="Join XCS Discord"
-            to="https://discord.gg/Cb73U6PX"
-          />
+          <a
+            href="https://discord.gg/Cb73U6PX"
+            className="btn-primary row middle center"
+            target="_blank"
+          >
+            <span className="expand">Join XCS Discord</span>
+          </a>
         </div>
       </div>
       <ObserverContainer className="parallaxed row middle center expand">

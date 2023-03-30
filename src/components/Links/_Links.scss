@@ -1,0 +1,41 @@
+.footer-links {
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  right: 0;
+  height: 80px;
+  font-size: 12px;
+  line-height: 15px;
+
+  a {
+    color: #4f4e4e;
+    padding: 10px 32px;
+    white-space: nowrap;
+    transition: 0.2s ease-in;
+
+    &:hover {
+      color: $primary100;
+    }
+  }
+
+  @media (max-width: $lg-max) {
+    bottom: 0;
+    justify-content: flex-start;
+
+    a {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+
+  @media (max-width: $md-max) {
+    position: relative;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+
+    a {
+      width: 50%;
+    }
+  }
+}

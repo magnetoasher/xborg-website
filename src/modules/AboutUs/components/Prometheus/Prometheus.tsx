@@ -5,7 +5,6 @@ import {
   ObserverContainer,
   ParallaxLayer,
 } from "../../../../components";
-import { Countdown } from "../../../../components/Countdown";
 
 export const Prometheus = () => {
   return (
@@ -38,13 +37,17 @@ export const Prometheus = () => {
           </ul>
 
           <div className="row middle actions">
-            <ButtonPrimary label="Purchase a Prometheus NFT" />
-            <ButtonSecondary label="See all perks" />
+            <ButtonPrimary
+              label="Purchase a Prometheus NFT"
+              to="https://opensea.io/collection/xborg-prometheus"
+              target="_blank"
+            />
+            <ButtonSecondary label="See all perks" to="prometheus" />
           </div>
         </div>
       </div>
 
-      <ObserverContainer className="parallaxed expand row middle center">
+      <ObserverContainer className="parallaxed row middle center">
         <ParallaxLayer
           image={Images.aboutUs.logo02}
           factorX={-0.1}

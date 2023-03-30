@@ -1,6 +1,6 @@
 .gaming-card {
-  width: 428.18px;
-  height: 574.66px;
+  max-width: 428px;
+  max-height: 574.66px;
   position: relative;
 
   .card {
@@ -16,11 +16,14 @@
 
   .card-lights {
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
+    width: 131.07476636%;
+    height: auto;
 
     img {
-      width: 561.11px;
-      height: 697px;
+      width: 100%;
+      height: auto;
     }
   }
 

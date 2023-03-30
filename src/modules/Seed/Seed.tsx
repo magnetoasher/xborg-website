@@ -140,7 +140,10 @@ export const Seed = () => {
                 Note that only Prometheus holders will have a guaranteed
                 allocation in the seed round. To purchase a Prometheus NFT,
                 please{" "}
-                <a href="https://opensea.io/collection/xborg-prometheus">
+                <a
+                  href="https://opensea.io/collection/xborg-prometheus"
+                  target="_blank"
+                >
                   click here
                 </a>
                 .

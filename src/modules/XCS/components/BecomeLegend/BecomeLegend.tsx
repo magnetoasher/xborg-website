@@ -36,11 +36,20 @@ export const BecomeLegend = () => {
           <PickGame />
         ) : (
           <>
-            {/* <SectionIntro
-              subtitle="Become A Legend"
-              title="XCS"
-              description="Introducing the Xtreme Championship Series, the largest Web3 esports event ever created."
-            /> */}
+            <div className="section-head-container">
+              <div className="row">
+                <div className="section-border"></div>
+                <div className="row column">
+                  <img src={Images.logo.default} alt="XCS" />
+                  <div className="section-head-top">Become A Legend</div>
+                  <h1 className="section-head-title">XCS</h1>
+                </div>
+              </div>
+              <p className="section-head-desc">
+                Introducing the Xtreme Championship Series, the largest Web3
+                esports event ever created.
+              </p>
+            </div>
             <div className="row btn-container">
               <ButtonPrimary
                 label="Register for XCS"

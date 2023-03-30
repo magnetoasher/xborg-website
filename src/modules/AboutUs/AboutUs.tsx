@@ -12,6 +12,7 @@ import {
   Team,
   Token,
 } from "./components";
+import { Vision } from "./components/Vision/Vision";
 
 export const AboutUs = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -24,6 +25,7 @@ export const AboutUs = () => {
       className="about-us"
       components={[
         <Protocol />,
+        <Vision />,
         <Token />,
         <Prometheus />,
         <Community />,

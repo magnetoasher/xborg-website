@@ -1,0 +1,456 @@
+.vision {
+  .section-head-desc {
+    max-width: 531px;
+  }
+
+  h4 {
+    font-family: $main-font-family;
+    margin-top: 56px;
+    margin-bottom: 16px;
+    color: $primary100;
+    font-weight: 700;
+  }
+
+  .section-intro {
+    padding: 32px;
+    background: #111111;
+    max-width: 484px;
+    margin-bottom: 40px;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: -32px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      background: $primary100;
+      box-shadow: 0px 0px 32px $primary100;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 25px;
+      margin-bottom: 4px;
+    }
+
+    .desc {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      color: #777;
+    }
+  }
+
+  // .vision-pt-1 {
+  //   height: 100vh;
+  // }
+
+  .vision-parallaxed {
+    .line-indicator {
+      width: 16px;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 40px;
+        bottom: 40px;
+        width: 1px;
+        background-color: $primary100;
+      }
+    }
+
+    .chevron {
+      width: 85px;
+    }
+
+    .block {
+      width: 295px;
+      height: 89px;
+      background: #111111;
+      padding: 32px;
+      position: relative;
+
+      &.with-cube {
+        &:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: -16px;
+          width: 16px;
+          height: 16px;
+          background: $primary100;
+          box-shadow: 0px 0px 42px $primary100;
+        }
+      }
+    }
+  }
+
+  .credential-network {
+    margin-top: 30vh;
+
+    .block {
+      width: 319px;
+      position: relative;
+      padding-left: 48px;
+      margin: 16px 0;
+      height: 84px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        background: $primary100;
+        box-shadow: 0px 0px 32px $primary100;
+      }
+    }
+
+    .gaming-credential-layer {
+      width: 316px;
+      height: 316px;
+      margin-top: 16px;
+      position: relative;
+
+      .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+      }
+
+      .title {
+        width: 158px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 32px;
+        text-align: center;
+        margin: 32px 0;
+      }
+
+      .cube {
+        width: 16px;
+        height: 16px;
+        background: $primary100;
+        box-shadow: 0px 0px 32px $primary100;
+      }
+    }
+
+    .credential-network-details {
+      padding-left: 32px;
+
+      .title {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0.05em;
+        color: $primary100;
+        position: relative;
+        padding-left: 20px;
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 4px;
+          height: 32px;
+          background: $primary100;
+          box-shadow: 0px 0px 42px $primary100;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0.05em;
+        color: $light100;
+      }
+
+      .space {
+        height: 32px;
+      }
+    }
+  }
+
+  .application-network {
+    margin-top: 128px;
+
+    .section-intro {
+      width: 484px;
+      margin-bottom: 140px;
+    }
+
+    .live {
+      padding: 0px 16px;
+      line-height: 45px;
+      background: $primary100;
+      color: $white;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-align: center;
+    }
+
+    .big-title {
+      font-family: $secondary-font-family;
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 30px;
+      letter-spacing: 0.1em;
+      color: $light100;
+      margin-left: 32px;
+
+      span {
+        color: $primary100;
+      }
+    }
+
+    .subtitle {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0.05em;
+      max-width: 525px;
+      margin-bottom: 32px;
+      margin-top: 16px;
+    }
+
+    .rooniverse {
+      position: relative;
+      max-width: 440px;
+
+      .rooniverse-content {
+        padding: 16px;
+        border: 1px solid #2e2c37;
+        margin-top: -1px;
+      }
+
+      .tags span {
+        padding: 8px 16px;
+        background-color: #111111;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        margin-right: 16px;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .live {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 40px;
+      }
+
+      .intro-title {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 39px;
+        margin: 16px 0;
+      }
+
+      .rooniverse-desc {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        color: $gray100;
+        margin-bottom: 16px;
+      }
+
+      .progress-info {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+
+        span {
+          margin-right: 32px;
+          margin-bottom: 8px;
+        }
+      }
+    }
+
+    .app-network-pt2 {
+      margin-top: 256px;
+    }
+
+    .parallaxed-1 img {
+      max-width: 348px;
+    }
+
+    .parallaxed-2 {
+      transform: translateY(-29%) translateX(58%);
+
+      img {
+        max-width: 242px;
+      }
+    }
+  }
+
+  .decentralized-societies {
+    margin-top: 256px;
+
+    .list {
+      max-width: 490px;
+    }
+
+    .col {
+      margin: 32px 0;
+      position: relative;
+    }
+
+    .date {
+      color: $white;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 45px;
+      letter-spacing: 0.05em;
+      background-color: $primary100;
+      padding: 0 8px;
+      margin-right: 32px;
+      white-space: nowrap;
+    }
+
+    .col-title {
+      font-family: $secondary-font-family;
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 30px;
+      letter-spacing: 0.1em;
+
+      span {
+        color: $primary100;
+      }
+    }
+
+    .desc {
+      margin-top: 16px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0.05em;
+    }
+
+    .parallaxed-1 {
+      img {
+        max-width: 422px;
+      }
+    }
+
+    .knowmore {
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 28px;
+      letter-spacing: 0.05em;
+      text-align: center;
+      margin-bottom: 32px;
+      max-width: 272px;
+      margin-top: -32px;
+    }
+  }
+
+  .page-border {
+    position: relative;
+    width: 32px;
+    margin-top: 30vh;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 70px;
+      bottom: 32px;
+      width: 1px;
+      background-color: $primary100;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 32px;
+      width: 16px;
+      height: 16px;
+      background: $primary100;
+      box-shadow: 0px 0px 42px $primary100;
+    }
+  }
+
+  @media (max-width: $md-max) {
+    flex-direction: column;
+
+    .description {
+      width: 100%;
+      margin-bottom: 32px;
+    }
+
+    .block-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .rooniverse {
+      margin-top: 32px;
+    }
+
+    .app-network-pt2 {
+      .parallaxed {
+        margin-top: 32px;
+      }
+    }
+
+    .vision-parallaxed {
+      display: none;
+    }
+
+    .credential-details-wrapper {
+      flex-direction: column;
+    }
+
+    .gaming-credential-layer {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media (max-width: $md-max) {
+    .credential-network,
+    .page-border {
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: $sm-max) {
+    .application-network .section-intro {
+      width: auto;
+    }
+
+    .big-title-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .application-network {
+      .parallaxed-2 {
+        transform: translateY(-43%) translateX(55%);
+      }
+
+      .big-title {
+        margin-left: 0;
+        margin-top: 16px;
+      }
+    }
+  }
+}

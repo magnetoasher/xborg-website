@@ -31,4 +31,17 @@
       }
     }
   }
+
+  @media (max-width: $md-max) {
+    flex-direction: column;
+
+    .section-head-container {
+      margin-top: 64px;
+    }
+
+    .description {
+      width: 100%;
+      margin-bottom: 32px;
+    }
+  }
 }

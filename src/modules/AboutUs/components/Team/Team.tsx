@@ -13,13 +13,15 @@ export const Team = () => {
       image: Images.aboutUs.team.member02,
       title: "Anthony Lesoimier",
       desc: "CSO & Advisor",
-      linkedin: "https://www.linkedin.com/in/louis-r%C3%A9gis-5116b6107/",
+      linkedin:
+        "https://www.linkedin.com/in/anthony-lesoismier-geniaux-06254a11/",
     },
     {
       image: Images.aboutUs.team.member03,
       title: "Laureline",
       desc: "Lead Dev",
-      linkedin: "https://www.linkedin.com/in/louis-r%C3%A9gis-5116b6107/",
+      linkedin:
+        "https://www.linkedin.com/in/laureline-val%C3%A9rie-david-141410aa/",
     },
     {
       image: Images.aboutUs.team.member04,

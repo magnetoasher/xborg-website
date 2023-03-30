@@ -15,13 +15,13 @@ export type TableDataRow = {
 
 export const Table = ({ data }: TableType) => {
   return (
-    <div className='table row'>
+    <div className="table row">
       {data.map((col: TableDataColumn) => (
-        <div className='row column expand table-column' key={col.id}>
-          <div className='table-heading'>{col.label}</div>
+        <div className="row column expand table-column" key={col.id}>
+          <div className="table-heading">{col.label}</div>
           {col.list.map((listItem: TableDataRow) => (
-            <div className='table-entry' key={listItem.id}>
-              {listItem.label}
+            <div className="table-entry" key={listItem.id}>
+              <span>{listItem.label}</span>
             </div>
           ))}
         </div>

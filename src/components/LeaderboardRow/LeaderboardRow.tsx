@@ -32,7 +32,7 @@ export const LeaderboardRow = ({
           <div className="level row middle center">{level} Level</div>
         </div>
         <div className="row middle xp">
-          <img src={Images.gamingpassport.emerald} alt="" />
+          <img src={Images.xborgapp.artifact} alt="" />
           {xp} XP
         </div>
       </MouseParallaxChild>

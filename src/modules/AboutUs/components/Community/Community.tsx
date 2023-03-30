@@ -131,7 +131,11 @@ export const Community = () => {
             </p>
 
             <div className="row action">
-              <ButtonPrimary label="Join our community" />
+              <ButtonPrimary
+                label="Join our community"
+                to="https://discord.gg/xborg"
+                target="_blank"
+              />
             </div>
           </div>
         </div>
@@ -179,7 +183,10 @@ export const Community = () => {
               speed={0}
             />
 
-            <ButtonSecondary label="Learn more about the XCS" />
+            <ButtonSecondary
+              label="Learn more about the XCS"
+              to="xtreme-championship-series"
+            />
           </ObserverContainer>
         )}
 
@@ -233,7 +240,11 @@ export const Community = () => {
               speed={0}
               className="parallaxed-2"
             />
-            <ButtonSecondary label="Community Leaderboard" />
+            <ButtonSecondary
+              label="Community Leaderboard"
+              to="https://crew3.xyz/c/xborg/leaderboard"
+              target="_blank"
+            />
           </ObserverContainer>
         )}
       </div>

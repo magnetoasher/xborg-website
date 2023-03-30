@@ -37,15 +37,15 @@ export const Token = () => {
           </ul>
 
           <p>Early interest form closes in:</p>
-          <Countdown date={new Date("2024/01/01")} />
+          <Countdown date={new Date("2023/04/24")} />
 
           <div className="row">
-            <ButtonSecondary label="Participate in the Seed Round" />
+            <ButtonSecondary label="Participate in the seed round" to="/seed" />
           </div>
         </div>
       </div>
 
-      <ObserverContainer className="parallaxed expand row column middle center">
+      <ObserverContainer className="parallaxed row column middle center">
         <ParallaxLayer
           image={Images.aboutUs.token}
           factorX={0.1}

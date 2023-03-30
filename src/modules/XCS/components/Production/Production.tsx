@@ -56,24 +56,33 @@ export const Production = () => {
   return (
     <div className="production expand row column">
       <div className="row middle expand">
-        <div>
+        <div className="expand">
           <div className="description expand">
-            {/* <SectionHead
-              title="World Class Production"
-              description="Catch all of the action live on Twitch."
-            >
-              World Class <b>Production</b>
-            </SectionHead> */}
+            <div className="section-head-container in">
+              <div className="row section-head">
+                <div className="section-border"></div>
+                <div className="row column expand">
+                  <img src={Images.logo.default} alt="World Class Production" />
+                  <h2 className="section-head-title">
+                    World Class <span>Production</span>
+                  </h2>
+                </div>
+              </div>
+              <p className="section-head-desc">
+                Catch all of the action live on Twitch.
+              </p>
+            </div>
           </div>
 
           <div className="row follow-twitch">
             <ButtonPrimary
               label="Follow us on Twitch"
               to="https://www.twitch.tv/xborgofficial"
+              target="_blank"
             />
           </div>
         </div>
-        <ObserverContainer className="parallaxed expand row middle center">
+        <ObserverContainer className="parallaxed row middle center">
           <ParallaxLayer
             image={Images.XCS.production}
             factorX={0.3}

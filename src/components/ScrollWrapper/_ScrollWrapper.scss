@@ -4,6 +4,12 @@
   transform: translateZ(0);
   padding-top: $header-xl;
 
+  .simplebar-init {
+    & > .simplebar-track.simplebar-horizontal {
+      display: none;
+    }
+  }
+
   @media (max-width: $lg-max) {
     padding-top: $header-md;
   }

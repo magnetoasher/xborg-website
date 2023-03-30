@@ -40,4 +40,28 @@
       }
     }
   }
+
+  @media (max-width: $md-max) {
+    flex-direction: column;
+
+    .statistics {
+      margin-left: 0;
+    }
+
+    .parallaxed {
+      margin-top: 32px;
+    }
+  }
+
+  @media (max-width: $xs-max) {
+    .statistics {
+      margin-top: 16px;
+      flex-wrap: wrap;
+
+      .col {
+        flex: 0 0 50%;
+        margin: 16px 0 0;
+      }
+    }
+  }
 }

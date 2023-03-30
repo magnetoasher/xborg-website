@@ -1,11 +1,5 @@
 import { useEffect, useState } from "react";
-import {
-  Location,
-  Navigate,
-  Route,
-  Routes,
-  useLocation,
-} from "react-router-dom";
+import { Location, Route, Routes, useLocation } from "react-router-dom";
 import {
   AboutUs,
   XCSPage,
@@ -13,6 +7,7 @@ import {
   Seed,
   XborgApp,
   TermsAndConditions,
+  Prometheus,
 } from "../../modules";
 
 export enum APP_ROUTER_TRANSITION {
@@ -42,12 +37,13 @@ export const AppRouter = () => {
   return (
     <div className={`${transitionStage}`} onAnimationEnd={onAnimationEnd}>
       <Routes location={displayLocation}>
-        <Route path="/" element={<XborgApp />} />
-        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/" element={<AboutUs />} />
+        <Route path="/xborg-app" element={<XborgApp />} />
         <Route path="/xtreme-championship-series" element={<XCSPage />} />
         <Route path="/terms-and-agreements" element={<TermsAndConditions />} />
         <Route path="/FAQ" element={<FAQ />} />
         <Route path="/seed" element={<Seed />} />
+        <Route path="/prometheus" element={<Prometheus />} />
       </Routes>
     </div>
   );

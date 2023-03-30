@@ -9,9 +9,11 @@
 
   .list-item {
     width: 33.333%;
+    padding-right: 10px;
 
     img {
-      height: 59px;
+      max-height: 59px;
+      max-width: 100%;
     }
   }
 
@@ -40,5 +42,19 @@
     line-height: 28px;
     letter-spacing: 0.01em;
     max-width: 350px;
+  }
+
+  @media (max-width: $md-max) {
+    flex-direction: column;
+
+    .swissborg {
+      margin-top: 64px;
+    }
+  }
+
+  @media (max-width: $sm-max) {
+    .list-item {
+      width: 50%;
+    }
   }
 }

@@ -6,4 +6,17 @@
   .description {
     padding-left: 130px;
   }
+
+  @media (max-width: $md-max) {
+    flex-direction: column-reverse;
+
+    .description {
+      width: 100%;
+      padding: 0 0 64px;
+    }
+
+    .gaming-card {
+      margin-bottom: 128px;
+    }
+  }
 }

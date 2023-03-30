@@ -6,6 +6,8 @@ export const Images = {
   arrow_s_down: require("./arrow-square-down.svg"),
   logofull: require("./logofull.svg").default,
   logosquare: require("./logo-square.png"),
+  chevronRight: require("./chevron-right.png"),
+  chevronDown: require("./chevron-down.png"),
 
   partners: {
     partner01: require("./partners/swissborg.png"),
@@ -80,6 +82,8 @@ export const Images = {
       eskezje: require("./players/eskezje.png"),
       sjud: require("./players/sjud.png"),
     },
+    rooniverse: require("./rooniverse.png"),
+    gcl: require("./xborgapp/gcl.png"),
   },
 
   esports: {
@@ -172,15 +176,23 @@ export const Images = {
 
   xborgapp: {
     ugp1: require("./xborgapp/ugp1.png"),
-    ugp1avatar: require("./xborgapp/ugp1_avatar.png"),
-    // ugp2: require("./xborgapp/ugp2.png"),
-    // ugp3: require("./xborgapp/ugp3.png"),
-    // ugp4: require("./xborgapp/ugp4.png"),
-    // ugp5: require("./xborgapp/ugp5.png"),
-    // ugp6: require("./xborgapp/ugp6.png"),
-    // ugp7: require("./xborgapp/ugp7.png"),
-    // ugp8: require("./xborgapp/ugp8.png"),
-    // ugp9: require("./xborgapp/ugp9.png"),
+    ugp2: require("./xborgapp/ugp2.png"),
+    ugp3: require("./xborgapp/ugp3.png"),
+    ugp4: require("./xborgapp/ugp4.png"),
+    ugp5: require("./xborgapp/ugp5.png"),
+    ugp6: require("./xborgapp/ugp6.png"),
+    ugp7: require("./xborgapp/ugp7.png"),
+    ugp8: require("./xborgapp/ugp8.png"),
+    ugp9: require("./xborgapp/ugp9.png"),
+    ugp1avatar: require("./xborgapp/ugp1avatar.png"),
+    ugp2avatar: require("./xborgapp/ugp2avatar.png"),
+    ugp3avatar: require("./xborgapp/ugp3avatar.png"),
+    ugp4avatar: require("./xborgapp/ugp4avatar.png"),
+    ugp5avatar: require("./xborgapp/ugp5avatar.png"),
+    ugp6avatar: require("./xborgapp/ugp6avatar.png"),
+    ugp7avatar: require("./xborgapp/ugp7avatar.png"),
+    ugp8avatar: require("./xborgapp/ugp8avatar.png"),
+    ugp9avatar: require("./xborgapp/ugp9avatar.png"),
 
     badge: require("./xborgapp/badge.png"),
     lights: require("./xborgapp/lights.png"),
@@ -192,6 +204,6 @@ export const Images = {
     collectible1: require("./xborgapp/collectible1.png"),
     collectible2: require("./xborgapp/collectible2.png"),
     hair1: require("./xborgapp/hair1.png"),
-    hair2: require("./xborgapp/hair2.png"),
+    artifact: require("./xborgapp/artifact.png"),
   },
 };

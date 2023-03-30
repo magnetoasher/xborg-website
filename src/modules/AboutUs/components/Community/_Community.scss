@@ -23,6 +23,7 @@
 
   .statistics {
     margin-top: 40px;
+    max-width: 454px;
 
     .stats-label {
       font-size: 16px;
@@ -325,6 +326,62 @@
       .swiper-next {
         opacity: 1;
         margin-left: 204px;
+      }
+    }
+  }
+
+  @media (max-width: $md-max) {
+    .description {
+      margin-bottom: 64px;
+    }
+
+    .hall-of-fame {
+      max-width: 100%;
+    }
+
+    .parallaxed-banner,
+    .parallaxed-devices,
+    .players-swiper,
+    .parallaxed-trophy {
+      position: relative;
+      top: initial;
+      left: initial;
+    }
+
+    .parallaxed-trophy {
+      .parallaxed-2 {
+        width: auto;
+      }
+    }
+
+    .players-swiper {
+      margin: 0 auto;
+    }
+
+    .governance {
+      flex-wrap: wrap;
+      margin-top: 0px;
+
+      .col {
+        margin-top: 40px;
+        flex: 0 0 50%;
+      }
+    }
+  }
+
+  @media (max-width: $sm-max) {
+    .tabs {
+      margin-left: 0;
+    }
+
+    .statistics {
+      flex-wrap: wrap;
+      margin-top: 40px;
+
+      .col {
+        flex: 0 0 50%;
+        margin: 16px 0 0;
+        padding: 0 10px;
       }
     }
   }

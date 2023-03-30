@@ -47,7 +47,7 @@ export const Protocol = () => {
           </div>
         </div>
       </div>
-      <ObserverContainer className="parallaxed expand row column middle center">
+      <ObserverContainer className="parallaxed row column middle center">
         <ParallaxLayer
           image={Images.aboutUs.protocolCube1}
           factorX={0.1}

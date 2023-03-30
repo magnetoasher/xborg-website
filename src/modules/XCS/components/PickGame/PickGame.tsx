@@ -15,18 +15,15 @@ export const PickGame = () => {
   const EvioButtons = () => (
     <div className="row">
       <ButtonPrimary
-        label="Ev.io Qualifier 1"
-        to="https://www.communitygaming.io/tournament/xtreme-championship-series-evio-month-1233"
-        icon={<ExternalLink />}
-      />
-      <ButtonPrimary
         label="Ev.io Qualifier 2"
         to="https://www.communitygaming.io/tournament/xtreme-championship-series-evio-month-2"
+        target="_blank"
         icon={<ExternalLink />}
       />
       <ButtonPrimary
         label="Ev.io Qualifier 3"
         to="https://www.communitygaming.io/tournament/xtreme-championship-series-evio-month-3"
+        target="_blank"
         icon={<ExternalLink />}
       />
     </div>
@@ -34,52 +31,42 @@ export const PickGame = () => {
   const GodsUnchainedButtons = () => (
     <div className="row">
       <ButtonPrimary
-        label="Gods Unchained Qualifier 1"
-        icon={<ExternalLink />}
-        to="https://www.communitygaming.io/tournament/xtreme-championship-series-gu-month-1"
-      />
-      <ButtonPrimary
         label="Gods Unchained Qualifier 2"
         icon={<ExternalLink />}
         to="https://www.communitygaming.io/tournament/xtreme-championship-series-gu-month-2"
+        target="_blank"
       />
       <ButtonPrimary
         label="Gods Unchained Qualifier 3"
         icon={<ExternalLink />}
         to="https://www.communitygaming.io/tournament/xtreme-championship-series-gu-month-3"
+        target="_blank"
       />
     </div>
   );
   const MojoButtons = () => (
     <div className="row">
       <ButtonPrimary
-        label="Mojo Melee Qualifier 1"
-        icon={<ExternalLink />}
-        to="https://www.communitygaming.io/tournament/xtreme-championship-series-mojomelee-month-1"
-      />
-      <ButtonPrimary
         label="Mojo Melee Qualifier 2"
         icon={<ExternalLink />}
         to="https://www.communitygaming.io/tournament/xtreme-championship-series-mojo-melee-month-2"
+        target="_blank"
       />
       <ButtonPrimary
         label="Mojo Melee Qualifier 3"
         icon={<ExternalLink />}
         to="https://www.communitygaming.io/tournament/xtreme-championship-series-mojo-melee-month-3"
+        target="_blank"
       />
     </div>
   );
   const CTAButtons = () => (
     <div className="row">
       <ButtonPrimary
-        label="CTA Qualifier 1"
-        icon={<ExternalLink />}
-        to="https://www.communitygaming.io/tournament/xtreme-championship-series-cta-month-one"
-      />
-      <ButtonPrimary
         label="CTA Qualifier 2"
         icon={<ExternalLink />}
         to="https://www.communitygaming.io/tournament/xtreme-championship-series-cta-month-2"
+        target="_blank"
       />
       <ButtonPrimary
         label="CTA Qualifier 3"
@@ -94,11 +81,13 @@ export const PickGame = () => {
         label="The Bornless Qualifier 1"
         icon={<ExternalLink />}
         to="https://www.communitygaming.io/tournament/xtreme-championship-series-bornless-qualifier-1"
+        target="_blank"
       />
       <ButtonPrimary
         label="The Bornless Qualifier 2"
         icon={<ExternalLink />}
         to="https://www.communitygaming.io/tournament/xtreme-championship-series-bornless-qualifier-2"
+        target="_blank"
       />
     </div>
   );

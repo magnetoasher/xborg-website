@@ -50,15 +50,14 @@ export const Tabs = ({ data, onTabChange }: TabsType) => {
       <div className="body">
         {data.map((tab: SingleTab, index: number) => (
           <CSSTransition
+            key={index}
             in={active === index}
             nodeRef={refs[index]}
             timeout={300}
             classNames="body-item"
             unmountOnExit
           >
-            <div className="body-item" key={index}>
-              {tab.content}
-            </div>
+            <div className="body-item">{tab.content}</div>
           </CSSTransition>
         ))}
       </div>

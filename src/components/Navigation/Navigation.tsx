@@ -18,9 +18,9 @@ export const Navigation = () => {
   const scrollVM = new ScrollViewModel();
 
   const links: SingleLinkType[] = [
-    { to: "", label: "xBorg app" },
+    { to: "", label: "About us" },
+    { to: "xborg-app", label: "XBorg app" },
     { to: "xtreme-championship-series", label: "Xtreme Championship Series" },
-    { to: "about-us", label: "About us" },
   ];
 
   return (
@@ -58,7 +58,11 @@ export const Navigation = () => {
         ))}
       </nav>
       <div className={`early-access${active ? " active" : ""}`}>
-        <ButtonPrimary label="Launch alpha" to="http://gaming.xborg.com" />
+        <ButtonPrimary
+          label="Launch alpha"
+          to="http://gaming.xborg.com"
+          target="_blank"
+        />
       </div>
       <div
         className="hamburger-menu row middle center"

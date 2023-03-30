@@ -76,4 +76,23 @@
       transition-delay: 0.4s;
     }
   }
+
+  @media (max-width: $md-max) {
+    flex-direction: column;
+
+    .description {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $xs-max) {
+    .actions {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .btn-primary {
+        margin-bottom: 16px;
+      }
+    }
+  }
 }

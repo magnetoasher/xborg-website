@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import VanillaTilt from "vanilla-tilt";
 import { Images } from "../../assets/imgs/Images";
 
@@ -23,13 +24,17 @@ export const TeamTile = (data: TeamTileType) => {
   }, []);
 
   return (
-    <div className="team-tile row column middle center text-center" ref={ref}>
+    <Link
+      to={data.linkedin ?? ""}
+      className="team-tile row column middle center text-center"
+      ref={ref}
+    >
       <div className="image">
         <img src={data.image ?? Images.noimg} alt="" />
       </div>
       <div className="tile-name">{data.title}</div>
       {data.desc && <div className="tile-desc">{data.desc}</div>}
-      {data.linkedin || data.twitter ? (
+      {/* {data.linkedin || data.twitter ? (
         <div className="tile-socials row">
           {data.linkedin && (
             <a href={data.linkedin} target="_blank">
@@ -42,7 +47,7 @@ export const TeamTile = (data: TeamTileType) => {
             </a>
           )}
         </div>
-      ) : null}
-    </div>
+      ) : null} */}
+    </Link>
   );
 };

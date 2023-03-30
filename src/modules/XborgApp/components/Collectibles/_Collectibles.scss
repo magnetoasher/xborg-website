@@ -14,8 +14,7 @@
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
-    max-width: 482px;
+    width: 482px;
     transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 
     .collectible-image {
@@ -107,6 +106,15 @@
       .collectible-details:last-child {
         opacity: 1;
       }
+    }
+  }
+
+  @media (max-width: $md-max) {
+    flex-direction: column-reverse;
+
+    .description {
+      margin-top: 128px;
+      width: 100%;
     }
   }
 }

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 export type ButtonSecondaryType = {
   label: string;
   to?: string;
+  target?: string;
   onClick?: (e: MouseEvent<HTMLElement>) => void;
 };
 
@@ -13,7 +14,12 @@ export const ButtonSecondary = ({
   onClick,
 }: ButtonSecondaryType) => {
   return (
-    <a href={to} onClick={onClick} className="btn-secondary row middle">
+    <a
+      href={to}
+      onClick={onClick}
+      className="btn-secondary row middle"
+      target="_blank"
+    >
       <div className="square" />
       {label}
       <svg

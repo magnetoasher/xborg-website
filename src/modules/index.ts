@@ -4,3 +4,4 @@ export * from "./XCS";
 export * from "./Seed";
 export * from "./FAQ";
 export * from "./TermsAndConditions";
+export * from "./Prometheus";

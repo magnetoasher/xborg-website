@@ -28,6 +28,12 @@
     }
   }
 
+  .tabs {
+    .heads {
+      max-width: 467px;
+    }
+  }
+
   @media (max-width: $sm-max) {
     margin-top: 24px;
 

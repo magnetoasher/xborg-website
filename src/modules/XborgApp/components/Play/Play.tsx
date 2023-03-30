@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import {
   ButtonPrimary,
@@ -6,12 +7,44 @@ import {
   ButtonSecondary,
 } from "../../../../components";
 
+let counter = 0;
 export const Play = () => {
+  const phrases = [
+    "win prizes",
+    "collect badges",
+    "level up",
+    "build your identity",
+    "open lootboxes",
+  ];
+  const [phrase, setPhrase] = useState(phrases[0]);
+  const [isChanging, setChanging] = useState(false);
+
   const data = {
     users: 8000,
     quests: 15000,
     rewards: 20000,
   };
+
+  useEffect(() => {
+    handlePhraseChange();
+  }, []);
+
+  function handlePhraseChange() {
+    setTimeout(() => {
+      counter++;
+      if (counter >= phrases.length) {
+        counter = 0;
+      }
+      setChanging(true);
+      setPhrase(phrases[counter]);
+    }, 3500);
+
+    setTimeout(() => {
+      setChanging(false);
+      handlePhraseChange();
+    }, 4500);
+  }
+
   return (
     <div className={`play-intro expand row middle between`}>
       <div className="description">
@@ -19,10 +52,10 @@ export const Play = () => {
           <img src={Images.logofull} alt="" />
         </div>
         <div className="play-intro-text">
-          <h1>
+          <h1 className={isChanging ? "text-glitch" : ""}>
             Play and
             <br />
-            <span>[dynamic]</span>
+            <span>{phrase}</span>
           </h1>
           <p className="subtitle">
             Discover a new meaning to play, connect with your favourite

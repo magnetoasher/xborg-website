@@ -6,12 +6,20 @@ export const TheLeague = () => {
     <div className={`the-league expand row column`}>
       <div className="expand row middle between">
         <div className="description expand">
-          {/* <SectionHead
-            title="The League We Need"
-            description="A high-stakes, live production, multi-game esports competition."
-          >
-            <b>The League</b> We Need
-          </SectionHead> */}
+          <div className="section-head-container">
+            <div className="row section-head">
+              <div className="section-border"></div>
+              <div className="row column expand">
+                <img src={Images.logo.default} alt="The League We Need" />
+                <h2 className="section-head-title">
+                  <span>The League</span> We Need
+                </h2>
+              </div>
+            </div>
+            <p className="section-head-desc">
+              A high-stakes, live production, multi-game esports competition.
+            </p>
+          </div>
         </div>
         <ObserverContainer className="parallaxed expand">
           <ParallaxLayer

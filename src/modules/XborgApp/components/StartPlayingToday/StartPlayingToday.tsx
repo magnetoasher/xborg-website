@@ -1,28 +1,17 @@
-import { useRef } from "react";
-import { Link } from "react-router-dom";
 import { Images } from "../../../../assets/imgs/Images";
 import {
   ButtonPrimary,
-  Progressbar,
   ParallaxLayer,
   ObserverContainer,
   ButtonSecondary,
+  Links,
 } from "../../../../components";
-import { Countdown } from "../../../../components/Countdown";
-import { ScrollViewModel } from "../../../../viewmodels/ScrollViewModel";
-import { TextScramble } from "../../../../viewmodels/TextScramble";
 
 export const StartPlayingToday = () => {
-  const scroll = new ScrollViewModel();
-
-  function onRedirect() {
-    scroll.scrollToSpecifiedScreen(0, 500);
-  }
-
   return (
     <div className={`start-playing-today expand row middle`}>
       <div className="description expand row column middle">
-        <h2>
+        <h2 className="text-center">
           <span>Start</span> playing <span>today</span>
         </h2>
         <div className="section-head-container">
@@ -30,8 +19,12 @@ export const StartPlayingToday = () => {
             Get rewarded for playing your favourite games.
           </p>
         </div>
-        <ButtonPrimary label="Launch alpha" />
-        <ButtonSecondary label="Get beta early access" />
+        <ButtonPrimary
+          label="Launch alpha"
+          to="https://gaming.xborg.com"
+          target="_blank"
+        />
+        {/* <ButtonSecondary label="Get beta early access" /> */}
       </div>
 
       <div className="parallaxed-elements">
@@ -72,37 +65,7 @@ export const StartPlayingToday = () => {
         </ObserverContainer>
       </div>
 
-      <div className="links row middle center">
-        {/* <Link to="/terms-and-agreements" onClick={onRedirect}>
-          Privacy Policy
-        </Link>
-        <Link to="/terms-and-agreements" onClick={onRedirect}>
-          Cookie Policy
-        </Link>
-  */}
-
-        <a href="https://firebasestorage.googleapis.com/v0/b/xborg-quest.appspot.com/o/XBorg%20Website%20Terms%20of%20Use.pdf?alt=media&token=ff336d2a-0ca4-45d4-8dbd-6f895b34a8c9">
-          Terms of use
-        </a>
-
-        <a href="https://docsend.com/documents/8733565">White Paper</a>
-
-        <Link to="/launchpad" onClick={onRedirect}>
-          Launchpad
-        </Link>
-        <Link to="/esports" onClick={onRedirect}>
-          Esports 3.0
-        </Link>
-        <Link to="/xtreme-championship-series" onClick={onRedirect}>
-          XCS
-        </Link>
-        <Link to="/about-us" onClick={onRedirect}>
-          About
-        </Link>
-        <Link to="/faq" onClick={onRedirect}>
-          FAQ
-        </Link>
-      </div>
+      <Links />
     </div>
   );
 };

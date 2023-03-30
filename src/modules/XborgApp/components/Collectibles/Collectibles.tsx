@@ -28,7 +28,7 @@ export const Collectibles = () => {
         className={`parallaxed expand row column middle center state-${current}`}
       >
         <ParallaxLayer
-          image={Images.xborgapp.collectible1}
+          image={Images.xborgapp.collectible2}
           factorX={-0.1}
           factorY={-0.1}
           speed={7}
@@ -36,7 +36,7 @@ export const Collectibles = () => {
           className="parallaxed-1"
         />
         <ParallaxLayer
-          image={Images.xborgapp.collectible2}
+          image={Images.xborgapp.collectible1}
           factorX={-0.1}
           factorY={-0.1}
           speed={3}
@@ -44,7 +44,7 @@ export const Collectibles = () => {
         />
 
         <div>
-          <div className="collectible-details row">
+          <div className="collectible-details row middle">
             <div className="collectible-image">
               <img src={Images.xborgapp.hair1} alt="Hair 1" />
             </div>
@@ -61,35 +61,29 @@ export const Collectibles = () => {
               </div>
               <div className="supply line">
                 Total Supply: <span>1000</span>
-                <a href="/">List of owners</a>
-              </div>
-              <div className="revenue line">
-                Secondary Sales revenue: <span>$3,000</span>
+                <a>List of owners</a>
               </div>
             </div>
           </div>
 
-          <div className="collectible-details row">
+          <div className="collectible-details row middle">
             <div className="collectible-image">
-              <img src={Images.xborgapp.hair2} alt="Hair 2" />
+              <img src={Images.xborgapp.orb} alt="Hair 2" />
             </div>
 
             <div className="row column">
-              <div className="name">Red Spiky Hair</div>
+              <div className="name">Red Magic Orb</div>
               <div className="row middle line">
                 <div className="rarity">
                   Rarity: <span className="legendary">Legendary</span>
                 </div>
                 <div className="type">
-                  Type: <span>Head</span>
+                  Type: <span>Spell</span>
                 </div>
               </div>
               <div className="supply line">
                 Total Supply: <span>100</span>
-                <a href="/">List of owners</a>
-              </div>
-              <div className="revenue line">
-                Secondary Sales revenue: <span>$8,000</span>
+                <a>List of owners</a>
               </div>
             </div>
           </div>
