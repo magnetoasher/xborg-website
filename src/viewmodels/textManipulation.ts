@@ -136,15 +136,7 @@ export class TextManipulation {
       const current = letters[i] as HTMLElement;
       const delay = i * (speed ?? 50);
 
-      current.style.transform =
-        "translateZ(0) translateY(0px) rotate(0deg) scale(1)";
-      current.style.transition =
-        "transform 500ms cubic-bezier(0.77, 0, 0.175, 1) " +
-        delay +
-        "ms, opacity 1000ms cubic-bezier(0.77, 0, 0.175, 1) " +
-        delay +
-        "ms";
-      current.style.transformOrigin = "center center";
+      current.style.transitionDelay = delay + "ms";
       current.style.opacity = "1";
     }
   }
