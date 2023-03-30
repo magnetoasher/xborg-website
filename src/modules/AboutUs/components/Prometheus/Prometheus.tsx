@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import {
   ButtonPrimary,
@@ -6,8 +7,10 @@ import {
   ParallaxLayer,
   SectionDescription,
 } from "../../../../components";
+import { TextScramble } from "../../../../viewmodels/TextScramble";
 
 export const Prometheus = () => {
+  const titleScrambleRef = useRef(null);
   return (
     <div className={`prometheus expand row middle between`}>
       <div className="description">
@@ -15,14 +18,24 @@ export const Prometheus = () => {
           <div className="row section-head">
             <div className="section-border" />
             <div className="row column expand">
-              <div className="section-head-top">XBorg Protocol</div>
+              <div className="section-head-top" ref={titleScrambleRef}>
+                XBorg Protocol
+              </div>
 
               <h2 className="section-head-title">
                 <span>Prometheus NFT</span>
               </h2>
             </div>
           </div>
-          <SectionDescription className="section-head-desc">
+          <SectionDescription
+            className="section-head-desc"
+            onAnimateIn={() => {
+              const current =
+                titleScrambleRef.current as unknown as HTMLDivElement;
+              const scramble = new TextScramble(current);
+              if (titleScrambleRef.current) scramble.setText(current.innerHTML);
+            }}
+          >
             Shape the future of gaming and experience the XBorg ecosystem to the
             fullest.
           </SectionDescription>

@@ -7,9 +7,11 @@ import {
   SectionDescription,
 } from "../../../../components";
 import { TextManipulation } from "../../../../viewmodels/textManipulation";
+import { TextScramble } from "../../../../viewmodels/TextScramble";
 
 export const Protocol = () => {
   const descriptionRef = useRef(null);
+  const titleScrambleRef = useRef(null);
   const data = {
     apps: 2,
     partners: 12,
@@ -36,11 +38,19 @@ export const Protocol = () => {
               <h2 className="section-head-title">
                 <span>An open and composable</span>
                 <br />
-                gaming protocol
+                <strong ref={titleScrambleRef}>gaming protocol</strong>
               </h2>
             </div>
           </div>
-          <SectionDescription className="section-head-desc">
+          <SectionDescription
+            className="section-head-desc"
+            onAnimateIn={() => {
+              const current =
+                titleScrambleRef.current as unknown as HTMLDivElement;
+              const scramble = new TextScramble(current);
+              if (titleScrambleRef.current) scramble.setText(current.innerHTML);
+            }}
+          >
             A collaborative credential infrastructure on which games, brands and
             communities can build applications and engage with their players and
             fans.
@@ -66,13 +76,12 @@ export const Protocol = () => {
           </div>
         </div>
       </div>
-      <ObserverContainer className="parallaxed row column middle center">
+      <ObserverContainer className="parallaxed">
         <ParallaxLayer
           image={Images.aboutUs.protocolCube1}
           factorX={0.1}
           factorY={0.1}
           speed={0}
-          isBase
           className="parallaxed-1"
         />
         <ParallaxLayer
@@ -94,6 +103,7 @@ export const Protocol = () => {
           factorX={0}
           factorY={0}
           speed={0}
+          isBase
           className="parallaxed-4"
         />
       </ObserverContainer>

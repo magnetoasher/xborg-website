@@ -1,8 +1,11 @@
+import { useRef } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import { SectionDescription } from "../../../../components";
 import { TeamTile, TeamTileType } from "../../../../components/Tile";
+import { TextScramble } from "../../../../viewmodels/TextScramble";
 
 export const Team = () => {
+  const titleScrambleRef = useRef(null);
   const team: TeamTileType[] = [
     {
       image: Images.aboutUs.team.member01,
@@ -91,9 +94,20 @@ export const Team = () => {
         <div className="row section-head">
           <div className="section-border" />
           <div className="row column expand">
-            <h2 className="section-head-title">Meet our team</h2>
+            <h2 className="section-head-title" ref={titleScrambleRef}>
+              Meet our team
+            </h2>
 
-            <SectionDescription className="section-head-desc">
+            <SectionDescription
+              className="section-head-desc"
+              onAnimateIn={() => {
+                const current =
+                  titleScrambleRef.current as unknown as HTMLDivElement;
+                const scramble = new TextScramble(current);
+                if (titleScrambleRef.current)
+                  scramble.setText(current.innerHTML);
+              }}
+            >
               The XBorg core team is a confluence of gaming enthusiasts and
               seasoned professionals in the realm of software engineering and
               blockchain technologies, all driven by an unwavering ardor for the

@@ -44,6 +44,10 @@
   @media (max-width: $md-max) {
     flex-direction: column;
 
+    .description {
+      width: 100%;
+    }
+
     .statistics {
       margin-left: 0;
     }

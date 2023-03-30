@@ -260,6 +260,10 @@ a {
   text-decoration: none;
 }
 
+.dud {
+  opacity: 0.5;
+}
+
 .statistics .col {
   margin-right: 32px;
 }
@@ -1765,6 +1769,9 @@ h4 {
   .about-us .protocol {
     flex-direction: column;
   }
+  .about-us .protocol .description {
+    width: 100%;
+  }
   .about-us .protocol .statistics {
     margin-left: 0;
   }
@@ -1782,26 +1789,41 @@ h4 {
     margin: 16px 0 0;
   }
 }
+.about-us .page-section-1 {
+  padding-top: 0 !important;
+}
 .about-us .vision {
   width: 100%;
-}
-.about-us .vision .section-head-desc {
-  max-width: 531px;
 }
 .about-us .vision .vision-container {
   width: 100%;
 }
-.about-us .vision h4 {
-  font-family: Lexend, sans-serif;
-  margin-top: 56px;
-  margin-bottom: 16px;
-  color: #eb3a4a;
-  font-weight: 700;
+.about-us .vision .page-border {
+  position: relative;
+  width: 32px;
+}
+.about-us .vision .page-border:after {
+  content: "";
+  position: absolute;
+  top: 70px;
+  bottom: 32px;
+  width: 1px;
+  background-color: #eb3a4a;
+}
+.about-us .vision .page-border:before {
+  content: "";
+  position: absolute;
+  bottom: 32px;
+  width: 16px;
+  height: 16px;
+  background: #eb3a4a;
+  box-shadow: 0px 0px 42px #eb3a4a;
 }
 .about-us .vision .section-intro {
   padding: 32px;
   background: #111111;
   max-width: 484px;
+  width: 100%;
   margin-bottom: 40px;
   position: relative;
 }
@@ -1828,48 +1850,121 @@ h4 {
   line-height: 28px;
   color: #777;
 }
-.about-us .vision .vision-parallaxed .line-indicator {
+@media (max-width: 768px) {
+  .about-us .vision .page-border {
+    display: none;
+  }
+  .about-us .vision .section-intro:after {
+    left: -16px;
+  }
+}
+.about-us .vision .vision-introduction {
+  min-height: 100vh;
+}
+.about-us .vision .vision-introduction .section-head-desc {
+  max-width: 531px;
+}
+.about-us .vision .vision-introduction .description {
+  margin-right: 32px;
+}
+.about-us .vision .vision-introduction .vision-intro-parallaxed .line-indicator {
   width: 16px;
   position: relative;
 }
-.about-us .vision .vision-parallaxed .line-indicator:after {
+.about-us .vision .vision-introduction .vision-intro-parallaxed .line-indicator:after {
   content: "";
   position: absolute;
-  top: 40px;
-  bottom: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 0;
   width: 1px;
   background-color: #eb3a4a;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.about-us .vision .vision-parallaxed .chevron {
+.about-us .vision .vision-introduction .vision-intro-parallaxed .chevron {
   width: 85px;
+  opacity: 0;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.about-us .vision .vision-parallaxed .block {
+.about-us .vision .vision-introduction .vision-intro-parallaxed .block {
   width: 295px;
   height: 89px;
   background: #111111;
   padding: 32px;
   position: relative;
+  opacity: 0;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.about-us .vision .vision-parallaxed .block.with-cube:after {
+.about-us .vision .vision-introduction .vision-intro-parallaxed .block.with-cube:before {
   content: "";
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: -16px;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  left: 0;
+  opacity: 0;
   width: 16px;
   height: 16px;
+}
+.about-us .vision .vision-introduction .vision-intro-parallaxed .block.block-first {
+  transform: translateY(80px);
+}
+.about-us .vision .vision-introduction .vision-intro-parallaxed .block.block-third {
+  transform: translateY(-80px);
+}
+.about-us .vision .vision-introduction .vision-intro-parallaxed.in .block {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.about-us .vision .vision-introduction .vision-intro-parallaxed.in .block.with-cube:before {
+  left: -16px;
+  opacity: 1;
+  transition-delay: 0.4s;
   background: #eb3a4a;
   box-shadow: 0px 0px 42px #eb3a4a;
 }
-.about-us .vision .credential-network {
-  margin-top: 30vh;
+.about-us .vision .vision-introduction .vision-intro-parallaxed.in .chevron {
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+.about-us .vision .vision-introduction .vision-intro-parallaxed.in .chevron-second {
+  transition-delay: 0.6s;
+}
+.about-us .vision .vision-introduction .vision-intro-parallaxed.in .line-indicator:after {
+  height: calc(100% - 80px);
+  transition-delay: 0.4s;
+}
+@media (max-width: 992px) {
+  .about-us .vision .vision-introduction {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .about-us .vision .vision-introduction .description {
+    margin-right: 0;
+    margin-bottom: 32px;
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .about-us .vision .vision-introduction .vision-intro-parallaxed .block {
+    width: 100%;
+  }
+}
+.about-us .vision .credential-network .chevron {
+  width: 85px;
+  opacity: 0;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .about-us .vision .credential-network .block {
   width: 319px;
+  background: #111111;
+  padding: 32px 32px 32px 48px;
   position: relative;
-  padding-left: 48px;
   margin: 16px 0;
   height: 84px;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .about-us .vision .credential-network .block:after {
   content: "";
@@ -1887,6 +1982,8 @@ h4 {
   height: 316px;
   margin-top: 16px;
   position: relative;
+  opacity: 0;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .about-us .vision .credential-network .gaming-credential-layer .background {
   position: absolute;
@@ -1902,12 +1999,23 @@ h4 {
   line-height: 32px;
   text-align: center;
   margin: 32px 0;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .about-us .vision .credential-network .gaming-credential-layer .cube {
   width: 16px;
   height: 16px;
   background: #eb3a4a;
   box-shadow: 0px 0px 32px #eb3a4a;
+  opacity: 0;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.about-us .vision .credential-network .gaming-credential-layer .cube.cube-first {
+  transform: translateY(30px);
+}
+.about-us .vision .credential-network .gaming-credential-layer .cube.cube-second {
+  transform: translateY(-30px);
 }
 .about-us .vision .credential-network .credential-network-details {
   padding-left: 32px;
@@ -1920,6 +2028,8 @@ h4 {
   color: #eb3a4a;
   position: relative;
   padding-left: 20px;
+  opacity: 0;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .about-us .vision .credential-network .credential-network-details .title:after {
   content: "";
@@ -1937,16 +2047,79 @@ h4 {
   line-height: 32px;
   letter-spacing: 0.05em;
   color: #d1d3d4;
+  opacity: 0;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .about-us .vision .credential-network .credential-network-details .space {
   height: 32px;
 }
+.about-us .vision .credential-network .credential-details-wrapper.in .block {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.about-us .vision .credential-network .credential-details-wrapper.in .block-second {
+  transition-delay: 0.1s;
+}
+.about-us .vision .credential-network .credential-details-wrapper.in .block-third {
+  transition-delay: 0.2s;
+}
+.about-us .vision .credential-network .credential-details-wrapper.in .chevron {
+  opacity: 1;
+}
+.about-us .vision .credential-network .credential-details-wrapper.in .chevron-first {
+  transition-delay: 0.3s;
+}
+.about-us .vision .credential-network .credential-details-wrapper.in .chevron-second {
+  transition-delay: 0.4s;
+}
+.about-us .vision .credential-network .credential-details-wrapper.in .chevron-third {
+  transition-delay: 0.5s;
+}
+.about-us .vision .credential-network .credential-details-wrapper.in .gaming-credential-layer {
+  opacity: 1;
+  transition-delay: 0.6s;
+}
+.about-us .vision .credential-network .credential-details-wrapper.in .gaming-credential-layer .cube {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+.about-us .vision .credential-network .credential-details-wrapper.in .gaming-credential-layer .title {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0.8s;
+}
+.about-us .vision .credential-network .credential-details-wrapper.in .credential-network-details .title {
+  opacity: 1;
+  transition-delay: 0.8s;
+}
+.about-us .vision .credential-network .credential-details-wrapper.in .credential-network-details p {
+  opacity: 1;
+  transition-delay: 0.9s;
+}
+@media (max-width: 1367px) {
+  .about-us .vision .credential-network .credential-details-wrapper {
+    flex-wrap: wrap;
+  }
+  .about-us .vision .credential-network .credential-network-details {
+    flex: 0 0 100%;
+    margin-top: 64px;
+    padding-left: 0;
+  }
+}
+@media (max-width: 800px) {
+  .about-us .vision .credential-network .block-container {
+    flex-direction: column;
+  }
+  .about-us .vision .credential-network .block-container .block {
+    margin: 0;
+  }
+  .about-us .vision .credential-network .block-container .chevron {
+    transform: rotate(90deg);
+  }
+}
 .about-us .vision .application-network {
   margin-top: 128px;
-}
-.about-us .vision .application-network .section-intro {
-  width: 484px;
-  margin-bottom: 140px;
 }
 .about-us .vision .application-network .live {
   padding: 0px 16px;
@@ -1975,13 +2148,17 @@ h4 {
   font-weight: 400;
   line-height: 28px;
   letter-spacing: 0.05em;
-  max-width: 525px;
+  max-width: 541px;
   margin-bottom: 32px;
   margin-top: 16px;
+  padding-right: 16px;
 }
 .about-us .vision .application-network .rooniverse {
   position: relative;
   max-width: 440px;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  transform: translateX(50px);
+  opacity: 0;
 }
 .about-us .vision .application-network .rooniverse .rooniverse-content {
   padding: 16px;
@@ -2032,17 +2209,80 @@ h4 {
   margin-right: 32px;
   margin-bottom: 8px;
 }
-.about-us .vision .application-network .app-network-pt2 {
+.about-us .vision .application-network .rooniverse.in {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.about-us .vision .application-network .app-network-xborg {
   margin-top: 256px;
 }
 .about-us .vision .application-network .parallaxed-1 img {
-  max-width: 348px;
+  width: 348px;
+  opacity: 0;
+  transform: translateY(-15%) translateX(-10%);
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .about-us .vision .application-network .parallaxed-2 {
-  transform: translateY(-29%) translateX(58%);
+  transform: translateY(-36%) translateX(82%);
 }
 .about-us .vision .application-network .parallaxed-2 img {
+  opacity: 0;
+  transform: translateY(15%) translateX(10%);
   max-width: 242px;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.about-us .vision .application-network .parallaxed.in .parallaxed-1 img,
+.about-us .vision .application-network .parallaxed.in .parallaxed-2 img {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+@media (max-width: 1250px) {
+  .about-us .vision .application-network .rooniverse {
+    max-width: 350px;
+  }
+}
+@media (max-width: 1200px) {
+  .about-us .vision .application-network .parallaxed {
+    margin-right: 14%;
+  }
+}
+@media (max-width: 992px) {
+  .about-us .vision .application-network .block-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about-us .vision .application-network .app-network-xborg {
+    margin-top: 128px;
+  }
+  .about-us .vision .application-network .rooniverse {
+    max-width: 500px;
+    margin-top: 32px;
+  }
+  .about-us .vision .application-network .parallaxed {
+    margin-right: 0;
+    margin-top: 64px;
+  }
+}
+@media (max-width: 768px) {
+  .about-us .vision .application-network .parallaxed-1 img {
+    width: 70%;
+  }
+  .about-us .vision .application-network .parallaxed-2 {
+    transform: translateY(-36%) translateX(48%);
+  }
+  .about-us .vision .application-network .parallaxed-2 img {
+    max-width: 50%;
+  }
+}
+@media (max-width: 576px) {
+  .about-us .vision .application-network .big-title-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about-us .vision .application-network .big-title-container .big-title {
+    margin-top: 16px;
+    margin-left: 0;
+  }
 }
 .about-us .vision .decentralized-societies {
   margin-top: 256px;
@@ -2086,6 +2326,13 @@ h4 {
 }
 .about-us .vision .decentralized-societies .parallaxed-1 img {
   max-width: 422px;
+  opacity: 0;
+  transform: scale(0.7) rotate(30deg);
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.about-us .vision .decentralized-societies .parallaxed.in .parallaxed-1 img {
+  opacity: 1;
+  transform: scale(1) rotate(0);
 }
 .about-us .vision .decentralized-societies .knowmore {
   font-size: 12px;
@@ -2097,98 +2344,12 @@ h4 {
   max-width: 272px;
   margin-top: -32px;
 }
-.about-us .vision .page-border {
-  position: relative;
-  width: 32px;
-  margin-top: 30vh;
-}
-.about-us .vision .page-border:after {
-  content: "";
-  position: absolute;
-  top: 70px;
-  bottom: 32px;
-  width: 1px;
-  background-color: #eb3a4a;
-}
-.about-us .vision .page-border:before {
-  content: "";
-  position: absolute;
-  bottom: 32px;
-  width: 16px;
-  height: 16px;
-  background: #eb3a4a;
-  box-shadow: 0px 0px 42px #eb3a4a;
-}
 @media (max-width: 992px) {
-  .about-us .vision {
-    flex-direction: column;
-  }
-  .about-us .vision .description {
-    width: 100%;
-    margin-bottom: 32px;
-  }
-  .about-us .vision .block-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .about-us .vision .rooniverse {
-    margin-top: 32px;
-  }
-  .about-us .vision .app-network-pt2 .parallaxed {
-    margin-top: 32px;
-  }
-  .about-us .vision .vision-parallaxed {
-    display: none;
-  }
-  .about-us .vision .credential-details-wrapper {
-    flex-direction: column;
-  }
-  .about-us .vision .gaming-credential-layer {
-    margin-bottom: 32px;
-  }
-}
-@media (max-width: 992px) {
-  .about-us .vision .credential-network,
-  .about-us .vision .page-border {
-    margin-top: 0;
-  }
-}
-@media (max-width: 768px) {
-  .about-us .vision .page-border {
-    display: none;
-  }
-  .about-us .vision .application-network .app-network-pt2 {
-    margin-top: 64px;
-  }
-  .about-us .vision .application-network .section-intro {
-    width: auto;
-    margin-bottom: 32px;
-  }
-  .about-us .vision .application-network .parallaxed-2 {
-    transform: translateY(-43%) translateX(55%);
-  }
-  .about-us .vision .application-network .big-title {
-    margin-left: 0;
-    margin-top: 16px;
-  }
   .about-us .vision .decentralized-societies {
-    margin-top: 128px;
-  }
-  .about-us .vision .big-title-container {
     flex-direction: column;
-    align-items: flex-start;
   }
-}
-@media (max-width: 360px) {
-  .about-us .vision .credential-network .gaming-credential-layer {
-    width: 100%;
-  }
-  .about-us .vision .list .row.middle {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .about-us .vision .list .row.middle .date {
-    margin-bottom: 10px;
+  .about-us .vision .decentralized-societies .list {
+    max-width: 100%;
   }
 }
 .about-us .token .section-head-container {
@@ -2317,6 +2478,10 @@ h4 {
 }
 .about-us .community .section-head-title {
   max-width: 583px;
+  width: 100%;
+}
+.about-us .community .section-head-title strong {
+  white-space: nowrap;
 }
 .about-us .community .section-head-desc {
   max-width: 540px;
@@ -2328,7 +2493,6 @@ h4 {
 .about-us .community .tabs {
   margin-left: 22px;
   margin-top: 40px;
-  overflow-x: auto;
 }
 .about-us .community .tabs .heads {
   max-width: 423px;
@@ -2581,6 +2745,9 @@ h4 {
   .about-us .community .description {
     margin-bottom: 64px;
   }
+  .about-us .community .action {
+    margin-left: 0;
+  }
   .about-us .community .hall-of-fame {
     max-width: 100%;
   }
@@ -2610,6 +2777,7 @@ h4 {
 @media (max-width: 768px) {
   .about-us .community .tabs {
     margin-left: 0;
+    overflow-x: auto;
   }
   .about-us .community .statistics {
     flex-wrap: wrap;
@@ -2619,6 +2787,11 @@ h4 {
     flex: 0 0 50%;
     margin: 16px 0 0;
     padding: 0 10px;
+  }
+}
+@media (max-width: 360px) {
+  .about-us .community .section-head-title {
+    font-size: 18px;
   }
 }
 .about-us .team .section-head-container {
@@ -2678,7 +2851,7 @@ h4 {
   letter-spacing: 0.05em;
   margin-bottom: 16px;
 }
-.about-us .partners .swissborg-title span {
+.about-us .partners .swissborg-title strong {
   color: #01c38c;
 }
 .about-us .partners p {

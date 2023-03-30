@@ -5,11 +5,13 @@ import { ObserverContainer } from "../../components";
 export type SectionDescriptionType = {
   children: any;
   className: string;
+  onAnimateIn?: () => void;
 };
 
 export const SectionDescription = ({
   children,
   className,
+  onAnimateIn,
 }: SectionDescriptionType) => {
   const ref = useRef(null);
 
@@ -29,6 +31,8 @@ export const SectionDescription = ({
             textVM.fromBottom(desc, 8);
           }, 100);
         }
+
+        onAnimateIn?.();
       }}
       onAnimateOut={() => {
         const desc = ref.current;

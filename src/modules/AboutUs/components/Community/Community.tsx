@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,8 +12,10 @@ import {
   SectionDescription,
   Tabs,
 } from "../../../../components";
+import { TextScramble } from "../../../../viewmodels/TextScramble";
 
 export const Community = () => {
+  const titleScrambleRef = useRef(null);
   const [tab, onTabChange] = useState<number>(0);
 
   const data = {
@@ -119,14 +121,23 @@ export const Community = () => {
           <div className={"section-head-container"}>
             <div className="row section-head">
               <div className="section-border" />
-              <div className="row column expand">
+              <div className="row column expand w-full">
                 <h2 className="section-head-title">
                   <span>A vibrant community of </span>
-                  players & builders
+                  <strong ref={titleScrambleRef}>players & builders</strong>
                 </h2>
               </div>
             </div>
-            <SectionDescription className="section-head-desc">
+            <SectionDescription
+              className="section-head-desc"
+              onAnimateIn={() => {
+                const current =
+                  titleScrambleRef.current as unknown as HTMLDivElement;
+                const scramble = new TextScramble(current);
+                if (titleScrambleRef.current)
+                  scramble.setText(current.innerHTML);
+              }}
+            >
               XBorg is proud to be the home of the best players, builders and
               GameFi enthusiasts. Discover how we are co-building the next era
               of gaming with them.

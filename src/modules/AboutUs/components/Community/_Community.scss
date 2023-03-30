@@ -3,6 +3,11 @@
 
   .section-head-title {
     max-width: 583px;
+    width: 100%;
+
+    strong {
+      white-space: nowrap;
+    }
   }
 
   .section-head-desc {
@@ -17,7 +22,6 @@
   .tabs {
     margin-left: 22px;
     margin-top: 40px;
-    overflow-x: auto;
 
     .heads {
       max-width: 423px;
@@ -338,6 +342,10 @@
       margin-bottom: 64px;
     }
 
+    .action {
+      margin-left: 0;
+    }
+
     .hall-of-fame {
       max-width: 100%;
     }
@@ -375,6 +383,7 @@
   @media (max-width: $sm-max) {
     .tabs {
       margin-left: 0;
+      overflow-x: auto;
     }
 
     .statistics {
@@ -386,6 +395,12 @@
         margin: 16px 0 0;
         padding: 0 10px;
       }
+    }
+  }
+
+  @media (max-width: $xxs-max) {
+    .section-head-title {
+      font-size: 18px;
     }
   }
 }

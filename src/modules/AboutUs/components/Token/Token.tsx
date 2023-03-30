@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import {
   ButtonSecondary,
@@ -6,8 +7,11 @@ import {
   SectionDescription,
 } from "../../../../components";
 import { Countdown } from "../../../../components/Countdown";
+import { TextScramble } from "../../../../viewmodels/TextScramble";
 
 export const Token = () => {
+  const titleScrambleRef = useRef(null);
+
   return (
     <div className={`token expand row middle between`}>
       <div className="description">
@@ -15,14 +19,24 @@ export const Token = () => {
           <div className="row section-head">
             <div className="section-border" />
             <div className="row column expand">
-              <div className="section-head-top">XBorg Protocol</div>
+              <div className="section-head-top" ref={titleScrambleRef}>
+                XBorg Protocol
+              </div>
 
               <h2 className="section-head-title">
                 <span>XBorg Token</span>
               </h2>
             </div>
           </div>
-          <SectionDescription className="section-head-desc">
+          <SectionDescription
+            className="section-head-desc"
+            onAnimateIn={() => {
+              const current =
+                titleScrambleRef.current as unknown as HTMLDivElement;
+              const scramble = new TextScramble(current);
+              if (titleScrambleRef.current) scramble.setText(current.innerHTML);
+            }}
+          >
             The native utility token of the XBorg protocol serves as the primary
             means of transaction within the ecosystem.
           </SectionDescription>

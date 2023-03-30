@@ -1,0 +1,116 @@
+.vision-introduction {
+  min-height: 100vh;
+
+  .section-head-desc {
+    max-width: 531px;
+  }
+
+  .description {
+    margin-right: 32px;
+  }
+
+  .vision-intro-parallaxed {
+    .line-indicator {
+      width: 16px;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 0;
+        width: 1px;
+        background-color: $primary100;
+        transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+    }
+
+    .chevron {
+      width: 85px;
+      opacity: 0;
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .block {
+      width: 295px;
+      height: 89px;
+      background: #111111;
+      padding: 32px;
+      position: relative;
+      opacity: 0;
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+
+      &.with-cube {
+        &:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+          left: 0;
+          opacity: 0;
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      &.block-first {
+        transform: translateY(80px);
+      }
+      &.block-third {
+        transform: translateY(-80px);
+      }
+    }
+
+    &.in {
+      .block {
+        opacity: 1;
+        transform: translate(0, 0);
+
+        &.with-cube {
+          &:before {
+            left: -16px;
+            opacity: 1;
+            transition-delay: 0.4s;
+            background: #eb3a4a;
+            box-shadow: 0px 0px 42px #eb3a4a;
+          }
+        }
+      }
+
+      .chevron {
+        opacity: 1;
+        transition-delay: 0.4s;
+      }
+
+      .chevron-second {
+        transition-delay: 0.6s;
+      }
+
+      .line-indicator:after {
+        height: calc(100% - 80px);
+        transition-delay: 0.4s;
+      }
+    }
+  }
+
+  @media (max-width: $md-max) {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .description {
+      margin-right: 0;
+      margin-bottom: 32px;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $xs-max) {
+    .vision-intro-parallaxed {
+      .block {
+        width: 100%;
+      }
+    }
+  }
+}
