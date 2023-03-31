@@ -82,10 +82,10 @@ export const ApplicationNetwork = () => {
 
             <div className="funding">
               <div className="row progress-info">
-                <span>50% Funded</span>
+                <span>100% Funded</span>
                 <span>121 Participants</span>
               </div>
-              <Progressbar progress={50} />
+              <Progressbar progress={100} />
             </div>
           </div>
         </ObserverContainer>

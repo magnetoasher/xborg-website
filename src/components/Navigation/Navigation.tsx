@@ -58,11 +58,7 @@ export const Navigation = () => {
         ))}
       </nav>
       <div className={`early-access${active ? " active" : ""}`}>
-        <ButtonPrimary
-          label="Launch alpha"
-          to="http://gaming.xborg.com"
-          target="_blank"
-        />
+        <ButtonPrimary label="Invest early" to="seed" target="_blank" />
       </div>
       <div
         className="hamburger-menu row middle center"
