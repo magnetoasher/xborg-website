@@ -224,7 +224,12 @@ export class ScrollViewModel {
     currentSection = index;
   }
 
-  isInViewPortObserver(el: HTMLElement, callbackIn: any, callbackOut?: any) {
+  isInViewPortObserver(
+    el: HTMLElement,
+    callbackIn: any,
+    callbackOut?: any,
+    rootMargin?: string
+  ) {
     const observer = new window.IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -238,7 +243,7 @@ export class ScrollViewModel {
       },
       {
         root: null,
-        rootMargin: "-100px",
+        rootMargin: rootMargin ?? "-100px",
         threshold: 0.1,
       }
     );

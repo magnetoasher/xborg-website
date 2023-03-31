@@ -1,5 +1,6 @@
 .roadmap {
   overflow: hidden;
+  margin: 0 -20px;
 
   .section-head-container {
     max-width: 550px;
@@ -7,6 +8,7 @@
 
   .description {
     margin-bottom: 37px;
+    margin: 0 20px;
   }
 
   [data-simplebar] .simplebar-content {
@@ -17,6 +19,8 @@
     display: inline-flex;
     min-width: 100%;
     margin-bottom: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .roadmap-item {
@@ -24,21 +28,13 @@
     flex-direction: column;
     width: 25%;
     min-width: 350px;
-  }
-
-  .roadmap-item-top {
-    height: 240px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-
-  .roadmap-item-bottom {
-    height: 240px;
+    transition: 0.2s ease-in;
   }
 
   .roadmap-item-line {
     position: relative;
+    opacity: 0;
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 
     &:after {
       content: "";
@@ -115,6 +111,14 @@
   }
 
   .roadmap-item-top {
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transform: translateY(40px);
+    opacity: 0;
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+
     .roadmap-separator {
       margin-top: 16px;
     }
@@ -125,6 +129,11 @@
   }
 
   .roadmap-item-bottom {
+    height: 240px;
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+
     .roadmap-title {
       margin: 16px 0;
     }
@@ -135,6 +144,24 @@
 
     .btn-secondary {
       margin-top: 16px;
+    }
+  }
+
+  .roadmap-item.in {
+    .roadmap-item-line {
+      opacity: 1;
+    }
+
+    .roadmap-item-bottom {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 0.2s;
+    }
+
+    .roadmap-item-top {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 0.2s;
     }
   }
 

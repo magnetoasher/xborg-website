@@ -8,6 +8,7 @@ export type ObserverContainerType = {
   className: string;
   onAnimateIn?: () => void;
   onAnimateOut?: () => void;
+  rootMargin?: string;
 };
 
 export const ObserverContainer = ({
@@ -15,6 +16,7 @@ export const ObserverContainer = ({
   className,
   onAnimateIn,
   onAnimateOut,
+  rootMargin,
 }: ObserverContainerType) => {
   const ref = useRef(null);
   const loaded = useSelector((state: GlobalState) => state.site.loaded);
@@ -23,7 +25,12 @@ export const ObserverContainer = ({
 
   useEffect(() => {
     if (ref.current && loaded) {
-      scrollVM.isInViewPortObserver(ref.current, callbackIn, callbackOut);
+      scrollVM.isInViewPortObserver(
+        ref.current,
+        callbackIn,
+        callbackOut,
+        rootMargin
+      );
     }
   }, [loaded]);
 

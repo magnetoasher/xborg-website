@@ -6,14 +6,14 @@ export type ProgressbarType = {
 
 export const Progressbar = ({ progress }: ProgressbarType) => {
   return (
-    <ObserverContainer className='progressbar'>
+    <ObserverContainer className="progressbar" rootMargin="0px">
       <div
-        className='progress'
+        className="progress"
         style={{
           width: progress + "%",
         }}
       />
-      <div className='progress-text'>{progress}%</div>
+      <div className="progress-text">{progress}%</div>
     </ObserverContainer>
   );
 };

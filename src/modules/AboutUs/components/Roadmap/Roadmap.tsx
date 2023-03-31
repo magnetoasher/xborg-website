@@ -1,21 +1,33 @@
+import { useRef } from "react";
 import SimpleBar from "simplebar-react";
 import { Images } from "../../../../assets/imgs/Images";
-import { ButtonSecondary } from "../../../../components";
+import { ButtonSecondary, ObserverContainer } from "../../../../components";
+import { TextScramble } from "../../../../viewmodels/TextScramble";
 
 export const Roadmap = () => {
+  const titleScrambleRef = useRef(null);
   return (
     <div className="roadmap expand">
-      <div className="description">
-        <div className={"section-head-container"}>
+      <ObserverContainer
+        className="description"
+        onAnimateIn={() => {
+          const current = titleScrambleRef.current as unknown as HTMLDivElement;
+          const scramble = new TextScramble(current);
+          if (titleScrambleRef.current) scramble.setText(current.innerHTML);
+        }}
+      >
+        <div className="section-head-container">
           <div className="row section-head">
-            <h2 className="section-head-title">Roadmap</h2>
+            <h2 className="section-head-title" ref={titleScrambleRef}>
+              Roadmap
+            </h2>
           </div>
         </div>
-      </div>
+      </ObserverContainer>
 
       <SimpleBar className="row middle" autoHide={false} forceVisible={"x"}>
         <div className="roadmap-content">
-          <div className="roadmap-item">
+          <ObserverContainer className="roadmap-item">
             <div className="roadmap-item-top">
               <div className="roadmap-details">Strategic round</div>
               <div className="roadmap-separator" />
@@ -31,9 +43,9 @@ export const Roadmap = () => {
               <div className="roadmap-details">XBorg.gg Alpha </div>
               <div className="roadmap-details">XCS</div>
             </div>
-          </div>
+          </ObserverContainer>
 
-          <div className="roadmap-item">
+          <ObserverContainer className="roadmap-item">
             <div className="roadmap-item-top">
               <div className="roadmap-title">Q2 2023</div>
               <div className="roadmap-details">XBorg.gg V1</div>
@@ -55,9 +67,9 @@ export const Roadmap = () => {
                 <ButtonSecondary label="Register interest" to="seed" />
               </div>
             </div>
-          </div>
+          </ObserverContainer>
 
-          <div className="roadmap-item">
+          <ObserverContainer className="roadmap-item">
             <div className="roadmap-item-top">
               <img src={Images.aboutUs.token} alt="token" />
               <div className="roadmap-index">3.</div>
@@ -74,9 +86,9 @@ export const Roadmap = () => {
               </div>
               <div className="roadmap-details">Developer Grant Program</div>
             </div>
-          </div>
+          </ObserverContainer>
 
-          <div className="roadmap-item">
+          <ObserverContainer className="roadmap-item">
             <div className="roadmap-item-top">
               <div className="roadmap-title">Q4 2023</div>
               <div className="roadmap-details">XBorg.gg mobile app</div>
@@ -93,9 +105,9 @@ export const Roadmap = () => {
             <div className="roadmap-item-bottom">
               <div className="roadmap-index">4.</div>
             </div>
-          </div>
+          </ObserverContainer>
 
-          <div className="roadmap-item">
+          <ObserverContainer className="roadmap-item">
             <div className="roadmap-item-top"></div>
             <div className="roadmap-item-line">
               <div className="plus row middle center">+</div>
@@ -108,7 +120,7 @@ export const Roadmap = () => {
               </div>
               <div className="roadmap-details">Optimistic rollup </div>
             </div>
-          </div>
+          </ObserverContainer>
         </div>
       </SimpleBar>
     </div>
