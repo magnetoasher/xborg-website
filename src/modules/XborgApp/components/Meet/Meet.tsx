@@ -37,7 +37,7 @@ export const Meet = () => {
             className="promo"
           />
 
-          <div className="community-title">Xborg</div>
+          <div className="community-title">XBorg</div>
 
           <div className="row middle tags-list">
             <div className="tag">117 Quests Available</div>
