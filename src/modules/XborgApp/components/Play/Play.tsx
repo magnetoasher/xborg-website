@@ -65,8 +65,11 @@ export const Play = () => {
           </SectionDescription>
 
           <div className="actions row middle">
-            <ButtonPrimary label={"Launch App"} />
-            <ButtonSecondary label={"Get Beta early access"} />
+            <ButtonPrimary
+              label={"Launch App"}
+              to="https://gaming.xborg.com/"
+            />
+            {/* <ButtonSecondary label={"Get Beta early access"} /> */}
           </div>
 
           <div className="row statistics">
