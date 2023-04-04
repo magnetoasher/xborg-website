@@ -4,18 +4,12 @@ import { ObserverContainer } from "../../../../components";
 export const CredentialNetwork = () => {
   return (
     <div className="credential-network row column center">
-      <div className="section-intro">
-        <div className="title">Credential network</div>
-        <div className="desc">
-          Network of gaming credentials using player statistics and social proof
-          to establish skills and reputation.
-        </div>
-      </div>
-
       <ObserverContainer className="row middle credential-details-wrapper">
         <div className="row column credential-network-parallaxed">
           <div className="row middle block-container">
-            <div className="block block-first row middle">Player stats</div>
+            <div className="cn-block cn-block-first row middle">
+              Player stats
+            </div>
 
             <img
               src={Images.chevronRight}
@@ -24,7 +18,7 @@ export const CredentialNetwork = () => {
             />
           </div>
           <div className="row middle block-container">
-            <div className="block block-second row middle">
+            <div className="cn-block cn-block-second row middle">
               In-game achievements
             </div>
             <img
@@ -35,7 +29,7 @@ export const CredentialNetwork = () => {
           </div>
 
           <div className="row middle block-container">
-            <div className="block block-third row middle">
+            <div className="cn-block cn-block-third row middle">
               Fans & esports engagement
             </div>
 

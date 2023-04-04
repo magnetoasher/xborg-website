@@ -16,7 +16,9 @@ export const Links = () => {
         Terms of use
       </a>
 
-      <Link to="">Public Deck</Link>
+      <Link to="https://docsend.com/view/5dwn74pn6izud3vb" target="_blank">
+        Public Deck
+      </Link>
 
       <Link to="/launchpad" onClick={onRedirect}>
         Launchpad

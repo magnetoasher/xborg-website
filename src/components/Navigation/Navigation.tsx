@@ -21,6 +21,7 @@ export const Navigation = () => {
     { to: "", label: "About us" },
     { to: "xborg-app", label: "XBorg app" },
     { to: "xtreme-championship-series", label: "Xtreme Championship Series" },
+    { to: "invest", label: "Invest in XBorg" },
   ];
 
   return (

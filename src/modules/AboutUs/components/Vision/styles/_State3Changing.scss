@@ -1,0 +1,25 @@
+.vision-intro-parallaxed-container.state-3.changing {
+  @import "./StateAll";
+
+  .block-third,
+  .block-first {
+    opacity: 0;
+  }
+  .block-second {
+    opacity: 0;
+  }
+
+  .application-network {
+    .parallaxed-1 img {
+      opacity: 0;
+      transform: translateY(-25%) translateX(-20%) scale(0.8);
+    }
+
+    .parallaxed-2 {
+      img {
+        opacity: 0;
+        transform: translateY(25%) translateX(20%) scale(0.8);
+      }
+    }
+  }
+}

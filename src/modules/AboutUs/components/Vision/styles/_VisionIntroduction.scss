@@ -1,0 +1,78 @@
+.page-border {
+  position: relative;
+  width: 32px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 70px;
+    bottom: 32px;
+    width: 1px;
+    background-color: $primary100;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 32px;
+    width: 16px;
+    height: 16px;
+    background: $primary100;
+    box-shadow: 0px 0px 42px $primary100;
+  }
+}
+
+.vision-introduction {
+  .section-head-desc {
+    max-width: 531px;
+  }
+
+  .description {
+    margin-right: 32px;
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .section-head-container {
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .vision-intro-parallaxed {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateX(-100%) translateY(-50%);
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+
+    .line-indicator {
+      width: 16px;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 0;
+        width: 1px;
+        background-color: $primary100;
+        transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+    }
+
+    .chevron {
+      width: 85px;
+      margin: 0 auto;
+      opacity: 0;
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    @import "./Block";
+
+    &.in {
+      .line-indicator:after {
+        height: calc(100% - 80px);
+        transition-delay: 0.4s;
+      }
+    }
+  }
+}

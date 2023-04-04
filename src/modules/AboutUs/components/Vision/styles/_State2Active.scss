@@ -1,0 +1,12 @@
+.vision-intro-parallaxed-container.state-2.static {
+  @import "./StateAll";
+
+  .block-third,
+  .block-first {
+    opacity: 0;
+  }
+
+  .block-second:before {
+    display: block !important;
+  }
+}

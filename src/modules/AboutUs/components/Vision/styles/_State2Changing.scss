@@ -1,0 +1,18 @@
+.vision-intro-parallaxed-container.state-2.changing {
+  @import "./StateAll";
+
+  .block-third,
+  .block-first {
+    opacity: 0;
+  }
+  .block-second:before {
+    display: block !important;
+  }
+
+  .application-network {
+    .rooniverse {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+  }
+}

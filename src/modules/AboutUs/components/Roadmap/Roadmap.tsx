@@ -1,7 +1,11 @@
 import { useRef } from "react";
 import SimpleBar from "simplebar-react";
 import { Images } from "../../../../assets/imgs/Images";
-import { ButtonSecondary, ObserverContainer } from "../../../../components";
+import {
+  ButtonSecondary,
+  Links,
+  ObserverContainer,
+} from "../../../../components";
 import { TextScramble } from "../../../../viewmodels/TextScramble";
 
 export const Roadmap = () => {
@@ -123,6 +127,8 @@ export const Roadmap = () => {
           </ObserverContainer>
         </div>
       </SimpleBar>
+
+      <Links />
     </div>
   );
 };

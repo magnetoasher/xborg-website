@@ -4,6 +4,7 @@ import {
   ParallaxLayer,
   ObserverContainer,
   ButtonPrimary,
+  Links,
 } from "../../../../components";
 import { PickGame } from "../PickGame/PickGame";
 
@@ -79,6 +80,7 @@ export const DontMiss = () => {
         />
       </ObserverContainer>
       <PickGame />
+      <Links />
     </div>
   );
 };

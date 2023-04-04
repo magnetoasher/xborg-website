@@ -127,6 +127,10 @@ $screen_change_transition: 0.9s cubic-bezier(0.19, 1, 0.22, 1);
     }
   }
 
+  .footer-links {
+    bottom: 0;
+  }
+
   @media (max-width: $md-max) {
     .btn-container {
       .btn-primary {

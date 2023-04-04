@@ -1,0 +1,344 @@
+.product-spotlight {
+  h2 {
+    color: $light100;
+    margin-bottom: 65px;
+
+    span {
+      color: $primary100;
+    }
+  }
+
+  .products {
+    max-width: 906px;
+    width: 100%;
+    height: 371px;
+    position: relative;
+  }
+
+  .details {
+    max-width: 436px;
+    width: 100%;
+
+    .before-title {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 28px;
+      letter-spacing: 0.05em;
+      color: $white;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $primary100;
+        z-index: -1;
+        transition: 0.2s ease-in;
+      }
+
+      span {
+        padding: 4px 8px;
+        white-space: nowrap;
+        transition: 0.2s ease-in;
+      }
+    }
+
+    .details-title {
+      margin: 16px 0;
+      transition: 0.2s ease-in;
+
+      span {
+        color: $primary100;
+      }
+    }
+
+    .details-desc {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0.05em;
+      margin-bottom: 32px;
+      transition: 0.2s ease-in;
+
+      b {
+        transition: 0.2s ease-in;
+
+        &.active {
+          color: $primary100;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .actions {
+      transition: 0.2s ease-in;
+    }
+  }
+
+  .state-indicator {
+    position: absolute;
+    left: -32px;
+    top: 0;
+    transition: 0.2s ease-in;
+
+    &.state-0 {
+      margin-top: 70px;
+    }
+
+    &.state-1 {
+      margin-top: 41px;
+    }
+
+    &.state-2 {
+      margin-top: 66px;
+    }
+
+    span {
+      height: 4px;
+      width: 4px;
+      background-color: #212121;
+      margin-bottom: 60px;
+      position: relative;
+      transition: 0.2s ease-in;
+
+      &.active {
+        background-color: $primary100;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        background-color: #212121;
+        height: 28px;
+        width: 1px;
+        top: 20px;
+        left: 1.5px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // Changing state
+  .products.changing {
+    .before-title {
+      &:before {
+        width: 0;
+        transition-delay: 0.2s;
+      }
+
+      span {
+        opacity: 0;
+      }
+    }
+
+    .details-title {
+      opacity: 0;
+      transition-delay: 0.2s;
+    }
+
+    .details-desc {
+      opacity: 0;
+      transition-delay: 0.4s;
+    }
+
+    .actions {
+      opacity: 0;
+      transition-delay: 0.6s;
+    }
+
+    .parallaxed-container-1 {
+      .parallaxed-1 img {
+        opacity: 0;
+        transform: translateY(-25%) translateX(-20%) scale(0.8);
+      }
+
+      .parallaxed-2 {
+        transform: translateY(-36%) translateX(82%);
+
+        img {
+          opacity: 0;
+          transform: translateY(25%) translateX(20%) scale(0.8);
+        }
+      }
+    }
+
+    .parallaxed-container-2 {
+      .parallaxed-1 img {
+        opacity: 0;
+        transform: scale(0.5) rotate(30deg);
+      }
+    }
+
+    .launchpad-swiper {
+      .swiper-name,
+      .swiper-description,
+      .swiper-prev,
+      .swiper-next,
+      .swiper-slide video {
+        opacity: 0;
+      }
+
+      .swiper-prev {
+        margin-left: -104px;
+      }
+
+      .swiper-next {
+        margin-left: 104px;
+      }
+    }
+  }
+
+  // Parallaxed 1
+  .parallaxed-container-1 {
+    transform: translateX(-26%);
+
+    .parallaxed-1 img {
+      width: 287px;
+      opacity: 0;
+      transform: translateY(-25%) translateX(-20%) scale(0.8);
+      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .parallaxed-2 {
+      transform: translateY(-36%) translateX(82%);
+
+      img {
+        opacity: 0;
+        transform: translateY(25%) translateX(20%) scale(0.8);
+        max-width: 168px;
+        transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+    }
+
+    &.in {
+      .parallaxed-1 img,
+      .parallaxed-2 img {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  // Parallaxed 2
+  .parallaxed-container-2 {
+    .parallaxed-1 img {
+      width: 438px;
+      opacity: 0;
+      transform: scale(0.5) rotate(30deg);
+      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    &.in {
+      .parallaxed-1 img,
+      .parallaxed-2 img {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+    }
+  }
+
+  // Swiper
+  .launchpad-swiper {
+    width: 382px;
+    position: relative;
+
+    .swiper {
+      width: 100%;
+    }
+
+    .swiper-slide {
+      video {
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+      }
+
+      &:nth-child(1) video {
+        transition-delay: 0.1s;
+      }
+      &:nth-child(2) video {
+        transition-delay: 0.2s;
+      }
+      &:nth-child(3) video {
+        transition-delay: 0.3s;
+      }
+      &:nth-child(4) video {
+        transition-delay: 0.4s;
+      }
+    }
+
+    .swiper-name {
+      margin-top: 48px;
+      margin-bottom: 8px;
+      font-family: $secondary-font-family;
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 25px;
+      letter-spacing: 0.1em;
+      color: $primary100;
+      opacity: 0;
+      transition: 0.3s ease-in;
+    }
+
+    .swiper-description {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      letter-spacing: 0.1em;
+      opacity: 0;
+      transition: 0.3s ease-in;
+    }
+
+    .swiper-pagination {
+      bottom: auto;
+      top: 231px;
+    }
+
+    .swiper-prev,
+    .swiper-next {
+      top: 67px;
+      opacity: 0;
+      transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .swiper-prev {
+      margin-left: -104px;
+    }
+
+    .swiper-next {
+      margin-left: 104px;
+    }
+
+    &.in {
+      .swiper-prev {
+        opacity: 1;
+        margin-left: -214px;
+      }
+
+      .swiper-next {
+        opacity: 1;
+        margin-left: 214px;
+      }
+
+      .swiper-slide video {
+        opacity: 1;
+      }
+
+      .swiper-slide-active {
+        .swiper-description,
+        .swiper-name {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

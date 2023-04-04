@@ -1,0 +1,19 @@
+.invest-navigation {
+  position: fixed;
+  top: 0;
+  left: 148px;
+  right: 148px;
+  padding: 32px 0;
+  z-index: 3;
+
+  .tabs {
+    padding-bottom: 0;
+  }
+
+  .go-back {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+  }
+}

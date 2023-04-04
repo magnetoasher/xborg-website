@@ -8,6 +8,7 @@ import {
   XborgApp,
   TermsAndConditions,
   Prometheus,
+  Invest,
 } from "../../modules";
 
 export enum APP_ROUTER_TRANSITION {
@@ -15,7 +16,11 @@ export enum APP_ROUTER_TRANSITION {
   OUT = "page-out",
 }
 
-export const AppRouter = () => {
+export type ApPRouterProps = {
+  setNavbarVisibility: (val: boolean) => void;
+};
+
+export const AppRouter = ({ setNavbarVisibility }: ApPRouterProps) => {
   const location = useLocation();
 
   const [displayLocation, setDisplayLocation] = useState<Location>(location);
@@ -44,6 +49,10 @@ export const AppRouter = () => {
         <Route path="/FAQ" element={<FAQ />} />
         <Route path="/seed" element={<Seed />} />
         <Route path="/prometheus" element={<Prometheus />} />
+        <Route
+          path="/invest"
+          element={<Invest setNavbarVisibility={setNavbarVisibility} />}
+        />
       </Routes>
     </div>
   );

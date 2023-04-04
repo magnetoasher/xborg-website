@@ -1,0 +1,81 @@
+.decentralized-societies {
+  width: 100%;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+
+  .list {
+    max-width: 490px;
+    width: 100%;
+  }
+
+  .col {
+    margin: 32px 0;
+    position: relative;
+  }
+
+  .date {
+    color: $white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 45px;
+    letter-spacing: 0.05em;
+    background-color: $primary100;
+    padding: 0 8px;
+    margin-right: 32px;
+    white-space: nowrap;
+  }
+
+  .col-title {
+    font-family: $secondary-font-family;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+
+    span {
+      color: $primary100;
+    }
+  }
+
+  .desc {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.05em;
+  }
+
+  .parallaxed-1 {
+    img {
+      max-width: 422px;
+      opacity: 0;
+      transform: scale(0.7) rotate(30deg);
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  .parallaxed.in {
+    .parallaxed-1 img {
+      opacity: 1;
+      transform: scale(1) rotate(0);
+    }
+  }
+
+  .knowmore {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin-bottom: 32px;
+    max-width: 272px;
+    margin-top: -32px;
+  }
+
+  @media (max-width: $md-max) {
+    flex-direction: column;
+
+    .list {
+      max-width: 100%;
+    }
+  }
+}

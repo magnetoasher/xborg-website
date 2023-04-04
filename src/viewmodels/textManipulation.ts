@@ -1,3 +1,7 @@
+import { MutableRefObject } from "react";
+import { sleep } from "../helpers/time";
+import { TextScramble } from "./TextScramble";
+
 export class TextManipulation {
   constructor() {}
 
@@ -129,24 +133,27 @@ export class TextManipulation {
     }
   }
 
-  fromBottom(container: HTMLElement, speed?: number) {
+  async fromBottom(container: HTMLElement, speed?: number): Promise<boolean> {
     const letters = container.getElementsByClassName("letter");
 
+    let fullDelay: number = 0;
     for (let i = 0; i < letters.length; i++) {
       const current = letters[i] as HTMLElement;
       const delay = i * (speed ?? 50);
+      if (i == letters.length - 1) fullDelay = delay;
 
       current.style.transitionDelay = delay + "ms";
       current.style.opacity = "1";
     }
+
+    await sleep(fullDelay + 200);
+
+    return true;
   }
 
-  curtains(container: HTMLElement, speed?: number) {
-    const letters = container.getElementsByClassName("line");
-
-    for (let i = 0; i < letters.length; i++) {
-      const current = letters[i] as HTMLElement;
-      current.classList.add("in");
-    }
-  }
+  scrambleText = (ref: MutableRefObject<null>) => {
+    const current = ref.current as unknown as HTMLDivElement;
+    const scramble = new TextScramble(current);
+    if (ref.current) scramble.setText(current.innerHTML);
+  };
 }

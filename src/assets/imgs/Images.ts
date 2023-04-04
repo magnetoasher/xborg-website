@@ -206,4 +206,10 @@ export const Images = {
     hair1: require("./xborgapp/hair1.png"),
     artifact: require("./xborgapp/artifact.png"),
   },
+
+  invest: {
+    teambds: require("./invest/teambds.png"),
+    news: require("./invest/news.png"),
+    early: require("./invest/early.png"),
+  },
 };

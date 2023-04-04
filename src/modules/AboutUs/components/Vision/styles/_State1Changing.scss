@@ -1,0 +1,16 @@
+.vision-intro-parallaxed-container.state-1.changing {
+  @import "./StateAll";
+
+  .block-third,
+  .block-first {
+    opacity: 0;
+  }
+
+  .block-second:before {
+    display: block !important;
+  }
+
+  .credential-network {
+    opacity: 0;
+  }
+}

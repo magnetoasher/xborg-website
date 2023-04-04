@@ -27,6 +27,16 @@ export const ScrollWrapper = ({
       const wrapper = bar?.getScrollElement() as HTMLElement;
 
       setScrollWrap(wrapper);
+
+      wrapper.addEventListener("scroll", () => {
+        // Create the event
+        const event = new CustomEvent("simplebar-scroll", {
+          detail: wrapper,
+        });
+
+        // Dispatch/Trigger/Fire the event
+        window.dispatchEvent(event);
+      });
     }
   }, []);
 
