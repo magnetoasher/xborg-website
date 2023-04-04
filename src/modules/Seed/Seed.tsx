@@ -39,7 +39,7 @@ export const Seed = () => {
     name: "",
     email: "",
     isPrometheusOwner: true,
-    capital: 500,
+    capital: 100,
     how: "",
   });
 
