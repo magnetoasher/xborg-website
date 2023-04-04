@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
+import { NavigateFunction } from "react-router-dom";
 import { toast } from "react-toastify";
 import { handleErrors } from "../helpers/inputs";
 import { SeedFormType } from "../modules";
@@ -47,7 +48,8 @@ export class SeedViewModel {
   sendSeed(
     form: SeedFormType,
     setForm: Dispatch<SetStateAction<SeedFormType>>,
-    setErrors: Dispatch<any>
+    setErrors: Dispatch<any>,
+    navigate: NavigateFunction
   ) {
     sendSeedSchema
       .validate(form, yupOptions)
@@ -97,6 +99,8 @@ export class SeedViewModel {
             progress: undefined,
             theme: "dark",
           });
+
+          navigate("/submission-recorded");
         }
       })
       .catch((err) => {

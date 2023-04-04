@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Images } from "../../assets/imgs/Images";
 import {
   ButtonPrimary,
@@ -31,6 +31,7 @@ export type SeedFormType = {
 
 export const Seed = () => {
   const dispatch = useDispatch<AppDispatch>();
+  const navigate = useNavigate();
 
   const seedData = useSelector((state: GlobalState) => state.seed.data) || [];
   const seedSummary = useSelector((state: GlobalState) => state.seed.summary);
@@ -212,7 +213,7 @@ export const Seed = () => {
                   label="Send"
                   onClick={(e) => {
                     e.preventDefault();
-                    vm.sendSeed(form, setForm, setErrors);
+                    vm.sendSeed(form, setForm, setErrors, navigate);
                   }}
                 />
               </div>

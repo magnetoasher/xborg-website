@@ -1,0 +1,129 @@
+.submission-recorded {
+  h1 {
+    font-family: $secondary-font-family;
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 71px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: $primary100;
+    margin-bottom: 24px;
+    margin-top: 15%;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: $light100;
+    width: 100%;
+    max-width: 586px;
+    margin-bottom: 66px;
+  }
+
+  .details {
+    margin-left: 47px;
+    padding-left: 38px;
+    position: relative;
+  }
+
+  .description {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 0.05em;
+    max-width: 327px;
+    margin: 16px 0 32px;
+  }
+
+  .wrapper {
+    margin-bottom: 131px;
+
+    h4 {
+      span {
+        color: $primary100;
+      }
+    }
+  }
+
+  .parallaxed-1 {
+    img {
+      max-width: 300px;
+      opacity: 0;
+      transform: scale(0.7) rotate(30deg);
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      border-bottom: 0px solid $primary100;
+    }
+  }
+
+  .parallaxed.in {
+    .parallaxed-1 img {
+      opacity: 1;
+      transform: scale(1) rotate(0);
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      border-bottom: 8px solid $primary100;
+    }
+  }
+
+  .coming-soon {
+    padding-bottom: 64px;
+
+    p {
+      margin-top: 28px;
+      color: #777777;
+      max-width: 403px;
+      width: 100%;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 15px;
+      letter-spacing: 0.05em;
+      text-align: center;
+    }
+  }
+
+  .state-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.2s ease-in;
+
+    span {
+      height: 4px;
+      width: 4px;
+      background-color: #212121;
+      margin-bottom: 60px;
+      position: relative;
+      transition: 0.2s ease-in;
+
+      &.active {
+        background-color: $primary100;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        background-color: #212121;
+        height: 28px;
+        width: 1px;
+        top: 20px;
+        left: 1.5px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $md-max) {
+    .wrapper {
+      flex-direction: column-reverse;
+    }
+  }
+}
