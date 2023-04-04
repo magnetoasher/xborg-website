@@ -850,6 +850,23 @@ h4 {
   z-index: 1;
 }
 
+.Toastify__toast {
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  font-size: 12px;
+  border-radius: 0;
+  color: #d1d3d4;
+  font-family: Lexend, sans-serif;
+}
+.Toastify__toast span {
+  color: #fff;
+}
+.Toastify__toast .Toastify__progress-bar {
+  background-color: #eb3a4a;
+}
+
 .xborg-app .page-section.page-section-0 {
   max-width: 100%;
 }
@@ -3688,25 +3705,8 @@ h4 {
 .seed .container.container-l {
   padding: 0;
 }
-.seed .register-for-seed {
-  text-align: center;
-  padding: 7px;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 15px;
-  letter-spacing: 0.1em;
-  position: relative;
-}
-.seed .register-for-seed:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
-  height: 100%;
-  background-color: #eb3a4a;
+.seed .logo-icon img {
+  height: 32px;
 }
 .seed .logo-icon {
   margin-top: 46px;
@@ -5467,4 +5467,25 @@ footer.footer a:hover svg path {
   .footer-links a {
     width: 50%;
   }
+}
+
+.page-alert {
+  text-align: center;
+  padding: 7px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  position: relative;
+}
+.page-alert:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  background-color: #eb3a4a;
 }/*# sourceMappingURL=main.css.map */

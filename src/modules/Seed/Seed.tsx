@@ -9,6 +9,7 @@ import {
   SliderInput,
   TextInput,
   LineGraph,
+  SectionDescription,
 } from "../../components";
 import { Pagination } from "../../components/Pagination";
 import { formatNumberToK, updateInput } from "../../helpers/inputs";
@@ -72,22 +73,21 @@ export const Seed = () => {
       transparentNavbar={false}
       components={[
         <div className="seed">
-          <div className="register-for-seed">
-            Register for the upcoming seed round.
-          </div>
           <div className="container container-l">
             <div className="logo-icon">
               <img src={Images.logofull} alt="" />
             </div>
             <h1 className="title">Seed Round</h1>
-            <h4>Investment Opportunity</h4>
-            <p>
-              XBorg is a modular and composable gaming credential and
-              application network. XBorg is a spin-off from SwissBorg, a crypto
-              wealth app with 700'000 verified users. Only investors that submit
-              this form will have access to pertinent due diligence documents
-              and investor decks.
-            </p>
+            <h4>Invest in the future of XBorg</h4>
+            <SectionDescription className={""}>
+              XBorg is building the leading gaming protocol for players, fans
+              and esports teams. With over 10,000 users onboarded, the largest
+              web3 esports league ever created and a partnership with one of
+              Europe's biggest esports teams, XBorg is still accelerating its
+              growth and is raising capital to do so. Invest alongside the best
+              VCs in the space, at the same valuation, and come build the future
+              with us.
+            </SectionDescription>
             <div className="row numbers">
               <div className="col">
                 <div className="value">
@@ -187,13 +187,13 @@ export const Seed = () => {
                   }
                 />
                 <div className="row between labels">
-                  <div className="slide-label">{"<$500"}</div>
+                  <div className="slide-label">{"<$100"}</div>
+                  <div className="slide-label">$250</div>
+                  <div className="slide-label">$500</div>
                   <div className="slide-label">$1000</div>
-                  <div className="slide-label">$2000</div>
+                  <div className="slide-label">$2500</div>
                   <div className="slide-label">$5000</div>
-                  <div className="slide-label">$10000</div>
-                  <div className="slide-label">$20000</div>
-                  <div className="slide-label">$+50000</div>
+                  <div className="slide-label">$+10000</div>
                 </div>
               </div>
 
