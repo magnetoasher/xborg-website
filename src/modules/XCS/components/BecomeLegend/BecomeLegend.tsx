@@ -4,6 +4,7 @@ import {
   ParallaxLayer,
   ObserverContainer,
   ButtonPrimary,
+  Alert,
 } from "../../../../components";
 import { PickGame } from "../PickGame/PickGame";
 
@@ -16,6 +17,7 @@ export const BecomeLegend = () => {
         active ? "active" : "inactive"
       }`}
     >
+      <Alert text="Register for the upcoming seed round." to="seed" />
       <ObserverContainer className="parallaxed expand row middle center">
         <ParallaxLayer
           image={Images.XCS.banner}

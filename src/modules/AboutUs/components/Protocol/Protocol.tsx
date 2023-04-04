@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import {
+  Alert,
   CountUpAnimation,
   ObserverContainer,
   ParallaxLayer,
@@ -26,6 +27,7 @@ export const Protocol = () => {
 
   return (
     <div className={`protocol expand row middle between`}>
+      <Alert text="Register for the upcoming seed round." to="seed" />
       <div className="description">
         <div className={"section-head-container"}>
           <div className="row section-head">

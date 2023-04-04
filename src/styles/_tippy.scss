@@ -72,3 +72,21 @@
   padding: 5px 9px;
   z-index: 1;
 }
+.Toastify__toast {
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  font-size: 12px;
+  border-radius: 0;
+  color: $light100;
+  font-family: $main-font-family;
+
+  span {
+    color: $white;
+  }
+
+  .Toastify__progress-bar {
+    background-color: $primary100;
+  }
+}

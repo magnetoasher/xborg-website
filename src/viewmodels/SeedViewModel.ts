@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
+import { NavigateFunction } from "react-router-dom";
 import { toast } from "react-toastify";
 import { handleErrors } from "../helpers/inputs";
 import { SeedFormType } from "../modules";
@@ -13,41 +14,42 @@ export class SeedViewModel {
   followersMarks = [
     {
       value: 25,
-      scaledValue: 500,
+      scaledValue: 100,
     },
     {
       value: 50,
-      scaledValue: 1000,
+      scaledValue: 250,
     },
     {
       value: 75,
-      scaledValue: 2000,
+      scaledValue: 500,
     },
     {
       value: 100,
-      scaledValue: 5000,
+      scaledValue: 1000,
     },
     {
       value: 125,
-      scaledValue: 10000,
+      scaledValue: 2500,
     },
     {
       value: 150,
-      scaledValue: 20000,
+      scaledValue: 5000,
     },
     {
       value: 175,
-      scaledValue: 50000,
+      scaledValue: 10000,
     },
     {
       value: 200,
-      scaledValue: 100000,
+      scaledValue: 20000,
     },
   ];
   sendSeed(
     form: SeedFormType,
     setForm: Dispatch<SetStateAction<SeedFormType>>,
-    setErrors: Dispatch<any>
+    setErrors: Dispatch<any>,
+    navigate: NavigateFunction
   ) {
     sendSeedSchema
       .validate(form, yupOptions)
@@ -97,6 +99,8 @@ export class SeedViewModel {
             progress: undefined,
             theme: "dark",
           });
+
+          navigate("/submission-recorded");
         }
       })
       .catch((err) => {
@@ -136,7 +140,7 @@ export class SeedViewModel {
       (nextMark.scaledValue - previousMark.scaledValue) / multiplier;
     const result = Math.round(remainder * increment + previousMark.scaledValue);
 
-    if (result > 50000) return 50000;
+    if (result > 10000) return 10000;
     return result;
   };
 }

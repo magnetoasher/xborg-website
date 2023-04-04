@@ -9,6 +9,7 @@ import {
   TermsAndConditions,
   Prometheus,
   Invest,
+  SubmissionRecorded,
 } from "../../modules";
 
 export enum APP_ROUTER_TRANSITION {
@@ -48,6 +49,7 @@ export const AppRouter = ({ setNavbarVisibility }: ApPRouterProps) => {
         <Route path="/terms-and-agreements" element={<TermsAndConditions />} />
         <Route path="/FAQ" element={<FAQ />} />
         <Route path="/seed" element={<Seed />} />
+        <Route path="/submission-recorded" element={<SubmissionRecorded />} />
         <Route path="/prometheus" element={<Prometheus />} />
         <Route
           path="/invest"

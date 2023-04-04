@@ -7,6 +7,7 @@ import {
   ButtonSecondary,
   SectionDescription,
   CountUpAnimation,
+  Alert,
 } from "../../../../components";
 
 let counter = 0;
@@ -49,6 +50,7 @@ export const Play = () => {
 
   return (
     <div className={`play-intro expand row middle between`}>
+      <Alert text="Register for the upcoming seed round." to="seed" />
       <div className="description">
         <div className="logo-icon">
           <img src={Images.logofull} alt="" />
