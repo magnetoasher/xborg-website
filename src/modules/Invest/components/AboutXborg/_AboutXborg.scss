@@ -1,6 +1,6 @@
 .about-xborg {
   h1 {
-    margin-top: 25%;
+    margin-top: 20%;
   }
 
   .subtitle {
@@ -8,7 +8,7 @@
     max-width: 546px;
     width: 100%;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 28px;
     letter-spacing: 0.05em;
   }
@@ -30,10 +30,10 @@
 
   .page-desc {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 32px;
     letter-spacing: 0.05em;
-    max-width: 672px;
+    max-width: 667px;
     width: 100%;
 
     .paragraph {
@@ -43,10 +43,25 @@
 
   .coming {
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 18px;
     letter-spacing: 0.1em;
     margin: 24px 0 86px;
+  }
+
+  .video-container {
+    iframe {
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      transform: translateY(50px);
+      opacity: 0;
+    }
+
+    &.in {
+      iframe {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
   }
 
   .statistics {
@@ -54,6 +69,12 @@
 
     .col {
       margin: 0 16px;
+    }
+
+    .stats-value {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 40px;
     }
 
     .stats-label {

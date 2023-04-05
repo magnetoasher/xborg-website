@@ -1,0 +1,153 @@
+.supporters {
+  h2 {
+    color: $light100;
+
+    span {
+      color: $primary100;
+    }
+  }
+
+  .partners-list {
+    h2 {
+      margin-bottom: 16px;
+      position: relative;
+      padding-left: 36px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4px;
+        height: 100px;
+        background: $primary100;
+        box-shadow: 0px 0px 42px $primary100;
+      }
+    }
+  }
+
+  .list {
+    margin-top: 54px;
+    max-width: 570px;
+
+    .list-item {
+      width: 33.333%;
+      padding-right: 10px;
+      margin: 10px 0;
+      opacity: 0;
+      transition: 0.3s ease-in;
+
+      img {
+        max-height: 59px;
+        max-width: 100%;
+      }
+    }
+
+    &.in {
+      .list-item {
+        opacity: 1;
+      }
+      @for $i from 1 through 9 {
+        .list-item:nth-child(#{$i}) {
+          transition-delay: 0.1s * $i;
+        }
+      }
+    }
+  }
+
+  .swissborg {
+    max-width: 302px;
+    width: 100%;
+    margin-top: 47px;
+    margin-left: 35px;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 134px;
+      height: 134px;
+      margin-left: 67px;
+      background: $swissborg100;
+      filter: blur(50px);
+      opacity: 0;
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    img {
+      height: 125px;
+      margin-bottom: 32px;
+    }
+
+    .swissborg-title {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 32px;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+      white-space: nowrap;
+
+      strong {
+        color: $swissborg100;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 28px;
+      letter-spacing: 0.01em;
+      max-width: 350px;
+    }
+
+    &.in {
+      &:after {
+        filter: blur(150px);
+        opacity: 1;
+        transition-delay: 0.3s;
+      }
+    }
+  }
+
+  .featured-in {
+    margin: 128px 0;
+
+    .featured-list {
+      max-width: 637px;
+      width: 100%;
+      margin-top: 64px;
+
+      &.in {
+        .col {
+          opacity: 1;
+        }
+        @for $i from 1 through 3 {
+          .col:nth-child(#{$i}) {
+            transition-delay: 0.1s * $i;
+          }
+        }
+      }
+    }
+
+    .col {
+      opacity: 0;
+      transition: 0.3s ease-in;
+
+      img {
+        width: 100px;
+      }
+
+      .col-title {
+        margin-top: 16px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: 0.01em;
+        text-align: center;
+      }
+    }
+  }
+}

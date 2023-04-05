@@ -11,6 +11,7 @@ import {
   NextBigThing,
   OpenToCommunity,
   WhyNow,
+  Supporters,
 } from "./components";
 
 export type InvestPageProps = {
@@ -33,6 +34,7 @@ export const Invest = ({ setNavbarVisibility }: InvestPageProps) => {
       <GameChangingProtocol />,
       <ProductSpotlight />,
       <Competetive />,
+      <Supporters />,
     ];
   if (active == 1) list = [<NextBigThing />, <OpenToCommunity />, <WhyNow />];
   if (active == 2) list = [<NewsAndEvents />];

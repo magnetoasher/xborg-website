@@ -20,6 +20,10 @@ export const Images = {
     partner08: require("./partners/zilliqa.png"),
     partner09: require("./partners/polkastarter.png"),
     swissborg: require("./partners/swissborgicon.png"),
+
+    cryptoslate: require("./partners/cryptoslate.png"),
+    esb: require("./partners/esb.png"),
+    esi: require("./partners/esi.png"),
   },
   portfolio: {
     harvest: require("./portfolio/harvest.png"),

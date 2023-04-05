@@ -55,7 +55,7 @@ export const Navbar = ({ active, setActive }: NavbarProps) => {
         </div>
       </div>
 
-      <ButtonPrimary label="Early Alpha" />
+      <ButtonPrimary label="Register interest" to="seed" />
     </div>
   );
 };

@@ -8,3 +8,4 @@ export * from "./NewsAndEvents";
 export * from "./NextBigThing";
 export * from "./OpenToCommunity";
 export * from "./WhyNow";
+export * from "./Supporters";

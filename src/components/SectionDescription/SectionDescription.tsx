@@ -52,7 +52,7 @@ export const SectionDescription = ({
           textVM.hideText(desc);
         }
       }}
-      className={""}
+      className={"section-description"}
     >
       <p className={`${className} reveal-from-bottom`} ref={ref}>
         {children}

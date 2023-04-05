@@ -2,6 +2,7 @@ import { useRef } from "react";
 import {
   ButtonPrimary,
   CountUpAnimation,
+  ObserverContainer,
   SectionDescription,
 } from "../../../../components";
 import { TextManipulation } from "../../../../viewmodels/textManipulation";
@@ -25,14 +26,16 @@ export const AboutXborg = () => {
         Invest <span ref={introRef}>in the future of XBorg</span>
       </h1>
 
-      <div className="subtitle text-center">
+      <SectionDescription className="subtitle text-center">
         The only opportunity to invest early in XBorg, alongside the best
         investors of the space.
-      </div>
+      </SectionDescription>
 
       <ButtonPrimary label="Register interest" />
 
-      <div className="coming">Coming end of April</div>
+      <SectionDescription className="coming">
+        Coming end of April
+      </SectionDescription>
 
       <h2>
         Pioneering <span ref={titleRef}>gaming</span>
@@ -54,14 +57,16 @@ export const AboutXborg = () => {
         </SectionDescription>
       </div>
 
-      <iframe
-        width="520"
-        height="292"
-        src="https://www.youtube.com/embed/UAKw_2SWheg"
-        title="Introducing the new XBorg"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      ></iframe>
+      <ObserverContainer className="video-container">
+        <iframe
+          width="520"
+          height="292"
+          src="https://www.youtube.com/embed/UAKw_2SWheg"
+          title="Introducing the new XBorg"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
+      </ObserverContainer>
 
       <div className="row statistics text-center">
         <div className="col">

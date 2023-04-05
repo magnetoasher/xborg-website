@@ -4513,14 +4513,14 @@ h4 {
 }
 
 .invest .about-xborg h1 {
-  margin-top: 25%;
+  margin-top: 20%;
 }
 .invest .about-xborg .subtitle {
   margin: 16px 0 32px;
   max-width: 546px;
   width: 100%;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 28px;
   letter-spacing: 0.05em;
 }
@@ -4536,10 +4536,10 @@ h4 {
 }
 .invest .about-xborg .page-desc {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 32px;
   letter-spacing: 0.05em;
-  max-width: 672px;
+  max-width: 667px;
   width: 100%;
 }
 .invest .about-xborg .page-desc .paragraph {
@@ -4547,16 +4547,30 @@ h4 {
 }
 .invest .about-xborg .coming {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 18px;
   letter-spacing: 0.1em;
   margin: 24px 0 86px;
+}
+.invest .about-xborg .video-container iframe {
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  transform: translateY(50px);
+  opacity: 0;
+}
+.invest .about-xborg .video-container.in iframe {
+  transform: translateY(0);
+  opacity: 1;
 }
 .invest .about-xborg .statistics {
   margin-top: 32px;
 }
 .invest .about-xborg .statistics .col {
   margin: 0 16px;
+}
+.invest .about-xborg .statistics .stats-value {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
 }
 .invest .about-xborg .statistics .stats-label {
   font-size: 12px;
@@ -4613,7 +4627,7 @@ h4 {
 }
 .invest .game-changing-protocol .vision-intro-parallaxed .block span {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 20px;
 }
 .invest .game-changing-protocol .vision-intro-parallaxed .block.with-cube:before {
@@ -4640,7 +4654,7 @@ h4 {
   margin-left: 32px;
   top: 0;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 28px;
   letter-spacing: 0.05em;
   text-align: left;
@@ -4648,6 +4662,7 @@ h4 {
   opacity: 0;
 }
 .invest .game-changing-protocol .vision-intro-parallaxed .block-desc b {
+  font-weight: 400;
   transition: 0.2s ease-in;
   transition-delay: 0.3s;
 }
@@ -4667,7 +4682,7 @@ h4 {
 }
 .invest .game-changing-protocol .vision-intro-parallaxed.in .block.active span {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 25px;
 }
 .invest .game-changing-protocol .vision-intro-parallaxed.in .block.active .block-desc {
@@ -5038,6 +5053,155 @@ h4 {
 }
 .invest .competetive-community .parallaxed.in .parallaxed-2 img {
   transition-delay: 0.3s;
+}
+.invest .supporters h2 {
+  color: #d1d3d4;
+}
+.invest .supporters h2 span {
+  color: #eb3a4a;
+}
+.invest .supporters .partners-list h2 {
+  margin-bottom: 16px;
+  position: relative;
+  padding-left: 36px;
+}
+.invest .supporters .partners-list h2:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100px;
+  background: #eb3a4a;
+  box-shadow: 0px 0px 42px #eb3a4a;
+}
+.invest .supporters .list {
+  margin-top: 54px;
+  max-width: 570px;
+}
+.invest .supporters .list .list-item {
+  width: 33.333%;
+  padding-right: 10px;
+  margin: 10px 0;
+  opacity: 0;
+  transition: 0.3s ease-in;
+}
+.invest .supporters .list .list-item img {
+  max-height: 59px;
+  max-width: 100%;
+}
+.invest .supporters .list.in .list-item {
+  opacity: 1;
+}
+.invest .supporters .list.in .list-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.invest .supporters .list.in .list-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.invest .supporters .list.in .list-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.invest .supporters .list.in .list-item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.invest .supporters .list.in .list-item:nth-child(5) {
+  transition-delay: 0.5s;
+}
+.invest .supporters .list.in .list-item:nth-child(6) {
+  transition-delay: 0.6s;
+}
+.invest .supporters .list.in .list-item:nth-child(7) {
+  transition-delay: 0.7s;
+}
+.invest .supporters .list.in .list-item:nth-child(8) {
+  transition-delay: 0.8s;
+}
+.invest .supporters .list.in .list-item:nth-child(9) {
+  transition-delay: 0.9s;
+}
+.invest .supporters .swissborg {
+  max-width: 302px;
+  width: 100%;
+  margin-top: 47px;
+  margin-left: 35px;
+  position: relative;
+}
+.invest .supporters .swissborg:after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 134px;
+  height: 134px;
+  margin-left: 67px;
+  background: #01c38c;
+  filter: blur(50px);
+  opacity: 0;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.invest .supporters .swissborg img {
+  height: 125px;
+  margin-bottom: 32px;
+}
+.invest .supporters .swissborg .swissborg-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+  white-space: nowrap;
+}
+.invest .supporters .swissborg .swissborg-title strong {
+  color: #01c38c;
+}
+.invest .supporters .swissborg p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.01em;
+  max-width: 350px;
+}
+.invest .supporters .swissborg.in:after {
+  filter: blur(150px);
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+.invest .supporters .featured-in {
+  margin: 128px 0;
+}
+.invest .supporters .featured-in .featured-list {
+  max-width: 637px;
+  width: 100%;
+  margin-top: 64px;
+}
+.invest .supporters .featured-in .featured-list.in .col {
+  opacity: 1;
+}
+.invest .supporters .featured-in .featured-list.in .col:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.invest .supporters .featured-in .featured-list.in .col:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.invest .supporters .featured-in .featured-list.in .col:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.invest .supporters .featured-in .col {
+  opacity: 0;
+  transition: 0.3s ease-in;
+}
+.invest .supporters .featured-in .col img {
+  width: 100px;
+}
+.invest .supporters .featured-in .col .col-title {
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.01em;
+  text-align: center;
 }
 .invest .next-big-thing .content {
   margin-top: 56px;
@@ -6730,4 +6894,11 @@ footer.footer a:hover svg path {
   .page-alert {
     top: 80px;
   }
+}
+
+.section-description p {
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.section-description.out p {
+  opacity: 0;
 }/*# sourceMappingURL=main.css.map */
