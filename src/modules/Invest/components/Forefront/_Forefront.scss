@@ -1,0 +1,76 @@
+.forefront {
+  margin-top: 93px;
+
+  .content {
+    max-width: 709px;
+    width: 100%;
+  }
+
+  h2 {
+    color: $light100;
+    margin-bottom: 94px;
+
+    span {
+      color: $primary100;
+    }
+  }
+
+  .cube {
+    background: $primary100;
+    box-shadow: 0px 0px 32px $primary100;
+    width: 18px;
+    height: 18px;
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .key-points {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 1px;
+      width: 100vw;
+      background-color: #212121;
+    }
+
+    .col {
+      padding: 0 32px;
+      opacity: 0;
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 32px;
+      color: $primary100;
+    }
+
+    &.state-0 {
+      .col:nth-child(1) {
+        opacity: 1;
+      }
+    }
+
+    &.state-1 {
+      .col:nth-child(1),
+      .col:nth-child(2) {
+        opacity: 1;
+      }
+    }
+
+    &.state-2 {
+      .col:nth-child(1),
+      .col:nth-child(2),
+      .col:nth-child(3) {
+        opacity: 1;
+      }
+    }
+  }
+}

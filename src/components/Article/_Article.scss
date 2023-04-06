@@ -1,0 +1,36 @@
+.articles-list {
+  margin: 0 -16px;
+}
+
+article.article {
+  width: 33.333%;
+  padding: 0 16px;
+
+  .article-image img {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0em;
+    color: $light100;
+    margin-top: 4px;
+  }
+
+  .tag {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 15px;
+    color: $white;
+    padding: 4px;
+    background-color: $primary100;
+  }
+
+  .date {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+  }
+}

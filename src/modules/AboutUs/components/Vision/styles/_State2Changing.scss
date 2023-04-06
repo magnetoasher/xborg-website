@@ -1,18 +1,43 @@
 .vision-intro-parallaxed-container.state-2.changing {
   @import "./StateAll";
 
-  .block-third,
-  .block-first {
+  .block-container.in .block {
     opacity: 0;
+    transform: translateX(-50px);
+
+    &:before {
+      transform: translateX(50px);
+      transition-delay: 0s;
+    }
   }
-  .block-second:before {
-    display: block !important;
+
+  .red-highlight {
+    &:after {
+      width: 0;
+    }
+
+    span {
+      opacity: 0;
+    }
   }
 
   .application-network {
+    .subtitle {
+      opacity: 0;
+    }
+
     .rooniverse {
       transform: translateX(50px);
       opacity: 0;
+      transition-delay: 0.3s;
+
+      .rooniverse-content {
+        opacity: 0;
+      }
+
+      .live {
+        opacity: 0;
+      }
     }
   }
 }

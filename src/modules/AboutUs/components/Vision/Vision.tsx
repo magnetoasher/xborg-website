@@ -1,13 +1,19 @@
 import { useRef, useState, useEffect } from "react";
-import { Images } from "../../../../assets/imgs/Images";
+
 import { SectionDescription, ObserverContainer } from "../../../../components";
+
 import { sleep } from "../../../../helpers/time";
+
 import { AppViewModel } from "../../../../viewmodels/AppViewModel";
 import { TextManipulation } from "../../../../viewmodels/textManipulation";
-import { ApplicationNetwork } from "./ApplicationNetwork";
+
 import { Block } from "./components/Block";
+
 import { CredentialNetwork } from "./CredentialNetwork";
+import { ApplicationNetwork } from "./ApplicationNetwork";
 import { DecentralizedSocieties } from "./DecentralizedSocieties";
+
+import { Images } from "../../../../assets/imgs/Images";
 
 let activeSpotlight: number = 0;
 
@@ -18,7 +24,8 @@ export const Vision = () => {
 
   const [active, setActive] = useState<number>(activeSpotlight);
   const [changing, setChanging] = useState<boolean>(false);
-
+  const [mobile, setMobile] = useState<boolean>(window.innerWidth <= 992);
+  console.log("IS MOBILE _- ", mobile);
   const height = window.innerHeight;
 
   const appVM = new AppViewModel();
@@ -58,7 +65,7 @@ export const Vision = () => {
     activeSpotlight = number;
     setChanging(true);
 
-    await sleep(700);
+    await sleep(1200);
 
     setActive(number);
     setChanging(false);
@@ -99,60 +106,69 @@ export const Vision = () => {
               </div>
             </div>
 
-            <ObserverContainer className="vision-intro-parallaxed row">
+            <ObserverContainer
+              className="vision-intro-parallaxed row"
+              visibility={mobile ? "in" : undefined}
+            >
               <div className="line-indicator" />
-              <div className="row column vision-intro w-full">
-                <Block
-                  className="block-first"
-                  descVisible={active == 1}
-                  visible={active == 0 || active == 1}
-                  active={
-                    (active == 0 && changing == true) ||
-                    (active == 1 && changing == false)
-                  }
-                  title="Credential Network"
-                  desc="Network of gaming credentials using player statistics and social proof to establish skills and reputation."
-                />
-                {active == 1 && <CredentialNetwork />}
-                {active == 0 && (
+              {active == 0 || mobile == true ? (
+                <div className="row column vision-intro">
+                  <Block
+                    className="block-first"
+                    active={false}
+                    title="Credential Network"
+                  />
                   <img
                     src={Images.chevronDown}
                     alt="chevron"
                     className="chevron"
                   />
-                )}
-                <Block
-                  className="block-second"
-                  descVisible={active == 2 || active == 3}
-                  visible={active == 0 || active == 2 || active == 3}
-                  active={
-                    (active == 1 && changing == true) ||
-                    active == 2 ||
-                    active == 3
-                  }
-                  title="Application Network"
-                  desc="A set of interoperable applications that unlock new gaming and social experiences for players."
-                />
-                {active == 2 || active == 3 ? (
-                  <ApplicationNetwork active={active} />
-                ) : null}
-                {active == 0 && (
+                  <Block
+                    className="block-second"
+                    active={false}
+                    title="Application Network"
+                  />
                   <img
                     src={Images.chevronDown}
                     alt="chevron"
-                    className="chevron chevron-second"
+                    className="chevron"
                   />
-                )}
-                <Block
-                  className="block-third"
-                  descVisible={false}
-                  visible={active == 0 || active == 4}
-                  active={false}
-                  title="Decentralized Societies"
-                  desc=""
-                />
-                {active == 4 && <DecentralizedSocieties />}
-              </div>
+                  <Block
+                    className="block-third"
+                    active={false}
+                    title="Decentralized Societies"
+                  />
+                </div>
+              ) : null}
+              {active == 1 || mobile == true ? (
+                <div className="row column w-full">
+                  <ObserverContainer className="block-container">
+                    <Block
+                      className="block-first"
+                      active
+                      title="Credential Network"
+                      desc="Network of gaming credentials using player statistics and social proof to establish skills and reputation."
+                    />
+                  </ObserverContainer>
+                  <CredentialNetwork />
+                </div>
+              ) : null}
+              {active == 2 || active == 3 || mobile == true ? (
+                <div className="row column w-full">
+                  <ObserverContainer className="block-container">
+                    <Block
+                      className="block-second"
+                      active
+                      title="Application Network"
+                      desc="A set of interoperable applications that unlock new gaming and social experiences for players."
+                    />
+                  </ObserverContainer>
+                  <ApplicationNetwork active={active} mobile={mobile} />
+                </div>
+              ) : null}
+              {active == 4 || mobile == true ? (
+                <DecentralizedSocieties />
+              ) : null}
             </ObserverContainer>
           </div>
         </div>

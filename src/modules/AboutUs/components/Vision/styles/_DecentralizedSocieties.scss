@@ -1,6 +1,18 @@
 .decentralized-societies {
   width: 100%;
   transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 32px;
+    left: -32px;
+    width: 16px;
+    height: 16px;
+    background: $primary100;
+    box-shadow: 0px 0px 42px $primary100;
+  }
 
   .list {
     max-width: 490px;
@@ -10,6 +22,16 @@
   .col {
     margin: 32px 0;
     position: relative;
+    opacity: 0;
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+
+    &:nth-child(2) {
+      transition-delay: 0.2s;
+    }
+
+    &:nth-child(3) {
+      transition-delay: 0.4s;
+    }
   }
 
   .date {
@@ -44,6 +66,12 @@
     letter-spacing: 0.05em;
   }
 
+  .parallaxed {
+    .btn-secondary {
+      opacity: 0;
+    }
+  }
+
   .parallaxed-1 {
     img {
       max-width: 422px;
@@ -73,9 +101,20 @@
 
   @media (max-width: $md-max) {
     flex-direction: column;
+    margin-top: 128px;
+
+    .col {
+      opacity: 1;
+    }
 
     .list {
       max-width: 100%;
+    }
+
+    .parallaxed {
+      .btn-secondary {
+        opacity: 1;
+      }
     }
   }
 }

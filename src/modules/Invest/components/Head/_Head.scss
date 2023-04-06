@@ -1,0 +1,54 @@
+.head {
+  max-width: 906px;
+  margin-top: 88px;
+  margin-bottom: 64px;
+
+  .line-graph {
+    height: 280px;
+    width: 438px;
+  }
+
+  .countdown .countdown-numbers span {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    width: 17px;
+    height: 26px;
+    color: $light100;
+  }
+
+  .subtitle {
+    margin: 16px 0 32px;
+    max-width: 546px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.05em;
+  }
+
+  .head-details {
+    max-width: 433px;
+  }
+
+  h2 {
+    margin-bottom: 16px;
+    color: $light100;
+
+    span {
+      color: $primary100;
+    }
+  }
+
+  .coming {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    margin: 24px 0 86px;
+
+    .coming-desc {
+      margin-right: 16px;
+    }
+  }
+}

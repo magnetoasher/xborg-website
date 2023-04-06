@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ObserverContainer } from "../ObserverContainer";
 
 export type AlertProps = {
   text: string;
@@ -7,8 +8,10 @@ export type AlertProps = {
 
 export const Alert = ({ to, text }: AlertProps) => {
   return (
-    <Link to={to} className="page-alert">
-      {text}
-    </Link>
+    <ObserverContainer className="page-alert-container">
+      <Link to={to} className="page-alert">
+        {text}
+      </Link>
+    </ObserverContainer>
   );
 };

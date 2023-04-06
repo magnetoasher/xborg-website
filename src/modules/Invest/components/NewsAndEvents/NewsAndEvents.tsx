@@ -1,5 +1,5 @@
 import { Images } from "../../../../assets/imgs/Images";
-import { ObserverContainer } from "../../../../components";
+import { Article, ObserverContainer } from "../../../../components";
 
 export const NewsAndEvents = () => {
   const upcoming = [
@@ -95,51 +95,47 @@ export const NewsAndEvents = () => {
   return (
     <div className="news-and-events w-full row column middle center">
       <h2>Upcoming</h2>
-      <ObserverContainer className="list">
-        {upcoming.map((item, index) => (
-          <div
-            className="list-item row"
-            key={index}
-            style={{
-              transitionDelay: index * 100 + "ms",
-            }}
-          >
-            <div className="image">
-              <img src={Images.invest.news} alt="" />
-            </div>
-            <div className="desc">
-              <div className="article-top row middle between">
-                <div className="tag">{item.tag}</div>
-                <div className="date">{item.date}</div>
-              </div>
-              <div className="title">{item.title}</div>
-            </div>
-          </div>
-        ))}
+      <ObserverContainer className="articles-list row between">
+        <Article
+          image={Images.invest.news}
+          tag={"tag"}
+          date={"date"}
+          title={"title"}
+        />
+        <Article
+          image={Images.invest.news}
+          tag={"tag"}
+          date={"date"}
+          title={"title"}
+        />
+        <Article
+          image={Images.invest.news}
+          tag={"tag"}
+          date={"date"}
+          title={"title"}
+        />
       </ObserverContainer>
 
       <h2>Past</h2>
-      <ObserverContainer className="list">
-        {past.map((item, index) => (
-          <div
-            className="list-item row"
-            key={index}
-            style={{
-              transitionDelay: index * 100 + "ms",
-            }}
-          >
-            <div className="image">
-              <img src={Images.invest.news} alt="" />
-            </div>
-            <div className="desc">
-              <div className="article-top row middle between">
-                <div className="tag">{item.tag}</div>
-                <div className="date">{item.date}</div>
-              </div>
-              <div className="title">{item.title}</div>
-            </div>
-          </div>
-        ))}
+      <ObserverContainer className="articles-list row between">
+        <Article
+          image={Images.invest.news}
+          tag={"tag"}
+          date={"date"}
+          title={"title"}
+        />
+        <Article
+          image={Images.invest.news}
+          tag={"tag"}
+          date={"date"}
+          title={"title"}
+        />
+        <Article
+          image={Images.invest.news}
+          tag={"tag"}
+          date={"date"}
+          title={"title"}
+        />
       </ObserverContainer>
     </div>
   );

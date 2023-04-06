@@ -18,6 +18,8 @@
     letter-spacing: 0.1em;
     color: $light100;
     margin-left: 32px;
+    opacity: 0;
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 
     span {
       color: $primary100;
@@ -35,6 +37,12 @@
     padding-right: 16px;
   }
 
+  .action {
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
   .rooniverse {
     position: relative;
     max-width: 440px;
@@ -46,6 +54,7 @@
       padding: 16px;
       border: 1px solid #2e2c37;
       margin-top: -1px;
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
     .tags span {
@@ -61,6 +70,7 @@
       width: 100%;
       position: relative;
       z-index: 2;
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
     .live {
@@ -71,6 +81,7 @@
       font-weight: 500;
       line-height: 40px;
       z-index: 3;
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
     .intro-title {
@@ -148,6 +159,8 @@
   }
 
   @media (max-width: $md-max) {
+    margin-top: 64px;
+
     .block-wrapper {
       flex-direction: column;
       align-items: flex-start;
@@ -155,6 +168,20 @@
 
     .app-network-xborg {
       margin-top: 128px;
+    }
+
+    .big-title {
+      opacity: 1;
+    }
+
+    .red-highlight {
+      span {
+        opacity: 1;
+      }
+
+      &:after {
+        width: 100%;
+      }
     }
 
     .rooniverse {
@@ -165,6 +192,7 @@
     .parallaxed {
       margin-right: 0;
       margin-top: 64px;
+      transform: translateX(0);
     }
   }
 

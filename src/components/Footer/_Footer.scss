@@ -38,8 +38,10 @@ footer.footer {
 
   @media (max-width: $sm-max) {
     &.row.end {
+      height: 45px;
       width: 100%;
       justify-content: center;
+      background-color: $dark100;
     }
   }
 }

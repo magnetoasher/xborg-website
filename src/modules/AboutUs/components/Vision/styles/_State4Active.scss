@@ -1,9 +1,20 @@
 .vision-intro-parallaxed-container.state-4.static {
   @import "./StateAll";
 
-  .block-third,
-  .block-second,
-  .block-first {
-    opacity: 0;
+  .list.in {
+    .col {
+      opacity: 1;
+    }
+  }
+
+  .parallaxed {
+    .btn-secondary {
+      opacity: 1;
+    }
+  }
+
+  .line-indicator:after {
+    transform: translateY(-75%);
+    margin-top: -30px;
   }
 }

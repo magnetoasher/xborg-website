@@ -1,6 +1,12 @@
 import { useRef } from "react";
 import { Images } from "../../../../assets/imgs/Images";
-import { ObserverContainer, SectionDescription } from "../../../../components";
+import {
+  Article,
+  ButtonPrimary,
+  Links,
+  ObserverContainer,
+  SectionDescription,
+} from "../../../../components";
 import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const Supporters = () => {
@@ -89,7 +95,43 @@ export const Supporters = () => {
         <h2>
           <span>Most read</span> articles
         </h2>
+
+        <div className="articles-list row between">
+          <Article
+            image={Images.invest.news}
+            tag={"tag"}
+            date={"date"}
+            title={"title"}
+          />
+          <Article
+            image={Images.invest.news}
+            tag={"tag"}
+            date={"date"}
+            title={"title"}
+          />
+          <Article
+            image={Images.invest.news}
+            tag={"tag"}
+            date={"date"}
+            title={"title"}
+          />
+        </div>
       </ObserverContainer>
+
+      <div className="invest-early row middle center column">
+        <h2 className="text-center">Invest in the future of XBorg</h2>
+
+        <div className="desc text-center">
+          The only opportunity to invest early in XBorg, alongside the best
+          investors of the space.
+        </div>
+
+        <div className="actions row">
+          <ButtonPrimary label="Register interest" />
+        </div>
+      </div>
+
+      <Links />
     </div>
   );
 };

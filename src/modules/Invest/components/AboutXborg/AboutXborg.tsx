@@ -1,14 +1,14 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import {
-  ButtonPrimary,
   CountUpAnimation,
   ObserverContainer,
   SectionDescription,
 } from "../../../../components";
+import { ScrollViewModel } from "../../../../viewmodels/ScrollViewModel";
 import { TextManipulation } from "../../../../viewmodels/textManipulation";
+import { Head } from "../Head";
 
 export const AboutXborg = () => {
-  const introRef = useRef(null);
   const titleRef = useRef(null);
 
   const textVM = new TextManipulation();
@@ -20,22 +20,14 @@ export const AboutXborg = () => {
     credentials: 30039,
   };
 
+  useEffect(() => {
+    const scrollVM = new ScrollViewModel();
+    scrollVM.removeCustomScrolling();
+  }, []);
+
   return (
     <div className="about-xborg w-full row column middle center">
-      <h1 className="text-center">
-        Invest <span ref={introRef}>in the future of XBorg</span>
-      </h1>
-
-      <SectionDescription className="subtitle text-center">
-        The only opportunity to invest early in XBorg, alongside the best
-        investors of the space.
-      </SectionDescription>
-
-      <ButtonPrimary label="Register interest" />
-
-      <SectionDescription className="coming">
-        Coming end of April
-      </SectionDescription>
+      <Head />
 
       <h2>
         Pioneering <span ref={titleRef}>gaming</span>

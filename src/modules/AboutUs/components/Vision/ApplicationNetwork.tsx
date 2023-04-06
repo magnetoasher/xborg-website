@@ -7,53 +7,59 @@ import {
   Progressbar,
   SectionDescription,
 } from "../../../../components";
-import { TextScramble } from "../../../../viewmodels/TextScramble";
+import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export type ApplicationNetworkProps = {
   active: number;
+  mobile: boolean;
 };
 
-export const ApplicationNetwork = ({ active }: ApplicationNetworkProps) => {
+export const ApplicationNetwork = ({
+  active,
+  mobile,
+}: ApplicationNetworkProps) => {
   const titleScrambleRef = useRef(null);
   const titleScrambleRef2 = useRef(null);
 
+  const textVM = new TextManipulation();
+
   return (
     <div className="application-network">
-      {active == 2 && (
+      {active == 2 || mobile == true ? (
         <div className="row middle between block-wrapper">
           <div className="w-full">
-            <div className="row column">
+            <ObserverContainer
+              className="row column"
+              onAnimateIn={() => {
+                setTimeout(() => {
+                  textVM.scrambleText(titleScrambleRef);
+                }, 200);
+              }}
+            >
               <div className="row middle big-title-container">
-                <div className="live">Live</div>
+                <div className="red-highlight text-center">
+                  <span>Live</span>
+                </div>
 
                 <div className="big-title">
                   XBorg <span ref={titleScrambleRef}>Launchpad</span>
                 </div>
               </div>
-            </div>
 
-            <SectionDescription
-              className="subtitle"
-              onAnimateIn={() => {
-                const current =
-                  titleScrambleRef.current as unknown as HTMLDivElement;
-                const scramble = new TextScramble(current);
-                if (titleScrambleRef.current)
-                  scramble.setText(current.innerHTML);
-              }}
-            >
-              Providing players investment opportunities in early-stage Web3
-              games, and developers the platform to access to capital and
-              players.
-            </SectionDescription>
+              <SectionDescription className="subtitle">
+                Providing players investment opportunities in early-stage Web3
+                games, and developers the platform to access to capital and
+                players.
+              </SectionDescription>
 
-            <div className="enter row">
-              <ButtonSecondary
-                label="Enter Launchpad"
-                to="https://launchpad.xborg.com"
-                target="_blank"
-              />
-            </div>
+              <div className="action row">
+                <ButtonSecondary
+                  label="Enter Launchpad"
+                  to="https://launchpad.xborg.com"
+                  target="_blank"
+                />
+              </div>
+            </ObserverContainer>
           </div>
 
           <ObserverContainer className="rooniverse row column">
@@ -89,41 +95,41 @@ export const ApplicationNetwork = ({ active }: ApplicationNetworkProps) => {
             </div>
           </ObserverContainer>
         </div>
-      )}
-      {active == 3 && (
+      ) : null}
+      {active == 3 || mobile == true ? (
         <div className="row middle between app-network-xborg block-wrapper">
           <div className="w-full">
-            <div className="row column">
+            <ObserverContainer
+              className="row column"
+              onAnimateIn={() => {
+                setTimeout(() => {
+                  textVM.scrambleText(titleScrambleRef);
+                }, 200);
+              }}
+            >
               <div className="row middle big-title-container">
-                <div className="live">Alpha live</div>
+                <div className="red-highlight text-center">
+                  <span>Alpha live</span>
+                </div>
 
                 <div className="big-title">
                   XBorg <span ref={titleScrambleRef2}>App</span>
                 </div>
               </div>
-            </div>
 
-            <SectionDescription
-              className="subtitle"
-              onAnimateIn={() => {
-                const current =
-                  titleScrambleRef2.current as unknown as HTMLDivElement;
-                const scramble = new TextScramble(current);
-                if (titleScrambleRef2.current)
-                  scramble.setText(current.innerHTML);
-              }}
-            >
-              Allowing players to unlock collectibles, craft avatars and win
-              exclusive prizes by completing gaming and social challenges.
-            </SectionDescription>
+              <SectionDescription className="subtitle">
+                Allowing players to unlock collectibles, craft avatars and win
+                exclusive prizes by completing gaming and social challenges.
+              </SectionDescription>
 
-            <div className="enter row">
-              <ButtonSecondary
-                label="Launch alpha"
-                to="https://gaming.xborg.com"
-                target="_blank"
-              />
-            </div>
+              <div className="action row">
+                <ButtonSecondary
+                  label="Launch alpha"
+                  to="https://gaming.xborg.com"
+                  target="_blank"
+                />
+              </div>
+            </ObserverContainer>
           </div>
 
           <ObserverContainer className="parallaxed row column middle center">
@@ -144,7 +150,7 @@ export const ApplicationNetwork = ({ active }: ApplicationNetworkProps) => {
             />
           </ObserverContainer>
         </div>
-      )}
+      ) : null}
     </div>
   );
 };

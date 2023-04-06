@@ -1,4 +1,4 @@
-.whynow-faq {
+.whynow {
   h2 {
     margin-bottom: 90px;
     color: $light100;
@@ -9,26 +9,54 @@
   }
 
   .content {
-    max-width: 672px;
+    max-width: 906px;
     width: 100%;
-  }
 
-  .get-in-early {
-    h2 {
-      margin: 48px 0 24px;
+    .content-tabs {
+      width: 388px;
+      border-right: 1px solid $gray700;
+
+      .single-tab {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 32px;
+        color: $gray300;
+        padding: 24px 0;
+
+        span {
+          margin-left: 16px;
+          transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+
+          b {
+            transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+          }
+        }
+
+        &.active {
+          span {
+            color: $white;
+            font-weight: 600;
+
+            b {
+              color: $primary100;
+            }
+          }
+        }
+      }
     }
 
-    .desc {
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 28px;
-      letter-spacing: 0.05em;
-      margin-bottom: 76px;
-    }
+    .content-details {
+      position: relative;
 
-    .early-iamge {
-      width: 100%;
-      margin-top: 76px;
+      .content-desc {
+        position: absolute;
+        top: 50%;
+        left: 80px;
+        transform: translateY(-50%);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+      }
     }
   }
 }

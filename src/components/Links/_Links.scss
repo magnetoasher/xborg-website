@@ -1,11 +1,8 @@
 .footer-links {
-  position: absolute;
-  bottom: -80px;
-  left: 0;
-  right: 0;
   height: 80px;
   font-size: 12px;
   line-height: 15px;
+  transform: translateY(80px);
 
   a {
     color: #4f4e4e;
@@ -19,12 +16,13 @@
   }
 
   @media (max-width: $lg-max) {
-    bottom: 0;
-    justify-content: flex-start;
+    &.row {
+      justify-content: flex-start;
+    }
 
     a {
-      padding-left: 8px;
-      padding-right: 8px;
+      padding-left: 16px;
+      padding-right: 16px;
     }
   }
 
@@ -33,6 +31,8 @@
     flex-wrap: wrap;
     height: auto;
     width: 100%;
+    padding-top: 80px;
+    transform: translate(0, 0);
 
     a {
       width: 50%;

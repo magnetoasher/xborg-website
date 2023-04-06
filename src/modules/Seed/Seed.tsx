@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { Images } from "../../assets/imgs/Images";
@@ -10,15 +10,22 @@ import {
   TextInput,
   LineGraph,
   SectionDescription,
+  CountUpAnimation,
+  ObserverContainer,
 } from "../../components";
 import { Pagination } from "../../components/Pagination";
-import { formatNumberToK, updateInput } from "../../helpers/inputs";
+import {
+  formatNumberToK,
+  roundToNearest10,
+  updateInput,
+} from "../../helpers/inputs";
 import { timeDifference } from "../../helpers/time";
 import { GlobalState } from "../../reducer";
 import { SeedActions } from "../../redux/seed/actions";
 import { AppDispatch } from "../../store";
 import { ScrollViewModel } from "../../viewmodels/ScrollViewModel";
 import { SeedViewModel } from "../../viewmodels/SeedViewModel";
+import { TextManipulation } from "../../viewmodels/textManipulation";
 
 export type SeedFormType = {
   name: string;
@@ -32,6 +39,7 @@ export type SeedFormType = {
 export const Seed = () => {
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
+  const h4ref = useRef(null);
 
   const seedData = useSelector((state: GlobalState) => state.seed.data) || [];
   const seedSummary = useSelector((state: GlobalState) => state.seed.summary);
@@ -49,6 +57,7 @@ export const Seed = () => {
   const [page, setPage] = useState<number>(0);
 
   const vm = new SeedViewModel(dispatch);
+  const textVM = new TextManipulation();
 
   useEffect(() => {
     const scrollVM = new ScrollViewModel();
@@ -79,8 +88,11 @@ export const Seed = () => {
               <img src={Images.logofull} alt="" />
             </div>
             <h1 className="title">Seed Round</h1>
-            <h4>Invest in the future of XBorg</h4>
-            <SectionDescription className={""}>
+            <h4 ref={h4ref}>Invest in the future of XBorg</h4>
+            <SectionDescription
+              className={""}
+              onAnimateIn={() => textVM.scrambleText(h4ref)}
+            >
               XBorg is building the leading gaming protocol for players, fans
               and esports teams. With over 10,000 users onboarded, the largest
               web3 esports league ever created and a partnership with one of
@@ -93,13 +105,16 @@ export const Seed = () => {
               <div className="col">
                 <div className="value">
                   {seedSummary?.totalCapital
-                    ? `$${formatNumberToK(seedSummary.totalCapital, 1)}`
+                    ? `$${formatNumberToK(seedSummary.totalCapital, 2)}`
                     : `$0`}
                 </div>
                 <div className="label">Total soft commitment</div>
               </div>
               <div className="col">
-                <div className="value">{seedSummary?.nbSubmissions}</div>
+                <CountUpAnimation
+                  className="value"
+                  number={seedSummary?.nbSubmissions ?? 0}
+                />
                 <div className="label">Total submissions</div>
               </div>
             </div>
@@ -137,7 +152,7 @@ export const Seed = () => {
               <div className="form-label">
                 Do you own a <span>Prometheus NFT?</span>
               </div>
-              <p>
+              <SectionDescription className="">
                 Note that only Prometheus holders will have a guaranteed
                 allocation in the seed round. To purchase a Prometheus NFT,
                 please{" "}
@@ -148,7 +163,7 @@ export const Seed = () => {
                   click here
                 </a>
                 .
-              </p>
+              </SectionDescription>
               <div className="radios-container row middle">
                 <RadioInput
                   id="prometheus-yes"
@@ -169,11 +184,11 @@ export const Seed = () => {
               <div className="form-label">
                 What <span>capital</span> do you intend to <span>commit?</span>
               </div>
-              <p>
+              <SectionDescription className="">
                 By adopting this approach, we can create an optimal allocation
                 mechanism. It is important to note, however, that this is not a
                 definitive commitment or an indication thereof.
-              </p>
+              </SectionDescription>
 
               <div className="slider-container">
                 <SliderInput
@@ -183,7 +198,7 @@ export const Seed = () => {
                   onChange={(e) =>
                     setForm({
                       ...form,
-                      capital: vm.scaleSlider(e),
+                      capital: roundToNearest10(vm.scaleSlider(e)),
                     })
                   }
                 />
@@ -247,11 +262,14 @@ export const Seed = () => {
               {chartView ? (
                 <LineGraph data={seedSummary?.summary} />
               ) : (
-                <div className="submissions">
-                  {slicedPage.map((item) => (
+                <ObserverContainer className="submissions">
+                  {slicedPage.map((item, index) => (
                     <div
                       className="single-submission row middle between"
-                      key={item.timestamp}
+                      key={index}
+                      style={{
+                        transitionDelay: index * 50 + "ms",
+                      }}
                     >
                       <div className="submission-title">
                         Anonymous user is <span>interested</span> in a $
@@ -276,7 +294,7 @@ export const Seed = () => {
                       onPageChange={(e) => setPage(e.selected)}
                     />
                   </div>
-                </div>
+                </ObserverContainer>
               )}
             </div>
           </div>

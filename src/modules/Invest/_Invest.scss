@@ -1,5 +1,6 @@
 @import "./components/Navbar/Navbar";
 .invest {
+  @import "./components/Head/Head";
   @import "./components/AboutXborg/AboutXborg";
   @import "./components/GameChangingProtocol/GameChangingProtocol";
   @import "./components/ProductSpotlight/ProductSpotlight";
@@ -7,6 +8,7 @@
   @import "./components/Supporters/Supporters";
 
   @import "./components/NextBigThing/NextBigThing";
+  @import "./components/Forefront/Forefront";
   @import "./components/OpenToCommunity/OpenToCommunity";
   @import "./components/WhyNow/WhyNow";
 

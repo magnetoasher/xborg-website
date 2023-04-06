@@ -9,6 +9,7 @@ export type ObserverContainerType = {
   onAnimateIn?: () => void;
   onAnimateOut?: () => void;
   rootMargin?: string;
+  visibility?: "in" | "out";
 };
 
 export const ObserverContainer = ({
@@ -17,6 +18,7 @@ export const ObserverContainer = ({
   onAnimateIn,
   onAnimateOut,
   rootMargin,
+  visibility,
 }: ObserverContainerType) => {
   const ref = useRef(null);
   const loaded = useSelector((state: GlobalState) => state.site.loaded);
@@ -45,7 +47,10 @@ export const ObserverContainer = ({
   }
 
   return (
-    <div className={`${className} ${active ? "in" : "out"}`} ref={ref}>
+    <div
+      className={`${className} ${visibility ?? active ? "in" : "out"}`}
+      ref={ref}
+    >
       {children}
     </div>
   );

@@ -23,3 +23,4 @@ export * from "./Links";
 export * from "./SectionDescription";
 export * from "./CountUpAnimation";
 export * from "./Alert";
+export * from "./Article";

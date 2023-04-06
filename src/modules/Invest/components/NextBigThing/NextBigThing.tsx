@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
-import { ButtonPrimary, SectionDescription } from "../../../../components";
-import { ScrollViewModel } from "../../../../viewmodels/ScrollViewModel";
+import { SectionDescription } from "../../../../components";
+import { Head } from "../Head";
 
 export const NextBigThing = () => {
   return (
     <div className="next-big-thing row column middle center w-full">
+      <Head />
       <div className="content">
         <h2 className="text-center">
           Gaming & esports is the next <span>big thing</span>
@@ -43,30 +43,6 @@ export const NextBigThing = () => {
           <a href="" target="_blank">
             Source
           </a>
-        </div>
-      </div>
-
-      <div className="forefront row column middle center w-full">
-        <div className="content">
-          <h2 className="text-center">XBorg is at the forefront of gaming</h2>
-
-          <div className="key-points row">
-            <div className="col expand">
-              <div className="cube" />
-              <div className="title">Breakthrough</div>
-              <div className="desc">gaming protocol</div>
-            </div>
-            <div className="col expand">
-              <div className="cube" />
-              <div className="title">#1 web3</div>
-              <div className="desc">gaming community</div>
-            </div>
-            <div className="col expand">
-              <div className="cube" />
-              <div className="title">Largest network</div>
-              <div className="desc">of parters</div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

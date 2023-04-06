@@ -9,7 +9,7 @@ import {
 export const DecentralizedSocieties = () => {
   return (
     <div className="decentralized-societies row middle between block-wrapper">
-      <div className="list">
+      <ObserverContainer className="list">
         <div className="col">
           <div className="row middle">
             <div className="date">Q2 2023</div>
@@ -52,7 +52,7 @@ export const DecentralizedSocieties = () => {
             reputation.
           </SectionDescription>
         </div>
-      </div>
+      </ObserverContainer>
 
       <ObserverContainer className="parallaxed row column middle center">
         <ParallaxLayer

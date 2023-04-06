@@ -1,4 +1,4 @@
-import { Layout } from "../../components";
+import { Alert, Layout } from "../../components";
 import {
   Collectibles,
   GamingBadges,
@@ -19,17 +19,20 @@ export const XborgApp = () => {
   }, []);
 
   return (
-    <Layout
-      className="xborg-app"
-      components={[
-        <Play />,
-        <GamingProfile />,
-        <GamingBadges />,
-        <Meet />,
-        <Collectibles />,
-        <Leaderboard />,
-        <StartPlayingToday />,
-      ]}
-    />
+    <>
+      <Alert text="Register for the upcoming seed round." to="seed" />
+      <Layout
+        className="xborg-app"
+        components={[
+          <Play />,
+          <GamingProfile />,
+          <GamingBadges />,
+          <Meet />,
+          <Collectibles />,
+          <Leaderboard />,
+          <StartPlayingToday />,
+        ]}
+      />
+    </>
   );
 };

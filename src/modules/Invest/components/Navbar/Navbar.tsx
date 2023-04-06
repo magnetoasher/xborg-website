@@ -26,9 +26,9 @@ export const Navbar = ({ active, setActive }: NavbarProps) => {
 
   return (
     <div className="invest-navigation row between middle">
-      <a href="" className="go-back">
+      <Link to="/" className="go-back">
         Back to xborg.com
-      </a>
+      </Link>
 
       <div className="sticky-tabs tabs">
         <div className="heads row middle">
