@@ -56,26 +56,11 @@ export const AppRouter = ({ setNavbarBtn }: ApPRouterProps) => {
         <Route path="/submission-recorded" element={<SubmissionRecorded />} />
         <Route path="/prometheus" element={<Prometheus />} />
 
-        <Route
-          path="/about-xborg"
-          element={<PageAboutXborg setNavbarBtn={setNavbarBtn} />}
-        />
-        <Route
-          path="/why-invest"
-          element={<PageWhyInvest setNavbarBtn={setNavbarBtn} />}
-        />
-        <Route
-          path="/how-to-invest"
-          element={<PageHowToInvest setNavbarBtn={setNavbarBtn} />}
-        />
-        <Route
-          path="/news-events"
-          element={<PageEventNews setNavbarBtn={setNavbarBtn} />}
-        />
-        <Route
-          path="/invest-faq"
-          element={<PageInvestFAQ setNavbarBtn={setNavbarBtn} />}
-        />
+        <Route path="/about-xborg" element={<PageAboutXborg />} />
+        <Route path="/why-invest" element={<PageWhyInvest />} />
+        <Route path="/how-to-invest" element={<PageHowToInvest />} />
+        <Route path="/news-events" element={<PageEventNews />} />
+        <Route path="/invest-faq" element={<PageInvestFAQ />} />
       </Routes>
     </div>
   );

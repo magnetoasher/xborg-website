@@ -35,7 +35,7 @@ export const Head = () => {
 
           <div className="coming row middle">
             <span className="coming-desc">Coming end of April</span>
-            {/* <Countdown date={new Date("2023/05/03")} /> */}
+            <Countdown date={new Date("May 02 2023 14:00:00 GMT-0200")} />
           </div>
 
           <div className="row action">

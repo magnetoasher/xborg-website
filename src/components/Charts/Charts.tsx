@@ -21,10 +21,13 @@ export type LineGraphProps = {
 export const LineGraph = ({ data, submissions }: LineGraphProps) => {
   const newData = data?.map((item: any, index: number) => ({
     ...item,
-    xaxisLabel: item.date?.split("/")[1],
+    xaxisLabel:
+      String(item.date?.split("/")[1]).padStart(2, "0") +
+      "/" +
+      String(item.date?.split("/")[0]).padStart(2, "0"),
     cap: index > data.length / 7 ? 1100000 : undefined,
-    hardcap: index > data.length / 7 ? 1600000 : undefined,
-    top: 1700000,
+    hardcap: index > data.length / 7 ? 2000000 : undefined,
+    top: 2100000,
   }));
 
   if (!data?.length) return null;
@@ -39,14 +42,9 @@ export const LineGraph = ({ data, submissions }: LineGraphProps) => {
               <stop offset="95%" stopColor="transparent" stopOpacity={0.2} />
             </linearGradient>
           </defs>
-          <Tooltip
-            content={<CustomTooltip data={data} submissions={submissions} />}
-            cursorStyle={{
-              stroke: "cyan",
-            }}
-          />
+          <Tooltip content={<CustomTooltip data={data} />} />
 
-          <XAxis dataKey="xaxisLabel" interval={3} />
+          <XAxis dataKey="xaxisLabel" interval={5} />
           <Area
             dataKey="compounded"
             type="basis"
@@ -75,7 +73,7 @@ export const LineGraph = ({ data, submissions }: LineGraphProps) => {
             strokeWidth={1}
             strokeOpacity={1}
             fill="transparent"
-            dot={<ActiveText fromTop={35} title="$1,6M Cap" />}
+            dot={<ActiveText fromTop={35} title="$2M Target raise" />}
             activeDot={<ActiveDotEmpty />}
           />
           <Area
@@ -136,7 +134,7 @@ const ActiveDot = (props: any) => {
   );
 };
 
-const CustomTooltip = ({ active, payload, data, submissions }: any) => {
+const CustomTooltip = ({ active, payload, data }: any) => {
   const dispatch = useDispatch<AppDispatch>();
   const vm = new SeedViewModel(dispatch);
   const date = payload?.[0]?.payload?.date;
@@ -154,7 +152,7 @@ const CustomTooltip = ({ active, payload, data, submissions }: any) => {
           <div className="commited">
             ${formatNumberToK(row.compounded as number, 2)}
           </div>
-          <div className="submissions">{submissions} submissions</div>
+          <div className="submissions">soft committed</div>
           <div className="date">
             {months[dateArray[0] - 1]} {dateArray[1]},{dateArray[2]}
           </div>

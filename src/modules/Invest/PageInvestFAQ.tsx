@@ -1,17 +1,7 @@
-import { useEffect } from "react";
-import { ButtonPrimary, Layout } from "../../components";
-import { Navbar, InvestFAQ, Supporters } from "./components";
+import { Layout } from "../../components";
+import { InvestFAQ, Supporters } from "./components";
 
-type InvestPageProps = {
-  setNavbarBtn: (val: any) => void;
-};
-
-export const PageInvestFAQ = ({ setNavbarBtn }: InvestPageProps) => {
-  useEffect(() => {
-    setNavbarBtn(<NavbarButton />);
-
-    return () => setNavbarBtn(undefined);
-  }, []);
+export const PageInvestFAQ = () => {
   return (
     <Layout
       className="invest w-full row column"
@@ -19,9 +9,3 @@ export const PageInvestFAQ = ({ setNavbarBtn }: InvestPageProps) => {
     />
   );
 };
-
-const NavbarButton = () => (
-  <div className="early-access">
-    <ButtonPrimary label="Register interest" to="seed" />
-  </div>
-);

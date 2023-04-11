@@ -25,7 +25,7 @@ export const Navigation = ({ navbarBtn }: NavigationProps) => {
     { to: "", label: "About us" },
     { to: "xborg-app", label: "XBorg app" },
     { to: "xtreme-championship-series", label: "Xtreme Championship Series" },
-    { to: "about-xborg", label: "Invest in XBorg" },
+    { to: "about-xborg", label: "XBorg is raising funds" },
   ];
 
   return (
@@ -64,7 +64,7 @@ export const Navigation = ({ navbarBtn }: NavigationProps) => {
       </nav>
       {navbarBtn == undefined ? (
         <div className={`early-access`}>
-          <ButtonPrimary label="Invest early" to="seed" />
+          <ButtonPrimary label="Register interest" to="seed" />
         </div>
       ) : (
         navbarBtn

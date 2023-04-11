@@ -38,7 +38,7 @@ export const Roadmap = () => {
               <div className="roadmap-index">1.</div>
             </div>
             <div className="roadmap-item-line">
-              <div className="cube" />
+              <div className="cube active" />
             </div>
             <div className="roadmap-item-bottom">
               <div className="roadmap-title">Live</div>
@@ -61,7 +61,7 @@ export const Roadmap = () => {
               <div className="roadmap-space" />
             </div>
             <div className="roadmap-item-line">
-              <div className="cube" />
+              <div className="cube active" />
             </div>
             <div className="roadmap-item-bottom">
               <div className="roadmap-index">2.</div>
@@ -79,7 +79,7 @@ export const Roadmap = () => {
               <div className="roadmap-index">3.</div>
             </div>
             <div className="roadmap-item-line">
-              <div className="cube active" />
+              <div className="cube" />
             </div>
             <div className="roadmap-item-bottom">
               <div className="roadmap-title">Q3 2023</div>
@@ -104,7 +104,7 @@ export const Roadmap = () => {
               <div className="roadmap-space" />
             </div>
             <div className="roadmap-item-line">
-              <div className="cube active" />
+              <div className="cube" />
             </div>
             <div className="roadmap-item-bottom">
               <div className="roadmap-index">4.</div>

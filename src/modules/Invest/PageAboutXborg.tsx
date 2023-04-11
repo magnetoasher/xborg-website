@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { ButtonPrimary, Layout } from "../../components";
 import {
   AboutXborg,
@@ -8,17 +7,7 @@ import {
   Supporters,
 } from "./components";
 
-export type InvestPageProps = {
-  setNavbarBtn: (val: any) => void;
-};
-
-export const PageAboutXborg = ({ setNavbarBtn }: InvestPageProps) => {
-  useEffect(() => {
-    setNavbarBtn(<NavbarButton />);
-
-    return () => setNavbarBtn(undefined);
-  }, []);
-
+export const PageAboutXborg = () => {
   return (
     <Layout
       className="invest w-full row column"
@@ -32,9 +21,3 @@ export const PageAboutXborg = ({ setNavbarBtn }: InvestPageProps) => {
     />
   );
 };
-
-const NavbarButton = () => (
-  <div className="early-access">
-    <ButtonPrimary label="Register interest" to="seed" />
-  </div>
-);
