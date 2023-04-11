@@ -1,4 +1,4 @@
-import { SectionDescription } from "../../../../components";
+import { ObserverContainer, SectionDescription } from "../../../../components";
 import { Head } from "../Head";
 
 export const NextBigThing = () => {
@@ -14,7 +14,7 @@ export const NextBigThing = () => {
           identity, three large markets ready for disruption.
         </SectionDescription>
 
-        <div className="bubbles row between bottom">
+        <ObserverContainer className="bubbles row between bottom">
           <div className="col row column center middle">
             <div className="small-bubble bubble">
               <span>$70bn</span>
@@ -36,7 +36,7 @@ export const NextBigThing = () => {
 
             <div className="bubble-title">Digital identities</div>
           </div>
-        </div>
+        </ObserverContainer>
 
         <div className="estimate text-center">
           Estimated market sizes by 2030 -{" "}

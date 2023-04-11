@@ -28,7 +28,11 @@ export const Competetive = () => {
             <div className="live">Live</div>
           </div>
           <h4>
-            <span>Xtreme</span> Championship Series
+            <span>Xtreme</span>
+            <br />
+            Championship
+            <br />
+            Series
           </h4>
           <SectionDescription className="desc">
             Introducing the Xtreme Championship Series, the largest Web3 esports
@@ -38,12 +42,15 @@ export const Competetive = () => {
             We dont just play, <span>we win</span>.
           </div>
           <div className="row actions">
-            <ButtonSecondary label="Learn more" />
+            <ButtonSecondary
+              label="Learn more"
+              to="/xtreme-championship-series"
+            />
           </div>
         </div>
 
-        <div className="stats row middle">
-          <div className="statistics row column bottom">
+        <div className="stats w-full row middle">
+          <div className="statistics expand row column bottom">
             <div className="col">
               <CountUpAnimation number={data.won} className="stats-value" />
 

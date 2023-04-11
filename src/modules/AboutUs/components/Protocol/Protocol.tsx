@@ -80,33 +80,40 @@ export const Protocol = () => {
       </div>
       <ObserverContainer className="parallaxed">
         <ParallaxLayer
-          image={Images.aboutUs.protocolCube1}
-          factorX={0.1}
-          factorY={0.1}
+          image={Images.aboutUs.layer5}
+          factorX={-0.2}
+          factorY={-0.2}
           speed={0}
-          className="parallaxed-1"
+          className="parallaxed-5"
         />
         <ParallaxLayer
-          image={Images.aboutUs.protocolCube2}
-          factorX={0.2}
-          factorY={0.2}
+          image={Images.aboutUs.layer4}
+          factorX={-0.15}
+          factorY={-0.15}
           speed={0}
-          className="parallaxed-2"
+          className="parallaxed-4"
         />
         <ParallaxLayer
-          image={Images.aboutUs.protocolCube3}
+          image={Images.aboutUs.layer3}
           factorX={-0.1}
           factorY={-0.1}
           speed={0}
           className="parallaxed-3"
         />
         <ParallaxLayer
-          image={Images.aboutUs.controller}
-          factorX={0}
-          factorY={0}
+          image={Images.aboutUs.layer2}
+          factorX={-0.1}
+          factorY={-0.1}
           speed={0}
+          className="parallaxed-2"
+        />
+        <ParallaxLayer
+          image={Images.aboutUs.layer1}
+          factorX={-0.2}
+          factorY={-0.2}
+          speed={0}
+          className="parallaxed-1"
           isBase
-          className="parallaxed-4"
         />
       </ObserverContainer>
     </div>

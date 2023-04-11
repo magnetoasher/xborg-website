@@ -1,6 +1,12 @@
+import { useRef } from "react";
 import { Images } from "../../../../assets/imgs/Images";
+import { ObserverContainer, SectionDescription } from "../../../../components";
+import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const TierOne = () => {
+  const titleRef = useRef(null);
+
+  const textVM = new TextManipulation();
   return (
     <div className={`tier-one expand row column center`}>
       <div className="description">
@@ -10,16 +16,19 @@ export const TierOne = () => {
             <div className="row column expand">
               <img src={Images.logo.default} alt="Tier 1 Esports" />
               <h2 className="section-head-title">
-                <span>Tier 1</span> Esports
+                <span ref={titleRef}>Tier 1</span> Esports
               </h2>
             </div>
           </div>
-          <p className="section-head-desc">
+          <SectionDescription
+            className="section-head-desc"
+            onAnimateIn={() => textVM.scrambleText(titleRef)}
+          >
             The biggest, most competitive Web3 games only.
-          </p>
+          </SectionDescription>
         </div>
       </div>
-      <div className="games row">
+      <ObserverContainer className="games row">
         <div className="single-game row middle">
           <img src={Images.XCS.evio} alt="Ev.io" />
         </div>
@@ -35,7 +44,7 @@ export const TierOne = () => {
         <div className="single-game row middle">
           <img src={Images.XCS.cta} alt="Cross the Ages" />
         </div>
-      </div>
+      </ObserverContainer>
     </div>
   );
 };

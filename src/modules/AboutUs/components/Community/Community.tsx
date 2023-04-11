@@ -12,11 +12,14 @@ import {
   SectionDescription,
   Tabs,
 } from "../../../../components";
+import { halloffame } from "../../../../localdata/halloffame";
+import { players } from "../../../../localdata/players";
 import { TextScramble } from "../../../../viewmodels/TextScramble";
 
 export const Community = () => {
   const titleScrambleRef = useRef(null);
   const [tab, onTabChange] = useState<number>(0);
+  const [changing, setChanging] = useState<boolean>(false);
 
   const data = {
     tournaments: 125,
@@ -28,95 +31,22 @@ export const Community = () => {
     ranked1: 5,
   };
 
-  const hallOfFame = [
-    {
-      name: "Cleth",
-      desc: "Discord wizard",
-      date: "14.03.2023",
-    },
-    {
-      name: "Kitty Matrix",
-      desc: "Crew3 Ruler",
-      date: "14.03.2023",
-    },
-    {
-      name: "Depth",
-      desc: "Animatoor",
-      date: "14.03.2023",
-    },
-    {
-      name: "Dadex",
-      desc: "The Reacher",
-      date: "14.03.2023",
-    },
-    {
-      name: "Tsiman",
-      desc: "Master Quester",
-      date: "14.03.2023",
-    },
-    {
-      name: "Maggus",
-      desc: "Super modus",
-      date: "14.03.2023",
-    },
-    {
-      name: "Lex",
-      desc: "Ev slayer",
-      date: "14.03.2023",
-    },
-    {
-      name: "Akhen",
-      desc: "Blockchain shamon",
-      date: "14.03.2023",
-    },
-    {
-      name: "Milkou",
-      desc: "The bracketor",
-      date: "14.03.2023",
-    },
-    {
-      name: "Stanley",
-      desc: "Guardian",
-      date: "14.03.2023",
-    },
-  ];
+  const handleTabChange = (val: number) => {
+    setChanging(true);
 
-  const players = [
-    {
-      image: Images.aboutUs.players.lex,
-      name: "Lex",
-      description: "XBorg ev.io captain",
-    },
-    {
-      image: Images.aboutUs.players.eskezje,
-      name: "Eskezje",
-      description: "XBorg ev.io player",
-    },
-    {
-      image: Images.aboutUs.players.bicboi,
-      name: "BicBoi",
-      description: "XBorg ev.io player",
-    },
-    {
-      image: Images.aboutUs.players.m2rk,
-      name: "M2rk",
-      description: "XBorg ev.io player",
-    },
-    {
-      image: Images.aboutUs.players.xen0,
-      name: "Xen0",
-      description: "XBorg ev.io player",
-    },
-    {
-      image: Images.aboutUs.players.sjud,
-      name: "SJUD",
-      description: "XBorg Illuvium captain",
-    },
-  ];
+    setTimeout(() => {
+      setChanging(false);
+      onTabChange(val);
+    }, 300);
+  };
 
   return (
     <div className="community expand">
-      <div className="community-desc-container flex">
+      <div
+        className={`community-desc-container flex${
+          changing ? " changing" : ""
+        }`}
+      >
         <div className="description">
           <div className={"section-head-container"}>
             <div className="row section-head">
@@ -187,6 +117,7 @@ export const Community = () => {
               factorX={0.1}
               factorY={0.1}
               speed={0}
+              className="parallaxed-1"
               isBase
             />
             <ParallaxLayer
@@ -194,12 +125,15 @@ export const Community = () => {
               factorX={0.2}
               factorY={0.2}
               speed={0}
+              className="parallaxed-2"
             />
 
-            <ButtonSecondary
-              label="Learn more about the XCS"
-              to="xtreme-championship-series"
-            />
+            <div className="action row">
+              <ButtonSecondary
+                label="Learn more about the XCS"
+                to="xtreme-championship-series"
+              />
+            </div>
           </ObserverContainer>
         )}
 
@@ -253,17 +187,19 @@ export const Community = () => {
               speed={0}
               className="parallaxed-2"
             />
-            <ButtonSecondary
-              label="Community Leaderboard"
-              to="https://crew3.xyz/c/xborg/leaderboard"
-              target="_blank"
-            />
+            <div className="action row">
+              <ButtonSecondary
+                label="Community Leaderboard"
+                to="https://crew3.xyz/c/xborg/leaderboard"
+                target="_blank"
+              />
+            </div>
           </ObserverContainer>
         )}
       </div>
 
       <Tabs
-        onTabChange={onTabChange}
+        onTabChange={handleTabChange}
         data={[
           {
             label: "Tournaments",
@@ -378,13 +314,35 @@ export const Community = () => {
             label: "Hall Of Fame",
             content: (
               <div className="hall-of-fame row row-wrap">
-                {hallOfFame.map((item, index) => (
-                  <div className="col" key={index}>
-                    <div className="col-name">{item.name}</div>
-                    <div className="col-desc">{item.desc}</div>
-                    <div className="col-date">{item.date}</div>
-                  </div>
-                ))}
+                <Link to="" className="swiper-prev">
+                  <img src={Images.chevron_left.default} alt="left" />
+                </Link>
+                <Link to="" className="swiper-next">
+                  <img src={Images.chevron_right.default} alt="right" />
+                </Link>
+                <Swiper
+                  pagination={{
+                    clickable: true,
+                  }}
+                  slidesPerView={"auto"}
+                  spaceBetween={32}
+                  speed={500}
+                  modules={[Navigation, Pagination]}
+                  navigation={{
+                    prevEl: ".swiper-prev",
+                    nextEl: ".swiper-next",
+                  }}
+                >
+                  {halloffame.map((item, index) => (
+                    <SwiperSlide key={index} className="row column">
+                      <div className="col" key={index}>
+                        <div className="col-name">{item.name}</div>
+                        <div className="col-desc">{item.desc}</div>
+                        <div className="col-date">{item.date}</div>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
               </div>
             ),
           },

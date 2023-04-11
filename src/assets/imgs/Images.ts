@@ -6,6 +6,7 @@ export const Images = {
   arrow_s_down: require("./arrow-square-down.svg"),
   logofull: require("./logofull.svg").default,
   logosquare: require("./logo-square.png"),
+  logowhite: require("./logo-white.svg").default,
   chevronRight: require("./chevron-right.png"),
   chevronDown: require("./chevron-down.png"),
 
@@ -57,11 +58,13 @@ export const Images = {
     logo01: require("./aboutus/logo2.png"),
     sparks01: require("./aboutus/sparks_02.png"),
 
-    protocolCube1: require("./aboutus/protocol-cube1.png"),
-    protocolCube2: require("./aboutus/protocol-cube2.png"),
-    protocolCube3: require("./aboutus/protocol-cube3.png"),
-    controller: require("./aboutus/controller.png"),
+    layer1: require("./aboutus/protocol-layer-1.png"),
+    layer2: require("./aboutus/protocol-layer-2.png"),
+    layer3: require("./aboutus/protocol-layer-3.png"),
+    layer4: require("./aboutus/protocol-layer-4.png"),
+    layer5: require("./aboutus/protocol-layer-5.png"),
     token: require("./aboutus/token.png"),
+    deck: require("./aboutus/deck.png"),
 
     team: {
       member01: require("./team/louis.png"),
@@ -213,7 +216,29 @@ export const Images = {
 
   invest: {
     teambds: require("./invest/teambds.png"),
-    news: require("./invest/news.png"),
-    early: require("./invest/early.png"),
+
+    graph: require("./invest/graph.svg").default,
+    medal: require("./invest/medal.svg").default,
+    coins: require("./invest/coins.svg").default,
+
+    chart1: require("./invest/chart1.png"),
+    chart2: require("./invest/chart2.png"),
+    chart3: require("./invest/chart3.png"),
+    chart4: require("./invest/chart4.png"),
+    chart5: require("./invest/chart5.png"),
+    chart6: require("./invest/chart6.png"),
+    chart7: require("./invest/chart7.png"),
+
+    swissborg: require("./invest/swissborg.png"),
+  },
+
+  news: {
+    xborgbds: require("./news/xborgxbds.png"),
+    revolution: require("./news/revolution.png"),
+    cyberlink4: require("./news/cyberlink4.png"),
+    cyberlink5: require("./news/cyberlink5.png"),
+    cyberlink6: require("./news/cyberlink6.png"),
+    cyberlinkqa: require("./news/cyberlinkqa.png"),
+    twitterama: require("./news/twitterama.png"),
   },
 };

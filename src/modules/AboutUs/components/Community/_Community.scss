@@ -45,6 +45,18 @@
 
     .col {
       padding: 0 16px;
+      opacity: 0;
+      transition: 0.3s ease-in;
+
+      &:nth-child(2) {
+        transition-delay: 0.1s;
+      }
+      &:nth-child(3) {
+        transition-delay: 0.2s;
+      }
+      &:nth-child(4) {
+        transition-delay: 0.3s;
+      }
     }
 
     .col-title {
@@ -68,16 +80,42 @@
     }
   }
 
+  .body-item-enter-done {
+    .col {
+      opacity: 1;
+    }
+  }
+
   .hall-of-fame {
-    max-width: 55%;
+    max-width: 50%;
+    position: relative;
+
+    .swiper {
+      padding-bottom: 34px;
+
+      .swiper-slide {
+        width: auto;
+      }
+    }
+
+    .swiper-next {
+      right: -88px;
+      left: auto;
+      transform: translate(0, 0);
+    }
+
+    .swiper-prev {
+      left: -88px;
+      transform: translate(0, 0);
+    }
 
     .col {
       padding-top: 29px;
-      padding-right: 32px;
+      white-space: nowrap;
     }
 
     .col-name {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 600;
       line-height: 24px;
       letter-spacing: 0.05em;
@@ -111,11 +149,13 @@
     position: absolute;
     right: 0;
     top: -40px;
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 
     img {
       max-height: 412px;
       max-width: 412px;
       transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
+      opacity: 0;
     }
 
     .parallaxed-1 {
@@ -142,10 +182,6 @@
         width: 6.6%;
         transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
       }
-
-      img {
-        opacity: 0;
-      }
     }
 
     .parallaxed-2 img {
@@ -164,9 +200,26 @@
       }
 
       .parallaxed-1 img,
-      .parallaxed-2 img {
+      .parallaxed-2 img,
+      .parallaxed-3 img {
         opacity: 1;
         transform: translate(0, 0);
+      }
+    }
+  }
+
+  .changing {
+    .parallaxed-devices {
+      opacity: 0;
+      transform: scale(0.7);
+
+      .parallaxed-1 {
+        &:after,
+        &:before {
+          background-color: transparent;
+          box-shadow: 0 0 0 transparent;
+          height: 0;
+        }
       }
     }
   }
@@ -176,16 +229,67 @@
     position: absolute;
     right: 0;
     top: -40px;
-    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 
-    .btn-secondary {
+    .action {
       margin-top: 23px;
+      opacity: 0;
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      transition-delay: 0.3s;
     }
 
     img {
       max-width: 412px;
       max-height: 412px;
-      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .parallaxed-1 {
+      img {
+        transform: translateY(-10%);
+        opacity: 0;
+      }
+    }
+
+    .parallaxed-2 {
+      img {
+        transform: translateY(10%);
+        opacity: 0;
+        transition-delay: 0.3s;
+      }
+    }
+
+    &.in {
+      .action {
+        opacity: 1;
+      }
+      .parallaxed-1 img,
+      .parallaxed-2 img {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  .changing {
+    .parallaxed-banner {
+      opacity: 0;
+      transform: scale(0.7);
+
+      .parallaxed-1 {
+        img {
+          transform: translateY(-10%);
+          opacity: 0;
+        }
+      }
+
+      .parallaxed-2 {
+        img {
+          transform: translateY(10%);
+          opacity: 0;
+          transition-delay: 0.3s;
+        }
+      }
     }
   }
 
@@ -194,9 +298,13 @@
     position: absolute;
     right: 0;
     top: -40px;
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 
-    .btn-secondary {
+    .action {
       margin-top: 15px;
+      opacity: 0;
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      transition-delay: 0.3s;
     }
 
     img {
@@ -246,6 +354,9 @@
     }
 
     &.in {
+      .action {
+        opacity: 1;
+      }
       .parallaxed-1 {
         &:after,
         &:before {
@@ -263,12 +374,41 @@
     }
   }
 
+  .changing {
+    .parallaxed-trophy {
+      opacity: 0;
+      transform: scale(0.7);
+
+      .parallaxed-1 {
+        img {
+          opacity: 0;
+        }
+      }
+
+      .parallaxed-2 {
+        width: 100%;
+        margin-top: -7%;
+
+        img {
+          opacity: 0;
+          transform: translateY(20%);
+        }
+      }
+    }
+  }
+
   // PLAYERS SWIPER
   .players-swiper {
     position: absolute;
     right: 0;
     top: -40px;
     width: 320px;
+    opacity: 0;
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+
+    &.in {
+      opacity: 1;
+    }
 
     .swiper-name {
       margin-top: 48px;
@@ -334,6 +474,13 @@
         opacity: 1;
         margin-left: 204px;
       }
+    }
+  }
+
+  .changing {
+    .players-swiper {
+      opacity: 0;
+      transform: scale(0.7);
     }
   }
 

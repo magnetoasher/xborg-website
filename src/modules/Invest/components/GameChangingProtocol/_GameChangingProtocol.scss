@@ -153,4 +153,72 @@
       }
     }
   }
+
+  @media (max-width: $sm-max) {
+    h2 {
+      font-size: 24px;
+      line-height: 30px;
+      width: 100%;
+      text-align: left;
+      margin-top: 48px;
+      margin-bottom: 16px;
+    }
+
+    .mock-height {
+      height: auto !important;
+      max-width: 100%;
+    }
+
+    .line-indicator {
+      display: none;
+    }
+
+    .vision-intro-parallaxed-container {
+      transform: translateY(0) !important;
+      position: relative;
+    }
+
+    .vision-intro-parallaxed {
+      width: 100%;
+
+      .vision-intro {
+        width: 100%;
+      }
+
+      .block {
+        background-color: transparent !important;
+        padding: 0;
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: auto;
+
+        &:before {
+          display: none;
+        }
+
+        span {
+          flex: 1;
+          background-color: $primary100;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 20px;
+          text-align: center;
+          padding: 16px;
+          width: 100%;
+        }
+      }
+
+      .block-desc {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        margin-left: 0;
+        opacity: 1;
+        margin-top: 16px;
+      }
+    }
+  }
 }

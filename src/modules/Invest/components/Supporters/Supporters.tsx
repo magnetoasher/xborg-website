@@ -7,6 +7,7 @@ import {
   ObserverContainer,
   SectionDescription,
 } from "../../../../components";
+import { mostreadarticles } from "../../../../localdata/articles";
 import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const Supporters = () => {
@@ -16,7 +17,7 @@ export const Supporters = () => {
 
   return (
     <div className="supporters w-full">
-      <div className="row between">
+      <div className="row between content">
         <div className="partners-list">
           <h2>
             Supported by the <span>leaders of gaming & esports</span>
@@ -97,29 +98,16 @@ export const Supporters = () => {
         </h2>
 
         <div className="articles-list row between">
-          <Article
-            image={Images.invest.news}
-            tag={"tag"}
-            date={"date"}
-            title={"title"}
-          />
-          <Article
-            image={Images.invest.news}
-            tag={"tag"}
-            date={"date"}
-            title={"title"}
-          />
-          <Article
-            image={Images.invest.news}
-            tag={"tag"}
-            date={"date"}
-            title={"title"}
-          />
+          {mostreadarticles.map((item, index) => (
+            <Article {...item} key={index} />
+          ))}
         </div>
       </ObserverContainer>
 
       <div className="invest-early row middle center column">
-        <h2 className="text-center">Invest in the future of XBorg</h2>
+        <h2 className="text-center">
+          Invest in <span>the future of XBorg</span>
+        </h2>
 
         <div className="desc text-center">
           The only opportunity to invest early in XBorg, alongside the best
@@ -127,7 +115,10 @@ export const Supporters = () => {
         </div>
 
         <div className="actions row">
-          <ButtonPrimary label="Register interest" />
+          <ButtonPrimary label="Register interest" to="/seed" />
+        </div>
+        <div className="mobile-coming text-center w-full">
+          Coming end of April
         </div>
       </div>
 

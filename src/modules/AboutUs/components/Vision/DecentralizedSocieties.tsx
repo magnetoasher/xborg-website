@@ -56,7 +56,7 @@ export const DecentralizedSocieties = () => {
 
       <ObserverContainer className="parallaxed row column middle center">
         <ParallaxLayer
-          image={Images.launchpad.folder}
+          image={Images.aboutUs.deck}
           factorX={0.1}
           factorY={0.1}
           speed={0}

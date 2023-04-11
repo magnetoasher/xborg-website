@@ -25,18 +25,22 @@ export const Vision = () => {
   const [active, setActive] = useState<number>(activeSpotlight);
   const [changing, setChanging] = useState<boolean>(false);
   const [mobile, setMobile] = useState<boolean>(window.innerWidth <= 992);
-  console.log("IS MOBILE _- ", mobile);
-  const height = window.innerHeight;
+  const [height, setHeight] = useState<number>(window.innerHeight);
 
   const appVM = new AppViewModel();
   const textVM = new TextManipulation();
 
   useEffect(() => {
     if (childRef.current && parentRef.current) {
+      const parent = parentRef.current as HTMLElement;
+      const child = childRef.current as HTMLElement;
       appVM.stickyElement(
-        parentRef.current as HTMLElement,
-        childRef.current as HTMLElement,
-        onScroll
+        parent,
+        child,
+        window.innerHeight,
+        onScroll,
+        setHeight,
+        setMobile
       );
     }
   }, []);

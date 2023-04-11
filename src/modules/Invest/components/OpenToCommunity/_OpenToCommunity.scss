@@ -54,4 +54,33 @@
       }
     }
   }
+
+  @media (max-width: $sm-max) {
+    h2 {
+      font-size: 24px;
+      line-height: 30px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .desc {
+      width: 100%;
+      text-align: left;
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    .token-utility {
+      flex-direction: column-reverse;
+      margin-top: 24px;
+
+      .typography {
+        width: 100%;
+
+        h4 {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
 }

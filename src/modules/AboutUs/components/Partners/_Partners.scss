@@ -5,11 +5,25 @@
 
   .list {
     margin-top: 56px;
+
+    &.in {
+      .list-item {
+        opacity: 1;
+      }
+    }
   }
 
   .list-item {
     width: 33.333%;
     padding-right: 10px;
+    opacity: 0;
+    transition: 0.3s ease-in;
+
+    @for $i from 1 through 9 {
+      &:nth-child(#{$i}) {
+        transition-delay: 0.1s * $i;
+      }
+    }
 
     img {
       max-height: 59px;

@@ -36,7 +36,11 @@ export type SeedFormType = {
   timestamp?: string;
 };
 
-export const Seed = () => {
+export type SeedPageProps = {
+  setNavbarBtnVisibility: (val: boolean) => void;
+};
+
+export const Seed = ({ setNavbarBtnVisibility }: SeedPageProps) => {
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
   const h4ref = useRef(null);
@@ -63,6 +67,8 @@ export const Seed = () => {
     const scrollVM = new ScrollViewModel();
     scrollVM.removeCustomScrolling();
     dispatch(SeedActions.getSeed());
+
+    setNavbarBtnVisibility(false);
   }, []);
 
   const itemsperpage = 10;
@@ -260,7 +266,10 @@ export const Seed = () => {
                 </div>
               </div>
               {chartView ? (
-                <LineGraph data={seedSummary?.summary} />
+                <LineGraph
+                  data={seedSummary?.summary}
+                  submissions={seedSummary?.nbSubmissions}
+                />
               ) : (
                 <ObserverContainer className="submissions">
                   {slicedPage.map((item, index) => (

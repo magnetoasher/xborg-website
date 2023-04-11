@@ -10,3 +10,5 @@ export * from "./OpenToCommunity";
 export * from "./WhyNow";
 export * from "./Supporters";
 export * from "./Forefront";
+export * from "./Early";
+export * from "./HowTo";

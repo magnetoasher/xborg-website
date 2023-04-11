@@ -11,7 +11,7 @@ import {
 export const StartPlayingToday = () => {
   return (
     <div className={`start-playing-today expand row column`}>
-      <div className="expand row middle">
+      <div className="expand row middle content">
         <div className="description expand row column middle">
           <h2 className="text-center">
             <span>Start</span> playing <span>today</span>

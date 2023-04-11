@@ -1,11 +1,17 @@
+import { useRef } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import {
   GameTile,
   ObserverContainer,
   SectionDescription,
 } from "../../../../components";
+import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const GamingProfile = () => {
+  const titleRef = useRef(null);
+
+  const textVM = new TextManipulation();
+
   return (
     <div className="gaming-profile expand">
       <div className={"section-head-container"}>
@@ -15,11 +21,16 @@ export const GamingProfile = () => {
             <img src={Images.logo.default} alt="" />
 
             <h2 className="section-head-title">
-              <span>The ultimate</span> gaming profile
+              <span ref={titleRef}>The ultimate</span>
+              <br />
+              gaming profile
             </h2>
           </div>
         </div>
-        <SectionDescription className="section-head-desc">
+        <SectionDescription
+          className="section-head-desc"
+          onAnimateIn={() => textVM.scrambleText(titleRef)}
+        >
           Level up your gaming experience and earn rewards based on your in-game
           skills and esports reputation.
         </SectionDescription>

@@ -27,15 +27,26 @@
   }
 
   @media (max-width: $md-max) {
-    position: relative;
     flex-wrap: wrap;
-    height: auto;
     width: 100%;
     padding-top: 80px;
-    transform: translate(0, 0);
+    transform: translateY(0);
+    height: auto;
 
     a {
       width: 50%;
+    }
+  }
+
+  @media (max-width: $sm-max) {
+    padding-bottom: 80px;
+    padding-top: 40px;
+  }
+
+  @media (max-width: $xxs-max) {
+    a {
+      width: 100%;
+      text-align: center;
     }
   }
 }

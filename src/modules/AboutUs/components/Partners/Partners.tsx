@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { Images } from "../../../../assets/imgs/Images";
-import { SectionDescription } from "../../../../components";
+import { ObserverContainer, SectionDescription } from "../../../../components";
 import { TextScramble } from "../../../../viewmodels/TextScramble";
 
 export const Partners = () => {
@@ -17,7 +17,7 @@ export const Partners = () => {
             </h2>
           </div>
         </div>
-        <div className="list row row-wrap">
+        <ObserverContainer className="list row row-wrap">
           <div className="list-item">
             <img src={Images.partners.partner01} alt="" />
           </div>
@@ -45,7 +45,7 @@ export const Partners = () => {
           <div className="list-item">
             <img src={Images.partners.partner09} alt="" />
           </div>
-        </div>
+        </ObserverContainer>
       </div>
 
       <div className="swissborg row column middle center text-center">

@@ -4,23 +4,29 @@ import { AppViewModel } from "../../../../viewmodels/AppViewModel";
 export const Forefront = () => {
   const childRef = useRef(null);
   const parentRef = useRef(null);
-  const height = 411;
   const [active, setActive] = useState<number>(0);
+  const [mobile, setMobile] = useState<boolean>(window.innerWidth <= 992);
+  const [height, setHeight] = useState<number>(window.innerHeight);
 
   const appVM = new AppViewModel();
 
   useEffect(() => {
     if (childRef.current && parentRef.current) {
+      const parent = parentRef.current as HTMLElement;
+      const child = childRef.current as HTMLElement;
       appVM.stickyElement(
-        parentRef.current as HTMLElement,
-        childRef.current as HTMLElement,
-        onScroll
+        parent,
+        child,
+        window.innerHeight,
+        onScroll,
+        setHeight,
+        setMobile
       );
     }
   }, []);
 
   const onScroll = (scrolled: number) => {
-    const scrollHeight = height * 5;
+    const scrollHeight = height * 2;
     const pos3 = scrollHeight / 1.6;
     const pos2 = scrollHeight / 3.6;
 
@@ -36,11 +42,13 @@ export const Forefront = () => {
   return (
     <div className="forefront row column middle center w-full">
       <div className="content">
-        <h2 className="text-center">XBorg is at the forefront of gaming</h2>
+        <h2 className="text-center">
+          XBorg is at the <span>forefront of gaming</span>
+        </h2>
 
         <div
           className="mock-height w-full"
-          style={{ height: height * 6 }}
+          style={{ height: height * 2 }}
           ref={parentRef}
         >
           <div className={`key-points row state-${active}`} ref={childRef}>

@@ -46,23 +46,29 @@ let activeSpotlight: number = 0;
 
 export const ProductSpotlight = () => {
   const titleRef = useRef(null);
-  const visionRef = useRef(null);
+  const childRef = useRef(null);
   const parentRef = useRef(null);
   const blockTitles = [useRef(null), useRef(null), useRef(null)];
 
-  const height = window.innerHeight;
   const [active, setActive] = useState<number>(activeSpotlight);
   const [changing, setChanging] = useState<boolean>(false);
+  const [mobile, setMobile] = useState<boolean>(window.innerWidth <= 992);
+  const [height, setHeight] = useState<number>(window.innerHeight);
 
   const appVM = new AppViewModel();
   const textVM = new TextManipulation();
 
   useEffect(() => {
-    if (visionRef.current && parentRef.current) {
+    if (childRef.current && parentRef.current) {
+      const parent = parentRef.current as HTMLElement;
+      const child = childRef.current as HTMLElement;
       appVM.stickyElement(
-        parentRef.current as HTMLElement,
-        visionRef.current as HTMLElement,
-        onScroll
+        parent,
+        child,
+        window.innerHeight,
+        onScroll,
+        setHeight,
+        setMobile
       );
     }
   }, []);
@@ -109,7 +115,7 @@ export const ProductSpotlight = () => {
   return (
     <div className="product-spotlight w-full row column middle center">
       <h2 className="text-center">
-        Product <span ref={titleRef}>spotlight</span>
+        <span ref={titleRef}>Product</span> spotlight
       </h2>
 
       <div
@@ -119,7 +125,7 @@ export const ProductSpotlight = () => {
       >
         <div
           className="products-container row column middle center"
-          ref={visionRef}
+          ref={childRef}
         >
           <ObserverContainer
             className={`products row between middle${
@@ -134,8 +140,8 @@ export const ProductSpotlight = () => {
               <span className={active == 1 ? "active" : ""} />
               <span className={active == 2 ? "active" : ""} />
             </div>
-            {active == 0 && (
-              <>
+            {active == 0 || mobile == true ? (
+              <div className="row middle between expand product-wrapper">
                 <div className="details row column">
                   <div className="row">
                     <div className="before-title">
@@ -158,7 +164,11 @@ export const ProductSpotlight = () => {
                     challenges.
                   </SectionDescription>
                   <div className="actions row">
-                    <ButtonSecondary label="Learn more" />
+                    <ButtonSecondary
+                      label="Learn more"
+                      to="https://gaming.xborg.com"
+                      target="_blank"
+                    />
                   </div>
                 </div>
 
@@ -179,10 +189,10 @@ export const ProductSpotlight = () => {
                     className="parallaxed-2"
                   />
                 </ObserverContainer>
-              </>
-            )}
-            {active == 1 && (
-              <>
+              </div>
+            ) : null}
+            {active == 1 || mobile == true ? (
+              <div className="row middle between expand product-wrapper">
                 <div className="details row column">
                   <div className="row">
                     <div className="before-title">
@@ -206,7 +216,11 @@ export const ProductSpotlight = () => {
                     Launching in Q2 2023.
                   </SectionDescription>
                   <div className="actions row">
-                    <ButtonSecondary label="Learn more" />
+                    <ButtonSecondary
+                      label="Learn more"
+                      to="https://mybds.gg"
+                      target="_blank"
+                    />
                   </div>
                 </div>
 
@@ -220,10 +234,10 @@ export const ProductSpotlight = () => {
                     className="parallaxed-1"
                   />
                 </ObserverContainer>
-              </>
-            )}
-            {active == 2 && (
-              <>
+              </div>
+            ) : null}
+            {active == 2 || mobile == true ? (
+              <div className="row middle between expand product-wrapper">
                 <div className="details row column">
                   <div className="row">
                     <div className="before-title">
@@ -244,7 +258,11 @@ export const ProductSpotlight = () => {
                     and players.
                   </SectionDescription>
                   <div className="actions row">
-                    <ButtonSecondary label="Enter Launchpad" />
+                    <ButtonSecondary
+                      label="Enter Launchpad"
+                      to="https://launchpad.xborg.com"
+                      target="_blank"
+                    />
                   </div>
                 </div>
 
@@ -287,8 +305,8 @@ export const ProductSpotlight = () => {
                     ))}
                   </Swiper>
                 </ObserverContainer>
-              </>
-            )}
+              </div>
+            ) : null}
           </ObserverContainer>
         </div>
       </div>

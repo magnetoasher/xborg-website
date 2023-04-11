@@ -3,6 +3,7 @@ import {
   ParallaxLayer,
   ObserverContainer,
   Links,
+  SectionDescription,
 } from "../../../../components";
 import { PickGame } from "../PickGame/PickGame";
 
@@ -21,10 +22,10 @@ export const DontMiss = () => {
                 </h2>
               </div>
             </div>
-            <p className="section-head-desc">
+            <SectionDescription className="section-head-desc">
               Stay up to date with all Xtreme Championship Series news,
               announcements and action.
-            </p>
+            </SectionDescription>
           </div>
           <div className="row btn-container">
             <a

@@ -33,7 +33,7 @@ export const SectionDescription = ({
     <ObserverContainer
       onAnimateIn={async () => {
         const desc = ref.current as unknown as HTMLElement;
-        innerHTMLClone = desc.innerHTML;
+        innerHTMLClone = desc?.innerHTML ?? "";
 
         if (desc) {
           onAnimateIn?.();

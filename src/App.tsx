@@ -16,12 +16,16 @@ import { useState } from "react";
 
 function App() {
   const [visibleNavbar, setNavbarVisibility] = useState<boolean>(true);
+  const [visibleNavbarBtn, setNavbarBtnVisibility] = useState<boolean>(true);
   return (
     <BrowserRouter>
       <Provider store={store}>
         <ToastContainer />
-        {visibleNavbar && <Navigation />}
-        <AppRouter setNavbarVisibility={setNavbarVisibility} />
+        {visibleNavbar && <Navigation visibleNavbarBtn={visibleNavbarBtn} />}
+        <AppRouter
+          setNavbarVisibility={setNavbarVisibility}
+          setNavbarBtnVisibility={setNavbarBtnVisibility}
+        />
         <Links />
         <Footer />
       </Provider>

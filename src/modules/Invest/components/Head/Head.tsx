@@ -21,28 +21,36 @@ export const Head = () => {
   }, []);
 
   return (
-    <div className="row middle between head">
-      <div className="head-details">
-        <h2>
-          Invest <span ref={introRef}>in the future of XBorg</span>
-        </h2>
+    <div className="head">
+      <div className="row middle between">
+        <div className="head-details">
+          <h2>
+            Invest <span ref={introRef}>in the future of XBorg</span>
+          </h2>
 
-        <SectionDescription className="subtitle">
-          The only opportunity to invest early in XBorg, alongside the best
-          investors of the space.
-        </SectionDescription>
+          <SectionDescription className="subtitle">
+            The only opportunity to invest early in XBorg, alongside the best
+            investors of the space.
+          </SectionDescription>
 
-        <div className="coming row middle">
-          <span className="coming-desc">Coming end of April</span>
-          <Countdown date={new Date("2023/05/01")} />
+          <div className="coming row middle">
+            <span className="coming-desc">Coming end of April</span>
+            <Countdown date={new Date("2023/05/01")} />
+          </div>
+
+          <div className="row action">
+            <ButtonPrimary label="Register interest" to="/seed" />
+          </div>
         </div>
 
-        <div className="row">
-          <ButtonPrimary label="Register interest" />
-        </div>
+        <LineGraph
+          data={seedSummary?.summary}
+          submissions={seedSummary?.nbSubmissions}
+        />
       </div>
-
-      <LineGraph data={seedSummary?.summary} />
+      <div className="mobile-coming text-center w-full">
+        Coming end of April
+      </div>
     </div>
   );
 };

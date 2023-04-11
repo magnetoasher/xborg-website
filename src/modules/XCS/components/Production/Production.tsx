@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import {
   ParallaxLayer,
@@ -5,9 +6,14 @@ import {
   Table,
   TableDataColumn,
   ButtonPrimary,
+  SectionDescription,
 } from "../../../../components";
+import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const Production = () => {
+  const scrambleRef = useRef(null);
+  const textVM = new TextManipulation();
+
   const livestreams: TableDataColumn[] = [
     {
       label: "March",
@@ -64,13 +70,18 @@ export const Production = () => {
                 <div className="row column expand">
                   <img src={Images.logo.default} alt="World Class Production" />
                   <h2 className="section-head-title">
-                    World Class <span>Production</span>
+                    World Class
+                    <br />
+                    <span ref={scrambleRef}>Production</span>
                   </h2>
                 </div>
               </div>
-              <p className="section-head-desc">
+              <SectionDescription
+                className="section-head-desc"
+                onAnimateIn={() => textVM.scrambleText(scrambleRef)}
+              >
                 Catch all of the action live on Twitch.
-              </p>
+              </SectionDescription>
             </div>
           </div>
 

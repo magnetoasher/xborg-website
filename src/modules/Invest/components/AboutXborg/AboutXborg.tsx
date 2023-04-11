@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import {
   CountUpAnimation,
   ObserverContainer,
+  ResponsiveVideo,
   SectionDescription,
 } from "../../../../components";
 import { ScrollViewModel } from "../../../../viewmodels/ScrollViewModel";
@@ -29,7 +30,7 @@ export const AboutXborg = () => {
     <div className="about-xborg w-full row column middle center">
       <Head />
 
-      <h2>
+      <h2 className="pioneering-title">
         Pioneering <span ref={titleRef}>gaming</span>
       </h2>
 
@@ -49,15 +50,8 @@ export const AboutXborg = () => {
         </SectionDescription>
       </div>
 
-      <ObserverContainer className="video-container">
-        <iframe
-          width="520"
-          height="292"
-          src="https://www.youtube.com/embed/UAKw_2SWheg"
-          title="Introducing the new XBorg"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
+      <ObserverContainer className="video-container w-full">
+        <ResponsiveVideo src="https://www.youtube.com/embed/UAKw_2SWheg" />
       </ObserverContainer>
 
       <div className="row statistics text-center">

@@ -169,4 +169,106 @@
       letter-spacing: 0.05em;
     }
   }
+
+  .mobile-coming {
+    display: none;
+  }
+
+  @media (max-width: $md-max) {
+    .partners-list {
+      h2 {
+        padding-left: 0;
+        margin-top: 48px;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    .content {
+      flex-direction: column;
+    }
+
+    .swissborg {
+      margin-left: 0;
+      text-align: left;
+      align-items: flex-start;
+
+      img {
+        width: 78px;
+        height: 74px;
+      }
+    }
+  }
+
+  @media (max-width: $sm-max) {
+    h2 {
+      font-size: 24px;
+      line-height: 30px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .list {
+      margin-top: 0;
+
+      .list-item {
+        width: 50%;
+        margin: 4px 0;
+      }
+    }
+
+    .articles-list {
+      margin-top: 16px;
+    }
+
+    .featured-in {
+      margin: 48px 0;
+
+      .featured-list {
+        margin-top: 16px;
+      }
+    }
+
+    .invest-early {
+      margin-top: 48px;
+      align-items: flex-start;
+
+      h2 {
+        font-size: 40px;
+        line-height: 50px;
+      }
+
+      .desc {
+        text-align: left;
+      }
+    }
+
+    .actions {
+      width: 100%;
+
+      .btn-primary {
+        width: 100%;
+        padding: 16px;
+
+        span {
+          font-size: 14px;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-align: center;
+        }
+      }
+    }
+
+    .mobile-coming {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 18px;
+      letter-spacing: 0.1em;
+      color: $light100;
+      margin: 32px 0 0;
+      display: block;
+    }
+  }
 }

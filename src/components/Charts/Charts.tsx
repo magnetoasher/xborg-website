@@ -1,19 +1,36 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { XAxis, Tooltip, AreaChart, Area, ResponsiveContainer } from "recharts";
+import {
+  XAxis,
+  Tooltip,
+  AreaChart,
+  Area,
+  ResponsiveContainer,
+  Line,
+} from "recharts";
+import { formatNumberToK } from "../../helpers/inputs";
 import { months } from "../../helpers/time";
 import { AppDispatch } from "../../store";
 import { SeedViewModel } from "../../viewmodels/SeedViewModel";
 
 export type LineGraphProps = {
   data: any;
+  submissions?: number;
 };
 
-export const LineGraph = ({ data }: LineGraphProps) => {
+export const LineGraph = ({ data, submissions }: LineGraphProps) => {
+  const newData = data?.map((item: any, index: number) => ({
+    ...item,
+    xaxisLabel: item.date?.split("/")[1],
+    cap: index > data.length / 10 ? 1100000 : undefined,
+  }));
+
+  if (!data?.length) return null;
+
   return (
     <div className={`line-graph`}>
       <ResponsiveContainer width="100%" height="100%">
-        <AreaChart data={data}>
+        <AreaChart data={newData}>
           <defs>
             <linearGradient id="colorView" x1="0" y1="0" x2="0" y2="1">
               <stop offset="30%" stopColor="#eb3a4a" stopOpacity={0.4} />
@@ -21,20 +38,32 @@ export const LineGraph = ({ data }: LineGraphProps) => {
             </linearGradient>
           </defs>
           <Tooltip
-            content={<CustomTooltip data={data} />}
+            content={<CustomTooltip data={data} submissions={submissions} />}
             cursorStyle={{
-              stroke: "yellow",
+              stroke: "cyan",
             }}
           />
 
-          <XAxis dataKey="date" />
+          <XAxis dataKey="xaxisLabel" interval={3} />
           <Area
             dataKey="compounded"
-            type="monotone"
+            type="basis"
             stroke="#eb3a4a"
             strokeWidth={3}
             strokeOpacity={1}
             fill="url(#colorView)"
+            activeDot={<ActiveDot />}
+          />
+
+          <Area
+            dataKey="cap"
+            type="monotone"
+            stroke="#eb3a4a"
+            strokeWidth={1}
+            strokeOpacity={1}
+            strokeDasharray={2}
+            fill="transparent"
+            activeDot={<ActiveDotEmpty />}
           />
         </AreaChart>
       </ResponsiveContainer>
@@ -42,23 +71,69 @@ export const LineGraph = ({ data }: LineGraphProps) => {
   );
 };
 
-const CustomTooltip = ({ active, payload, label, data }: any) => {
+const ActiveDotEmpty = (props: any) => {
+  const { cy } = props;
+
+  if (!cy) return null;
+
+  return (
+    <text
+      orientation="bottom"
+      width="30"
+      height="30"
+      x={0}
+      y={cy}
+      stroke="none"
+      fill="#fff"
+      fontWeight={700}
+      fontSize={12}
+    >
+      <tspan>$1,1M Cap</tspan>
+    </text>
+  );
+};
+
+const ActiveDot = (props: any) => {
+  const { cx, cy } = props;
+
+  return (
+    <svg
+      x={cx - 8}
+      y={cy - 8}
+      width="17"
+      height="17"
+      viewBox="0 0 17 17"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="8.21484" cy="8.59424" r="7.5" stroke="#D1D3D4" />
+      <circle cx="8.21484" cy="8.59424" r="5" fill="#D1D3D4" />
+    </svg>
+  );
+};
+
+const CustomTooltip = ({ active, payload, data, submissions }: any) => {
   const dispatch = useDispatch<AppDispatch>();
   const vm = new SeedViewModel(dispatch);
-  const row = vm.findRowByDate(data, label);
-  const dateArray = label?.split("/") || [];
+  const date = payload?.[0]?.payload?.date;
+
+  if (!date) return null;
+
+  const row = vm.findRowByDate(data, date);
+  const dateArray = date?.split("/") || [];
 
   if (active && payload && payload.length) {
     if (!row) return null;
     return (
       <div className="recharts-tooltip">
         <div className="row column middle center">
-          <div className="submissions">
-            ${(row.compounded as number).toLocaleString()} soft committed
+          <div className="commited">
+            ${formatNumberToK(row.compounded as number, 2)}
           </div>
-          <span>
+          <div className="submissions">{submissions} submissions</div>
+          <div className="date">
             {months[dateArray[0] - 1]} {dateArray[1]},{dateArray[2]}
-          </span>
+          </div>
         </div>
       </div>
     );

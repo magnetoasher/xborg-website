@@ -3,20 +3,25 @@ export type ArticleProps = {
   tag: string;
   date: string;
   title: string;
+  link: string;
 };
 
-export const Article = ({ image, tag, date, title }: ArticleProps) => {
+export const Article = ({ image, tag, date, title, link }: ArticleProps) => {
   return (
     <article className="article">
-      <div className="article-image">
+      <a href={link} className="article-image">
         <img src={image} alt="" />
-      </div>
-      <div className="row between middle">
-        <div className="tag">{tag}</div>
+      </a>
+      <div className="article-content">
+        <div className="row between middle">
+          <div className="tag">{tag}</div>
 
-        <div className="date">{date}</div>
+          <div className="date">{date}</div>
+        </div>
+        <a href={link} className="title">
+          {title}
+        </a>
       </div>
-      <div className="title">{title}</div>
     </article>
   );
 };

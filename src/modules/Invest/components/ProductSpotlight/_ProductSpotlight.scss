@@ -232,7 +232,8 @@
   // Parallaxed 2
   .parallaxed-container-2 {
     .parallaxed-1 img {
-      width: 438px;
+      max-width: 438px;
+      width: 100%;
       opacity: 0;
       transform: scale(0.5) rotate(30deg);
       transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
@@ -337,6 +338,66 @@
         .swiper-description,
         .swiper-name {
           opacity: 1;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $sm-max) {
+    h2 {
+      font-size: 24px;
+      line-height: 30px;
+      width: 100%;
+      margin-top: 48px;
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    .mock-height {
+      height: auto !important;
+    }
+
+    .products {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .product-wrapper {
+      flex-direction: column;
+      width: 100%;
+
+      .parallaxed-container-2 {
+        margin-top: 64px;
+      }
+    }
+
+    .details {
+      max-width: 100%;
+      margin: 48px 0 32px;
+
+      .before-title {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0.05em;
+      }
+    }
+
+    .parallaxed-container-1 {
+      width: 100%;
+      max-width: 440px;
+      transform: translate(0, 0);
+
+      .parallaxed-1 img {
+        width: 66.666%;
+      }
+
+      .parallaxed-2 {
+        transform: translateY(-39%) translateX(48%);
+
+        img {
+          width: 49.41%;
+          max-width: 49.41%;
         }
       }
     }

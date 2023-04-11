@@ -12,18 +12,23 @@ export const VisionIntroduction = () => {
   const parentRef = useRef(null);
 
   const [active, setActive] = useState<number>(activeSpotlight);
+  const [mobile, setMobile] = useState<boolean>(window.innerWidth <= 992);
+  const [height, setHeight] = useState<number>(window.innerHeight);
   const [changing, setChanging] = useState<boolean>(false);
-
-  const height = window.innerHeight;
 
   const appVM = new AppViewModel();
 
   useEffect(() => {
     if (childRef.current && parentRef.current) {
+      const parent = parentRef.current as HTMLElement;
+      const child = childRef.current as HTMLElement;
       appVM.stickyElement(
-        parentRef.current as HTMLElement,
-        childRef.current as HTMLElement,
-        onScroll
+        parent,
+        child,
+        window.innerHeight,
+        onScroll,
+        setHeight,
+        setMobile
       );
     }
   }, []);

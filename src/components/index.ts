@@ -24,3 +24,4 @@ export * from "./SectionDescription";
 export * from "./CountUpAnimation";
 export * from "./Alert";
 export * from "./Article";
+export * from "./ResponsiveVideo";

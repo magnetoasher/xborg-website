@@ -1,7 +1,16 @@
+import { useRef } from "react";
 import { Images } from "../../../../assets/imgs/Images";
-import { ParallaxLayer, ObserverContainer } from "../../../../components";
+import {
+  ParallaxLayer,
+  ObserverContainer,
+  SectionDescription,
+} from "../../../../components";
+import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const TheLeague = () => {
+  const titleRef = useRef(null);
+
+  const textVM = new TextManipulation();
   return (
     <div className={`the-league expand row column`}>
       <div className="expand row middle between">
@@ -12,13 +21,18 @@ export const TheLeague = () => {
               <div className="row column expand">
                 <img src={Images.logo.default} alt="The League We Need" />
                 <h2 className="section-head-title">
-                  <span>The League</span> We Need
+                  <span ref={titleRef}>The League</span>
+                  <br />
+                  We Need
                 </h2>
               </div>
             </div>
-            <p className="section-head-desc">
+            <SectionDescription
+              className="section-head-desc"
+              onAnimateIn={() => textVM.scrambleText(titleRef)}
+            >
               A high-stakes, live production, multi-game esports competition.
-            </p>
+            </SectionDescription>
           </div>
         </div>
         <ObserverContainer className="parallaxed expand">
@@ -44,12 +58,12 @@ export const TheLeague = () => {
         <div className="title">
           <span>Powered by</span> leading organizations
         </div>
-        <div className="partners row middle between">
+        <ObserverContainer className="partners row middle between">
           <img src={Images.XCS.swissborg} alt="Swissborg" />
           <img src={Images.XCS.brave} alt="Brave" />
           <img src={Images.XCS.communitygaming} alt="Community Gaming" />
           {/* <img src={Images.XCS.gala} alt='Gala Games' /> */}
-        </div>
+        </ObserverContainer>
       </div>
     </div>
   );

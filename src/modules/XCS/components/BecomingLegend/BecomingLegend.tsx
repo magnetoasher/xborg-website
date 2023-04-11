@@ -2,8 +2,7 @@ import { Images } from "../../../../assets/imgs/Images";
 import {
   ParallaxLayer,
   ObserverContainer,
-  TableDataColumn,
-  ButtonPrimary,
+  SectionDescription,
 } from "../../../../components";
 
 export const BecomingLegend = () => {
@@ -21,11 +20,11 @@ export const BecomingLegend = () => {
                 </h2>
               </div>
             </div>
-            <p className="section-head-desc">
+            <SectionDescription className="section-head-desc">
               A 10-episode docu-series about Season 1 of the Xtreme Championship
               Series with behind the scenes drama, match-day highlights and
               exclusive interviews.
-            </p>
+            </SectionDescription>
           </div>
           <div className="row column releasing-date start top">
             <p>Releasing on YouTube in August 2023</p>

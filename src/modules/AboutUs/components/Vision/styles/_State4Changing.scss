@@ -6,6 +6,13 @@
   }
 
   .decentralized-societies {
-    opacity: 0;
+    .col,
+    .parallaxed {
+      .btn-secondary,
+      .parallaxed-1 img,
+      .knowmore {
+        opacity: 0;
+      }
+    }
   }
 }

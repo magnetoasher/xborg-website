@@ -83,7 +83,8 @@
     transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
 
     img {
-      width: 234.1px;
+      max-width: 234.1px;
+      width: 100%;
       transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
@@ -106,6 +107,53 @@
       .parallaxed-2 img {
         transition-delay: 0.3s;
       }
+    }
+  }
+
+  @media (max-width: $md-max) {
+    .competetive-community-container {
+      flex-direction: column;
+    }
+
+    .details {
+      width: 100%;
+    }
+
+    .stats {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 32px;
+    }
+
+    .statistics {
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      .stats-value,
+      .stats-label {
+        text-align: left;
+      }
+    }
+  }
+
+  @media (max-width: $sm-max) {
+    h2 {
+      font-size: 24px;
+      line-height: 30px;
+      width: 100%;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+
+    h4 {
+      font-size: 24px;
+    }
+
+    .live {
+      font-size: 12px;
+      font-weight: 400;
     }
   }
 }

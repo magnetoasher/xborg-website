@@ -35,7 +35,7 @@ export const Collectibles = () => {
           image={Images.xborgapp.collectible2}
           factorX={-0.1}
           factorY={-0.1}
-          speed={7}
+          speed={3}
           isBase
           className="parallaxed-1"
         />
@@ -53,7 +53,7 @@ export const Collectibles = () => {
               <img src={Images.xborgapp.hair1} alt="Hair 1" />
             </div>
 
-            <div className="row column">
+            <div className="row column collectible-data">
               <div className="name">Blue Spiky Hair</div>
               <div className="row middle line">
                 <div className="rarity">

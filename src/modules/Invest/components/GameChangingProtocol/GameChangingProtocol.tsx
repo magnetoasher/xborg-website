@@ -6,20 +6,26 @@ import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const GameChangingProtocol = () => {
   const titleRef = useRef(null);
-  const visionRef = useRef(null);
+  const childRef = useRef(null);
   const parentRef = useRef(null);
-  const height = 411;
   const [active, setActive] = useState<number>(0);
+  const [mobile, setMobile] = useState<boolean>(window.innerWidth <= 992);
+  const [height, setHeight] = useState<number>(window.innerHeight);
 
   const appVM = new AppViewModel();
   const textVM = new TextManipulation();
 
   useEffect(() => {
-    if (visionRef.current && parentRef.current) {
+    if (childRef.current && parentRef.current) {
+      const parent = parentRef.current as HTMLElement;
+      const child = childRef.current as HTMLElement;
       appVM.stickyElement(
-        parentRef.current as HTMLElement,
-        visionRef.current as HTMLElement,
-        onScroll
+        parent,
+        child,
+        window.innerHeight,
+        onScroll,
+        setHeight,
+        setMobile
       );
     }
   }, []);
@@ -51,7 +57,7 @@ export const GameChangingProtocol = () => {
         style={{ height: height * 6 }}
         ref={parentRef}
       >
-        <div className="vision-intro-parallaxed-container" ref={visionRef}>
+        <div className="vision-intro-parallaxed-container" ref={childRef}>
           <ObserverContainer
             className="vision-intro-parallaxed row"
             onAnimateIn={() => textVM.scrambleText(titleRef)}
