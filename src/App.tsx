@@ -15,17 +15,13 @@ import "./styles/main.css";
 import { useState } from "react";
 
 function App() {
-  const [visibleNavbar, setNavbarVisibility] = useState<boolean>(true);
-  const [visibleNavbarBtn, setNavbarBtnVisibility] = useState<boolean>(true);
+  const [navbarBtn, setNavbarBtn] = useState<any>(undefined);
   return (
     <BrowserRouter>
       <Provider store={store}>
         <ToastContainer />
-        {visibleNavbar && <Navigation visibleNavbarBtn={visibleNavbarBtn} />}
-        <AppRouter
-          setNavbarVisibility={setNavbarVisibility}
-          setNavbarBtnVisibility={setNavbarBtnVisibility}
-        />
+        <Navigation navbarBtn={navbarBtn} />
+        <AppRouter setNavbarBtn={setNavbarBtn} />
         <Links />
         <Footer />
       </Provider>

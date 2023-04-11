@@ -1,7 +1,6 @@
 import { useEffect } from "react";
-import { Layout } from "../../components";
+import { ButtonPrimary, Layout } from "../../components";
 import {
-  Navbar,
   AboutXborg,
   GameChangingProtocol,
   ProductSpotlight,
@@ -9,30 +8,33 @@ import {
   Supporters,
 } from "./components";
 
-type InvestPageProps = {
-  setNavbarVisibility: (val: boolean) => void;
+export type InvestPageProps = {
+  setNavbarBtn: (val: any) => void;
 };
 
-export const PageAboutXborg = ({ setNavbarVisibility }: InvestPageProps) => {
+export const PageAboutXborg = ({ setNavbarBtn }: InvestPageProps) => {
   useEffect(() => {
-    setNavbarVisibility(false);
+    setNavbarBtn(<NavbarButton />);
 
-    return () => setNavbarVisibility(true);
+    return () => setNavbarBtn(undefined);
   }, []);
 
   return (
-    <>
-      <Navbar active={0} />
-      <Layout
-        className="invest w-full row column"
-        components={[
-          <AboutXborg />,
-          <GameChangingProtocol />,
-          <ProductSpotlight />,
-          <Competetive />,
-          <Supporters />,
-        ]}
-      />
-    </>
+    <Layout
+      className="invest w-full row column"
+      components={[
+        <AboutXborg />,
+        <GameChangingProtocol />,
+        <ProductSpotlight />,
+        <Competetive />,
+        <Supporters />,
+      ]}
+    />
   );
 };
+
+const NavbarButton = () => (
+  <div className="early-access">
+    <ButtonPrimary label="Register interest" to="seed" />
+  </div>
+);

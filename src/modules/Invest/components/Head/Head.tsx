@@ -22,7 +22,7 @@ export const Head = () => {
 
   return (
     <div className="head">
-      <div className="row middle between">
+      <div className="head-content row middle between">
         <div className="head-details">
           <h2>
             Invest <span ref={introRef}>in the future of XBorg</span>
@@ -35,7 +35,7 @@ export const Head = () => {
 
           <div className="coming row middle">
             <span className="coming-desc">Coming end of April</span>
-            <Countdown date={new Date("2023/05/01")} />
+            {/* <Countdown date={new Date("2023/05/03")} /> */}
           </div>
 
           <div className="row action">

@@ -49,7 +49,7 @@ export const mostreadarticles: ArticleProps[] = [
     tag: "Partnership",
     date: "Mar 30, 2023",
     image: Images.news.xborgbds,
-    link: "https://medium.com/xborg-official/xborg-to-become-the-first-gaming-network-state-e1046b8d3bfc",
+    link: "https://medium.com/xborg-official/xborg-and-team-bds-create-the-future-of-esports-a991de982ac8",
   },
   {
     title:
@@ -57,13 +57,13 @@ export const mostreadarticles: ArticleProps[] = [
     tag: "Spotlight",
     date: "Feb 1, 2023",
     image: Images.news.revolution,
-    link: "https://medium.com/xborg-official/xborg-to-become-the-first-gaming-network-state-e1046b8d3bfc",
+    link: "https://medium.com/xborg-official/xborg-and-team-bds-create-the-future-of-esports-a991de982ac8",
   },
   {
     title: "XBorg to Become the First Gaming Network State.",
     tag: "Cyberlink",
     date: "Mar 29, 2023",
     image: Images.news.cyberlink6,
-    link: "https://medium.com/xborg-official/xborg-to-become-the-first-gaming-network-state-e1046b8d3bfc",
+    link: "https://medium.com/xborg-official/cyberlink-6-a3046ebedfd3",
   },
 ];

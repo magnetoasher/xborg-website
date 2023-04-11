@@ -22,7 +22,9 @@ export const LineGraph = ({ data, submissions }: LineGraphProps) => {
   const newData = data?.map((item: any, index: number) => ({
     ...item,
     xaxisLabel: item.date?.split("/")[1],
-    cap: index > data.length / 10 ? 1100000 : undefined,
+    cap: index > data.length / 7 ? 1100000 : undefined,
+    hardcap: index > data.length / 7 ? 1600000 : undefined,
+    top: 1700000,
   }));
 
   if (!data?.length) return null;
@@ -63,6 +65,26 @@ export const LineGraph = ({ data, submissions }: LineGraphProps) => {
             strokeOpacity={1}
             strokeDasharray={2}
             fill="transparent"
+            dot={<ActiveText fromTop={100} title="$1,1M Cap" />}
+            activeDot={<ActiveDotEmpty />}
+          />
+          <Area
+            dataKey="hardcap"
+            type="monotone"
+            stroke="#eb3a4a"
+            strokeWidth={1}
+            strokeOpacity={1}
+            fill="transparent"
+            dot={<ActiveText fromTop={35} title="$1,6M Cap" />}
+            activeDot={<ActiveDotEmpty />}
+          />
+          <Area
+            dataKey="top"
+            type="monotone"
+            stroke="transparent"
+            strokeWidth={1}
+            strokeOpacity={1}
+            fill="transparent"
             activeDot={<ActiveDotEmpty />}
           />
         </AreaChart>
@@ -71,10 +93,12 @@ export const LineGraph = ({ data, submissions }: LineGraphProps) => {
   );
 };
 
-const ActiveDotEmpty = (props: any) => {
-  const { cy } = props;
+const ActiveDotEmpty = () => null;
 
-  if (!cy) return null;
+const ActiveText = (props: any) => {
+  const { fromTop, title, index } = props;
+
+  if (index !== 0) return null;
 
   return (
     <text
@@ -82,13 +106,13 @@ const ActiveDotEmpty = (props: any) => {
       width="30"
       height="30"
       x={0}
-      y={cy}
+      y={fromTop}
       stroke="none"
       fill="#fff"
       fontWeight={700}
       fontSize={12}
     >
-      <tspan>$1,1M Cap</tspan>
+      <tspan>{title}</tspan>
     </text>
   );
 };

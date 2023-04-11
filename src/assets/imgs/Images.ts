@@ -20,6 +20,7 @@ export const Images = {
     partner07: require("./partners/myria.png"),
     partner08: require("./partners/zilliqa.png"),
     partner09: require("./partners/polkastarter.png"),
+    partner10: require("./partners/duo.png"),
     swissborg: require("./partners/swissborgicon.png"),
 
     cryptoslate: require("./partners/cryptoslate.png"),

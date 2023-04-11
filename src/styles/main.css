@@ -429,7 +429,6 @@ h4 {
 .reveal-from-bottom .letter {
   will-change: transform;
   position: relative;
-  display: inline-block;
   opacity: 0;
   transition: opacity 500ms cubic-bezier(0.77, 0, 0.175, 1);
 }
@@ -5018,15 +5017,26 @@ h4 {
   }
 }
 
+.invest-navigation-container {
+  position: relative;
+  margin-bottom: 80px;
+  height: 48px;
+}
+
 .invest-navigation {
-  position: fixed;
+  position: absolute;
   top: 0;
-  padding: 32px 32px 32px 148px;
-  z-index: 3;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 1640px;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.invest-navigation.sticky {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
 }
 .invest-navigation .tabs {
   padding-bottom: 0;
@@ -5040,8 +5050,9 @@ h4 {
   font-weight: 500;
   line-height: 15px;
   letter-spacing: 0.1em;
+  display: none;
 }
-.invest-navigation .go-back img {
+.invest-navigation .btn-primary {
   display: none;
 }
 @media (max-width: 1200px) {
@@ -5069,14 +5080,6 @@ h4 {
 @media (max-width: 768px) {
   .invest-navigation {
     left: 0;
-  }
-  .invest-navigation .go-back span {
-    display: none;
-  }
-  .invest-navigation .go-back img {
-    display: block;
-    height: 32px;
-    width: 32px;
   }
   .invest-navigation .heads {
     padding-left: 0px;
@@ -5147,7 +5150,7 @@ h4 {
   display: none;
 }
 @media (max-width: 992px) {
-  .invest .head {
+  .invest .head .head-content {
     flex-direction: column;
   }
 }
@@ -6482,15 +6485,7 @@ h4 {
   transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   color: #fff;
 }
-@media (max-width: 768px) {
-  .invest .whynow h2 {
-    font-size: 24px;
-    line-height: 30px;
-    width: 100%;
-    text-align: left;
-    margin-top: 48px;
-    margin-bottom: 8px;
-  }
+@media (max-width: 992px) {
   .invest .whynow .mock-height {
     height: auto !important;
   }
@@ -6515,6 +6510,16 @@ h4 {
     left: 0;
     width: 100%;
     margin-top: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .invest .whynow h2 {
+    font-size: 24px;
+    line-height: 30px;
+    width: 100%;
+    text-align: left;
+    margin-top: 48px;
+    margin-bottom: 8px;
   }
 }
 .invest .we-are-early {
@@ -7009,6 +7014,15 @@ h4 {
   height: 107px;
   z-index: 2;
 }
+.navigation-container.hidden-nav {
+  pointer-events: none;
+}
+.navigation-container.hidden-nav .navigation-links {
+  opacity: 0;
+}
+.navigation-container.hidden-nav .early-access {
+  pointer-events: all;
+}
 .navigation-container .hamburger-menu {
   display: none;
 }
@@ -7051,6 +7065,9 @@ h4 {
     transition-delay: 0.3s;
     stroke-dashoffset: 0;
   }
+}
+.navigation-container .navigation-links {
+  transition: 0.2s ease-in;
 }
 .navigation-container .navigation-links .brand {
   display: none;

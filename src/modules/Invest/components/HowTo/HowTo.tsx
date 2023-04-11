@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Images } from "../../../../assets/imgs/Images";
 import { Links } from "../../../../components";
 import { Head } from "../Head";
+import { Navbar } from "../Navbar";
 
 export const HowTo = () => {
   const [active, setActive] = useState<number>(-1);
@@ -15,6 +16,7 @@ export const HowTo = () => {
   return (
     <div className="howto w-full row column middle center">
       <Head />
+      <Navbar active={2} />
 
       <div className="content w-full">
         <h2>Choose a method of investment</h2>

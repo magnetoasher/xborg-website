@@ -1,10 +1,12 @@
 import { ObserverContainer, SectionDescription } from "../../../../components";
 import { Head } from "../Head";
+import { Navbar } from "../Navbar";
 
 export const NextBigThing = () => {
   return (
     <div className="next-big-thing row column middle center w-full">
       <Head />
+      <Navbar active={1} />
       <div className="content">
         <h2 className="text-center">
           Gaming & esports is the next <span>big thing</span>
@@ -40,7 +42,7 @@ export const NextBigThing = () => {
 
         <div className="estimate text-center">
           Estimated market sizes by 2030 -{" "}
-          <a href="" target="_blank">
+          <a href="https://www.web3-studios.com/research" target="_blank">
             Source
           </a>
         </div>

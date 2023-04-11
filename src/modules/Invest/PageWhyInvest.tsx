@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Layout } from "../../components";
+import { ButtonPrimary, Layout } from "../../components";
 import {
   Navbar,
   Supporters,
@@ -11,30 +11,33 @@ import {
 } from "./components";
 
 type InvestPageProps = {
-  setNavbarVisibility: (val: boolean) => void;
+  setNavbarBtn: (val: any) => void;
 };
 
-export const PageWhyInvest = ({ setNavbarVisibility }: InvestPageProps) => {
+export const PageWhyInvest = ({ setNavbarBtn }: InvestPageProps) => {
   useEffect(() => {
-    setNavbarVisibility(false);
+    setNavbarBtn(<NavbarButton />);
 
-    return () => setNavbarVisibility(true);
+    return () => setNavbarBtn(undefined);
   }, []);
 
   return (
-    <>
-      <Navbar active={1} />
-      <Layout
-        className="invest w-full row column"
-        components={[
-          <NextBigThing />,
-          <Forefront />,
-          <OpenToCommunity />,
-          <WhyNow />,
-          <Early />,
-          <Supporters />,
-        ]}
-      />
-    </>
+    <Layout
+      className="invest w-full row column"
+      components={[
+        <NextBigThing />,
+        <Forefront />,
+        <OpenToCommunity />,
+        <WhyNow />,
+        <Early />,
+        <Supporters />,
+      ]}
+    />
   );
 };
+
+const NavbarButton = () => (
+  <div className="early-access">
+    <ButtonPrimary label="Register interest" to="seed" />
+  </div>
+);

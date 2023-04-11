@@ -58,7 +58,9 @@
   }
 
   @media (max-width: $md-max) {
-    flex-direction: column;
+    .head-content {
+      flex-direction: column;
+    }
   }
 
   @media (max-width: $sm-max) {

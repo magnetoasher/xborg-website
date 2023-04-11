@@ -8,6 +8,7 @@ import {
 import { ScrollViewModel } from "../../../../viewmodels/ScrollViewModel";
 import { TextManipulation } from "../../../../viewmodels/textManipulation";
 import { Head } from "../Head";
+import { Navbar } from "../Navbar";
 
 export const AboutXborg = () => {
   const titleRef = useRef(null);
@@ -29,6 +30,7 @@ export const AboutXborg = () => {
   return (
     <div className="about-xborg w-full row column middle center">
       <Head />
+      <Navbar active={0} />
 
       <h2 className="pioneering-title">
         Pioneering <span ref={titleRef}>gaming</span>
@@ -51,7 +53,7 @@ export const AboutXborg = () => {
       </div>
 
       <ObserverContainer className="video-container w-full">
-        <ResponsiveVideo src="https://www.youtube.com/embed/UAKw_2SWheg" />
+        <ResponsiveVideo src="https://www.youtube.com/embed/yqQf0ETfB9w" />
       </ObserverContainer>
 
       <div className="row statistics text-center">

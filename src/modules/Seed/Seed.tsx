@@ -37,10 +37,10 @@ export type SeedFormType = {
 };
 
 export type SeedPageProps = {
-  setNavbarBtnVisibility: (val: boolean) => void;
+  setNavbarBtn: (val: null) => void;
 };
 
-export const Seed = ({ setNavbarBtnVisibility }: SeedPageProps) => {
+export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
   const h4ref = useRef(null);
@@ -68,7 +68,7 @@ export const Seed = ({ setNavbarBtnVisibility }: SeedPageProps) => {
     scrollVM.removeCustomScrolling();
     dispatch(SeedActions.getSeed());
 
-    setNavbarBtnVisibility(false);
+    setNavbarBtn(null);
   }, []);
 
   const itemsperpage = 10;

@@ -41,8 +41,6 @@ export class AppViewModel {
   ) {
     const parentYCoordinate = parent.getBoundingClientRect().y;
 
-    console.log("ADD LISTENERS", { parentYCoordinate, windowHeight });
-
     window.addEventListener("simplebar-scroll", (e: any) =>
       this.simplebarListener(
         e.detail.scrollTop,
@@ -77,7 +75,6 @@ export class AppViewModel {
       setHeight: (height: number) => void,
       setMobile: (isMobile: boolean) => void
     ) => {
-      console.log("ON STICKY RESIZE");
       setMobile(window.innerWidth <= 992);
       setHeight(window.innerHeight);
 
@@ -131,7 +128,6 @@ export class AppViewModel {
     parentYCoordinate: number,
     onScroll: (scrolled: number) => void
   ) => {
-    console.log("DO STUFF");
     const childRect = child.getBoundingClientRect();
     const parentRect = parent.getBoundingClientRect();
 
@@ -150,5 +146,37 @@ export class AppViewModel {
         onScroll(moveY);
       }
     }
+  };
+
+  stickyNavbar = (nav: HTMLElement, navParent: HTMLElement) => {
+    window.addEventListener("simplebar-scroll", (e) =>
+      this.handleNavbarScroll(nav, navParent)
+    );
+    window.addEventListener("resize", (e) =>
+      this.handleNavbarResize(nav, navParent)
+    );
+  };
+
+  handleNavbarScroll = (nav: HTMLElement, navParent: HTMLElement) => {
+    const mainNav = document.getElementsByClassName("navigation-container")[0];
+    const navY = navParent.getBoundingClientRect().y;
+    if (navY + 80 <= 0) {
+      nav.classList.add("sticky");
+      mainNav.classList.add("hidden-nav");
+    } else {
+      nav.classList.remove("sticky");
+      mainNav.classList.remove("hidden-nav");
+    }
+  };
+
+  handleNavbarResize = (nav: HTMLElement, navParent: HTMLElement) => {
+    window.removeEventListener("simplebar-scroll", () =>
+      this.handleNavbarScroll(nav, navParent)
+    );
+    window.removeEventListener("resize", () =>
+      this.handleNavbarResize(nav, navParent)
+    );
+
+    this.stickyNavbar(nav, navParent);
   };
 }

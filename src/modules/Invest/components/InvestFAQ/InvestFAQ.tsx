@@ -2,11 +2,13 @@ import Collapsible from "react-collapsible";
 import { Link } from "react-router-dom";
 import { ButtonSecondary } from "../../../../components";
 import { Head } from "../Head";
+import { Navbar } from "../Navbar";
 
 export const InvestFAQ = () => {
   return (
     <div className="invest-faq faq row column middle center">
       <Head />
+      <Navbar active={4} />
       <div className="container container-xl">
         <div className="faqs">
           <Collapsible trigger="What is XBorg? " className="collapsible">

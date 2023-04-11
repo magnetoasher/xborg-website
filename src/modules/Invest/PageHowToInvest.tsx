@@ -1,22 +1,25 @@
 import { useEffect } from "react";
-import { Layout } from "../../components";
-import { Navbar, HowTo } from "./components";
+import { ButtonPrimary, Layout } from "../../components";
+import { HowTo } from "./components";
 
 type InvestPageProps = {
-  setNavbarVisibility: (val: boolean) => void;
+  setNavbarBtn: (val: any) => void;
 };
 
-export const PageHowToInvest = ({ setNavbarVisibility }: InvestPageProps) => {
+export const PageHowToInvest = ({ setNavbarBtn }: InvestPageProps) => {
   useEffect(() => {
-    setNavbarVisibility(false);
+    setNavbarBtn(<NavbarButton />);
 
-    return () => setNavbarVisibility(true);
+    return () => setNavbarBtn(undefined);
   }, []);
 
   return (
-    <>
-      <Navbar active={2} />
-      <Layout className="invest w-full row column" components={[<HowTo />]} />
-    </>
+    <Layout className="invest w-full row column" components={[<HowTo />]} />
   );
 };
+
+const NavbarButton = () => (
+  <div className="early-access">
+    <ButtonPrimary label="Register interest" to="seed" />
+  </div>
+);

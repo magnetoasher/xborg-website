@@ -22,14 +22,10 @@ export enum APP_ROUTER_TRANSITION {
 }
 
 export type ApPRouterProps = {
-  setNavbarVisibility: (val: boolean) => void;
-  setNavbarBtnVisibility: (val: boolean) => void;
+  setNavbarBtn: (btn: any) => void;
 };
 
-export const AppRouter = ({
-  setNavbarVisibility,
-  setNavbarBtnVisibility,
-}: ApPRouterProps) => {
+export const AppRouter = ({ setNavbarBtn }: ApPRouterProps) => {
   const location = useLocation();
 
   const [displayLocation, setDisplayLocation] = useState<Location>(location);
@@ -56,34 +52,29 @@ export const AppRouter = ({
         <Route path="/xtreme-championship-series" element={<XCSPage />} />
         <Route path="/terms-and-agreements" element={<TermsAndConditions />} />
         <Route path="/FAQ" element={<FAQ />} />
-        <Route
-          path="/seed"
-          element={<Seed setNavbarBtnVisibility={setNavbarBtnVisibility} />}
-        />
+        <Route path="/seed" element={<Seed setNavbarBtn={setNavbarBtn} />} />
         <Route path="/submission-recorded" element={<SubmissionRecorded />} />
         <Route path="/prometheus" element={<Prometheus />} />
 
         <Route
           path="/about-xborg"
-          element={<PageAboutXborg setNavbarVisibility={setNavbarVisibility} />}
+          element={<PageAboutXborg setNavbarBtn={setNavbarBtn} />}
         />
         <Route
           path="/why-invest"
-          element={<PageWhyInvest setNavbarVisibility={setNavbarVisibility} />}
+          element={<PageWhyInvest setNavbarBtn={setNavbarBtn} />}
         />
         <Route
           path="/how-to-invest"
-          element={
-            <PageHowToInvest setNavbarVisibility={setNavbarVisibility} />
-          }
+          element={<PageHowToInvest setNavbarBtn={setNavbarBtn} />}
         />
         <Route
           path="/news-events"
-          element={<PageEventNews setNavbarVisibility={setNavbarVisibility} />}
+          element={<PageEventNews setNavbarBtn={setNavbarBtn} />}
         />
         <Route
           path="/invest-faq"
-          element={<PageInvestFAQ setNavbarVisibility={setNavbarVisibility} />}
+          element={<PageInvestFAQ setNavbarBtn={setNavbarBtn} />}
         />
       </Routes>
     </div>

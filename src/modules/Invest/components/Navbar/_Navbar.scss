@@ -1,12 +1,24 @@
+.invest-navigation-container {
+  position: relative;
+  margin-bottom: 80px;
+  height: 48px;
+}
+
 .invest-navigation {
-  position: fixed;
+  position: absolute;
   top: 0;
-  padding: 32px 32px 32px 148px;
-  z-index: 3;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: $container-max-width;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+
+  &.sticky {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
 
   .tabs {
     padding-bottom: 0;
@@ -22,10 +34,11 @@
     font-weight: 500;
     line-height: 15px;
     letter-spacing: 0.1em;
+    display: none;
+  }
 
-    img {
-      display: none;
-    }
+  .btn-primary {
+    display: none;
   }
 
   @media (max-width: $lg-max) {
@@ -52,18 +65,6 @@
 
   @media (max-width: $sm-max) {
     left: 0;
-
-    .go-back {
-      span {
-        display: none;
-      }
-
-      img {
-        display: block;
-        height: 32px;
-        width: 32px;
-      }
-    }
 
     .heads {
       padding-left: 0px;

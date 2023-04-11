@@ -34,7 +34,7 @@ export const Supporters = () => {
               <img src={Images.partners.partner03} alt="" />
             </div>
             <div className="list-item">
-              <img src={Images.partners.partner04} alt="" />
+              <img src={Images.partners.partner10} alt="" />
             </div>
             <div className="list-item">
               <img src={Images.partners.partner05} alt="" />
@@ -74,21 +74,33 @@ export const Supporters = () => {
         </h2>
 
         <ObserverContainer className="featured-list row between">
-          <div className="col row column middle center">
+          <a
+            href="https://cryptoslate.com/rocket-league-world-champions-teambds-partners-with-xborg-for-web3-fan-activations/"
+            target="_blank"
+            className="col row column middle center"
+          >
             <img src={Images.partners.cryptoslate} alt="Cryptoslate" />
 
             <div className="col-title">Cryptoslate</div>
-          </div>
-          <div className="col row column middle center">
+          </a>
+          <a
+            href="https://esportsbureau.com/team-bds-y-xborg-anuncian-una-importante-asociacion/"
+            target="_blank"
+            className="col row column middle center"
+          >
             <img src={Images.partners.esb} alt="Esports Bureau" />
 
             <div className="col-title">Esports Bureau</div>
-          </div>
-          <div className="col row column middle center">
+          </a>
+          <a
+            href="https://esportsinsider.com/2023/03/team-bds-xborg-blockchain"
+            target="_blank"
+            className="col row column middle center"
+          >
             <img src={Images.partners.esi} alt="Esports Insider" />
 
             <div className="col-title">Esports Insider</div>
-          </div>
+          </a>
         </ObserverContainer>
       </div>
 

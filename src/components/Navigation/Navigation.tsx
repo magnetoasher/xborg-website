@@ -12,10 +12,10 @@ type SingleLinkType = {
 };
 
 type NavigationProps = {
-  visibleNavbarBtn: boolean;
+  navbarBtn: any;
 };
 
-export const Navigation = ({ visibleNavbarBtn }: NavigationProps) => {
+export const Navigation = ({ navbarBtn }: NavigationProps) => {
   const loaded = useSelector((state: GlobalState) => state.site.loaded);
   const [active, setActive] = useState<boolean>(false);
 
@@ -62,10 +62,12 @@ export const Navigation = ({ visibleNavbarBtn }: NavigationProps) => {
           </NavLink>
         ))}
       </nav>
-      {visibleNavbarBtn && (
-        <div className={`early-access${active ? " active" : ""}`}>
+      {navbarBtn == undefined ? (
+        <div className={`early-access`}>
           <ButtonPrimary label="Invest early" to="seed" />
         </div>
+      ) : (
+        navbarBtn
       )}
       <div
         className="hamburger-menu row middle center"
