@@ -40,11 +40,16 @@
 
   .wrapper {
     margin-bottom: 131px;
-
     h4 {
       span {
         color: $primary100;
       }
+    }
+  }
+
+  .parallaxed-deck {
+    img {
+      padding-bottom: 32px;
     }
   }
 
@@ -124,6 +129,21 @@
   @media (max-width: $md-max) {
     .wrapper {
       flex-direction: column-reverse;
+    }
+
+    .parallaxed-deck {
+      margin-top: 32px;
+
+      img {
+        padding-bottom: 32px;
+      }
+    }
+  }
+
+  @media (max-width: $sm-max) {
+    h1 {
+      font-size: 32px;
+      line-height: 40px;
     }
   }
 }

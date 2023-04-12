@@ -164,6 +164,7 @@ export const Images = {
     terrorist: require("./launchpad/terrorist.png"),
     tft_penguin: require("./launchpad/tft_penguin.png"),
     folder: require("./launchpad/folder.png"),
+    deck: require("./launchpad/deck.png"),
     bolt: require("./launchpad/bolt.png"),
     flask: require("./launchpad/flask.png"),
     hanzo: require("./launchpad/hanzo.png"),

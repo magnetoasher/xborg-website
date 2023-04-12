@@ -25,12 +25,12 @@ export const SubmissionRecorded = () => {
           <div className="wrapper row between middle">
             <ObserverContainer className="parallaxed row column middle center">
               <ParallaxLayer
-                image={Images.launchpad.folder}
+                image={Images.launchpad.deck}
                 factorX={0.1}
                 factorY={0.1}
                 speed={0}
                 isBase
-                className="parallaxed-1"
+                className="parallaxed-1 parallaxed-deck"
               />
             </ObserverContainer>
             <div className="row column details">
@@ -57,6 +57,42 @@ export const SubmissionRecorded = () => {
               </div>
             </div>
           </div>
+
+          <div className="wrapper row between middle">
+            <ObserverContainer className="parallaxed row column middle center">
+              <ParallaxLayer
+                image={Images.launchpad.folder}
+                factorX={0.1}
+                factorY={0.1}
+                speed={0}
+                isBase
+                className="parallaxed-1"
+              />
+            </ObserverContainer>
+            <div className="row column details">
+              <div className={`state-indicator row column`}>
+                <span />
+                <span className="active" />
+                <span />
+              </div>
+              <h4>
+                Due diligence <span>report</span>
+              </h4>
+
+              <SectionDescription className="description">
+                The most comprehensive breakdown of XBorg ever released. Subject
+                to NDA.
+              </SectionDescription>
+
+              <div className="row actions">
+                <ButtonSecondary
+                  label="Get access"
+                  to="https://docsend.com/view/s/23d69ir3qbyq8m2a"
+                  target="_blank"
+                />
+              </div>
+            </div>
+          </div>
           <div className="coming-soon row column middle center">
             <ButtonPrimary
               label="More coming soon..."
@@ -65,9 +101,8 @@ export const SubmissionRecorded = () => {
             />
 
             <SectionDescription className="">
-              Due-diligence reports, virtual data room and more content for
-              investors will be release in the coming days. Check your emails
-              regularly to stay up to date!
+              More content for investors will be release in the coming days.
+              Check your emails regularly to stay up to date!
             </SectionDescription>
           </div>
         </div>,
