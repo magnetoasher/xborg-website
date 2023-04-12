@@ -23,12 +23,8 @@ export const Navbar = ({ active }: NavbarProps) => {
   }, []);
 
   return (
-    <div className="invest-navigation-container" ref={navParentRef}>
-      <div className="invest-navigation row center middle" ref={navRef}>
-        <Link to="/" className="go-back">
-          <span>Back to xborg.com</span>
-        </Link>
-
+    <div className="invest-navigation-container w-full" ref={navParentRef}>
+      <div className="invest-navigation row center middle w-full" ref={navRef}>
         <div className="sticky-tabs tabs">
           <div className="heads row middle">
             <div className={`head-item${active == 0 ? " active" : ""}`}>
@@ -48,8 +44,6 @@ export const Navbar = ({ active }: NavbarProps) => {
             </div>
           </div>
         </div>
-
-        <ButtonPrimary label="Register interest" to="seed" />
       </div>
     </div>
   );

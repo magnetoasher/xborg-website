@@ -42,30 +42,23 @@
   }
 
   @media (max-width: $lg-max) {
-    padding-right: 16px;
-    padding-left: 16px;
-    background-color: $dark100;
-    height: 80px;
-    left: 100px;
-    right: 0;
-    width: auto;
-    transform: translateX(0);
+    &.sticky {
+      top: 79px;
+    }
 
     .sticky-tabs {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: $dark100;
+    }
+
+    .heads {
+      width: 100%;
     }
   }
 
   @media (max-width: $sm-max) {
-    left: 0;
-
     .heads {
       padding-left: 0px;
       padding-right: 0px;

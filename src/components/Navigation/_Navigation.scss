@@ -7,18 +7,6 @@
   height: $header-xl;
   z-index: 2;
 
-  &.hidden-nav {
-    pointer-events: none;
-
-    .navigation-links {
-      opacity: 0;
-    }
-
-    .early-access {
-      pointer-events: all;
-    }
-  }
-
   @import "./Hamburger";
 
   .navigation-links {

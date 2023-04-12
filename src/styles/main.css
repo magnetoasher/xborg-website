@@ -1477,6 +1477,11 @@ h4 {
     width: 100%;
   }
 }
+@media (max-width: 576px) {
+  .xborg-app .collectibles .collectibles .collectible-details {
+    padding: 8px;
+  }
+}
 .xborg-app .leaderboard .section-head-desc {
   max-width: 500px;
 }
@@ -5076,31 +5081,20 @@ h4 {
   display: none;
 }
 @media (max-width: 1200px) {
-  .invest-navigation {
-    padding-right: 16px;
-    padding-left: 16px;
-    background-color: #111;
-    height: 80px;
-    left: 100px;
-    right: 0;
-    width: auto;
-    transform: translateX(0);
+  .invest-navigation.sticky {
+    top: 79px;
   }
   .invest-navigation .sticky-tabs {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #111;
+  }
+  .invest-navigation .heads {
+    width: 100%;
   }
 }
 @media (max-width: 768px) {
-  .invest-navigation {
-    left: 0;
-  }
   .invest-navigation .heads {
     padding-left: 0px;
     padding-right: 0px;
@@ -7062,15 +7056,6 @@ h4 {
   padding: 33px 44px 30px 44px;
   height: 107px;
   z-index: 2;
-}
-.navigation-container.hidden-nav {
-  pointer-events: none;
-}
-.navigation-container.hidden-nav .navigation-links {
-  opacity: 0;
-}
-.navigation-container.hidden-nav .early-access {
-  pointer-events: all;
 }
 .navigation-container .hamburger-menu {
   display: none;

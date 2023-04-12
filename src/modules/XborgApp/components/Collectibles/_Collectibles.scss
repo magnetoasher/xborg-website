@@ -123,4 +123,10 @@
       width: 100%;
     }
   }
+
+  @media (max-width: $xs-max) {
+    .collectibles .collectible-details {
+      padding: 8px;
+    }
+  }
 }

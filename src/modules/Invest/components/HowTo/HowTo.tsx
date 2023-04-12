@@ -301,8 +301,8 @@ export const HowTo = () => {
               <div className="category-footer">
                 <div className="footer-title">Not a SwissBorg user?</div>
                 <p>
-                  Access the seed round at a discounted valuation and higher
-                  maximum investment ticket
+                  Sign up and get access to the future of wealth, plus earn up
+                  to €100 in crypto rewards.
                 </p>
 
                 <div className="row">

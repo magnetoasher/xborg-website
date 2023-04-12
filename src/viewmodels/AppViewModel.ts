@@ -158,14 +158,11 @@ export class AppViewModel {
   };
 
   handleNavbarScroll = (nav: HTMLElement, navParent: HTMLElement) => {
-    const mainNav = document.getElementsByClassName("navigation-container")[0];
     const navY = navParent.getBoundingClientRect().y;
     if (navY + 80 <= 0) {
       nav.classList.add("sticky");
-      mainNav.classList.add("hidden-nav");
     } else {
       nav.classList.remove("sticky");
-      mainNav.classList.remove("hidden-nav");
     }
   };
 
