@@ -104,6 +104,10 @@
     .powered-by {
       margin-top: 0;
     }
+
+    .partners img {
+      width: 25%;
+    }
   }
 
   @media (max-width: $md-max) {
@@ -128,6 +132,16 @@
       .line {
         margin: 0;
       }
+    }
+  }
+
+  @media (max-width: $xs-max) {
+    .powered-by {
+      margin-top: 0;
+    }
+
+    .partners img {
+      width: 30%;
     }
   }
 }

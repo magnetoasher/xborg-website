@@ -62,7 +62,7 @@ export const Production = () => {
   return (
     <div className="production expand row column">
       <div className="row middle expand">
-        <div className="expand">
+        <div className="expand w-full">
           <div className="description expand">
             <div className="section-head-container in">
               <div className="row section-head">

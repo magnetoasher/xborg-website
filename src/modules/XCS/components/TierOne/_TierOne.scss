@@ -44,6 +44,8 @@
 
     .games {
       .single-game {
+        justify-content: center;
+        align-items: center;
         flex: 0 0 100%;
       }
     }
@@ -62,10 +64,6 @@
 
   @media (max-width: $xs-max) {
     .games {
-      img {
-        width: 102px;
-      }
-
       .desc {
         font-size: 12px;
       }

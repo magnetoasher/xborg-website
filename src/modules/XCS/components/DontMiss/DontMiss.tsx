@@ -10,7 +10,7 @@ import { PickGame } from "../PickGame/PickGame";
 export const DontMiss = () => {
   return (
     <div className="dont-miss expand row column">
-      <div className="expand row middle">
+      <div className="expand row middle dont-miss-content">
         <div className="description expand">
           <div className="section-head-container in">
             <div className="row section-head">

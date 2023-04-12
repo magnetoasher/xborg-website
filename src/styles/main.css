@@ -4106,6 +4106,9 @@ h4 {
   .xcs .the-league .powered-by {
     margin-top: 0;
   }
+  .xcs .the-league .partners img {
+    width: 25%;
+  }
 }
 @media (max-width: 992px) {
   .xcs .the-league {
@@ -4127,6 +4130,14 @@ h4 {
   }
   .xcs .the-league .parallaxed .line {
     margin: 0;
+  }
+}
+@media (max-width: 576px) {
+  .xcs .the-league .powered-by {
+    margin-top: 0;
+  }
+  .xcs .the-league .partners img {
+    width: 30%;
   }
 }
 .xcs .tier-one .games {
@@ -4164,6 +4175,8 @@ h4 {
     justify-content: flex-start;
   }
   .xcs .tier-one .games .single-game {
+    justify-content: center;
+    align-items: center;
     flex: 0 0 100%;
   }
   .xcs .tier-one .description {
@@ -4177,9 +4190,6 @@ h4 {
   }
 }
 @media (max-width: 576px) {
-  .xcs .tier-one .games img {
-    width: 102px;
-  }
   .xcs .tier-one .games .desc {
     font-size: 12px;
   }
@@ -4242,6 +4252,9 @@ h4 {
   .xcs .becoming-legend .parallaxed.in .parallaxed-1:after {
     height: 85.39%;
     margin-top: 0;
+  }
+  .xcs .becoming-legend .releasing-date {
+    margin-left: 0;
   }
 }
 .xcs .production .livestreams .title {
@@ -4316,6 +4329,9 @@ h4 {
   .xcs .production .parallaxed.in:after {
     height: 85.39%;
     margin-top: 0;
+  }
+  .xcs .production .follow-twitch {
+    margin-left: 0;
   }
 }
 .xcs .dont-miss .parallaxed {
@@ -4425,6 +4441,9 @@ h4 {
 @media (max-width: 992px) {
   .xcs .dont-miss .btn-container .btn-primary {
     margin-left: 0;
+  }
+  .xcs .dont-miss .dont-miss-content {
+    flex-direction: column;
   }
 }
 @media (max-width: 768px) {
