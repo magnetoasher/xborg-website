@@ -1472,14 +1472,46 @@ h4 {
   .xborg-app .collectibles {
     flex-direction: column-reverse;
   }
+  .xborg-app .collectibles .parallaxed {
+    margin-top: 64px;
+  }
   .xborg-app .collectibles .description {
     margin-top: 128px;
     width: 100%;
   }
 }
 @media (max-width: 576px) {
-  .xborg-app .collectibles .collectibles .collectible-details {
+  .xborg-app .collectibles .collectible-details {
     padding: 8px;
+    width: 268px;
+  }
+  .xborg-app .collectibles .collectible-details .collectible-image {
+    width: 70px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .xborg-app .collectibles .collectible-details .collectible-image img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .xborg-app .collectibles .collectible-details .name {
+    font-size: 12px;
+  }
+  .xborg-app .collectibles .collectible-details .line {
+    font-size: 9px;
+    line-height: 5px;
+  }
+  .xborg-app .collectibles .collectible-details .line a {
+    display: none;
+  }
+  .xborg-app .collectibles .parallaxed .parallaxed-1 img,
+  .xborg-app .collectibles .parallaxed .parallaxed-2 img {
+    max-height: 400px;
   }
 }
 .xborg-app .leaderboard .section-head-desc {

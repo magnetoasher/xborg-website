@@ -118,6 +118,10 @@
   @media (max-width: $md-max) {
     flex-direction: column-reverse;
 
+    .parallaxed {
+      margin-top: 64px;
+    }
+
     .description {
       margin-top: 128px;
       width: 100%;
@@ -125,8 +129,43 @@
   }
 
   @media (max-width: $xs-max) {
-    .collectibles .collectible-details {
+    .collectible-details {
       padding: 8px;
+      width: 268px;
+
+      .collectible-image {
+        width: 70px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 100%;
+          height: auto;
+          position: relative;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .name {
+        font-size: 12px;
+      }
+
+      .line {
+        font-size: 9px;
+        line-height: 5px;
+
+        a {
+          display: none;
+        }
+      }
+    }
+
+    .parallaxed .parallaxed-1 img,
+    .parallaxed .parallaxed-2 img {
+      max-height: 400px;
     }
   }
 }
