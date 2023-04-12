@@ -34,7 +34,7 @@ export const SubmissionRecorded = () => {
           <div className="wrapper row between middle">
             <ObserverContainer className="parallaxed row column middle center">
               <ParallaxLayer
-                image={Images.launchpad.deck}
+                image={Images.xborgapp.deck}
                 factorX={0.1}
                 factorY={0.1}
                 speed={0}
@@ -70,7 +70,7 @@ export const SubmissionRecorded = () => {
           <div className="wrapper row between middle">
             <ObserverContainer className="parallaxed row column middle center">
               <ParallaxLayer
-                image={Images.launchpad.folder}
+                image={Images.xborgapp.folder}
                 factorX={0.1}
                 factorY={0.1}
                 speed={0}

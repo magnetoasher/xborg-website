@@ -13,21 +13,21 @@ export const Leaderboard = () => {
   const data: LeaderboardRowType[] = [
     {
       index: 0,
-      image: Images.launchpad.row1,
+      image: Images.xborgapp.row1,
       name: "Xborg.eth",
       level: 16,
       xp: "2.5k",
     },
     {
       index: 1,
-      image: Images.launchpad.row2,
+      image: Images.xborgapp.row2,
       name: "0xF7...baf2",
       level: 15,
       xp: "2.4k",
     },
     {
       index: 2,
-      image: Images.launchpad.row3,
+      image: Images.xborgapp.row3,
       name: "0xcB...da70",
       level: 14,
       xp: "2.3k",

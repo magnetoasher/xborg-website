@@ -32,7 +32,7 @@ export const StartPlayingToday = () => {
         <div className="parallaxed-elements">
           <ObserverContainer className="parallaxed-right row middle center">
             <ParallaxLayer
-              image={Images.gamingpassport.artifact}
+              image={Images.xborgapp.artifact}
               factorX={0.3}
               factorY={0.3}
               speed={0}
@@ -40,7 +40,7 @@ export const StartPlayingToday = () => {
               className="parallaxed-1"
             />
             <ParallaxLayer
-              image={Images.gamingpassport.ghost}
+              image={Images.xborgapp.ghost}
               factorX={0}
               factorY={0}
               speed={0}
@@ -50,7 +50,7 @@ export const StartPlayingToday = () => {
 
           <ObserverContainer className="parallaxed-left row middle center">
             <ParallaxLayer
-              image={Images.gamingpassport.blue_pet}
+              image={Images.xborgapp.blue_pet}
               factorX={-0.1}
               factorY={-0.1}
               speed={0}
@@ -58,7 +58,7 @@ export const StartPlayingToday = () => {
               className="parallaxed-1"
             />
             <ParallaxLayer
-              image={Images.gamingpassport.counter_terrorist}
+              image={Images.xborgapp.counter_terrorist}
               factorX={0.1}
               factorY={0.1}
               speed={0}
