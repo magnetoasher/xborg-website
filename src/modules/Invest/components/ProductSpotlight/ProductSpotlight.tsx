@@ -15,24 +15,34 @@ import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 const launchpadItems = [
   {
-    image: Images.aboutUs.players.lex,
+    image: Images.invest.rooniverse,
     name: "Rooniverse",
     description: "$30,000 raised",
   },
   {
-    image: Images.aboutUs.players.eskezje,
-    name: "Rooniverse 2",
-    description: "$60,000 raised",
+    image: Images.invest.thalon,
+    name: "Thalon",
+    description: "$15,000 raised",
   },
   {
-    image: Images.aboutUs.players.lex,
-    name: "Rooniverse",
-    description: "$30,000 raised",
+    image: Images.invest.exverse,
+    name: "Exverse",
+    description: "$15,000 raised",
   },
   {
-    image: Images.aboutUs.players.eskezje,
-    name: "Rooniverse 2",
-    description: "$60,000 raised",
+    image: Images.invest.aether,
+    name: "Aether Games",
+    description: "$40,000 raised",
+  },
+  {
+    image: Images.invest.bornless,
+    name: "The Bornless",
+    description: "$50,000 raised",
+  },
+  {
+    image: Images.invest.harvest,
+    name: "The Harvest",
+    description: "$50,000 raised",
   },
 ];
 
@@ -288,12 +298,13 @@ export const ProductSpotlight = () => {
                   >
                     {launchpadItems.map((item, index) => (
                       <SwiperSlide key={index} className="row column">
-                        <video autoPlay muted loop>
-                          <source
-                            src={require("../../../../assets/videos/rooniverse.mp4")}
-                            type="video/mp4"
-                          />
-                        </video>
+                        {/* {item.image ? ( */}
+                        <img src={item.image} alt="" />
+                        {/* ) : (
+                          <video autoPlay muted loop>
+                            <source src={item.video} type="video/mp4" />
+                          </video>
+                        )} */}
 
                         <div className="swiper-name text-center">
                           {item.name}

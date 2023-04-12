@@ -154,7 +154,16 @@
 
   @media (max-width: $lg-max) {
     .parallaxed {
-      margin-right: 14%;
+      transform: translate(0, 0);
+    }
+    .parallaxed-1 img {
+      width: 70%;
+    }
+    .parallaxed-2 {
+      transform: translateY(-36%) translateX(48%);
+      img {
+        max-width: 50%;
+      }
     }
   }
 
@@ -193,18 +202,6 @@
       margin-right: 0;
       margin-top: 64px;
       transform: translateX(0);
-    }
-  }
-
-  @media (max-width: $sm-max) {
-    .parallaxed-1 img {
-      width: 70%;
-    }
-    .parallaxed-2 {
-      transform: translateY(-36%) translateX(48%);
-      img {
-        max-width: 50%;
-      }
     }
   }
 

@@ -69,7 +69,7 @@ export const Vision = () => {
     activeSpotlight = number;
     setChanging(true);
 
-    await sleep(1200);
+    await sleep(600);
 
     setActive(number);
     setChanging(false);

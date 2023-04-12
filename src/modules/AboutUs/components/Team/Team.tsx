@@ -2,10 +2,11 @@ import { useRef } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import { SectionDescription } from "../../../../components";
 import { TeamTile, TeamTileType } from "../../../../components/Tile";
-import { TextScramble } from "../../../../viewmodels/TextScramble";
+import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const Team = () => {
   const titleScrambleRef = useRef(null);
+  const textVM = new TextManipulation();
   const team: TeamTileType[] = [
     {
       image: Images.aboutUs.team.member01,
@@ -100,13 +101,7 @@ export const Team = () => {
 
             <SectionDescription
               className="section-head-desc"
-              onAnimateIn={() => {
-                const current =
-                  titleScrambleRef.current as unknown as HTMLDivElement;
-                const scramble = new TextScramble(current);
-                if (titleScrambleRef.current)
-                  scramble.setText(current.innerHTML);
-              }}
+              onAnimateIn={() => textVM.scrambleText(titleScrambleRef)}
             >
               The XBorg core team is a confluence of gaming enthusiasts and
               seasoned professionals in the realm of software engineering and

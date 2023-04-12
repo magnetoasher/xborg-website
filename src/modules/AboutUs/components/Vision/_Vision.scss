@@ -72,8 +72,18 @@
       position: relative;
     }
 
+    .vision-intro-parallaxed {
+      width: 100%;
+    }
+
     .block-container {
       margin-top: 64px;
+    }
+  }
+
+  @media (max-width: $xs-max) {
+    .vision-introduction .vision-intro-parallaxed .block {
+      padding: 16px !important;
     }
   }
 }

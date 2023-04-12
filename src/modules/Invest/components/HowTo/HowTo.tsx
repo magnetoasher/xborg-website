@@ -75,13 +75,13 @@ export const HowTo = () => {
               <div className="row column category-details prometheus-category">
                 <div className="details-row row">
                   <div className="cat-image">
-                    <div className="date">04/05</div>
+                    <div className="date">03/05</div>
                     <img src={Images.invest.prometheus} alt="Prometheus" />
                   </div>
 
                   <div className="row column">
                     <div className="cat-name">
-                      <span>Public</span> Vault
+                      <span>Prometheus</span> round
                     </div>
                     <ul>
                       <li>

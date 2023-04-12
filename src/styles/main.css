@@ -1986,17 +1986,17 @@ h4 {
 }
 .about-us .vision .vision-introduction .description {
   margin-right: 32px;
-  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .about-us .vision .vision-introduction .section-head-container {
-  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .about-us .vision .vision-introduction .vision-intro-parallaxed {
   position: absolute;
   left: 100%;
   top: 50%;
   transform: translateX(-100%) translateY(-50%);
-  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .about-us .vision .vision-introduction .vision-intro-parallaxed .line-indicator {
   width: 16px;
@@ -2010,13 +2010,13 @@ h4 {
   height: 0;
   width: 1px;
   background-color: #eb3a4a;
-  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .about-us .vision .vision-introduction .vision-intro-parallaxed .chevron {
   width: 85px;
   margin: 0 auto;
   opacity: 0;
-  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .about-us .vision .vision-introduction .vision-intro-parallaxed .block {
   width: 295px;
@@ -2112,7 +2112,7 @@ h4 {
 }
 .about-us .vision .vision-introduction .vision-intro-parallaxed.in .line-indicator:after {
   height: calc(100% - 80px);
-  transition-delay: 0.4s;
+  transition-delay: 0.2s;
 }
 @media (max-width: 992px) {
   .about-us .vision .vision-introduction .vision-intro {
@@ -2771,44 +2771,44 @@ h4 {
   transform: translate(0, 0);
 }
 .about-us .vision .credential-network .credential-details-wrapper.in .cn-block-second {
-  transition-delay: 0.1s;
+  transition-delay: 0.05s;
 }
 .about-us .vision .credential-network .credential-details-wrapper.in .cn-block-third {
-  transition-delay: 0.2s;
+  transition-delay: 0.1s;
 }
 .about-us .vision .credential-network .credential-details-wrapper.in .chevron {
   opacity: 1;
 }
 .about-us .vision .credential-network .credential-details-wrapper.in .chevron-first {
-  transition-delay: 0.3s;
+  transition-delay: 0.15s;
 }
 .about-us .vision .credential-network .credential-details-wrapper.in .chevron-second {
-  transition-delay: 0.4s;
+  transition-delay: 0.2s;
 }
 .about-us .vision .credential-network .credential-details-wrapper.in .chevron-third {
-  transition-delay: 0.5s;
+  transition-delay: 0.525s;
 }
 .about-us .vision .credential-network .credential-details-wrapper.in .gaming-credential-layer {
   opacity: 1;
-  transition-delay: 0.6s;
+  transition-delay: 0.3s;
 }
 .about-us .vision .credential-network .credential-details-wrapper.in .gaming-credential-layer .cube {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.6s;
+  transition-delay: 0.3s;
 }
 .about-us .vision .credential-network .credential-details-wrapper.in .gaming-credential-layer .title {
   opacity: 1;
   transform: scale(1);
-  transition-delay: 0.8s;
+  transition-delay: 0.4s;
 }
 .about-us .vision .credential-network .credential-details-wrapper.in .credential-network-details .title {
   opacity: 1;
-  transition-delay: 0.8s;
+  transition-delay: 0.4s;
 }
 .about-us .vision .credential-network .credential-details-wrapper.in .credential-network-details p {
   opacity: 1;
-  transition-delay: 0.9s;
+  transition-delay: 0.45s;
 }
 @media (max-width: 1367px) {
   .about-us .vision .credential-network .credential-details-wrapper {
@@ -2835,8 +2835,16 @@ h4 {
   .about-us .vision .credential-network {
     margin-top: 32px;
   }
+  .about-us .vision .credential-network .credential-network-parallaxed {
+    width: 100%;
+  }
   .about-us .vision .credential-network .credential-network-parallaxed .block-container {
     margin-top: 0;
+  }
+}
+@media (max-width: 768px) {
+  .about-us .vision .credential-network .credential-network .cn-block {
+    width: 100%;
   }
 }
 .about-us .vision .application-network .live {
@@ -2971,7 +2979,16 @@ h4 {
 }
 @media (max-width: 1200px) {
   .about-us .vision .application-network .parallaxed {
-    margin-right: 14%;
+    transform: translate(0, 0);
+  }
+  .about-us .vision .application-network .parallaxed-1 img {
+    width: 70%;
+  }
+  .about-us .vision .application-network .parallaxed-2 {
+    transform: translateY(-36%) translateX(48%);
+  }
+  .about-us .vision .application-network .parallaxed-2 img {
+    max-width: 50%;
   }
 }
 @media (max-width: 992px) {
@@ -3002,17 +3019,6 @@ h4 {
     margin-right: 0;
     margin-top: 64px;
     transform: translateX(0);
-  }
-}
-@media (max-width: 768px) {
-  .about-us .vision .application-network .parallaxed-1 img {
-    width: 70%;
-  }
-  .about-us .vision .application-network .parallaxed-2 {
-    transform: translateY(-36%) translateX(48%);
-  }
-  .about-us .vision .application-network .parallaxed-2 img {
-    max-width: 50%;
   }
 }
 @media (max-width: 576px) {
@@ -3051,10 +3057,10 @@ h4 {
   transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .about-us .vision .decentralized-societies .col:nth-child(2) {
-  transition-delay: 0.3s;
+  transition-delay: 0.1s;
 }
 .about-us .vision .decentralized-societies .col:nth-child(3) {
-  transition-delay: 0.6s;
+  transition-delay: 0.2s;
 }
 .about-us .vision .decentralized-societies .date {
   color: #fff;
@@ -3121,6 +3127,15 @@ h4 {
     opacity: 1;
   }
 }
+@media (max-width: 576px) {
+  .about-us .vision .decentralized-societies .col .row.middle {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about-us .vision .decentralized-societies .col .row.middle .date {
+    margin-bottom: 8px;
+  }
+}
 @media (max-width: 992px) {
   .about-us .vision .mock-height {
     height: auto !important;
@@ -3130,8 +3145,16 @@ h4 {
     transform: translate(0, 0) !important;
     position: relative;
   }
+  .about-us .vision .vision-intro-parallaxed {
+    width: 100%;
+  }
   .about-us .vision .block-container {
     margin-top: 64px;
+  }
+}
+@media (max-width: 576px) {
+  .about-us .vision .vision-introduction .vision-intro-parallaxed .block {
+    padding: 16px !important;
   }
 }
 .about-us .token .section-head-container {
@@ -3175,6 +3198,9 @@ h4 {
     margin-top: 128px;
   }
 }
+.about-us .prometheus {
+  width: 100%;
+}
 .about-us .prometheus .section-head-container {
   max-width: 550px;
 }
@@ -3190,6 +3216,9 @@ h4 {
 }
 .about-us .prometheus .actions .btn-primary {
   margin-right: 24px;
+}
+.about-us .prometheus .actions .btn-secondary {
+  white-space: nowrap;
 }
 .about-us .prometheus .parallaxed img {
   max-width: 639px;
@@ -5723,7 +5752,7 @@ h4 {
 }
 .invest .product-spotlight .launchpad-swiper .swiper-pagination {
   bottom: auto;
-  top: 231px;
+  top: 241px;
 }
 .invest .product-spotlight .launchpad-swiper .swiper-prev,
 .invest .product-spotlight .launchpad-swiper .swiper-next {
@@ -7093,6 +7122,16 @@ h4 {
   padding: 33px 44px 30px 44px;
   height: 107px;
   z-index: 2;
+}
+.navigation-container.hidden-nav {
+  pointer-events: none;
+}
+.navigation-container.hidden-nav .navigation-links {
+  opacity: 0;
+}
+.navigation-container.hidden-nav .early-access,
+.navigation-container.hidden-nav .hamburger-menu {
+  pointer-events: all;
 }
 .navigation-container .hamburger-menu {
   display: none;

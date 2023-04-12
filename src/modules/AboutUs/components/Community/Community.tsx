@@ -14,12 +14,14 @@ import {
 } from "../../../../components";
 import { halloffame } from "../../../../localdata/halloffame";
 import { players } from "../../../../localdata/players";
-import { TextScramble } from "../../../../viewmodels/TextScramble";
+import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const Community = () => {
   const titleScrambleRef = useRef(null);
   const [tab, onTabChange] = useState<number>(0);
   const [changing, setChanging] = useState<boolean>(false);
+
+  const textVM = new TextManipulation();
 
   const data = {
     tournaments: 125,
@@ -60,13 +62,7 @@ export const Community = () => {
             </div>
             <SectionDescription
               className="section-head-desc"
-              onAnimateIn={() => {
-                const current =
-                  titleScrambleRef.current as unknown as HTMLDivElement;
-                const scramble = new TextScramble(current);
-                if (titleScrambleRef.current)
-                  scramble.setText(current.innerHTML);
-              }}
+              onAnimateIn={() => textVM.scrambleText(titleScrambleRef)}
             >
               XBorg is proud to be the home of the best players, builders and
               GameFi enthusiasts. Discover how we are co-building the next era

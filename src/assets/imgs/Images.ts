@@ -238,6 +238,13 @@ export const Images = {
     swiss4: require("./invest/swiss4.png"),
 
     prometheus: require("./invest/prometheus.png"),
+
+    thalon: require("./invest/thalon.png"),
+    exverse: require("./invest/exverse.png"),
+    aether: require("./invest/aether.png"),
+    bornless: require("./invest/bornless.png"),
+    harvest: require("./invest/harvest.png"),
+    rooniverse: require("./invest/rooniverse.png"),
   },
 
   news: {
