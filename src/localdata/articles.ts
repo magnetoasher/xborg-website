@@ -57,7 +57,7 @@ export const mostreadarticles: ArticleProps[] = [
     tag: "Spotlight",
     date: "Feb 1, 2023",
     image: Images.news.revolution,
-    link: "https://medium.com/xborg-official/xborg-and-team-bds-create-the-future-of-esports-a991de982ac8",
+    link: "https://medium.com/xborg-official/xborg-prometheus-nfts-3d303f9605ef",
   },
   {
     title: "XBorg to Become the First Gaming Network State.",
