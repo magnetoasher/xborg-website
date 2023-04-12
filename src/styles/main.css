@@ -1202,6 +1202,11 @@ h4 {
     height: 650px;
   }
 }
+@media (max-width: 992px) {
+  .xborg-app .gaming-profile .background-images-grid {
+    transform: scale(0.5) translateX(-50%) translateY(-20%);
+  }
+}
 .xborg-app .gaming-badges h2 span {
   white-space: nowrap;
 }
@@ -5749,15 +5754,7 @@ h4 {
 .invest .product-spotlight .launchpad-swiper.in .swiper-slide-active .swiper-name {
   opacity: 1;
 }
-@media (max-width: 768px) {
-  .invest .product-spotlight h2 {
-    font-size: 24px;
-    line-height: 30px;
-    width: 100%;
-    margin-top: 48px;
-    margin-bottom: 0;
-    text-align: left;
-  }
+@media (max-width: 992px) {
   .invest .product-spotlight .mock-height {
     height: auto !important;
   }
@@ -5796,6 +5793,16 @@ h4 {
   .invest .product-spotlight .parallaxed-container-1 .parallaxed-2 img {
     width: 49.41%;
     max-width: 49.41%;
+  }
+}
+@media (max-width: 768px) {
+  .invest .product-spotlight h2 {
+    font-size: 24px;
+    line-height: 30px;
+    width: 100%;
+    margin-top: 48px;
+    margin-bottom: 0;
+    text-align: left;
   }
 }
 .invest .competetive-community h2 {

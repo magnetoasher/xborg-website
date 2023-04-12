@@ -111,4 +111,10 @@
       height: 650px;
     }
   }
+
+  @media (max-width: $md-max) {
+    .background-images-grid {
+      transform: scale(0.5) translateX(-50%) translateY(-20%);
+    }
+  }
 }

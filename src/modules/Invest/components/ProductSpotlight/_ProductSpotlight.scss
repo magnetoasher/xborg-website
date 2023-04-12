@@ -343,16 +343,7 @@
     }
   }
 
-  @media (max-width: $sm-max) {
-    h2 {
-      font-size: 24px;
-      line-height: 30px;
-      width: 100%;
-      margin-top: 48px;
-      margin-bottom: 0;
-      text-align: left;
-    }
-
+  @media (max-width: $md-max) {
     .mock-height {
       height: auto !important;
     }
@@ -400,6 +391,17 @@
           max-width: 49.41%;
         }
       }
+    }
+  }
+
+  @media (max-width: $sm-max) {
+    h2 {
+      font-size: 24px;
+      line-height: 30px;
+      width: 100%;
+      margin-top: 48px;
+      margin-bottom: 0;
+      text-align: left;
     }
   }
 }
