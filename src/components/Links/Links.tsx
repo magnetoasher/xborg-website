@@ -30,7 +30,7 @@ export const Links = () => {
       <Link to="/prometheus" onClick={onRedirect}>
         Prometheus NFT
       </Link>
-      <Link to="/about-us" onClick={onRedirect}>
+      <Link to="/" onClick={onRedirect}>
         About us
       </Link>
       <Link to="/faq" onClick={onRedirect}>

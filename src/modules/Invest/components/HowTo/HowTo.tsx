@@ -133,7 +133,7 @@ export const HowTo = () => {
                   <p>
                     Discounted valuation - Only Prometheus holders will have
                     access to an investment opportunity at a $45M valuation,
-                    while other investors will invest at a $50 FDV.
+                    while other investors will invest at a $50M FDV.
                   </p>
                   <p>
                     Guaranteed allocation - During the investment period, each
@@ -162,7 +162,7 @@ export const HowTo = () => {
               <div className="row column category-details swissborg">
                 <div className="details-row row">
                   <div className="cat-image">
-                    <div className="date">02/05</div>
+                    <div className="date">Coming soon</div>
                     <img src={Images.invest.swiss1} alt="Swiss 1" />
                     <div className="vault-size">Vault size | $100k</div>
                   </div>
@@ -190,15 +190,16 @@ export const HowTo = () => {
                     </ul>
 
                     <div className="starts-in row middle">
-                      <span className="name">Starts in:</span>
-                      <Countdown date={new Date("2025/11/11")} />
+                      <span className="name">Coming soon</span>
+                      {/* <span className="name">Starts in:</span>
+                      <Countdown date={new Date("2025/11/11")} /> */}
                     </div>
                   </div>
                 </div>
 
                 <div className="details-row row">
                   <div className="cat-image">
-                    <div className="date">04/05</div>
+                    <div className="date">Coming soon</div>
                     <img src={Images.invest.swiss2} alt="Swiss 2" />
                     <div className="vault-size">Vault size | $500k +</div>
                   </div>
@@ -227,15 +228,16 @@ export const HowTo = () => {
                     </ul>
 
                     <div className="starts-in row middle">
-                      <span className="name">Starts in:</span>
-                      <Countdown date={new Date("2025/11/11")} />
+                      <span className="name">Coming soon</span>
+                      {/* <span className="name">Starts in:</span>
+                      <Countdown date={new Date("2025/11/11")} /> */}
                     </div>
                   </div>
                 </div>
 
                 <div className="details-row row">
                   <div className="cat-image">
-                    <div className="date">06/05</div>
+                    <div className="date">Coming soon</div>
                     <img src={Images.invest.swiss3} alt="Swiss 3" />
                     <div className="vault-size">Vault size | $200k</div>
                   </div>
@@ -263,15 +265,16 @@ export const HowTo = () => {
                     </ul>
 
                     <div className="starts-in row middle">
-                      <span className="name">Starts in:</span>
-                      <Countdown date={new Date("2025/11/11")} />
+                      <span className="name">Coming soon</span>
+                      {/* <span className="name">Starts in:</span>
+                      <Countdown date={new Date("2025/11/11")} /> */}
                     </div>
                   </div>
                 </div>
 
                 <div className="details-row row">
                   <div className="cat-image">
-                    <div className="date">08/05</div>
+                    <div className="date">Coming soon</div>
                     <img src={Images.invest.swiss4} alt="Swiss 4" />
                     <div className="vault-size">Vault size | $200k</div>
                   </div>
@@ -299,8 +302,8 @@ export const HowTo = () => {
                     </ul>
 
                     <div className="starts-in row middle">
-                      <span className="name">Starts in:</span>
-                      <Countdown date={new Date("2025/11/11")} />
+                      {/* <span className="name">Starts in:</span>
+                      <Countdown date={new Date("2025/11/11")} /> */}
                     </div>
                   </div>
                 </div>
