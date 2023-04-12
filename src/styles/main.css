@@ -510,6 +510,7 @@ h4 {
   line-height: 32px;
   letter-spacing: 0em;
   text-align: left;
+  padding-right: 27px;
 }
 .Collapsible__trigger:after {
   content: "";
@@ -544,6 +545,18 @@ h4 {
 }
 .Collapsible__contentInner b {
   text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .Collapsible {
+    padding: 12px;
+  }
+  .Collapsible__trigger {
+    font-size: 14px;
+  }
+  .Collapsible__trigger:after {
+    right: 12px;
+    top: 16px;
+  }
 }
 
 .swiper-pagination-bullet {

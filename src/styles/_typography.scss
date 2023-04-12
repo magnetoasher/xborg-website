@@ -300,6 +300,7 @@ h4 {
     line-height: 32px;
     letter-spacing: 0em;
     text-align: left;
+    padding-right: 27px;
 
     &:after {
       content: "";
@@ -343,6 +344,19 @@ h4 {
 
     b {
       text-decoration: underline;
+    }
+  }
+
+  @media (max-width: $sm-max) {
+    padding: 12px;
+
+    &__trigger {
+      font-size: 14px;
+
+      &:after {
+        right: 12px;
+        top: 16px;
+      }
     }
   }
 }

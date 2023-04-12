@@ -48,9 +48,9 @@ export const Vision = () => {
   const onScroll = (scrolled: number) => {
     const scrollHeight = height * 5;
     const pos5 = scrollHeight / 2;
-    const pos4 = scrollHeight / 2.5;
-    const pos3 = scrollHeight / 3;
-    const pos2 = scrollHeight / 4;
+    const pos4 = scrollHeight / 3;
+    const pos3 = scrollHeight / 3.6;
+    const pos2 = scrollHeight / 4.8;
 
     if (scrolled > pos5) {
       if (activeSpotlight !== 4) handleChanging(4);
