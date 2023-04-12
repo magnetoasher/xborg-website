@@ -4896,6 +4896,9 @@ h4 {
 .submission-recorded .wrapper h4 span {
   color: #eb3a4a;
 }
+.submission-recorded .parallaxed-deck img {
+  padding-bottom: 32px;
+}
 .submission-recorded .parallaxed-1 img {
   max-width: 300px;
   opacity: 0;
@@ -4958,6 +4961,18 @@ h4 {
 @media (max-width: 992px) {
   .submission-recorded .wrapper {
     flex-direction: column-reverse;
+  }
+  .submission-recorded .parallaxed-deck {
+    margin-top: 32px;
+  }
+  .submission-recorded .parallaxed-deck img {
+    padding-bottom: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .submission-recorded h1 {
+    font-size: 32px;
+    line-height: 40px;
   }
 }
 
