@@ -495,6 +495,57 @@ h4 {
     transform: translate3d(0, 0, 0);
   }
 }
+.Collapsible {
+  background: #111111;
+  padding: 32px;
+  position: relative;
+  margin-bottom: 16px;
+}
+.Collapsible__trigger {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.Collapsible__trigger:after {
+  content: "";
+  position: absolute;
+  right: 32px;
+  top: 30px;
+  width: 24px;
+  height: 24px;
+  background: url("../assets/imgs/arrow-square-down.svg");
+  background-size: cover;
+  transition: 0.2s ease-in;
+}
+.Collapsible__trigger.is-open:after {
+  transform: rotate(180deg);
+}
+.Collapsible__contentInner {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 24px;
+}
+.Collapsible__contentInner p {
+  margin-bottom: 32px;
+}
+.Collapsible__contentInner p:last-child {
+  margin-bottom: 0;
+}
+.Collapsible__contentInner .link {
+  text-decoration: underline;
+}
+.Collapsible__contentInner .link:hover {
+  color: #eb3a4a;
+}
+.Collapsible__contentInner b {
+  text-decoration: underline;
+}
+
 .swiper-pagination-bullet {
   margin: 0 5px;
   background-color: #171717;
@@ -4496,56 +4547,6 @@ h4 {
   background: #eb3a4a;
   box-shadow: 0px 0px 16px rgba(235, 58, 74, 0.5);
 }
-.faq .Collapsible {
-  background: #111111;
-  padding: 32px;
-  position: relative;
-  margin-bottom: 16px;
-}
-.faq .Collapsible__trigger {
-  cursor: pointer;
-  width: 100%;
-  display: flex;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 32px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-.faq .Collapsible__trigger:after {
-  content: "";
-  position: absolute;
-  right: 32px;
-  top: 30px;
-  width: 24px;
-  height: 24px;
-  background: url("../assets/imgs/arrow-square-down.svg");
-  background-size: cover;
-  transition: 0.2s ease-in;
-}
-.faq .Collapsible__trigger.is-open:after {
-  transform: rotate(180deg);
-}
-.faq .Collapsible__contentInner {
-  margin-top: 16px;
-  font-size: 14px;
-  line-height: 24px;
-}
-.faq .Collapsible__contentInner p {
-  margin-bottom: 32px;
-}
-.faq .Collapsible__contentInner p:last-child {
-  margin-bottom: 0;
-}
-.faq .Collapsible__contentInner .link {
-  text-decoration: underline;
-}
-.faq .Collapsible__contentInner .link:hover {
-  color: #eb3a4a;
-}
-.faq .Collapsible__contentInner b {
-  text-decoration: underline;
-}
 
 .seed {
   padding-bottom: 80px;
@@ -5188,6 +5189,9 @@ h4 {
     text-align: center;
     padding: 16px;
   }
+}
+.invest .about-xborg .pioneering-title {
+  margin-bottom: 24px;
 }
 .invest .about-xborg .pioneering-title span {
   color: #d1d3d4;
@@ -6759,57 +6763,21 @@ h4 {
     width: 24px;
   }
 }
-.invest .howto .content-line {
-  position: relative;
-}
-.invest .howto .content-line:after {
-  content: "";
-  position: absolute;
-  left: -16px;
-  top: 38px;
-  bottom: 32px;
-  width: 1px;
-  background-color: #eb3a4a;
-  opacity: 0;
-  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-}
-.invest .howto .content-line:before {
-  content: "";
-  position: absolute;
-  left: -16px;
-  bottom: 32px;
-  width: 16px;
-  height: 16px;
-  background: #eb3a4a;
-  box-shadow: 0px 0px 32px #eb3a4a;
-  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-  opacity: 0;
-}
-.invest .howto .content-line.with-line:after, .invest .howto .content-line.with-line:before {
-  opacity: 1;
-}
-.invest .howto .content {
-  max-width: 906px;
-  margin: 0 auto;
-  width: 100%;
-}
-.invest .howto .content h2 {
-  color: #d1d3d4;
-  text-align: center;
-}
 .invest .howto .btn-title {
   font-family: Vista Nordic;
   font-size: 24px;
   font-weight: 900;
   line-height: 30px;
-  color: #fff;
+  color: #d1d3d4;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .invest .howto .btn-desc {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 300;
   line-height: 20px;
   margin-top: 4px;
-  color: #fff;
+  color: #444444;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .invest .howto .choose-method {
   margin: 32px -12px;
@@ -6821,91 +6789,157 @@ h4 {
   height: 40px;
 }
 .invest .howto .btn-method {
-  background-color: #212121;
   padding: 16px;
   margin: 0 12px;
   transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   position: relative;
-}
-.invest .howto .btn-method:after {
-  content: "";
-  position: absolute;
-  left: -16px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  background: #eb3a4a;
-  box-shadow: 0px 0px 32px #eb3a4a;
-  opacity: 0;
+  border: 1px solid #212121;
 }
 .invest .howto .btn-method:hover, .invest .howto .btn-method.active {
   background-color: #eb3a4a;
+  border-color: #eb3a4a;
+}
+.invest .howto .btn-method:hover .btn-desc,
+.invest .howto .btn-method:hover .btn-title, .invest .howto .btn-method.active .btn-desc,
+.invest .howto .btn-method.active .btn-title {
+  color: #fff;
+}
+.invest .howto .btn-method:nth-child(2):hover, .invest .howto .btn-method:nth-child(2).active {
+  background-color: #01c38c;
+  border-color: #01c38c;
 }
 .invest .howto .btn-method.active:after {
   opacity: 1;
 }
-.invest .howto .list-points {
+.invest .howto .content {
+  max-width: 906px;
+  margin: 0 auto;
+  width: 100%;
+}
+.invest .howto .content h2 {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  color: #d1d3d4;
+}
+.invest .howto .content h2 span {
+  color: #eb3a4a;
+}
+.invest .howto .swissborg .details-row {
+  padding-left: 64px;
+}
+.invest .howto .swissborg .details-row .cat-image {
+  margin-right: 32px;
+}
+.invest .howto .swissborg .details-row .cat-image .vault-size {
+  color: #111111;
   font-size: 16px;
   font-weight: 600;
-  line-height: 20px;
-  color: #d1d3d4;
-  margin-top: 64px;
+  line-height: 19px;
+  text-align: center;
+  background-color: #01c38c;
+  padding: 10px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  position: absolute;
+  left: -64px;
+  top: -24px;
+  bottom: -24px;
 }
-.invest .howto .list-points span {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 20px;
-  color: #777;
+.invest .howto .swissborg .details-row .cat-name span {
+  color: #01c38c;
 }
-.invest .howto .list-points .list-item {
-  margin-bottom: 8px;
+.invest .howto .prometheus-category .cat-name span {
+  color: #eb3a4a;
 }
-.invest .howto .list-points .list-item:last-child {
-  margin-bottom: 0;
+.invest .howto .details-row {
+  padding: 24px;
+  border: 1px solid #2e2c37;
+  margin-bottom: 16px;
 }
-.invest .howto .data-block {
-  padding: 32px;
-  background-color: #111;
-  margin-top: 32px;
-  min-width: 319px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-}
-.invest .howto .data-block.with-cube {
-  padding-left: 64px;
+.invest .howto .details-row .cat-image {
+  margin-right: 116px;
   position: relative;
 }
-.invest .howto .data-block.with-cube:after {
-  content: "";
+.invest .howto .details-row .cat-image .date {
   position: absolute;
-  left: 32px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  background: #eb3a4a;
-  box-shadow: 0px 0px 32px #eb3a4a;
+  top: 8px;
+  left: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+  color: #d1d3d4;
+  padding: 8px;
+  border: 1px solid #212121;
 }
-.invest .howto .data-block.block-big {
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 25px;
+.invest .howto .details-row .cat-image img {
+  height: 219px;
+}
+.invest .howto .details-row .cat-name {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 16px;
+}
+.invest .howto .details-row ul li {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #d1d3d4;
+  margin-bottom: 8px;
+}
+.invest .howto .details-row ul li span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
   color: #777777;
 }
-.invest .howto .data-block.block-big span {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 25px;
-  color: #fff;
+.invest .howto .details-row .starts-in {
+  margin-top: 8px;
 }
-.invest .howto .chevron {
+.invest .howto .details-row .starts-in span.name {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+  margin-right: 16px;
+}
+.invest .howto .details-row .countdown .countdown-numbers span {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  width: 17px;
+  height: 26px;
+  color: #d1d3d4;
+}
+.invest .howto .footer-spacer {
+  height: 1px;
   margin-top: 32px;
-  height: 84px;
+  border-bottom: 1px solid #212121;
 }
-.invest .howto .prometheus-holders {
-  margin-bottom: 64px;
+.invest .howto .category-footer {
+  margin-top: 16px;
+  max-width: 328px;
+  width: 100%;
+}
+.invest .howto .category-footer .footer-title {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+}
+.invest .howto .category-footer p {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+  color: #878787;
+}
+.invest .howto .category-faq {
+  max-width: 672px;
+  margin: 64px auto 0;
+  width: 100%;
 }
 .invest .howto .footnote {
   font-size: 12px;
@@ -6915,81 +6949,77 @@ h4 {
   text-align: center;
   color: #878787;
 }
-@media (max-width: 1058px) {
-  .invest .howto .blocks-row {
-    flex-wrap: wrap;
-  }
-  .invest .howto .data-block.expand {
-    flex: 0 0 100%;
-  }
-  .invest .howto .chevron {
-    transform: rotate(90deg);
-  }
-  .invest .howto .content-line:after, .invest .howto .content-line:before {
-    display: none;
-  }
-  .invest .howto .btn-method.active:after {
-    display: none;
-  }
-}
-@media (max-width: 992px) {
+@media (max-width: 960px) {
   .invest .howto .choose-method {
     flex-direction: column;
     margin-left: 0;
     margin-right: 0;
   }
-  .invest .howto .btn-method {
+  .invest .howto .choose-method .btn-method {
     width: 100%;
-    margin: 16px 0;
+  }
+  .invest .howto .choose-method .btn-method:first-child {
+    margin-bottom: 32px;
+  }
+  .invest .howto .details-row .cat-image {
+    margin-right: 32px;
+  }
+  .invest .howto .details-row .cat-image img {
+    height: 168px;
+  }
+  .invest .howto .swissborg .details-row {
+    padding-left: 24px;
+  }
+  .invest .howto .swissborg .details-row .cat-image .vault-size {
+    position: relative;
+    top: initial;
+    left: initial;
+    bottom: initial;
+    writing-mode: initial;
+    text-orientation: initial;
   }
 }
-@media (max-width: 768px) {
-  .invest .howto .content h2 {
-    font-size: 24px;
-    line-height: 30px;
+@media (max-width: 840px) {
+  .invest .howto .details-row {
+    padding: 16px !important;
+  }
+  .invest .howto .details-row .cat-image img {
+    height: 140px;
+  }
+  .invest .howto .swissborg .details-row .cat-image {
+    margin-right: 16px;
+  }
+}
+@media (max-width: 650px) {
+  .invest .howto .details-row {
+    flex-direction: column;
+  }
+  .invest .howto .details-row .cat-image {
+    margin-right: 0 !important;
+  }
+  .invest .howto .details-row .cat-image img {
+    height: auto;
     width: 100%;
-    margin-top: 48px;
-    margin-bottom: 0;
-    text-align: left;
+  }
+  .invest .howto .details-row .cat-name {
+    margin-top: 16px;
+  }
+  .invest .howto .btn-title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .invest .howto .choose-method .btn-method:first-child {
+    margin-bottom: 16px;
   }
 }
 @media (max-width: 576px) {
-  .invest .howto .btn-title {
-    font-size: 16px;
-    line-height: 18px;
+  .invest .howto .details-row .starts-in {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  .invest .howto .btn-desc {
-    font-size: 14px;
-  }
-  .invest .howto .blocks-row {
-    justify-content: center;
-    margin-bottom: 16px;
-  }
-  .invest .howto .chevron {
-    margin: 0px 0 -36px;
-    height: 48px;
-  }
-  .invest .howto .data-block {
-    min-width: 0;
-    font-size: 14px;
-    padding: 16px;
-    width: 100%;
-  }
-  .invest .howto .data-block.with-cube {
-    padding-left: 48px;
-  }
-  .invest .howto .data-block.with-cube:after {
-    left: 16px;
-  }
-  .invest .howto .data-block.block-big {
-    padding: 16px;
-    font-size: 14px;
-  }
-  .invest .howto .data-block.block-big:after {
-    display: none;
-  }
-  .invest .howto .data-block.block-big span {
-    font-size: 14px;
+  .invest .howto .details-row .starts-in span.name {
+    margin-right: 0;
+    margin-bottom: 8px;
   }
 }
 .invest .news-and-events h2 {
@@ -8263,6 +8293,7 @@ footer.footer a:hover svg path {
 .line-graph {
   width: 100%;
   height: 234px;
+  position: relative;
 }
 .line-graph .recharts-cartesian-axis-line,
 .line-graph .recharts-cartesian-axis-tick-line {

@@ -1,6 +1,7 @@
 .line-graph {
   width: 100%;
   height: 234px;
+  position: relative;
 
   .recharts-cartesian-axis-line,
   .recharts-cartesian-axis-tick-line {

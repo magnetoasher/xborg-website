@@ -1,13 +1,5 @@
-import React from "react";
 import { useDispatch } from "react-redux";
-import {
-  XAxis,
-  Tooltip,
-  AreaChart,
-  Area,
-  ResponsiveContainer,
-  Line,
-} from "recharts";
+import { XAxis, Tooltip, AreaChart, Area, ResponsiveContainer } from "recharts";
 import { formatNumberToK } from "../../helpers/inputs";
 import { months } from "../../helpers/time";
 import { AppDispatch } from "../../store";
@@ -15,10 +7,9 @@ import { SeedViewModel } from "../../viewmodels/SeedViewModel";
 
 export type LineGraphProps = {
   data: any;
-  submissions?: number;
 };
 
-export const LineGraph = ({ data, submissions }: LineGraphProps) => {
+export const LineGraph = ({ data }: LineGraphProps) => {
   const newData = data?.map((item: any, index: number) => ({
     ...item,
     xaxisLabel:
@@ -63,7 +54,13 @@ export const LineGraph = ({ data, submissions }: LineGraphProps) => {
             strokeOpacity={1}
             strokeDasharray={2}
             fill="transparent"
-            dot={<ActiveText fromTop={100} title="$1,1M Cap" />}
+            dot={
+              <ActiveText
+                title="Soft Cap"
+                titleValue="$1,1M"
+                length={data.length}
+              />
+            }
             activeDot={<ActiveDotEmpty />}
           />
           <Area
@@ -73,7 +70,13 @@ export const LineGraph = ({ data, submissions }: LineGraphProps) => {
             strokeWidth={1}
             strokeOpacity={1}
             fill="transparent"
-            dot={<ActiveText fromTop={35} title="$2M Target raise" />}
+            dot={
+              <ActiveText
+                titleValue="$2M"
+                title="Target raise"
+                length={data.length}
+              />
+            }
             activeDot={<ActiveDotEmpty />}
           />
           <Area
@@ -94,24 +97,39 @@ export const LineGraph = ({ data, submissions }: LineGraphProps) => {
 const ActiveDotEmpty = () => null;
 
 const ActiveText = (props: any) => {
-  const { fromTop, title, index } = props;
+  const { title, titleValue, cy, index, length } = props;
 
-  if (index !== 0) return null;
+  if (index !== length - 1) return null;
 
   return (
-    <text
-      orientation="bottom"
-      width="30"
-      height="30"
-      x={0}
-      y={fromTop}
-      stroke="none"
-      fill="#fff"
-      fontWeight={700}
-      fontSize={12}
-    >
-      <tspan>{title}</tspan>
-    </text>
+    <>
+      <text
+        orientation="bottom"
+        width="30"
+        height="30"
+        x={0}
+        y={cy}
+        stroke="none"
+        fill="#444444"
+        fontWeight={600}
+        fontSize={12}
+      >
+        <tspan>{titleValue}</tspan>
+      </text>
+      <text
+        orientation="bottom"
+        width="30"
+        height="30"
+        x={0}
+        y={cy + 14}
+        stroke="none"
+        fill="#444444"
+        fontWeight={600}
+        fontSize={12}
+      >
+        <tspan>{title}</tspan>
+      </text>
+    </>
   );
 };
 

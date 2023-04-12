@@ -266,10 +266,7 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
                 </div>
               </div>
               {chartView ? (
-                <LineGraph
-                  data={seedSummary?.summary}
-                  submissions={seedSummary?.nbSubmissions}
-                />
+                <LineGraph data={seedSummary?.summary} />
               ) : (
                 <ObserverContainer className="submissions">
                   {slicedPage.map((item, index) => (

@@ -1,16 +1,11 @@
 import { useRef } from "react";
 import { ExternalLink } from "../../../../assets/svgs/ExternalLink";
 import { ButtonPrimary, ObserverContainer, Tabs } from "../../../../components";
-import { TextScramble } from "../../../../viewmodels/TextScramble";
+import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const PickGame = () => {
   const ref = useRef(null);
-
-  function callbackIn() {
-    const current = ref.current as unknown as HTMLDivElement;
-    const scramble = new TextScramble(current);
-    if (ref.current) scramble.setText(current.innerHTML);
-  }
+  const textVM = new TextManipulation();
 
   const EvioButtons = () => (
     <div className="row">
@@ -95,7 +90,7 @@ export const PickGame = () => {
   return (
     <ObserverContainer
       className="pick-game expand row column"
-      onAnimateIn={callbackIn}
+      onAnimateIn={() => textVM.scrambleText(ref)}
     >
       <div className="title" ref={ref}>
         Pick a game

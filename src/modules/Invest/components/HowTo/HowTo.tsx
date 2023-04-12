@@ -1,7 +1,9 @@
 import { useState } from "react";
+import Collapsible from "react-collapsible";
 import { Link } from "react-router-dom";
 import { Images } from "../../../../assets/imgs/Images";
-import { Links } from "../../../../components";
+import { ButtonSecondary, Links } from "../../../../components";
+import { Countdown } from "../../../../components/Countdown";
 import { Head } from "../Head";
 import { Navbar } from "../Navbar";
 
@@ -19,7 +21,9 @@ export const HowTo = () => {
       <Navbar active={2} />
 
       <div className="content w-full">
-        <h2>Choose a method of investment</h2>
+        <h2>
+          <span>Choose</span> a method of investment
+        </h2>
 
         <div
           className={`w-full content-line${active !== -1 ? " with-line" : ""}`}
@@ -52,7 +56,7 @@ export const HowTo = () => {
               }`}
               onClick={(e) => {
                 e.preventDefault();
-                handleChange(-1);
+                handleChange(1);
               }}
             >
               <div className="icon">
@@ -67,98 +71,276 @@ export const HowTo = () => {
           </div>
 
           {active == 0 && (
-            <div className="prometheus-holders">
-              <div className="list-points row column">
-                <div className="list-item">
-                  Min/max investments: <span>$100-$3,000 per NFT held</span>
-                </div>
-                <div className="list-item">
-                  Valuation: <span>$45M</span>
-                </div>
-                <div className="list-item">
-                  Token price: <span>$0.045</span>
-                </div>
-                <div className="list-item">
-                  Token required to invest: <span>USDC</span>
-                </div>
-              </div>
-
-              <div className="data-rows row column top">
-                <div className="data-block block-big with-cube">
-                  <span>When?</span> 04/05 - 4 pm CET
-                </div>
-                <div className="data-block block-big with-cube">
-                  <span>Where?</span> XBorg’s Launchpad -{" "}
-                  <a href="https://launchpad.xborg.com/" target="_blank">
-                    https://launchpad.xborg.com/
-                  </a>
-                </div>
-
-                <div className="blocks-row row middle w-full">
-                  <div className="data-block with-cube">Where?</div>
-
-                  <img
-                    src={Images.chevronRight}
-                    alt="chevron"
-                    className="chevron"
-                  />
-                  <div className="data-block expand">
-                    XBorg’s Launchpad - https://launchpad.xborg.com/
-                  </div>
-                </div>
-
-                <div className="blocks-row row middle w-full">
-                  <div className="data-block with-cube">
-                    How much can I invest?
+            <>
+              <div className="row column category-details prometheus-category">
+                <div className="details-row row">
+                  <div className="cat-image">
+                    <div className="date">04/05</div>
+                    <img src={Images.invest.prometheus} alt="Prometheus" />
                   </div>
 
-                  <img
-                    src={Images.chevronRight}
-                    alt="chevron"
-                    className="chevron"
-                  />
-                  <div className="data-block expand">
-                    $100-$3,000 per NFT held
-                  </div>
-                </div>
+                  <div className="row column">
+                    <div className="cat-name">
+                      <span>Public</span> Vault
+                    </div>
+                    <ul>
+                      <li>
+                        Investment: <span>$100-$3,000 per NFT held</span>
+                      </li>
+                      <li>
+                        Valuation: <span>$45M</span>
+                      </li>
+                      <li>
+                        Token price: <span>$0.045</span>
+                      </li>
+                      <li>
+                        Token required to invest: <span>USDC</span>
+                      </li>
+                    </ul>
 
-                <div className="blocks-row row middle w-full">
-                  <div className="data-block with-cube">
-                    What’s the valuation?
-                  </div>
-
-                  <img
-                    src={Images.chevronRight}
-                    alt="chevron"
-                    className="chevron"
-                  />
-                  <div className="data-block expand">
-                    $45M (1 XBG token = $0.045)
-                  </div>
-                </div>
-
-                <div className="blocks-row row middle w-full">
-                  <div className="data-block with-cube">
-                    What’s the valuation?
-                  </div>
-
-                  <img
-                    src={Images.chevronRight}
-                    alt="chevron"
-                    className="chevron"
-                  />
-                  <div className="data-block expand">
-                    $45M (1 XBG token = $0.045)
+                    <div className="starts-in row middle">
+                      <span className="name">Starts in:</span>
+                      <Countdown date={new Date("2025/11/11")} />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+              <div className="category-footer">
+                <div className="footer-title">Not a Prometheus holder?</div>
+
+                <p>
+                  Access the seed round at a discounted valuation and higher
+                  maximum investment ticket.
+                </p>
+
+                <div className="row">
+                  <ButtonSecondary label="Purchase a Prometheus NFT" />
+                </div>
+              </div>
+              <div className="footer-spacer" />
+              <div className="category-faq">
+                <Collapsible
+                  trigger="What is the benefit of owning a Prometheus NFT?"
+                  className="collapsible"
+                >
+                  <p>
+                    Discounted valuation - Only Prometheus holders will have
+                    access to an investment opportunity at a $45M valuation,
+                    while other investors will invest at a $50 FDV.
+                  </p>
+                  <p>
+                    Guaranteed allocation - During the investment period, each
+                    Prometheus holder will have a guaranteed allocation up to
+                    $3,000 per NFT held.
+                  </p>
+                </Collapsible>
+                <Collapsible
+                  trigger="What do I need to do to get ready?"
+                  className="collapsible"
+                >
+                  <p>
+                    1. Make sure you complete the KYC process on
+                    https://launchpad.xborg.com with the wallet that holds your
+                    Prometheus NFT(s),
+                    <br />
+                    2. Get $USDC on your wallet.
+                  </p>
+                </Collapsible>
+              </div>
+            </>
           )}
-        </div>
 
-        <div className="footnote">
-          Not a Prometheus holder or a SwissBorg user? Discover your options to
-          become eligible.
+          {active == 1 && (
+            <>
+              <div className="row column category-details swissborg">
+                <div className="details-row row">
+                  <div className="cat-image">
+                    <div className="date">02/05</div>
+                    <img src={Images.invest.swiss1} alt="Swiss 1" />
+                    <div className="vault-size">Vault size | $100k</div>
+                  </div>
+
+                  <div className="row column">
+                    <div className="cat-name">
+                      <span>Public</span> Vault
+                    </div>
+                    <ul>
+                      <li>
+                        Investment: <span>$100</span>
+                      </li>
+                      <li>
+                        Requirement: <span>KYC level 2+</span>
+                      </li>
+                      <li>
+                        Valuation: <span>$55M</span>
+                      </li>
+                      <li>
+                        Token price: <span>$0.055</span>
+                      </li>
+                      <li>
+                        Token required to invest: <span>CHSB</span>
+                      </li>
+                    </ul>
+
+                    <div className="starts-in row middle">
+                      <span className="name">Starts in:</span>
+                      <Countdown date={new Date("2025/11/11")} />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="details-row row">
+                  <div className="cat-image">
+                    <div className="date">04/05</div>
+                    <img src={Images.invest.swiss2} alt="Swiss 2" />
+                    <div className="vault-size">Vault size | $500k +</div>
+                  </div>
+
+                  <div className="row column">
+                    <div className="cat-name">
+                      <span>Genesis</span> Vault
+                    </div>
+                    <ul>
+                      <li>
+                        Investment:{" "}
+                        <span>$100 - $3,000 (guaranteed allocation)</span>
+                      </li>
+                      <li>
+                        Requirement: <span>Genesis status</span>
+                      </li>
+                      <li>
+                        Valuation: <span>$50M</span>
+                      </li>
+                      <li>
+                        Token price: <span>$0.050</span>
+                      </li>
+                      <li>
+                        Token required to invest: <span>USDC</span>
+                      </li>
+                    </ul>
+
+                    <div className="starts-in row middle">
+                      <span className="name">Starts in:</span>
+                      <Countdown date={new Date("2025/11/11")} />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="details-row row">
+                  <div className="cat-image">
+                    <div className="date">06/05</div>
+                    <img src={Images.invest.swiss3} alt="Swiss 3" />
+                    <div className="vault-size">Vault size | $200k</div>
+                  </div>
+
+                  <div className="row column">
+                    <div className="cat-name">
+                      <span>Premium</span> Vault
+                    </div>
+                    <ul>
+                      <li>
+                        Investment: <span>Based on in-app status</span>
+                      </li>
+                      <li>
+                        Requirement: <span>Standard or above</span>
+                      </li>
+                      <li>
+                        Valuation: <span>$50M</span>
+                      </li>
+                      <li>
+                        Token price: <span>$0.055</span>
+                      </li>
+                      <li>
+                        Token required to invest: <span>USDC</span>
+                      </li>
+                    </ul>
+
+                    <div className="starts-in row middle">
+                      <span className="name">Starts in:</span>
+                      <Countdown date={new Date("2025/11/11")} />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="details-row row">
+                  <div className="cat-image">
+                    <div className="date">08/05</div>
+                    <img src={Images.invest.swiss4} alt="Swiss 4" />
+                    <div className="vault-size">Vault size | $200k</div>
+                  </div>
+
+                  <div className="row column">
+                    <div className="cat-name">
+                      <span>Series A</span> Vault
+                    </div>
+                    <ul>
+                      <li>
+                        Investment: <span>$100 - $2,000</span>
+                      </li>
+                      <li>
+                        Requirement: <span>SwissBorg’s Series A investor</span>
+                      </li>
+                      <li>
+                        Valuation: <span>$50M</span>
+                      </li>
+                      <li>
+                        Token price: <span>$0.055</span>
+                      </li>
+                      <li>
+                        Token required to invest: <span>USDC</span>
+                      </li>
+                    </ul>
+
+                    <div className="starts-in row middle">
+                      <span className="name">Starts in:</span>
+                      <Countdown date={new Date("2025/11/11")} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="category-footer">
+                <div className="footer-title">Not a SwissBorg user?</div>
+                <p>
+                  Access the seed round at a discounted valuation and higher
+                  maximum investment ticket
+                </p>
+
+                <div className="row">
+                  <ButtonSecondary label="Open a SwissBorg account" />
+                </div>
+              </div>
+              <div className="footer-spacer" />
+              <div className="category-faq">
+                <Collapsible
+                  trigger="What is the benefit of owning a Prometheus NFT?"
+                  className="collapsible"
+                >
+                  <p>
+                    Discounted valuation - Only Prometheus holders will have
+                    access to an investment opportunity at a $45M valuation,
+                    while other investors will invest at a $50 FDV.
+                  </p>
+                  <p>
+                    Guaranteed allocation - During the investment period, each
+                    Prometheus holder will have a guaranteed allocation up to
+                    $3,000 per NFT held.
+                  </p>
+                </Collapsible>
+                <Collapsible
+                  trigger="What do I need to do to get ready?"
+                  className="collapsible"
+                >
+                  <p>
+                    1. Make sure you complete the KYC process on
+                    https://launchpad.xborg.com with the wallet that holds your
+                    Prometheus NFT(s),
+                    <br />
+                    2. Get $USDC on your wallet.
+                  </p>
+                </Collapsible>
+              </div>
+            </>
+          )}
         </div>
       </div>
 

@@ -7,10 +7,12 @@ import {
   ParallaxLayer,
   SectionDescription,
 } from "../../../../components";
-import { TextScramble } from "../../../../viewmodels/TextScramble";
+import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const Prometheus = () => {
   const titleScrambleRef = useRef(null);
+
+  const textVM = new TextManipulation();
   return (
     <div className={`prometheus expand row middle between`}>
       <div className="description">
@@ -29,12 +31,7 @@ export const Prometheus = () => {
           </div>
           <SectionDescription
             className="section-head-desc"
-            onAnimateIn={() => {
-              const current =
-                titleScrambleRef.current as unknown as HTMLDivElement;
-              const scramble = new TextScramble(current);
-              if (titleScrambleRef.current) scramble.setText(current.innerHTML);
-            }}
+            onAnimateIn={() => textVM.scrambleText(titleScrambleRef)}
           >
             Shape the future of gaming and experience the XBorg ecosystem to the
             fullest.

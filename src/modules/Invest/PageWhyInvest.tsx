@@ -1,6 +1,5 @@
 import { ButtonPrimary, Layout } from "../../components";
 import {
-  Navbar,
   Supporters,
   Early,
   Forefront,

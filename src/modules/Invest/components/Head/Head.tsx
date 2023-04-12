@@ -1,5 +1,5 @@
-import { useRef, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useRef } from "react";
+import { useSelector } from "react-redux";
 import {
   ButtonPrimary,
   LineGraph,
@@ -7,18 +7,11 @@ import {
 } from "../../../../components";
 import { Countdown } from "../../../../components/Countdown";
 import { GlobalState } from "../../../../reducer";
-import { SeedActions } from "../../../../redux/seed/actions";
-import { AppDispatch } from "../../../../store";
 
 export const Head = () => {
-  const dispatch = useDispatch<AppDispatch>();
   const introRef = useRef(null);
 
   const seedSummary = useSelector((state: GlobalState) => state.seed.summary);
-
-  useEffect(() => {
-    dispatch(SeedActions.getSeed());
-  }, []);
 
   return (
     <div className="head">
@@ -35,7 +28,7 @@ export const Head = () => {
 
           <div className="coming row middle">
             <span className="coming-desc">Coming end of April</span>
-            <Countdown date={new Date("May 02 2023 14:00:00 GMT-0200")} />
+            <Countdown date={new Date("May 02 2023 14:00:00 GMT+0200")} />
           </div>
 
           <div className="row action">
@@ -43,10 +36,9 @@ export const Head = () => {
           </div>
         </div>
 
-        <LineGraph
-          data={seedSummary?.summary}
-          submissions={seedSummary?.nbSubmissions}
-        />
+        {seedSummary?.summary.length && (
+          <LineGraph data={seedSummary?.summary} />
+        )}
       </div>
       <div className="mobile-coming text-center w-full">
         Coming end of April

@@ -231,6 +231,13 @@ export const Images = {
     chart7: require("./invest/chart7.png"),
 
     swissborg: require("./invest/swissborg.png"),
+
+    swiss1: require("./invest/swiss1.png"),
+    swiss2: require("./invest/swiss2.png"),
+    swiss3: require("./invest/swiss3.png"),
+    swiss4: require("./invest/swiss4.png"),
+
+    prometheus: require("./invest/prometheus.png"),
   },
 
   news: {

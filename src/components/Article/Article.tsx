@@ -9,7 +9,7 @@ export type ArticleProps = {
 export const Article = ({ image, tag, date, title, link }: ArticleProps) => {
   return (
     <article className="article">
-      <a href={link} className="article-image">
+      <a href={link} target="_blank" className="article-image">
         <img src={image} alt="" />
       </a>
       <div className="article-content">

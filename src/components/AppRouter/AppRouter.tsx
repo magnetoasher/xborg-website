@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { Location, Route, Routes, useLocation } from "react-router-dom";
 import {
   AboutUs,
@@ -15,6 +16,8 @@ import {
   PageInvestFAQ,
   PageEventNews,
 } from "../../modules";
+import { SeedActions } from "../../redux/seed/actions";
+import { AppDispatch } from "../../store";
 
 export enum APP_ROUTER_TRANSITION {
   IN = "page-in",
@@ -26,11 +29,16 @@ export type ApPRouterProps = {
 };
 
 export const AppRouter = ({ setNavbarBtn }: ApPRouterProps) => {
+  const dispatch = useDispatch<AppDispatch>();
   const location = useLocation();
 
   const [displayLocation, setDisplayLocation] = useState<Location>(location);
   const [transitionStage, setTransistionStage] =
     useState<APP_ROUTER_TRANSITION>(APP_ROUTER_TRANSITION.IN);
+
+  useEffect(() => {
+    dispatch(SeedActions.getSeed());
+  }, []);
 
   useEffect(() => {
     if (location !== displayLocation)
