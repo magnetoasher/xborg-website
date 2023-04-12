@@ -5126,9 +5126,7 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .invest-navigation .heads {
-    width: 100%;
+    background-color: #111;
   }
 }
 @media (max-width: 768px) {
