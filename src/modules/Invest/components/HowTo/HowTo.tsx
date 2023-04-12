@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Collapsible from "react-collapsible";
 import { Link } from "react-router-dom";
 import { Images } from "../../../../assets/imgs/Images";
 import { ButtonSecondary, Links } from "../../../../components";
 import { Countdown } from "../../../../components/Countdown";
+import { AppViewModel } from "../../../../viewmodels/AppViewModel";
 import { Head } from "../Head";
 import { Navbar } from "../Navbar";
 
@@ -14,6 +15,12 @@ export const HowTo = () => {
     if (active == number) setActive(-1);
     else setActive(number);
   };
+
+  const appVM = new AppViewModel();
+
+  useEffect(() => {
+    appVM.scrollBellowHeader();
+  }, []);
 
   return (
     <div className="howto w-full row column middle center">

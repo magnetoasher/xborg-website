@@ -1,10 +1,17 @@
+import { useEffect } from "react";
 import Collapsible from "react-collapsible";
 import { Link } from "react-router-dom";
 import { ButtonSecondary } from "../../../../components";
+import { AppViewModel } from "../../../../viewmodels/AppViewModel";
 import { Head } from "../Head";
 import { Navbar } from "../Navbar";
 
 export const InvestFAQ = () => {
+  const appVM = new AppViewModel();
+
+  useEffect(() => {
+    appVM.scrollBellowHeader();
+  }, []);
   return (
     <div className="invest-faq faq row column middle center">
       <Head />

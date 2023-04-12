@@ -7,4 +7,12 @@
   @media (max-width: $lg-max) {
     padding-top: 48px;
   }
+
+  @media (max-width: $xs-max) {
+    padding-top: 0;
+
+    h2 {
+      margin: 24px 0;
+    }
+  }
 }

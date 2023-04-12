@@ -58,13 +58,15 @@ export const Supporters = () => {
           <div className="swissborg-title">
             Powered by <strong ref={swisseRef}>SwissBorg</strong>
           </div>
-          <SectionDescription
+          {/* <SectionDescription
             className=""
             onAnimateIn={() => textVM.scrambleText(swisseRef)}
-          >
+          > */}
+          <p>
             XBorg is a spin-off of SwissBorg, a crypto wealth management app
             with 700'000 users & $1B in Assets Under Management.
-          </SectionDescription>
+          </p>
+          {/* </SectionDescription> */}
         </ObserverContainer>
       </div>
 

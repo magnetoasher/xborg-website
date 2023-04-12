@@ -115,6 +115,10 @@
         opacity: 1;
       }
     }
+
+    &:after {
+      display: none;
+    }
   }
 
   @media (max-width: $xs-max) {

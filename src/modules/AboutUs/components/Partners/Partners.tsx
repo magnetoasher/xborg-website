@@ -53,24 +53,15 @@ export const Partners = () => {
         <div className="swissborg-title">
           Powered by <strong ref={swisseRef}>SwissBorg</strong>
         </div>
-        <SectionDescription
-          className=""
-          onAnimateIn={() => {
-            const current =
-              titleScrambleRef.current as unknown as HTMLDivElement;
-            const swiss = swisseRef.current as unknown as HTMLDivElement;
-            const scramble = new TextScramble(current);
-            const scramble2 = new TextScramble(swiss);
-
-            if (current && swiss) {
-              scramble.setText(current.innerHTML);
-              scramble2.setText(swiss.innerHTML);
-            }
-          }}
-        >
+        {/* <SectionDescription
+            className=""
+            onAnimateIn={() => textVM.scrambleText(swisseRef)}
+          > */}
+        <p>
           XBorg is a spin-off of SwissBorg, a crypto wealth management app with
           700'000 users & $1B in Assets Under Management.
-        </SectionDescription>
+        </p>
+        {/* </SectionDescription> */}
       </div>
     </div>
   );

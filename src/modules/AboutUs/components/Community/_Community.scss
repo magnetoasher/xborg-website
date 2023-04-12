@@ -530,7 +530,11 @@
   @media (max-width: $sm-max) {
     .tabs {
       margin-left: 0;
+    }
+
+    .heads {
       overflow-x: auto;
+      overflow-y: hidden;
     }
 
     .statistics {
@@ -548,6 +552,10 @@
   @media (max-width: $xxs-max) {
     .section-head-title {
       font-size: 18px;
+    }
+
+    .governance .col {
+      flex: 0 0 100%;
     }
   }
 }

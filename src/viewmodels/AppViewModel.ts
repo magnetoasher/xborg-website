@@ -179,4 +179,14 @@ export class AppViewModel {
 
     this.stickyNavbar(nav, navParent);
   };
+
+  scrollBellowHeader = () => {
+    const head = document.getElementsByClassName("invest-section-head")[0];
+
+    if (head) {
+      const scrollVM = new ScrollViewModel();
+      const height = head.clientHeight;
+      scrollVM.scrollTo(0, height, 0);
+    }
+  };
 }

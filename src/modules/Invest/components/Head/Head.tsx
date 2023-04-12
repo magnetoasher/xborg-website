@@ -14,7 +14,7 @@ export const Head = () => {
   const seedSummary = useSelector((state: GlobalState) => state.seed.summary);
 
   return (
-    <div className="head">
+    <div className="head invest-section-head">
       <div className="head-content row middle between">
         <div className="head-details">
           <h2>

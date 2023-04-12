@@ -1,8 +1,15 @@
+import { useEffect } from "react";
 import { ObserverContainer, SectionDescription } from "../../../../components";
+import { AppViewModel } from "../../../../viewmodels/AppViewModel";
 import { Head } from "../Head";
 import { Navbar } from "../Navbar";
 
 export const NextBigThing = () => {
+  const appVM = new AppViewModel();
+
+  useEffect(() => {
+    appVM.scrollBellowHeader();
+  }, []);
   return (
     <div className="next-big-thing row column middle center w-full">
       <Head />

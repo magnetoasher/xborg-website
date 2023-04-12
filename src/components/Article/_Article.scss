@@ -89,3 +89,14 @@ article.article {
     }
   }
 }
+
+@media (max-width: 380px) {
+  article.article {
+    flex-direction: column;
+
+    .article-image {
+      margin-bottom: 16px;
+      margin-right: 0;
+    }
+  }
+}

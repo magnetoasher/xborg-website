@@ -1957,9 +1957,6 @@ h4 {
     margin: 16px 0 0;
   }
 }
-.about-us .page-section-1 {
-  padding-top: 0 !important;
-}
 .about-us .vision .page-border {
   position: relative;
   width: 32px;
@@ -2837,6 +2834,7 @@ h4 {
   }
   .about-us .vision .credential-network .credential-network-parallaxed {
     width: 100%;
+    align-items: flex-start;
   }
   .about-us .vision .credential-network .credential-network-parallaxed .block-container {
     margin-top: 0;
@@ -3125,6 +3123,9 @@ h4 {
   }
   .about-us .vision .decentralized-societies .parallaxed .btn-secondary {
     opacity: 1;
+  }
+  .about-us .vision .decentralized-societies:after {
+    display: none;
   }
 }
 @media (max-width: 576px) {
@@ -3691,7 +3692,10 @@ h4 {
 @media (max-width: 768px) {
   .about-us .community .tabs {
     margin-left: 0;
+  }
+  .about-us .community .heads {
     overflow-x: auto;
+    overflow-y: hidden;
   }
   .about-us .community .statistics {
     flex-wrap: wrap;
@@ -3706,6 +3710,9 @@ h4 {
 @media (max-width: 360px) {
   .about-us .community .section-head-title {
     font-size: 18px;
+  }
+  .about-us .community .governance .col {
+    flex: 0 0 100%;
   }
 }
 .about-us .team .section-head-container {
@@ -5195,8 +5202,8 @@ h4 {
 .invest .head {
   max-width: 906px;
   width: 100%;
-  margin-top: 88px;
-  margin-bottom: 64px;
+  padding-top: 88px;
+  padding-bottom: 64px;
 }
 .invest .head .line-graph {
   height: 280px;
@@ -5249,7 +5256,7 @@ h4 {
 }
 @media (max-width: 768px) {
   .invest .head {
-    margin-bottom: 0;
+    padding-bottom: 0;
   }
   .invest .head .mobile-coming {
     font-size: 14px;
@@ -5280,6 +5287,15 @@ h4 {
     flex: 1;
     text-align: center;
     padding: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .invest .head {
+    padding-top: 0;
+  }
+  .invest .head h2 {
+    font-size: 24px !important;
+    line-height: 33.4px !important;
   }
 }
 .invest .about-xborg .pioneering-title {
@@ -6073,7 +6089,6 @@ h4 {
   line-height: 32px;
   letter-spacing: 0.05em;
   margin-bottom: 16px;
-  white-space: nowrap;
 }
 .invest .supporters .swissborg .swissborg-title strong {
   color: #01c38c;
@@ -6220,6 +6235,17 @@ h4 {
     color: #d1d3d4;
     margin: 32px 0 0;
     display: block;
+  }
+}
+@media (max-width: 576px) {
+  .invest .supporters .invest-early h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 360px) {
+  .invest .supporters .featured-list {
+    flex-direction: column;
   }
 }
 .invest .next-big-thing .content {
@@ -7123,6 +7149,14 @@ h4 {
 @media (max-width: 1200px) {
   .invest .news-and-events {
     padding-top: 48px;
+  }
+}
+@media (max-width: 576px) {
+  .invest .news-and-events {
+    padding-top: 0;
+  }
+  .invest .news-and-events h2 {
+    margin: 24px 0;
   }
 }
 .invest .invest-faq .faqs {
@@ -8674,6 +8708,15 @@ article.article .date {
   }
   article.article .article-image img {
     width: 136px;
+  }
+}
+@media (max-width: 380px) {
+  article.article {
+    flex-direction: column;
+  }
+  article.article .article-image {
+    margin-bottom: 16px;
+    margin-right: 0;
   }
 }
 .section-description p {

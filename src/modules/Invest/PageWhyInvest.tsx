@@ -1,4 +1,4 @@
-import { ButtonPrimary, Layout } from "../../components";
+import { Layout } from "../../components";
 import {
   Supporters,
   Early,
@@ -23,9 +23,3 @@ export const PageWhyInvest = () => {
     />
   );
 };
-
-const NavbarButton = () => (
-  <div className="early-access">
-    <ButtonPrimary label="Register interest" to="seed" />
-  </div>
-);
