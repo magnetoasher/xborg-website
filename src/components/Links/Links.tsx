@@ -20,9 +20,9 @@ export const Links = () => {
         Public Deck
       </a>
 
-      <Link to="/launchpad" onClick={onRedirect}>
+      <a href="https://launchpad.xborg.com/" target="_blank">
         Launchpad
-      </Link>
+      </a>
 
       <Link to="/xtreme-championship-series" onClick={onRedirect}>
         XCS
