@@ -1,4 +1,6 @@
 import { debounce } from "lodash";
+import { Dispatch, SetStateAction } from "react";
+import { TagProps } from "../components/Tag";
 import { sleep, timeConverter } from "../helpers/time";
 import { SeedDataRowMappedType, SeedDataRowType } from "../redux/seed/types";
 import { ScrollViewModel } from "./ScrollViewModel";
@@ -189,4 +191,25 @@ export class AppViewModel {
       scrollVM.scrollTo(0, height, 0);
     }
   };
+
+  onTagChange(
+    val: string,
+    tags: TagProps[],
+    selectedTags: string[],
+    selectTags: Dispatch<SetStateAction<string[]>>
+  ) {
+    const find = selectedTags.find((tag) => tag == val);
+
+    if (find) {
+      const list = selectedTags.filter((tag) => tag !== val);
+      selectTags([...list]);
+    } else {
+      let list = selectedTags;
+      const tag = tags.find((tag) => tag.value == val);
+      if (tag) {
+        list.push(tag.value);
+        selectTags([...list]);
+      }
+    }
+  }
 }
