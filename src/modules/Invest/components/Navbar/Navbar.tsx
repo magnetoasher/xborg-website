@@ -28,7 +28,7 @@ export const Navbar = ({ active }: NavbarProps) => {
         <div className="sticky-tabs tabs">
           <div className="heads row middle">
             <div className={`head-item${active == 0 ? " active" : ""}`}>
-              <Link to="/about-xborg">About XBorg</Link>
+              <Link to="/seed-round">About XBorg</Link>
             </div>
             <div className={`head-item${active == 1 ? " active" : ""}`}>
               <Link to="/why-invest">Why invest?</Link>

@@ -25,7 +25,7 @@ export const Navigation = ({ navbarBtn }: NavigationProps) => {
     { to: "", label: "About us" },
     { to: "xborg-app", label: "XBorg app" },
     { to: "xtreme-championship-series", label: "Xtreme Championship Series" },
-    { to: "about-xborg", label: "XBorg is raising funds" },
+    { to: "seed-round", label: "XBorg seed round" },
   ];
 
   return (

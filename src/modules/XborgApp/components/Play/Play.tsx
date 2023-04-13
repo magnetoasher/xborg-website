@@ -4,10 +4,8 @@ import {
   ButtonPrimary,
   ParallaxLayer,
   ObserverContainer,
-  ButtonSecondary,
   SectionDescription,
   CountUpAnimation,
-  Alert,
 } from "../../../../components";
 
 let counter = 0;

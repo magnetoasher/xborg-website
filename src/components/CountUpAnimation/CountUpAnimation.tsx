@@ -25,6 +25,7 @@ export const CountUpAnimation = ({
   return (
     <ObserverContainer
       className={className}
+      rootMargin="0px"
       onAnimateIn={() => {
         let frame = 0;
         const totalFrames = Math.round(duration / frameDuration);

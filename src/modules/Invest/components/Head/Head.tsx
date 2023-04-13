@@ -27,7 +27,7 @@ export const Head = () => {
           </SectionDescription>
 
           <div className="coming row middle">
-            <span className="coming-desc">Coming end of April</span>
+            <span className="coming-desc">Starting in:</span>
             <Countdown date={new Date("May 02 2023 14:00:00 GMT+0200")} />
           </div>
 
@@ -40,9 +40,7 @@ export const Head = () => {
           <LineGraph data={seedSummary?.summary} />
         )}
       </div>
-      <div className="mobile-coming text-center w-full">
-        Coming end of April
-      </div>
+      <div className="mobile-coming text-center w-full">Starting in:</div>
     </div>
   );
 };

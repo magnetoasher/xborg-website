@@ -546,6 +546,9 @@ h4 {
 .Collapsible__contentInner b {
   text-decoration: underline;
 }
+.Collapsible__contentInner strong {
+  font-weight: 800;
+}
 @media (max-width: 768px) {
   .Collapsible {
     padding: 12px;

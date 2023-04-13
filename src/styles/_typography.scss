@@ -345,6 +345,10 @@ h4 {
     b {
       text-decoration: underline;
     }
+
+    strong {
+      font-weight: 800;
+    }
   }
 
   @media (max-width: $sm-max) {
