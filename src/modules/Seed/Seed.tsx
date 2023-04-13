@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Images } from "../../assets/imgs/Images";
 import {
   ButtonPrimary,
@@ -22,6 +22,7 @@ import {
 import { timeDifference } from "../../helpers/time";
 import { GlobalState } from "../../reducer";
 import { SeedActions } from "../../redux/seed/actions";
+import { SEED_UTM_TYPE } from "../../redux/seed/types";
 import { AppDispatch } from "../../store";
 import { ScrollViewModel } from "../../viewmodels/ScrollViewModel";
 import { SeedViewModel } from "../../viewmodels/SeedViewModel";
@@ -34,6 +35,7 @@ export type SeedFormType = {
   capital: number;
   how: string;
   timestamp?: string;
+  utm: SEED_UTM_TYPE;
 };
 
 export type SeedPageProps = {
@@ -43,7 +45,11 @@ export type SeedPageProps = {
 export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
+  const location = useLocation();
   const h4ref = useRef(null);
+
+  const vm = new SeedViewModel(dispatch);
+  const textVM = new TextManipulation();
 
   const seedData = useSelector((state: GlobalState) => state.seed.data) || [];
   const seedSummary = useSelector((state: GlobalState) => state.seed.summary);
@@ -54,14 +60,12 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
     isPrometheusOwner: true,
     capital: 100,
     how: "",
+    utm: vm.handleUTM(location),
   });
 
   const [errors, setErrors] = useState<any>({});
   const [chartView, setChartView] = useState<boolean>(true);
   const [page, setPage] = useState<number>(0);
-
-  const vm = new SeedViewModel(dispatch);
-  const textVM = new TextManipulation();
 
   useEffect(() => {
     const scrollVM = new ScrollViewModel();

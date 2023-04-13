@@ -61,6 +61,10 @@ export const AppRouter = ({ setNavbarBtn }: ApPRouterProps) => {
         <Route path="/terms-and-agreements" element={<TermsAndConditions />} />
         <Route path="/FAQ" element={<FAQ />} />
         <Route path="/seed" element={<Seed setNavbarBtn={setNavbarBtn} />} />
+        <Route
+          path="/seed/utm"
+          element={<Seed setNavbarBtn={setNavbarBtn} />}
+        />
         <Route path="/submission-recorded" element={<SubmissionRecorded />} />
         <Route path="/prometheus" element={<Prometheus />} />
 
