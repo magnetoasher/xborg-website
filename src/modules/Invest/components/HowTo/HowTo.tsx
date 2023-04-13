@@ -322,30 +322,68 @@ export const HowTo = () => {
               <div className="footer-spacer" />
               <div className="category-faq">
                 <Collapsible
-                  trigger="What is the benefit of owning a Prometheus NFT?"
+                  trigger="What are SwissBorg Vaults?"
                   className="collapsible"
                 >
                   <p>
-                    Discounted valuation - Only Prometheus holders will have
-                    access to an investment opportunity at a $45M valuation,
-                    while other investors will invest at a $50 FDV.
-                  </p>
-                  <p>
-                    Guaranteed allocation - During the investment period, each
-                    Prometheus holder will have a guaranteed allocation up to
-                    $3,000 per NFT held.
+                    Vaults are limited size opportunities for SwissBorg users to
+                    deposit assets and benefit from an opportunity. In the case
+                    of the XBorg investment round, access to $XBG.
                   </p>
                 </Collapsible>
                 <Collapsible
-                  trigger="What do I need to do to get ready?"
+                  trigger="What is the difference between SwissBorg and XBorg?"
                   className="collapsible"
                 >
                   <p>
-                    1. Make sure you complete the KYC process on
-                    https://launchpad.xborg.com with the wallet that holds your
-                    Prometheus NFT(s),
-                    <br />
-                    2. Get $USDC on your wallet.
+                    XBorg is building a Gaming Credential and Application
+                    Network for players and Decentralized Gaming Societies,
+                    enabling them to build their digital identity and play a
+                    greater role in esports organizations. SwissBorg, is a
+                    crypto app revolutionizing wealth management with 750,000
+                    users. XBorg is the gaming venture of the SwissBorg
+                    ecosystem.
+                  </p>
+                </Collapsible>
+                <Collapsible trigger="What is $CHSB?" className="collapsible">
+                  <p>
+                    The ERC-20 utility token known as $CHSB powers the SwissBorg
+                    ecosystem and provides benefits such as voting rights,
+                    access to premium membership, and additional rewards. You
+                    will need to buy $CSHB directly in the SwissBorg app to
+                    invest in the Public vault, while investment in other vaults
+                    are done with $USDC.
+                  </p>
+                </Collapsible>
+                <Collapsible
+                  trigger="What is SwissBorg Genesis"
+                  className="collapsible"
+                >
+                  <p>
+                    Genesis members are a tier of premium users in the SwissBorg
+                    ecosystem. To learn more about the various premium tiers,
+                    follow this{" "}
+                    <a
+                      href="https://swissborg.com/premium-account"
+                      target="_blank"
+                    >
+                      link
+                    </a>
+                    .
+                  </p>
+                </Collapsible>
+                <Collapsible
+                  trigger="What is SwissBorg Series A"
+                  className="collapsible"
+                >
+                  <p>
+                    The SwissBorg Series A was a funding round cunducted by
+                    SwissBorg. The fundraise is a capital increase conducted by
+                    SwissBorg Community AG in order to acquire a share of the
+                    capital of SBorg SA, the holding entity of the SwissBorg
+                    group, which will in turn invest the proceeds from this
+                    acquisition in order to accelerate the development and
+                    growth of SwissBorg.
                   </p>
                 </Collapsible>
               </div>
