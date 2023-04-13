@@ -1,9 +1,10 @@
 import { Dispatch, SetStateAction } from "react";
-import { NavigateFunction } from "react-router-dom";
+import { Location, NavigateFunction } from "react-router-dom";
 import { toast } from "react-toastify";
 import { handleErrors } from "../helpers/inputs";
 import { SeedFormType } from "../modules";
-import { SeedActions } from "../redux/seed/actions";
+import queryString from "query-string";
+import { SEED_UTM_TYPE } from "../redux/seed/types";
 import { sendSeedSchema } from "../schemas/sendSeedSchema";
 import { AppDispatch } from "../store";
 
@@ -87,6 +88,7 @@ export class SeedViewModel {
             isPrometheusOwner: true,
             capital: 500,
             how: "",
+            utm: form.utm,
           });
 
           toast.success("Form succesfully sent!", {
@@ -142,5 +144,27 @@ export class SeedViewModel {
 
     if (result > 10000) return 10000;
     return result;
+  };
+
+  handleUTM = ({ pathname, search }: Location): SEED_UTM_TYPE => {
+    if (pathname == "/seed/utm") {
+      const parsed = queryString.parse(search)
+        ?.user as unknown as SEED_UTM_TYPE;
+
+      switch (parsed) {
+        case SEED_UTM_TYPE.ALL:
+          return SEED_UTM_TYPE.ALL;
+        case SEED_UTM_TYPE.GENESIS:
+          return SEED_UTM_TYPE.GENESIS;
+        case SEED_UTM_TYPE.PREMIUM:
+          return SEED_UTM_TYPE.PREMIUM;
+        case SEED_UTM_TYPE.SERIES_A:
+          return SEED_UTM_TYPE.SERIES_A;
+        default:
+          return SEED_UTM_TYPE.DEFAULT;
+      }
+    }
+
+    return SEED_UTM_TYPE.DEFAULT;
   };
 }

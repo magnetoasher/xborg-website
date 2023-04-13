@@ -42,3 +42,11 @@ export type SeedDataRowMappedType = {
   index: string;
   date: string;
 };
+
+export enum SEED_UTM_TYPE {
+  PREMIUM = "premium",
+  GENESIS = "genesis",
+  SERIES_A = "seriesa",
+  ALL = "all",
+  DEFAULT = "",
+}

@@ -44,6 +44,7 @@ export const AppRouter = () => {
         <Route path="/terms-and-agreements" element={<TermsAndConditions />} />
         <Route path="/FAQ" element={<FAQ />} />
         <Route path="/seed" element={<Seed />} />
+        <Route path="/seed/utm" element={<Seed />} />
         <Route path="/submission-recorded" element={<SubmissionRecorded />} />
         <Route path="/prometheus" element={<Prometheus />} />
       </Routes>
