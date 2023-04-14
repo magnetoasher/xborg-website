@@ -8,6 +8,7 @@ export type SortGroupProps = {
   title?: string;
   className?: string;
   displayAll?: boolean | number;
+  singleSelect?: boolean;
 };
 
 export const SortGroup = ({
@@ -15,6 +16,7 @@ export const SortGroup = ({
   list,
   className,
   displayAll,
+  singleSelect = false,
   onTagChange,
 }: SortGroupProps) => {
   const [selected, setSelected] = useState<string[]>([]);
@@ -47,7 +49,13 @@ export const SortGroup = ({
             label={item.label}
             active={!!selected.find((x) => x == item.value)}
             onClick={() =>
-              appVM.onTagChange(item.value, list, selected, setSelected)
+              appVM.onTagChange(
+                item.value,
+                list,
+                selected,
+                setSelected,
+                singleSelect
+              )
             }
           />
         ))}

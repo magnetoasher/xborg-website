@@ -196,19 +196,28 @@ export class AppViewModel {
     val: string,
     tags: TagProps[],
     selectedTags: string[],
-    selectTags: Dispatch<SetStateAction<string[]>>
+    selectTags: Dispatch<SetStateAction<string[]>>,
+    singleSelect: boolean
   ) {
     const find = selectedTags.find((tag) => tag == val);
 
     if (find) {
-      const list = selectedTags.filter((tag) => tag !== val);
-      selectTags([...list]);
-    } else {
-      let list = selectedTags;
-      const tag = tags.find((tag) => tag.value == val);
-      if (tag) {
-        list.push(tag.value);
+      if (singleSelect) {
+        selectTags([]);
+      } else {
+        const list = selectedTags.filter((tag) => tag !== val);
         selectTags([...list]);
+      }
+    } else {
+      if (singleSelect) {
+        selectTags([val]);
+      } else {
+        let list = selectedTags;
+        const tag = tags.find((tag) => tag.value == val);
+        if (tag) {
+          list.push(tag.value);
+          selectTags([...list]);
+        }
       }
     }
   }

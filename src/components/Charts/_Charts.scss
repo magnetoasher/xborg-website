@@ -15,6 +15,10 @@
     fill: $light100;
   }
 
+  .recharts-cartesian-axis-ticks {
+    transform: translateX(10px);
+  }
+
   .recharts-tooltip-wrapper {
     .recharts-tooltip {
       background-color: #212121;

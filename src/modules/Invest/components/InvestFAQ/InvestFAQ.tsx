@@ -41,6 +41,7 @@ export const InvestFAQ = () => {
                   value: "other",
                 },
               ]}
+              singleSelect
               displayAll
               onTagChange={setActiveCategories}
             />

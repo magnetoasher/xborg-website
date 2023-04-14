@@ -1,27 +1,7 @@
-import { useRef, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { Images } from "../../../../assets/imgs/Images";
-import {
-  ButtonPrimary,
-  LineGraph,
-  ObserverContainer,
-  SectionDescription,
-} from "../../../../components";
-import { Countdown } from "../../../../components/Countdown";
-import { GlobalState } from "../../../../reducer";
-import { SeedActions } from "../../../../redux/seed/actions";
-import { AppDispatch } from "../../../../store";
+import { ObserverContainer, SectionDescription } from "../../../../components";
 
 export const Early = () => {
-  const dispatch = useDispatch<AppDispatch>();
-  const introRef = useRef(null);
-
-  const seedSummary = useSelector((state: GlobalState) => state.seed.summary);
-
-  useEffect(() => {
-    dispatch(SeedActions.getSeed());
-  }, []);
-
   return (
     <div className="row column we-are-early">
       <h2>

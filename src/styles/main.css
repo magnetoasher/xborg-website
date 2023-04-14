@@ -8453,6 +8453,9 @@ footer.footer a:hover svg path {
   line-height: 13px;
   fill: #d1d3d4;
 }
+.line-graph .recharts-cartesian-axis-ticks {
+  transform: translateX(10px);
+}
 .line-graph .recharts-tooltip-wrapper .recharts-tooltip {
   background-color: #212121;
   border: none;
