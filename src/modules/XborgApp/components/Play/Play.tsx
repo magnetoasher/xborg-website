@@ -4,10 +4,8 @@ import {
   ButtonPrimary,
   ParallaxLayer,
   ObserverContainer,
-  ButtonSecondary,
   SectionDescription,
   CountUpAnimation,
-  Alert,
 } from "../../../../components";
 
 let counter = 0;
@@ -50,7 +48,6 @@ export const Play = () => {
 
   return (
     <div className={`play-intro expand row middle between`}>
-      <Alert text="Register for the upcoming seed round." to="seed" />
       <div className="description">
         <div className="logo-icon">
           <img src={Images.logofull} alt="" />
@@ -100,7 +97,7 @@ export const Play = () => {
       <ObserverContainer className="parallaxed-corner row end bottom">
         <div className="triangle" />
         <ParallaxLayer
-          image={Images.gamingpassport.aliens}
+          image={Images.xborgapp.aliens}
           factorX={-0.2}
           factorY={0.2}
           speed={0}
@@ -108,21 +105,21 @@ export const Play = () => {
           className="parallaxed-1"
         />
         <ParallaxLayer
-          image={Images.gamingpassport.dark_swordsman}
+          image={Images.xborgapp.dark_swordsman}
           factorX={-0.1}
           factorY={0}
           speed={0}
           className="parallaxed-2"
         />
         <ParallaxLayer
-          image={Images.gamingpassport.mage}
+          image={Images.xborgapp.mage}
           factorX={0.1}
           factorY={0}
           speed={0}
           className="parallaxed-3"
         />
         <ParallaxLayer
-          image={Images.gamingpassport.sparkles}
+          image={Images.xborgapp.sparkles}
           factorX={-0.4}
           factorY={0}
           speed={0}

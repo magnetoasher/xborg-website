@@ -11,7 +11,8 @@
     position: absolute;
     bottom: -150px;
     left: 100px;
-    filter: blur(600px);
+    filter: blur(300px);
+    z-index: -1;
     opacity: 0;
     transition: 0.3s ease-in;
   }
@@ -19,12 +20,34 @@
   .parallaxed {
     z-index: 2;
     max-width: 50%;
-    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 
     img {
       max-width: 364px;
       max-height: 589px;
-      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    .parallaxed-1 {
+      img {
+        transform: translateY(-10%);
+        opacity: 0;
+      }
+    }
+
+    .parallaxed-2 {
+      img {
+        transform: translateY(10%);
+        opacity: 0;
+        transition-delay: 0.3s;
+      }
+    }
+
+    &.in {
+      .parallaxed-1 img,
+      .parallaxed-2 img {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
     }
   }
 

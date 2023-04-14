@@ -27,6 +27,29 @@ export const ScrollWrapper = ({
       const wrapper = bar?.getScrollElement() as HTMLElement;
 
       setScrollWrap(wrapper);
+
+      const wheeled = (event: any) => {
+        event.preventDefault();
+
+        wrapper.scrollTop += event.deltaY;
+        wrapper.scrollLeft += event.deltaX;
+      };
+
+      wrapper.addEventListener("wheel", wheeled, {
+        passive: false,
+        capture: true,
+      });
+      // actual render code is in the `scrolled` handler because
+      // there are other wheel events in the code that adjust the scroll position
+      wrapper.addEventListener("scroll", () => {
+        // Create the event
+        const event = new CustomEvent("simplebar-scroll", {
+          detail: wrapper,
+        });
+
+        // Dispatch/Trigger/Fire the event
+        window.dispatchEvent(event);
+      });
     }
   }, []);
 

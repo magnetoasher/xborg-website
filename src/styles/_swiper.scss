@@ -1,0 +1,26 @@
+.swiper-pagination-bullet {
+  margin: 0 5px;
+  background-color: #171717;
+  border-radius: 0;
+  opacity: 1;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+
+  &.swiper-pagination-bullet-active {
+    background-color: $primary100;
+  }
+}
+
+.swiper-prev,
+.swiper-next {
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 32px;
+
+  &.swiper-button-disabled {
+    pointer-events: none;
+    opacity: 0.5 !important;
+  }
+}

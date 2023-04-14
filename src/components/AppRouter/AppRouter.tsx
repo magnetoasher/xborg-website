@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { Location, Route, Routes, useLocation } from "react-router-dom";
 import {
   AboutUs,
@@ -9,19 +10,35 @@ import {
   TermsAndConditions,
   Prometheus,
   SubmissionRecorded,
+  PageAboutXborg,
+  PageWhyInvest,
+  PageHowToInvest,
+  PageInvestFAQ,
+  PageEventNews,
 } from "../../modules";
+import { SeedActions } from "../../redux/seed/actions";
+import { AppDispatch } from "../../store";
 
 export enum APP_ROUTER_TRANSITION {
   IN = "page-in",
   OUT = "page-out",
 }
 
-export const AppRouter = () => {
+export type ApPRouterProps = {
+  setNavbarBtn: (btn: any) => void;
+};
+
+export const AppRouter = ({ setNavbarBtn }: ApPRouterProps) => {
+  const dispatch = useDispatch<AppDispatch>();
   const location = useLocation();
 
   const [displayLocation, setDisplayLocation] = useState<Location>(location);
   const [transitionStage, setTransistionStage] =
     useState<APP_ROUTER_TRANSITION>(APP_ROUTER_TRANSITION.IN);
+
+  useEffect(() => {
+    dispatch(SeedActions.getSeed());
+  }, []);
 
   useEffect(() => {
     if (location !== displayLocation)
@@ -43,10 +60,19 @@ export const AppRouter = () => {
         <Route path="/xtreme-championship-series" element={<XCSPage />} />
         <Route path="/terms-and-agreements" element={<TermsAndConditions />} />
         <Route path="/FAQ" element={<FAQ />} />
-        <Route path="/seed" element={<Seed />} />
-        <Route path="/seed/utm" element={<Seed />} />
+        <Route path="/seed" element={<Seed setNavbarBtn={setNavbarBtn} />} />
+        <Route
+          path="/seed/utm"
+          element={<Seed setNavbarBtn={setNavbarBtn} />}
+        />
         <Route path="/submission-recorded" element={<SubmissionRecorded />} />
         <Route path="/prometheus" element={<Prometheus />} />
+
+        <Route path="/seed-round" element={<PageAboutXborg />} />
+        <Route path="/why-invest" element={<PageWhyInvest />} />
+        <Route path="/how-to-invest" element={<PageHowToInvest />} />
+        <Route path="/news-events" element={<PageEventNews />} />
+        <Route path="/invest-faq" element={<PageInvestFAQ />} />
       </Routes>
     </div>
   );

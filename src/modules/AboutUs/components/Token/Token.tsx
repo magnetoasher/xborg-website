@@ -7,11 +7,12 @@ import {
   SectionDescription,
 } from "../../../../components";
 import { Countdown } from "../../../../components/Countdown";
-import { TextScramble } from "../../../../viewmodels/TextScramble";
+import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const Token = () => {
   const titleScrambleRef = useRef(null);
 
+  const textVM = new TextManipulation();
   return (
     <div className={`token expand row middle between`}>
       <div className="description">
@@ -30,12 +31,7 @@ export const Token = () => {
           </div>
           <SectionDescription
             className="section-head-desc"
-            onAnimateIn={() => {
-              const current =
-                titleScrambleRef.current as unknown as HTMLDivElement;
-              const scramble = new TextScramble(current);
-              if (titleScrambleRef.current) scramble.setText(current.innerHTML);
-            }}
+            onAnimateIn={() => textVM.scrambleText(titleScrambleRef)}
           >
             The native utility token of the XBorg protocol serves as the primary
             means of transaction within the ecosystem.

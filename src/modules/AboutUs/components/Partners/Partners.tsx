@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { Images } from "../../../../assets/imgs/Images";
-import { SectionDescription } from "../../../../components";
+import { ObserverContainer, SectionDescription } from "../../../../components";
 import { TextScramble } from "../../../../viewmodels/TextScramble";
 
 export const Partners = () => {
@@ -17,7 +17,7 @@ export const Partners = () => {
             </h2>
           </div>
         </div>
-        <div className="list row row-wrap">
+        <ObserverContainer className="list row row-wrap">
           <div className="list-item">
             <img src={Images.partners.partner01} alt="" />
           </div>
@@ -45,7 +45,7 @@ export const Partners = () => {
           <div className="list-item">
             <img src={Images.partners.partner09} alt="" />
           </div>
-        </div>
+        </ObserverContainer>
       </div>
 
       <div className="swissborg row column middle center text-center">
@@ -53,24 +53,15 @@ export const Partners = () => {
         <div className="swissborg-title">
           Powered by <strong ref={swisseRef}>SwissBorg</strong>
         </div>
-        <SectionDescription
-          className=""
-          onAnimateIn={() => {
-            const current =
-              titleScrambleRef.current as unknown as HTMLDivElement;
-            const swiss = swisseRef.current as unknown as HTMLDivElement;
-            const scramble = new TextScramble(current);
-            const scramble2 = new TextScramble(swiss);
-
-            if (current && swiss) {
-              scramble.setText(current.innerHTML);
-              scramble2.setText(swiss.innerHTML);
-            }
-          }}
-        >
+        {/* <SectionDescription
+            className=""
+            onAnimateIn={() => textVM.scrambleText(swisseRef)}
+          > */}
+        <p>
           XBorg is a spin-off of SwissBorg, a crypto wealth management app with
           700'000 users & $1B in Assets Under Management.
-        </SectionDescription>
+        </p>
+        {/* </SectionDescription> */}
       </div>
     </div>
   );

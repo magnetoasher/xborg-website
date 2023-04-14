@@ -1,0 +1,18 @@
+.vision-intro-parallaxed-container.state-4.changing {
+  @import "./StateAll";
+
+  .block {
+    opacity: 0;
+  }
+
+  .decentralized-societies {
+    .col,
+    .parallaxed {
+      .btn-secondary,
+      .parallaxed-1 img,
+      .knowmore {
+        opacity: 0;
+      }
+    }
+  }
+}

@@ -5,3 +5,4 @@ export * from "./Seed";
 export * from "./FAQ";
 export * from "./TermsAndConditions";
 export * from "./Prometheus";
+export * from "./Invest";

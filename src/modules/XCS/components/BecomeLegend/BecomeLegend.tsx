@@ -1,15 +1,20 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import {
   ParallaxLayer,
   ObserverContainer,
   ButtonPrimary,
   Alert,
+  SectionDescription,
 } from "../../../../components";
+import { TextManipulation } from "../../../../viewmodels/textManipulation";
 import { PickGame } from "../PickGame/PickGame";
 
 export const BecomeLegend = () => {
+  const scrambleRef = useRef(null);
   const [active, setActive] = useState<boolean>(false);
+
+  const textVM = new TextManipulation();
 
   return (
     <div
@@ -24,6 +29,7 @@ export const BecomeLegend = () => {
           factorX={0.1}
           factorY={0.1}
           speed={0}
+          className="parallaxed-1"
           isBase
         />
         <ParallaxLayer
@@ -31,7 +37,9 @@ export const BecomeLegend = () => {
           factorX={0.2}
           factorY={0.2}
           speed={0}
+          className="parallaxed-2"
         />
+        <div className="blurred-circle" />
       </ObserverContainer>
       <div className="description expand">
         {active ? (
@@ -43,14 +51,19 @@ export const BecomeLegend = () => {
                 <div className="section-border"></div>
                 <div className="row column">
                   <img src={Images.logo.default} alt="XCS" />
-                  <div className="section-head-top">Become A Legend</div>
+                  <div className="section-head-top" ref={scrambleRef}>
+                    Become A Legend
+                  </div>
                   <h1 className="section-head-title">XCS</h1>
                 </div>
               </div>
-              <p className="section-head-desc">
+              <SectionDescription
+                className="section-head-desc"
+                onAnimateIn={() => textVM.scrambleText(scrambleRef)}
+              >
                 Introducing the Xtreme Championship Series, the largest Web3
                 esports event ever created.
-              </p>
+              </SectionDescription>
             </div>
             <div className="row btn-container">
               <ButtonPrimary
@@ -64,8 +77,6 @@ export const BecomeLegend = () => {
           </>
         )}
       </div>
-
-      <div className="blurred-circle" />
     </div>
   );
 };

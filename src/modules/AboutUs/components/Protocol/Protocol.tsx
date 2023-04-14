@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import {
   Alert,
@@ -8,10 +8,8 @@ import {
   SectionDescription,
 } from "../../../../components";
 import { TextManipulation } from "../../../../viewmodels/textManipulation";
-import { TextScramble } from "../../../../viewmodels/TextScramble";
 
 export const Protocol = () => {
-  const descriptionRef = useRef(null);
   const titleScrambleRef = useRef(null);
   const data = {
     apps: 2,
@@ -20,10 +18,6 @@ export const Protocol = () => {
   };
 
   const textVM = new TextManipulation();
-
-  useEffect(() => {
-    if (descriptionRef.current) textVM.breakText(descriptionRef.current);
-  }, []);
 
   return (
     <div className={`protocol expand row middle between`}>
@@ -46,12 +40,7 @@ export const Protocol = () => {
           </div>
           <SectionDescription
             className="section-head-desc"
-            onAnimateIn={() => {
-              const current =
-                titleScrambleRef.current as unknown as HTMLDivElement;
-              const scramble = new TextScramble(current);
-              if (titleScrambleRef.current) scramble.setText(current.innerHTML);
-            }}
+            onAnimateIn={() => textVM.scrambleText(titleScrambleRef)}
           >
             A collaborative credential infrastructure on which games, brands and
             communities can build applications and engage with their players and
@@ -80,33 +69,40 @@ export const Protocol = () => {
       </div>
       <ObserverContainer className="parallaxed">
         <ParallaxLayer
-          image={Images.aboutUs.protocolCube1}
-          factorX={0.1}
-          factorY={0.1}
+          image={Images.aboutUs.layer5}
+          factorX={-0.2}
+          factorY={-0.2}
           speed={0}
-          className="parallaxed-1"
+          className="parallaxed-5"
         />
         <ParallaxLayer
-          image={Images.aboutUs.protocolCube2}
-          factorX={0.2}
-          factorY={0.2}
+          image={Images.aboutUs.layer4}
+          factorX={-0.15}
+          factorY={-0.15}
           speed={0}
-          className="parallaxed-2"
+          className="parallaxed-4"
         />
         <ParallaxLayer
-          image={Images.aboutUs.protocolCube3}
+          image={Images.aboutUs.layer3}
           factorX={-0.1}
           factorY={-0.1}
           speed={0}
           className="parallaxed-3"
         />
         <ParallaxLayer
-          image={Images.aboutUs.controller}
-          factorX={0}
-          factorY={0}
+          image={Images.aboutUs.layer2}
+          factorX={-0.1}
+          factorY={-0.1}
           speed={0}
+          className="parallaxed-2"
+        />
+        <ParallaxLayer
+          image={Images.aboutUs.layer1}
+          factorX={-0.2}
+          factorY={-0.2}
+          speed={0}
+          className="parallaxed-1"
           isBase
-          className="parallaxed-4"
         />
       </ObserverContainer>
     </div>

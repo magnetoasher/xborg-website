@@ -6,8 +6,18 @@ export const Images = {
   arrow_s_down: require("./arrow-square-down.svg"),
   logofull: require("./logofull.svg").default,
   logosquare: require("./logo-square.png"),
+  logowhite: require("./logo-white.svg").default,
   chevronRight: require("./chevron-right.png"),
   chevronDown: require("./chevron-down.png"),
+
+  OGIndex: {
+    OGIndex: require("./OGIndex.png"),
+    OGIndexApp: require("./OGIndexApp.png"),
+    OGIndexXCS: require("./OGIndexXCS.png"),
+    OGIndexSeed: require("./OGIndexSeed.png"),
+    OGIndexPrometheus: require("./OGIndexPrometheus.png"),
+    OGIndexFAQ: require("./OGIndexFAQ.png"),
+  },
 
   partners: {
     partner01: require("./partners/swissborg.png"),
@@ -19,7 +29,12 @@ export const Images = {
     partner07: require("./partners/myria.png"),
     partner08: require("./partners/zilliqa.png"),
     partner09: require("./partners/polkastarter.png"),
+    partner10: require("./partners/duo.png"),
     swissborg: require("./partners/swissborgicon.png"),
+
+    cryptoslate: require("./partners/cryptoslate.png"),
+    esb: require("./partners/esb.png"),
+    esi: require("./partners/esi.png"),
   },
   portfolio: {
     harvest: require("./portfolio/harvest.png"),
@@ -53,11 +68,13 @@ export const Images = {
     logo01: require("./aboutus/logo2.png"),
     sparks01: require("./aboutus/sparks_02.png"),
 
-    protocolCube1: require("./aboutus/protocol-cube1.png"),
-    protocolCube2: require("./aboutus/protocol-cube2.png"),
-    protocolCube3: require("./aboutus/protocol-cube3.png"),
-    controller: require("./aboutus/controller.png"),
+    layer1: require("./aboutus/protocol-layer-1.png"),
+    layer2: require("./aboutus/protocol-layer-2.png"),
+    layer3: require("./aboutus/protocol-layer-3.png"),
+    layer4: require("./aboutus/protocol-layer-4.png"),
+    layer5: require("./aboutus/protocol-layer-5.png"),
     token: require("./aboutus/token.png"),
+    deck: require("./aboutus/deck.png"),
 
     team: {
       member01: require("./team/louis.png"),
@@ -82,30 +99,7 @@ export const Images = {
       eskezje: require("./players/eskezje.png"),
       sjud: require("./players/sjud.png"),
     },
-    rooniverse: require("./rooniverse.png"),
     gcl: require("./xborgapp/gcl.png"),
-  },
-
-  esports: {
-    trophy: require("./esports/trophy.png"),
-    controller: require("./esports/controller.png"),
-    coin1: require("./esports/coin1.png"),
-    coin2: require("./esports/coin2.png"),
-    coin3: require("./esports/coin3.png"),
-    rectangle: require("./esports/rectangle.png"),
-    rectangle2: require("./esports/rectangle2.png"),
-    rectangle3: require("./esports/rectangle3.png"),
-    eth: require("./esports/ethcoin.png"),
-    eth_blocks: require("./esports/ethcoin_blocks.png"),
-    phone: require("./esports/phone.png"),
-    tshirt1: require("./esports/tshirt1.png"),
-    tshirt1_design: require("./esports/tshirt1_design.png"),
-    tshirt1_number: require("./esports/tshirt1_number.png"),
-    tshirt2: require("./esports/tshirt2.png"),
-    tshirt2_design: require("./esports/tshirt2_design.png"),
-    tshirt2_number: require("./esports/tshirt2_number.png"),
-    flames: require("./esports/flames.png"),
-    sparkles: require("./esports/sparkles.png"),
   },
 
   XCS: {
@@ -117,7 +111,6 @@ export const Images = {
     red_warrior: require("./XCS/red_warrior.png"),
     erika: require("./XCS/erika.png"),
     camera: require("./XCS/camera.png"),
-    movie: require("./XCS/movie.png"),
     production: require("./XCS/production.png"),
     banner2: require("./XCS/banner-2.png"),
     banner2logo: require("./XCS/banner-2-logo.png"),
@@ -137,45 +130,22 @@ export const Images = {
     bornless: require("./XCS/bornless.png"),
   },
 
-  gamingpassport: {
-    profile_bg: require("./gamingpassport/profile-bg.png"),
-    gaming_profile: require("./gamingpassport/gaming-profile.png"),
-    scout: require("./gamingpassport/scout.png"),
-    steam: require("./gamingpassport/steam.png"),
-    plugnplay: require("./gamingpassport/plugnplay.png"),
-    epic: require("./gamingpassport/epic.png"),
-    karambit: require("./gamingpassport/karambit.png"),
-    swordsman: require("./gamingpassport/swordsman.png"),
-    ethcoin: require("./gamingpassport/ethcoin.png"),
-    gun: require("./gamingpassport/gun.png"),
-    emerald: require("./gamingpassport/emerald.png"),
-    mage: require("./gamingpassport/mage.png"),
-    dark_swordsman: require("./gamingpassport/dark-swordsman.png"),
-    sparkles: require("./gamingpassport/sparkles.png"),
-    aliens: require("./gamingpassport/aliens.png"),
-    counter_terrorist: require("./gamingpassport/counter-terrorist.png"),
-    blue_pet: require("./gamingpassport/blue-pet.png"),
-    artifact: require("./gamingpassport/artifact.png"),
-    ghost: require("./gamingpassport/ghost.png"),
-  },
+  xborgapp: {
+    mage: require("./xborgapp/mage.png"),
+    dark_swordsman: require("./xborgapp/dark-swordsman.png"),
+    sparkles: require("./xborgapp/sparkles.png"),
+    aliens: require("./xborgapp/aliens.png"),
+    counter_terrorist: require("./xborgapp/counter-terrorist.png"),
+    blue_pet: require("./xborgapp/blue-pet.png"),
+    ghostartifact: require("./xborgapp/ghostartifact.png"),
+    ghost: require("./xborgapp/ghost.png"),
 
-  launchpad: {
-    bowman: require("./launchpad/bowman.png"),
-    terrorist: require("./launchpad/terrorist.png"),
-    tft_penguin: require("./launchpad/tft_penguin.png"),
     folder: require("./launchpad/folder.png"),
     deck: require("./launchpad/deck.png"),
-    bolt: require("./launchpad/bolt.png"),
-    flask: require("./launchpad/flask.png"),
-    hanzo: require("./launchpad/hanzo.png"),
-    giaco: require("./launchpad/giaco.png"),
-    robot: require("./launchpad/robot.png"),
     row1: require("./launchpad/leaderboard1.png"),
     row2: require("./launchpad/leaderboard2.png"),
     row3: require("./launchpad/leaderboard3.png"),
-  },
 
-  xborgapp: {
     ugp1: require("./xborgapp/ugp1.png"),
     ugp2: require("./xborgapp/ugp2.png"),
     ugp3: require("./xborgapp/ugp3.png"),
@@ -206,5 +176,51 @@ export const Images = {
     collectible2: require("./xborgapp/collectible2.png"),
     hair1: require("./xborgapp/hair1.png"),
     artifact: require("./xborgapp/artifact.png"),
+  },
+
+  invest: {
+    teambds: require("./invest/teambds.png"),
+
+    graph: require("./invest/graph.svg").default,
+    medal: require("./invest/medal.svg").default,
+    coins: require("./invest/coins.svg").default,
+
+    chart1: require("./invest/chart1.png"),
+    chart2: require("./invest/chart2.png"),
+    chart3: require("./invest/chart3.png"),
+    chart4: require("./invest/chart4.png"),
+    chart5: require("./invest/chart5.png"),
+    chart6: require("./invest/chart6.png"),
+    chart7: require("./invest/chart7.png"),
+
+    swissborg: require("./invest/swissborg.png"),
+
+    swiss1: require("./invest/swiss1.png"),
+    swiss2: require("./invest/swiss2.png"),
+    swiss3: require("./invest/swiss3.png"),
+    swiss4: require("./invest/swiss4.png"),
+
+    prometheus: require("./invest/prometheus.png"),
+
+    thalon: require("./invest/thalon.png"),
+    exverse: require("./invest/exverse.png"),
+    aether: require("./invest/aether.png"),
+    bornless: require("./invest/bornless.png"),
+    harvest: require("./invest/harvest.png"),
+    rooniverse: require("./invest/rooniverse.png"),
+
+    xborgapp_1: require("./invest/xborgapp-1.png"),
+    xborgapp_2: require("./invest/xborgapp-2.png"),
+    xborgapp_3: require("./invest/xborgapp-3.png"),
+  },
+
+  news: {
+    xborgbds: require("./news/xborgxbds.png"),
+    revolution: require("./news/revolution.png"),
+    cyberlink4: require("./news/cyberlink4.png"),
+    cyberlink5: require("./news/cyberlink5.png"),
+    cyberlink6: require("./news/cyberlink6.png"),
+    cyberlinkqa: require("./news/cyberlinkqa.png"),
+    twitterama: require("./news/twitterama.png"),
   },
 };

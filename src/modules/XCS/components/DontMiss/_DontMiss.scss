@@ -127,11 +127,19 @@ $screen_change_transition: 0.9s cubic-bezier(0.19, 1, 0.22, 1);
     }
   }
 
+  .footer-links {
+    bottom: 0;
+  }
+
   @media (max-width: $md-max) {
     .btn-container {
       .btn-primary {
         margin-left: 0;
       }
+    }
+
+    .dont-miss-content {
+      flex-direction: column;
     }
   }
 
@@ -139,7 +147,6 @@ $screen_change_transition: 0.9s cubic-bezier(0.19, 1, 0.22, 1);
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
-    padding-bottom: 80px;
 
     .description {
       flex: initial;

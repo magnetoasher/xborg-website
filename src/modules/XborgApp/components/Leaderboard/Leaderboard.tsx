@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import {
   LeaderboardRow,
@@ -6,32 +6,36 @@ import {
   ObserverContainer,
   SectionDescription,
 } from "../../../../components";
+import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const Leaderboard = () => {
   const [rowState, setRowState] = useState<number>(0);
   const data: LeaderboardRowType[] = [
     {
       index: 0,
-      image: Images.launchpad.row1,
+      image: Images.xborgapp.row1,
       name: "Xborg.eth",
       level: 16,
       xp: "2.5k",
     },
     {
       index: 1,
-      image: Images.launchpad.row2,
+      image: Images.xborgapp.row2,
       name: "0xF7...baf2",
       level: 15,
       xp: "2.4k",
     },
     {
       index: 2,
-      image: Images.launchpad.row3,
+      image: Images.xborgapp.row3,
       name: "0xcB...da70",
       level: 14,
       xp: "2.3k",
     },
   ];
+  const titleRef = useRef(null);
+
+  const textVM = new TextManipulation();
 
   const animate = () => {
     setTimeout(() => {
@@ -52,11 +56,16 @@ export const Leaderboard = () => {
               <img src={Images.logo.default} alt="" />
 
               <h2 className="section-head-title">
-                <span>Top the</span> leaderboards
+                <span ref={titleRef}>Top the</span>
+                <br />
+                leaderboards
               </h2>
             </div>
           </div>
-          <SectionDescription className="section-head-desc">
+          <SectionDescription
+            className="section-head-desc"
+            onAnimateIn={() => textVM.scrambleText(titleRef)}
+          >
             Grind your favourite games, complete social quests and climb up the
             leaderboard to unlock exclusive rewards.
           </SectionDescription>

@@ -1,0 +1,47 @@
+.vision-intro-parallaxed-container.state-1.changing {
+  @import "./StateAll";
+
+  .block-container.in .block {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .credential-network {
+    .cn-block {
+      opacity: 0;
+    }
+
+    .gaming-credential-layer {
+      opacity: 0;
+
+      .cube.cube-first {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+
+      .cube.cube-second {
+        transform: translateY(-30px);
+        opacity: 0;
+      }
+
+      .title {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+    }
+
+    .credential-network-details {
+      .title {
+        opacity: 0;
+      }
+
+      p {
+        opacity: 0;
+      }
+    }
+
+    .chevron {
+      opacity: 0;
+    }
+  }
+}

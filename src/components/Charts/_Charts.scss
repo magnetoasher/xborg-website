@@ -1,27 +1,51 @@
 .line-graph {
   width: 100%;
   height: 234px;
+  position: relative;
 
   .recharts-cartesian-axis-line,
   .recharts-cartesian-axis-tick-line {
     display: none;
   }
 
+  .recharts-cartesian-axis-tick-value {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 13px;
+    fill: $light100;
+  }
+
+  .recharts-cartesian-axis-ticks {
+    transform: translateX(10px);
+  }
+
   .recharts-tooltip-wrapper {
     .recharts-tooltip {
       background-color: #212121;
       border: none;
-      font-size: 12px;
-      font-weight: 600;
-      line-height: 14px;
       padding: 8px 16px;
-      border-radius: 8px;
       color: $white;
 
-      span {
+      .commited {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 20px;
+        color: $primary100;
+      }
+
+      .submissions {
         font-size: 12px;
-        line-height: 24px;
-        color: #878787;
+        font-weight: 600;
+        line-height: 20px;
+        color: $white;
+        margin: 4px 0;
+      }
+
+      .date {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 14px;
+        color: $gray100;
       }
     }
   }

@@ -4,9 +4,9 @@ import { toast } from "react-toastify";
 import { handleErrors } from "../helpers/inputs";
 import { SeedFormType } from "../modules";
 import queryString from "query-string";
-import { SEED_UTM_TYPE } from "../redux/seed/types";
 import { sendSeedSchema } from "../schemas/sendSeedSchema";
 import { AppDispatch } from "../store";
+import { SEED_UTM_TYPE } from "../redux/seed/types";
 
 const yupOptions = { abortEarly: false };
 

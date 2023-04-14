@@ -1,0 +1,16 @@
+.sort-group {
+  position: relative;
+  padding: 0 16px;
+  margin-top: 34px;
+
+  .sort-group-title {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+}

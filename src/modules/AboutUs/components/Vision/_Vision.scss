@@ -1,85 +1,85 @@
-.page-section-1 {
-  padding-top: 0 !important;
-}
-
 .vision {
-  width: 100%;
+  @import "./styles/VisionIntroduction";
 
-  .vision-container {
-    width: 100%;
-  }
-
-  .page-border {
+  .mock-height {
     position: relative;
-    width: 32px;
-
-    &:after {
-      content: "";
-      position: absolute;
-      top: 70px;
-      bottom: 32px;
-      width: 1px;
-      background-color: $primary100;
-    }
-
-    &:before {
-      content: "";
-      position: absolute;
-      bottom: 32px;
-      width: 16px;
-      height: 16px;
-      background: $primary100;
-      box-shadow: 0px 0px 42px $primary100;
-    }
   }
 
-  .section-intro {
-    padding: 32px;
-    background: #111111;
-    max-width: 484px;
-    width: 100%;
-    margin-bottom: 40px;
+  .vision-intro-parallaxed-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .red-highlight {
+    padding: 0px 16px;
+    line-height: 45px;
+    color: $white;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
     position: relative;
 
     &:after {
       content: "";
       position: absolute;
-      left: -32px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 16px;
-      height: 16px;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
       background: $primary100;
-      box-shadow: 0px 0px 32px $primary100;
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
-    .title {
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 25px;
-      margin-bottom: 4px;
-    }
-
-    .desc {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 28px;
-      color: #777;
+    span {
+      position: relative;
+      z-index: 1;
+      white-space: nowrap;
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      opacity: 0;
     }
   }
 
-  @media (max-width: $sm-max) {
-    .page-border {
-      display: none;
+  // States
+  @import "./styles/State0Changing";
+  @import "./styles/State1Active";
+  @import "./styles/State1Changing";
+  @import "./styles/State2Active";
+  @import "./styles/State2Changing";
+  @import "./styles/State3Active";
+  @import "./styles/State3Changing";
+  @import "./styles/State4Active";
+  @import "./styles/State4Changing";
+
+  // Components
+  @import "./styles/CredentialNetwork";
+  @import "./styles/ApplicationNetwork";
+  @import "./styles/DecentralizedSocieties";
+
+  @media (max-width: $md-max) {
+    .mock-height {
+      height: auto !important;
     }
 
-    .section-intro:after {
-      left: -16px;
+    .vision-intro-parallaxed-container {
+      flex-direction: column;
+      transform: translate(0, 0) !important;
+      position: relative;
+    }
+
+    .vision-intro-parallaxed {
+      width: 100%;
+    }
+
+    .block-container {
+      margin-top: 64px;
     }
   }
 
-  @import "./VisionIntroduction";
-  @import "./CredentialNetwork";
-  @import "./ApplicationNetwork";
-  @import "./DecentralizedSocieties";
+  @media (max-width: $xs-max) {
+    .vision-introduction .vision-intro-parallaxed .block {
+      padding: 16px !important;
+    }
+  }
 }

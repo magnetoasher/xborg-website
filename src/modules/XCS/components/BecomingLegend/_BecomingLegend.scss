@@ -4,7 +4,7 @@
   }
 
   .section-head-desc {
-    max-width: 385px;
+    max-width: 383px;
   }
 
   .releasing-date {
@@ -78,6 +78,10 @@
         height: 85.39%;
         margin-top: 0;
       }
+    }
+
+    .releasing-date {
+      margin-left: 0;
     }
   }
 }

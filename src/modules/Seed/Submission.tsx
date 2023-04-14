@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Images } from "../../assets/imgs/Images";
 import {
   ButtonPrimary,
@@ -7,16 +8,24 @@ import {
   ParallaxLayer,
   SectionDescription,
 } from "../../components";
+import { TextManipulation } from "../../viewmodels/textManipulation";
 
 export const SubmissionRecorded = () => {
+  const ref = useRef(null);
+
+  const textVM = new TextManipulation();
+
   return (
     <Layout
       transparentNavbar={false}
       components={[
         <div className="submission-recorded w-full row column middle">
-          <h1>Submission recorded</h1>
+          <h1 ref={ref}>Submission recorded</h1>
 
-          <SectionDescription className="subtitle">
+          <SectionDescription
+            className="subtitle"
+            onAnimateIn={() => textVM.scrambleText(ref)}
+          >
             You can now access our private documents. We will also send you the
             latest updates by email in the coming days, so keep an eye on your
             mailbox (including the spam folder).
@@ -25,7 +34,7 @@ export const SubmissionRecorded = () => {
           <div className="wrapper row between middle">
             <ObserverContainer className="parallaxed row column middle center">
               <ParallaxLayer
-                image={Images.launchpad.deck}
+                image={Images.xborgapp.deck}
                 factorX={0.1}
                 factorY={0.1}
                 speed={0}
@@ -61,7 +70,7 @@ export const SubmissionRecorded = () => {
           <div className="wrapper row between middle">
             <ObserverContainer className="parallaxed row column middle center">
               <ParallaxLayer
-                image={Images.launchpad.folder}
+                image={Images.xborgapp.folder}
                 factorX={0.1}
                 factorY={0.1}
                 speed={0}

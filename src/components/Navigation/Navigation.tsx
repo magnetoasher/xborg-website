@@ -11,7 +11,11 @@ type SingleLinkType = {
   label: string;
 };
 
-export const Navigation = () => {
+type NavigationProps = {
+  navbarBtn: any;
+};
+
+export const Navigation = ({ navbarBtn }: NavigationProps) => {
   const loaded = useSelector((state: GlobalState) => state.site.loaded);
   const [active, setActive] = useState<boolean>(false);
 
@@ -21,6 +25,7 @@ export const Navigation = () => {
     { to: "", label: "About us" },
     { to: "xborg-app", label: "XBorg app" },
     { to: "xtreme-championship-series", label: "Xtreme Championship Series" },
+    { to: "seed-round", label: "XBorg seed round" },
   ];
 
   return (
@@ -57,9 +62,13 @@ export const Navigation = () => {
           </NavLink>
         ))}
       </nav>
-      <div className={`early-access${active ? " active" : ""}`}>
-        <ButtonPrimary label="Invest early" to="seed" />
-      </div>
+      {navbarBtn == undefined ? (
+        <div className={`early-access`}>
+          <ButtonPrimary label="Register interest" to="seed" />
+        </div>
+      ) : (
+        navbarBtn
+      )}
       <div
         className="hamburger-menu row middle center"
         onClick={() => setActive(!active)}

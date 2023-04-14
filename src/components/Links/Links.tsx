@@ -16,11 +16,13 @@ export const Links = () => {
         Terms of use
       </a>
 
-      <Link to="">Public Deck</Link>
+      <a href="https://docsend.com/view/5dwn74pn6izud3vb" target="_blank">
+        Public Deck
+      </a>
 
-      <Link to="/launchpad" onClick={onRedirect}>
+      <a href="https://launchpad.xborg.com/" target="_blank">
         Launchpad
-      </Link>
+      </a>
 
       <Link to="/xtreme-championship-series" onClick={onRedirect}>
         XCS
@@ -28,7 +30,7 @@ export const Links = () => {
       <Link to="/prometheus" onClick={onRedirect}>
         Prometheus NFT
       </Link>
-      <Link to="/about-us" onClick={onRedirect}>
+      <Link to="/" onClick={onRedirect}>
         About us
       </Link>
       <Link to="/faq" onClick={onRedirect}>

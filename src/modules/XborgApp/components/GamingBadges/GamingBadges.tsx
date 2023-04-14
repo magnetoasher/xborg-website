@@ -1,7 +1,12 @@
+import { useRef } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import { GamingCard, SectionDescription } from "../../../../components";
+import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const GamingBadges = () => {
+  const titleRef = useRef(null);
+
+  const textVM = new TextManipulation();
   return (
     <div className={"gaming-badges expand row middle center"}>
       <GamingCard />
@@ -16,11 +21,14 @@ export const GamingBadges = () => {
               <h2 className="section-head-title">
                 Forge
                 <br />
-                <span>gaming badges</span>
+                <span ref={titleRef}>gaming badges</span>
               </h2>
             </div>
           </div>
-          <SectionDescription className="section-head-desc">
+          <SectionDescription
+            className="section-head-desc"
+            onAnimateIn={() => textVM.scrambleText(titleRef)}
+          >
             Create unique gaming badges that showcase your skills, stats, and
             in-game achievements.
           </SectionDescription>

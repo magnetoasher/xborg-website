@@ -1,0 +1,48 @@
+.tag-sort-group {
+  padding: 8px;
+  font-size: 12px;
+  line-height: 18px;
+  text-decoration: none;
+  color: $gray300;
+  font-weight: 500;
+  display: flex;
+  margin-right: 8px;
+  transition: 0.2s ease-in;
+
+  &.active {
+    color: white;
+    background-color: $neutral900;
+  }
+}
+
+.tag-bright {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  background-color: $neutral900;
+  margin: 8px;
+  color: $white;
+  text-decoration: none;
+  transition: 0.2s ease-in;
+
+  &.active {
+    background-color: $primary100;
+  }
+}
+
+.tag-gray {
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  background-color: $gray700;
+  color: $gray100;
+  text-decoration: none;
+  transition: 0.2s ease-in;
+
+  svg {
+    stroke: $gray100;
+    margin-right: 8px;
+  }
+}

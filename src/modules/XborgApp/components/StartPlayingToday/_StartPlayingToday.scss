@@ -65,14 +65,9 @@
       }
 
       img {
-        transform: translateX(-20%);
+        transform: translate(-20%, 20%);
         opacity: 0;
       }
-    }
-
-    .parallaxed-2 img {
-      transform: translateX(10%);
-      opacity: 0;
     }
   }
 
@@ -106,6 +101,7 @@
 
     .parallaxed-1 img {
       transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
+      transform: scale(0.7) rotate(30deg);
     }
 
     .parallaxed-2 {
@@ -172,6 +168,10 @@
       transition-delay: 0.5s;
     }
 
+    .parallaxed-1 img {
+      transform: scale(1) rotate(0deg);
+    }
+
     .parallaxed-2 img {
       animation-name: ghostAnimation;
       animation-duration: 4s;
@@ -218,7 +218,10 @@
 
   @media (max-width: $lg-max) {
     flex-direction: column;
-    padding-bottom: 80px;
+
+    .content {
+      flex-direction: column;
+    }
 
     .description {
       width: 100%;
@@ -244,8 +247,6 @@
   }
 
   @media (max-width: $md-max) {
-    padding-bottom: 0px;
-
     h2 {
       font-size: 25px;
       line-height: 35px;
@@ -265,10 +266,6 @@
       margin-top: -12px;
       margin-left: -10px;
     }
-  }
-
-  @media (max-width: $sm-max) {
-    padding-bottom: 80px;
   }
 
   @media (max-width: 530px) {

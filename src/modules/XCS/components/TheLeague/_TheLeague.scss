@@ -26,6 +26,24 @@
 
     img {
       width: 18%;
+      opacity: 0;
+      transform: scale(0.6);
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+
+      &:nth-child(2) {
+        transition-delay: 0.2s;
+      }
+
+      &:nth-child(3) {
+        transition-delay: 0.4s;
+      }
+    }
+
+    &.in {
+      img {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
   }
 
@@ -86,6 +104,10 @@
     .powered-by {
       margin-top: 0;
     }
+
+    .partners img {
+      width: 25%;
+    }
   }
 
   @media (max-width: $md-max) {
@@ -110,6 +132,16 @@
       .line {
         margin: 0;
       }
+    }
+  }
+
+  @media (max-width: $xs-max) {
+    .powered-by {
+      margin-top: 0;
+    }
+
+    .partners img {
+      width: 30%;
     }
   }
 }

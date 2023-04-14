@@ -44,3 +44,5 @@ export const timeDifference = (current: any, previous: any) => {
     return Math.round(elapsed / msPerYear) + " years ago";
   }
 };
+
+export const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));

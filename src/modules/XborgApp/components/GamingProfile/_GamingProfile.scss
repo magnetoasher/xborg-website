@@ -27,6 +27,7 @@
       justify-content: center;
       align-items: center;
       transform: scale(0.7);
+      opacity: 0;
       transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 
       img {
@@ -35,35 +36,35 @@
       }
 
       &:nth-child(2),
-      &:nth-child(2) .game-tile {
+      &:nth-child(2) {
         transition-delay: 0.1s;
       }
       &:nth-child(3),
-      &:nth-child(3) .game-tile {
+      &:nth-child(3) {
         transition-delay: 0.2s;
       }
       &:nth-child(4),
-      &:nth-child(4) .game-tile {
+      &:nth-child(4) {
         transition-delay: 0.3s;
       }
       &:nth-child(5),
-      &:nth-child(5) .game-tile {
+      &:nth-child(5) {
         transition-delay: 0.4s;
       }
       &:nth-child(6),
-      &:nth-child(6) .game-tile {
+      &:nth-child(6) {
         transition-delay: 0.5s;
       }
       &:nth-child(7),
-      &:nth-child(7) .game-tile {
+      &:nth-child(7) {
         transition-delay: 0.6s;
       }
       &:nth-child(8),
-      &:nth-child(8) .game-tile {
+      &:nth-child(8) {
         transition-delay: 0.7s;
       }
       &:nth-child(9),
-      &:nth-child(9) .game-tile {
+      &:nth-child(9) {
         transition-delay: 0.8s;
       }
     }
@@ -71,35 +72,49 @@
     &.in {
       .grid-item {
         transform: scale(1);
+        opacity: 1;
 
-        &:nth-child(1) .game-tile {
+        &:nth-child(1) {
           opacity: 0.05;
         }
-        &:nth-child(2) .game-tile {
+        &:nth-child(2) {
           opacity: 0.2;
         }
-        &:nth-child(3) .game-tile {
+        &:nth-child(3) {
           opacity: 1;
         }
-        &:nth-child(4) .game-tile {
+        &:nth-child(4) {
           opacity: 0.05;
         }
-        &:nth-child(5) .game-tile {
+        &:nth-child(5) {
           opacity: 0.2;
         }
-        &:nth-child(6) .game-tile {
+        &:nth-child(6) {
           opacity: 1;
         }
-        &:nth-child(7) .game-tile {
+        &:nth-child(7) {
           opacity: 0.05;
         }
-        &:nth-child(8) .game-tile {
+        &:nth-child(8) {
           opacity: 0.2;
         }
-        &:nth-child(9) .game-tile {
+        &:nth-child(9) {
           opacity: 1;
         }
       }
+    }
+  }
+
+  @media (max-width: $md-max) {
+    .background-images-grid {
+      transform: scale(0.7) translateX(-25%) translateY(-25%);
+      height: 650px;
+    }
+  }
+
+  @media (max-width: $md-max) {
+    .background-images-grid {
+      transform: scale(0.5) translateX(-50%) translateY(-20%);
     }
   }
 }

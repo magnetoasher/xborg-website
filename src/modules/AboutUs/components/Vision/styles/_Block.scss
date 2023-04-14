@@ -1,0 +1,112 @@
+.block {
+  width: 295px;
+  height: 89px;
+  background: #111111;
+  padding: 37px 77px;
+  position: relative;
+  opacity: 0;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    left: 0;
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+  }
+
+  .block-title {
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .block-desc {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #777;
+    margin-top: 8px;
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  &.block-first {
+    transform: translateY(80px);
+  }
+  &.block-third {
+    transform: translateY(-80px);
+  }
+
+  &.block-second:before {
+    display: none;
+  }
+
+  &.active {
+    width: 484px;
+    height: 153px;
+    padding: 32px;
+
+    .block-title {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 25px;
+      justify-content: flex-start;
+    }
+  }
+
+  @media (max-width: $md-max) {
+    &.active:before {
+      left: -16px !important;
+    }
+  }
+
+  @media (max-width: $xs-max) {
+    &.active {
+      max-width: 484px;
+      width: 100%;
+      min-height: 153px;
+      height: auto;
+    }
+  }
+}
+
+// In view port
+&.in {
+  .block {
+    opacity: 1;
+    transform: translate(0, 0);
+
+    &:before {
+      left: -16px;
+      opacity: 1;
+      transition-delay: 0.4s;
+      background: $primary100;
+      box-shadow: 0px 0px 42px $primary100;
+    }
+
+    &.active {
+      &:before {
+        left: -32px;
+      }
+    }
+  }
+
+  .chevron {
+    opacity: 1;
+    transition-delay: 0.4s;
+  }
+
+  .chevron-second {
+    transition-delay: 0.6s;
+  }
+
+  .line-indicator:after {
+    height: calc(100% - 80px);
+    transition-delay: 0.4s;
+  }
+}

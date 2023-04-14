@@ -243,7 +243,7 @@ export class ScrollViewModel {
       },
       {
         root: null,
-        rootMargin: rootMargin ?? "-100px",
+        rootMargin: rootMargin ?? "-20%",
         threshold: 0.1,
       }
     );

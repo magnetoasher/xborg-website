@@ -1,4 +1,6 @@
 .prometheus {
+  width: 100%;
+
   .section-head-container {
     max-width: 550px;
   }
@@ -16,6 +18,10 @@
 
     .btn-primary {
       margin-right: 24px;
+    }
+
+    .btn-secondary {
+      white-space: nowrap;
     }
   }
 
