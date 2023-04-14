@@ -6,4 +6,32 @@
   .categories-list {
     margin-bottom: 48px;
   }
+
+  .collapsible-container {
+    position: relative;
+  }
+
+  .collapsible-tag {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    font-family: $poppins;
+    padding: 8px;
+    background-color: #212121;
+    z-index: 2;
+  }
+
+  .Collapsible__trigger {
+    padding-top: 42px;
+  }
+
+  @media (max-width: $sm-max) {
+    .collapsible-tag {
+      left: 12px;
+      top: 12px;
+    }
+  }
 }

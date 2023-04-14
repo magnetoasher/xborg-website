@@ -7193,6 +7193,30 @@ h4 {
 .invest .invest-faq .categories-list {
   margin-bottom: 48px;
 }
+.invest .invest-faq .collapsible-container {
+  position: relative;
+}
+.invest .invest-faq .collapsible-tag {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  font-family: "Poppins", sans-serif;
+  padding: 8px;
+  background-color: #212121;
+  z-index: 2;
+}
+.invest .invest-faq .Collapsible__trigger {
+  padding-top: 42px;
+}
+@media (max-width: 768px) {
+  .invest .invest-faq .collapsible-tag {
+    left: 12px;
+    top: 12px;
+  }
+}
 
 .navigation-container {
   position: fixed;

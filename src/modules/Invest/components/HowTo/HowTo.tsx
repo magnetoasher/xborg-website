@@ -107,7 +107,9 @@ export const HowTo = () => {
 
                     <div className="starts-in row middle">
                       <span className="name">Starts in:</span>
-                      <Countdown date={new Date("2025/11/11")} />
+                      <Countdown
+                        date={new Date("May 03 2023 18:00:00 GMT+0200")}
+                      />
                     </div>
                   </div>
                 </div>
