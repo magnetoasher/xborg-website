@@ -7234,7 +7234,8 @@ h4 {
   opacity: 0;
 }
 .navigation-container.hidden-nav .early-access,
-.navigation-container.hidden-nav .hamburger-menu {
+.navigation-container.hidden-nav .hamburger-menu,
+.navigation-container.hidden-nav .navigation-links.active {
   pointer-events: all;
 }
 .navigation-container .hamburger-menu {
