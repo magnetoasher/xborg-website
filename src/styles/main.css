@@ -5272,6 +5272,9 @@ h4 {
   .invest .head .head-content {
     flex-direction: column;
   }
+  .invest .head .image-graph {
+    margin-top: 64px;
+  }
 }
 @media (max-width: 768px) {
   .invest .head {
