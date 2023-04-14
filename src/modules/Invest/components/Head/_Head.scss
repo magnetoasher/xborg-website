@@ -4,6 +4,10 @@
   padding-top: 88px;
   padding-bottom: 64px;
 
+  .image-graph img {
+    width: 100%;
+  }
+
   .line-graph {
     height: 280px;
     width: 438px;
@@ -83,6 +87,10 @@
 
     .head-details {
       max-width: 100%;
+    }
+
+    .image-graph {
+      display: none;
     }
 
     .line-graph {

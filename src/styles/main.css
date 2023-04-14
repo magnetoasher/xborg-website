@@ -5221,6 +5221,9 @@ h4 {
   padding-top: 88px;
   padding-bottom: 64px;
 }
+.invest .head .image-graph img {
+  width: 100%;
+}
 .invest .head .line-graph {
   height: 280px;
   width: 438px;
@@ -5289,6 +5292,9 @@ h4 {
   }
   .invest .head .head-details {
     max-width: 100%;
+  }
+  .invest .head .image-graph {
+    display: none;
   }
   .invest .head .line-graph {
     display: none;

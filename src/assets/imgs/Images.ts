@@ -19,6 +19,8 @@ export const Images = {
     OGIndexFAQ: require("./OGIndexFAQ.png"),
   },
 
+  graph: require("./graph.png"),
+
   partners: {
     partner01: require("./partners/swissborg.png"),
     partner02: require("./partners/polygon.png"),

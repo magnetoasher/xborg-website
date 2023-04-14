@@ -21,7 +21,8 @@ export const LineGraph = ({ data }: LineGraphProps) => {
     top: 2100000,
   }));
 
-  if (!data?.length) return null;
+  return null;
+  // if (!data?.length) return null;
 
   return (
     <div className={`line-graph`}>

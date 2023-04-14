@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { useSelector } from "react-redux";
+import { Images } from "../../../../assets/imgs/Images";
 import {
   ButtonPrimary,
   LineGraph,
@@ -36,9 +37,12 @@ export const Head = () => {
           </div>
         </div>
 
-        {seedSummary?.summary.length && (
+        <div className="image-graph">
+          <img src={Images.graph} alt="" />
+        </div>
+        {/* {seedSummary?.summary.length && (
           <LineGraph data={seedSummary?.summary} />
-        )}
+        )} */}
       </div>
       <div className="mobile-coming text-center w-full">Starting in:</div>
     </div>
