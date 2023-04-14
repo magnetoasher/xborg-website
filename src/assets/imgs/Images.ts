@@ -10,6 +10,15 @@ export const Images = {
   chevronRight: require("./chevron-right.png"),
   chevronDown: require("./chevron-down.png"),
 
+  OGIndex: {
+    OGIndex: require("./OGIndex.png"),
+    OGIndexApp: require("./OGIndexApp.png"),
+    OGIndexXCS: require("./OGIndexXCS.png"),
+    OGIndexSeed: require("./OGIndexSeed.png"),
+    OGIndexPrometheus: require("./OGIndexPrometheus.png"),
+    OGIndexFAQ: require("./OGIndexFAQ.png"),
+  },
+
   partners: {
     partner01: require("./partners/swissborg.png"),
     partner02: require("./partners/polygon.png"),

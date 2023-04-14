@@ -27,6 +27,7 @@ import { AppDispatch } from "../../store";
 import { ScrollViewModel } from "../../viewmodels/ScrollViewModel";
 import { SeedViewModel } from "../../viewmodels/SeedViewModel";
 import { TextManipulation } from "../../viewmodels/textManipulation";
+import { Helmet } from "react-helmet";
 
 export type SeedFormType = {
   name: string;
@@ -88,11 +89,15 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
     .reverse()
     .slice(itemsfrom - 1, itemsto);
 
+  console.log("seedSummary?.nbSubmissions -- ", seedSummary?.nbSubmissions);
   return (
     <Layout
       transparentNavbar={false}
       components={[
         <div className="seed">
+          <Helmet>
+            <meta property="og:image" content={Images.OGIndex.OGIndexSeed} />
+          </Helmet>
           <div className="container container-l">
             <div className="logo-icon">
               <img src={Images.logofull} alt="" />

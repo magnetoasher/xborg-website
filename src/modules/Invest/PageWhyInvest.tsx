@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet";
+import { Images } from "../../assets/imgs/Images";
 import { Layout } from "../../components";
 import {
   Supporters,
@@ -10,16 +12,21 @@ import {
 
 export const PageWhyInvest = () => {
   return (
-    <Layout
-      className="invest w-full row column"
-      components={[
-        <NextBigThing />,
-        <Forefront />,
-        <OpenToCommunity />,
-        <WhyNow />,
-        <Early />,
-        <Supporters />,
-      ]}
-    />
+    <>
+      <Helmet>
+        <meta property="og:image" content={Images.OGIndex.OGIndexSeed} />
+      </Helmet>
+      <Layout
+        className="invest w-full row column"
+        components={[
+          <NextBigThing />,
+          <Forefront />,
+          <OpenToCommunity />,
+          <WhyNow />,
+          <Early />,
+          <Supporters />,
+        ]}
+      />
+    </>
   );
 };

@@ -1,4 +1,6 @@
-import { ButtonPrimary, Layout } from "../../components";
+import { Helmet } from "react-helmet";
+import { Images } from "../../assets/imgs/Images";
+import { Layout } from "../../components";
 import {
   AboutXborg,
   GameChangingProtocol,
@@ -9,15 +11,20 @@ import {
 
 export const PageAboutXborg = () => {
   return (
-    <Layout
-      className="invest w-full row column"
-      components={[
-        <AboutXborg />,
-        <GameChangingProtocol />,
-        <ProductSpotlight />,
-        <Competetive />,
-        <Supporters />,
-      ]}
-    />
+    <>
+      <Helmet>
+        <meta property="og:image" content={Images.OGIndex.OGIndexSeed} />
+      </Helmet>
+      <Layout
+        className="invest w-full row column"
+        components={[
+          <AboutXborg />,
+          <GameChangingProtocol />,
+          <ProductSpotlight />,
+          <Competetive />,
+          <Supporters />,
+        ]}
+      />
+    </>
   );
 };
