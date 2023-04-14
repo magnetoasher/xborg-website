@@ -199,6 +199,10 @@ export const Images = {
     bornless: require("./invest/bornless.png"),
     harvest: require("./invest/harvest.png"),
     rooniverse: require("./invest/rooniverse.png"),
+
+    xborgapp_1: require("./invest/xborgapp-1.png"),
+    xborgapp_2: require("./invest/xborgapp-2.png"),
+    xborgapp_3: require("./invest/xborgapp-3.png"),
   },
 
   news: {

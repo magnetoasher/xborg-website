@@ -5693,14 +5693,15 @@ h4 {
 }
 .invest .product-spotlight .products.changing .parallaxed-container-1 .parallaxed-1 img {
   opacity: 0;
-  transform: translateY(-25%) translateX(-20%) scale(0.8);
-}
-.invest .product-spotlight .products.changing .parallaxed-container-1 .parallaxed-2 {
-  transform: translateY(-36%) translateX(82%);
+  transform: scale(0.8);
 }
 .invest .product-spotlight .products.changing .parallaxed-container-1 .parallaxed-2 img {
   opacity: 0;
-  transform: translateY(25%) translateX(20%) scale(0.8);
+  transform: translate(-20%, 0);
+}
+.invest .product-spotlight .products.changing .parallaxed-container-1 .parallaxed-3 img {
+  opacity: 0;
+  transform: translate(-20%, 0);
 }
 .invest .product-spotlight .products.changing .parallaxed-container-2 .parallaxed-1 img {
   opacity: 0;
@@ -5719,26 +5720,28 @@ h4 {
 .invest .product-spotlight .products.changing .launchpad-swiper .swiper-next {
   margin-left: 104px;
 }
-.invest .product-spotlight .parallaxed-container-1 {
-  transform: translateX(-26%);
-}
 .invest .product-spotlight .parallaxed-container-1 .parallaxed-1 img {
-  width: 287px;
+  width: 368px;
   opacity: 0;
-  transform: translateY(-25%) translateX(-20%) scale(0.8);
+  transform: scale(0.8);
   transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.invest .product-spotlight .parallaxed-container-1 .parallaxed-2 {
-  transform: translateY(-36%) translateX(82%);
-}
 .invest .product-spotlight .parallaxed-container-1 .parallaxed-2 img {
+  width: 368px;
   opacity: 0;
-  transform: translateY(25%) translateX(20%) scale(0.8);
-  max-width: 168px;
+  transform: translate(-20%, 0);
+  transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.invest .product-spotlight .parallaxed-container-1 .parallaxed-3 img {
+  width: 368px;
+  opacity: 0;
+  transform: translate(-20%, 0);
+  transition-delay: 0.2s;
   transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .invest .product-spotlight .parallaxed-container-1.in .parallaxed-1 img,
-.invest .product-spotlight .parallaxed-container-1.in .parallaxed-2 img {
+.invest .product-spotlight .parallaxed-container-1.in .parallaxed-2 img,
+.invest .product-spotlight .parallaxed-container-1.in .parallaxed-3 img {
   opacity: 1;
   transform: translate(0, 0);
 }

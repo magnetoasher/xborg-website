@@ -159,16 +159,17 @@
     .parallaxed-container-1 {
       .parallaxed-1 img {
         opacity: 0;
-        transform: translateY(-25%) translateX(-20%) scale(0.8);
+        transform: scale(0.8);
       }
 
-      .parallaxed-2 {
-        transform: translateY(-36%) translateX(82%);
+      .parallaxed-2 img {
+        opacity: 0;
+        transform: translate(-20%, 0);
+      }
 
-        img {
-          opacity: 0;
-          transform: translateY(25%) translateX(20%) scale(0.8);
-        }
+      .parallaxed-3 img {
+        opacity: 0;
+        transform: translate(-20%, 0);
       }
     }
 
@@ -200,29 +201,32 @@
 
   // Parallaxed 1
   .parallaxed-container-1 {
-    transform: translateX(-26%);
-
     .parallaxed-1 img {
-      width: 287px;
+      width: 368px;
       opacity: 0;
-      transform: translateY(-25%) translateX(-20%) scale(0.8);
+      transform: scale(0.8);
       transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
-    .parallaxed-2 {
-      transform: translateY(-36%) translateX(82%);
+    .parallaxed-2 img {
+      width: 368px;
+      opacity: 0;
+      transform: translate(-20%, 0);
+      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
 
-      img {
-        opacity: 0;
-        transform: translateY(25%) translateX(20%) scale(0.8);
-        max-width: 168px;
-        transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
-      }
+    .parallaxed-3 img {
+      width: 368px;
+      opacity: 0;
+      transform: translate(-20%, 0);
+      transition-delay: 0.2s;
+      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
     &.in {
       .parallaxed-1 img,
-      .parallaxed-2 img {
+      .parallaxed-2 img,
+      .parallaxed-3 img {
         opacity: 1;
         transform: translate(0, 0);
       }

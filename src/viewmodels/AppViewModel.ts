@@ -144,7 +144,7 @@ export class AppViewModel {
       const moveY = scrollTop - parentYCoordinate + middle;
 
       if (moveY > 0) {
-        child.style.transform = `translateY(${moveY}px)`;
+        child.style.transform = `translate3d(0,${moveY}px,0)`;
         onScroll(moveY);
       }
     }

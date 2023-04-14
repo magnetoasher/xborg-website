@@ -184,19 +184,26 @@ export const ProductSpotlight = () => {
 
                 <ObserverContainer className="parallaxed-container-1 row column middle center">
                   <ParallaxLayer
-                    image={Images.xborgapp.badge}
+                    image={Images.invest.xborgapp_2}
+                    factorX={-0.1}
+                    factorY={0.1}
+                    speed={0}
+                    className="parallaxed-2"
+                  />
+                  <ParallaxLayer
+                    image={Images.invest.xborgapp_3}
+                    factorX={-0.2}
+                    factorY={0.2}
+                    speed={0}
+                    className="parallaxed-3"
+                  />
+                  <ParallaxLayer
+                    image={Images.invest.xborgapp_1}
                     factorX={0.1}
                     factorY={0.1}
                     speed={0}
                     isBase
                     className="parallaxed-1"
-                  />
-                  <ParallaxLayer
-                    image={Images.xborgapp.collectible1}
-                    factorX={-0.1}
-                    factorY={0.1}
-                    speed={0}
-                    className="parallaxed-2"
                   />
                 </ObserverContainer>
               </div>
