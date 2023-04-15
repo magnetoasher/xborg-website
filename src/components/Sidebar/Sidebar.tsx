@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { GlobalState } from "../../reducer";
+import { SeedActions } from "../../redux/seed/actions";
 import { SiteActions } from "../../redux/site/actions";
 import { AppDispatch } from "../../store";
 import { ScrollViewModel } from "../../viewmodels/ScrollViewModel";
@@ -20,6 +21,8 @@ export const Sidebar = ({ active, total }: SidebarType) => {
   const scrollVM = new ScrollViewModel();
 
   useEffect(() => {
+    dispatch(SeedActions.getSeed());
+
     if (!siteLoaded) {
       setLoaded(true);
       setTimeout(() => {

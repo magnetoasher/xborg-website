@@ -123,7 +123,11 @@ export const HowTo = () => {
                 </p>
 
                 <div className="row">
-                  <ButtonSecondary label="Purchase a Prometheus NFT" />
+                  <ButtonSecondary
+                    label="Purchase a Prometheus NFT"
+                    to="https://opensea.io/collection/xborg-prometheus"
+                    target="_blank"
+                  />
                 </div>
               </div>
               <div className="footer-spacer" />
@@ -318,7 +322,11 @@ export const HowTo = () => {
                 </p>
 
                 <div className="row">
-                  <ButtonSecondary label="Open a SwissBorg account" />
+                  <ButtonSecondary
+                    label="Open a SwissBorg account"
+                    to="https://swissborg.com/"
+                    target="_blank"
+                  />
                 </div>
               </div>
               <div className="footer-spacer" />

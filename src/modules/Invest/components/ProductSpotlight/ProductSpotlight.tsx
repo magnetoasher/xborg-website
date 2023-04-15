@@ -225,7 +225,7 @@ export const ProductSpotlight = () => {
                     onAnimateIn={() => textVM.scrambleText(blockTitles[1])}
                     onAnimateFinish={onAnimationFinish(1)}
                   >
-                    TeamBDS is the first tier-1 esports team to build a
+                    TeamBDS is the first tier-1 esports team to build an
                     engagement app for their fans powered by XBorg’s credential
                     network.
                     <br />

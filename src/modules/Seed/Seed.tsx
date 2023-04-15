@@ -69,10 +69,6 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
   const [page, setPage] = useState<number>(0);
 
   useEffect(() => {
-    const scrollVM = new ScrollViewModel();
-    scrollVM.removeCustomScrolling();
-    dispatch(SeedActions.getSeed());
-
     setNavbarBtn(null);
   }, []);
 
@@ -125,10 +121,12 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
                 <div className="label">Total soft commitment</div>
               </div>
               <div className="col">
-                <CountUpAnimation
-                  className="value"
-                  number={seedSummary?.nbSubmissions ?? 0}
-                />
+                {seedSummary?.nbSubmissions && (
+                  <CountUpAnimation
+                    className="value"
+                    number={seedSummary?.nbSubmissions}
+                  />
+                )}
                 <div className="label">Total submissions</div>
               </div>
             </div>
