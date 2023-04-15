@@ -263,7 +263,7 @@ export const HowTo = () => {
                         Valuation: <span>$50M</span>
                       </li>
                       <li>
-                        Token price: <span>$0.055</span>
+                        Token price: <span>$0.050</span>
                       </li>
                       <li>
                         Token required to invest: <span>USDC</span>
@@ -300,7 +300,7 @@ export const HowTo = () => {
                         Valuation: <span>$50M</span>
                       </li>
                       <li>
-                        Token price: <span>$0.055</span>
+                        Token price: <span>$0.050</span>
                       </li>
                       <li>
                         Token required to invest: <span>USDC</span>

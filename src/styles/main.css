@@ -5287,7 +5287,10 @@ h4 {
     letter-spacing: 0.1em;
     color: #d1d3d4;
     margin: 32px 0 48px;
-    display: block;
+    display: flex;
+  }
+  .invest .head .mobile-coming .countdown {
+    margin-top: 20px;
   }
   .invest .head h2 {
     font-size: 40px !important;

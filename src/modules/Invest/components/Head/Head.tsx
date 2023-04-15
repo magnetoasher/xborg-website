@@ -13,7 +13,6 @@ export const Head = () => {
   const introRef = useRef(null);
 
   const seedSummary = useSelector((state: GlobalState) => state.seed.summary);
-
   return (
     <div className="head invest-section-head">
       <div className="head-content row middle between">
@@ -44,7 +43,11 @@ export const Head = () => {
           <LineGraph data={seedSummary?.summary} />
         )} */}
       </div>
-      <div className="mobile-coming text-center w-full">Starting in:</div>
+      <div className="mobile-coming text-center  row column middle center">
+        <span>Starting in:</span>
+
+        <Countdown date={new Date("May 02 2023 14:00:00 GMT+0200")} />
+      </div>
     </div>
   );
 };

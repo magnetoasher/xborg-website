@@ -81,7 +81,11 @@
       letter-spacing: 0.1em;
       color: $light100;
       margin: 32px 0 48px;
-      display: block;
+      display: flex;
+
+      .countdown {
+        margin-top: 20px;
+      }
     }
 
     h2 {
