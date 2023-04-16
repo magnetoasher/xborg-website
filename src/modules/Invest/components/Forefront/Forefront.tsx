@@ -65,7 +65,7 @@ export const Forefront = () => {
             <div className="col expand">
               <div className="cube" />
               <div className="title">Largest network</div>
-              <div className="desc">of parters</div>
+              <div className="desc">of partners</div>
             </div>
           </div>
         </div>
