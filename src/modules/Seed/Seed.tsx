@@ -58,7 +58,7 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
   const [form, setForm] = useState<SeedFormType>({
     name: "",
     email: "",
-    isPrometheusOwner: true,
+    isPrometheusOwner: false,
     capital: 100,
     how: "",
     utm: vm.handleUTM(location),

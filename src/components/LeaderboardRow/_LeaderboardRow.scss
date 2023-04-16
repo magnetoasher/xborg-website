@@ -112,4 +112,19 @@
       margin-right: 12px;
     }
   }
+
+  @media (max-width: $xs-max) {
+    .mouse-parallax {
+      padding: 16px 12px;
+    }
+
+    .image {
+      margin-left: 12px;
+      margin-right: 12px;
+    }
+
+    .xp {
+      margin-left: 12px;
+    }
+  }
 }

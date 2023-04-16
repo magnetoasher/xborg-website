@@ -314,34 +314,6 @@ export const InvestFAQ = () => {
                   </p>
                 </Collapsible>
               </div>
-
-              <div className="collapsible-container">
-                <div className="collapsible-tag">Fundraising</div>
-                <Collapsible
-                  trigger="Do I need a Prometheus NFT to invest in XBorg?"
-                  className="collapsible"
-                >
-                  <p>
-                    Owning a Prometheus NFT gives you exclusive advantages for
-                    XBorg’s seed round.
-                  </p>
-                  <p>
-                    <strong>Discounted valuation</strong> - Only Prometheus
-                    holders will have access to an investment opportunity at a
-                    $45M valuation, while other investors will invest at a $50M
-                    FDV.
-                  </p>
-                  <p>
-                    <strong>Guaranteed allocation</strong> - During the
-                    investment period, each Prometheus holder will have a
-                    guaranteed allocation up to $3,000 per NFT held.
-                  </p>
-                  <p>
-                    However, you can also invest in XBorg via SwissBorg’s
-                    vaults.
-                  </p>
-                </Collapsible>
-              </div>
             </>
           ) : null}
           {/* OTHER */}

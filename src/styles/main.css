@@ -1663,6 +1663,12 @@ h4 {
     left: 10%;
   }
 }
+@media (max-width: 576px) {
+  .xborg-app .leaderboard .parallaxed .list .border {
+    left: 21%;
+    width: 16px;
+  }
+}
 .xborg-app .start-playing-today {
   position: relative;
 }
@@ -5873,16 +5879,6 @@ h4 {
     max-width: 440px;
     transform: translate(0, 0);
   }
-  .invest .product-spotlight .parallaxed-container-1 .parallaxed-1 img {
-    width: 66.666%;
-  }
-  .invest .product-spotlight .parallaxed-container-1 .parallaxed-2 {
-    transform: translateY(-39%) translateX(48%);
-  }
-  .invest .product-spotlight .parallaxed-container-1 .parallaxed-2 img {
-    width: 49.41%;
-    max-width: 49.41%;
-  }
 }
 @media (max-width: 768px) {
   .invest .product-spotlight h2 {
@@ -8167,6 +8163,18 @@ h4 {
 .leaderboard-row .xp img {
   width: 16px;
   margin-right: 12px;
+}
+@media (max-width: 576px) {
+  .leaderboard-row .mouse-parallax {
+    padding: 16px 12px;
+  }
+  .leaderboard-row .image {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .leaderboard-row .xp {
+    margin-left: 12px;
+  }
 }
 
 .tile {

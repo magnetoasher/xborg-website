@@ -165,4 +165,11 @@
       }
     }
   }
+
+  @media (max-width: $xs-max) {
+    .parallaxed .list .border {
+      left: 21%;
+      width: 16px;
+    }
+  }
 }
