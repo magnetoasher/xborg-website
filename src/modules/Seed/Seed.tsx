@@ -245,7 +245,7 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
                 />
               </div>
 
-              {/* <div className="row">
+              <div className="row">
                 <div
                   className={`switch-view row ${
                     chartView ? "active" : "inactive"
@@ -270,44 +270,44 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
                     All Submissions
                   </Link>
                 </div>
-              </div> */}
-              {/* {chartView ? (
+              </div>
+              {chartView ? (
                 <LineGraph data={seedSummary?.summary} />
-              ) : ( */}
-              <ObserverContainer className="submissions">
-                {slicedPage.map((item, index) => (
-                  <div
-                    className="single-submission row middle between"
-                    key={index}
-                    style={{
-                      transitionDelay: index * 50 + "ms",
-                    }}
-                  >
-                    <div className="submission-title">
-                      Anonymous user is <span>interested</span> in a $
-                      <b>{item.capital}</b> allocation
-                    </div>
+              ) : (
+                <ObserverContainer className="submissions">
+                  {slicedPage.map((item, index) => (
+                    <div
+                      className="single-submission row middle between"
+                      key={index}
+                      style={{
+                        transitionDelay: index * 50 + "ms",
+                      }}
+                    >
+                      <div className="submission-title">
+                        Anonymous user is <span>interested</span> in a $
+                        <b>{item.capital}</b> allocation
+                      </div>
 
-                    <div className="time">
-                      {timeDifference(
-                        new Date(),
-                        new Date(item.timestamp * 1000)
-                      )}
+                      <div className="time">
+                        {timeDifference(
+                          new Date(),
+                          new Date(item.timestamp * 1000)
+                        )}
+                      </div>
                     </div>
+                  ))}
+                  <div className="submissions-bottom row between middle">
+                    <div className="items">
+                      {itemsfrom}-{itemsto} of {seedData.length} Items
+                    </div>
+                    <Pagination
+                      current={page}
+                      pageCount={seedData.length / itemsperpage}
+                      onPageChange={(e) => setPage(e.selected)}
+                    />
                   </div>
-                ))}
-                <div className="submissions-bottom row between middle">
-                  <div className="items">
-                    {itemsfrom}-{itemsto} of {seedData.length} Items
-                  </div>
-                  <Pagination
-                    current={page}
-                    pageCount={seedData.length / itemsperpage}
-                    onPageChange={(e) => setPage(e.selected)}
-                  />
-                </div>
-              </ObserverContainer>
-              {/* )} */}
+                </ObserverContainer>
+              )}
             </div>
           </div>
         </div>,

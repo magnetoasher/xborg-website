@@ -15,8 +15,12 @@
     fill: $light100;
   }
 
-  .recharts-cartesian-axis-ticks {
+  .recharts-cartesian-axis-tick:first-child {
     transform: translateX(10px);
+  }
+
+  .recharts-cartesian-axis-tick:last-child {
+    transform: translateX(-10px);
   }
 
   .recharts-tooltip-wrapper {

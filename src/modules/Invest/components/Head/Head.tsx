@@ -36,12 +36,9 @@ export const Head = () => {
           </div>
         </div>
 
-        <div className="image-graph">
-          <img src={Images.graph} alt="" />
-        </div>
-        {/* {seedSummary?.summary.length && (
+        {seedSummary?.summary.length && (
           <LineGraph data={seedSummary?.summary} />
-        )} */}
+        )}
       </div>
       <div className="mobile-coming text-center  row column middle center">
         <span>Starting in:</span>
