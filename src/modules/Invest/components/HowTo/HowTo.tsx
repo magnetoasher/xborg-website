@@ -216,8 +216,7 @@ export const HowTo = () => {
                     </div>
                     <ul>
                       <li>
-                        Investment:{" "}
-                        <span>$100 - $3,000 (guaranteed allocation)</span>
+                        Investment: <span>$100 - $3,000</span>
                       </li>
                       <li>
                         Requirement: <span>Genesis status</span>
