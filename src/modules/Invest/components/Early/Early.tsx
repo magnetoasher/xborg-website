@@ -4,10 +4,10 @@ import { ObserverContainer, SectionDescription } from "../../../../components";
 export const Early = () => {
   return (
     <div className="row column we-are-early">
-      <h2>
+      <h2 className="vista-heading">
         We are still <span>early</span>
       </h2>
-      <SectionDescription className="desc">
+      <SectionDescription className="desc lexend-body-m text-center">
         Despite having attracted over 10,000 users to our protocol, launched the
         largest Web3 league, and integrated one of the biggest esports teams in
         Europe, we are still at the beginning of our journey with unlimited
@@ -15,7 +15,7 @@ export const Early = () => {
       </SectionDescription>
 
       <ObserverContainer className="lines-chart">
-        <div className="multiplier">
+        <div className="multiplier lexend-heading-m">
           <span>x20</span> multiplier
         </div>
         <div className="lines-chart-container">
@@ -23,7 +23,7 @@ export const Early = () => {
             <div className="single-line">
               <div className="line-filler" style={{ height: "33.333%" }}>
                 <div className="line-value">$50m</div>
-                <div className="single-name">
+                <div className="single-name lexend-body-s">
                   <img src={Images.invest.chart1} alt="" />
                   <span>XBorg</span>
                 </div>
@@ -32,7 +32,7 @@ export const Early = () => {
             <div className="single-line">
               <div className="line-filler" style={{ height: "47.59%" }}>
                 <div className="line-value">$100m</div>
-                <div className="single-name">
+                <div className="single-name lexend-body-s">
                   <img src={Images.invest.chart2} alt="" />
                   <span>Polemos</span>
                 </div>
@@ -41,7 +41,7 @@ export const Early = () => {
             <div className="single-line">
               <div className="line-filler" style={{ height: "51.06%" }}>
                 <div className="line-value">$122m</div>
-                <div className="single-name">
+                <div className="single-name lexend-body-s">
                   <img src={Images.invest.chart3} alt="" />
                   <span>Kapital DAO</span>
                 </div>
@@ -50,7 +50,7 @@ export const Early = () => {
             <div className="single-line">
               <div className="line-filler" style={{ height: "68.98%" }}>
                 <div className="line-value">$250m</div>
-                <div className="single-name">
+                <div className="single-name lexend-body-s">
                   <img src={Images.invest.chart4} alt="" />
                   <span>Yield Guild Games</span>
                 </div>
@@ -59,7 +59,7 @@ export const Early = () => {
             <div className="single-line">
               <div className="line-filler" style={{ height: "78.60%" }}>
                 <div className="line-value">$350m</div>
-                <div className="single-name">
+                <div className="single-name lexend-body-s">
                   <img src={Images.invest.chart5} alt="" />
                   <span>Galxe</span>
                 </div>
@@ -68,7 +68,7 @@ export const Early = () => {
             <div className="single-line">
               <div className="line-filler" style={{ height: "89.03%" }}>
                 <div className="line-value">$680m</div>
-                <div className="single-name">
+                <div className="single-name lexend-body-s">
                   <img src={Images.invest.chart6} alt="" />
                   <span>Verasity</span>
                 </div>
@@ -77,7 +77,7 @@ export const Early = () => {
             <div className="single-line">
               <div className="line-filler" style={{ height: "100%" }}>
                 <div className="line-value">$1B</div>
-                <div className="single-name">
+                <div className="single-name lexend-body-s">
                   <img src={Images.invest.chart7} alt="" />
                   <span>Chiliz</span>
                 </div>
@@ -85,7 +85,7 @@ export const Early = () => {
             </div>
           </div>
 
-          <div className="lines">
+          <div className="lines lexend-body-xs2">
             <span>$1B</span>
             <span>$200m</span>
             <span>$50m</span>
@@ -94,7 +94,7 @@ export const Early = () => {
         </div>
       </ObserverContainer>
 
-      <SectionDescription className="footnote">
+      <SectionDescription className="footnote lexend-body-xs1">
         This is a forward-looking statement based on XBorg's assumptions. This
         chart cannot be deemed as a contractual commitment. XBorg bears no
         liability if any information contained in this chart is found inaccurate

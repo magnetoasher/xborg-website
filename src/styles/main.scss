@@ -3,6 +3,7 @@
 @import "./reset";
 
 @import "./background";
+@import "./keyframes";
 @import "./typography";
 
 // Modules
@@ -51,3 +52,5 @@
 @import "../components/ResponsiveVideo/ResponsiveVideo";
 @import "../components/SortGroup/SortGroup";
 @import "../components/Tag/Tag";
+@import "../components/Collapsible/Collapsible";
+@import "../components/SectionHead/SectionHead";

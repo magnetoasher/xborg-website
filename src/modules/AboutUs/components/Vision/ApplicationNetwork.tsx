@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import {
   ButtonSecondary,
@@ -7,7 +6,6 @@ import {
   Progressbar,
   SectionDescription,
 } from "../../../../components";
-import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export type ApplicationNetworkProps = {
   active: number;
@@ -18,39 +16,27 @@ export const ApplicationNetwork = ({
   active,
   mobile,
 }: ApplicationNetworkProps) => {
-  const titleScrambleRef = useRef(null);
-  const titleScrambleRef2 = useRef(null);
-
-  const textVM = new TextManipulation();
-
   return (
     <div className="application-network">
       {active == 2 || mobile == true ? (
         <div className="row middle between block-wrapper">
           <div className="w-full">
-            <ObserverContainer
-              className="row column"
-              onAnimateIn={() => {
-                setTimeout(() => {
-                  textVM.scrambleText(titleScrambleRef);
-                }, 200);
-              }}
-            >
+            <ObserverContainer className="content-wrapper row column">
               <div className="row middle big-title-container">
-                <div className="red-highlight text-center">
+                <div className="red-highlighted">
                   <span>Live</span>
                 </div>
 
-                <div className="big-title">
-                  XBorg <span ref={titleScrambleRef}>Launchpad</span>
-                </div>
+                <h4 className="vista-heading">
+                  XBorg <span>Launchpad</span>
+                </h4>
               </div>
 
-              <SectionDescription className="subtitle">
+              <p className="section-desc lexend-heading-s">
                 Providing players investment opportunities in early-stage Web3
                 games, and developers the platform to access to capital and
                 players.
-              </SectionDescription>
+              </p>
 
               <div className="action row">
                 <ButtonSecondary
@@ -63,7 +49,9 @@ export const ApplicationNetwork = ({
           </div>
 
           <ObserverContainer className="rooniverse row column">
-            <div className="live">Live</div>
+            <div className="red-highlighted live">
+              <span>Live</span>
+            </div>
             <video autoPlay muted loop>
               <source
                 src={require("../../../../assets/videos/rooniverse.mp4")}
@@ -72,21 +60,21 @@ export const ApplicationNetwork = ({
             </video>
 
             <div className="rooniverse-content">
-              <div className="row middle tags">
+              <div className="row middle tags lexend-body-m">
                 <span>MOBA</span>
                 <span>Strategic</span>
               </div>
 
-              <div className="intro-title">Rooniverse</div>
+              <h2 className="lexend-heading">Rooniverse</h2>
 
-              <SectionDescription className="rooniverse-desc">
+              <SectionDescription className="rooniverse-desc lexend-heading-s">
                 Enter the world of cute and savage Roos who fight to the DEATH!
                 Showdown in battle arenas, gather resources, and build your own
                 empire in Rooniverse.
               </SectionDescription>
 
               <div className="funding">
-                <div className="row progress-info">
+                <div className="row progress-info lexend-heading-s">
                   <span>100% Funded</span>
                   <span>121 Participants</span>
                 </div>
@@ -99,28 +87,21 @@ export const ApplicationNetwork = ({
       {active == 3 || mobile == true ? (
         <div className="row middle between app-network-xborg block-wrapper">
           <div className="w-full">
-            <ObserverContainer
-              className="row column"
-              onAnimateIn={() => {
-                setTimeout(() => {
-                  textVM.scrambleText(titleScrambleRef);
-                }, 200);
-              }}
-            >
+            <ObserverContainer className="content-wrapper row column">
               <div className="row middle big-title-container">
-                <div className="red-highlight text-center">
+                <div className="red-highlighted">
                   <span>Alpha live</span>
                 </div>
 
-                <div className="big-title">
-                  XBorg <span ref={titleScrambleRef2}>App</span>
-                </div>
+                <h4 className="vista-heading">
+                  XBorg <span>App</span>
+                </h4>
               </div>
 
-              <SectionDescription className="subtitle">
+              <p className="section-desc lexend-heading-s">
                 Allowing players to unlock collectibles, craft avatars and win
                 exclusive prizes by completing gaming and social challenges.
-              </SectionDescription>
+              </p>
 
               <div className="action row">
                 <ButtonSecondary

@@ -6,19 +6,7 @@
   }
 
   h2 {
-    color: $light100;
     margin-bottom: 24px;
-
-    span {
-      color: $primary100;
-    }
-  }
-
-  .desc {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 32px;
-    letter-spacing: 0.05em;
   }
 
   .bubbles {
@@ -31,7 +19,7 @@
           opacity: 1;
         }
 
-        span {
+        h3 {
           transition-delay: 0.5s;
           opacity: 1;
         }
@@ -64,15 +52,13 @@
       transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
-    span {
+    h3 {
       position: absolute;
       z-index: 2;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 24px;
       font-weight: 700;
-      line-height: 32px;
       letter-spacing: 0.05em;
       color: $white;
       opacity: 0;
@@ -82,10 +68,6 @@
 
   .bubble-title {
     margin-top: 24px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 32px;
-    letter-spacing: 0.05em;
     opacity: 0;
     transform: translateY(-20px);
     transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
@@ -116,10 +98,6 @@
 
   .estimate {
     margin-top: 35px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 32px;
-    letter-spacing: 0.05em;
     color: $gray100;
 
     a {
@@ -136,8 +114,14 @@
       text-align: left;
     }
 
+    .content {
+      margin-top: 0;
+    }
+
     .desc {
       text-align: left;
+      font-size: 14px;
+      line-height: 24px;
     }
 
     .bubbles {

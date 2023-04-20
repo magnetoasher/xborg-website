@@ -26,3 +26,7 @@ export * from "./Alert";
 export * from "./Article";
 export * from "./ResponsiveVideo";
 export * from "./SortGroup";
+export * from "./SectionHead";
+export * from "./Countdown";
+export * from "./Tile";
+export * from "./Pagination";

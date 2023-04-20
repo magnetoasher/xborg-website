@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import Collapsible from "react-collapsible";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Images } from "../../assets/imgs/Images";
 import { ButtonSecondary, Layout } from "../../components";
+import { Collapsible } from "../../components/Collapsible";
 import { ScrollViewModel } from "../../viewmodels/ScrollViewModel";
 
 export const FAQ = () => {
@@ -22,11 +22,11 @@ export const FAQ = () => {
         components={[
           <div className="faq">
             <div className="row middle center">
-              <h1>FAQ</h1>
+              <h2 className="vista-heading">FAQ</h2>
             </div>
             <div className="container container-xl">
               <div className="faqs">
-                <Collapsible trigger="What is XBorg? " className="collapsible">
+                <Collapsible trigger="What is XBorg?">
                   <p>
                     XBorg is building a Gaming Credential and Application
                     Network for players and Decentralized Gaming Societies.
@@ -43,10 +43,7 @@ export const FAQ = () => {
                     itself as a leading player in the Web3 gaming space.
                   </p>
                 </Collapsible>
-                <Collapsible
-                  trigger="Who is behind XBorg?"
-                  className="collapsible"
-                >
+                <Collapsible trigger="Who is behind XBorg?">
                   <p>
                     XBorg is a{" "}
                     <a
@@ -62,10 +59,7 @@ export const FAQ = () => {
                     is supported by its community of more than 10'000 players.
                   </p>
                 </Collapsible>
-                <Collapsible
-                  trigger="What is the Prometheus NFT"
-                  className="collapsible"
-                >
+                <Collapsible trigger="What is the Prometheus NFT">
                   <p>
                     The Prometheus collection is a core component of the XBorg
                     ecosystem. It grants holders governance rights, fee-less
@@ -81,10 +75,7 @@ export const FAQ = () => {
                     .
                   </p>
                 </Collapsible>
-                <Collapsible
-                  trigger="How can I access your whitepaper? "
-                  className="collapsible"
-                >
+                <Collapsible trigger="How can I access your whitepaper?">
                   <p>
                     The XBorg whitepaper V1 is currently in progress and will be
                     delivered around Q2 2023. In the meantime, you can check our
@@ -100,10 +91,7 @@ export const FAQ = () => {
                   </p>
                 </Collapsible>
 
-                <Collapsible
-                  trigger="How can I join the community?  "
-                  className="collapsible"
-                >
+                <Collapsible trigger="How can I join the community?">
                   <p>
                     Join our community on{" "}
                     <a
@@ -125,10 +113,7 @@ export const FAQ = () => {
                   </p>
                 </Collapsible>
 
-                <Collapsible
-                  trigger="How can I invested early in XBorg?"
-                  className="collapsible"
-                >
+                <Collapsible trigger="How can I invested early in XBorg?">
                   <p>
                     XBorg will conduct a private token sale in Q2 2023. Click on
                     the button below to register interest for the upcoming seed
@@ -143,10 +128,7 @@ export const FAQ = () => {
                   </div>
                 </Collapsible>
 
-                <Collapsible
-                  trigger="How can I contact you?"
-                  className="collapsible"
-                >
+                <Collapsible trigger="How can I contact you?">
                   <p>
                     If you want to speak with a member of the team, head over to{" "}
                     <a

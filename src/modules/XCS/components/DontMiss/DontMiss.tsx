@@ -4,6 +4,7 @@ import {
   ObserverContainer,
   Links,
   SectionDescription,
+  SectionHead,
 } from "../../../../components";
 import { PickGame } from "../PickGame/PickGame";
 
@@ -12,21 +13,21 @@ export const DontMiss = () => {
     <div className="dont-miss expand row column">
       <div className="expand row middle dont-miss-content">
         <div className="description expand">
-          <div className="section-head-container in">
-            <div className="row section-head">
-              <div className="section-border"></div>
-              <div className="row column expand">
-                <img src={Images.logo.default} alt="Don’t Miss A Second" />
-                <h2 className="section-head-title">
-                  Don’t Miss <span>A Second</span>
-                </h2>
-              </div>
-            </div>
-            <SectionDescription className="section-head-desc">
+          <SectionHead
+            title={
+              <>
+                <span>Don’t Miss</span> A Second
+              </>
+            }
+            logo={Images.logo.default}
+            smallerHeading
+          >
+            <p className="lexend-body-m">
               Stay up to date with all Xtreme Championship Series news,
               announcements and action.
-            </SectionDescription>
-          </div>
+            </p>
+          </SectionHead>
+
           <div className="row btn-container">
             <a
               href="https://discord.gg/Cb73U6PX"

@@ -38,8 +38,8 @@ export const GameTile = ({
       <img src={image2} alt={title} className="avatar" />
       <img src={image} alt={title} className="game" />
       <div className="game-details">
-        <div className="game-title">{title}</div>
-        <div className="row middle">
+        <h2 className="game-title lexend-heading">{title}</h2>
+        <div className="row middle lexend-heading-xxs">
           <div className="game-quests tag">{quests} Quests Available</div>
           <div className="game-players tag">{players} Players</div>
         </div>

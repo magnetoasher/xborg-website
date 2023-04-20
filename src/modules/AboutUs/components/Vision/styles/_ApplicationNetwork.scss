@@ -1,24 +1,6 @@
 .application-network {
-  .live {
-    padding: 0px 16px;
-    line-height: 45px;
-    background: $primary100;
-    color: $white;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    text-align: center;
-  }
-
-  .big-title {
-    font-family: $secondary-font-family;
-    font-size: 24px;
-    font-weight: 900;
-    line-height: 30px;
-    letter-spacing: 0.1em;
-    color: $light100;
+  h4.vista-heading {
     margin-left: 32px;
-    opacity: 0;
     transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 
     span {
@@ -26,15 +8,14 @@
     }
   }
 
-  .subtitle {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 0.05em;
+  .section-desc {
     max-width: 541px;
     margin-bottom: 32px;
     margin-top: 16px;
     padding-right: 16px;
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    opacity: 0;
+    transform: translateX(-40px);
   }
 
   .action {
@@ -60,9 +41,6 @@
     .tags span {
       padding: 8px 16px;
       background-color: #111111;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 19px;
       margin-right: 16px;
     }
 
@@ -77,33 +55,21 @@
       position: absolute;
       top: 24px;
       left: 24px;
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 40px;
       z-index: 3;
       transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
-    .intro-title {
-      font-size: 32px;
+    h2.lexend-heading {
       font-weight: 600;
-      line-height: 39px;
       margin: 16px 0;
     }
 
     .rooniverse-desc {
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 24px;
       color: $gray100;
       margin-bottom: 16px;
     }
 
     .progress-info {
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 19px;
-
       span {
         margin-right: 32px;
         margin-bottom: 8px;
@@ -113,6 +79,34 @@
     &.in {
       transform: translate(0, 0);
       opacity: 1;
+    }
+  }
+
+  .content-wrapper.out {
+    .red-highlighted {
+      &:after {
+        width: 0;
+      }
+
+      span {
+        opacity: 0;
+      }
+    }
+
+    h4.vista-heading {
+      opacity: 0;
+    }
+  }
+
+  .content-wrapper.in {
+    h4.vista-heading {
+      opacity: 1;
+    }
+
+    .section-desc {
+      opacity: 1;
+      transition-delay: 0.2s;
+      transform: translate(0, 0);
     }
   }
 
@@ -183,15 +177,15 @@
       opacity: 1;
     }
 
-    .red-highlight {
-      span {
-        opacity: 1;
-      }
+    // .red-highlighted {
+    //   span {
+    //     opacity: 1;
+    //   }
 
-      &:after {
-        width: 100%;
-      }
-    }
+    //   &:after {
+    //     width: 100%;
+    //   }
+    // }
 
     .rooniverse {
       max-width: 500px;
@@ -203,6 +197,51 @@
       margin-top: 64px;
       transform: translateX(0);
     }
+
+    .action {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+  @media (max-width: $sm-max) {
+    margin-top: 48px;
+
+    .app-network-xborg {
+      margin-top: 48px;
+    }
+
+    .subtitle {
+      line-height: 24px;
+    }
+
+    .rooniverse {
+      .tags span {
+        font-size: 14px;
+      }
+
+      .live {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.05em;
+        text-align: center;
+        padding: 4px 8px;
+      }
+
+      .progress-info {
+        font-size: 12px;
+        justify-content: space-between;
+
+        span {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .parallaxed {
+      margin-top: 32px;
+    }
   }
 
   @media (max-width: $xs-max) {
@@ -210,7 +249,7 @@
       flex-direction: column;
       align-items: flex-start;
 
-      .big-title {
+      h4.vista-heading {
         margin-top: 16px;
         margin-left: 0;
       }

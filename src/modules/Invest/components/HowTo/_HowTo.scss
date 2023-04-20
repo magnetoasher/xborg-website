@@ -1,17 +1,10 @@
 .howto {
   .btn-title {
-    font-family: $secondary-font-family;
-    font-size: 24px;
-    font-weight: 900;
-    line-height: 30px;
-    color: $light100;
     transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   }
 
   .btn-desc {
-    font-size: 12px;
     font-weight: 300;
-    line-height: 20px;
     margin-top: 4px;
     color: #444444;
     transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
@@ -69,14 +62,7 @@
 
     h2 {
       font-size: 32px;
-      font-weight: 900;
       line-height: 40px;
-      letter-spacing: 0.05em;
-      color: $light100;
-
-      span {
-        color: $primary100;
-      }
     }
   }
 
@@ -89,9 +75,7 @@
 
         .vault-size {
           color: #111111;
-          font-size: 16px;
-          font-weight: 600;
-          line-height: 19px;
+          letter-spacing: 0;
           text-align: center;
           background-color: $swissborg100;
           padding: 10px;
@@ -126,9 +110,7 @@
         position: absolute;
         top: 8px;
         left: 8px;
-        font-size: 12px;
         font-weight: 600;
-        line-height: 15px;
         color: $light100;
         padding: 8px;
         border: 1px solid #212121;
@@ -140,47 +122,21 @@
     }
 
     .cat-name {
-      font-size: 24px;
       font-weight: 600;
-      line-height: 30px;
       margin-bottom: 16px;
     }
 
     ul {
       li {
-        font-size: 14px;
         font-weight: 600;
-        line-height: 18px;
         color: $light100;
         margin-bottom: 8px;
 
         span {
-          font-size: 14px;
           font-weight: 400;
-          line-height: 18px;
           color: #777777;
         }
       }
-    }
-
-    .starts-in {
-      margin-top: 8px;
-
-      span.name {
-        font-size: 12px;
-        font-weight: 600;
-        line-height: 15px;
-        margin-right: 16px;
-      }
-    }
-
-    .countdown .countdown-numbers span {
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 18px;
-      width: 17px;
-      height: 26px;
-      color: $light100;
     }
   }
 
@@ -196,16 +152,12 @@
     width: 100%;
 
     .footer-title {
-      font-size: 12px;
       font-weight: 600;
-      line-height: 24px;
       letter-spacing: 0.05em;
     }
 
     p {
-      font-size: 12px;
       font-weight: 300;
-      line-height: 24px;
       letter-spacing: 0.05em;
       margin-bottom: 24px;
       color: #878787;
@@ -216,15 +168,6 @@
     max-width: 672px;
     margin: 64px auto 0;
     width: 100%;
-  }
-
-  .footnote {
-    font-size: 12px;
-    font-weight: 300;
-    line-height: 28px;
-    letter-spacing: 0.05em;
-    text-align: center;
-    color: $gray100;
   }
 
   @media (max-width: 960px) {

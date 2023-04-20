@@ -11,9 +11,28 @@
     }
   }
 
+  .red-highlighted {
+    &:after {
+      width: 0;
+    }
+
+    span {
+      opacity: 0;
+    }
+  }
+
   .application-network {
     .subtitle {
       opacity: 0;
+    }
+
+    h4.vista-heading {
+      opacity: 0;
+    }
+
+    .section-desc {
+      opacity: 0;
+      transform: scale(0.9);
     }
 
     .parallaxed-1 img {

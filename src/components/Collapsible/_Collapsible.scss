@@ -1,0 +1,115 @@
+.collapsible-container {
+  position: relative;
+
+  .collapsible-tag {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    padding: 8px;
+    background-color: #212121;
+    z-index: 2;
+  }
+
+  &.with-tag {
+    .Collapsible__trigger {
+      padding-top: 42px;
+    }
+  }
+
+  .Collapsible {
+    background: #111111;
+    padding: 32px;
+    position: relative;
+    margin-bottom: 16px;
+
+    &__trigger {
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 32px;
+      letter-spacing: 0em;
+      text-align: left;
+      padding-right: 27px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 32px;
+        top: 30px;
+        width: 24px;
+        height: 24px;
+        background: url("../assets/imgs/arrow-square-down.svg");
+        background-size: cover;
+        transition: 0.2s ease-in;
+      }
+
+      &.is-open {
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &__contentInner {
+      margin-top: 16px;
+
+      p {
+        margin-bottom: 32px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .link {
+        text-decoration: underline;
+
+        &:hover {
+          color: $primary100;
+        }
+      }
+
+      b {
+        text-decoration: underline;
+      }
+
+      strong {
+        font-weight: 800;
+      }
+    }
+  }
+
+  @media (max-width: $sm-max) {
+    .Collapsible {
+      padding: 12px;
+
+      &__trigger {
+        font-size: 14px;
+
+        &:after {
+          right: 12px;
+          top: 16px;
+        }
+      }
+    }
+
+    &.with-tag {
+      .Collapsible__trigger {
+        padding-top: 26px;
+      }
+    }
+
+    .collapsible-tag {
+      left: 12px;
+      top: 12px;
+      font-size: 9px;
+      line-height: 13px;
+      padding: 4px 8px;
+    }
+  }
+}

@@ -17,7 +17,7 @@ export const Pagination = (data: PaginationType) => {
       pageRangeDisplayed={1}
       pageCount={data.pageCount}
       previousLabel="<"
-      className="page-pagination"
+      className="page-pagination lexend-body-xs2"
     />
   );
 };

@@ -1,7 +1,5 @@
 .footer-links {
   height: 80px;
-  font-size: 12px;
-  line-height: 15px;
   transform: translateY(80px);
 
   a {
@@ -39,8 +37,14 @@
   }
 
   @media (max-width: $sm-max) {
-    padding-bottom: 80px;
-    padding-top: 40px;
+    padding-bottom: 48px;
+    padding-top: 32px;
+
+    a {
+      width: 100%;
+      text-align: center;
+      padding: 16px 32px;
+    }
   }
 
   @media (max-width: $xxs-max) {

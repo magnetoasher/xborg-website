@@ -28,8 +28,10 @@ export const LeaderboardRow = ({
           <img src={image} alt="" />
         </div>
         <div className="row column">
-          <div className="name">{name}</div>
-          <div className="level row middle center">{level} Level</div>
+          <div className="lexend-heading-xs">{name}</div>
+          <div className="level row middle center lexend-body-xs2">
+            {level} Level
+          </div>
         </div>
         <div className="row middle xp">
           <img src={Images.xborgapp.artifact} alt="" />

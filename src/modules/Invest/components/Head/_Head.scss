@@ -13,23 +13,10 @@
     width: 438px;
   }
 
-  .countdown .countdown-numbers span {
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 18px;
-    width: 17px;
-    height: 26px;
-    color: $light100;
-  }
-
-  .subtitle {
+  .subtitle.lexend-body-m {
     margin: 16px 0 32px;
     max-width: 546px;
     width: 100%;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 0.05em;
   }
 
   .head-details {
@@ -39,6 +26,7 @@
   h2 {
     margin-bottom: 16px;
     color: $light100;
+    letter-spacing: 0.1em;
 
     span {
       color: $primary100;
@@ -46,10 +34,6 @@
   }
 
   .coming {
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 18px;
-    letter-spacing: 0.1em;
     margin: 24px 0 86px;
 
     .coming-desc {
@@ -75,22 +59,12 @@
     padding-bottom: 0;
 
     .mobile-coming {
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 18px;
-      letter-spacing: 0.1em;
-      color: $light100;
       margin: 32px 0 48px;
       display: flex;
 
       .countdown {
         margin-top: 20px;
       }
-    }
-
-    h2 {
-      font-size: 40px !important;
-      line-height: 50.4px !important;
     }
 
     .head-details {
@@ -122,10 +96,5 @@
 
   @media (max-width: $xs-max) {
     padding-top: 0;
-
-    h2 {
-      font-size: 24px !important;
-      line-height: 33.4px !important;
-    }
   }
 }

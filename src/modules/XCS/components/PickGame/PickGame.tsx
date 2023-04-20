@@ -92,10 +92,12 @@ export const PickGame = () => {
       className="pick-game expand row column"
       onAnimateIn={() => textVM.scrambleText(ref)}
     >
-      <div className="title" ref={ref}>
+      <h1 className="vista-heading" ref={ref}>
         Pick a game
-      </div>
-      <p>Register for each tournament individually.</p>
+      </h1>
+      <p className="lexend-body-m">
+        Register for each tournament individually.
+      </p>
       <Tabs
         data={[
           {

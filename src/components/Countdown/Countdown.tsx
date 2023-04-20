@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
-export type CountdownType = {
+export type CountdownProps = {
   date: Date;
+  smaller?: boolean;
 };
 
 export type CountdownTimeType = {
@@ -11,7 +12,7 @@ export type CountdownTimeType = {
   seconds: number;
 };
 
-export const Countdown = ({ date }: CountdownType) => {
+export const Countdown = ({ date, smaller }: CountdownProps) => {
   const [time, setTime] = useState<CountdownTimeType>({
     days: 0,
     hours: 0,
@@ -34,7 +35,7 @@ export const Countdown = ({ date }: CountdownType) => {
       // Time calculations for days, hours, minutes and seconds
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
       );
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
@@ -70,38 +71,38 @@ export const Countdown = ({ date }: CountdownType) => {
   if (secondsArray.length === 1) secondsArray.unshift("0");
 
   return (
-    <div className='countdown row'>
-      <div className='countdown-section row middle'>
-        <div className='countdown-numbers'>
+    <div className={`countdown row ${smaller ? "small" : "default"}`}>
+      <div className="countdown-section row middle">
+        <div className="countdown-numbers">
           {daysArray.map((item: string, index: number) => (
             <span key={index}>{item}</span>
           ))}
         </div>
-        <div className='countdown-title'>Days</div>
+        <div className="countdown-title">Days</div>
       </div>
-      <div className='countdown-section row middle'>
-        <div className='countdown-numbers'>
+      <div className="countdown-section row middle">
+        <div className="countdown-numbers">
           {hoursArray.map((item: string, index: number) => (
             <span key={index}>{item}</span>
           ))}
         </div>
-        <div className='countdown-title'>Hours</div>
+        <div className="countdown-title">Hours</div>
       </div>
-      <div className='countdown-section row middle'>
-        <div className='countdown-numbers'>
+      <div className="countdown-section row middle">
+        <div className="countdown-numbers">
           {minutesArray.map((item: string, index: number) => (
             <span key={index}>{item}</span>
           ))}
         </div>
-        <div className='countdown-title'>Mins</div>
+        <div className="countdown-title">Mins</div>
       </div>
-      <div className='countdown-section row middle'>
-        <div className='countdown-numbers'>
+      <div className="countdown-section row middle">
+        <div className="countdown-numbers">
           {secondsArray.map((item: string, index: number) => (
             <span key={index}>{item}</span>
           ))}
         </div>
-        <div className='countdown-title'>Secs</div>
+        <div className="countdown-title">Secs</div>
       </div>
     </div>
   );

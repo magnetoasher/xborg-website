@@ -29,7 +29,7 @@ export const SortGroup = ({
 
   return (
     <div className={`sort-group ${className ?? ""}`}>
-      {title && <div className="sort-group-title">{title}</div>}
+      {title && <div className="sort-group-title lexend-body-s">{title}</div>}
       <div className="list row middle">
         {displayAll && (
           <Tag

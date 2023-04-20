@@ -1,40 +1,28 @@
-import { useRef } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import {
   GameTile,
   ObserverContainer,
-  SectionDescription,
+  SectionHead,
 } from "../../../../components";
-import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const GamingProfile = () => {
-  const titleRef = useRef(null);
-
-  const textVM = new TextManipulation();
-
   return (
     <div className="gaming-profile expand">
-      <div className={"section-head-container"}>
-        <div className="row section-head">
-          <div className="section-border" />
-          <div className="row column expand">
-            <img src={Images.logo.default} alt="" />
-
-            <h2 className="section-head-title">
-              <span ref={titleRef}>The ultimate</span>
-              <br />
-              gaming profile
-            </h2>
-          </div>
-        </div>
-        <SectionDescription
-          className="section-head-desc"
-          onAnimateIn={() => textVM.scrambleText(titleRef)}
-        >
+      <SectionHead
+        logo={Images.logo.default}
+        title={
+          <>
+            <span>The ultimate</span>
+            <br />
+            gaming profile
+          </>
+        }
+      >
+        <p className="lexend-body-m">
           Level up your gaming experience and earn rewards based on your in-game
           skills and esports reputation.
-        </SectionDescription>
-      </div>
+        </p>
+      </SectionHead>
 
       <ObserverContainer className="background-images-grid row row-wrap middle center">
         <div className="grid-item">

@@ -7,12 +7,7 @@
   }
 
   h2 {
-    color: $light100;
     margin-bottom: 94px;
-
-    span {
-      color: $primary100;
-    }
   }
 
   .cube {
@@ -46,9 +41,7 @@
     }
 
     .title {
-      font-size: 20px;
       font-weight: 700;
-      line-height: 32px;
       color: $primary100;
     }
 
@@ -78,8 +71,6 @@
     margin-top: 48px;
 
     h2 {
-      font-size: 24px;
-      line-height: 30px;
       width: 100%;
       text-align: left;
       margin-bottom: 24px;
@@ -104,6 +95,19 @@
         position: relative;
         z-index: 1;
         padding: 16px 0;
+      }
+    }
+
+    .mock-height {
+      height: auto !important;
+    }
+
+    .key-points {
+      transform: translate(0, 0) !important;
+      margin-bottom: 48px;
+
+      .col {
+        opacity: 1;
       }
     }
   }

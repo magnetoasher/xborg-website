@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import {
   ParallaxLayer,
@@ -6,14 +5,10 @@ import {
   Table,
   TableDataColumn,
   ButtonPrimary,
-  SectionDescription,
+  SectionHead,
 } from "../../../../components";
-import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const Production = () => {
-  const scrambleRef = useRef(null);
-  const textVM = new TextManipulation();
-
   const livestreams: TableDataColumn[] = [
     {
       label: "March",
@@ -64,25 +59,21 @@ export const Production = () => {
       <div className="row middle expand">
         <div className="expand w-full">
           <div className="description expand">
-            <div className="section-head-container in">
-              <div className="row section-head">
-                <div className="section-border"></div>
-                <div className="row column expand">
-                  <img src={Images.logo.default} alt="World Class Production" />
-                  <h2 className="section-head-title">
-                    World Class
-                    <br />
-                    <span ref={scrambleRef}>Production</span>
-                  </h2>
-                </div>
-              </div>
-              <SectionDescription
-                className="section-head-desc"
-                onAnimateIn={() => textVM.scrambleText(scrambleRef)}
-              >
+            <SectionHead
+              title={
+                <>
+                  World Class
+                  <br />
+                  <span>Production</span>
+                </>
+              }
+              logo={Images.logo.default}
+              smallerHeading
+            >
+              <p className="lexend-body-m">
                 Catch all of the action live on Twitch.
-              </SectionDescription>
-            </div>
+              </p>
+            </SectionHead>
           </div>
 
           <div className="row follow-twitch">
@@ -105,7 +96,7 @@ export const Production = () => {
       </div>
 
       <div className="row column livestreams">
-        <h4 className="title">Livestream Dates</h4>
+        <h4 className="vista-heading">Livestream Dates</h4>
         <Table data={livestreams} />
       </div>
     </div>

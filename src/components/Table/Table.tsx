@@ -20,7 +20,7 @@ export const Table = ({ data }: TableType) => {
         <div className="row column expand table-column" key={col.id}>
           <div className="table-heading">{col.label}</div>
           {col.list.map((listItem: TableDataRow) => (
-            <div className="table-entry" key={listItem.id}>
+            <div className="table-entry lexend-body-xs1" key={listItem.id}>
               <span>{listItem.label}</span>
             </div>
           ))}

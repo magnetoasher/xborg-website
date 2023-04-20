@@ -1,19 +1,23 @@
 .becoming-legend {
-  .section-head-title {
-    max-width: 360px;
-  }
+  .section-head-container {
+    .section-head-title {
+      max-width: 360px;
+    }
 
-  .section-head-desc {
-    max-width: 383px;
+    .lexend-body-m {
+      max-width: 383px;
+    }
+
+    .logo-icon img {
+      height: 10px;
+    }
   }
 
   .releasing-date {
     margin-left: 22px;
 
     p {
-      line-height: 28px;
-      font-size: 15px;
-      color: #d1d3d4;
+      font-weight: 400;
       letter-spacing: 0.1rem;
       margin: 16px 0;
     }

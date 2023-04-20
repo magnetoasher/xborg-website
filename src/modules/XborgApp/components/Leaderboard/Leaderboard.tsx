@@ -5,6 +5,7 @@ import {
   LeaderboardRowType,
   ObserverContainer,
   SectionDescription,
+  SectionHead,
 } from "../../../../components";
 import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
@@ -49,27 +50,21 @@ export const Leaderboard = () => {
   return (
     <div className={`leaderboard expand row middle between`}>
       <div className="description expand">
-        <div className={"section-head-container"}>
-          <div className="row section-head">
-            <div className="section-border" />
-            <div className="row column expand">
-              <img src={Images.logo.default} alt="" />
-
-              <h2 className="section-head-title">
-                <span ref={titleRef}>Top the</span>
-                <br />
-                leaderboards
-              </h2>
-            </div>
-          </div>
-          <SectionDescription
-            className="section-head-desc"
-            onAnimateIn={() => textVM.scrambleText(titleRef)}
-          >
+        <SectionHead
+          logo={Images.logo.default}
+          title={
+            <>
+              <span>Top the</span>
+              <br />
+              leaderboards
+            </>
+          }
+        >
+          <p className="lexend-body-m">
             Grind your favourite games, complete social quests and climb up the
             leaderboard to unlock exclusive rewards.
-          </SectionDescription>
-        </div>
+          </p>
+        </SectionHead>
       </div>
       <ObserverContainer
         className="parallaxed row center middle expand"

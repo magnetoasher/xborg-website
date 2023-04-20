@@ -8,7 +8,7 @@ export const Links = () => {
     scroll.scrollToSpecifiedScreen(0, 500);
   }
   return (
-    <div className="footer-links row middle center">
+    <div className="footer-links lexend-body-xs2 row middle center">
       <a
         target="_blank"
         href="https://firebasestorage.googleapis.com/v0/b/xborg-quest.appspot.com/o/XBorg%20Website%20Terms%20of%20Use.pdf?alt=media&token=ff336d2a-0ca4-45d4-8dbd-6f895b34a8c9"

@@ -46,7 +46,7 @@ export const GameChangingProtocol = () => {
 
   return (
     <div className="game-changing-protocol w-full row column middle center">
-      <h2 className="text-center">
+      <h2 className="vista-heading text-center">
         A <span ref={titleRef}>game-changing</span>
         <br />
         protocol
@@ -69,8 +69,8 @@ export const GameChangingProtocol = () => {
                   active == 0 ? " active" : ""
                 }`}
               >
-                <span>Credential Network</span>
-                <div className="block-desc">
+                <span className="lexend-body-m">Credential Network</span>
+                <div className="block-desc lexend-body-m">
                   XBorg allows player to aggregate their gaming achievements,
                   esports reputation and social engagement to create their{" "}
                   <b>gaming identity</b>.
@@ -82,8 +82,8 @@ export const GameChangingProtocol = () => {
                   active == 1 ? " active" : ""
                 }`}
               >
-                <span>Application Network</span>
-                <div className="block-desc">
+                <span className="lexend-body-m">Application Network</span>
+                <div className="block-desc lexend-body-m">
                   XBorg enables games, guilds, esports teams to create{" "}
                   <b>immersive experience</b> for players and fans using the
                   credential network.
@@ -99,8 +99,8 @@ export const GameChangingProtocol = () => {
                   active == 2 ? " active" : ""
                 }`}
               >
-                <span>Decentralized Societies</span>
-                <div className="block-desc">
+                <span className="lexend-body-m">Decentralized Societies</span>
+                <div className="block-desc lexend-body-m">
                   Decentralised Gaming Communities are next generation gaming
                   communities that are governed by their native token holders.
                   What if FaZe was decentralized?

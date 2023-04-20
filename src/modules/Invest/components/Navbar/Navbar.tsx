@@ -26,7 +26,7 @@ export const Navbar = ({ active }: NavbarProps) => {
     <div className="invest-navigation-container w-full" ref={navParentRef}>
       <div className="invest-navigation row center middle w-full" ref={navRef}>
         <div className="sticky-tabs tabs">
-          <div className="heads row middle">
+          <div className="heads row middle lexend-body-xxs">
             <div className={`head-item${active == 0 ? " active" : ""}`}>
               <Link to="/seed-round">About XBorg</Link>
             </div>

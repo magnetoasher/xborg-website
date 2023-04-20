@@ -5,21 +5,17 @@ import {
   ButtonPrimary,
   Links,
   ObserverContainer,
-  SectionDescription,
 } from "../../../../components";
 import { mostreadarticles } from "../../../../localdata/articles";
-import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const Supporters = () => {
   const swisseRef = useRef(null);
-
-  const textVM = new TextManipulation();
 
   return (
     <div className="supporters w-full">
       <div className="row between content">
         <div className="partners-list">
-          <h2>
+          <h2 className="vista-heading">
             Supported by the <span>leaders of gaming & esports</span>
           </h2>
 
@@ -53,25 +49,20 @@ export const Supporters = () => {
             </div>
           </ObserverContainer>
         </div>
-        <ObserverContainer className="swissborg row column middle center text-center">
+        <div className="swissborg row column middle center text-center">
           <img src={Images.partners.swissborg} alt="Swissborg" />
-          <div className="swissborg-title">
+          <div className="lexend-body-xl">
             Powered by <strong ref={swisseRef}>SwissBorg</strong>
           </div>
-          {/* <SectionDescription
-            className=""
-            onAnimateIn={() => textVM.scrambleText(swisseRef)}
-          > */}
-          <p>
+          <p className="lexend-heading-s">
             XBorg is a spin-off of SwissBorg, a crypto wealth management app
             with 700'000 users & $1B in Assets Under Management.
           </p>
-          {/* </SectionDescription> */}
-        </ObserverContainer>
+        </div>
       </div>
 
       <div className="featured-in row column middle center">
-        <h2>
+        <h2 className="vista-heading">
           <span>Featured</span> in
         </h2>
 
@@ -83,7 +74,7 @@ export const Supporters = () => {
           >
             <img src={Images.partners.cryptoslate} alt="Cryptoslate" />
 
-            <div className="col-title">Cryptoslate</div>
+            <div className="col-title lexend-body-s">Cryptoslate</div>
           </a>
           <a
             href="https://esportsbureau.com/team-bds-y-xborg-anuncian-una-importante-asociacion/"
@@ -92,7 +83,7 @@ export const Supporters = () => {
           >
             <img src={Images.partners.esb} alt="Esports Bureau" />
 
-            <div className="col-title">Esports Bureau</div>
+            <div className="col-title lexend-body-s">Esports Bureau</div>
           </a>
           <a
             href="https://esportsinsider.com/2023/03/team-bds-xborg-blockchain"
@@ -101,13 +92,13 @@ export const Supporters = () => {
           >
             <img src={Images.partners.esi} alt="Esports Insider" />
 
-            <div className="col-title">Esports Insider</div>
+            <div className="col-title lexend-body-s">Esports Insider</div>
           </a>
         </ObserverContainer>
       </div>
 
       <ObserverContainer className="most-read-articles row column middle center">
-        <h2>
+        <h2 className="vista-heading">
           <span>Most read</span> articles
         </h2>
 
@@ -119,11 +110,11 @@ export const Supporters = () => {
       </ObserverContainer>
 
       <div className="invest-early row middle center column">
-        <h2 className="text-center">
+        <h2 className="vista-heading text-center">
           Invest in <span>the future of XBorg</span>
         </h2>
 
-        <div className="desc text-center">
+        <div className="lexend-body-m desc text-center">
           The only opportunity to invest early in XBorg, alongside the best
           investors of the space.
         </div>

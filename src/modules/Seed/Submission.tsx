@@ -20,10 +20,12 @@ export const SubmissionRecorded = () => {
       transparentNavbar={false}
       components={[
         <div className="submission-recorded w-full row column middle">
-          <h1 ref={ref}>Submission recorded</h1>
+          <h1 ref={ref} className="vista-heading">
+            Submission recorded
+          </h1>
 
           <SectionDescription
-            className="subtitle"
+            className="subtitle lexend-heading-xs text-center w-full"
             onAnimateIn={() => textVM.scrambleText(ref)}
           >
             You can now access our private documents. We will also send you the
@@ -35,8 +37,8 @@ export const SubmissionRecorded = () => {
             <ObserverContainer className="parallaxed row column middle center">
               <ParallaxLayer
                 image={Images.xborgapp.deck}
-                factorX={0.1}
-                factorY={0.1}
+                factorX={-0.1}
+                factorY={-0.1}
                 speed={0}
                 isBase
                 className="parallaxed-1 parallaxed-deck"
@@ -48,11 +50,11 @@ export const SubmissionRecorded = () => {
                 <span />
                 <span />
               </div>
-              <h4>
-                <span>Private</span> deck
+              <h4 className="vista-heading">
+                Private <span>deck</span>
               </h4>
 
-              <SectionDescription className="description">
+              <SectionDescription className="description lexend-body-s">
                 Access our full deck including details on our financials and
                 fundraising plans.
               </SectionDescription>
@@ -84,11 +86,11 @@ export const SubmissionRecorded = () => {
                 <span className="active" />
                 <span />
               </div>
-              <h4>
-                Due diligence <span>report</span>
+              <h4 className="vista-heading">
+                <span>Due diligence</span> report
               </h4>
 
-              <SectionDescription className="description">
+              <SectionDescription className="description lexend-body-s">
                 The most comprehensive breakdown of XBorg ever released. Subject
                 to NDA.
               </SectionDescription>
@@ -109,10 +111,10 @@ export const SubmissionRecorded = () => {
               target="_blank"
             />
 
-            <SectionDescription className="">
+            <p className="lexend-body-xs1 w-full text-center">
               More content for investors will be release in the coming days.
               Check your emails regularly to stay up to date!
-            </SectionDescription>
+            </p>
           </div>
         </div>,
       ]}

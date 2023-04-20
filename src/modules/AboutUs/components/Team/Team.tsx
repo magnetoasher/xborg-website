@@ -1,12 +1,12 @@
-import { useRef } from "react";
 import { Images } from "../../../../assets/imgs/Images";
-import { SectionDescription } from "../../../../components";
-import { TeamTile, TeamTileType } from "../../../../components/Tile";
-import { TextManipulation } from "../../../../viewmodels/textManipulation";
+import {
+  SectionDescription,
+  SectionHead,
+  TeamTile,
+  TeamTileType,
+} from "../../../../components";
 
 export const Team = () => {
-  const titleScrambleRef = useRef(null);
-  const textVM = new TextManipulation();
   const team: TeamTileType[] = [
     {
       image: Images.aboutUs.team.member01,
@@ -90,27 +90,15 @@ export const Team = () => {
     },
   ];
   return (
-    <div className={`team expand`}>
-      <div className={"section-head-container"}>
-        <div className="row section-head">
-          <div className="section-border" />
-          <div className="row column expand">
-            <h2 className="section-head-title" ref={titleScrambleRef}>
-              Meet our team
-            </h2>
-
-            <SectionDescription
-              className="section-head-desc"
-              onAnimateIn={() => textVM.scrambleText(titleScrambleRef)}
-            >
-              The XBorg core team is a confluence of gaming enthusiasts and
-              seasoned professionals in the realm of software engineering and
-              blockchain technologies, all driven by an unwavering ardor for the
-              gaming industry.
-            </SectionDescription>
-          </div>
-        </div>
-      </div>
+    <div className="team expand">
+      <SectionHead title={<span>Meet our team</span>}>
+        <p className="lexend-body-m">
+          The XBorg core team is a confluence of gaming enthusiasts and seasoned
+          professionals in the realm of software engineering and blockchain
+          technologies, all driven by an unwavering ardor for the gaming
+          industry.
+        </p>
+      </SectionHead>
       <div className="team-list row row-wrap center middle">
         {team.map((member: TeamTileType, index: number) => (
           <div className="team-tile-container" key={index}>

@@ -35,7 +35,7 @@ export const Tabs = ({ data, onTabChange }: TabsType) => {
 
   return (
     <div className="tabs">
-      <div className="heads row">
+      <div className="heads row lexend-body-xxs">
         {data.map((tab: SingleTab, index: number) => (
           <div
             className={`head-item ${active === index ? "active" : "inactive"}`}

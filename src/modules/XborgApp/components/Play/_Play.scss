@@ -10,24 +10,15 @@
     left: 0;
   }
 
-  h1 {
-    font-size: 62px;
-    font-weight: 900;
-    line-height: 78px;
-
+  h1.vista-xl {
     span {
-      color: $primary100;
       white-space: nowrap;
     }
   }
 
-  .subtitle {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 0.05em;
+  .lexend-body-m {
     margin: 16px 0 32px;
-    max-width: 470px;
+    max-width: 415px;
   }
 
   .statistics {
@@ -171,10 +162,7 @@
   }
 
   @media (max-width: $sm-max) {
-    h1 {
-      font-size: 43px;
-      line-height: 57px;
-
+    h1.vista-xl {
       span {
         white-space: initial;
       }
@@ -194,13 +182,6 @@
       .btn-primary {
         padding: 16px;
       }
-    }
-  }
-
-  @media (max-width: $xxs-max) {
-    h1 {
-      font-size: 32px;
-      line-height: 42px;
     }
   }
 }

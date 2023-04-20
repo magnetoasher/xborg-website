@@ -1,16 +1,10 @@
 .pick-game {
-  .title {
-    font-size: 48px;
-    line-height: 60px;
-    font-family: $secondary-font-family;
+  h1.vista-heading {
     letter-spacing: 2.4px;
     white-space: nowrap;
   }
 
-  p {
-    font-size: 16px;
-    line-height: 28px;
-    letter-spacing: 1px;
+  .lexend-body-m {
     white-space: nowrap;
   }
 

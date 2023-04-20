@@ -55,9 +55,7 @@
       transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 
       span {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 20px;
+        letter-spacing: 0;
       }
 
       &.with-cube {
@@ -88,9 +86,6 @@
       left: 100%;
       margin-left: 32px;
       top: 0;
-      font-size: 16px;
-      font-weight: 300;
-      line-height: 28px;
       letter-spacing: 0.05em;
       text-align: left;
       transition: 0.2s ease-in;
@@ -181,6 +176,12 @@
     .vision-intro-parallaxed {
       width: 100%;
 
+      &.in .block.active span {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+      }
+
       .vision-intro {
         width: 100%;
       }
@@ -218,6 +219,9 @@
         margin-left: 0;
         opacity: 1;
         margin-top: 16px;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 24px;
       }
     }
   }

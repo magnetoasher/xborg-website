@@ -13,9 +13,7 @@
     }
 
     .title {
-      font-size: 20px;
       font-weight: 700;
-      line-height: 28px;
       letter-spacing: 0.05em;
       color: $primary100;
       margin: 0 0 16px 32px;
@@ -35,25 +33,18 @@
     }
 
     .desc {
-      font-size: 14px;
       font-weight: 500;
-      line-height: 28px;
     }
   }
 
   .hype-separator {
     margin: 32px 0 64px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 0.05em;
   }
 
   .table {
     .table-heading {
       background-color: #111111;
       color: $gray100;
-      font-family: $poppins;
       font-size: 14px;
       font-weight: 700;
       line-height: 24px;
@@ -61,7 +52,6 @@
     }
 
     .table-entry {
-      font-family: $poppins;
       font-size: 14px;
       font-weight: 500;
       color: $gray100;
@@ -90,23 +80,14 @@
   }
 
   .embark {
-    font-family: $secondary-font-family;
-    font-size: 40px;
-    font-weight: 900;
-    line-height: 50px;
-    letter-spacing: 0.1em;
     margin-top: 43px;
-
-    span {
-      color: $primary100;
-    }
   }
 
   .actions {
     margin-top: 32px;
   }
 
-  .section-head-desc {
+  .section-desc {
     max-width: 546px;
   }
 

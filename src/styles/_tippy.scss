@@ -9,7 +9,7 @@
   background-color: #333;
   color: #fff;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.4;
   white-space: normal;
   outline: 0;
@@ -74,13 +74,12 @@
 }
 .Toastify__toast {
   line-height: 1.4;
-  font-size: 14px;
   font-weight: 700;
   line-height: 21px;
   font-size: 12px;
   border-radius: 0;
   color: $light100;
-  font-family: $main-font-family;
+  font-family: $lexend;
 
   span {
     color: $white;

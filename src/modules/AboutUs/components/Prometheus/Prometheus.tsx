@@ -1,46 +1,26 @@
-import { useRef } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import {
   ButtonPrimary,
   ButtonSecondary,
   ObserverContainer,
   ParallaxLayer,
-  SectionDescription,
+  SectionHead,
 } from "../../../../components";
-import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const Prometheus = () => {
-  const titleScrambleRef = useRef(null);
-
-  const textVM = new TextManipulation();
   return (
-    <div className={`prometheus expand row middle between`}>
+    <div className="prometheus expand row middle between">
       <div className="description">
-        <div className={"section-head-container"}>
-          <div className="row section-head">
-            <div className="section-border" />
-            <div className="row column expand">
-              <div className="section-head-top" ref={titleScrambleRef}>
-                XBorg Protocol
-              </div>
-
-              <h2 className="section-head-title">
-                <span>Prometheus NFT</span>
-              </h2>
-            </div>
-          </div>
-          <SectionDescription
-            className="section-head-desc"
-            onAnimateIn={() => textVM.scrambleText(titleScrambleRef)}
-          >
+        <SectionHead beforeTitle="XBorg Protocol" title="Prometheus NFT">
+          <p className="lexend-body-m">
             Shape the future of gaming and experience the XBorg ecosystem to the
             fullest.
-          </SectionDescription>
-        </div>
+          </p>
+        </SectionHead>
 
         <div className="typography">
-          <h4>Benefits</h4>
-          <ul>
+          <div className="lexend-body-xl ul-title">Benefits</div>
+          <ul className="lexend-body-m">
             <li>In-app payments & platform fees</li>
             <li>Governance rights</li>
             <li>Staking & reward pools</li>

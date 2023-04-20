@@ -1,11 +1,6 @@
 .whynow {
   h2 {
     margin-bottom: 90px;
-    color: $light100;
-
-    span {
-      color: $primary100;
-    }
   }
 
   .content {
@@ -17,9 +12,6 @@
       border-right: 1px solid $gray700;
 
       .single-tab {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 32px;
         color: $gray300;
         padding: 24px 0;
 
@@ -54,9 +46,6 @@
         left: 50%;
         transform: translateY(-50%);
         width: 50%;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 24px;
         transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
         color: $white;
       }
@@ -98,8 +87,6 @@
 
   @media (max-width: $sm-max) {
     h2 {
-      font-size: 24px;
-      line-height: 30px;
       width: 100%;
       text-align: left;
       margin-top: 48px;

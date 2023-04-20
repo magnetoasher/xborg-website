@@ -1,7 +1,10 @@
 .production {
+  .section-head-container .logo-icon img {
+    height: 10px;
+  }
+
   .livestreams {
-    .title {
-      font-family: $secondary-font-family;
+    h4.vista-heading {
       position: relative;
       padding-left: 24px;
       border-left: 2px solid $primary100;
@@ -18,8 +21,6 @@
   }
 
   .follow-twitch {
-    line-height: 28px;
-    font-size: 15px;
     color: #d1d3d4;
     letter-spacing: 0.1rem;
     margin: 16px 0 16px 22px;

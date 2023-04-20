@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Collapsible from "react-collapsible";
 import { Link } from "react-router-dom";
 import { Images } from "../../../../assets/imgs/Images";
 import { ButtonSecondary, Links } from "../../../../components";
+import { Collapsible } from "../../../../components/Collapsible";
 import { Countdown } from "../../../../components/Countdown";
 import { AppViewModel } from "../../../../viewmodels/AppViewModel";
 import { Head } from "../Head";
@@ -28,7 +28,7 @@ export const HowTo = () => {
       <Navbar active={2} />
 
       <div className="content w-full">
-        <h2>
+        <h2 className="vista-heading">
           <span>Choose</span> a method of investment
         </h2>
 
@@ -51,8 +51,10 @@ export const HowTo = () => {
               </div>
 
               <div className="row column">
-                <div className="btn-title">Prometheus holders</div>
-                <div className="btn-desc">via XBorg’s launchpad</div>
+                <h4 className="vista-heading btn-title">Prometheus holders</h4>
+                <div className="lexend-body-xs1 btn-desc">
+                  via XBorg’s launchpad
+                </div>
               </div>
             </Link>
 
@@ -71,8 +73,10 @@ export const HowTo = () => {
               </div>
 
               <div className="row column">
-                <div className="btn-title">Swissborg</div>
-                <div className="btn-desc">via Swissborg’s app vaults</div>
+                <h4 className="vista-heading btn-title">Swissborg</h4>
+                <div className="lexend-body-xs1 btn-desc">
+                  via Swissborg’s app vaults
+                </div>
               </div>
             </Link>
           </div>
@@ -82,15 +86,15 @@ export const HowTo = () => {
               <div className="row column category-details prometheus-category">
                 <div className="details-row row">
                   <div className="cat-image">
-                    <div className="date">03/05</div>
+                    <div className="lexend-body-xs2 date">03/05</div>
                     <img src={Images.invest.prometheus} alt="Prometheus" />
                   </div>
 
                   <div className="row column">
-                    <div className="cat-name">
+                    <h3 className="cat-name lexend-heading">
                       <span>Prometheus</span> round
-                    </div>
-                    <ul>
+                    </h3>
+                    <ul className="lexend-body-s">
                       <li>
                         Investment: <span>$100-$3,000 per NFT held</span>
                       </li>
@@ -114,7 +118,7 @@ export const HowTo = () => {
                   </div>
                 </div>
               </div>
-              <div className="category-footer">
+              <div className="category-footer lexend-body-xs1">
                 <div className="footer-title">Not a Prometheus holder?</div>
 
                 <p>
@@ -132,10 +136,7 @@ export const HowTo = () => {
               </div>
               <div className="footer-spacer" />
               <div className="category-faq">
-                <Collapsible
-                  trigger="What is the benefit of owning a Prometheus NFT?"
-                  className="collapsible"
-                >
+                <Collapsible trigger="What is the benefit of owning a Prometheus NFT?">
                   <p>
                     Discounted valuation - Only Prometheus holders will have
                     access to an investment opportunity at a $45M valuation,
@@ -147,10 +148,7 @@ export const HowTo = () => {
                     $3,000 per NFT held.
                   </p>
                 </Collapsible>
-                <Collapsible
-                  trigger="What do I need to do to get ready?"
-                  className="collapsible"
-                >
+                <Collapsible trigger="What do I need to do to get ready?">
                   <p>
                     1. Make sure you complete the KYC process on
                     https://launchpad.xborg.com with the wallet that holds your
@@ -168,16 +166,18 @@ export const HowTo = () => {
               <div className="row column category-details swissborg">
                 <div className="details-row row">
                   <div className="cat-image">
-                    <div className="date">Coming soon</div>
+                    <div className="lexend-body-xs2 date">Coming soon</div>
                     <img src={Images.invest.swiss1} alt="Swiss 1" />
-                    <div className="vault-size">Vault size | $100k</div>
+                    <div className="lexend-heading-m vault-size">
+                      Vault size | $100k
+                    </div>
                   </div>
 
                   <div className="row column">
-                    <div className="cat-name">
+                    <h3 className="cat-name lexend-heading">
                       <span>Public</span> Vault
-                    </div>
-                    <ul>
+                    </h3>
+                    <ul className="lexend-body-s">
                       <li>
                         Investment: <span>$100</span>
                       </li>
@@ -205,16 +205,18 @@ export const HowTo = () => {
 
                 <div className="details-row row">
                   <div className="cat-image">
-                    <div className="date">Coming soon</div>
+                    <div className="lexend-body-xs2 date">Coming soon</div>
                     <img src={Images.invest.swiss2} alt="Swiss 2" />
-                    <div className="vault-size">Vault size | $500k +</div>
+                    <div className="lexend-heading-m vault-size">
+                      Vault size | $500k +
+                    </div>
                   </div>
 
                   <div className="row column">
-                    <div className="cat-name">
+                    <h3 className="cat-name lexend-heading">
                       <span>Genesis</span> Vault
-                    </div>
-                    <ul>
+                    </h3>
+                    <ul className="lexend-body-s">
                       <li>
                         Investment: <span>$100 - $3,000</span>
                       </li>
@@ -242,16 +244,18 @@ export const HowTo = () => {
 
                 <div className="details-row row">
                   <div className="cat-image">
-                    <div className="date">Coming soon</div>
+                    <div className="lexend-body-xs2 date">Coming soon</div>
                     <img src={Images.invest.swiss3} alt="Swiss 3" />
-                    <div className="vault-size">Vault size | $200k</div>
+                    <div className="lexend-heading-m vault-size">
+                      Vault size | $200k
+                    </div>
                   </div>
 
                   <div className="row column">
-                    <div className="cat-name">
+                    <h3 className="cat-name lexend-heading">
                       <span>Premium</span> Vault
-                    </div>
-                    <ul>
+                    </h3>
+                    <ul className="lexend-body-s">
                       <li>
                         Investment: <span>Based on in-app status</span>
                       </li>
@@ -279,16 +283,18 @@ export const HowTo = () => {
 
                 <div className="details-row row">
                   <div className="cat-image">
-                    <div className="date">Coming soon</div>
+                    <div className="lexend-body-xs2 date">Coming soon</div>
                     <img src={Images.invest.swiss4} alt="Swiss 4" />
-                    <div className="vault-size">Vault size | $200k</div>
+                    <div className="lexend-heading-m vault-size">
+                      Vault size | $200k
+                    </div>
                   </div>
 
                   <div className="row column">
-                    <div className="cat-name">
+                    <h3 className="cat-name lexend-heading">
                       <span>Series A</span> Vault
-                    </div>
-                    <ul>
+                    </h3>
+                    <ul className="lexend-body-s">
                       <li>
                         Investment: <span>$100 - $2,000</span>
                       </li>
@@ -313,7 +319,7 @@ export const HowTo = () => {
                   </div>
                 </div>
               </div>
-              <div className="category-footer">
+              <div className="category-footer lexend-body-xs1">
                 <div className="footer-title">Not a SwissBorg user?</div>
                 <p>
                   Sign up and get access to the future of wealth, plus earn up
@@ -330,20 +336,14 @@ export const HowTo = () => {
               </div>
               <div className="footer-spacer" />
               <div className="category-faq">
-                <Collapsible
-                  trigger="What are SwissBorg Vaults?"
-                  className="collapsible"
-                >
+                <Collapsible trigger="What are SwissBorg Vaults?">
                   <p>
                     Vaults are limited size opportunities for SwissBorg users to
                     deposit assets and benefit from an opportunity. In the case
                     of the XBorg investment round, access to $XBG.
                   </p>
                 </Collapsible>
-                <Collapsible
-                  trigger="What is the difference between SwissBorg and XBorg?"
-                  className="collapsible"
-                >
+                <Collapsible trigger="What is the difference between SwissBorg and XBorg?">
                   <p>
                     XBorg is building a Gaming Credential and Application
                     Network for players and Decentralized Gaming Societies,
@@ -354,7 +354,7 @@ export const HowTo = () => {
                     ecosystem.
                   </p>
                 </Collapsible>
-                <Collapsible trigger="What is $CHSB?" className="collapsible">
+                <Collapsible trigger="What is $CHSB?">
                   <p>
                     The ERC-20 utility token known as $CHSB powers the SwissBorg
                     ecosystem and provides benefits such as voting rights,
@@ -364,10 +364,7 @@ export const HowTo = () => {
                     are done with $USDC.
                   </p>
                 </Collapsible>
-                <Collapsible
-                  trigger="What is SwissBorg Genesis"
-                  className="collapsible"
-                >
+                <Collapsible trigger="What is SwissBorg Genesis">
                   <p>
                     Genesis members are a tier of premium users in the SwissBorg
                     ecosystem. To learn more about the various premium tiers,
@@ -381,10 +378,7 @@ export const HowTo = () => {
                     .
                   </p>
                 </Collapsible>
-                <Collapsible
-                  trigger="What is SwissBorg Series A"
-                  className="collapsible"
-                >
+                <Collapsible trigger="What is SwissBorg Series A">
                   <p>
                     The SwissBorg Series A was a funding round cunducted by
                     SwissBorg. The fundraise is a capital increase conducted by

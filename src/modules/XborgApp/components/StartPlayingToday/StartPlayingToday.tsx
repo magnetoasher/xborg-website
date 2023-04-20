@@ -13,14 +13,13 @@ export const StartPlayingToday = () => {
     <div className={`start-playing-today expand row column`}>
       <div className="expand row middle content">
         <div className="description expand row column middle">
-          <h2 className="text-center">
+          <h2 className="vista-heading text-center">
             <span>Start</span> playing <span>today</span>
           </h2>
-          <div className="section-head-container">
-            <SectionDescription className="section-head-desc">
-              Get rewarded for playing your favourite games.
-            </SectionDescription>
-          </div>
+
+          <p className="lexend-body-m text-center">
+            Get rewarded for playing your favourite games.
+          </p>
           <ButtonPrimary
             label="Launch alpha"
             to="https://gaming.xborg.com"

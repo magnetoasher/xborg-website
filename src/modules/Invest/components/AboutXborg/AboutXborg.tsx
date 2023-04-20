@@ -32,11 +32,11 @@ export const AboutXborg = () => {
       <Head />
       <Navbar active={0} />
 
-      <h2 className="pioneering-title">
-        Pioneering <span ref={titleRef}>gaming</span>
+      <h2 className="vista-heading pioneering-title">
+        <span ref={titleRef}>Pioneering</span> gaming
       </h2>
 
-      <div className="page-desc text-center">
+      <div className="page-desc lexend-body-m text-center">
         <SectionDescription
           className="paragraph"
           onAnimateIn={() => textVM.scrambleText(titleRef)}

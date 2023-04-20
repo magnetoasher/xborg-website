@@ -55,9 +55,9 @@ export const WhyNow = () => {
   };
 
   return (
-    <div className="whynow faq row column middle center">
+    <div className="whynow row column middle center">
       <div className="content">
-        <h2 className="text-center">
+        <h2 className="vista-heading text-center">
           <span>Why now</span> is a good time?
         </h2>
 
@@ -74,12 +74,12 @@ export const WhyNow = () => {
                 }`}
               >
                 <img src={Images.invest.graph} alt="" />
-                <span className="tab-title">
+                <span className="tab-title lexend-body-m">
                   <b>Web3</b> going mainstream
                 </span>
 
                 {active == 0 || mobile == true ? (
-                  <SectionDescription className="content-desc">
+                  <SectionDescription className="content-desc lexend-heading-s">
                     Prominent game developers and studios, including but not
                     limited to Epic Games, Enix Games, and Ubisoft, are
                     proactively allocating resources towards the integration and
@@ -95,12 +95,12 @@ export const WhyNow = () => {
                 }`}
               >
                 <img src={Images.invest.medal} alt="" />
-                <span className="tab-title">
+                <span className="tab-title lexend-body-m">
                   <b>Leading</b> positioning in the space
                 </span>
 
                 {active == 1 || mobile == true ? (
-                  <SectionDescription className="content-desc">
+                  <SectionDescription className="content-desc lexend-heading-s">
                     We are positioning ourselves as the #1 infrastructure
                     provider for esports teams leveraging blockchain technology.
                     With a first-mover advantage and an extensive network of
@@ -115,12 +115,12 @@ export const WhyNow = () => {
                 }`}
               >
                 <img src={Images.invest.coins} alt="" />
-                <span className="tab-title">
+                <span className="tab-title lexend-body-m">
                   Interest from <b>leading VCs</b>
                 </span>
 
                 {active == 2 || mobile == true ? (
-                  <SectionDescription className="content-desc">
+                  <SectionDescription className="content-desc lexend-heading-s">
                     In addition to the community round, XBorg is also raising
                     funds from well-known venture capitalists in the industry.
                     As we have always taken a community-centric approach,

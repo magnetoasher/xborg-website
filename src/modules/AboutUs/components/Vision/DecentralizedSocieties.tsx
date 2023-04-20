@@ -12,45 +12,51 @@ export const DecentralizedSocieties = () => {
       <ObserverContainer className="list">
         <div className="col">
           <div className="row middle">
-            <div className="date">Q2 2023</div>
-            <div className="col-title">
-              Decentralized <span>Gaming Societies</span>
+            <div className="red-highlighted">
+              <span>Q2 2023</span>
             </div>
+            <h4 className="vista-heading">
+              Decentralized <span>Gaming Societies</span>
+            </h4>
           </div>
 
-          <SectionDescription className="desc">
+          <p className="lexend-heading-s">
             Enabling the creation of decentralized gaming societies governed by
             fans and players.
-          </SectionDescription>
+          </p>
         </div>
 
         <div className="col">
           <div className="row middle">
-            <div className="date">2024</div>
-            <div className="col-title">
-              Player Earnings <span>Tokenization</span>
+            <div className="red-highlighted">
+              <span>2024</span>
             </div>
+            <h4 className="vista-heading">
+              Player Earnings <span>Tokenization</span>
+            </h4>
           </div>
 
-          <SectionDescription className="desc">
+          <p className="lexend-heading-s">
             Providing players with a solution to tokenize their earnings and
             share their success with the broader gaming community.
-          </SectionDescription>
+          </p>
         </div>
 
         <div className="col">
           <div className="row middle">
-            <div className="date">2024</div>
-            <div className="col-title">
-              Reputational-Based <span>lending</span>
+            <div className="red-highlighted">
+              <span>2024</span>
             </div>
+            <h4 className="vista-heading">
+              Reputational-Based <span>lending</span>
+            </h4>
           </div>
 
-          <SectionDescription className="desc">
+          <p className="lexend-heading-s">
             XBorg’s Lending Module presents players with the opportunity to lend
             or borrow valuable gaming assets, contingent on their on-chain
             reputation.
-          </SectionDescription>
+          </p>
         </div>
       </ObserverContainer>
 
@@ -64,7 +70,7 @@ export const DecentralizedSocieties = () => {
           className="parallaxed-1"
         />
 
-        <SectionDescription className="knowmore">
+        <SectionDescription className="lexend-heading-xs">
           Want to know where XBorg is headed? Access our newly released public
           deck.
         </SectionDescription>

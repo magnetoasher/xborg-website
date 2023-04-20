@@ -1,51 +1,36 @@
-import { useRef } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import {
-  Alert,
   CountUpAnimation,
   ObserverContainer,
   ParallaxLayer,
-  SectionDescription,
+  SectionHead,
 } from "../../../../components";
-import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const Protocol = () => {
-  const titleScrambleRef = useRef(null);
   const data = {
     apps: 2,
     partners: 12,
     users: 10000,
   };
 
-  const textVM = new TextManipulation();
-
   return (
-    <div className={`protocol expand row middle between`}>
-      <Alert text="Register for the upcoming seed round." to="seed" />
+    <div className="protocol expand row middle between">
       <div className="description">
-        <div className={"section-head-container"}>
-          <div className="row section-head">
-            <div className="section-border" />
-            <div className="row column expand">
-              <div className="logo-icon">
-                <img src={Images.logofull} alt="" />
-              </div>
-
-              <h2 className="section-head-title">
-                <span>An open and composable</span>
-                <br />
-                <strong ref={titleScrambleRef}>gaming protocol</strong>
-              </h2>
-            </div>
-          </div>
-          <SectionDescription
-            className="section-head-desc"
-            onAnimateIn={() => textVM.scrambleText(titleScrambleRef)}
-          >
+        <SectionHead
+          title={
+            <>
+              An open and composable
+              <br />
+              <span>gaming protocol</span>
+            </>
+          }
+          logo={Images.logofull}
+        >
+          <p className="lexend-body-m">
             A collaborative credential infrastructure on which games, brands and
             communities can build applications and engage with their players and
             fans.
-          </SectionDescription>
+          </p>
 
           <div className="statistics row">
             <div className="col">
@@ -65,7 +50,7 @@ export const Protocol = () => {
               <div className="stats-label">Active protocol users</div>
             </div>
           </div>
-        </div>
+        </SectionHead>
       </div>
       <ObserverContainer className="parallaxed">
         <ParallaxLayer

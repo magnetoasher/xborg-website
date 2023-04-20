@@ -15,10 +15,10 @@ export const NextBigThing = () => {
       <Head />
       <Navbar active={1} />
       <div className="content">
-        <h2 className="text-center">
+        <h2 className="vista-heading text-center">
           Gaming & esports is the next <span>big thing</span>
         </h2>
-        <SectionDescription className="desc text-center">
+        <SectionDescription className="lexend-body-m desc text-center">
           XBorg is building at the intersection of gaming, esports, and digital
           identity, three large markets ready for disruption.
         </SectionDescription>
@@ -26,28 +26,32 @@ export const NextBigThing = () => {
         <ObserverContainer className="bubbles row between bottom">
           <div className="col row column center middle">
             <div className="small-bubble bubble">
-              <span>$70bn</span>
+              <h3 className="lexend-heading">$70bn</h3>
             </div>
 
-            <div className="bubble-title">Web3 gaming</div>
+            <div className="bubble-title lexend-heading-s">Web3 gaming</div>
           </div>
           <div className="col row column center middle">
             <div className="medium-bubble bubble">
-              <span>$80bn</span>
+              <h3 className="lexend-heading">$80bn</h3>
             </div>
 
-            <div className="bubble-title">Metaverse esports</div>
+            <div className="bubble-title lexend-heading-s">
+              Metaverse esports
+            </div>
           </div>
           <div className="col row column center middle">
             <div className="big-bubble bubble">
-              <span>$600bn</span>
+              <h3 className="lexend-heading">$600bn</h3>
             </div>
 
-            <div className="bubble-title">Digital identities</div>
+            <div className="bubble-title lexend-heading-s">
+              Digital identities
+            </div>
           </div>
         </ObserverContainer>
 
-        <div className="estimate text-center">
+        <div className="lexend-heading-s estimate text-center">
           Estimated market sizes by 2030 -{" "}
           <a href="https://www.web3-studios.com/research" target="_blank">
             Source

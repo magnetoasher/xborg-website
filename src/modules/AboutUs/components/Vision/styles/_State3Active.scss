@@ -5,8 +5,8 @@
     display: block !important;
   }
 
-  .row.column.in {
-    .red-highlight {
+  .content-wrapper.in {
+    .red-highlighted {
       &:after {
         width: 100%;
       }
@@ -16,7 +16,7 @@
       }
     }
 
-    .big-title {
+    h4.vista-heading {
       opacity: 1;
     }
 

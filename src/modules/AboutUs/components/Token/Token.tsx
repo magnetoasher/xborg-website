@@ -1,53 +1,33 @@
-import { useRef } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import {
   ButtonSecondary,
+  Countdown,
   ObserverContainer,
   ParallaxLayer,
-  SectionDescription,
+  SectionHead,
 } from "../../../../components";
-import { Countdown } from "../../../../components/Countdown";
-import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const Token = () => {
-  const titleScrambleRef = useRef(null);
-
-  const textVM = new TextManipulation();
   return (
-    <div className={`token expand row middle between`}>
+    <div className="token expand row middle between">
       <div className="description">
-        <div className={"section-head-container"}>
-          <div className="row section-head">
-            <div className="section-border" />
-            <div className="row column expand">
-              <div className="section-head-top" ref={titleScrambleRef}>
-                XBorg Protocol
-              </div>
-
-              <h2 className="section-head-title">
-                <span>XBorg Token</span>
-              </h2>
-            </div>
-          </div>
-          <SectionDescription
-            className="section-head-desc"
-            onAnimateIn={() => textVM.scrambleText(titleScrambleRef)}
-          >
+        <SectionHead title="XBorg Token" beforeTitle="XBorg Protocol">
+          <p className="lexend-body-m">
             The native utility token of the XBorg protocol serves as the primary
             means of transaction within the ecosystem.
-          </SectionDescription>
-        </div>
+          </p>
+        </SectionHead>
 
         <div className="typography">
-          <h4>Utility</h4>
-          <ul>
+          <div className="lexend-body-xl ul-title">Utility</div>
+          <ul className="lexend-body-m">
             <li>In-app payments & platform fees</li>
             <li>Governance rights</li>
             <li>Staking & reward pools</li>
             <li>Protocol access</li>
           </ul>
 
-          <p>Early interest form closes in:</p>
+          <p className="lexend-body-xs2">Early interest form closes in:</p>
           <Countdown date={new Date("2023/04/24")} />
 
           <div className="row">

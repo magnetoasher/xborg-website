@@ -17,7 +17,10 @@ export const RadioInput = (props: RadioInputType) => {
   return (
     <div className={`input-wrapper${error ? " has-error" : ""}`}>
       <div className="input-container radio-container row">
-        <label className="radio input-label row top" htmlFor={`input-${id}`}>
+        <label
+          className="radio input-label row top lexend-body-s"
+          htmlFor={`input-${id}`}
+        >
           <input
             onChange={onTextChange}
             id={`input-${id}`}

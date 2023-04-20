@@ -42,7 +42,7 @@ export const Forefront = () => {
   return (
     <div className="forefront row column middle center w-full">
       <div className="content">
-        <h2 className="text-center">
+        <h2 className="vista-heading text-center">
           XBorg is at the <span>forefront of gaming</span>
         </h2>
 
@@ -54,17 +54,17 @@ export const Forefront = () => {
           <div className={`key-points row state-${active}`} ref={childRef}>
             <div className="col expand">
               <div className="cube" />
-              <div className="title">Breakthrough</div>
+              <div className="title lexend-heading-l">Breakthrough</div>
               <div className="desc">gaming protocol</div>
             </div>
             <div className="col expand">
               <div className="cube" />
-              <div className="title">#1 web3</div>
+              <div className="title lexend-heading-l">#1 web3</div>
               <div className="desc">gaming community</div>
             </div>
             <div className="col expand">
               <div className="cube" />
-              <div className="title">Largest network</div>
+              <div className="title lexend-heading-l">Largest network</div>
               <div className="desc">of partners</div>
             </div>
           </div>

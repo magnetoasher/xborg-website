@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Images } from "../../../../assets/imgs/Images";
 import {
   ButtonSecondary,
@@ -18,27 +17,29 @@ export const Competetive = () => {
 
   return (
     <div className="competetive-community row column middle center w-full">
-      <h2>
+      <h2 className="vista-heading">
         The <span>most competitive</span> community in Web3
       </h2>
 
       <div className="competetive-community-container row between middle">
         <div className="details">
           <div className="row">
-            <div className="live">Live</div>
+            <div className="red-highlighted">
+              <span>Live</span>
+            </div>
           </div>
-          <h4>
+          <h4 className="vista-heading">
             <span>Xtreme</span>
             <br />
             Championship
             <br />
             Series
           </h4>
-          <SectionDescription className="desc">
+          <SectionDescription className="desc lexend-body-s">
             Introducing the Xtreme Championship Series, the largest Web3 esports
             event ever.
           </SectionDescription>
-          <div className="motto">
+          <div className="motto lexend-heading-s">
             We dont just play, <span>we win</span>.
           </div>
           <div className="row actions">

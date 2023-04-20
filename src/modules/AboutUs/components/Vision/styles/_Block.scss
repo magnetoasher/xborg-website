@@ -27,11 +27,9 @@
   }
 
   .block-desc {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
     color: #777;
     margin-top: 8px;
+    letter-spacing: 0;
     transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   }
 
@@ -52,9 +50,7 @@
     padding: 32px;
 
     .block-title {
-      font-size: 20px;
       font-weight: 500;
-      line-height: 25px;
       justify-content: flex-start;
     }
   }

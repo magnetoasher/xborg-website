@@ -50,10 +50,10 @@ export const CredentialNetwork = () => {
 
         <div className="credential-network-details row column center">
           <div className="title">Player profile</div>
-          <p>Unified Gamer ID</p>
+          <p className="lexend-body-m">Unified Gamer ID</p>
           <div className="space" />
           <div className="title">Credential API</div>
-          <p>Allowing developers to build upon</p>
+          <p className="lexend-body-m">Allowing developers to build upon</p>
         </div>
       </ObserverContainer>
     </div>

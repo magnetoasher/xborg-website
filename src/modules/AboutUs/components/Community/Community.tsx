@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,19 +9,15 @@ import {
   CountUpAnimation,
   ObserverContainer,
   ParallaxLayer,
-  SectionDescription,
+  SectionHead,
   Tabs,
 } from "../../../../components";
 import { halloffame } from "../../../../localdata/halloffame";
 import { players } from "../../../../localdata/players";
-import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const Community = () => {
-  const titleScrambleRef = useRef(null);
   const [tab, onTabChange] = useState<number>(0);
   const [changing, setChanging] = useState<boolean>(false);
-
-  const textVM = new TextManipulation();
 
   const data = {
     tournaments: 125,
@@ -50,24 +46,22 @@ export const Community = () => {
         }`}
       >
         <div className="description">
-          <div className={"section-head-container"}>
-            <div className="row section-head">
-              <div className="section-border" />
-              <div className="row column expand w-full">
-                <h2 className="section-head-title">
-                  <span>A vibrant community of </span>
-                  <strong ref={titleScrambleRef}>players & builders</strong>
-                </h2>
-              </div>
-            </div>
-            <SectionDescription
-              className="section-head-desc"
-              onAnimateIn={() => textVM.scrambleText(titleScrambleRef)}
-            >
+          <SectionHead
+            title={
+              <>
+                A vibrant
+                <br />
+                community of
+                <br />
+                <span>players & builders</span>
+              </>
+            }
+          >
+            <p className="section-desc lexend-body-m">
               XBorg is proud to be the home of the best players, builders and
               GameFi enthusiasts. Discover how we are co-building the next era
               of gaming with them.
-            </SectionDescription>
+            </p>
 
             <div className="row action">
               <ButtonPrimary
@@ -76,7 +70,7 @@ export const Community = () => {
                 target="_blank"
               />
             </div>
-          </div>
+          </SectionHead>
         </div>
 
         {tab == 1 && (
@@ -158,8 +152,8 @@ export const Community = () => {
                 <SwiperSlide key={index} className="row column">
                   <img src={player.image} alt={player.name} />
 
-                  <div className="swiper-name">{player.name}</div>
-                  <div className="swiper-description">{player.description}</div>
+                  <h4 className="lexend-body-xl">{player.name}</h4>
+                  <div className="lexend-body-m">{player.description}</div>
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -237,37 +231,37 @@ export const Community = () => {
             content: (
               <div className="governance row">
                 <div className="col expand">
-                  <div className="col-title">
-                    Community <span>Council</span>
+                  <div className="lexend-heading-m">
+                    <span>Community</span> Council
                   </div>
-                  <div className="col-desc">
+                  <div className="lexend-body-s">
                     Community specialists in charge of making our players and
                     builders feel at home.
                   </div>
                 </div>
                 <div className="col expand">
-                  <div className="col-title">
-                    Content <span>Council</span>
+                  <div className="lexend-heading-m">
+                    <span>Content</span> Council
                   </div>
-                  <div className="col-desc">
+                  <div className="lexend-body-s">
                     Creatives who oversee all community-content creations and
                     community growth.
                   </div>
                 </div>
                 <div className="col expand">
-                  <div className="col-title">
-                    Gaming <span>Council</span>
+                  <div className="lexend-heading-m">
+                    <span>Gaming</span> Council
                   </div>
-                  <div className="col-desc">
+                  <div className="lexend-body-s">
                     A group of players testing games, streaming and organising
                     gaming nights.
                   </div>
                 </div>
                 <div className="col expand">
-                  <div className="col-title">
-                    Investment <span>Council</span>
+                  <div className="lexend-heading-m">
+                    <span>Investment</span> Council
                   </div>
-                  <div className="col-desc">
+                  <div className="lexend-body-s">
                     GameFi investors who provide feedback & due diligence for
                     Launchpad deals.
                   </div>
@@ -332,9 +326,8 @@ export const Community = () => {
                   {halloffame.map((item, index) => (
                     <SwiperSlide key={index} className="row column">
                       <div className="col" key={index}>
-                        <div className="col-name">{item.name}</div>
-                        <div className="col-desc">{item.desc}</div>
-                        <div className="col-date">{item.date}</div>
+                        <div className="lexend-heading-l">{item.name}</div>
+                        <div className="lexend-body-s">{item.desc}</div>
                       </div>
                     </SwiperSlide>
                   ))}

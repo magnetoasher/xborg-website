@@ -9,7 +9,7 @@ export type AlertProps = {
 export const Alert = ({ to, text }: AlertProps) => {
   return (
     <ObserverContainer className="page-alert-container">
-      <Link to={to} className="page-alert">
+      <Link to={to} className="page-alert lexend-body-xs1">
         {text}
       </Link>
     </ObserverContainer>

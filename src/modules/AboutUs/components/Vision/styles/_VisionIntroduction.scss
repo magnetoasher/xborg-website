@@ -23,7 +23,7 @@
 }
 
 .vision-introduction {
-  .section-head-desc {
+  .section-head-container {
     max-width: 531px;
   }
 
@@ -80,6 +80,7 @@
     .vision-intro {
       display: none;
     }
+
     .vision-intro-parallaxed {
       position: relative;
       transform: translate(0, 0) !important;
@@ -96,6 +97,18 @@
     .description {
       width: 100%;
       margin-right: 0;
+      margin-top: 24px;
+    }
+  }
+
+  @media (max-width: $sm-max) {
+    .vision-intro-parallaxed {
+      .block {
+        .block-desc {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
     }
   }
 }

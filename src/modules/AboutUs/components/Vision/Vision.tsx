@@ -1,11 +1,9 @@
 import { useRef, useState, useEffect } from "react";
 
-import { SectionDescription, ObserverContainer } from "../../../../components";
+import { ObserverContainer, SectionHead } from "../../../../components";
 
 import { sleep } from "../../../../helpers/time";
-
 import { AppViewModel } from "../../../../viewmodels/AppViewModel";
-import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 import { Block } from "./components/Block";
 
@@ -18,7 +16,6 @@ import { Images } from "../../../../assets/imgs/Images";
 let activeSpotlight: number = 0;
 
 export const Vision = () => {
-  const titleScrambleRef = useRef(null);
   const childRef = useRef(null);
   const parentRef = useRef(null);
 
@@ -28,7 +25,6 @@ export const Vision = () => {
   const [height, setHeight] = useState<number>(window.innerHeight);
 
   const appVM = new AppViewModel();
-  const textVM = new TextManipulation();
 
   useEffect(() => {
     if (childRef.current && parentRef.current) {
@@ -90,24 +86,15 @@ export const Vision = () => {
             ref={childRef}
           >
             <div className="description">
-              <div className="section-head-container">
-                <div className="row section-head">
-                  <div className="section-border" />
-                  <h2 className="section-head-title" ref={titleScrambleRef}>
-                    Our vision
-                  </h2>
-                </div>
-                <SectionDescription
-                  className="section-head-desc"
-                  onAnimateIn={() => textVM.scrambleText(titleScrambleRef)}
-                >
+              <SectionHead title={<span>Our vision</span>}>
+                <p className="lexend-body-m">
                   A gaming world where creativity and innovation thrive and
                   every player has an equal opportunity to leave their mark. Our
                   mission is to empower players worldwide by increasing their
                   control over their data, so they can take ownership of their
                   experiences and the communities they belong to.
-                </SectionDescription>
-              </div>
+                </p>
+              </SectionHead>
             </div>
 
             <ObserverContainer

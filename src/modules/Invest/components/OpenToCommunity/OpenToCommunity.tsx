@@ -10,11 +10,11 @@ export const OpenToCommunity = () => {
   return (
     <div className="open-to-community row column middle center w-full">
       <div className="content">
-        <h2 className="text-center">
+        <h2 className="vista-heading text-center">
           Opening up to our <span>community</span>
         </h2>
 
-        <SectionDescription className="desc text-center">
+        <SectionDescription className="text-center lexend-body-m">
           XBorg is proud to be home to the best players, builders and GameFi
           enthusiasts. This is why we are offering our community the opportunity
           to invest early in XBorg, alongside the best investors of the space.
@@ -22,8 +22,8 @@ export const OpenToCommunity = () => {
 
         <div className="token-utility row between middle">
           <div className="typography">
-            <h4>XBG token utility</h4>
-            <ul>
+            <div className="lexend-body-xl">XBG token utility</div>
+            <ul className="lexend-body-m">
               <li>Governance rights</li>
               <li>Staking & reward pools</li>
               <li>Protocol access</li>

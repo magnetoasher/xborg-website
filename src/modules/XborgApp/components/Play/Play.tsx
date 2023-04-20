@@ -53,15 +53,15 @@ export const Play = () => {
           <img src={Images.logofull} alt="" />
         </div>
         <div className="play-intro-text">
-          <h1 className={isChanging ? "text-glitch" : ""}>
+          <h1 className={`vista-xl ${isChanging ? "text-glitch" : ""}`}>
             Play and
             <br />
             <span>{phrase}</span>
           </h1>
-          <SectionDescription className="subtitle">
+          <p className="lexend-body-m">
             Discover a new meaning to play, connect with your favourite
             communities and build your very own player identity.
-          </SectionDescription>
+          </p>
 
           <div className="actions row middle">
             <ButtonPrimary

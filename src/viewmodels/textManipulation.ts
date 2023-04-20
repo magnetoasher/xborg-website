@@ -152,8 +152,8 @@ export class TextManipulation {
   }
 
   scrambleText = (ref: MutableRefObject<null>) => {
-    // const current = ref.current as unknown as HTMLDivElement;
-    // const scramble = new TextScramble(current);
-    // if (ref.current) scramble.setText(current.innerHTML);
+    const current = ref.current as unknown as HTMLDivElement;
+    const scramble = new TextScramble(current);
+    if (ref.current) scramble.setText(current.innerHTML);
   };
 }

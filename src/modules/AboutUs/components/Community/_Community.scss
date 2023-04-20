@@ -2,15 +2,12 @@
   width: 100%;
 
   .section-head-title {
-    max-width: 583px;
-    width: 100%;
-
     strong {
       white-space: nowrap;
     }
   }
 
-  .section-head-desc {
+  .section-desc {
     max-width: 540px;
   }
 
@@ -31,17 +28,12 @@
   .statistics {
     margin-top: 40px;
     max-width: 454px;
-
-    .stats-label {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 28px;
-      letter-spacing: 0.05em;
-    }
   }
 
   .governance {
     margin: 40px -16px 0;
+    max-width: 1200px;
+    width: 100%;
 
     .col {
       padding: 0 16px;
@@ -59,24 +51,8 @@
       }
     }
 
-    .col-title {
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 20px;
-      letter-spacing: 0.1em;
+    .lexend-heading-m {
       margin-bottom: 16px;
-      color: $primary100;
-
-      span {
-        color: $light100;
-      }
-    }
-
-    .col-desc {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 28px;
-      letter-spacing: 0.05em;
     }
   }
 
@@ -114,29 +90,14 @@
       white-space: nowrap;
     }
 
-    .col-name {
-      font-size: 20px;
+    .lexend-heading-l {
       font-weight: 600;
-      line-height: 24px;
       letter-spacing: 0.05em;
       color: $primary100;
     }
 
-    .col-desc {
-      margin: 8px 0 1px;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0.05em;
-      color: $light100;
-    }
-
-    .col-date {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0.05em;
-      color: $gray200;
+    .lexend-body-s {
+      margin-top: 5px;
     }
   }
 
@@ -410,20 +371,12 @@
       opacity: 1;
     }
 
-    .swiper-name {
+    .lexend-body-xl {
+      font-weight: 900;
       margin-top: 48px;
       margin-bottom: 8px;
-      font-size: 24px;
-      font-weight: 900;
-      line-height: 30px;
       color: $primary100;
       letter-spacing: 2.4px;
-    }
-
-    .swiper-description {
-      font-size: 16px;
-      line-height: 26px;
-      letter-spacing: 0.8px;
     }
 
     .swiper-pagination {

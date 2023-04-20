@@ -124,8 +124,8 @@ export const ProductSpotlight = () => {
 
   return (
     <div className="product-spotlight w-full row column middle center">
-      <h2 className="text-center">
-        <span ref={titleRef}>Product</span> spotlight
+      <h2 className="vista-heading text-center">
+        Product <span ref={titleRef}>spotlight</span>
       </h2>
 
       <div
@@ -154,16 +154,16 @@ export const ProductSpotlight = () => {
               <div className="row middle between expand product-wrapper">
                 <div className="details row column">
                   <div className="row">
-                    <div className="before-title">
+                    <div className="red-highlighted">
                       <span>Alpha live</span>
                     </div>
                   </div>
 
-                  <h4 className="details-title">
+                  <h4 className="vista-heading details-title">
                     <span ref={blockTitles[0]}>XBorg</span> App
                   </h4>
                   <SectionDescription
-                    className="details-desc"
+                    className="details-desc lexend-heading-s"
                     onAnimateIn={() => {
                       textVM.scrambleText(blockTitles[0]);
                     }}
@@ -212,16 +212,16 @@ export const ProductSpotlight = () => {
               <div className="row middle between expand product-wrapper">
                 <div className="details row column">
                   <div className="row">
-                    <div className="before-title">
+                    <div className="red-highlighted">
                       <span>Coming soon</span>
                     </div>
                   </div>
 
-                  <h4 className="details-title">
+                  <h4 className="vista-heading details-title">
                     <span ref={blockTitles[1]}>MyBDS</span> App
                   </h4>
                   <SectionDescription
-                    className="details-desc"
+                    className="details-desc lexend-heading-s"
                     onAnimateIn={() => textVM.scrambleText(blockTitles[1])}
                     onAnimateFinish={onAnimationFinish(1)}
                   >
@@ -257,16 +257,16 @@ export const ProductSpotlight = () => {
               <div className="row middle between expand product-wrapper">
                 <div className="details row column">
                   <div className="row">
-                    <div className="before-title">
+                    <div className="red-highlighted">
                       <span>Live</span>
                     </div>
                   </div>
 
-                  <h4 className="details-title">
+                  <h4 className="vista-heading details-title">
                     <span ref={blockTitles[2]}>Launchpad</span>
                   </h4>
                   <SectionDescription
-                    className="details-desc"
+                    className="details-desc lexend-heading-s"
                     onAnimateIn={() => textVM.scrambleText(blockTitles[2])}
                     onAnimateFinish={onAnimationFinish(2)}
                   >
@@ -316,7 +316,7 @@ export const ProductSpotlight = () => {
                         <div className="swiper-name text-center">
                           {item.name}
                         </div>
-                        <div className="swiper-description text-center">
+                        <div className="swiper-description lexend-heading-s text-center">
                           {item.description}
                         </div>
                       </SwiperSlide>

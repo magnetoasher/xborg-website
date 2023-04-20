@@ -13,7 +13,7 @@ export const Progressbar = ({ progress }: ProgressbarType) => {
           width: progress + "%",
         }}
       />
-      <div className="progress-text">{progress}%</div>
+      <div className="progress-text lexend-body-xs2">{progress}%</div>
     </ObserverContainer>
   );
 };

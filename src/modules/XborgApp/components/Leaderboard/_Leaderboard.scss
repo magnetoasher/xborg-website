@@ -1,10 +1,10 @@
 .leaderboard {
-  .section-head-desc {
-    max-width: 500px;
-  }
+  .section-head-container {
+    max-width: 540px;
 
-  .section-head-title {
-    max-width: 500px;
+    .logo-icon img {
+      height: 10px;
+    }
   }
 
   .parallaxed {

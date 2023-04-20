@@ -6,6 +6,7 @@ import {
   ButtonPrimary,
   Alert,
   SectionDescription,
+  SectionHead,
 } from "../../../../components";
 import { TextManipulation } from "../../../../viewmodels/textManipulation";
 import { PickGame } from "../PickGame/PickGame";
@@ -46,25 +47,12 @@ export const BecomeLegend = () => {
           <PickGame />
         ) : (
           <>
-            <div className="section-head-container">
-              <div className="row">
-                <div className="section-border"></div>
-                <div className="row column">
-                  <img src={Images.logo.default} alt="XCS" />
-                  <div className="section-head-top" ref={scrambleRef}>
-                    Become A Legend
-                  </div>
-                  <h1 className="section-head-title">XCS</h1>
-                </div>
-              </div>
-              <SectionDescription
-                className="section-head-desc"
-                onAnimateIn={() => textVM.scrambleText(scrambleRef)}
-              >
+            <SectionHead beforeTitle="Become A Legend" title="XCS">
+              <p className="lexend-body-m">
                 Introducing the Xtreme Championship Series, the largest Web3
                 esports event ever created.
-              </SectionDescription>
-            </div>
+              </p>
+            </SectionHead>
             <div className="row btn-container">
               <ButtonPrimary
                 label="Register for XCS"

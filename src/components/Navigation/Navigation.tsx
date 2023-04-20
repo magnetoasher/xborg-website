@@ -35,7 +35,7 @@ export const Navigation = ({ navbarBtn }: NavigationProps) => {
       }`}
     >
       <nav
-        className={`navigation-links expand row center${
+        className={`navigation-links lexend-body-xs2 expand row center${
           active ? " active" : ""
         }`}
       >
@@ -63,7 +63,7 @@ export const Navigation = ({ navbarBtn }: NavigationProps) => {
         ))}
       </nav>
       {navbarBtn == undefined ? (
-        <div className={`early-access`}>
+        <div className="early-access">
           <ButtonPrimary label="Register interest" to="seed" />
         </div>
       ) : (

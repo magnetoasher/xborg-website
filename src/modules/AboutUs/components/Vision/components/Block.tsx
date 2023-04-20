@@ -16,9 +16,11 @@ export const Block = ({
 }: BlockProps) => {
   return (
     <div className={`block row column ${className} ${active ? " active" : ""}`}>
-      <div className="block-title">{title}</div>
+      <div className="block-title lexend-heading-l">{title}</div>
       {desc && (
-        <SectionDescription className="block-desc">{desc}</SectionDescription>
+        <SectionDescription className="block-desc lexend-body-m">
+          {desc}
+        </SectionDescription>
       )}
     </div>
   );

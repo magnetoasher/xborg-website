@@ -2,32 +2,31 @@ import { Images } from "../../../../assets/imgs/Images";
 import {
   ParallaxLayer,
   ObserverContainer,
-  SectionDescription,
+  SectionHead,
 } from "../../../../components";
 
 export const BecomingLegend = () => {
   return (
-    <div className={`becoming-legend expand row column`}>
+    <div className="becoming-legend expand row column">
       <div className="row middle between expand">
         <div className="description expand">
-          <div className="section-head-container">
-            <div className="row section-head">
-              <div className="section-border"></div>
-              <div className="row column expand">
-                <img src={Images.logo.default} alt="Becoming A Legend" />
-                <h2 className="section-head-title">
-                  <span>Becoming</span> A Legend
-                </h2>
-              </div>
-            </div>
-            <SectionDescription className="section-head-desc">
+          <SectionHead
+            title={
+              <>
+                Becoming <span>A Legend</span>
+              </>
+            }
+            logo={Images.logo.default}
+            smallerHeading
+          >
+            <p className="lexend-body-m">
               A 10-episode docu-series about Season 1 of the Xtreme Championship
               Series with behind the scenes drama, match-day highlights and
               exclusive interviews.
-            </SectionDescription>
-          </div>
+            </p>
+          </SectionHead>
           <div className="row column releasing-date start top">
-            <p>Releasing on YouTube in August 2023</p>
+            <p className="lexend-body-m">Releasing on YouTube in August 2023</p>
             <a
               href="https://www.youtube.com/@xborgofficial"
               className="btn-primary row middle center"

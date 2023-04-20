@@ -25,7 +25,7 @@ export const TeamTile = (data: TeamTileType) => {
   return (
     <a
       href={data.linkedin}
-      className="team-tile row column middle center text-center"
+      className="team-tile row column middle center text-center lexend-body-s"
       ref={ref}
     >
       <div className="image">

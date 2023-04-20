@@ -12,16 +12,11 @@
   }
 
   .table-heading {
-    font-family: $secondary-font-family;
+    font-family: $vistaNordic;
     letter-spacing: 0.1rem;
     position: relative;
     line-height: 51px;
     margin-bottom: 16px;
-  }
-
-  .table-entry {
-    font-size: 12px;
-    line-height: 28px;
   }
 
   @media (max-width: $lg-max) {
@@ -46,7 +41,7 @@
 
   @media (max-width: $xs-max) {
     .table-heading {
-      font-size: 13px;
+      font-size: 12px;
       line-height: 30px;
       margin-bottom: 10px;
     }

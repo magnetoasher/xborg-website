@@ -6,6 +6,7 @@ import {
   Links,
   ObserverContainer,
   ParallaxLayer,
+  SectionHead,
   Table,
 } from "../../components";
 import { prometheustable } from "../../localdata/prometheustable";
@@ -22,18 +23,12 @@ export const Prometheus = () => {
           <div className="prometheus-page">
             <div className="prometheus-intro row middle">
               <div className="expand prometheus-details">
-                <div className={"section-head-container"}>
-                  <div className="row section-head">
-                    <div className="section-border" />
-                    <div className="row column expand">
-                      <div className="logo-icon">
-                        <img src={Images.logofull} alt="" />
-                      </div>
-
-                      <h2 className="section-head-title">Prometheus</h2>
-                    </div>
-                  </div>
-                  <p className="section-head-desc">
+                <SectionHead
+                  logo={Images.logofull}
+                  title={<span>Prometheus</span>}
+                  smallerHeading
+                >
+                  <p className="section-desc lexend-body-m">
                     Experience XBorg to the fullest by joining the 1,111
                     Prometheans shaping the future of gaming and esports.
                     <br />
@@ -41,7 +36,7 @@ export const Prometheus = () => {
                     We are building an ecosystem to onboard millions of players
                     into Web3. Join us.
                   </p>
-                </div>
+                </SectionHead>
               </div>
               <ObserverContainer className="parallaxed row middle center">
                 <ParallaxLayer
@@ -83,20 +78,31 @@ export const Prometheus = () => {
               </ObserverContainer>
             </div>
 
-            <div className={"section-head-container"}>
-              <div className="row section-head">
-                <div className="section-border" />
-
-                <h2 className="section-head-title">
+            <SectionHead
+              logo={Images.logofull}
+              title={
+                <>
                   NFT <span>utilities</span>
-                </h2>
-              </div>
-            </div>
+                </>
+              }
+              smallerHeading
+            >
+              <p className="lexend-body-m">
+                Experience XBorg to the fullest by joining the 1,111 Prometheans
+                shaping the future of gaming and esports.
+                <br />
+                <br />
+                We are building an ecosystem to onboard millions of players into
+                Web3. Join us.
+              </p>
+            </SectionHead>
 
             <div className="list-data row row-wrap">
               <div className="col">
-                <div className="title">Early protocol governance</div>
-                <div className="desc">
+                <div className="title lexend-heading-l">
+                  Early protocol governance
+                </div>
+                <div className="desc lexend-body-s">
                   Are you ready to shape the future of gaming? Join our group of
                   trailblazing pioneers and have your say in our early protocol
                   governance. Witness the depth of our cutting-edge protocol as
@@ -105,8 +111,10 @@ export const Prometheus = () => {
               </div>
 
               <div className="col">
-                <div className="title">Token and NFT airdrops</div>
-                <div className="desc">
+                <div className="title lexend-heading-l">
+                  Token and NFT airdrops
+                </div>
+                <div className="desc lexend-body-s">
                   XBorg’s a pioneer in Esports and gaming products. The first
                   large-scale Esports DAO to be launched in Q2 2023. Prometheus
                   get first access, same for our seed round. Prometheus holders
@@ -115,10 +123,10 @@ export const Prometheus = () => {
               </div>
 
               <div className="col">
-                <div className="title">
+                <div className="title lexend-heading-l">
                   Whitelists & early game opportunities
                 </div>
-                <div className="desc">
+                <div className="desc lexend-body-s">
                   Get exclusive access to early game opportunities and coveted
                   whitelists from the most promising projects in the Web3 space
                   with XBorg's unparalleled footprint.
@@ -126,8 +134,8 @@ export const Prometheus = () => {
               </div>
 
               <div className="col">
-                <div className="title">Pro, forever</div>
-                <div className="desc">
+                <div className="title lexend-heading-l">Pro, forever</div>
+                <div className="desc lexend-body-s">
                   Be the first to access products like Launchpad opportunities
                   and benefit from a 0 fee experience. You can’t beat the
                   Prometheus status.
@@ -135,10 +143,10 @@ export const Prometheus = () => {
               </div>
 
               <div className="col">
-                <div className="title">
+                <div className="title lexend-heading-l">
                   Early access to XBorg’s products and applications
                 </div>
-                <div className="desc">
+                <div className="desc lexend-body-s">
                   Be the first to experience XBorg's innovative esports and
                   gaming products, including the first large-scale Esports DAO
                   launching in Q2 2023.
@@ -146,8 +154,8 @@ export const Prometheus = () => {
               </div>
 
               <div className="col">
-                <div className="title">Private Club</div>
-                <div className="desc">
+                <div className="title lexend-heading-l">Private Club</div>
+                <div className="desc lexend-body-s">
                   Know exactly what’s happening in the behind the scenes. Be
                   aware of all upcoming news. Oh, and sometimes you may find
                   some Alpha.
@@ -155,16 +163,16 @@ export const Prometheus = () => {
               </div>
             </div>
 
-            <div className="hype-separator row middle center text-center">
+            <div className="hype-separator lexend-body-m row middle center text-center">
               Not hype, just facts...
             </div>
 
             <Table data={prometheustable} />
 
             <div className="row middle center text-center">
-              <div className="embark">
+              <h2 className="vista-heading embark">
                 <span>Embark</span> on this journey with us
-              </div>
+              </h2>
             </div>
 
             <div className="row middle center actions">

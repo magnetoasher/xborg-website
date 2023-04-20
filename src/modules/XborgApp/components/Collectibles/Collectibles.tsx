@@ -3,7 +3,7 @@ import { Images } from "../../../../assets/imgs/Images";
 import {
   ObserverContainer,
   ParallaxLayer,
-  SectionDescription,
+  SectionHead,
 } from "../../../../components";
 
 let counter = 0;
@@ -53,7 +53,7 @@ export const Collectibles = () => {
               <img src={Images.xborgapp.hair1} alt="Hair 1" />
             </div>
 
-            <div className="row column collectible-data">
+            <div className="row column collectible-data lexend-heading-m">
               <div className="name">Blue Spiky Hair</div>
               <div className="row middle line">
                 <div className="rarity">
@@ -65,7 +65,7 @@ export const Collectibles = () => {
               </div>
               <div className="supply line">
                 Total Supply: <span>1000</span>
-                <a>List of owners</a>
+                <a className="lexend-body-xs1">List of owners</a>
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@ export const Collectibles = () => {
               <img src={Images.xborgapp.orb} alt="Hair 2" />
             </div>
 
-            <div className="row column">
+            <div className="row column collectible-data lexend-heading-m">
               <div className="name">Red Magic Orb</div>
               <div className="row middle line">
                 <div className="rarity">
@@ -87,29 +87,26 @@ export const Collectibles = () => {
               </div>
               <div className="supply line">
                 Total Supply: <span>100</span>
-                <a>List of owners</a>
+                <a className="lexend-body-xs1">List of owners</a>
               </div>
             </div>
           </div>
         </div>
       </ObserverContainer>
       <div className="description">
-        <div className="section-head-container">
-          <div className="row section-head">
-            <div className="section-border" />
-            <div className="row column expand">
-              <img src={Images.logo.default} alt="" />
-
-              <h2 className="section-head-title">
-                Gamified <span>collectible experience</span>
-              </h2>
-            </div>
-          </div>
-          <SectionDescription className="section-head-desc">
+        <SectionHead
+          logo={Images.logo.default}
+          title={
+            <>
+              Gamified <span>collectible experience</span>
+            </>
+          }
+        >
+          <p className="lexend-body-m">
             Unlock exclusive collectibles, customise your digital avatar and
             stand out from the crowd.
-          </SectionDescription>
-        </div>
+          </p>
+        </SectionHead>
       </div>
     </div>
   );

@@ -9,11 +9,10 @@ import {
   SliderInput,
   TextInput,
   LineGraph,
-  SectionDescription,
   CountUpAnimation,
   ObserverContainer,
+  Pagination,
 } from "../../components";
-import { Pagination } from "../../components/Pagination";
 import {
   formatNumberToK,
   roundToNearest10,
@@ -21,12 +20,9 @@ import {
 } from "../../helpers/inputs";
 import { timeDifference } from "../../helpers/time";
 import { GlobalState } from "../../reducer";
-import { SeedActions } from "../../redux/seed/actions";
 import { SEED_UTM_TYPE } from "../../redux/seed/types";
 import { AppDispatch } from "../../store";
-import { ScrollViewModel } from "../../viewmodels/ScrollViewModel";
 import { SeedViewModel } from "../../viewmodels/SeedViewModel";
-import { TextManipulation } from "../../viewmodels/textManipulation";
 import { Helmet } from "react-helmet";
 
 export type SeedFormType = {
@@ -50,7 +46,6 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
   const h4ref = useRef(null);
 
   const vm = new SeedViewModel(dispatch);
-  const textVM = new TextManipulation();
 
   const seedData = useSelector((state: GlobalState) => state.seed.data) || [];
   const seedSummary = useSelector((state: GlobalState) => state.seed.summary);
@@ -97,12 +92,11 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
             <div className="logo-icon">
               <img src={Images.logofull} alt="" />
             </div>
-            <h1 className="title">Seed Round</h1>
-            <h4 ref={h4ref}>Invest in the future of XBorg</h4>
-            <SectionDescription
-              className={""}
-              onAnimateIn={() => textVM.scrambleText(h4ref)}
-            >
+            <h1 className="vista-xl">Seed Round</h1>
+            <h4 ref={h4ref} className="vista-heading">
+              Invest in the future of XBorg
+            </h4>
+            <p className="lexend-body-xs1">
               XBorg is building the leading gaming protocol for players, fans
               and esports teams. With over 10,000 users onboarded, the largest
               web3 esports league ever created and a partnership with one of
@@ -110,7 +104,7 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
               growth and is raising capital to do so. Invest alongside the best
               VCs in the space, at the same valuation, and come build the future
               with us.
-            </SectionDescription>
+            </p>
             <div className="row numbers">
               <div className="col">
                 <div className="value">
@@ -118,7 +112,7 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
                     ? `$${formatNumberToK(seedSummary.totalCapital, 2)}`
                     : `$0`}
                 </div>
-                <div className="label">Total soft commitment</div>
+                <div className="label lexend-body-m">Total soft commitment</div>
               </div>
               <div className="col">
                 {seedSummary?.nbSubmissions && (
@@ -127,12 +121,12 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
                     number={seedSummary?.nbSubmissions}
                   />
                 )}
-                <div className="label">Total submissions</div>
+                <div className="label lexend-body-m">Total submissions</div>
               </div>
             </div>
 
             <div className="form">
-              <div className="form-label">
+              <div className="form-label lexend-heading-l">
                 What’s your <span>name?</span>
               </div>
               <TextInput
@@ -143,7 +137,7 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
                 placeholder="Enter full name here"
               />
 
-              <div className="form-label">
+              <div className="form-label lexend-heading-l">
                 What’s your <span>email address?</span>
               </div>
 
@@ -161,10 +155,10 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
                 error={errors.email}
               />
 
-              <div className="form-label">
+              <div className="form-label lexend-heading-l">
                 Do you own a <span>Prometheus NFT?</span>
               </div>
-              <SectionDescription className="">
+              <p className="lexend-body-xs1">
                 Note that only Prometheus holders will have a guaranteed
                 allocation in the seed round. To purchase a Prometheus NFT,
                 please{" "}
@@ -175,7 +169,7 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
                   click here
                 </a>
                 .
-              </SectionDescription>
+              </p>
               <div className="radios-container row middle">
                 <RadioInput
                   id="prometheus-yes"
@@ -193,16 +187,16 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
                 />
               </div>
 
-              <div className="form-label">
+              <div className="form-label lexend-heading-l">
                 What <span>capital</span> do you intend to <span>commit?</span>
               </div>
-              <SectionDescription className="">
+              <p className="lexend-body-xs1">
                 By adopting this approach, we can create an optimal allocation
                 mechanism. It is important to note, however, that this is not a
                 definitive commitment or an indication thereof.
-              </SectionDescription>
+              </p>
 
-              <div className="slider-container">
+              <div className="slider-container lexend-body-xs1">
                 <SliderInput
                   min={0}
                   max={150}
@@ -225,7 +219,9 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
                 </div>
               </div>
 
-              <div className="form-label">How did you hear about us?</div>
+              <div className="form-label lexend-heading-l">
+                How did you hear about us?
+              </div>
 
               <TextInput
                 id="how"
@@ -247,7 +243,7 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
 
               <div className="row">
                 <div
-                  className={`switch-view row ${
+                  className={`switch-view lexend-heading-m row ${
                     chartView ? "active" : "inactive"
                   }`}
                 >
@@ -283,12 +279,12 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
                         transitionDelay: index * 50 + "ms",
                       }}
                     >
-                      <div className="submission-title">
+                      <div className="submission-title lexend-body-s">
                         Anonymous user is <span>interested</span> in a $
                         <b>{item.capital}</b> allocation
                       </div>
 
-                      <div className="time">
+                      <div className="time lexend-body-xs2">
                         {timeDifference(
                           new Date(),
                           new Date(item.timestamp * 1000)
@@ -297,7 +293,7 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
                     </div>
                   ))}
                   <div className="submissions-bottom row between middle">
-                    <div className="items">
+                    <div className="items lexend-body-s">
                       {itemsfrom}-{itemsto} of {seedData.length} Items
                     </div>
                     <Pagination

@@ -1,37 +1,25 @@
-import { useRef } from "react";
 import SimpleBar from "simplebar-react";
 import { Images } from "../../../../assets/imgs/Images";
 import {
   ButtonSecondary,
   Links,
   ObserverContainer,
+  SectionHead,
 } from "../../../../components";
-import { TextManipulation } from "../../../../viewmodels/textManipulation";
 
 export const Roadmap = () => {
-  const titleScrambleRef = useRef(null);
-  const textVM = new TextManipulation();
   return (
     <div className="row column w-full">
       <div className="roadmap expand">
-        <ObserverContainer
-          className="description"
-          onAnimateIn={() => textVM.scrambleText(titleScrambleRef)}
-        >
-          <div className="section-head-container">
-            <div className="row section-head">
-              <h2 className="section-head-title" ref={titleScrambleRef}>
-                Roadmap
-              </h2>
-            </div>
-          </div>
-        </ObserverContainer>
+        <div className="description">
+          <SectionHead title={<span>Roadmap</span>} />
+        </div>
 
         <SimpleBar className="row middle" autoHide={false} forceVisible={"x"}>
-          <div className="roadmap-content">
+          <div className="roadmap-content lexend-body-m">
             <ObserverContainer className="roadmap-item">
               <div className="roadmap-item-top">
-                <div className="roadmap-details">Strategic round</div>
+                <div className="roadmap-details active">Strategic round</div>
                 <div className="roadmap-separator" />
                 <div className="roadmap-index">1.</div>
               </div>
@@ -39,7 +27,7 @@ export const Roadmap = () => {
                 <div className="cube active" />
               </div>
               <div className="roadmap-item-bottom">
-                <div className="roadmap-title">Live</div>
+                <div className="lexend-body-xl">Live</div>
                 <div className="roadmap-details">Soulbound Launchpad</div>
                 <div className="roadmap-details">Prometheus mint</div>
                 <div className="roadmap-details">XBorg.gg Alpha </div>
@@ -49,7 +37,7 @@ export const Roadmap = () => {
 
             <ObserverContainer className="roadmap-item">
               <div className="roadmap-item-top">
-                <div className="roadmap-title">Q2 2023</div>
+                <div className="lexend-body-xl">Q2 2023</div>
                 <div className="roadmap-details">XBorg.gg V1</div>
                 <div className="roadmap-details">
                   Tier 1 Esports Team partnership
@@ -64,7 +52,7 @@ export const Roadmap = () => {
               <div className="roadmap-item-bottom">
                 <div className="roadmap-index">2.</div>
                 <div className="roadmap-separator" />
-                <div className="roadmap-details">Seed round</div>
+                <div className="roadmap-details active">Seed round</div>
                 <div className="row">
                   <ButtonSecondary label="Register interest" to="seed" />
                 </div>
@@ -80,7 +68,7 @@ export const Roadmap = () => {
                 <div className="cube" />
               </div>
               <div className="roadmap-item-bottom">
-                <div className="roadmap-title">Q3 2023</div>
+                <div className="lexend-body-xl">Q3 2023</div>
                 <div className="roadmap-details">Open Data Graph </div>
                 <div className="roadmap-details">Credential API </div>
                 <div className="roadmap-details">
@@ -92,7 +80,7 @@ export const Roadmap = () => {
 
             <ObserverContainer className="roadmap-item">
               <div className="roadmap-item-top">
-                <div className="roadmap-title">Q4 2023</div>
+                <div className="lexend-body-xl">Q4 2023</div>
                 <div className="roadmap-details">XBorg.gg mobile app</div>
                 <div className="roadmap-details">Avatar SDK</div>
                 <div className="roadmap-details">Ingestion API</div>

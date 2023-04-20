@@ -27,4 +27,15 @@
     transform: rotate(-180deg);
     margin-right: 8px;
   }
+
+  &.small {
+    .countdown-numbers span {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 18px;
+      width: 17px;
+      height: 26px;
+      color: $light100;
+    }
+  }
 }

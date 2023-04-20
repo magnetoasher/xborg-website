@@ -171,7 +171,7 @@ export class AppViewModel {
     }
   };
 
-  handleNavbarResize = (nav: HTMLElement, navParent: HTMLElement) => {
+  handleNavbarResize = debounce((nav: HTMLElement, navParent: HTMLElement) => {
     window.removeEventListener("simplebar-scroll", () =>
       this.handleNavbarScroll(nav, navParent)
     );
@@ -180,7 +180,7 @@ export class AppViewModel {
     );
 
     this.stickyNavbar(nav, navParent);
-  };
+  }, 300);
 
   scrollBellowHeader = () => {
     const head = document.getElementsByClassName("invest-section-head")[0];

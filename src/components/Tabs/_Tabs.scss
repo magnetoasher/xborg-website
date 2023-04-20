@@ -25,9 +25,7 @@
 
     a {
       padding-bottom: 8px;
-      font-size: 10px;
       font-weight: 700;
-      line-height: 16px;
       padding: 16px;
       position: relative;
       display: flex;
@@ -65,6 +63,24 @@
             width: 24px;
           }
         }
+      }
+    }
+  }
+
+  @media (max-width: $sm-max) {
+    .heads {
+      padding-left: 0px;
+      padding-right: 0px;
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    .heads a {
+      padding: 12px 16px;
+      font-size: 12px;
+
+      &:after {
+        bottom: 7px;
       }
     }
   }
