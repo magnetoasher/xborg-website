@@ -30,7 +30,7 @@ export const OpenToCommunity = () => {
             </ul>
 
             <div className="row action">
-              <ButtonSecondary label="Register interest" />
+              <ButtonSecondary label="Register interest" to="/seed" />
             </div>
           </div>
 

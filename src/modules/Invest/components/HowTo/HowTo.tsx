@@ -130,7 +130,7 @@ export const HowTo = () => {
                 <div className="row">
                   <ButtonSecondary
                     label="Purchase a Prometheus NFT"
-                    to="https://opensea.io/collection/xborg-prometheus"
+                    href="https://opensea.io/collection/xborg-prometheus"
                     target="_blank"
                   />
                 </div>
@@ -330,7 +330,7 @@ export const HowTo = () => {
                 <div className="row">
                   <ButtonSecondary
                     label="Open a SwissBorg account"
-                    to="https://swissborg.com/"
+                    href="https://swissborg.com/"
                     target="_blank"
                   />
                 </div>

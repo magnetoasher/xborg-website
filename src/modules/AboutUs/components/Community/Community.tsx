@@ -66,7 +66,7 @@ export const Community = () => {
             <div className="row action">
               <ButtonPrimary
                 label="Join our community"
-                to="https://discord.gg/xborg"
+                href="https://discord.gg/xborg"
                 target="_blank"
               />
             </div>
@@ -121,7 +121,7 @@ export const Community = () => {
             <div className="action row">
               <ButtonSecondary
                 label="Learn more about the XCS"
-                to="xtreme-championship-series"
+                to="/xtreme-championship-series"
               />
             </div>
           </ObserverContainer>
@@ -180,7 +180,7 @@ export const Community = () => {
             <div className="action row">
               <ButtonSecondary
                 label="Community Leaderboard"
-                to="https://crew3.xyz/c/xborg/leaderboard"
+                href="https://crew3.xyz/c/xborg/leaderboard"
                 target="_blank"
               />
             </div>

@@ -76,7 +76,7 @@ export const DecentralizedSocieties = () => {
         </SectionDescription>
         <ButtonSecondary
           label="Get access"
-          to="https://docsend.com/view/5dwn74pn6izud3vb"
+          href="https://docsend.com/view/5dwn74pn6izud3vb"
           target="_blank"
         />
       </ObserverContainer>

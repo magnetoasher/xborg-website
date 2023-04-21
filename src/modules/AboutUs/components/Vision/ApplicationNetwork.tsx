@@ -41,7 +41,7 @@ export const ApplicationNetwork = ({
               <div className="action row">
                 <ButtonSecondary
                   label="Enter Launchpad"
-                  to="https://launchpad.xborg.com"
+                  href="https://launchpad.xborg.com"
                   target="_blank"
                 />
               </div>
@@ -106,7 +106,7 @@ export const ApplicationNetwork = ({
               <div className="action row">
                 <ButtonSecondary
                   label="Launch alpha"
-                  to="https://gaming.xborg.com"
+                  href="https://gaming.xborg.com"
                   target="_blank"
                 />
               </div>

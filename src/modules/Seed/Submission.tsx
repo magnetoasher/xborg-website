@@ -62,7 +62,7 @@ export const SubmissionRecorded = () => {
               <div className="row actions">
                 <ButtonSecondary
                   label="Get access"
-                  to="https://docsend.com/view/ikn6ehtivg83epbu"
+                  href="https://docsend.com/view/ikn6ehtivg83epbu"
                   target="_blank"
                 />
               </div>
@@ -98,7 +98,7 @@ export const SubmissionRecorded = () => {
               <div className="row actions">
                 <ButtonSecondary
                   label="Get access"
-                  to="https://docsend.com/view/s/23d69ir3qbyq8m2a"
+                  href="https://docsend.com/view/s/23d69ir3qbyq8m2a"
                   target="_blank"
                 />
               </div>
@@ -107,7 +107,7 @@ export const SubmissionRecorded = () => {
           <div className="coming-soon row column middle center">
             <ButtonPrimary
               label="More coming soon..."
-              to="https://twitter.com/xborg_official"
+              href="https://twitter.com/xborg_official"
               target="_blank"
             />
 

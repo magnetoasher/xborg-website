@@ -178,7 +178,7 @@ export const Prometheus = () => {
             <div className="row middle center actions">
               <ButtonPrimary
                 label="Purchase a Prometheus"
-                to="https://opensea.io/collection/xborg-prometheus"
+                href="https://opensea.io/collection/xborg-prometheus"
                 target="_blank"
               />
             </div>

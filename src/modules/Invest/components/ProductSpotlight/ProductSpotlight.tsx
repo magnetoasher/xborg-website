@@ -182,7 +182,7 @@ export const ProductSpotlight = () => {
                   <div className="actions row">
                     <ButtonSecondary
                       label="Learn more"
-                      to="https://gaming.xborg.com"
+                      href="https://gaming.xborg.com"
                       target="_blank"
                     />
                   </div>
@@ -241,7 +241,7 @@ export const ProductSpotlight = () => {
                   <div className="actions row">
                     <ButtonSecondary
                       label="Learn more"
-                      to="https://mybds.gg"
+                      href="https://mybds.gg"
                       target="_blank"
                     />
                   </div>
@@ -283,7 +283,7 @@ export const ProductSpotlight = () => {
                   <div className="actions row">
                     <ButtonSecondary
                       label="Enter Launchpad"
-                      to="https://launchpad.xborg.com"
+                      href="https://launchpad.xborg.com"
                       target="_blank"
                     />
                   </div>

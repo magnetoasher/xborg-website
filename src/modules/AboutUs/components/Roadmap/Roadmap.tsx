@@ -54,7 +54,7 @@ export const Roadmap = () => {
                 <div className="roadmap-separator" />
                 <div className="roadmap-details active">Seed round</div>
                 <div className="row">
-                  <ButtonSecondary label="Register interest" to="seed" />
+                  <ButtonSecondary label="Register interest" to="/seed" />
                 </div>
               </div>
             </ObserverContainer>

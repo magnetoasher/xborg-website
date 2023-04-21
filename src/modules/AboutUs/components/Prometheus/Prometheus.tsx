@@ -30,10 +30,10 @@ export const Prometheus = () => {
           <div className="row middle actions">
             <ButtonPrimary
               label="Purchase a Prometheus NFT"
-              to="https://opensea.io/collection/xborg-prometheus"
+              href="https://opensea.io/collection/xborg-prometheus"
               target="_blank"
             />
-            <ButtonSecondary label="See all perks" to="prometheus" />
+            <ButtonSecondary label="See all perks" to="/prometheus" />
           </div>
         </div>
       </div>

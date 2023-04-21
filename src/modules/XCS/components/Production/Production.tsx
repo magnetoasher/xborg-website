@@ -79,7 +79,7 @@ export const Production = () => {
           <div className="row follow-twitch">
             <ButtonPrimary
               label="Follow us on Twitch"
-              to="https://www.twitch.tv/xborgofficial"
+              href="https://www.twitch.tv/xborgofficial"
               target="_blank"
             />
           </div>

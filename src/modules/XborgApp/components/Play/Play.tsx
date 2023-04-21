@@ -65,8 +65,9 @@ export const Play = () => {
 
           <div className="actions row middle">
             <ButtonPrimary
-              label={"Launch App"}
-              to="https://gaming.xborg.com/"
+              label="Launch App"
+              href="https://gaming.xborg.com/"
+              target="_blank"
             />
             {/* <ButtonSecondary label={"Get Beta early access"} /> */}
           </div>
