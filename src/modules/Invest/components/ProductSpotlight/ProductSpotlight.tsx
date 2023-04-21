@@ -80,6 +80,12 @@ export const ProductSpotlight = () => {
         setHeight,
         setMobile
       );
+
+      return () => {
+        appVM.removeStickyElement(parent, child, 0, 0);
+        activeSpotlight = 0;
+        setActive(0);
+      };
     }
   }, []);
 

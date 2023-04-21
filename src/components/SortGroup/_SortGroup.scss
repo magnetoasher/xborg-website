@@ -1,6 +1,5 @@
 .sort-group {
   position: relative;
-  padding: 0 16px;
   margin-top: 34px;
 
   .sort-group-title {
@@ -8,7 +7,12 @@
     font-weight: 600;
   }
 
-  &:first-child {
-    padding-left: 0;
+  .list {
+    overflow-x: auto;
+    padding-bottom: 12px;
+  }
+
+  .tag-sort-group {
+    white-space: nowrap;
   }
 }

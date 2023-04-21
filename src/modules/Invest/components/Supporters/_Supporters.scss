@@ -205,11 +205,6 @@
       margin-top: 48px;
       align-items: flex-start;
 
-      h2 {
-        font-size: 40px;
-        line-height: 50px;
-      }
-
       .desc {
         text-align: left;
         font-size: 14px;
@@ -241,13 +236,6 @@
       color: $light100;
       margin: 32px 0 0;
       display: block;
-    }
-  }
-
-  @media (max-width: $xs-max) {
-    .invest-early h2 {
-      font-size: 24px;
-      line-height: 30px;
     }
   }
 

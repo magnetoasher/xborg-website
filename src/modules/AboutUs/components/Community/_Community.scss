@@ -437,6 +437,20 @@
     }
   }
 
+  @media (max-width: $lg-max) {
+    .hall-of-fame {
+      .swiper-prev {
+        left: -40px;
+        padding: 8px;
+      }
+
+      .swiper-next {
+        right: -40px;
+        padding: 8px;
+      }
+    }
+  }
+
   @media (max-width: $md-max) {
     .description {
       margin-bottom: 64px;
@@ -483,11 +497,12 @@
   @media (max-width: $sm-max) {
     .tabs {
       margin-left: 0;
-    }
 
-    .heads {
-      overflow-x: auto;
-      overflow-y: hidden;
+      .heads {
+        overflow-x: auto;
+        overflow-y: hidden;
+        max-width: 100%;
+      }
     }
 
     .statistics {

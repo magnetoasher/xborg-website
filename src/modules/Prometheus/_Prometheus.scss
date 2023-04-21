@@ -155,6 +155,20 @@
     }
   }
 
+  @media (max-width: $md-max) {
+    .prometheus-intro {
+      flex-direction: column;
+    }
+
+    .section-head-container {
+      margin-bottom: 0;
+    }
+
+    .list-data {
+      margin-top: 32px;
+    }
+  }
+
   @media (max-width: $sm-max) {
     .list-data {
       .col {

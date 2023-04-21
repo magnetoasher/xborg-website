@@ -84,4 +84,14 @@
       margin-right: 14px;
     }
   }
+
+  @media (max-width: $sm-max) {
+    .section-border {
+      display: none;
+    }
+
+    p {
+      margin-left: 0;
+    }
+  }
 }

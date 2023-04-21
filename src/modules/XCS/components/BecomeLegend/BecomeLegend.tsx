@@ -1,21 +1,15 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import {
   ParallaxLayer,
   ObserverContainer,
   ButtonPrimary,
-  Alert,
-  SectionDescription,
   SectionHead,
 } from "../../../../components";
-import { TextManipulation } from "../../../../viewmodels/textManipulation";
 import { PickGame } from "../PickGame/PickGame";
 
 export const BecomeLegend = () => {
-  const scrambleRef = useRef(null);
   const [active, setActive] = useState<boolean>(false);
-
-  const textVM = new TextManipulation();
 
   return (
     <div
@@ -23,7 +17,6 @@ export const BecomeLegend = () => {
         active ? "active" : "inactive"
       }`}
     >
-      <Alert text="Register for the upcoming seed round." to="seed" />
       <ObserverContainer className="parallaxed expand row middle center">
         <ParallaxLayer
           image={Images.XCS.banner}

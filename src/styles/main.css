@@ -1275,7 +1275,7 @@ h3.lexend-heading {
 .xborg-app .gaming-badges .description {
   padding-left: 130px;
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .xborg-app .gaming-badges {
     flex-direction: column-reverse;
   }
@@ -1424,7 +1424,7 @@ h3.lexend-heading {
   transition-delay: 0.4s;
   opacity: 1;
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .xborg-app .meet {
     flex-direction: column;
     justify-content: center;
@@ -1523,7 +1523,7 @@ h3.lexend-heading {
 .xborg-app .collectibles .parallaxed.state-1 .collectible-details:last-child .collectible-data {
   opacity: 1;
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .xborg-app .collectibles {
     flex-direction: column-reverse;
   }
@@ -3636,6 +3636,16 @@ h3.lexend-heading {
   opacity: 0;
   transform: scale(0.7);
 }
+@media (max-width: 1200px) {
+  .about-us .community .hall-of-fame .swiper-prev {
+    left: -40px;
+    padding: 8px;
+  }
+  .about-us .community .hall-of-fame .swiper-next {
+    right: -40px;
+    padding: 8px;
+  }
+}
 @media (max-width: 992px) {
   .about-us .community .description {
     margin-bottom: 64px;
@@ -3673,9 +3683,10 @@ h3.lexend-heading {
   .about-us .community .tabs {
     margin-left: 0;
   }
-  .about-us .community .heads {
+  .about-us .community .tabs .heads {
     overflow-x: auto;
     overflow-y: hidden;
+    max-width: 100%;
   }
   .about-us .community .statistics {
     flex-wrap: wrap;
@@ -5037,6 +5048,17 @@ h3.lexend-heading {
     display: none;
   }
 }
+@media (max-width: 992px) {
+  .prometheus-page .prometheus-intro {
+    flex-direction: column;
+  }
+  .prometheus-page .section-head-container {
+    margin-bottom: 0;
+  }
+  .prometheus-page .list-data {
+    margin-top: 32px;
+  }
+}
 @media (max-width: 768px) {
   .prometheus-page .list-data .col {
     width: 100%;
@@ -5222,6 +5244,7 @@ h3.lexend-heading {
     width: 100%;
     text-align: left;
     margin-top: 0;
+    max-width: 100%;
   }
   .invest .about-xborg .page-desc .paragraph {
     margin-bottom: 32px;
@@ -5359,7 +5382,7 @@ h3.lexend-heading {
   .invest .game-changing-protocol h2 {
     font-size: 24px;
     line-height: 30px;
-    width: 100%;
+    max-width: 100%;
     text-align: left;
     margin-top: 48px;
     margin-bottom: 16px;
@@ -5796,6 +5819,7 @@ h3.lexend-heading {
 @media (max-width: 768px) {
   .invest .competetive-community h2 {
     width: 100%;
+    max-width: 100%;
     margin-top: 48px;
     margin-bottom: 16px;
     text-align: left;
@@ -5997,10 +6021,6 @@ h3.lexend-heading {
     margin-top: 48px;
     align-items: flex-start;
   }
-  .invest .supporters .invest-early h2 {
-    font-size: 40px;
-    line-height: 50px;
-  }
   .invest .supporters .invest-early .desc {
     text-align: left;
     font-size: 14px;
@@ -6027,12 +6047,6 @@ h3.lexend-heading {
     color: #d1d3d4;
     margin: 32px 0 0;
     display: block;
-  }
-}
-@media (max-width: 576px) {
-  .invest .supporters .invest-early h2 {
-    font-size: 24px;
-    line-height: 30px;
   }
 }
 @media (max-width: 360px) {
@@ -6128,8 +6142,6 @@ h3.lexend-heading {
 }
 @media (max-width: 768px) {
   .invest .next-big-thing h2 {
-    font-size: 24px;
-    line-height: 30px;
     width: 100%;
     text-align: left;
   }
@@ -6318,6 +6330,9 @@ h3.lexend-heading {
     width: 100%;
     margin-top: 24px;
   }
+}
+.invest .whynow {
+  width: 100%;
 }
 .invest .whynow h2 {
   margin-bottom: 90px;
@@ -6843,7 +6858,7 @@ h3.lexend-heading {
   margin-top: 77px;
 }
 .invest .invest-faq .categories-list {
-  margin-bottom: 48px;
+  margin-bottom: 34px;
 }
 
 .navigation-container {
@@ -8286,6 +8301,10 @@ article.article .date {
     margin-bottom: 16px;
     margin-right: 0;
   }
+  article.article .article-content .tag {
+    font-size: 10px;
+    line-height: 12px;
+  }
 }
 .section-description p {
   transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
@@ -8308,15 +8327,18 @@ article.article .date {
 
 .sort-group {
   position: relative;
-  padding: 0 16px;
   margin-top: 34px;
 }
 .sort-group .sort-group-title {
   margin-bottom: 8px;
   font-weight: 600;
 }
-.sort-group:first-child {
-  padding-left: 0;
+.sort-group .list {
+  overflow-x: auto;
+  padding-bottom: 12px;
+}
+.sort-group .tag-sort-group {
+  white-space: nowrap;
 }
 
 .tag-sort-group {
@@ -8439,7 +8461,8 @@ article.article .date {
     padding: 12px;
   }
   .collapsible-container .Collapsible__trigger {
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 28px;
   }
   .collapsible-container .Collapsible__trigger:after {
     right: 12px;
@@ -8527,5 +8550,13 @@ article.article .date {
   }
   .section-head-container .section-border {
     margin-right: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .section-head-container .section-border {
+    display: none;
+  }
+  .section-head-container p {
+    margin-left: 0;
   }
 }/*# sourceMappingURL=main.css.map */

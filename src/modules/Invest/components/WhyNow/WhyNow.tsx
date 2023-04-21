@@ -27,6 +27,12 @@ export const WhyNow = () => {
         setHeight,
         setMobile
       );
+
+      return () => {
+        appVM.removeStickyElement(parent, child, 0, 0);
+        activeTab = 0;
+        setActive(0);
+      };
     }
   }, []);
 

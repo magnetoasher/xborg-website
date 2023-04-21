@@ -113,6 +113,7 @@ export const HowTo = () => {
                       <span className="name">Starts in:</span>
                       <Countdown
                         date={new Date("May 03 2023 18:00:00 GMT+0200")}
+                        smaller
                       />
                     </div>
                   </div>

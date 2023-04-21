@@ -37,9 +37,9 @@ export class AppViewModel {
     parent: HTMLElement,
     child: HTMLElement,
     windowHeight: number,
-    onScroll: (scrolled: number) => void,
-    setHeight: (height: number) => void,
-    setMobile: (isMobile: boolean) => void
+    onScroll?: (scrolled: number) => void,
+    setHeight?: (height: number) => void,
+    setMobile?: (isMobile: boolean) => void
   ) {
     const parentYCoordinate = parent.getBoundingClientRect().y;
 
@@ -73,34 +73,14 @@ export class AppViewModel {
       child: HTMLElement,
       windowHeight: number,
       parentYCoordinate: number,
-      onScroll: (scrolled: number) => void,
-      setHeight: (height: number) => void,
-      setMobile: (isMobile: boolean) => void
+      onScroll?: (scrolled: number) => void,
+      setHeight?: (height: number) => void,
+      setMobile?: (isMobile: boolean) => void
     ) => {
-      setMobile(window.innerWidth <= 992);
-      setHeight(window.innerHeight);
+      setMobile?.(window.innerWidth <= 992);
+      setHeight?.(window.innerHeight);
 
-      window.removeEventListener("simplebar-scroll", (e: any) =>
-        this.simplebarListener(
-          e.detail.scrollTop,
-          child,
-          parent,
-          windowHeight,
-          parentYCoordinate,
-          onScroll
-        )
-      );
-      window.removeEventListener("resize", () =>
-        this.onStickyResize(
-          parent,
-          child,
-          windowHeight,
-          parentYCoordinate,
-          onScroll,
-          setHeight,
-          setMobile
-        )
-      );
+      this.removeStickyElement(parent, child, windowHeight, parentYCoordinate);
 
       const scrollVM = new ScrollViewModel();
 
@@ -109,7 +89,7 @@ export class AppViewModel {
       await sleep(300);
 
       child.style.transform = `translateY(0px)`;
-      onScroll(0);
+      onScroll?.(0);
       this.stickyElement(
         parent,
         child,
@@ -122,13 +102,33 @@ export class AppViewModel {
     300
   );
 
+  removeStickyElement = (
+    parent: HTMLElement,
+    child: HTMLElement,
+    windowHeight: number,
+    parentYCoordinate: number
+  ) => {
+    window.removeEventListener("simplebar-scroll", (e: any) =>
+      this.simplebarListener(
+        e.detail.scrollTop,
+        child,
+        parent,
+        windowHeight,
+        parentYCoordinate
+      )
+    );
+    window.removeEventListener("resize", () =>
+      this.onStickyResize(parent, child, windowHeight, parentYCoordinate)
+    );
+  };
+
   simplebarListener = (
     scrollTop: number,
     child: HTMLElement,
     parent: HTMLElement,
     windowHeight: number,
     parentYCoordinate: number,
-    onScroll: (scrolled: number) => void
+    onScroll?: (scrolled: number) => void
   ) => {
     const childRect = child.getBoundingClientRect();
     const parentRect = parent.getBoundingClientRect();
@@ -145,7 +145,7 @@ export class AppViewModel {
 
       if (moveY > 0) {
         child.style.transform = `translate3d(0,${moveY}px,0)`;
-        onScroll(moveY);
+        onScroll?.(moveY);
       }
     }
   };

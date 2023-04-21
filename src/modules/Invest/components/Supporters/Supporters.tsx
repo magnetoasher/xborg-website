@@ -66,7 +66,7 @@ export const Supporters = () => {
           <span>Featured</span> in
         </h2>
 
-        <ObserverContainer className="featured-list row between">
+        <ObserverContainer className="featured-list top row between">
           <a
             href="https://cryptoslate.com/rocket-league-world-champions-teambds-partners-with-xborg-for-web3-fan-activations/"
             target="_blank"

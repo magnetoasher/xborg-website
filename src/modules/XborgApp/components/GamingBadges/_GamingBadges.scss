@@ -14,7 +14,7 @@
     padding-left: 130px;
   }
 
-  @media (max-width: $md-max) {
+  @media (max-width: $lg-max) {
     flex-direction: column-reverse;
 
     .description {

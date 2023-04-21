@@ -22,7 +22,7 @@ export const XborgApp = () => {
 
   return (
     <>
-      <Alert text="Register for the upcoming seed round." to="seed" />
+      {/* <Alert text="Register for the upcoming seed round." to="seed" /> */}
       <Helmet>
         <meta property="og:image" content={Images.OGIndex.OGIndexApp} />
       </Helmet>
