@@ -4625,12 +4625,12 @@ h3.lexend-heading {
   padding-bottom: 80px;
   width: 100%;
 }
-.faq h2 {
+.faq h2.with-cube {
   color: #eb3a4a;
   margin: 32px 0;
   position: relative;
 }
-.faq h2:after {
+.faq h2.with-cube:after {
   content: "";
   position: absolute;
   left: -32px;
@@ -4649,24 +4649,38 @@ h3.lexend-heading {
 .seed .container.container-l {
   padding: 0;
 }
-.seed .logo-icon img {
-  height: 32px;
-}
-.seed .logo-icon {
-  margin-top: 46px;
-}
-.seed .vista-xl {
-  letter-spacing: 0.05em;
-  color: #eb3a4a;
-  margin: 8px 0;
-}
-.seed h4 {
-  color: #d1d3d4;
-  margin-bottom: 24px;
-}
 .seed p {
   letter-spacing: 0.05em;
   color: #d1d3d4;
+}
+.seed .seed-header p {
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.seed .seed-header .logo-icon {
+  margin-top: 46px;
+}
+.seed .seed-header .logo-icon img {
+  height: 32px;
+}
+.seed .seed-header .vista-xl {
+  letter-spacing: 0.05em;
+  color: #eb3a4a;
+  margin: 8px 0;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 0;
+  transform: translateY(20px);
+}
+.seed .seed-header h4 {
+  color: #d1d3d4;
+  margin-bottom: 24px;
+}
+.seed .seed-header.in h1.vista-xl,
+.seed .seed-header.in p {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition-delay: 0.2s;
 }
 .seed .numbers {
   margin: 41px 0;
@@ -5141,18 +5155,37 @@ h3.lexend-heading {
   margin-bottom: 16px;
   color: #d1d3d4;
   letter-spacing: 0.1em;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 0;
+  transform: translateY(20px);
 }
 .invest .head h2 span {
   color: #eb3a4a;
 }
+.invest .head p {
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 0;
+  transform: translateY(-20px);
+}
 .invest .head .coming {
   margin: 24px 0 86px;
+  opacity: 0;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .invest .head .coming .coming-desc {
   margin-right: 16px;
 }
 .invest .head .mobile-coming {
   display: none;
+}
+.invest .head.in h2.vista-heading,
+.invest .head.in p {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.invest .head.in .coming {
+  opacity: 1;
+  transition-delay: 0.2s;
 }
 @media (max-width: 992px) {
   .invest .head .head-content {

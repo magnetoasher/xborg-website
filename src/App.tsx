@@ -19,7 +19,15 @@ function App() {
   return (
     <BrowserRouter>
       <Provider store={store}>
-        <ToastContainer />
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          closeOnClick={true}
+          pauseOnHover={true}
+          draggable={true}
+          theme={"dark"}
+        />
         <Navigation navbarBtn={navbarBtn} />
         <AppRouter setNavbarBtn={setNavbarBtn} />
         <Links />

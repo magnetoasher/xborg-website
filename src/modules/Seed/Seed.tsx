@@ -24,6 +24,7 @@ import { SEED_UTM_TYPE } from "../../redux/seed/types";
 import { AppDispatch } from "../../store";
 import { SeedViewModel } from "../../viewmodels/SeedViewModel";
 import { Helmet } from "react-helmet";
+import { TextManipulation } from "../../viewmodels/textManipulation";
 
 export type SeedFormType = {
   name: string;
@@ -46,6 +47,7 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
   const h4ref = useRef(null);
 
   const vm = new SeedViewModel(dispatch);
+  const textVM = new TextManipulation();
 
   const seedData = useSelector((state: GlobalState) => state.seed.data) || [];
   const seedSummary = useSelector((state: GlobalState) => state.seed.summary);
@@ -92,19 +94,24 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
             <div className="logo-icon">
               <img src={Images.logofull} alt="" />
             </div>
-            <h1 className="vista-xl">Seed Round</h1>
-            <h4 ref={h4ref} className="vista-heading">
-              Invest in the future of XBorg
-            </h4>
-            <p className="lexend-body-xs1">
-              XBorg is building the leading gaming protocol for players, fans
-              and esports teams. With over 10,000 users onboarded, the largest
-              web3 esports league ever created and a partnership with one of
-              Europe's biggest esports teams, XBorg is still accelerating its
-              growth and is raising capital to do so. Invest alongside the best
-              VCs in the space, at the same valuation, and come build the future
-              with us.
-            </p>
+            <ObserverContainer
+              className="seed-header"
+              onAnimateIn={() => textVM.scrambleText(h4ref)}
+            >
+              <h1 className="vista-xl">Seed Round</h1>
+              <h4 ref={h4ref} className="vista-heading">
+                Invest in the future of XBorg
+              </h4>
+              <p className="lexend-body-xs1">
+                XBorg is building the leading gaming protocol for players, fans
+                and esports teams. With over 10,000 users onboarded, the largest
+                web3 esports league ever created and a partnership with one of
+                Europe's biggest esports teams, XBorg is still accelerating its
+                growth and is raising capital to do so. Invest alongside the
+                best VCs in the space, at the same valuation, and come build the
+                future with us.
+              </p>
+            </ObserverContainer>
             <div className="row numbers">
               <div className="col">
                 <div className="value">
@@ -124,7 +131,6 @@ export const Seed = ({ setNavbarBtn }: SeedPageProps) => {
                 <div className="label lexend-body-m">Total submissions</div>
               </div>
             </div>
-
             <div className="form">
               <div className="form-label lexend-heading-l">
                 What’s your <span>name?</span>

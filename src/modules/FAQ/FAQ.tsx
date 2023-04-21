@@ -22,7 +22,7 @@ export const FAQ = () => {
         components={[
           <div className="faq">
             <div className="row middle center">
-              <h2 className="vista-heading">FAQ</h2>
+              <h2 className="vista-heading with-cube">FAQ</h2>
             </div>
             <div className="container container-xl">
               <div className="faqs">

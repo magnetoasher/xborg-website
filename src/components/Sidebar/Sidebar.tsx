@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import { GlobalState } from "../../reducer";
 import { SeedActions } from "../../redux/seed/actions";
 import { SiteActions } from "../../redux/site/actions";
 import { AppDispatch } from "../../store";
 import { ScrollViewModel } from "../../viewmodels/ScrollViewModel";
+import { sleep } from "../../helpers/time";
 
 export type SidebarType = {
   active: number;
@@ -21,13 +23,18 @@ export const Sidebar = ({ active, total }: SidebarType) => {
   const scrollVM = new ScrollViewModel();
 
   useEffect(() => {
-    dispatch(SeedActions.getSeed());
-
     if (!siteLoaded) {
       setLoaded(true);
-      setTimeout(() => {
-        dispatch(SiteActions.loadSite());
-      }, 1000);
+
+      Promise.all([dispatch(SeedActions.getSeed()), sleep(1000)])
+        .finally(() => {
+          dispatch(SiteActions.loadSite());
+        })
+        .catch(() => {
+          toast.success(
+            "Some data did not load properly. Please refresh the page"
+          );
+        });
     }
   }, []);
 
