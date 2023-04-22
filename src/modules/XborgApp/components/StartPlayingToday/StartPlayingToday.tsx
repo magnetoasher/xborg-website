@@ -3,9 +3,7 @@ import {
   ButtonPrimary,
   ParallaxLayer,
   ObserverContainer,
-  ButtonSecondary,
   Links,
-  SectionDescription,
 } from "../../../../components";
 
 export const StartPlayingToday = () => {

@@ -4,7 +4,6 @@ import {
   ButtonPrimary,
   ParallaxLayer,
   ObserverContainer,
-  SectionDescription,
   CountUpAnimation,
 } from "../../../../components";
 

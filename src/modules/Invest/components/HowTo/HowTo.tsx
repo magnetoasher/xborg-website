@@ -86,7 +86,7 @@ export const HowTo = () => {
               <div className="row column category-details prometheus-category">
                 <div className="details-row row">
                   <div className="cat-image">
-                    <div className="lexend-body-xs2 date">03/05</div>
+                    <div className="lexend-body-xs2 date">16/05</div>
                     <img src={Images.invest.prometheus} alt="Prometheus" />
                   </div>
 
@@ -110,9 +110,9 @@ export const HowTo = () => {
                     </ul>
 
                     <div className="starts-in row middle">
-                      <span className="name">Starts in:</span>
+                      <span className="name lexend-body-xs2">Starts in:</span>
                       <Countdown
-                        date={new Date("May 03 2023 18:00:00 GMT+0200")}
+                        date={new Date("May 16 2023 14:00:00 GMT+0200")}
                         smaller
                       />
                     </div>
@@ -167,7 +167,7 @@ export const HowTo = () => {
               <div className="row column category-details swissborg">
                 <div className="details-row row">
                   <div className="cat-image">
-                    <div className="lexend-body-xs2 date">Coming soon</div>
+                    <div className="lexend-body-xs2 date">15/05</div>
                     <img src={Images.invest.swiss1} alt="Swiss 1" />
                     <div className="lexend-heading-m vault-size">
                       Vault size | $100k
@@ -180,16 +180,16 @@ export const HowTo = () => {
                     </h3>
                     <ul className="lexend-body-s">
                       <li>
-                        Investment: <span>$100</span>
+                        Investment: <span>$100 - $500</span>
                       </li>
                       <li>
-                        Requirement: <span>KYC level 2+</span>
-                      </li>
-                      <li>
-                        Valuation: <span>$55M</span>
+                        Requirement: <span>KYC level 1</span>
                       </li>
                       <li>
                         Token price: <span>$0.055</span>
+                      </li>
+                      <li>
+                        Valuation: <span>$55M</span>
                       </li>
                       <li>
                         Token required to invest: <span>CHSB</span>
@@ -197,94 +197,18 @@ export const HowTo = () => {
                     </ul>
 
                     <div className="starts-in row middle">
-                      <span className="name">Coming soon</span>
-                      {/* <span className="name">Starts in:</span>
-                      <Countdown date={new Date("2025/11/11")} /> */}
+                      <span className="name lexend-body-xs2">Starts in:</span>
+                      <Countdown
+                        date={new Date("May 15 2023 14:00:00 GMT+0200")}
+                        smaller
+                      />
                     </div>
                   </div>
                 </div>
 
                 <div className="details-row row">
                   <div className="cat-image">
-                    <div className="lexend-body-xs2 date">Coming soon</div>
-                    <img src={Images.invest.swiss2} alt="Swiss 2" />
-                    <div className="lexend-heading-m vault-size">
-                      Vault size | $500k +
-                    </div>
-                  </div>
-
-                  <div className="row column">
-                    <h3 className="cat-name lexend-heading">
-                      <span>Genesis</span> Vault
-                    </h3>
-                    <ul className="lexend-body-s">
-                      <li>
-                        Investment: <span>$100 - $3,000</span>
-                      </li>
-                      <li>
-                        Requirement: <span>Genesis status</span>
-                      </li>
-                      <li>
-                        Valuation: <span>$50M</span>
-                      </li>
-                      <li>
-                        Token price: <span>$0.050</span>
-                      </li>
-                      <li>
-                        Token required to invest: <span>USDC</span>
-                      </li>
-                    </ul>
-
-                    <div className="starts-in row middle">
-                      <span className="name">Coming soon</span>
-                      {/* <span className="name">Starts in:</span>
-                      <Countdown date={new Date("2025/11/11")} /> */}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="details-row row">
-                  <div className="cat-image">
-                    <div className="lexend-body-xs2 date">Coming soon</div>
-                    <img src={Images.invest.swiss3} alt="Swiss 3" />
-                    <div className="lexend-heading-m vault-size">
-                      Vault size | $200k
-                    </div>
-                  </div>
-
-                  <div className="row column">
-                    <h3 className="cat-name lexend-heading">
-                      <span>Premium</span> Vault
-                    </h3>
-                    <ul className="lexend-body-s">
-                      <li>
-                        Investment: <span>Based on in-app status</span>
-                      </li>
-                      <li>
-                        Requirement: <span>Standard or above</span>
-                      </li>
-                      <li>
-                        Valuation: <span>$50M</span>
-                      </li>
-                      <li>
-                        Token price: <span>$0.050</span>
-                      </li>
-                      <li>
-                        Token required to invest: <span>USDC</span>
-                      </li>
-                    </ul>
-
-                    <div className="starts-in row middle">
-                      <span className="name">Coming soon</span>
-                      {/* <span className="name">Starts in:</span>
-                      <Countdown date={new Date("2025/11/11")} /> */}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="details-row row">
-                  <div className="cat-image">
-                    <div className="lexend-body-xs2 date">Coming soon</div>
+                    <div className="lexend-body-xs2 date">17/05</div>
                     <img src={Images.invest.swiss4} alt="Swiss 4" />
                     <div className="lexend-heading-m vault-size">
                       Vault size | $200k
@@ -303,10 +227,10 @@ export const HowTo = () => {
                         Requirement: <span>SwissBorg’s Series A investor</span>
                       </li>
                       <li>
-                        Valuation: <span>$50M</span>
+                        Token price: <span>$0.050</span>
                       </li>
                       <li>
-                        Token price: <span>$0.050</span>
+                        Valuation: <span>$50M</span>
                       </li>
                       <li>
                         Token required to invest: <span>USDC</span>
@@ -314,8 +238,94 @@ export const HowTo = () => {
                     </ul>
 
                     <div className="starts-in row middle">
-                      {/* <span className="name">Starts in:</span>
-                      <Countdown date={new Date("2025/11/11")} /> */}
+                      <span className="name lexend-body-xs2">Starts in:</span>
+                      <Countdown
+                        date={new Date("May 17 2023 14:00:00 GMT+0200")}
+                        smaller
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="details-row row">
+                  <div className="cat-image">
+                    <div className="lexend-body-xs2 date">19/05</div>
+                    <img src={Images.invest.swiss2} alt="Swiss 2" />
+                    <div className="lexend-heading-m vault-size">
+                      Vault size | $300k +
+                    </div>
+                  </div>
+
+                  <div className="row column">
+                    <h3 className="cat-name lexend-heading">
+                      <span>Genesis & Generation</span> Vault
+                    </h3>
+                    <ul className="lexend-body-s">
+                      <li>
+                        Investment: <span>$100 - $3,000</span>
+                      </li>
+                      <li>
+                        Requirement: <span>Genesis or Generation status</span>
+                      </li>
+                      <li>
+                        Token price: <span>$0.050</span>
+                      </li>
+                      <li>
+                        Valuation: <span>$50M</span>
+                      </li>
+                      <li>
+                        Token required to invest: <span>USDC</span>
+                      </li>
+                    </ul>
+
+                    <div className="starts-in row middle">
+                      <span className="name lexend-body-xs2">Starts in:</span>
+                      <Countdown
+                        date={new Date("May 19 2023 14:00:00 GMT+0200")}
+                        smaller
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="details-row row">
+                  <div className="cat-image">
+                    <div className="lexend-body-xs2 date">22/05</div>
+                    <img src={Images.invest.swiss3} alt="Swiss 3" />
+                    <div className="lexend-heading-m vault-size">
+                      Vault size | $200k
+                    </div>
+                  </div>
+
+                  <div className="row column">
+                    <h3 className="cat-name lexend-heading">
+                      <span>Premium</span> Vault
+                    </h3>
+                    <ul className="lexend-body-s">
+                      <li>
+                        Investment:{" "}
+                        <span>Based on in-app status ($100 - $2000)</span>
+                      </li>
+                      <li>
+                        Requirement: <span>Standard or above</span>
+                      </li>
+                      <li>
+                        Token price: <span>$0.050</span>
+                      </li>
+                      <li>
+                        Valuation: <span>$50M</span>
+                      </li>
+                      <li>
+                        Token required to invest: <span>USDC</span>
+                      </li>
+                    </ul>
+
+                    <div className="starts-in row middle">
+                      <span className="name lexend-body-xs2">Starts in:</span>
+                      <Countdown
+                        date={new Date("May 22 2023 14:00:00 GMT+0200")}
+                        smaller
+                      />
                     </div>
                   </div>
                 </div>
@@ -365,7 +375,7 @@ export const HowTo = () => {
                     are done with $USDC.
                   </p>
                 </Collapsible>
-                <Collapsible trigger="What is SwissBorg Genesis">
+                <Collapsible trigger="What is SwissBorg Genesis?">
                   <p>
                     Genesis members are a tier of premium users in the SwissBorg
                     ecosystem. To learn more about the various premium tiers,
@@ -379,7 +389,7 @@ export const HowTo = () => {
                     .
                   </p>
                 </Collapsible>
-                <Collapsible trigger="What is SwissBorg Series A">
+                <Collapsible trigger="What is SwissBorg Series A?">
                   <p>
                     The SwissBorg Series A was a funding round cunducted by
                     SwissBorg. The fundraise is a capital increase conducted by

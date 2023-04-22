@@ -31,9 +31,9 @@ export const Head = () => {
           </p>
 
           <div className="coming lexend-heading-s row middle">
-            <span className="coming-desc">Starting in:</span>
+            <span className="coming-desc">Seed round starts in:</span>
             <Countdown
-              date={new Date("May 02 2023 14:00:00 GMT+0200")}
+              date={new Date("May 15 2023 14:00:00 GMT+0200")}
               smaller
             />
           </div>
@@ -48,9 +48,9 @@ export const Head = () => {
         ) : null}
       </div>
       <div className="mobile-coming lexend-heading-s text-center  row column middle center">
-        <span>Starting in:</span>
+        <span>Seed round starts in:</span>
 
-        <Countdown date={new Date("May 02 2023 14:00:00 GMT+0200")} />
+        <Countdown date={new Date("May 15 2023 14:00:00 GMT+0200")} />
       </div>
     </ObserverContainer>
   );

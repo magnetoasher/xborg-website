@@ -6714,6 +6714,10 @@ h3.lexend-heading {
   font-size: 32px;
   line-height: 40px;
 }
+.invest .howto .starts-in .name {
+  font-weight: 600;
+  margin-right: 16px;
+}
 .invest .howto .swissborg .details-row {
   padding-left: 64px;
 }
