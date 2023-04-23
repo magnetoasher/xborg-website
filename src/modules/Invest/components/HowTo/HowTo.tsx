@@ -211,7 +211,7 @@ export const HowTo = () => {
                     <div className="lexend-body-xs2 date">17/05</div>
                     <img src={Images.invest.swiss4} alt="Swiss 4" />
                     <div className="lexend-heading-m vault-size">
-                      Vault size | $200k
+                      Vault size | $500k
                     </div>
                   </div>
 
@@ -252,7 +252,7 @@ export const HowTo = () => {
                     <div className="lexend-body-xs2 date">19/05</div>
                     <img src={Images.invest.swiss2} alt="Swiss 2" />
                     <div className="lexend-heading-m vault-size">
-                      Vault size | $300k +
+                      Vault size | $300k
                     </div>
                   </div>
 
