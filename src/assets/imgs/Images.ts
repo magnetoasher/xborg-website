@@ -224,5 +224,6 @@ export const Images = {
     cyberlink6: require("./news/cyberlink6.png"),
     cyberlinkqa: require("./news/cyberlinkqa.png"),
     twitterama: require("./news/twitterama.png"),
+    seed: require("./news/seed.png"),
   },
 };

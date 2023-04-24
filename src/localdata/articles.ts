@@ -3,11 +3,12 @@ import { ArticleProps } from "../components";
 
 export const pastarticles: ArticleProps[] = [
   {
-    title: "Cyberlink #6",
-    tag: "Cyberlink",
-    date: "Mar 29, 2023",
-    image: Images.news.cyberlink6,
-    link: "https://medium.com/xborg-official/cyberlink-6-a3046ebedfd3",
+    title:
+      "Special seed Round AMA on YouTube with Louis (CEO XBorg), Anthory & Cyrus (SwissBorg’s co-founders)",
+    tag: "AMA",
+    date: "April 19, 2022",
+    image: Images.news.seed,
+    link: "https://www.youtube.com/live/Z9uUKHr88_s",
   },
   {
     title: "Cyberlink #5",
