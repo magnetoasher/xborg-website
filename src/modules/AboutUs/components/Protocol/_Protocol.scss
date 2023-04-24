@@ -3,9 +3,41 @@
     max-width: 645px;
   }
 
-  .statistics {
+  .numbers {
+    margin: 41px 0 41px 16px;
+
+    .col {
+      padding-left: 16px;
+      border-left: 4px solid $primary100;
+    }
+
+    .value {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 40px;
+      color: $primary100;
+    }
+
+    .label {
+      max-width: 124px;
+    }
+
+    .col:first-child {
+      margin-right: 64px;
+    }
+  }
+
+  .actions {
+    margin-left: 16px;
+  }
+
+  .early-xbg {
     margin-left: 22px;
-    margin-top: 32px;
+    margin-top: 16px;
+
+    strong {
+      margin-right: 16px;
+    }
   }
 
   .parallaxed {
@@ -88,6 +120,14 @@
     }
   }
 
+  @media (max-width: $sm-max) {
+    .early-xbg,
+    .numbers,
+    .actions {
+      margin-left: 0;
+    }
+  }
+
   @media (max-width: $xs-max) {
     .statistics {
       margin-top: 16px;
@@ -96,6 +136,27 @@
       .col {
         flex: 0 0 50%;
         margin: 16px 0 0;
+      }
+    }
+
+    .early-xbg {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: $xxs-max) {
+    .numbers {
+      .col:first-child {
+        margin-right: 14px;
+      }
+
+      .value {
+        font-size: 26px;
+      }
+
+      .label {
+        font-size: 14px;
       }
     }
   }

@@ -1,17 +1,18 @@
+import { useSelector } from "react-redux";
 import { Images } from "../../../../assets/imgs/Images";
 import {
+  ButtonPrimary,
   CountUpAnimation,
+  Countdown,
   ObserverContainer,
   ParallaxLayer,
   SectionHead,
 } from "../../../../components";
+import { formatNumberToK } from "../../../../helpers/inputs";
+import { GlobalState } from "../../../../reducer";
 
 export const Protocol = () => {
-  const data = {
-    apps: 2,
-    partners: 12,
-    users: 10000,
-  };
+  const seedSummary = useSelector((state: GlobalState) => state.seed.summary);
 
   return (
     <div className="protocol expand row middle between">
@@ -29,26 +30,39 @@ export const Protocol = () => {
           <p className="lexend-body-m">
             A collaborative credential infrastructure on which games, brands and
             communities can build applications and engage with their players and
-            fans.
+            fans. Currently raising funds from our community.
           </p>
 
-          <div className="statistics row">
-            <div className="col">
-              <CountUpAnimation number={data.apps} className="stats-value" />
+          <div className="row middle early-xbg">
+            <strong className="lexend-body-s">Early XBG sale starts in:</strong>
+            <Countdown
+              date={new Date("May 15 2023 14:00:00 GMT+0200")}
+              smaller
+            />
+          </div>
 
-              <div className="stats-label">Live applications</div>
+          <div className="row numbers">
+            <div className="col">
+              <div className="value">
+                {seedSummary?.totalCapital
+                  ? `$${formatNumberToK(seedSummary.totalCapital, 2)}`
+                  : `$0`}
+              </div>
+              <div className="label lexend-body-m">Total soft commitment</div>
             </div>
             <div className="col">
-              <CountUpAnimation
-                number={data.partners}
-                className="stats-value"
-              />
-              <div className="stats-label">Network partners</div>
+              {seedSummary?.nbSubmissions && (
+                <CountUpAnimation
+                  className="value"
+                  number={seedSummary?.nbSubmissions}
+                />
+              )}
+              <div className="label lexend-body-m">Total submissions</div>
             </div>
-            <div className="col">
-              <CountUpAnimation number={data.users} className="stats-value" />
-              <div className="stats-label">Active protocol users</div>
-            </div>
+          </div>
+
+          <div className="row actions">
+            <ButtonPrimary label="Register interest" to="/seed" />
           </div>
         </SectionHead>
       </div>

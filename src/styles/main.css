@@ -1917,9 +1917,34 @@ h3.lexend-heading {
 .about-us .protocol .section-head-container {
   max-width: 645px;
 }
-.about-us .protocol .statistics {
+.about-us .protocol .numbers {
+  margin: 41px 0 41px 16px;
+}
+.about-us .protocol .numbers .col {
+  padding-left: 16px;
+  border-left: 4px solid #eb3a4a;
+}
+.about-us .protocol .numbers .value {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  color: #eb3a4a;
+}
+.about-us .protocol .numbers .label {
+  max-width: 124px;
+}
+.about-us .protocol .numbers .col:first-child {
+  margin-right: 64px;
+}
+.about-us .protocol .actions {
+  margin-left: 16px;
+}
+.about-us .protocol .early-xbg {
   margin-left: 22px;
-  margin-top: 32px;
+  margin-top: 16px;
+}
+.about-us .protocol .early-xbg strong {
+  margin-right: 16px;
 }
 .about-us .protocol .parallaxed img {
   max-width: 443px;
@@ -1987,6 +2012,13 @@ h3.lexend-heading {
     margin-top: 32px;
   }
 }
+@media (max-width: 768px) {
+  .about-us .protocol .early-xbg,
+  .about-us .protocol .numbers,
+  .about-us .protocol .actions {
+    margin-left: 0;
+  }
+}
 @media (max-width: 576px) {
   .about-us .protocol .statistics {
     margin-top: 16px;
@@ -1995,6 +2027,21 @@ h3.lexend-heading {
   .about-us .protocol .statistics .col {
     flex: 0 0 50%;
     margin: 16px 0 0;
+  }
+  .about-us .protocol .early-xbg {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 360px) {
+  .about-us .protocol .numbers .col:first-child {
+    margin-right: 14px;
+  }
+  .about-us .protocol .numbers .value {
+    font-size: 26px;
+  }
+  .about-us .protocol .numbers .label {
+    font-size: 14px;
   }
 }
 .about-us .vision .page-border {
