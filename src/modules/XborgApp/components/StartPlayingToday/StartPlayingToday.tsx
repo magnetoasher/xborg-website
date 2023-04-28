@@ -20,7 +20,7 @@ export const StartPlayingToday = () => {
           </p>
           <ButtonPrimary
             label="Launch alpha"
-            to="https://gaming.xborg.com"
+            href="https://gaming.xborg.com"
             target="_blank"
           />
           {/* <ButtonSecondary label="Get beta early access" /> */}
