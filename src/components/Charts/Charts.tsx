@@ -35,7 +35,7 @@ export const LineGraph = ({ data }: LineGraphProps) => {
           </defs>
           <Tooltip content={<CustomTooltip data={data} />} />
 
-          <XAxis dataKey="xaxisLabel" interval={5} />
+          <XAxis dataKey="xaxisLabel" />
           <Area
             dataKey="compounded"
             type="basis"
