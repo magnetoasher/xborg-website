@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import {
   ButtonPrimary,
@@ -6,7 +7,6 @@ import {
   ObserverContainer,
 } from "../../../../components";
 import { GlobalState } from "../../../../reducer";
-import { useState } from "react";
 
 export const Head = () => {
   const seedSummary = useSelector((state: GlobalState) => state.seed.summary);
@@ -50,7 +50,7 @@ export const Head = () => {
       <div className="mobile-coming lexend-heading-s text-center  row column middle center">
         <span>Seed round starts in:</span>
 
-        <Countdown date={new Date("May 15 2023 14:00:00 GMT+0200")} />
+        <Countdown date={new Date("May 22 2023 14:00:00 GMT+0200")} />
       </div>
     </ObserverContainer>
   );

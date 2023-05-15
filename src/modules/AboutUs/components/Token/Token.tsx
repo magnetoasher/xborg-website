@@ -28,7 +28,7 @@ export const Token = () => {
           </ul>
 
           <p className="lexend-body-xs2">Early interest form closes in:</p>
-          <Countdown date={new Date("2023/04/24")} />
+          <Countdown date={new Date("May 22 2023 14:00:00 GMT+0200")} />
 
           <div className="row">
             <ButtonSecondary label="Participate in the seed round" to="/seed" />
