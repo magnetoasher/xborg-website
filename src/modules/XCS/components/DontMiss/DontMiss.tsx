@@ -1,9 +1,8 @@
 import { Images } from "../../../../assets/imgs/Images";
 import {
-  ParallaxLayer,
-  ObserverContainer,
   Links,
-  SectionDescription,
+  ObserverContainer,
+  ParallaxLayer,
   SectionHead,
 } from "../../../../components";
 import { PickGame } from "../PickGame/PickGame";
@@ -30,7 +29,7 @@ export const DontMiss = () => {
 
           <div className="row btn-container">
             <a
-              href="https://discord.gg/Cb73U6PX"
+              href="https://discord.gg/xborg"
               className="btn-primary row middle center"
               target="_blank"
             >
