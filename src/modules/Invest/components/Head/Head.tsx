@@ -33,7 +33,7 @@ export const Head = () => {
           <div className="coming lexend-heading-s row middle">
             <span className="coming-desc">Seed round starts in:</span>
             <Countdown
-              date={new Date("May 15 2023 14:00:00 GMT+0200")}
+              date={new Date("May 22 2023 14:00:00 GMT+0200")}
               smaller
             />
           </div>

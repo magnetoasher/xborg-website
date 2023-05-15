@@ -167,7 +167,7 @@ export const HowTo = () => {
               <div className="row column category-details swissborg">
                 <div className="details-row row">
                   <div className="cat-image">
-                    <div className="lexend-body-xs2 date">15/05</div>
+                    <div className="lexend-body-xs2 date">22/05</div>
                     <img src={Images.invest.swiss1} alt="Swiss 1" />
                     <div className="lexend-heading-m vault-size">
                       Vault size | $100k
@@ -199,7 +199,7 @@ export const HowTo = () => {
                     <div className="starts-in row middle">
                       <span className="name lexend-body-xs2">Starts in:</span>
                       <Countdown
-                        date={new Date("May 15 2023 14:00:00 GMT+0200")}
+                        date={new Date("May 22 2023 14:00:00 GMT+0200")}
                         smaller
                       />
                     </div>
@@ -208,7 +208,7 @@ export const HowTo = () => {
 
                 <div className="details-row row">
                   <div className="cat-image">
-                    <div className="lexend-body-xs2 date">17/05</div>
+                    <div className="lexend-body-xs2 date">24/05</div>
                     <img src={Images.invest.swiss4} alt="Swiss 4" />
                     <div className="lexend-heading-m vault-size">
                       Vault size | $500k
@@ -240,7 +240,7 @@ export const HowTo = () => {
                     <div className="starts-in row middle">
                       <span className="name lexend-body-xs2">Starts in:</span>
                       <Countdown
-                        date={new Date("May 17 2023 14:00:00 GMT+0200")}
+                        date={new Date("May 24 2023 14:00:00 GMT+0200")}
                         smaller
                       />
                     </div>
@@ -249,7 +249,7 @@ export const HowTo = () => {
 
                 <div className="details-row row">
                   <div className="cat-image">
-                    <div className="lexend-body-xs2 date">19/05</div>
+                    <div className="lexend-body-xs2 date">26/05</div>
                     <img src={Images.invest.swiss2} alt="Swiss 2" />
                     <div className="lexend-heading-m vault-size">
                       Vault size | $300k
@@ -281,7 +281,7 @@ export const HowTo = () => {
                     <div className="starts-in row middle">
                       <span className="name lexend-body-xs2">Starts in:</span>
                       <Countdown
-                        date={new Date("May 19 2023 14:00:00 GMT+0200")}
+                        date={new Date("May 26 2023 14:00:00 GMT+0200")}
                         smaller
                       />
                     </div>
@@ -290,7 +290,7 @@ export const HowTo = () => {
 
                 <div className="details-row row">
                   <div className="cat-image">
-                    <div className="lexend-body-xs2 date">22/05</div>
+                    <div className="lexend-body-xs2 date">29/05</div>
                     <img src={Images.invest.swiss3} alt="Swiss 3" />
                     <div className="lexend-heading-m vault-size">
                       Vault size | $200k
@@ -323,7 +323,7 @@ export const HowTo = () => {
                     <div className="starts-in row middle">
                       <span className="name lexend-body-xs2">Starts in:</span>
                       <Countdown
-                        date={new Date("May 22 2023 14:00:00 GMT+0200")}
+                        date={new Date("May 29 2023 14:00:00 GMT+0200")}
                         smaller
                       />
                     </div>

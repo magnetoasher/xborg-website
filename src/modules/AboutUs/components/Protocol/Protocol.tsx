@@ -36,7 +36,7 @@ export const Protocol = () => {
           <div className="row middle early-xbg">
             <strong className="lexend-body-s">Early XBG sale starts in:</strong>
             <Countdown
-              date={new Date("May 15 2023 14:00:00 GMT+0200")}
+              date={new Date("May 22 2023 14:00:00 GMT+0200")}
               smaller
             />
           </div>
