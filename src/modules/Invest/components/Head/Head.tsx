@@ -10,7 +10,6 @@ import { GlobalState } from "../../../../reducer";
 
 export const Head = () => {
   const seedSummary = useSelector((state: GlobalState) => state.seed.summary);
-
   const [display, setChart] = useState(false);
 
   return (
