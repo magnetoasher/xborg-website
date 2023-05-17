@@ -33,9 +33,9 @@ export const Links = () => {
       <Link to="/" onClick={onRedirect}>
         About us
       </Link>
-      <Link to="/faq" onClick={onRedirect}>
+      <a href="https://xborg-1.gitbook.io/faq/" target="_blank">
         FAQ
-      </Link>
+      </a>
     </div>
   );
 };

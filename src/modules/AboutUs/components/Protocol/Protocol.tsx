@@ -3,7 +3,6 @@ import { Images } from "../../../../assets/imgs/Images";
 import {
   ButtonPrimary,
   CountUpAnimation,
-  Countdown,
   ObserverContainer,
   ParallaxLayer,
   SectionHead,
@@ -33,12 +32,8 @@ export const Protocol = () => {
             fans. Currently raising funds from our community.
           </p>
 
-          <div className="row middle early-xbg">
-            <strong className="lexend-body-s">Early XBG sale starts in:</strong>
-            <Countdown
-              date={new Date("May 22 2023 14:00:00 GMT+0200")}
-              smaller
-            />
+          <div className="row middle seed-live lexend-body-s">
+            XBorg seed round <strong>is LIVE!</strong>
           </div>
 
           <div className="row numbers">
@@ -62,7 +57,11 @@ export const Protocol = () => {
           </div>
 
           <div className="row actions">
-            <ButtonPrimary label="Register interest" to="/seed" />
+            <ButtonPrimary
+              label="Invest in XBorg"
+              href="https://launchpad.xborg.com/"
+              target="_blank"
+            />
           </div>
         </SectionHead>
       </div>

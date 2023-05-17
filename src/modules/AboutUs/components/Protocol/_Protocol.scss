@@ -31,12 +31,15 @@
     margin-left: 16px;
   }
 
-  .early-xbg {
+  .seed-live {
     margin-left: 22px;
     margin-top: 16px;
+    font-weight: 700;
 
     strong {
-      margin-right: 16px;
+      color: $primary100;
+      margin-left: 8px;
+      font-weight: 700;
     }
   }
 

@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import {
   ButtonPrimary,
-  Countdown,
   LineGraph,
   ObserverContainer,
 } from "../../../../components";
@@ -30,15 +29,15 @@ export const Head = () => {
           </p>
 
           <div className="coming lexend-heading-s row middle">
-            <span className="coming-desc">SwissBorg vaults open in:</span>
-            <Countdown
-              date={new Date("May 22 2023 14:00:00 GMT+0200")}
-              smaller
-            />
+            XBorg seed round is <span>live</span> for Prometheus holders!
           </div>
 
           <div className="row action">
-            <ButtonPrimary label="Register interest" to="/seed" />
+            <ButtonPrimary
+              label="Invest in XBorg"
+              href="https://launchpad.xborg.com/"
+              target="_blank"
+            />
           </div>
         </div>
 
@@ -46,10 +45,10 @@ export const Head = () => {
           <LineGraph data={seedSummary?.summary} />
         ) : null}
       </div>
-      <div className="mobile-coming lexend-heading-s text-center  row column middle center">
-        <span>SwissBorg vaults open in:</span>
-
-        <Countdown date={new Date("May 22 2023 14:00:00 GMT+0200")} />
+      <div className="w-full row middle center">
+        <div className="mobile-coming lexend-heading-s text-center">
+          XBorg seed round is <span>live</span> for Prometheus holders!
+        </div>
       </div>
     </ObserverContainer>
   );

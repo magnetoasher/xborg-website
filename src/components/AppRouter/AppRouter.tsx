@@ -2,18 +2,17 @@ import { useEffect, useState } from "react";
 import { Location, Route, Routes, useLocation } from "react-router-dom";
 import {
   AboutUs,
-  XCSPage,
-  FAQ,
-  Seed,
-  XborgApp,
-  TermsAndConditions,
-  Prometheus,
-  SubmissionRecorded,
   PageAboutXborg,
-  PageWhyInvest,
+  PageEventNews,
   PageHowToInvest,
   PageInvestFAQ,
-  PageEventNews,
+  PageWhyInvest,
+  Prometheus,
+  Seed,
+  SubmissionRecorded,
+  TermsAndConditions,
+  XCSPage,
+  XborgApp,
 } from "../../modules";
 
 export enum APP_ROUTER_TRANSITION {
@@ -51,7 +50,6 @@ export const AppRouter = ({ setNavbarBtn }: ApPRouterProps) => {
         <Route path="/xborg-app" element={<XborgApp />} />
         <Route path="/xtreme-championship-series" element={<XCSPage />} />
         <Route path="/terms-and-agreements" element={<TermsAndConditions />} />
-        <Route path="/FAQ" element={<FAQ />} />
         <Route path="/seed" element={<Seed setNavbarBtn={setNavbarBtn} />} />
         <Route
           path="/seed/utm"

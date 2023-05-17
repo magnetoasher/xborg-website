@@ -1939,12 +1939,15 @@ h3.lexend-heading {
 .about-us .protocol .actions {
   margin-left: 16px;
 }
-.about-us .protocol .early-xbg {
+.about-us .protocol .seed-live {
   margin-left: 22px;
   margin-top: 16px;
+  font-weight: 700;
 }
-.about-us .protocol .early-xbg strong {
-  margin-right: 16px;
+.about-us .protocol .seed-live strong {
+  color: #eb3a4a;
+  margin-left: 8px;
+  font-weight: 700;
 }
 .about-us .protocol .parallaxed img {
   max-width: 443px;
@@ -4668,27 +4671,6 @@ h3.lexend-heading {
   margin-bottom: 18px;
 }
 
-.faq {
-  padding-bottom: 80px;
-  width: 100%;
-}
-.faq h2.with-cube {
-  color: #eb3a4a;
-  margin: 32px 0;
-  position: relative;
-}
-.faq h2.with-cube:after {
-  content: "";
-  position: absolute;
-  left: -32px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  background: #eb3a4a;
-  box-shadow: 0px 0px 16px rgba(235, 58, 74, 0.5);
-}
-
 .seed {
   padding-bottom: 80px;
   width: 100%;
@@ -5217,10 +5199,12 @@ h3.lexend-heading {
 .invest .head .coming {
   margin: 24px 0 86px;
   opacity: 0;
+  font-weight: 700;
   transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.invest .head .coming .coming-desc {
-  margin-right: 16px;
+.invest .head .coming span {
+  color: #eb3a4a;
+  margin: 0 6px;
 }
 .invest .head .mobile-coming {
   display: none;
@@ -5249,9 +5233,11 @@ h3.lexend-heading {
   .invest .head .mobile-coming {
     margin: 32px 0 48px;
     display: flex;
+    font-weight: 700;
   }
-  .invest .head .mobile-coming .countdown {
-    margin-top: 20px;
+  .invest .head .mobile-coming span {
+    color: #eb3a4a;
+    margin: 0 6px;
   }
   .invest .head .head-details {
     max-width: 100%;
@@ -6937,6 +6923,10 @@ h3.lexend-heading {
   .invest .news-and-events h2 {
     margin: 24px 0;
   }
+}
+.invest .invest-faq {
+  padding-bottom: 80px;
+  width: 100%;
 }
 .invest .invest-faq .faqs {
   margin-top: 77px;

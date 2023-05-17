@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Images } from "../../../../assets/imgs/Images";
-import { ButtonSecondary, Links } from "../../../../components";
+import { ButtonPrimary, ButtonSecondary, Links } from "../../../../components";
 import { Collapsible } from "../../../../components/Collapsible";
 import { Countdown } from "../../../../components/Countdown";
 import { AppViewModel } from "../../../../viewmodels/AppViewModel";
@@ -86,7 +86,7 @@ export const HowTo = () => {
               <div className="row column category-details prometheus-category">
                 <div className="details-row row">
                   <div className="cat-image">
-                    <div className="lexend-body-xs2 date">16/05</div>
+                    <div className="lexend-body-xs2 date">Live</div>
                     <img src={Images.invest.prometheus} alt="Prometheus" />
                   </div>
 
@@ -109,11 +109,11 @@ export const HowTo = () => {
                       </li>
                     </ul>
 
-                    <div className="starts-in row middle">
-                      <span className="name lexend-body-xs2">Starts in:</span>
-                      <Countdown
-                        date={new Date("May 16 2023 14:00:00 GMT+0200")}
-                        smaller
+                    <div className="row">
+                      <ButtonPrimary
+                        label="Invest now"
+                        href="https://launchpad.xborg.com/"
+                        target="_blank"
                       />
                     </div>
                   </div>

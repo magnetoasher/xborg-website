@@ -64,7 +64,11 @@ export const Navigation = ({ navbarBtn }: NavigationProps) => {
       </nav>
       {navbarBtn == undefined ? (
         <div className="early-access">
-          <ButtonPrimary label="Register interest" to="seed" />
+          <ButtonPrimary
+            label="Invest in XBorg"
+            href="https://launchpad.xborg.com/"
+            target="_blank"
+          />
         </div>
       ) : (
         navbarBtn
