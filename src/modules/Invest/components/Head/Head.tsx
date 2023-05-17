@@ -30,7 +30,7 @@ export const Head = () => {
           </p>
 
           <div className="coming lexend-heading-s row middle">
-            <span className="coming-desc">Seed round starts in:</span>
+            <span className="coming-desc">SwissBorg vaults open in:</span>
             <Countdown
               date={new Date("May 22 2023 14:00:00 GMT+0200")}
               smaller
@@ -47,7 +47,7 @@ export const Head = () => {
         ) : null}
       </div>
       <div className="mobile-coming lexend-heading-s text-center  row column middle center">
-        <span>Seed round starts in:</span>
+        <span>SwissBorg vaults open in:</span>
 
         <Countdown date={new Date("May 22 2023 14:00:00 GMT+0200")} />
       </div>
