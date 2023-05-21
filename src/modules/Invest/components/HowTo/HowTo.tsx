@@ -167,7 +167,7 @@ export const HowTo = () => {
               <div className="row column category-details swissborg">
                 <div className="details-row row">
                   <div className="cat-image">
-                    <div className="lexend-body-xs2 date">22/05</div>
+                    <div className="lexend-body-xs2 date">23/05</div>
                     <img src={Images.invest.swiss1} alt="Swiss 1" />
                     <div className="lexend-heading-m vault-size">
                       Vault size | $100k
@@ -199,7 +199,7 @@ export const HowTo = () => {
                     <div className="starts-in row middle">
                       <span className="name lexend-body-xs2">Starts in:</span>
                       <Countdown
-                        date={new Date("May 22 2023 14:00:00 GMT+0200")}
+                        date={new Date("May 23 2023 14:00:00 GMT+0200")}
                         smaller
                       />
                     </div>
@@ -211,7 +211,7 @@ export const HowTo = () => {
                     <div className="lexend-body-xs2 date">24/05</div>
                     <img src={Images.invest.swiss4} alt="Swiss 4" />
                     <div className="lexend-heading-m vault-size">
-                      Vault size | $500k
+                      Vault size | $300k
                     </div>
                   </div>
 
@@ -252,7 +252,7 @@ export const HowTo = () => {
                     <div className="lexend-body-xs2 date">26/05</div>
                     <img src={Images.invest.swiss2} alt="Swiss 2" />
                     <div className="lexend-heading-m vault-size">
-                      Vault size | $300k
+                      Vault size | $200k
                     </div>
                   </div>
 
@@ -262,7 +262,7 @@ export const HowTo = () => {
                     </h3>
                     <ul className="lexend-body-s">
                       <li>
-                        Investment: <span>$100 - $3,000</span>
+                        Investment: <span>$100 - $2,000</span>
                       </li>
                       <li>
                         Requirement: <span>Genesis or Generation status</span>
@@ -293,7 +293,7 @@ export const HowTo = () => {
                     <div className="lexend-body-xs2 date">29/05</div>
                     <img src={Images.invest.swiss3} alt="Swiss 3" />
                     <div className="lexend-heading-m vault-size">
-                      Vault size | $200k
+                      Vault size | $100k
                     </div>
                   </div>
 
