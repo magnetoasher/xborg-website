@@ -307,7 +307,7 @@ export const HowTo = () => {
                         <span>Based on in-app status ($100 - $1,000)</span>
                       </li>
                       <li>
-                        Requirement: <span>Standard or above</span>
+                        Requirement: <span>Explorer or above</span>
                       </li>
                       <li>
                         Token price: <span>$0.050</span>
