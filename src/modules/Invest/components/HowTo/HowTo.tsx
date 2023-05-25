@@ -304,7 +304,7 @@ export const HowTo = () => {
                     <ul className="lexend-body-s">
                       <li>
                         Investment:{" "}
-                        <span>Based on in-app status ($100 - $2000)</span>
+                        <span>Based on in-app status ($100 - $1,000)</span>
                       </li>
                       <li>
                         Requirement: <span>Standard or above</span>
