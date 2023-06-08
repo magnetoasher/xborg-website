@@ -3,18 +3,21 @@
   top: 0;
   right: 0;
   left: 0;
-  padding: 33px 44px 30px 44px;
+  padding: 16px 32px 16px 32px;
   height: $header-xl;
   z-index: 2;
+  transition: 0.2s ease-in;
 
-  &.hidden-nav {
+  &.hidden-nav.in {
     pointer-events: none;
+    background: transparent;
+    backdrop-filter: blur(0);
 
     .navigation-links {
       opacity: 0;
     }
 
-    .early-access,
+    .navigation-button,
     .hamburger-menu,
     .navigation-links.active {
       pointer-events: all;
@@ -23,12 +26,22 @@
 
   @import "./Hamburger";
 
+  .brand {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 32px;
+    z-index: 3;
+
+    path {
+      fill: $primary100;
+    }
+  }
+
   .navigation-links {
     transition: 0.2s ease-in;
-
-    .brand {
-      display: none;
-    }
 
     a {
       padding: 16px 20px;
@@ -38,9 +51,16 @@
     }
   }
 
-  .early-access {
-    position: relative;
+  .navigation-button {
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
     opacity: 0;
+
+    a {
+      padding: 16px;
+    }
 
     &:before {
       content: "";
@@ -56,16 +76,13 @@
       transition: 0.2s ease-in;
       display: none;
     }
-
-    a {
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-    }
   }
 
   &.in {
+    background: rgba(6, 6, 6, 0.5);
+    backdrop-filter: blur(10px);
+    transition-delay: 0.5s;
+
     .navigation-links {
       a {
         transition-delay: 0.3s;
@@ -79,22 +96,13 @@
       }
     }
 
-    .early-access {
+    .navigation-button {
       opacity: 1;
 
       &:before {
         transition-delay: 0.3s;
         opacity: 1;
       }
-    }
-  }
-
-  @media (min-width: 1648px) {
-    padding-right: 0;
-
-    &:after {
-      right: 0;
-      left: auto;
     }
   }
 
@@ -105,10 +113,16 @@
       height: $header-md;
     }
 
-    .early-access {
+    &.hidden-nav.in {
+      background: rgba(6, 6, 6, 0.5);
+      backdrop-filter: blur(10px);
+    }
+
+    .navigation-button {
       position: absolute;
       left: 50%;
-      top: 19px;
+      right: auto;
+      top: 15px;
       transform: translateX(-50%);
       transition: 0.3s ease-in;
 
@@ -116,11 +130,6 @@
         bottom: initial;
         left: 0;
         opacity: 0 !important;
-      }
-
-      a {
-        position: relative;
-        transform: translate(0, 0);
       }
 
       &.active {
@@ -229,7 +238,7 @@
   }
 
   @media (max-width: $xs-max) {
-    .early-access.active a {
+    .navigation-button.active a {
       padding: 16px;
     }
   }
@@ -247,13 +256,13 @@
   }
 
   @media (max-width: $lg-max) and (max-height: 540px) {
-    .early-access.active {
+    .navigation-button.active {
       transform: translateX(-50%) translateY(-60px);
     }
   }
 
   @media (max-width: $lg-max) and (max-height: 460px) {
-    .early-access.active {
+    .navigation-button.active {
       transform: translateX(-50%) translateY(-60px);
     }
 
@@ -264,7 +273,7 @@
   }
 
   @media (max-width: $lg-max) and (max-height: 360px) {
-    .early-access.active {
+    .navigation-button.active {
       transform: translateX(-50%) translateY(-60px);
     }
 

@@ -2,11 +2,14 @@
   height: 100vh;
   overflow: hidden;
   transform: translateZ(0);
-  padding-top: $header-xl;
 
   .simplebar-init {
     & > .simplebar-track.simplebar-horizontal {
       display: none;
+    }
+
+    & > .simplebar-track.simplebar-vertical {
+      top: $header-xl + 32px;
     }
   }
 

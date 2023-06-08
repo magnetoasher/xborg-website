@@ -1,7 +1,6 @@
 import { Images } from "../../../../assets/imgs/Images";
 import {
   ButtonSecondary,
-  Countdown,
   ObserverContainer,
   ParallaxLayer,
   SectionHead,
@@ -27,11 +26,8 @@ export const Token = () => {
             <li>Protocol access</li>
           </ul>
 
-          <p className="lexend-body-xs2">Early interest form closes in:</p>
-          <Countdown date={new Date("May 22 2023 14:00:00 GMT+0200")} />
-
-          <div className="row">
-            <ButtonSecondary label="Participate in the seed round" to="/seed" />
+          <div className="row actions">
+            <ButtonSecondary label="Learn more" to="/seed" />
           </div>
         </div>
       </div>

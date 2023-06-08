@@ -1,5 +1,10 @@
 .app-content {
   position: relative;
+  padding-top: $header-xl;
+
+  @media (max-width: $lg-max) {
+    padding-top: 0;
+  }
 }
 
 .Toastify__toast {

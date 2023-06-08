@@ -1,11 +1,6 @@
 import SimpleBar from "simplebar-react";
 import { Images } from "../../../../assets/imgs/Images";
-import {
-  ButtonSecondary,
-  Links,
-  ObserverContainer,
-  SectionHead,
-} from "../../../../components";
+import { Links, ObserverContainer, SectionHead } from "../../../../components";
 
 export const Roadmap = () => {
   return (
@@ -53,9 +48,6 @@ export const Roadmap = () => {
                 <div className="roadmap-index">2.</div>
                 <div className="roadmap-separator" />
                 <div className="roadmap-details active">Seed round</div>
-                <div className="row">
-                  <ButtonSecondary label="Register interest" to="/seed" />
-                </div>
               </div>
             </ObserverContainer>
 

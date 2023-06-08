@@ -1,131 +1,81 @@
-import { useEffect, useState } from "react";
 import { Images } from "../../../../assets/imgs/Images";
 import {
   ButtonPrimary,
-  ParallaxLayer,
   ObserverContainer,
-  CountUpAnimation,
+  ParallaxLayer,
 } from "../../../../components";
+import { TAG_TYPE, Tag } from "../../../../components/Tag";
 
-let counter = 0;
 export const Play = () => {
-  const phrases = [
-    "win prizes",
-    "collect badges",
-    "level up",
-    "build your identity",
-    "open lootboxes",
-  ];
-  const [phrase, setPhrase] = useState(phrases[0]);
-  const [isChanging, setChanging] = useState(false);
-
-  const data = {
-    users: 8000,
-    quests: 15000,
-    rewards: 20000,
-  };
-
-  useEffect(() => {
-    handlePhraseChange();
-  }, []);
-
-  function handlePhraseChange() {
-    setTimeout(() => {
-      counter++;
-      if (counter >= phrases.length) {
-        counter = 0;
-      }
-      setChanging(true);
-      setPhrase(phrases[counter]);
-    }, 3500);
-
-    setTimeout(() => {
-      setChanging(false);
-      handlePhraseChange();
-    }, 4500);
-  }
-
   return (
-    <div className={`play-intro expand row middle between`}>
+    <ObserverContainer
+      className={`play-intro expand row middle between`}
+      rootMargin="0px"
+    >
       <div className="description">
-        <div className="logo-icon">
-          <img src={Images.logofull} alt="" />
-        </div>
         <div className="play-intro-text">
-          <h1 className={`vista-xl ${isChanging ? "text-glitch" : ""}`}>
-            Play and
-            <br />
-            <span>{phrase}</span>
+          <h1 className="vista-xl">
+            A Portal has <span>Opened</span>
           </h1>
           <p className="lexend-body-m">
-            Discover a new meaning to play, connect with your favourite
-            communities and build your very own player identity.
+            Be among the early explorers. Mighty rewards might be found.
           </p>
+
+          <div className="row tags-row">
+            <Tag label={"Early Alpha"} value={""} type={TAG_TYPE.GRAY} />
+          </div>
 
           <div className="actions row middle">
             <ButtonPrimary
-              label="Launch App"
-              href="https://gaming.xborg.com/"
+              label="Enter the portal"
+              href="https://xborg.gg/"
               target="_blank"
             />
-            {/* <ButtonSecondary label={"Get Beta early access"} /> */}
-          </div>
-
-          <div className="row statistics">
-            <div className="col">
-              <CountUpAnimation number={data.users} className="stats-value" />
-
-              <div className="stats-label">Active users</div>
-            </div>
-            <div className="col">
-              <CountUpAnimation number={data.quests} className="stats-value" />
-
-              <div className="stats-label">Quests completed</div>
-            </div>
-            <div className="col">
-              <CountUpAnimation
-                number={data.rewards}
-                className="stats-value"
-                prefix="$"
-              />
-
-              <div className="stats-label">Rewards distributed</div>
-            </div>
           </div>
         </div>
       </div>
-      <ObserverContainer className="parallaxed-corner row end bottom">
-        <div className="triangle" />
+
+      <div className="cubes">
+        <div className="cube-1" />
+        <div className="cube-2" />
+        <div className="cube-3" />
+      </div>
+
+      <div className="corner-filler">
+        <img src={Images.xborgapp.play_corner} alt="" />
+      </div>
+
+      <ObserverContainer className="parallaxed-background" rootMargin="0px">
         <ParallaxLayer
-          image={Images.xborgapp.aliens}
-          factorX={-0.2}
-          factorY={0.2}
+          image={Images.xborgapp.play_bg_1}
+          factorX={0.1}
+          factorY={0.1}
           speed={0}
-          isBase
           className="parallaxed-1"
+          isBase
         />
         <ParallaxLayer
-          image={Images.xborgapp.dark_swordsman}
-          factorX={-0.1}
-          factorY={0}
+          image={Images.xborgapp.play_bg_2}
+          factorX={0.1}
+          factorY={-0.1}
           speed={0}
           className="parallaxed-2"
         />
         <ParallaxLayer
-          image={Images.xborgapp.mage}
-          factorX={0.1}
-          factorY={0}
+          image={Images.xborgapp.play_bg_3}
+          factorX={-0.1}
+          factorY={0.1}
           speed={0}
           className="parallaxed-3"
         />
         <ParallaxLayer
-          image={Images.xborgapp.sparkles}
-          factorX={-0.4}
-          factorY={0}
+          image={Images.xborgapp.play_bg_4}
+          factorX={-0.1}
+          factorY={-0.1}
           speed={0}
           className="parallaxed-4"
         />
       </ObserverContainer>
-    </div>
+    </ObserverContainer>
   );
 };

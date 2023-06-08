@@ -64,7 +64,7 @@ export const Prometheus = () => {
                 <ParallaxLayer
                   image={Images.aboutUs.render3d}
                   factorX={-0.4}
-                  factorY={-0.3}
+                  factorY={0}
                   speed={0}
                   className="parallaxed-4"
                 />

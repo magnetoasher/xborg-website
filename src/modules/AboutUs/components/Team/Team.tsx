@@ -1,10 +1,5 @@
 import { Images } from "../../../../assets/imgs/Images";
-import {
-  SectionDescription,
-  SectionHead,
-  TeamTile,
-  TeamTileType,
-} from "../../../../components";
+import { SectionHead, TeamTile, TeamTileType } from "../../../../components";
 
 export const Team = () => {
   const team: TeamTileType[] = [
@@ -56,7 +51,7 @@ export const Team = () => {
       image: Images.aboutUs.team.member09,
       title: "Julienas",
       desc: "ITOs",
-      linkedin: "https://www.linkedin.com/in/julien-grandjanny-b00a46aa/",
+      linkedin: "https://www.linkedin.com/in/julienas-galt",
     },
     {
       image: Images.aboutUs.team.member10,

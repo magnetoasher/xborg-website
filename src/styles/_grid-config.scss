@@ -5,7 +5,7 @@ $container-breakpoint-l: 672px;
 
 $container-padding: 148px;
 
-$header-xl: 107px;
+$header-xl: 90px;
 $header-md: 80px;
 $footer-xl: 80px;
 
@@ -26,7 +26,7 @@ $xxl-start: ($xl-max + 1); // Generate xxl breakpoint's min width
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: url("../assets/imgs/bg_image.png");
+  background-image: url("../assets/imgs/bg_image.jpg");
   background-size: cover;
 }
 

@@ -1,9 +1,9 @@
 import { Images } from "../../../../assets/imgs/Images";
 import {
   ButtonPrimary,
-  ParallaxLayer,
-  ObserverContainer,
   Links,
+  ObserverContainer,
+  ParallaxLayer,
 } from "../../../../components";
 
 export const StartPlayingToday = () => {
@@ -19,17 +19,19 @@ export const StartPlayingToday = () => {
             Get rewarded for playing your favourite games.
           </p>
           <ButtonPrimary
-            label="Launch alpha"
-            href="https://gaming.xborg.com"
+            label="Enter the portal"
+            href="https://xborg.gg"
             target="_blank"
           />
-          {/* <ButtonSecondary label="Get beta early access" /> */}
         </div>
 
         <div className="parallaxed-elements">
-          <ObserverContainer className="parallaxed-right row middle center">
+          <ObserverContainer
+            className="parallaxed-right row middle center"
+            rootMargin="0px"
+          >
             <ParallaxLayer
-              image={Images.xborgapp.artifact}
+              image={Images.xborgapp.ghostartifact}
               factorX={0.3}
               factorY={0.3}
               speed={0}
@@ -45,7 +47,10 @@ export const StartPlayingToday = () => {
             />
           </ObserverContainer>
 
-          <ObserverContainer className="parallaxed-left row middle center">
+          <ObserverContainer
+            className="parallaxed-left row middle center"
+            rootMargin="0px"
+          >
             <ParallaxLayer
               image={Images.xborgapp.blue_pet}
               factorX={-0.1}

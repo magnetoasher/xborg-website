@@ -1,13 +1,8 @@
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
-import { GlobalState } from "../../reducer";
-import { SeedActions } from "../../redux/seed/actions";
-import { SiteActions } from "../../redux/site/actions";
 import { AppDispatch } from "../../store";
 import { ScrollViewModel } from "../../viewmodels/ScrollViewModel";
-import { sleep } from "../../helpers/time";
 
 export type SidebarType = {
   active: number;
@@ -16,30 +11,26 @@ export type SidebarType = {
 
 export const Sidebar = ({ active, total }: SidebarType) => {
   const dispatch = useDispatch<AppDispatch>();
-  const siteLoaded = useSelector((state: GlobalState) => state.site.loaded);
-  const [loaded, setLoaded] = useState<boolean>(siteLoaded);
   const totalArray = Array.from(Array(total).keys());
 
   const scrollVM = new ScrollViewModel();
 
   useEffect(() => {
-    if (!siteLoaded) {
-      setLoaded(true);
-
-      Promise.all([dispatch(SeedActions.getSeed()), sleep(1000)])
-        .finally(() => {
-          dispatch(SiteActions.loadSite());
-        })
-        .catch(() => {
-          toast.success(
-            "Some data did not load properly. Please refresh the page"
-          );
-        });
-    }
+    // if (!siteLoaded) {
+    //   Promise.all([dispatch(SeedActions.getSeed()), sleep(1000)])
+    //     .finally(() => {
+    //       dispatch(SiteActions.loadSite());
+    //     })
+    //     .catch(() => {
+    //       toast.success(
+    //         "Some data did not load properly. Please refresh the page"
+    //       );
+    //     });
+    // }
   }, []);
 
   return (
-    <div className={`page-sidebar ${loaded ? "is-loaded" : "is-loading"}`}>
+    <div className="page-sidebar">
       <Link to="/">
         <svg
           viewBox="0 0 10 10"

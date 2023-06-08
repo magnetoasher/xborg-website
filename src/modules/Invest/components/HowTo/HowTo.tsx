@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 import { Images } from "../../../../assets/imgs/Images";
 import { ButtonPrimary, ButtonSecondary, Links } from "../../../../components";
 import { Collapsible } from "../../../../components/Collapsible";
@@ -307,7 +308,7 @@ export const HowTo = () => {
                         <span>Based on in-app status ($100 - $1,000)</span>
                       </li>
                       <li>
-                        Requirement: <span>Explorer or above</span>
+                        Requirement: <span>Standard or above</span>
                       </li>
                       <li>
                         Token price: <span>$0.050</span>

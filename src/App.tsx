@@ -1,7 +1,7 @@
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import { AppRouter, Footer, Links, Navigation } from "./components";
+import { AppRouter, Footer, Links, Navigation, PageLoader } from "./components";
 import store from "./store";
 // Import Swiper styles
 import "swiper/css";
@@ -11,8 +11,8 @@ import "swiper/css/pagination";
 
 import "react-toastify/dist/ReactToastify.css";
 
-import "./styles/main.css";
 import { useState } from "react";
+import "./styles/main.css";
 
 function App() {
   const [navbarBtn, setNavbarBtn] = useState<any>(undefined);
@@ -32,6 +32,7 @@ function App() {
         <AppRouter setNavbarBtn={setNavbarBtn} />
         <Links />
         <Footer />
+        <PageLoader />
       </Provider>
     </BrowserRouter>
   );

@@ -1,6 +1,6 @@
 export const Images = {
   logo: require("./logo.svg"),
-  background: require("./bg_image.png"),
+  background: require("./bg_image.jpg"),
   chevron_left: require("./chevron-left.svg"),
   chevron_right: require("./chevron-right.svg"),
   arrow_s_down: require("./arrow-square-down.svg"),
@@ -133,10 +133,12 @@ export const Images = {
   },
 
   xborgapp: {
-    mage: require("./xborgapp/mage.png"),
-    dark_swordsman: require("./xborgapp/dark-swordsman.png"),
-    sparkles: require("./xborgapp/sparkles.png"),
-    aliens: require("./xborgapp/aliens.png"),
+    play_bg_1: require("./xborgapp/play_bg_1.png"),
+    play_bg_2: require("./xborgapp/play_bg_2.png"),
+    play_bg_3: require("./xborgapp/play_bg_3.png"),
+    play_bg_4: require("./xborgapp/play_bg_4.png"),
+    play_corner: require("./xborgapp/play_corner.png"),
+
     counter_terrorist: require("./xborgapp/counter-terrorist.png"),
     blue_pet: require("./xborgapp/blue-pet.png"),
     ghostartifact: require("./xborgapp/ghostartifact.png"),

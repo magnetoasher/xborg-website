@@ -1,13 +1,10 @@
 import { useSelector } from "react-redux";
 import { Images } from "../../../../assets/imgs/Images";
 import {
-  ButtonPrimary,
-  CountUpAnimation,
   ObserverContainer,
   ParallaxLayer,
   SectionHead,
 } from "../../../../components";
-import { formatNumberToK } from "../../../../helpers/inputs";
 import { GlobalState } from "../../../../reducer";
 
 export const Protocol = () => {
@@ -32,11 +29,7 @@ export const Protocol = () => {
             fans. Currently raising funds from our community.
           </p>
 
-          <div className="row middle seed-live lexend-body-s">
-            XBorg seed round <strong>is LIVE!</strong>
-          </div>
-
-          <div className="row numbers">
+          {/* <div className="row numbers">
             <div className="col">
               <div className="value">
                 {seedSummary?.totalCapital
@@ -54,15 +47,7 @@ export const Protocol = () => {
               )}
               <div className="label lexend-body-m">Total submissions</div>
             </div>
-          </div>
-
-          <div className="row actions">
-            <ButtonPrimary
-              label="Invest in XBorg"
-              href="https://launchpad.xborg.com/"
-              target="_blank"
-            />
-          </div>
+          </div> */}
         </SectionHead>
       </div>
       <ObserverContainer className="parallaxed">
