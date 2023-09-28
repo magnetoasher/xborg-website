@@ -1,0 +1,28 @@
+@import './TextInput/TextInput';
+
+.input-label {
+  font-family: $lexend;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+  color: #cacace;
+}
+
+.input-error {
+  font-family: $lexend;
+  color: $red100;
+  font-size: 12px;
+  height: 0;
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: 0.2s ease-in;
+
+  &.in {
+    margin-top: 10px;
+    height: 12px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

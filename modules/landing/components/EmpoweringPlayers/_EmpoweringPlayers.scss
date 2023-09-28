@@ -1,0 +1,146 @@
+.landing-empowering-players {
+  position: relative;
+  z-index: 3;
+  padding-top: 61px;
+  background: url('/images/landing/bubbles_bot_right.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+
+  .parallax-bubble {
+    position: absolute;
+    right: 161px;
+    bottom: 100%;
+  }
+
+  .parallax-bubble-2 {
+    position: absolute;
+    left: -16px;
+    bottom: 20%;
+  }
+
+  .cards {
+    position: absolute;
+    top: 0;
+    right: 105px;
+    z-index: -1;
+
+    img {
+      position: absolute;
+      opacity: 0;
+      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  h2 {
+    max-width: 703px;
+
+    .word {
+      transform: translateY(16px);
+      opacity: 0;
+      transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  .cols {
+    margin: 80px -12px -12px;
+    padding-bottom: 244px;
+
+    .block {
+      height: 262px;
+      border-radius: 16px;
+      border: 1px solid #343434;
+      background: rgba(9, 9, 9, 0.8);
+      backdrop-filter: blur(10px);
+      padding: 32px 24px;
+
+      .lexend-body-md {
+        margin-top: 16px;
+      }
+
+      .lexend-body-s {
+        color: $red100;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+      }
+    }
+
+    .block-container {
+      width: 33.3333%;
+      padding: 12px;
+      transform: translateY(16px);
+      opacity: 0;
+      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+      position: relative;
+
+      &:nth-child(2) {
+        .block {
+          margin-top: 25%;
+        }
+      }
+
+      &:nth-child(3) {
+        .block {
+          margin-top: 75%;
+        }
+      }
+
+      &:nth-child(4) {
+        .block {
+          margin-top: -75%;
+        }
+      }
+
+      &:nth-child(5) {
+        .block {
+          margin-top: -50%;
+        }
+      }
+    }
+  }
+
+  .in {
+    h2 .word {
+      opacity: 1;
+      transform: translateY(0);
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: 0.3s + ($i * 0.035s);
+        }
+      }
+    }
+
+    .block-container {
+      opacity: 1;
+      transform: translateY(0);
+
+      .cards {
+        img {
+          opacity: 1;
+
+          &:first-child {
+            transform: rotate(4.999deg);
+            z-index: 2;
+            transition-delay: 0.2s;
+          }
+
+          &:nth-child(2) {
+            transform: rotate(-5deg) translate(-97px, 11px);
+            transition-delay: 0.35s;
+          }
+
+          &:last-child {
+            transform: rotate(19.996deg) translate(111px, 17px);
+            transition-delay: 0.5s;
+          }
+        }
+      }
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: 0.2s + ($i * 0.1s);
+        }
+      }
+    }
+  }
+}

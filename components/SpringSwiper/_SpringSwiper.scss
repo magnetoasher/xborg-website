@@ -1,0 +1,89 @@
+.swiper.spring-swiper {
+  .swiper-slide {
+    transition-timing-function: cubic-bezier(0.76, 0.09, 0.215, 1);
+    height: initial;
+
+    .spring-swiper-inner {
+      transition: 0.3s ease-in;
+      opacity: 0;
+    }
+
+    &-visible {
+      .spring-swiper-inner {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.spring-swiper-container {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -16px;
+    bottom: 0;
+    right: -16px;
+    z-index: 0;
+  }
+
+  .swiper-next,
+  .swiper-prev {
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    z-index: 10;
+    transition: 0.2s ease-in;
+  }
+
+  .swiper-next {
+    transform: translateX(30px);
+    right: -52px;
+  }
+
+  .swiper-prev {
+    transform: translateX(-30px);
+    left: -52px;
+  }
+
+  .swiper-prev,
+  .swiper-next {
+    opacity: 0;
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+
+    .btn {
+      width: 36px;
+      height: 36px;
+    }
+
+    svg {
+      margin-right: 0;
+    }
+  }
+
+  &:hover {
+    .swiper-next,
+    .swiper-prev {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .swiper-button-disabled {
+      opacity: 0;
+      pointer-events: none;
+      z-index: -100;
+
+      &.swiper-prev {
+        transform: translateX(-30px);
+      }
+      &.swiper-next {
+        transform: translateX(30px);
+      }
+    }
+  }
+}

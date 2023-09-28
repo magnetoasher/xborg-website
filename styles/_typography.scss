@@ -1,0 +1,116 @@
+@font-face {
+  font-family: $integralCF;
+  font-style: 700;
+  src: url('../assets/fonts/integral_cf/IntegralCF-Bold.otf');
+}
+
+@font-face {
+  font-family: $integralCF;
+  font-style: 400;
+  src: url('../assets/fonts/integral_cf/IntegralCF-Regular.otf');
+}
+
+// INTEGRAL FC
+.integralfc-h1 {
+  font-family: $integralCF;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 64px;
+}
+
+.integralfc-h2 {
+  font-family: $integralCF;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48px; /* 120% */
+}
+
+// LEXEND
+.lexend-heading-xl {
+  font-family: $lexend;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.lexend-heading-l {
+  font-family: $lexend;
+  font-size: 32px;
+  font-weight: 400;
+
+  &.l {
+    font-weight: 300;
+    letter-spacing: 0px;
+  }
+}
+
+.lexend-body-sl {
+  font-family: $lexend;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+
+  &.l {
+    font-weight: 300;
+  }
+}
+
+.lexend-body-md {
+  font-family: $lexend;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  &.l {
+    font-weight: 300;
+  }
+
+  &.sb {
+    font-weight: 500;
+  }
+}
+
+.lexend-body-sm {
+  font-family: $lexend;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+
+  &.l {
+    font-weight: 300;
+  }
+
+  &.sb {
+    font-weight: 500;
+  }
+}
+
+.lexend-body-s {
+  font-family: $lexend;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+
+  &.l {
+    font-weight: 300;
+  }
+}
+
+.container {
+  width: 1210px;
+  margin: 0 auto;
+}
+
+.reveal-from-bottom {
+  .word,
+  .line {
+    display: inline-block;
+  }
+
+  .letter {
+    will-change: transform;
+    position: relative;
+    opacity: 0;
+    transition: opacity 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  }
+}

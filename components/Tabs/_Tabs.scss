@@ -1,0 +1,41 @@
+.tabs {
+  padding-bottom: 20px;
+
+  .heads {
+    white-space: nowrap;
+    border-radius: 8px;
+
+    a {
+      text-decoration: none;
+      padding: 16px;
+      position: relative;
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      font-weight: 700;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+    }
+
+    .head-item {
+      &.active {
+        pointer-events: none;
+
+        a {
+          color: white;
+
+          &:after {
+            width: 24px;
+          }
+        }
+      }
+    }
+  }
+}

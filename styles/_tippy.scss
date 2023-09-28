@@ -1,0 +1,108 @@
+[data-tippy-root] {
+  max-width: calc(100vw - 10px);
+}
+
+.tippy-box {
+  position: relative;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  white-space: normal;
+  outline: 0;
+  transition-property: transform, visibility, opacity;
+
+  &[data-animation='fade'][data-state='hidden'] {
+    opacity: 0;
+  }
+
+  &[data-placement^='top'] {
+    & > .tippy-arrow {
+      bottom: 0;
+
+      &:before {
+        bottom: -7px;
+        left: 0;
+        border-width: 8px 8px 0;
+        border-top-color: initial;
+        transform-origin: center top;
+      }
+    }
+  }
+
+  &[data-placement^='bottom'] {
+    & > .tippy-arrow {
+      top: 0;
+
+      &:before {
+        top: -7px;
+        left: 0;
+        border-width: 0 8px 8px;
+        border-bottom-color: initial;
+        transform-origin: center bottom;
+      }
+    }
+  }
+
+  &[data-placement^='left'] {
+    & > .tippy-arrow {
+      right: 0;
+
+      &:before {
+        border-width: 8px 0 8px 8px;
+        border-left-color: initial;
+        right: -7px;
+        transform-origin: center left;
+      }
+    }
+  }
+
+  &[data-placement^='right'] {
+    & > .tippy-arrow {
+      left: 0;
+
+      &:before {
+        left: -7px;
+        border-width: 8px 8px 8px 0;
+        border-right-color: initial;
+        transform-origin: center right;
+      }
+    }
+  }
+
+  &[data-placement^='right'] {
+    & > .tippy-arrow {
+      left: 0;
+
+      &:before {
+        left: -7px;
+        border-width: 8px 8px 8px 0;
+        border-right-color: initial;
+        transform-origin: center right;
+      }
+    }
+  }
+
+  &[data-inertia][data-state='visible'] {
+    transition-timing-function: cubic-bezier(0.54, 1.5, 0.38, 1.11);
+  }
+}
+
+.tippy-arrow {
+  width: 16px;
+  height: 16px;
+  opacity: 0.6;
+}
+
+.tippy-arrow:before {
+  content: '';
+  position: absolute;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.tippy-content {
+  position: relative;
+  padding: 8px;
+  z-index: 1;
+}

@@ -1,0 +1,73 @@
+.landing-next-gen-gaming {
+  position: relative;
+  z-index: 3;
+  padding-top: 23px;
+  position: relative;
+  height: 839px;
+  z-index: 0;
+
+  h2 {
+    max-width: 630px;
+    margin: 0 auto;
+    text-align: center;
+
+    .word {
+      transform: translateY(16px);
+      opacity: 0;
+      transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  .section-description {
+    text-align: center;
+    margin: 24px auto 0;
+    max-width: 511px;
+    opacity: 0;
+    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .background {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1440px;
+    height: auto;
+    z-index: -1;
+  }
+
+  .parallax-token {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .main-bubble {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .in {
+    h2 .word {
+      opacity: 1;
+      transform: translateY(0);
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: 0.3s + ($i * 0.035s);
+        }
+      }
+    }
+
+    .section-description {
+      opacity: 1;
+      transition-delay: 0.4s;
+    }
+  }
+}

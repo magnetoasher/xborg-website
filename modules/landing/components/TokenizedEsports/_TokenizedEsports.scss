@@ -1,0 +1,92 @@
+.landing-tokenized-esports {
+  position: relative;
+  z-index: 3;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  h2 {
+    text-align: center;
+    margin: 24px 0;
+
+    .word {
+      transform: translateY(16px);
+      opacity: 0;
+      transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  p {
+    color: #cacace;
+    max-width: 511px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .lexend-body-s {
+    color: $red100;
+    text-align: center;
+  }
+
+  .register-interest {
+    width: 487px;
+    margin-top: 56px;
+    margin-bottom: 80px;
+    position: relative;
+    transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
+
+    .btn {
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      bottom: 4px;
+    }
+  }
+
+  .chat {
+    .vote {
+      padding: 16px 30px;
+      border-radius: 16px;
+      border: 1px solid #343434;
+      background: rgba(9, 9, 9, 0.8);
+      backdrop-filter: blur(10px);
+      margin-bottom: 16px;
+
+      .lexend-body-sl {
+        color: #f0f0f0;
+      }
+    }
+
+    .message {
+      border-radius: 16px 16px 0px 16px;
+      border: 1px solid #343434;
+      background: rgba(9, 9, 9, 0.8);
+      backdrop-filter: blur(10px);
+      padding: 16px 24px;
+      margin-bottom: 4px;
+      align-self: flex-end;
+    }
+
+    .message-received {
+      border-radius: 16px 16px 16px 0px;
+      border: 1px solid #343434;
+      background: #1f1f1f;
+      backdrop-filter: blur(10px);
+      padding: 16px 24px;
+      margin-bottom: 4px;
+      align-self: flex-start;
+    }
+  }
+
+  .in {
+    h2 .word {
+      opacity: 1;
+      transform: translateY(0);
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: 0.3s + ($i * 0.035s);
+        }
+      }
+    }
+  }
+}

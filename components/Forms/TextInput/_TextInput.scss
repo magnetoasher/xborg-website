@@ -1,0 +1,39 @@
+.input-wrapper {
+  position: relative;
+
+  .input-container {
+    position: relative;
+  }
+
+  input {
+    background-color: transparent;
+    padding: 12px;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 12px;
+    height: 56px;
+    border: 1px solid #343434;
+    background: rgba(9, 9, 9, 0.8);
+    backdrop-filter: blur(10px);
+    color: #787885;
+    font-family: $lexend;
+    transition: 0.3s ease-in;
+  }
+
+  ::placeholder {
+    color: #3d3d3d;
+    opacity: 1;
+  }
+
+  input:active + .border,
+  input:focus + .border {
+    width: 100%;
+    opacity: 1;
+  }
+
+  &.has-error {
+    input {
+      border-color: $red100;
+    }
+  }
+}

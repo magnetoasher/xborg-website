@@ -1,0 +1,52 @@
+.landing-launching {
+  position: relative;
+  z-index: 3;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: #101010;
+
+  .lexend-body-s {
+    color: $red100;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  h2 {
+    max-width: 455px;
+    text-align: center;
+    margin-bottom: 56px;
+
+    .word {
+      transform: translateY(16px);
+      opacity: 0;
+      transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  p {
+    color: #cacace;
+    max-width: 270px;
+  }
+
+  .interest {
+    margin: 12px 0 32px;
+  }
+
+  .btn {
+    height: 56px;
+    font-weight: 400;
+  }
+
+  .in {
+    h2 .word {
+      opacity: 1;
+      transform: translateY(0);
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: 0.3s + ($i * 0.035s);
+        }
+      }
+    }
+  }
+}

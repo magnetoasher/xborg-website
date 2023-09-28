@@ -1,0 +1,30 @@
+@mixin modal(
+  $maxWidth: 500px,
+  $maxHeight: 100vh,
+  $center: false,
+  $autoHeight: false
+) {
+  position: fixed;
+  @if $center {
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50.1%);
+  } @else {
+    right: ($maxWidth * -1);
+    top: 0;
+  }
+  max-width: $maxWidth;
+  z-index: 1001;
+
+  @if $autoHeight {
+    height: auto;
+    max-height: $maxHeight;
+  } @else {
+    height: $maxHeight;
+  }
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #060606;
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}

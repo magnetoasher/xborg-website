@@ -1,0 +1,75 @@
+.landing-roadmap {
+  position: relative;
+  z-index: 3;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  h2 {
+    max-width: 455px;
+    margin-bottom: 56px;
+
+    .word {
+      transform: translateY(16px);
+      opacity: 0;
+      transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  .swiper-slide {
+    position: relative;
+    width: 35%;
+    padding-right: 104px;
+  }
+
+  .swiper-slide-content {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 32px;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.3) -1.73%,
+          rgba(0, 0, 0, 0) 66.12%
+        ),
+        #343434;
+    }
+  }
+
+  .quarter {
+    background: radial-gradient(
+      140.26% 135.18% at 108.36% -24%,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .category {
+    color: $red100;
+    margin: 32px 0 8px 32px;
+  }
+
+  .item {
+    padding-left: 32px;
+  }
+
+  .in {
+    h2 .word {
+      opacity: 1;
+      transform: translateY(0);
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: 0.3s + ($i * 0.035s);
+        }
+      }
+    }
+  }
+}

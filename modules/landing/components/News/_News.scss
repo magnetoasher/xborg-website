@@ -1,0 +1,51 @@
+.landing-news {
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 120px;
+
+  h2 {
+    margin-bottom: 56px;
+    text-align: center;
+
+    .word {
+      transform: translateY(16px);
+      opacity: 0;
+      transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  .news-article {
+    border-radius: 16px;
+    border: 1px solid #343434;
+    background: rgba(9, 9, 9, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 32px 24px;
+    margin: 0 12px;
+
+    .title {
+      margin: 16px 0;
+    }
+
+    .btn {
+      height: 48px;
+      margin-top: 12px;
+    }
+  }
+
+  .news-list {
+    margin: 0 -12px 6px;
+  }
+
+  .in {
+    h2 .word {
+      opacity: 1;
+      transform: translateY(0);
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: 0.3s + ($i * 0.035s);
+        }
+      }
+    }
+  }
+}
