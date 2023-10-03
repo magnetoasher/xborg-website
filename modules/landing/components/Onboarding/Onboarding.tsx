@@ -115,6 +115,66 @@ export const Onboarding = () => {
                 </div>
               </div>
             </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper-slide-image">
+                <div className="shadow" />
+                <Image
+                  src={Images.landing.teambds}
+                  alt=""
+                  width={259}
+                  height={374}
+                />
+
+                <div className="swiper-slide-title lexend-heading-l">
+                  Team BDS
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper-slide-image">
+                <div className="shadow" />
+                <Image
+                  src={Images.landing.teambds}
+                  alt=""
+                  width={259}
+                  height={374}
+                />
+
+                <div className="swiper-slide-title lexend-heading-l">
+                  Team BDS
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper-slide-image">
+                <div className="shadow" />
+                <Image
+                  src={Images.landing.teambds}
+                  alt=""
+                  width={259}
+                  height={374}
+                />
+
+                <div className="swiper-slide-title lexend-heading-l">
+                  Team BDS
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper-slide-image">
+                <div className="shadow" />
+                <Image
+                  src={Images.landing.teambds}
+                  alt=""
+                  width={259}
+                  height={374}
+                />
+
+                <div className="swiper-slide-title lexend-heading-l">
+                  Team BDS
+                </div>
+              </div>
+            </SwiperSlide>
           </SpringSwiper>
         </ObserverContainer>
       </div>

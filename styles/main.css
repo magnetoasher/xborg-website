@@ -2790,6 +2790,7 @@ footer.footer .in .site-brand {
   position: absolute;
   right: 122px;
   top: 0;
+  z-index: 2;
 }
 .landing-next-gen-gaming .parallax-bubble3 {
   position: absolute;
@@ -3099,6 +3100,7 @@ footer.footer .in .site-brand {
   position: absolute;
   right: 122px;
   top: 0;
+  z-index: 2;
 }
 .landing-next-gen-gaming .parallax-bubble3 {
   position: absolute;

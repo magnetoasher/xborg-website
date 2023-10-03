@@ -2,17 +2,17 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: "/:path*",
+        source: '/:path*',
         has: [
           {
-            type: "host",
-            value: "www.xborg.gg"
-          }
+            type: 'host',
+            value: 'www.xborg.com',
+          },
         ],
-        destination: "https://xborg.gg/:path*",
+        destination: 'https://xborg.com/:path*',
         basePath: false,
-        permanent: true
-      }
+        permanent: true,
+      },
     ];
-  }
+  },
 };
