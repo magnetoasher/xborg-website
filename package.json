@@ -51,6 +51,7 @@
     "@types/mixpanel-browser": "2.38.1",
     "@types/simplebar": "^5.3.3",
     "dotenv": "^16.0.3",
+    "eslint": "^8.50.0",
     "file-loader": "^6.2.0",
     "node-sass": "^9.0.0",
     "sass": "^1.63.6",
