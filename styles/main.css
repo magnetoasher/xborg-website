@@ -3269,10 +3269,12 @@ footer.footer .in .site-brand {
 .landing-launching .content {
   transform: translateX(-10%);
 }
-.landing-launching .token-image {
+.landing-launching .token-video {
   transform: translateX(10%);
   position: relative;
   z-index: 2;
+  width: 374px;
+  height: 338px;
 }
 .landing-launching h2 {
   max-width: 455px;

@@ -15,10 +15,12 @@
     transform: translateX(-10%);
   }
 
-  .token-image {
+  .token-video {
     transform: translateX(10%);
     position: relative;
     z-index: 2;
+    width: 374px;
+    height: 338px;
   }
 
   h2 {

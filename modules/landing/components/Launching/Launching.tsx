@@ -1,9 +1,10 @@
-import { Images } from '@/assets/imgs';
+import { Videos } from '@/assets/videos';
 import { BtnRed } from '@/components/Buttons';
 import { ObserverContainer } from '@/components/ObserverContainer';
 import { splitLines } from '@/modules/utils/utils';
-import Image from 'next/image';
 import { useEffect, useRef } from 'react';
+import { Tween } from 'react-gsap';
+import { Scene } from 'react-scrollmagic';
 
 export const Launching = () => {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -16,14 +17,12 @@ export const Launching = () => {
 
   return (
     <div className="landing-launching">
-      <div className="container flex middle center">
-        <Image
-          src={Images.landing.launchingcoin}
-          alt=""
-          width={374}
-          height={338}
-          className="token-image"
-        />
+      <div className="container flex middle center" id="trigger">
+        <Scene duration="100%" triggerElement="#trigger">
+          {(progress: any) => {
+            return <LaunchingCoin progress={progress} />;
+          }}
+        </Scene>
         <div className="flex column middle center content">
           <ObserverContainer className="flex column">
             <div className="lexend-body-s">The XBG Token</div>
@@ -52,5 +51,55 @@ export const Launching = () => {
         </div>
       </div>
     </div>
+  );
+};
+let seeking = false;
+let ticking = false;
+
+export const LaunchingCoin = ({ progress }: { progress: number }) => {
+  useEffect(() => {
+    const ref = document.getElementsByClassName(
+      'token-video',
+    )[0] as HTMLMediaElement;
+
+    if (ref) {
+      ref.addEventListener('seeking', function () {
+        seeking = true;
+      });
+
+      ref.addEventListener('seeked', function () {
+        seeking = false;
+      });
+
+      if (!ticking) {
+        window.requestAnimationFrame(function () {
+          tick();
+          ticking = false;
+        });
+
+        ticking = true;
+      }
+    }
+  }, [progress]);
+
+  function tick() {
+    const ref = document.getElementsByClassName(
+      'token-video',
+    )[0] as HTMLMediaElement;
+    const duration = 1.24;
+
+    if (!seeking) ref.currentTime = progress / duration;
+  }
+
+  return (
+    <Tween>
+      <video
+        src={Videos.coin}
+        muted
+        webkit-playsinline="true"
+        preload="auto"
+        className="token-video"
+      />
+    </Tween>
   );
 };
