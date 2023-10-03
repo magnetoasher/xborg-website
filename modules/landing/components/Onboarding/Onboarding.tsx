@@ -35,7 +35,7 @@ export const Onboarding = () => {
               id="subscribe"
               className="w-full"
               onChange={updateInput('email', form, setForm, errors, setErrors)}
-              value={''}
+              value={form.email}
               placeholder="Email"
               label="Sign up for our newsletter"
             />

@@ -1,5 +1,4 @@
 import { PageError } from '@/components/Errors';
-import { getServerSidei18nProps } from '@/services/serverSideProps/getServerSidei18nProps';
 
 export default function ServerErrorPage() {
   // TODO add when toggleNavigation has been added to main
@@ -21,5 +20,3 @@ export default function ServerErrorPage() {
     </div>
   );
 }
-
-export const getStaticProps = getServerSidei18nProps;

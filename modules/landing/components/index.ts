@@ -11,3 +11,4 @@ export * from './Roadmap';
 export * from './News';
 export * from './Friends';
 export * from './LearnMore';
+export * from './SocialIcons';

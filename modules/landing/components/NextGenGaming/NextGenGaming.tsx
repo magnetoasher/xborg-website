@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { Tween } from 'react-gsap';
 import { Scene } from 'react-scrollmagic';
+import { NextGenGamingBubbles } from './Bubbles';
+import { NextGenGamingTokens } from './Tokens';
 
 export const NextGenGaming = () => {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -20,27 +22,6 @@ export const NextGenGaming = () => {
   return (
     <div className="landing-next-gen-gaming">
       <div className="container">
-        <Scene duration="400%" triggerHook="onEnter">
-          <Tween
-            position="0"
-            from={{
-              y: -200,
-            }}
-            to={{
-              y: 200,
-            }}
-          >
-            <div className="parallax-token">
-              <Image
-                src={Images.landing.token_blur}
-                alt=""
-                width={33}
-                height={47}
-              />
-            </div>
-          </Tween>
-        </Scene>
-
         <ObserverContainer className="flex column">
           <h2 className="integralfc-h2 reveal-from-bottom" ref={ref}>
             The next generation of gaming is decentralised
@@ -53,18 +34,43 @@ export const NextGenGaming = () => {
         </ObserverContainer>
       </div>
 
-      <div className="main-bubble">
-        <Image src={Images.landing.sphere4} alt="" width={136} height={136} />
+      <ObserverContainer className="main-bubble">
+        <Image src={Images.landing.xborgx} alt="" width={163} height={296} />
+      </ObserverContainer>
+
+      <div className="gamerbase-sphere">
+        <Image src={Images.landing.sphere3} alt="" width={75} height={75} />
+
+        <span className="lexend-body-sxl sphere-title">GamerBase</span>
+      </div>
+
+      <div className="launchpad-sphere">
+        <Image src={Images.landing.sphere3} alt="" width={75} height={75} />
+
+        <span className="lexend-body-sxl sphere-title">
+          Gaming
+          <br />
+          Launchpad
+        </span>
+      </div>
+
+      <div className="itos-sphere">
+        <Image src={Images.landing.sphere3} alt="" width={75} height={75} />
+
+        <span className="lexend-body-sxl sphere-title">ITOs</span>
       </div>
 
       <Image
         className="background"
         alt=""
         quality={100}
-        width={2880}
-        height={3478}
+        width={2828}
+        height={1736}
         src={Images.landing.nextgen_gaming_bg}
       />
+
+      <NextGenGamingBubbles />
+      <NextGenGamingTokens />
     </div>
   );
 };

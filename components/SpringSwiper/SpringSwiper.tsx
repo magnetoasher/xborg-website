@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { ReactNode } from 'react';
 import { Autoplay, EffectCreative, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperProps } from 'swiper/react';
@@ -86,19 +87,35 @@ export const SpringSwiper = ({
         {children}
       </Swiper>
 
-      {/* <BtnTransparent
-        href=""
-        label=""
-        icon={<Icon.chevronLeft size={16} />}
-        className={`swiper-prev swiper-prev-${id}`}
-      />
+      <Link href="" className={`swiper-prev swiper-prev-${id}`}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+        >
+          <path
+            d="M11.0666 15.5668L19.0666 7.5668L20.9332 9.43347L14.7999 15.5668L20.9332 21.7001L19.0666 23.5668L11.0666 15.5668Z"
+            fill="#727272"
+          />
+        </svg>
+      </Link>
 
-      <BtnTransparent
-        href=""
-        label=""
-        icon={<Icon.chevronRight size={16} />}
-        className={`swiper-next swiper-next-${id}`}
-      /> */}
+      <Link href="" className={`swiper-next swiper-next-${id}`}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+        >
+          <path
+            d="M20.9334 15.5666L12.9334 23.5667L11.0668 21.7L17.2001 15.5667L11.0668 9.43332L12.9334 7.56665L20.9334 15.5666Z"
+            fill="#727272"
+          />
+        </svg>
+      </Link>
     </div>
   );
 };

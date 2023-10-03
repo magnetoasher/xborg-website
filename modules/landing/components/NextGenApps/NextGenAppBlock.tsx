@@ -1,3 +1,4 @@
+import { ObserverContainer } from '@/components/ObserverContainer';
 import { useState } from 'react';
 
 export type NextGenAppBlockProps = {
@@ -20,28 +21,32 @@ export const NextGenAppBlock = ({
   });
 
   return (
-    <div
-      className={`block${className ? ' ' + className : ''}`}
-      onMouseMove={(e) => {
-        setMouse({
-          x: e.nativeEvent.layerX,
-          y: e.nativeEvent.layerY,
-          visible: true,
-        });
-      }}
-      onMouseLeave={() => {
-        setMouse({ x: mouse.x, y: mouse.y, visible: false });
-      }}
-    >
+    <ObserverContainer className="block-container">
       <div
-        className={`shadow ${mouse.visible ? 'in' : 'out'}`}
-        style={{
-          top: mouse.y,
-          left: mouse.x,
+        className={`block${className ? ' ' + className : ''}`}
+        onMouseMove={(e) => {
+          setMouse({
+            // @ts-ignore
+            x: e.nativeEvent.layerX,
+            // @ts-ignore
+            y: e.nativeEvent.layerY,
+            visible: true,
+          });
         }}
-      />
+        onMouseLeave={() => {
+          setMouse({ x: mouse.x, y: mouse.y, visible: false });
+        }}
+      >
+        <div
+          className={`shadow ${mouse.visible ? 'in' : 'out'}`}
+          style={{
+            top: mouse.y,
+            left: mouse.x,
+          }}
+        />
 
-      {children}
-    </div>
+        {children}
+      </div>
+    </ObserverContainer>
   );
 };

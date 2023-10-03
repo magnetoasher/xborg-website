@@ -11,6 +11,16 @@
     text-align: center;
   }
 
+  .content {
+    transform: translateX(-10%);
+  }
+
+  .token-image {
+    transform: translateX(10%);
+    position: relative;
+    z-index: 2;
+  }
+
   h2 {
     max-width: 455px;
     text-align: center;

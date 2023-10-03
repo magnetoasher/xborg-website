@@ -15,6 +15,49 @@
     }
   }
 
+  .container {
+    position: relative;
+  }
+
+  .swiper {
+    overflow: initial;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .spring-swiper-container {
+    &.in {
+      .swiper {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .swiper-prev {
+    right: 32px;
+    top: -56px;
+    left: auto;
+
+    &:not(.swiper-button-disabled) {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  .swiper-next {
+    right: 0;
+    top: -56px;
+    transform: translate(0, 0);
+    opacity: 1;
+
+    &:not(.swiper-button-disabled) {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
   .swiper-slide {
     position: relative;
     width: 35%;

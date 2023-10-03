@@ -31,22 +31,296 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 1440px;
+    width: 2828px;
     height: auto;
     z-index: -1;
   }
 
   .parallax-token {
     position: absolute;
-    left: 0;
+    left: 32px;
     top: 0;
+  }
+
+  .parallax-token2 {
+    position: absolute;
+    left: 105px;
+    top: 20%;
+    filter: blur(0.5px);
+  }
+
+  .parallax-token3 {
+    position: absolute;
+    left: 69px;
+    top: 30%;
+    filter: blur(0.5px);
+  }
+
+  .parallax-token4 {
+    position: absolute;
+    left: 105px;
+    top: 35%;
+    filter: blur(0.5px);
+  }
+
+  .parallax-token5 {
+    position: absolute;
+    left: 105px;
+    top: 40%;
+    filter: blur(0.5px);
+  }
+
+  .parallax-token6 {
+    position: absolute;
+    left: 42px;
+    bottom: 216px;
+    filter: blur(0.5px);
+  }
+
+  .parallax-token7 {
+    position: absolute;
+    left: 62px;
+    bottom: 141px;
+    filter: blur(2.4163451194763184px);
+  }
+
+  .parallax-token8 {
+    position: absolute;
+    left: 42px;
+    bottom: 10px;
+  }
+
+  .parallax-token9 {
+    position: absolute;
+    left: 144px;
+    bottom: 112px;
+  }
+
+  .parallax-token10 {
+    position: absolute;
+    left: 252px;
+    bottom: 0;
+  }
+
+  .parallax-token11 {
+    position: absolute;
+    left: 40%;
+    bottom: 0;
+    filter: blur(3.0391697883605957px);
+  }
+
+  .parallax-token12 {
+    position: absolute;
+    left: 35%;
+    bottom: 229px;
+    opacity: 0.4;
+  }
+
+  .parallax-token13 {
+    position: absolute;
+    left: 37%;
+    bottom: 289px;
+  }
+
+  .parallax-token14 {
+    position: absolute;
+    right: 30%;
+    top: -32px;
+  }
+
+  .parallax-token15 {
+    position: absolute;
+    right: 127px;
+    top: 80px;
+  }
+
+  .parallax-token16 {
+    position: absolute;
+    right: 107px;
+    top: 120px;
+  }
+
+  .parallax-token17 {
+    position: absolute;
+    right: 247px;
+    top: 120px;
+  }
+
+  .parallax-token18 {
+    position: absolute;
+    right: 128px;
+    top: 30%;
+  }
+
+  .parallax-token19 {
+    position: absolute;
+    right: 24px;
+    bottom: 74px;
+  }
+
+  .parallax-token20 {
+    position: absolute;
+    right: 89px;
+    bottom: 172px;
+  }
+
+  .parallax-token21 {
+    position: absolute;
+    right: 89px;
+    bottom: 188px;
+  }
+
+  .parallax-bubble {
+    position: absolute;
+    right: 122px;
+    bottom: -32px;
+  }
+
+  .parallax-bubble2 {
+    position: absolute;
+    right: 122px;
+    top: 0;
+  }
+
+  .parallax-bubble3 {
+    position: absolute;
+    left: 69px;
+    bottom: 237px;
+  }
+
+  .parallax-bubble4 {
+    position: absolute;
+    left: -32px;
+    bottom: 64px;
+  }
+
+  .parallax-bubble5 {
+    position: absolute;
+    left: 132px;
+    bottom: -32px;
+  }
+
+  .parallax-bubble6 {
+    position: absolute;
+    left: 40%;
+    bottom: 79px;
   }
 
   .main-bubble {
     position: absolute;
-    bottom: 30%;
+    bottom: 21%;
     left: 50%;
     transform: translateX(-50%);
+
+    img {
+      transform: rotate(180deg);
+      transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    &.in {
+      img {
+        transform: rotate(0);
+      }
+    }
+  }
+
+  .gamerbase-sphere {
+    position: absolute;
+    bottom: 56%;
+    left: 37%;
+    transform: translateX(-50%);
+    z-index: 3;
+
+    .sphere-title {
+      left: 90px;
+      background: linear-gradient(90deg, #ababab 0%, #2d2d2d 102.73%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 177px;
+      height: 177px;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(217, 217, 217, 0) 100%
+      );
+    }
+  }
+
+  .launchpad-sphere {
+    position: absolute;
+    bottom: 51%;
+    left: 64%;
+    transform: translateX(-50%);
+    z-index: 3;
+
+    .sphere-title {
+      left: -110px;
+      background: linear-gradient(90deg, #2d2d2d 0%, #ababab 102.73%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 177px;
+      height: 177px;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(217, 217, 217, 0) 100%
+      );
+    }
+  }
+
+  .itos-sphere {
+    position: absolute;
+    bottom: 7%;
+    left: 61%;
+    transform: translateX(-50%);
+    z-index: 3;
+
+    .sphere-title {
+      left: -60px;
+      background: linear-gradient(90deg, #2d2d2d 0%, #ababab 102.73%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 177px;
+      height: 177px;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(217, 217, 217, 0) 100%
+      );
+    }
+  }
+
+  .sphere-title {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .container {

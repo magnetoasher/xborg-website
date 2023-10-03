@@ -1,5 +1,4 @@
 import { Videos } from '@/assets/videos';
-import { BUTTON_SIZE, BtnPrimary } from '@/components/Buttons';
 import { GLOBAL_ROUTES } from '@/routes';
 
 interface ErrorProps {
@@ -14,7 +13,7 @@ export const PageError = (props: ErrorProps) => {
   return (
     <div className="page-error">
       <div className="status-code-section flex column center">
-        <video className="video" src={Videos.LIGHTNING} autoPlay loop muted />
+        <video className="video" src={Videos.lightning} autoPlay loop muted />
 
         <div className="status-code">
           <h1>{statusCode}</h1>
@@ -26,12 +25,12 @@ export const PageError = (props: ErrorProps) => {
 
         <p>{paragraphText}</p>
 
-        <BtnPrimary
+        {/* <BtnPrimary
           label="Back to home"
           href={GLOBAL_ROUTES.LANDING}
           size={BUTTON_SIZE.LARGE}
           className="redirect-btn"
-        />
+        /> */}
       </div>
     </div>
   );

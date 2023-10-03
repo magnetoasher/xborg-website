@@ -20,11 +20,15 @@
     max-width: 511px;
     text-align: center;
     margin: 0 auto;
+    opacity: 0;
+    transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
   }
 
-  .lexend-body-s {
+  .red-bold {
     color: $red100;
     text-align: center;
+    opacity: 0;
+    transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
   }
 
   .register-interest {
@@ -32,7 +36,9 @@
     margin-top: 56px;
     margin-bottom: 80px;
     position: relative;
-    transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
+    opacity: 0;
+    transform: scale(0.8) transformY(16px);
+    transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
 
     .btn {
       position: absolute;
@@ -40,9 +46,16 @@
       top: 4px;
       bottom: 4px;
     }
+
+    &.in {
+      opacity: 1;
+      transform: scale(1) transformY(0);
+    }
   }
 
   .chat {
+    width: 592px;
+
     .vote {
       padding: 16px 30px;
       border-radius: 16px;
@@ -50,10 +63,29 @@
       background: rgba(9, 9, 9, 0.8);
       backdrop-filter: blur(10px);
       margin-bottom: 16px;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
 
       .lexend-body-sl {
         color: #f0f0f0;
       }
+    }
+
+    .date {
+      text-align: right;
+      color: #cacace;
+      padding-left: 21px;
+
+      span {
+        white-space: nowrap;
+      }
+    }
+
+    .messanger {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
     .message {
@@ -64,6 +96,9 @@
       padding: 16px 24px;
       margin-bottom: 4px;
       align-self: flex-end;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
     .message-received {
@@ -74,17 +109,50 @@
       padding: 16px 24px;
       margin-bottom: 4px;
       align-self: flex-start;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .option {
+      margin-top: 34px;
+    }
+
+    .option-image {
+      margin-right: 10px;
+    }
+
+    .progressbar {
+      margin-top: 16px;
+    }
+
+    &.in {
+      & > div {
+        opacity: 1;
+        transform: translateY(0px);
+
+        @for $i from 1 through 7 {
+          &:nth-child(#{$i}) {
+            transition-delay: 0.1s + ($i * 0.08s);
+          }
+        }
+      }
     }
   }
 
   .in {
+    .red-bold,
+    p {
+      opacity: 1;
+    }
+
     h2 .word {
       opacity: 1;
       transform: translateY(0);
 
       @for $i from 1 through 10 {
         &:nth-child(#{$i}) {
-          transition-delay: 0.3s + ($i * 0.035s);
+          transition-delay: 0.1s + ($i * 0.035s);
         }
       }
     }

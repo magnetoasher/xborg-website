@@ -10,6 +10,7 @@ export const distance = (x1: number, y1: number, x2: number, y2: number) => {
 
 export function splitLetters(container: HTMLElement): HTMLElement {
   const html: string[] = [
+    // @ts-ignore
     ...(container.innerHTML.match(/<[^>]+>/g)! || ''),
     '',
   ];
@@ -27,6 +28,7 @@ export function splitLetters(container: HTMLElement): HTMLElement {
 
 export function splitWords(container: HTMLElement): HTMLElement {
   const html: string[] = [
+    // @ts-ignore
     ...(container.innerHTML?.match(/<[^>]+>/g)! || ''),
     '',
   ];

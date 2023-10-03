@@ -1,9 +1,11 @@
-import { BtnDark, BtnRed } from '@/components/Buttons';
+import { Images } from '@/assets/imgs';
+import { BtnDark } from '@/components/Buttons';
 import { ObserverContainer } from '@/components/ObserverContainer';
-import { SpringSwiper } from '@/components/SpringSwiper';
 import { splitLines } from '@/modules/utils/utils';
+import Image from 'next/image';
 import { useEffect, useRef } from 'react';
-import { SwiperSlide } from 'swiper/react';
+import { Tween } from 'react-gsap';
+import { Scene } from 'react-scrollmagic';
 
 export const News = () => {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -16,6 +18,27 @@ export const News = () => {
 
   return (
     <div className="landing-news">
+      <Scene duration="200%" triggerHook="onEnter">
+        <Tween
+          position="0"
+          from={{
+            y: -150,
+          }}
+          to={{
+            y: 150,
+          }}
+        >
+          <div className="parallax-bubble">
+            <Image
+              src={Images.landing.bubble_cl1}
+              alt=""
+              width={76}
+              height={95}
+            />
+          </div>
+        </Tween>
+      </Scene>
+
       <div className="container flex column">
         <ObserverContainer className="flex column">
           <h2
@@ -26,7 +49,7 @@ export const News = () => {
           </h2>
         </ObserverContainer>
 
-        <div className="flex news-list">
+        <ObserverContainer className="flex news-list">
           <div className="news-article expand">
             <div className="date lexend-body-s l">13/07/2023</div>
             <div className="lexend-body-sl title">
@@ -75,7 +98,7 @@ export const News = () => {
               <BtnDark label="Read on BeInCrypto" href="" />
             </div>
           </div>
-        </div>
+        </ObserverContainer>
       </div>
     </div>
   );

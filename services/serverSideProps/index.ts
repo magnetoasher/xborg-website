@@ -1,1 +1,1 @@
-export * from './getServerSidei18nProps';
+export * from './authorizeServerSize';

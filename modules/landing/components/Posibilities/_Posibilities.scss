@@ -28,21 +28,35 @@
 
     a {
       padding: 16px 0;
-      border-bottom: 1px solid #242424;
       color: #95959d;
       transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
       position: relative;
 
-      span {
+      .link-inner {
         transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
         transform: translateX(-16px);
         opacity: 0;
       }
 
+      span {
+        transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        background-color: #242424;
+        height: 1px;
+        transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
       &:after {
         content: '';
         position: absolute;
-        bottom: -1px;
+        bottom: 0;
         left: 0;
         width: 0;
         background-color: $red100;
@@ -50,16 +64,9 @@
         transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
       }
 
-      &.active {
-        color: #e4e4e6;
-
-        &:after {
-          width: 75%;
-        }
-
-        svg {
-          transform: translateX(0);
-          opacity: 1;
+      &:hover {
+        span {
+          color: #fff;
         }
       }
     }
@@ -72,15 +79,40 @@
 
     &.in {
       a {
+        &.active {
+          span {
+            color: #e4e4e6;
+          }
+
+          &:after {
+            width: 75%;
+          }
+
+          svg {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        &:before {
+          width: 100%;
+        }
+      }
+
+      a {
         @for $i from 1 through 10 {
           &:nth-child(#{$i}) {
-            span {
+            .link-inner {
               transition-delay: 0.2s + ($i * 0.1s);
+            }
+
+            &:before {
+              transition-delay: 0.2s + ($i * 0.05s);
             }
           }
         }
 
-        span {
+        .link-inner {
           opacity: 1;
           transform: translateX(0);
         }

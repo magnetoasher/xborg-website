@@ -1,5 +1,3 @@
-import { LOCAL_STORAGE_VALUE } from '@/apis';
-
 export enum TRACK_TYPE {
   PAGE_VIEWED = 'page_viewed',
   EVENT = 'event',
@@ -39,7 +37,7 @@ export function isTrackingAllowed(): boolean {
 
   if (!cookieEnabled) return false;
 
-  const cookies = localStorage.getItem(LOCAL_STORAGE_VALUE.COOKIE_CONSENT);
+  const cookies = localStorage.getItem('c');
 
   if (cookies) {
     const parse = JSON.parse(cookies);

@@ -15,23 +15,25 @@ export const BtnDark = ({
   children,
 }: any) => {
   return (
-    <Link
-      href={href}
-      target={target}
-      className={`btn btn-dark flex middle center ${className}${
-        disabled ? ' disabled' : ''
-      }
+    <div className="btn-dark-container">
+      <Link
+        href={href}
+        target={target}
+        className={`btn btn-dark flex middle center ${className}${
+          disabled ? ' disabled' : ''
+        }
       ${loading ? ' loading' : ''}`}
-      onClick={onClick}
-    >
-      {loading && <LoadingSpinner />}
-      {children ?? (
-        <span className="flex middle center expand">
-          {icon}
-          {label}
-          {suffix}
-        </span>
-      )}
-    </Link>
+        onClick={onClick}
+      >
+        {loading && <LoadingSpinner />}
+        {children ?? (
+          <span className="flex middle center expand">
+            {icon}
+            {label}
+            {suffix}
+          </span>
+        )}
+      </Link>
+    </div>
   );
 };

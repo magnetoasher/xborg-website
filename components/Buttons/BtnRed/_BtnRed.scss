@@ -2,8 +2,52 @@
   padding: 8px 16px;
   position: relative;
   border-radius: 8px;
+  overflow: hidden;
   text-decoration: none;
-  background: $red100;
+  background-color: $red100;
   transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   color: #fff;
+
+  span {
+    position: relative;
+    z-index: 3;
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  &:before {
+    transform: translate3d(-100%, 0, 0);
+    background-color: #cacace;
+  }
+
+  &:after {
+    background-color: white;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  &:hover {
+    span {
+      color: $red100;
+    }
+
+    &:before {
+      transform: translate3d(0, 0, 0);
+    }
+
+    &:after {
+      transform: translate3d(0, 0, 0);
+      transition-delay: 0.06s;
+    }
+  }
 }

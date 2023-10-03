@@ -1,0 +1,28 @@
+.progressbar {
+  background-color: #e2e2e2;
+  height: 4px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+
+  .progress {
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $red100;
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    transition-delay: 0.3s;
+  }
+
+  .progress-text {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

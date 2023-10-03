@@ -18,16 +18,15 @@
     color: #787885;
     font-family: $lexend;
     transition: 0.3s ease-in;
+
+    &:active,
+    &:focus {
+      border-color: $red100;
+    }
   }
 
   ::placeholder {
     color: #3d3d3d;
-    opacity: 1;
-  }
-
-  input:active + .border,
-  input:focus + .border {
-    width: 100%;
     opacity: 1;
   }
 

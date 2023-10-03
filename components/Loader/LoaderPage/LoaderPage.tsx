@@ -1,14 +1,8 @@
 import { useSelector } from 'react-redux';
 
-import { GlobalState } from '@/reducer';
-
 export const LoaderPage = () => {
-  const site = useSelector((state: GlobalState) => state.site);
-
   return (
-    <div
-      className={`loader-page flex middle center ${site.color.toLowerCase()}`}
-    >
+    <div className="loader-page flex middle center">
       <svg
         viewBox="0 0 10 10"
         fill="none"

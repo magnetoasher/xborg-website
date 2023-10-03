@@ -2,6 +2,20 @@ footer.footer {
   background: #101010;
   padding-top: 120px;
   padding-bottom: 38px;
+  position: relative;
+
+  .parallax-bubble {
+    position: absolute;
+    left: -27px;
+    top: 51px;
+    filter: blur(2px);
+  }
+
+  .site-brand {
+    transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
+    display: flex;
+    margin-left: -10px;
+  }
 
   .footer-about {
     width: 40%;
@@ -41,10 +55,51 @@ footer.footer {
     a {
       padding: 8px 0;
       color: #fff;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 110%;
+        height: 1px;
+        background: $red100;
+        z-index: 0;
+        top: 100%;
+        left: -5%;
+        pointer-events: none;
+        top: 50%;
+        height: 2px;
+        transform-origin: 100% 50%;
+        transform: scale3d(0, 1, 1);
+        transition: transform 0.3s cubic-bezier(0.4, 1, 0.8, 1);
+      }
+
+      span {
+        display: inline-block;
+        transition: transform 0.3s cubic-bezier(0.4, 1, 0.8, 1);
+      }
+
+      &:hover {
+        span {
+          transform: scale3d(1.1, 1.1, 1.1);
+        }
+
+        &:before {
+          transform-origin: 0% 50%;
+          transform: scale3d(1, 1, 1);
+        }
+      }
     }
   }
 
   .copyright {
     padding-top: 16px;
+  }
+
+  .in {
+    .site-brand {
+      transform: rotate(180deg);
+      transition-delay: 0.8s;
+    }
   }
 }
