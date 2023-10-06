@@ -52,7 +52,7 @@ export const News = () => {
         </ObserverContainer>
 
         <ObserverContainer className="flex news-list">
-          <Swiper slidesPerView={3}>
+          <Swiper slidesPerView={'auto'} spaceBetween={24}>
             <SwiperSlide>
               <NewsArticle />
             </SwiperSlide>

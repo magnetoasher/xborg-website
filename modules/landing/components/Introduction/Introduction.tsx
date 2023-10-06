@@ -43,7 +43,7 @@ export const Introduction = () => {
       />
 
       <div className="introduction-content flex column center">
-        <ObserverContainer className="container flex column">
+        <ObserverContainer className="container flex column" rootMargin="-5%">
           <span className="lexend-text-sm">The gaming social layer</span>
 
           <h1 className="integralfc-h1 reveal-from-bottom" ref={ref}>
