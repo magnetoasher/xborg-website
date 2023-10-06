@@ -1,7 +1,9 @@
 import { Images } from '@/assets/imgs';
+import { BtnDark } from '@/components/Buttons';
 import { ObserverContainer } from '@/components/ObserverContainer';
 import { splitLines } from '@/modules/utils/utils';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { Timeline, Tween } from 'react-gsap';
 import { Scene } from 'react-scrollmagic';
@@ -29,24 +31,12 @@ export const EmpoweringPlayers = () => {
           }}
         >
           <div className="parallax-bubble">
-            <Scene duration="100%" triggerHook="onCenter">
-              <Tween
-                position="0"
-                from={{
-                  x: 0,
-                }}
-                to={{
-                  x: 110,
-                }}
-              >
-                <Image
-                  src={Images.landing.sphere2}
-                  alt=""
-                  width={119}
-                  height={119}
-                />
-              </Tween>
-            </Scene>
+            <Image
+              src={Images.landing.sphere2}
+              alt=""
+              width={119}
+              height={119}
+            />
           </div>
         </Tween>
       </Scene>
@@ -65,65 +55,98 @@ export const EmpoweringPlayers = () => {
             onAnimateOut={() => setLoading(true)}
           >
             <div className="block">
-              <div className="lexend-heading-l">The gaming social layer</div>
+              <div className="lexend-heading-l">
+                The ultimate gaming profile
+              </div>
               <p className="lexend-body-md l">
-                Own your statistics, achievements and assets and use them across
-                multiple applications.
+                We combine a player’s gaming stats, achievements and reputation
+                to create their XBorg ID.
               </p>
+              <Link href="" className="flex middle lexend-body-md sb link">
+                Visit GamerBase
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M15.7 11.6758L9.70005 17.6758L8.30005 16.2758L12.9 11.6758L8.30005 7.07578L9.70005 5.67578L15.7 11.6758Z"
+                    fill="#EB3A4A"
+                  />
+                </svg>
+              </Link>
             </div>
           </ObserverContainer>
           <div className="block-container">
-            <div className="cards">
-              <Image
-                src={Images.badges.valorant}
-                alt=""
-                width={124}
-                height={191}
-              />
-              <Image
-                src={Images.badges.dota2}
-                alt=""
-                width={116}
-                height={179}
-              />
-              <Image src={Images.badges.lol} alt="" width={108} height={167} />
+            <div className="flex colummn block-content">
+              <div className="cards">
+                <Image
+                  src={Images.badges.valorant}
+                  alt=""
+                  width={124}
+                  height={191}
+                />
+                <Image
+                  src={Images.badges.dota2}
+                  alt=""
+                  width={116}
+                  height={179}
+                />
+                <Image
+                  src={Images.badges.lol}
+                  alt=""
+                  width={108}
+                  height={167}
+                />
+              </div>
+              <div className="block expand">
+                <div className="lexend-heading-l">Gamification overload</div>
+                <p className="lexend-body-md l">
+                  Players can customise their XBorg ID with exclusive gaming
+                  cards, avatars and unlockable wearables.
+                </p>
+              </div>
             </div>
+          </div>
+          <div className="block-container">
+            <div className="block">
+              <div className="lexend-body-s">The new way to play</div>
+              <div className="lexend-heading-l">
+                Where GameFi and SocialFi meet
+              </div>
+            </div>
+          </div>
+          <div className="block-container">
+            <div className="block">
+              <div className="lexend-body-s">XBorg ID</div>
+              <div className="lexend-heading-l">
+                The key to the next generation of gaming
+              </div>
+            </div>
+          </div>
+          <div className="block-container">
             <div className="block">
               <div className="lexend-heading-l">
-                Cross-platform connectivity
+                Cross-platform functionality
               </div>
               <p className="lexend-body-md l">
-                Sync your gaming accounts to bolster your gaming credentials
-                whilst playing the games you love.
+                Players can connect their XBorg ID across multiple applications
+                and titles, to unlock unique opportunities and rewards.
               </p>
-            </div>
-          </div>
-          <div className="block-container">
-            <div className="block">
-              <div className="lexend-body-s">A Gamified Experience</div>
-              <div className="lexend-heading-l">
-                Building your gaming identity should feel like playing your
-                favourite RPG.
+              <div className="flex">
+                <BtnDark href="">
+                  <Image
+                    src={Images.landing.discovery1}
+                    alt=""
+                    width={32}
+                    height={32}
+                  />
+
+                  <span>Sign in with XBorg</span>
+                </BtnDark>
               </div>
-            </div>
-          </div>
-          <div className="block-container">
-            <div className="block">
-              <div className="lexend-body-s">
-                Your data, your avatar, your play
-              </div>
-              <div className="lexend-heading-l">
-                Your gaming identity is your key to the future
-              </div>
-            </div>
-          </div>
-          <div className="block-container">
-            <div className="block">
-              <div className="lexend-heading-l">Your reputation matters</div>
-              <p className="lexend-body-md l">
-                Form your gaming reputation by supporting your favourite gaming
-                communities and get rewarded while you’re at it.
-              </p>
             </div>
           </div>
         </div>
@@ -140,24 +163,7 @@ export const EmpoweringPlayers = () => {
           }}
         >
           <div className="parallax-bubble-2">
-            <Scene duration="100%" triggerHook="onCenter">
-              <Tween
-                position="0"
-                from={{
-                  x: 0,
-                }}
-                to={{
-                  x: -110,
-                }}
-              >
-                <Image
-                  src={Images.landing.sphere}
-                  alt=""
-                  width={39}
-                  height={39}
-                />
-              </Tween>
-            </Scene>
+            <Image src={Images.landing.sphere} alt="" width={39} height={39} />
           </div>
         </Tween>
       </Scene>

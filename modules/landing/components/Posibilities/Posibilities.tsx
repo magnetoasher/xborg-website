@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { Timeline, Tween } from 'react-gsap';
 import { Scene } from 'react-scrollmagic';
+import VanillaTilt from 'vanilla-tilt';
 
 export const Posibilities = () => {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -19,29 +20,37 @@ export const Posibilities = () => {
     }
   }, []);
 
+  useEffect(() => {
+    const timerId = setInterval(() => {
+      if (active + 1 === data.length) setActive(0);
+      else setActive(active + 1);
+    }, 8000);
+
+    return () => clearInterval(timerId);
+  });
   const data = [
     {
       title: 'Player discovery',
       description:
-        'Get discovered by an esports team or find a new ranked teammate. Let your identity do the talking.',
+        'Get scouted by an esports team or find yourself a new ranked teammate based on your gaming credentials.',
       icon: Images.landing.discovery1,
     },
     {
-      title: 'Brand and game opportunities',
+      title: 'Enhanced gameplay',
       description:
-        'Get discovered by an esports team or find a new ranked teammate. Let your identity do the talking.',
+        'Enjoy unique in-game experiences tailored to who you are as a player.',
       icon: Images.landing.discovery2,
     },
     {
       title: 'Asset lending',
       description:
-        'Get discovered by an esports team or find a new ranked teammate. Let your identity do the talking.',
+        'Use your gaming reputation as your proof-of-skill collateral when lending GameFi assets.',
       icon: Images.landing.discovery3,
     },
     {
-      title: 'Invest in games',
+      title: 'Investment potential',
       description:
-        'Get discovered by an esports team or find a new ranked teammate. Let your identity do the talking.',
+        'Unlock investment opportunities in the most promising upcoming games because of your gaming credentials.',
       icon: Images.landing.discovery4,
     },
   ];
@@ -66,7 +75,6 @@ export const Posibilities = () => {
                 key={index}
                 onClick={(e) => {
                   e.preventDefault();
-                  setActive(index);
                 }}
               >
                 <div className="link-inner flex middle between w-full">
@@ -99,7 +107,7 @@ export const Posibilities = () => {
               active === 0 ? 'active' : 'inactive'
             }`}
           >
-            <Image src={data[0].icon} alt="" width={300} height={300} />
+            <ImageComponent img={data[0].icon} />
             <div className="lexend-heading-xl">{data[0].title}</div>
             <div className="lexend-body-md l">{data[0].description}</div>
           </div>
@@ -108,7 +116,7 @@ export const Posibilities = () => {
               active === 1 ? 'active' : 'inactive'
             }`}
           >
-            <Image src={data[1].icon} alt="" width={300} height={300} />
+            <ImageComponent img={data[1].icon} />
             <div className="lexend-heading-xl">{data[1].title}</div>
             <div className="lexend-body-md l">{data[1].description}</div>
           </div>
@@ -117,7 +125,7 @@ export const Posibilities = () => {
               active === 2 ? 'active' : 'inactive'
             }`}
           >
-            <Image src={data[2].icon} alt="" width={300} height={300} />
+            <ImageComponent img={data[2].icon} />
             <div className="lexend-heading-xl">{data[2].title}</div>
             <div className="lexend-body-md l">{data[2].description}</div>
           </div>
@@ -126,7 +134,7 @@ export const Posibilities = () => {
               active === 3 ? 'active' : 'inactive'
             }`}
           >
-            <Image src={data[3].icon} alt="" width={300} height={300} />
+            <ImageComponent img={data[3].icon} />
             <div className="lexend-heading-xl">{data[3].title}</div>
             <div className="lexend-body-md l">{data[3].description}</div>
           </div>
@@ -153,6 +161,26 @@ export const Posibilities = () => {
           </div>
         </Tween>
       </Scene>
+    </div>
+  );
+};
+
+const ImageComponent = ({ img }: { img: any }) => {
+  const activeRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    if (activeRef.current)
+      VanillaTilt.init(activeRef.current, {
+        max: 0.01,
+        scale: 1,
+        glare: true,
+        'max-glare': 1.5,
+      });
+  }, []);
+
+  return (
+    <div className="content-image" ref={activeRef}>
+      <Image src={img} alt="" width={300} height={300} />
     </div>
   );
 };

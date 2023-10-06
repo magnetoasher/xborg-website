@@ -3,6 +3,8 @@ export const Images = {
 
   landing: {
     teambds: '/images/landing/teambds.jpg',
+    fox: '/images/landing/fox.png',
+    unknown: '/images/landing/unknown.png',
     bubbles_bot_right: '/images/landing/bubbles_bot_right.png',
     discovery1: '/images/landing/discovery1.png',
     discovery2: '/images/landing/discovery2.png',
@@ -17,6 +19,8 @@ export const Images = {
     sphere6: '/images/landing/sphere6.png',
     sphere7: '/images/landing/sphere7.png',
     sphere8: '/images/landing/sphere8.png',
+    sphere9: '/images/landing/sphere9.png',
+    sphere10: '/images/landing/sphere10.png',
     xborgx: '/images/landing/xborg-x.png',
     sphere_blur: '/images/landing/sphere_blur.png',
     bubble_blur1: '/images/landing/bubble-blur-1.png',
@@ -39,6 +43,8 @@ export const Images = {
     prometheus: '/images/landing/prometheus.png',
     token: '/images/landing/token.png',
     launchingcoin: '/images/landing/launchingcoin.png',
+    tokenizedesports: '/images/landing/tokenized-esports.png',
+    circle: '/images/landing/circle.png',
   },
 
   badges: {

@@ -16,13 +16,40 @@
   font-size: 64px;
   font-weight: 400;
   line-height: 64px;
+
+  @media (max-width: $sm-max) {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 48px;
+  }
 }
 
 .integralfc-h2 {
   font-family: $integralCF;
   font-size: 40px;
   font-weight: 400;
-  line-height: 48px; /* 120% */
+  line-height: 48px;
+
+  @media (max-width: $sm-max) {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.integralfc-body-md {
+  font-family: $integralCF;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; /* 133.333% */
+}
+
+.integralfc-body-sm {
+  font-family: $integralCF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px; /* 133.333% */
 }
 
 // LEXEND
@@ -52,12 +79,26 @@
   &.l {
     font-weight: 300;
   }
+
+  &.md {
+    font-weight: 600;
+  }
+}
+
+.lexend-body-smd {
+  font-family: $lexend;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .lexend-body-sxl {
   font-family: $lexend;
   font-size: 18px;
   font-weight: 400;
+
+  @media (max-width: $sm-max) {
+    font-size: 16px;
+  }
 }
 
 .lexend-body-md {
@@ -104,6 +145,11 @@
 .container {
   width: 1210px;
   margin: 0 auto;
+
+  @media (max-width: $xl-max) {
+    width: 100%;
+    padding: 0 16px;
+  }
 }
 
 .reveal-from-bottom {
@@ -117,5 +163,14 @@
     position: relative;
     opacity: 0;
     transition: opacity 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  }
+}
+
+.link {
+  color: $red100;
+  transition: 0.15s ease-in;
+
+  &:hover {
+    color: #fff;
   }
 }

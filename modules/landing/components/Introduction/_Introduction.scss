@@ -28,7 +28,7 @@
       text-transform: uppercase;
       margin-bottom: 24px;
       opacity: 0;
-      transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
+      transition: 0.6s ease-in;
     }
 
     h1 {
@@ -37,13 +37,13 @@
       .word {
         transform: translateY(16px);
         opacity: 0;
-        transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
+        transition: 0.6s ease-in;
       }
     }
 
     .actions {
       margin-top: 54px;
-      transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
+      transition: 0.6s ease-in;
       opacity: 0;
 
       .btn {
@@ -56,11 +56,12 @@
   .in {
     .lexend-text-sm {
       opacity: 1;
+      transition-delay: 0.4s;
     }
 
     .actions {
       opacity: 1;
-      transition-delay: 0.3s;
+      transition-delay: 0.4s;
     }
 
     h1 .word {
@@ -69,8 +70,27 @@
 
       @for $i from 1 through 10 {
         &:nth-child(#{$i}) {
-          transition-delay: 0.3s + ($i * 0.035s);
+          transition-delay: 0.1s + ($i * 0.035s);
         }
+      }
+    }
+  }
+
+  @media (max-width: $md-max) {
+    .video {
+      height: 100vh;
+      right: -50%;
+    }
+
+    .introduction-content {
+      top: 120px;
+      left: 0;
+      transform: translate(0, 0);
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      h1 {
+        max-width: 361px;
       }
     }
   }

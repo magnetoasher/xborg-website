@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import { Tween } from 'react-gsap';
 import { Scene } from 'react-scrollmagic';
+import { NewsArticle } from './NewsArticle';
 
 export const News = () => {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -50,54 +51,9 @@ export const News = () => {
         </ObserverContainer>
 
         <ObserverContainer className="flex news-list">
-          <div className="news-article expand">
-            <div className="date lexend-body-s l">13/07/2023</div>
-            <div className="lexend-body-sl title">
-              XBorg sells out $2m seed round.
-            </div>
-
-            <div className="lexend-body-md l description">
-              The funds will facilitate the scaling and adoption efforts of
-              XBorg’s infrastructure and applications to reach millions of
-              players and fans worldwide.
-            </div>
-
-            <div className="flex">
-              <BtnDark label="Read on BeInCrypto" href="" />
-            </div>
-          </div>
-          <div className="news-article expand">
-            <div className="date lexend-body-s l">13/07/2023</div>
-            <div className="lexend-body-sl title">
-              XBorg sells out $2m seed round.
-            </div>
-
-            <div className="lexend-body-md l description">
-              The funds will facilitate the scaling and adoption efforts of
-              XBorg’s infrastructure and applications to reach millions of
-              players and fans worldwide.
-            </div>
-
-            <div className="flex">
-              <BtnDark label="Read on BeInCrypto" href="" />
-            </div>
-          </div>
-          <div className="news-article expand">
-            <div className="date lexend-body-s l">13/07/2023</div>
-            <div className="lexend-body-sl title">
-              XBorg sells out $2m seed round.
-            </div>
-
-            <div className="lexend-body-md l description">
-              The funds will facilitate the scaling and adoption efforts of
-              XBorg’s infrastructure and applications to reach millions of
-              players and fans worldwide.
-            </div>
-
-            <div className="flex">
-              <BtnDark label="Read on BeInCrypto" href="" />
-            </div>
-          </div>
+          <NewsArticle />
+          <NewsArticle />
+          <NewsArticle />
         </ObserverContainer>
       </div>
     </div>

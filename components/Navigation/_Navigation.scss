@@ -85,4 +85,8 @@ nav.navigation {
       opacity: 1;
     }
   }
+
+  @media (max-width: $md-max) {
+    display: none;
+  }
 }

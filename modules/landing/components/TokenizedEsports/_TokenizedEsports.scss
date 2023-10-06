@@ -2,7 +2,28 @@
   position: relative;
   z-index: 3;
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 10px;
+
+  .parallax-bubble {
+    position: absolute;
+    right: 32%;
+    top: 55%;
+    right: 26%;
+    top: 37%;
+  }
+
+  .parallax-bubble2 {
+    position: absolute;
+    left: -10px;
+    bottom: 30%;
+    filter: blur(2px);
+  }
+
+  .parallax-bubble3 {
+    position: absolute;
+    left: 119px;
+    bottom: 30%;
+  }
 
   h2 {
     text-align: center;
@@ -21,24 +42,28 @@
     text-align: center;
     margin: 0 auto;
     opacity: 0;
-    transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: 0.6s ease-in;
+    background: linear-gradient(90deg, #dcdcdc 0%, #616161 102.73%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .red-bold {
     color: $red100;
     text-align: center;
     opacity: 0;
-    transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: 0.6s ease-in;
   }
 
   .register-interest {
-    width: 487px;
-    margin-top: 56px;
-    margin-bottom: 80px;
+    max-width: 487px;
+    margin-top: 21px;
+    margin-bottom: 45px;
     position: relative;
     opacity: 0;
     transform: scale(0.8) transformY(16px);
-    transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: 0.6s ease-in;
 
     .btn {
       position: absolute;
@@ -53,90 +78,146 @@
     }
   }
 
-  .chat {
+  .gradient-background {
+    border-radius: 100px;
+    border: 1px solid #343434;
+    background: radial-gradient(
+      60.3% 49.69% at 96.14% 86.39%,
+      #171717 0%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
     width: 592px;
+    height: 96px;
+    position: relative;
+    opacity: 0;
+    transition-delay: 0.2s;
+    transition: 0.4s ease-in;
 
-    .vote {
-      padding: 16px 30px;
-      border-radius: 16px;
-      border: 1px solid #343434;
-      background: rgba(9, 9, 9, 0.8);
+    &.in {
+      opacity: 1;
+    }
+
+    .signin {
+      border-radius: 360px;
+      border: 1px solid rgba(235, 58, 74, 0.5);
+      background: rgba(235, 58, 74, 0.1);
       backdrop-filter: blur(10px);
-      margin-bottom: 16px;
-      opacity: 0;
-      transform: translateY(16px);
-      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+      color: $red100;
+      padding: 8px 16px 8px 14px;
+      transition: 0.15s ease-in;
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      white-space: nowrap;
+      margin-left: -50px;
 
-      .lexend-body-sl {
-        color: #f0f0f0;
+      &:hover {
+        color: #fff;
       }
     }
 
-    .date {
-      text-align: right;
-      color: #cacace;
-      padding-left: 21px;
+    .integralfc-body-md {
+      background: linear-gradient(90deg, #dcdcdc 0%, #616161 102.73%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+    }
+  }
 
-      span {
-        white-space: nowrap;
+  .lexend-body-smd {
+    background: linear-gradient(90deg, #dcdcdc 0%, #616161 102.73%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 8px;
+  }
+
+  .tokenized-esports-tokens {
+    transform: translateX(50%);
+
+    img {
+      opacity: 0;
+      transform: translateY(16px) translateX(-16px);
+      transition: 0.4s ease-in;
+
+      &:first-child {
+        margin-top: 28px;
       }
-    }
 
-    .messanger {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
-    }
+      &:nth-child(2) {
+        margin-top: 23px;
+      }
 
-    .message {
-      border-radius: 16px 16px 0px 16px;
-      border: 1px solid #343434;
-      background: rgba(9, 9, 9, 0.8);
-      backdrop-filter: blur(10px);
-      padding: 16px 24px;
-      margin-bottom: 4px;
-      align-self: flex-end;
-      opacity: 0;
-      transform: translateY(16px);
-      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
-    }
+      &:nth-child(3) {
+        margin-top: -10px;
+        margin-left: -63px;
+      }
 
-    .message-received {
-      border-radius: 16px 16px 16px 0px;
-      border: 1px solid #343434;
-      background: #1f1f1f;
-      backdrop-filter: blur(10px);
-      padding: 16px 24px;
-      margin-bottom: 4px;
-      align-self: flex-start;
-      opacity: 0;
-      transform: translateY(16px);
-      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
-    }
+      &:nth-child(4) {
+        margin-top: -30px;
+        margin-left: 33px;
+      }
 
-    .option {
-      margin-top: 34px;
-    }
-
-    .option-image {
-      margin-right: 10px;
-    }
-
-    .progressbar {
-      margin-top: 16px;
+      &:last-child {
+        margin-left: -60px;
+        margin-bottom: 42px;
+      }
     }
 
     &.in {
-      & > div {
+      img {
         opacity: 1;
-        transform: translateY(0px);
+        transform: translate(0, 0);
 
-        @for $i from 1 through 7 {
-          &:nth-child(#{$i}) {
-            transition-delay: 0.1s + ($i * 0.08s);
-          }
+        &:nth-child(2) {
+          transition-delay: 0.05s;
+        }
+
+        &:nth-child(3) {
+          transition-delay: 0.1s;
+        }
+
+        &:nth-child(4) {
+          transition-delay: 0.15s;
+        }
+
+        &:last-child {
+          transition-delay: 0.2s;
         }
       }
+    }
+  }
+
+  .bubble-buttons {
+    margin-top: 48px;
+  }
+
+  .bubble {
+    padding: 12px;
+    border-radius: 360px;
+    border: 1px solid rgba(52, 52, 52, 0.5);
+    background: #080808;
+    backdrop-filter: blur(10px);
+    min-width: 164px;
+    margin: 16px;
+
+    img {
+      margin-right: 19px;
+    }
+
+    &.last {
+      width: 210px;
+    }
+  }
+
+  .gamerbase {
+    margin-top: 67px;
+    padding-bottom: 50px;
+
+    svg:first-child {
+      margin-right: 8px;
     }
   }
 
@@ -144,6 +225,7 @@
     .red-bold,
     p {
       opacity: 1;
+      transition-delay: 0.4s;
     }
 
     h2 .word {
@@ -155,6 +237,34 @@
           transition-delay: 0.1s + ($i * 0.035s);
         }
       }
+    }
+  }
+
+  @media (max-width: $md-max) {
+    padding-bottom: 80px;
+
+    .tokenized-esports-tokens img:first-child {
+      margin-top: 64px;
+    }
+
+    .gradient-background {
+      .signin {
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, -8px);
+      }
+    }
+  }
+
+  @media (max-width: $sm-max) {
+    h2 {
+      max-width: 396px;
+      text-align: center;
+      align-self: center;
+    }
+
+    .gradient-background {
+      width: 100%;
     }
   }
 }

@@ -3,23 +3,44 @@ import { Videos } from '@/assets/videos';
 import { BtnDark } from '@/components/Buttons';
 import { ObserverContainer } from '@/components/ObserverContainer';
 import { splitLines } from '@/modules/utils/utils';
+import { SiteActions } from '@/redux/site/actions';
+import { AppDispatch } from '@/store';
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import { Tween } from 'react-gsap';
+import { useDispatch } from 'react-redux';
 import { Scene } from 'react-scrollmagic';
 
 export const Introduction = () => {
+  const dispatch = useDispatch<AppDispatch>();
   const ref = useRef<HTMLHeadingElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     if (ref.current) {
       splitLines(ref.current);
     }
+
+    if (videoRef.current) {
+      videoRef.current.addEventListener(
+        'loadeddata',
+        function () {
+          dispatch(SiteActions.loadSite());
+        },
+        false,
+      );
+    }
   }, []);
 
   return (
     <div className="landing-introduction">
-      <video src={Videos.landing.intro} className="video" muted autoPlay />
+      <video
+        src={Videos.landing.intro}
+        className="video"
+        muted
+        autoPlay
+        ref={videoRef}
+      />
 
       <div className="introduction-content flex column center">
         <ObserverContainer className="container flex column">
@@ -45,24 +66,12 @@ export const Introduction = () => {
           }}
         >
           <div className="parallax-bubble">
-            <Scene duration="100%" triggerHook="onCenter">
-              <Tween
-                position="0"
-                from={{
-                  x: 0,
-                }}
-                to={{
-                  x: -110,
-                }}
-              >
-                <Image
-                  src={Images.landing.sphere}
-                  alt=""
-                  width={108}
-                  height={108}
-                />
-              </Tween>
-            </Scene>
+            <Image
+              src={Images.landing.sphere}
+              alt=""
+              width={108}
+              height={108}
+            />
           </div>
         </Tween>
       </Scene>

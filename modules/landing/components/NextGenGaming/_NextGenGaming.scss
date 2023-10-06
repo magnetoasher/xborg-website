@@ -26,14 +26,20 @@
     transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
   }
 
-  .background {
+  .background-container {
     position: absolute;
-    bottom: 0;
+    bottom: -129%;
     left: 50%;
     transform: translateX(-50%);
     width: 2828px;
     height: auto;
     z-index: -1;
+
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: -4px;
+    }
   }
 
   .parallax-token {
@@ -209,12 +215,14 @@
 
   .main-bubble {
     position: absolute;
-    bottom: 21%;
+    bottom: 45%;
     left: 50%;
     transform: translateX(-50%);
+    width: 5.763790664780764%;
 
     img {
-      transform: rotate(180deg);
+      width: 100%;
+      height: auto;
       transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
@@ -225,19 +233,18 @@
     }
   }
 
-  .gamerbase-sphere {
+  .gamerbase-sphere,
+  .launchpad-sphere,
+  .itos-sphere {
     position: absolute;
-    bottom: 56%;
-    left: 37%;
     transform: translateX(-50%);
+    width: 11.688311688311687%;
     z-index: 3;
+    transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 
-    .sphere-title {
-      left: 90px;
-      background: linear-gradient(90deg, #ababab 0%, #2d2d2d 102.73%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    img {
+      opacity: 0;
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
     &:after {
@@ -253,68 +260,38 @@
         rgba(255, 255, 255, 0.08) 0%,
         rgba(217, 217, 217, 0) 100%
       );
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      opacity: 0;
+    }
+  }
+
+  .gamerbase-sphere {
+    bottom: 74%;
+    left: 30%;
+
+    .sphere-title {
+      left: 90px;
+      top: 20px;
     }
   }
 
   .launchpad-sphere {
-    position: absolute;
-    bottom: 51%;
-    left: 64%;
-    transform: translateX(-50%);
-    z-index: 3;
+    bottom: 57%;
+    left: 76%;
 
     .sphere-title {
-      left: -110px;
-      background: linear-gradient(90deg, #2d2d2d 0%, #ababab 102.73%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 177px;
-      height: 177px;
-      background: radial-gradient(
-        50% 50% at 50% 50%,
-        rgba(255, 255, 255, 0.08) 0%,
-        rgba(217, 217, 217, 0) 100%
-      );
+      left: -12px;
+      top: 104px;
     }
   }
 
   .itos-sphere {
-    position: absolute;
-    bottom: 7%;
-    left: 61%;
-    transform: translateX(-50%);
-    z-index: 3;
+    bottom: 17%;
+    left: 62.5%;
 
     .sphere-title {
-      left: -60px;
-      background: linear-gradient(90deg, #2d2d2d 0%, #ababab 102.73%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 177px;
-      height: 177px;
-      background: radial-gradient(
-        50% 50% at 50% 50%,
-        rgba(255, 255, 255, 0.08) 0%,
-        rgba(217, 217, 217, 0) 100%
-      );
+      left: -194px;
+      top: 77px;
     }
   }
 
@@ -322,10 +299,88 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    opacity: 0;
+    border-radius: 10px;
+    background: #3a3a3a;
+    padding: 13px 14px 13px 18px;
+    white-space: nowrap;
+    display: flex;
+    transition: 0.6s ease-in;
   }
 
   .container {
     position: relative;
+  }
+
+  .orbit {
+    width: 21.782178217821784%;
+    height: 21.782178217821784%;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 39%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .orbit-content {
+    animation: circle 60s linear infinite;
+
+    & > div {
+      animation: ccircle 60s linear infinite;
+    }
+
+    &.in {
+      .sphere-title {
+        opacity: 1;
+        transition-delay: 0.6s;
+      }
+
+      .itos-sphere {
+        bottom: 6%;
+        left: 75.5%;
+        transition-delay: 0.2s;
+
+        img {
+          opacity: 1;
+          transition-delay: 0.2s;
+        }
+
+        &:after {
+          opacity: 1;
+          transition-delay: 0.6s;
+        }
+      }
+
+      .launchpad-sphere {
+        bottom: 69%;
+        left: 86%;
+        transition-delay: 0.1s;
+
+        img {
+          opacity: 1;
+          transition-delay: 0.1s;
+        }
+
+        &:after {
+          opacity: 1;
+          transition-delay: 0.5s;
+        }
+      }
+
+      .gamerbase-sphere {
+        bottom: 86%;
+        left: 17%;
+
+        img {
+          opacity: 1;
+        }
+
+        &:after {
+          opacity: 1;
+          transition-delay: 0.4s;
+        }
+      }
+    }
   }
 
   .in {
@@ -343,6 +398,55 @@
     .section-description {
       opacity: 1;
       transition-delay: 0.4s;
+    }
+  }
+
+  @media (max-width: $md-max) {
+    .background-container {
+      width: 1476px;
+      height: 904px;
+      margin-left: -100px;
+      bottom: 17%;
+    }
+
+    .main-bubble {
+      bottom: 11%;
+    }
+
+    .orbit-content {
+      animation: initial;
+
+      & > div {
+        animation: initial;
+      }
+
+      &.in {
+        .gamerbase-sphere {
+          left: 77%;
+          bottom: -34%;
+        }
+
+        .launchpad-sphere {
+          left: 88%;
+          bottom: -50%;
+        }
+
+        .itos-sphere {
+          bottom: -69%;
+          left: 95.5%;
+        }
+
+        .sphere-title {
+          left: initial !important;
+          right: 32px !important;
+          top: 50% !important;
+          background-color: transparent;
+          background: linear-gradient(90deg, #2d2d2d 0%, #ababab 102.73%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
     }
   }
 }

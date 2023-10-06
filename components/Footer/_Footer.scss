@@ -102,4 +102,43 @@ footer.footer {
       transition-delay: 0.8s;
     }
   }
+
+  @media (max-width: $xl-max) {
+    .parallax-bubble {
+      display: none;
+    }
+  }
+
+  @media (max-width: $md-max) {
+    .container {
+      flex-direction: column;
+    }
+
+    .footer-actions {
+      width: 100%;
+    }
+
+    .footer-about {
+      margin-bottom: 32px;
+
+      .social-icons {
+        margin-top: 32px;
+      }
+    }
+  }
+
+  @media (max-width: $sm-max) {
+    .col {
+      flex: 0 0 50%;
+
+      &:last-child,
+      &:nth-child(3) {
+        margin-top: 48px;
+      }
+    }
+
+    .cols {
+      flex-wrap: wrap;
+    }
+  }
 }

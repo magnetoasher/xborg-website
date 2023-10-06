@@ -65,7 +65,15 @@
     margin-top: 16px;
 
     a {
-      color: $red100;
+      svg {
+        transition: 0.15s ease-in;
+      }
+
+      &:hover {
+        svg {
+          transform: translateX(4px);
+        }
+      }
     }
   }
 
@@ -83,7 +91,6 @@
     margin-top: 43px;
 
     .link {
-      color: $red100;
       padding: 8px 16px;
       margin-left: 8px;
     }
@@ -127,6 +134,22 @@
           transition-delay: 0.3s + ($i * 0.035s);
         }
       }
+    }
+  }
+
+  @media (max-width: $md-max) {
+    .list {
+      .block-container {
+        width: 100%;
+      }
+
+      .xbg-token {
+        justify-content: space-between;
+      }
+    }
+
+    .social-icons {
+      margin-top: 32px;
     }
   }
 }

@@ -52,7 +52,6 @@ export const Onboarding = () => {
             options={{
               speed: 900,
               pagination: false,
-              navigation: false,
             }}
           >
             <SwiperSlide>
@@ -68,20 +67,9 @@ export const Onboarding = () => {
                 <div className="swiper-slide-title lexend-heading-l">
                   Team BDS
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="swiper-slide-image">
-                <div className="shadow" />
-                <Image
-                  src={Images.landing.teambds}
-                  alt=""
-                  width={259}
-                  height={374}
-                />
 
-                <div className="swiper-slide-title lexend-heading-l">
-                  Team BDS
+                <div className="swiper-slide-fans lexend-body-">
+                  10,124 fans
                 </div>
               </div>
             </SwiperSlide>
@@ -89,90 +77,37 @@ export const Onboarding = () => {
               <div className="swiper-slide-image">
                 <div className="shadow" />
                 <Image
-                  src={Images.landing.teambds}
+                  src={Images.landing.fox}
                   alt=""
                   width={259}
                   height={374}
                 />
 
-                <div className="swiper-slide-title lexend-heading-l">
-                  Team BDS
-                </div>
+                <div className="swiper-slide-title lexend-heading-l">Fox</div>
+
+                <div className="swiper-slide-fans lexend-body-">4,451 fans</div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="swiper-slide-image">
                 <div className="shadow" />
                 <Image
-                  src={Images.landing.teambds}
+                  src={Images.landing.unknown}
                   alt=""
                   width={259}
                   height={374}
                 />
-
-                <div className="swiper-slide-title lexend-heading-l">
-                  Team BDS
-                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="swiper-slide-image">
                 <div className="shadow" />
                 <Image
-                  src={Images.landing.teambds}
+                  src={Images.landing.unknown}
                   alt=""
                   width={259}
                   height={374}
                 />
-
-                <div className="swiper-slide-title lexend-heading-l">
-                  Team BDS
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="swiper-slide-image">
-                <div className="shadow" />
-                <Image
-                  src={Images.landing.teambds}
-                  alt=""
-                  width={259}
-                  height={374}
-                />
-
-                <div className="swiper-slide-title lexend-heading-l">
-                  Team BDS
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="swiper-slide-image">
-                <div className="shadow" />
-                <Image
-                  src={Images.landing.teambds}
-                  alt=""
-                  width={259}
-                  height={374}
-                />
-
-                <div className="swiper-slide-title lexend-heading-l">
-                  Team BDS
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="swiper-slide-image">
-                <div className="shadow" />
-                <Image
-                  src={Images.landing.teambds}
-                  alt=""
-                  width={259}
-                  height={374}
-                />
-
-                <div className="swiper-slide-title lexend-heading-l">
-                  Team BDS
-                </div>
               </div>
             </SwiperSlide>
           </SpringSwiper>

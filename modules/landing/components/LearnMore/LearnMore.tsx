@@ -150,7 +150,7 @@ export const LearnMore = () => {
                 core.
               </div>
               <div className="flex column links">
-                <Link href="" className="flex middle">
+                <Link href="" className="flex middle link">
                   <span>Watch our latest Cyberlink</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +165,7 @@ export const LearnMore = () => {
                     />
                   </svg>
                 </Link>
-                <Link href="" className="flex middle">
+                <Link href="" className="flex middle link">
                   <span>View Blog</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -180,7 +180,7 @@ export const LearnMore = () => {
                     />
                   </svg>
                 </Link>
-                <Link href="" className="flex middle">
+                <Link href="" className="flex middle link">
                   <span>View Roadmap</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
