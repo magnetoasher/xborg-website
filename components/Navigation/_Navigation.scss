@@ -86,7 +86,28 @@ nav.navigation {
     }
   }
 
-  @media (max-width: $md-max) {
-    display: none;
+  @media (max-width: $xl-max) {
+    padding-left: 0;
+    padding-right: 0;
+
+    .explore-apps {
+      right: 16px;
+    }
+
+    .site-brand {
+      padding: 0;
+    }
+  }
+
+  @media (max-width: $lg-max) {
+    ul {
+      display: none;
+    }
+
+    .brand {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
   }
 }

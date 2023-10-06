@@ -18,7 +18,7 @@ export const Navigation = () => {
       <div className="container flex middle center lexend-body-md">
         <ul className="flex left end">
           <li className="middle flex">
-            <Link href="">Company</Link>
+            <Link href="">Ecosystem</Link>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -53,7 +53,7 @@ export const Navigation = () => {
         </div>
         <ul className="flex right start">
           <li className="middle flex">
-            <Link href="">Ecosystem</Link>
+            <Link href="">Community</Link>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -68,7 +68,7 @@ export const Navigation = () => {
             </svg>
           </li>
           <li className="middle flex">
-            <Link href="">Connect</Link>
+            <Link href="">Company</Link>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

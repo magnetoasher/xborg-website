@@ -4,5 +4,15 @@
 
   a {
     padding: 5px;
+
+    svg path {
+      transition: 0.15s ease-in;
+    }
+
+    &:hover {
+      svg path {
+        fill: $red100;
+      }
+    }
   }
 }
