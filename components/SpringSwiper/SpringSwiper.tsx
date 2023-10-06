@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ReactNode } from 'react';
-import { Autoplay, EffectCreative, Navigation, Pagination } from 'swiper';
+import { Autoplay, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperProps } from 'swiper/react';
 
 export type SpringSwiperProps = {
@@ -16,9 +16,6 @@ export const SpringSwiper = ({
   options,
   id = '1',
 }: SpringSwiperProps) => {
-  let progress = 0,
-    t = !1;
-
   return (
     <div className="spring-swiper-container">
       <Swiper

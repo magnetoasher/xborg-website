@@ -3943,6 +3943,7 @@ footer.footer .in .site-brand {
   z-index: 3;
   padding-top: 120px;
   padding-bottom: 10px;
+  background-color: #000;
 }
 .landing-tokenized-esports .parallax-bubble {
   position: absolute;
