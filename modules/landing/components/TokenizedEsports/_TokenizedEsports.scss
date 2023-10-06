@@ -53,6 +53,7 @@
   .red-bold {
     color: $red100;
     text-align: center;
+    text-transform: uppercase;
     opacity: 0;
     transition: 0.6s ease-in;
   }
@@ -133,6 +134,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: 8px;
+    text-align: center;
   }
 
   .tokenized-esports-tokens {

@@ -171,6 +171,10 @@
       max-width: 346px;
     }
 
+    .parallax-bubble {
+      right: -78px;
+    }
+
     .cols {
       flex-direction: column;
       margin-top: 56px;
@@ -183,9 +187,9 @@
         overflow: hidden;
 
         .cards {
-          top: 50%;
+          top: 59%;
           left: 50%;
-          transform: translateX(-50%);
+          transform: translateX(-94%);
           z-index: 1;
         }
 

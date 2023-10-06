@@ -1604,6 +1604,7 @@ nav.navigation ul {
   justify-content: space-around;
   flex: 1;
   padding: 0;
+  display: none;
 }
 nav.navigation li {
   opacity: 0;
@@ -1986,7 +1987,7 @@ footer.footer .in .site-brand {
   min-height: 100vh;
   overflow: hidden;
 }
-.landing-introduction .video {
+.landing-introduction .introduction-video {
   position: absolute;
   height: calc(100vh + 120px);
 }
@@ -2116,6 +2117,18 @@ footer.footer .in .site-brand {
   opacity: 0;
   transform: translateY(8px);
   transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  color: #fff;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.35);
+  letter-spacing: -0.28px;
+}
+.landing-onboarding .link {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  z-index: 3;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .landing-onboarding .subscribe {
   width: 487px;
@@ -2166,11 +2179,16 @@ footer.footer .in .site-brand {
   transition: 0.6s ease-in;
 }
 .landing-onboarding .swiper-slide .swiper-slide-image:hover .swiper-slide-title {
-  bottom: 48px;
+  bottom: 100px;
 }
 .landing-onboarding .swiper-slide .swiper-slide-image:hover .swiper-slide-fans {
   transform: translateY(0);
-  opacity: 0.7;
+  bottom: 48px;
+  opacity: 1;
+}
+.landing-onboarding .swiper-slide .swiper-slide-image:hover .link {
+  transform: translateY(0);
+  opacity: 1;
 }
 .landing-onboarding .swiper-slide .swiper-slide-image:hover:after {
   opacity: 0.9;
@@ -2463,6 +2481,9 @@ footer.footer .in .site-brand {
   .landing-empowering-players h2 {
     max-width: 346px;
   }
+  .landing-empowering-players .parallax-bubble {
+    right: -78px;
+  }
   .landing-empowering-players .cols {
     flex-direction: column;
     margin-top: 56px;
@@ -2475,9 +2496,9 @@ footer.footer .in .site-brand {
     overflow: hidden;
   }
   .landing-empowering-players .cols .block-container .cards {
-    top: 50%;
+    top: 59%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-94%);
     z-index: 1;
   }
   .landing-empowering-players .cols .block-container .block {
@@ -2981,6 +3002,14 @@ footer.footer .in .site-brand {
     top: 71%;
     width: 67px;
   }
+  .landing-next-gen .parallax-bubble {
+    left: -98px;
+  }
+}
+@media (max-width: 576px) {
+  .landing-next-gen .parallax-bubble {
+    left: -138px;
+  }
 }
 
 .landing-next-gen-gaming {
@@ -2988,7 +3017,7 @@ footer.footer .in .site-brand {
   z-index: 3;
   padding-top: 23px;
   position: relative;
-  height: 839px;
+  height: 1039px;
   z-index: 0;
 }
 .landing-next-gen-gaming h2 {
@@ -3010,7 +3039,7 @@ footer.footer .in .site-brand {
 }
 .landing-next-gen-gaming .background-container {
   position: absolute;
-  bottom: -129%;
+  bottom: -94%;
   left: 50%;
   transform: translateX(-50%);
   width: 2828px;
@@ -3344,6 +3373,10 @@ footer.footer .in .site-brand {
   transition-delay: 0.4s;
 }
 @media (max-width: 992px) {
+  .landing-next-gen-gaming .container {
+    position: relative;
+    z-index: 3;
+  }
   .landing-next-gen-gaming .background-container {
     width: 1476px;
     height: 904px;
@@ -3352,6 +3385,22 @@ footer.footer .in .site-brand {
   }
   .landing-next-gen-gaming .main-bubble {
     bottom: 11%;
+  }
+  .landing-next-gen-gaming .parallax-bubble {
+    right: -23px;
+    bottom: -29px;
+  }
+  .landing-next-gen-gaming .parallax-bubble4 {
+    left: -32px;
+    bottom: 138px;
+  }
+  .landing-next-gen-gaming .parallax-token10 {
+    left: 252px;
+    bottom: 21px;
+  }
+  .landing-next-gen-gaming .parallax-token21 {
+    right: 89px;
+    bottom: 248px;
   }
   .landing-next-gen-gaming .orbit-content {
     animation: initial;
@@ -3388,7 +3437,7 @@ footer.footer .in .site-brand {
   z-index: 3;
   padding-top: 23px;
   position: relative;
-  height: 839px;
+  height: 1039px;
   z-index: 0;
 }
 .landing-next-gen-gaming h2 {
@@ -3410,7 +3459,7 @@ footer.footer .in .site-brand {
 }
 .landing-next-gen-gaming .background-container {
   position: absolute;
-  bottom: -129%;
+  bottom: -94%;
   left: 50%;
   transform: translateX(-50%);
   width: 2828px;
@@ -3744,6 +3793,10 @@ footer.footer .in .site-brand {
   transition-delay: 0.4s;
 }
 @media (max-width: 992px) {
+  .landing-next-gen-gaming .container {
+    position: relative;
+    z-index: 3;
+  }
   .landing-next-gen-gaming .background-container {
     width: 1476px;
     height: 904px;
@@ -3752,6 +3805,22 @@ footer.footer .in .site-brand {
   }
   .landing-next-gen-gaming .main-bubble {
     bottom: 11%;
+  }
+  .landing-next-gen-gaming .parallax-bubble {
+    right: -23px;
+    bottom: -29px;
+  }
+  .landing-next-gen-gaming .parallax-bubble4 {
+    left: -32px;
+    bottom: 138px;
+  }
+  .landing-next-gen-gaming .parallax-token10 {
+    left: 252px;
+    bottom: 21px;
+  }
+  .landing-next-gen-gaming .parallax-token21 {
+    right: 89px;
+    bottom: 248px;
   }
   .landing-next-gen-gaming .orbit-content {
     animation: initial;
@@ -3987,6 +4056,7 @@ footer.footer .in .site-brand {
 .landing-tokenized-esports .red-bold {
   color: #eb3a4a;
   text-align: center;
+  text-transform: uppercase;
   opacity: 0;
   transition: 0.6s ease-in;
 }
@@ -4055,6 +4125,7 @@ footer.footer .in .site-brand {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-top: 8px;
+  text-align: center;
 }
 .landing-tokenized-esports .tokenized-esports-tokens {
   transform: translateX(50%);
@@ -4268,12 +4339,6 @@ footer.footer .in .site-brand {
 .landing-roadmap .spring-swiper-container.in .swiper {
   opacity: 1;
   transform: translateY(0);
-}
-.landing-roadmap .spring-swiper-container.in .swiper:hover .swiper-slide-content {
-  opacity: 0.5;
-}
-.landing-roadmap .spring-swiper-container.in .swiper:hover .swiper-slide:hover .swiper-slide-content {
-  opacity: 1;
 }
 .landing-roadmap .swiper-prev {
   right: 32px;
@@ -4656,6 +4721,17 @@ footer.footer .in .site-brand {
   transition-delay: 0.65s;
 }
 @media (max-width: 992px) {
+  .landing-learnmore .xbg-token .token-image {
+    margin: 0 16px 0 0;
+    height: 61px;
+  }
+  .landing-learnmore .prometheus {
+    right: -32px;
+    height: 63%;
+  }
+  .landing-learnmore .prometheus-nft {
+    overflow: hidden;
+  }
   .landing-learnmore .list .block-container {
     width: 100%;
   }
@@ -4664,6 +4740,16 @@ footer.footer .in .site-brand {
   }
   .landing-learnmore .social-icons {
     margin-top: 32px;
+  }
+  .landing-learnmore .actions {
+    white-space: nowrap;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .landing-learnmore .actions .link {
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 16px;
   }
 }
 

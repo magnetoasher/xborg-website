@@ -55,17 +55,17 @@
         opacity: 1;
         transform: translateY(0);
 
-        &:hover {
-          .swiper-slide-content {
-            opacity: 0.5;
-          }
+        // &:hover {
+        //   .swiper-slide-content {
+        //     opacity: 0.5;
+        //   }
 
-          .swiper-slide:hover {
-            .swiper-slide-content {
-              opacity: 1;
-            }
-          }
-        }
+        //   .swiper-slide:hover {
+        //     .swiper-slide-content {
+        //       opacity: 1;
+        //     }
+        //   }
+        // }
       }
     }
   }

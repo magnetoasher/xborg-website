@@ -167,7 +167,7 @@ export const isInViewPortObserver = (
     },
     {
       root: null,
-      rootMargin: rootMargin ?? '-20%',
+      rootMargin: rootMargin ?? '-5%',
       threshold: 0.1,
     },
   );

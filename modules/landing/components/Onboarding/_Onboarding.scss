@@ -30,6 +30,19 @@
     opacity: 0;
     transform: translateY(8px);
     transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    color: #fff;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.35);
+    letter-spacing: -0.28px;
+  }
+
+  .link {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    z-index: 3;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   }
 
   .subscribe {
@@ -87,12 +100,18 @@
 
       &:hover {
         .swiper-slide-title {
-          bottom: 48px;
+          bottom: 100px;
         }
 
         .swiper-slide-fans {
           transform: translateY(0);
-          opacity: 0.7;
+          bottom: 48px;
+          opacity: 1;
+        }
+
+        .link {
+          transform: translateY(0);
+          opacity: 1;
         }
 
         &:after {

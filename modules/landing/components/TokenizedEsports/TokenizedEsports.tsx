@@ -75,7 +75,7 @@ export const TokenizedEsports = () => {
 
       <div className="container flex column middle center">
         <ObserverContainer className="flex column">
-          <div className="lexend-body-s red-bold">COMING SOON</div>
+          <div className="lexend-body-s red-bold">The future of esports</div>
           <h2 className="integralfc-h2 reveal-from-bottom" ref={ref}>
             The future of esports
           </h2>

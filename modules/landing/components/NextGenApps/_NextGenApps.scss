@@ -242,5 +242,15 @@
       top: 71%;
       width: 67px;
     }
+
+    .parallax-bubble {
+      left: -98px;
+    }
+  }
+
+  @media (max-width: $xs-max) {
+    .parallax-bubble {
+      left: -138px;
+    }
   }
 }

@@ -2,9 +2,7 @@ import { Images } from '@/assets/imgs';
 import { ObserverContainer } from '@/components/ObserverContainer';
 import { splitLines } from '@/modules/utils';
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
-import { Tween } from 'react-gsap';
-import { Scene } from 'react-scrollmagic';
+import { useEffect, useRef } from 'react';
 import { NextGenGamingBubbles } from './Bubbles';
 import { NextGenGamingTokens } from './Tokens';
 

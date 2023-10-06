@@ -3,7 +3,7 @@
   z-index: 3;
   padding-top: 23px;
   position: relative;
-  height: 839px;
+  height: 1039px;
   z-index: 0;
 
   h2 {
@@ -28,7 +28,7 @@
 
   .background-container {
     position: absolute;
-    bottom: -129%;
+    bottom: -94%;
     left: 50%;
     transform: translateX(-50%);
     width: 2828px;
@@ -402,6 +402,10 @@
   }
 
   @media (max-width: $md-max) {
+    .container {
+      position: relative;
+      z-index: 3;
+    }
     .background-container {
       width: 1476px;
       height: 904px;
@@ -411,6 +415,26 @@
 
     .main-bubble {
       bottom: 11%;
+    }
+
+    .parallax-bubble {
+      right: -23px;
+      bottom: -29px;
+    }
+
+    .parallax-bubble4 {
+      left: -32px;
+      bottom: 138px;
+    }
+
+    .parallax-token10 {
+      left: 252px;
+      bottom: 21px;
+    }
+
+    .parallax-token21 {
+      right: 89px;
+      bottom: 248px;
     }
 
     .orbit-content {

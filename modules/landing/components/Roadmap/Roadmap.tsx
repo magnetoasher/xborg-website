@@ -40,6 +40,7 @@ export const Roadmap = () => {
             options={{
               speed: 800,
               pagination: false,
+              initialSlide: 2,
             }}
           >
             <SwiperSlide className="flex column top start">

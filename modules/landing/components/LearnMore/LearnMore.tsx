@@ -109,8 +109,7 @@ export const LearnMore = () => {
             <div className="block expand prometheus-nft">
               <div className="lexend-body-sl">Prometheus NFT</div>
               <div className="lexend-body-md l">
-                Join the 1,111 Prometheans shaping the next generation of
-                gaming.
+                Join the 1,111 Prometheans shaping the future of gaming.
               </div>
 
               <div className="flex middle actions">
