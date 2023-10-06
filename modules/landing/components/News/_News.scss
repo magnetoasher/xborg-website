@@ -72,12 +72,6 @@
       .news-article {
         opacity: 1;
         transform: translateY(0);
-
-        @for $i from 1 through 10 {
-          &:nth-child(#{$i}) {
-            transition-delay: 0.3s + ($i * 0.09s);
-          }
-        }
       }
     }
   }

@@ -7,6 +7,7 @@ import { useEffect, useRef } from 'react';
 import { Tween } from 'react-gsap';
 import { Scene } from 'react-scrollmagic';
 import { NewsArticle } from './NewsArticle';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 export const News = () => {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -51,9 +52,26 @@ export const News = () => {
         </ObserverContainer>
 
         <ObserverContainer className="flex news-list">
-          <NewsArticle />
-          <NewsArticle />
-          <NewsArticle />
+          <Swiper slidesPerView={3}>
+            <SwiperSlide>
+              <NewsArticle />
+            </SwiperSlide>
+            <SwiperSlide>
+              <NewsArticle />
+            </SwiperSlide>
+            <SwiperSlide>
+              <NewsArticle />
+            </SwiperSlide>
+            <SwiperSlide>
+              <NewsArticle />
+            </SwiperSlide>
+            <SwiperSlide>
+              <NewsArticle />
+            </SwiperSlide>
+            <SwiperSlide>
+              <NewsArticle />
+            </SwiperSlide>
+          </Swiper>
         </ObserverContainer>
       </div>
     </div>

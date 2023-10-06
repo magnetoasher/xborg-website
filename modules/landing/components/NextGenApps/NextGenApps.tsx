@@ -63,7 +63,23 @@ export const NextGenApps = () => {
 
         <div className="wrapper flex column">
           <NextGenAppBlock>
-            <div className="lexend-heading-l">GamerBase.gg</div>
+            <div className="flex">
+              <div className="lexend-heading-l">
+                GamerBase.gg
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="13"
+                  height="13"
+                  viewBox="0 0 13 13"
+                  fill="none"
+                >
+                  <path
+                    d="M1.13047 12.5L0 11.3695L9.75453 1.61497H0.872093V0H12.5V11.6279H10.885V2.74547L1.13047 12.5Z"
+                    fill="#EB3A4A"
+                  />
+                </svg>
+              </div>
+            </div>
             <div className="lexend-body-sm desc l">
               The home of gaming communities.
             </div>
