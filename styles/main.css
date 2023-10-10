@@ -218,6 +218,11 @@ table {
   }
 }
 
+.integralfc-h2-l {
+  font-size: 54px;
+  font-weight: 600;
+}
+
 .integralfc-h2 {
   font-family: Integral CF;
   font-size: 40px;
@@ -229,6 +234,12 @@ table {
     font-size: 32px;
     line-height: 32px;
   }
+}
+
+.integralfc-heading-md {
+  font-family: Integral CF;
+  font-size: 32px;
+  font-weight: 600;
 }
 
 .integralfc-body-md {
@@ -1532,15 +1543,15 @@ swiper-container .swiper-notification {
   content: "";
   position: absolute;
   width: 110%;
-  height: 250px;
+  height: 200px;
   transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   border-radius: 8px;
-  background: linear-gradient(45deg, rgba(235, 58, 74, 0.9) 0%, rgba(7, 7, 10, 0) 40%, rgba(6, 6, 9, 0) 50%, rgba(235, 58, 74, 0.9) 100%);
+  background: linear-gradient(45deg, rgb(235, 58, 74) 0%, rgba(7, 7, 10, 0) 40%, rgba(6, 6, 9, 0) 50%, rgb(235, 58, 74) 100%);
   z-index: -1;
   pointer-events: none;
 }
 .btn-dark:hover:before {
-  transform: rotate(90deg);
+  animation: orbit 3s ease-in infinite;
 }
 
 .btn-dark-container {
@@ -1549,17 +1560,6 @@ swiper-container .swiper-notification {
   border-radius: 8px;
 }
 
-@keyframes mymove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 .btn-red {
   padding: 8px 16px;
   position: relative;
@@ -1591,12 +1591,10 @@ nav.navigation {
   transform: translateY(-30px);
 }
 nav.navigation .brand {
-  transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
-nav.navigation .nav-bar {
-  background-color: tomato;
-  display: flex;
-  align-items: center;
+nav.navigation .brand:hover {
+  transform: rotate(180deg);
 }
 nav.navigation ul {
   display: flex;
@@ -1604,7 +1602,6 @@ nav.navigation ul {
   justify-content: space-around;
   flex: 1;
   padding: 0;
-  display: none;
 }
 nav.navigation li {
   opacity: 0;
@@ -1643,10 +1640,6 @@ nav.navigation .explore-apps .btn {
 nav.navigation.in {
   transform: translateY(0);
 }
-nav.navigation.in .brand {
-  transform: rotate(180deg);
-  transition-delay: 0.8s;
-}
 nav.navigation.in li {
   opacity: 1;
 }
@@ -1660,6 +1653,9 @@ nav.navigation.in li {
   }
   nav.navigation .site-brand {
     padding: 0;
+  }
+  nav.navigation ul {
+    display: none;
   }
 }
 @media (max-width: 1200px) {
@@ -1694,9 +1690,10 @@ footer.footer .footer-about {
   width: 40%;
 }
 footer.footer .footer-about p {
-  max-width: 359px;
+  max-width: 388px;
   color: #878787;
-  margin-top: 32px;
+  margin-top: 24px;
+  margin-bottom: 32px;
 }
 footer.footer .footer-actions {
   width: 60%;
@@ -2101,13 +2098,22 @@ footer.footer .in .site-brand {
   opacity: 0;
   transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
 }
+.landing-onboarding .team-logo {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  z-index: 3;
+  transform: translateY(8px);
+  opacity: 0;
+  transition: 0.3s ease-in;
+}
 .landing-onboarding .swiper-slide-title {
   position: absolute;
   bottom: 24px;
   left: 24px;
   z-index: 3;
   letter-spacing: -0.64px;
-  transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 0.3s ease-in;
 }
 .landing-onboarding .swiper-slide-fans {
   position: absolute;
@@ -2116,19 +2122,10 @@ footer.footer .in .site-brand {
   z-index: 3;
   opacity: 0;
   transform: translateY(8px);
-  transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 0.3s ease-in;
   color: #fff;
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.35);
   letter-spacing: -0.28px;
-}
-.landing-onboarding .link {
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
-  z-index: 3;
-  opacity: 0;
-  transform: translateY(8px);
-  transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .landing-onboarding .subscribe {
   width: 487px;
@@ -2151,6 +2148,41 @@ footer.footer .in .site-brand {
   padding: 0 16px 16px;
   min-width: 195.169px;
   min-height: 244.944px;
+  display: flex;
+}
+.landing-onboarding .swiper-slide .swiper-slide-image.unknown {
+  height: 100%;
+  overflow: initial;
+}
+.landing-onboarding .swiper-slide .swiper-slide-image.unknown:before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  height: initial;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  border-radius: 8px;
+  background: linear-gradient(45deg, #343434 0%, #161616 40%, #161616 60%, #343434 100%);
+  z-index: -1;
+  pointer-events: none;
+}
+.landing-onboarding .swiper-slide .swiper-slide-image.unknown:after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  height: initial;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  border-radius: 8px;
+  background: radial-gradient(51.87% 56.99% at 90.49% 94.65%, #242424 0%, #1a1a1a 100%), rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  z-index: 4;
+  opacity: 1;
 }
 .landing-onboarding .swiper-slide .swiper-slide-image {
   overflow: hidden;
@@ -2159,6 +2191,7 @@ footer.footer .in .site-brand {
   transform: translateY(16px);
   opacity: 0;
   position: relative;
+  width: 100%;
 }
 .landing-onboarding .swiper-slide .swiper-slide-image:after {
   content: "";
@@ -2172,36 +2205,34 @@ footer.footer .in .site-brand {
   opacity: 0;
   transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.landing-onboarding .swiper-slide .swiper-slide-image img {
+.landing-onboarding .swiper-slide .swiper-slide-image .image {
   width: 100%;
   height: auto;
   transform: scale(1.1);
   transition: 0.6s ease-in;
 }
+.landing-onboarding .swiper-slide .swiper-slide-image .image-container {
+  transition: 0.3s ease-in;
+}
+.landing-onboarding .swiper-slide .swiper-slide-image:hover .team-logo {
+  transform: translateY(0);
+  opacity: 1;
+}
+.landing-onboarding .swiper-slide .swiper-slide-image:hover .image-container {
+  transform: scale(1.1);
+  transition-delay: 0.1s;
+}
 .landing-onboarding .swiper-slide .swiper-slide-image:hover .swiper-slide-title {
-  bottom: 100px;
+  bottom: 76px;
 }
 .landing-onboarding .swiper-slide .swiper-slide-image:hover .swiper-slide-fans {
   transform: translateY(0);
-  bottom: 48px;
+  bottom: 24px;
   opacity: 1;
-}
-.landing-onboarding .swiper-slide .swiper-slide-image:hover .link {
-  transform: translateY(0);
-  opacity: 1;
+  transition-delay: 0.1s;
 }
 .landing-onboarding .swiper-slide .swiper-slide-image:hover:after {
   opacity: 0.9;
-}
-.landing-onboarding .swiper-slide .shadow {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-  z-index: 1;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
 }
 .landing-onboarding .in .subscribe {
   opacity: 1;
@@ -2245,26 +2276,26 @@ footer.footer .in .site-brand {
   opacity: 1;
   transform: translateY(0);
 }
-.landing-onboarding .in .swiper-slide .swiper-slide-image img {
+.landing-onboarding .in .swiper-slide .swiper-slide-image .image {
   transform: scale(1);
   transition-delay: 0.4s;
 }
 .landing-onboarding .in .swiper-slide:nth-child(2) .swiper-slide-image {
   transition-delay: 0.1s;
 }
-.landing-onboarding .in .swiper-slide:nth-child(2) .swiper-slide-image img {
+.landing-onboarding .in .swiper-slide:nth-child(2) .swiper-slide-image .image {
   transition-delay: 0.5s;
 }
 .landing-onboarding .in .swiper-slide:nth-child(3) .swiper-slide-image {
   transition-delay: 0.2s;
 }
-.landing-onboarding .in .swiper-slide:nth-child(3) .swiper-slide-image img {
+.landing-onboarding .in .swiper-slide:nth-child(3) .swiper-slide-image .image {
   transition-delay: 0.6s;
 }
 .landing-onboarding .in .swiper-slide:nth-child(4) .swiper-slide-image {
   transition-delay: 0.3s;
 }
-.landing-onboarding .in .swiper-slide:nth-child(4) .swiper-slide-image img {
+.landing-onboarding .in .swiper-slide:nth-child(4) .swiper-slide-image .image {
   transition-delay: 0.7s;
 }
 @media (max-width: 1200px) {
@@ -2274,6 +2305,9 @@ footer.footer .in .site-brand {
   }
   .landing-onboarding h2 {
     margin-bottom: 56px;
+  }
+  .landing-onboarding .team-logo {
+    display: none;
   }
 }
 @media (max-width: 992px) {
@@ -3212,7 +3246,8 @@ footer.footer .in .site-brand {
 }
 .landing-next-gen-gaming .gamerbase-sphere,
 .landing-next-gen-gaming .launchpad-sphere,
-.landing-next-gen-gaming .itos-sphere {
+.landing-next-gen-gaming .itos-sphere,
+.landing-next-gen-gaming .xborgid-sphere {
   position: absolute;
   transform: translateX(-50%);
   width: 11.6883116883%;
@@ -3221,13 +3256,15 @@ footer.footer .in .site-brand {
 }
 .landing-next-gen-gaming .gamerbase-sphere img,
 .landing-next-gen-gaming .launchpad-sphere img,
-.landing-next-gen-gaming .itos-sphere img {
+.landing-next-gen-gaming .itos-sphere img,
+.landing-next-gen-gaming .xborgid-sphere img {
   opacity: 0;
   transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .landing-next-gen-gaming .gamerbase-sphere:after,
 .landing-next-gen-gaming .launchpad-sphere:after,
-.landing-next-gen-gaming .itos-sphere:after {
+.landing-next-gen-gaming .itos-sphere:after,
+.landing-next-gen-gaming .xborgid-sphere:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -3244,33 +3281,47 @@ footer.footer .in .site-brand {
   left: 30%;
 }
 .landing-next-gen-gaming .gamerbase-sphere .sphere-title {
-  left: 90px;
-  top: 20px;
+  left: 50px;
+  top: 34px;
+  z-index: -1;
 }
 .landing-next-gen-gaming .launchpad-sphere {
   bottom: 57%;
   left: 76%;
 }
 .landing-next-gen-gaming .launchpad-sphere .sphere-title {
-  left: -12px;
-  top: 104px;
+  left: 50px;
+  top: 34px;
+  z-index: -1;
+}
+.landing-next-gen-gaming .xborgid-sphere {
+  bottom: 57%;
+  left: 76%;
+}
+.landing-next-gen-gaming .xborgid-sphere .sphere-title {
+  left: 50px;
+  top: 34px;
+  z-index: -1;
 }
 .landing-next-gen-gaming .itos-sphere {
   bottom: 17%;
   left: 62.5%;
 }
 .landing-next-gen-gaming .itos-sphere .sphere-title {
-  left: -194px;
-  top: 77px;
+  left: 50px;
+  top: 34px;
+  z-index: -1;
 }
 .landing-next-gen-gaming .sphere-title {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   opacity: 0;
-  border-radius: 10px;
-  background: #3a3a3a;
-  padding: 13px 14px 13px 18px;
+  border-radius: 40px;
+  background: radial-gradient(497.12% 77.81% at 97.79% 94.55%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  padding: 16px 32px;
   white-space: nowrap;
   display: flex;
   transition: 0.6s ease-in;
@@ -3334,6 +3385,17 @@ footer.footer .in .site-brand {
   opacity: 1;
   transition-delay: 0.4s;
 }
+.landing-next-gen-gaming .orbit-content.in .xborgid-sphere {
+  bottom: 9%;
+  left: 9%;
+}
+.landing-next-gen-gaming .orbit-content.in .xborgid-sphere img {
+  opacity: 1;
+}
+.landing-next-gen-gaming .orbit-content.in .xborgid-sphere:after {
+  opacity: 1;
+  transition-delay: 0.4s;
+}
 .landing-next-gen-gaming .in h2 .word {
   opacity: 1;
   transform: translateY(0);
@@ -3383,12 +3445,19 @@ footer.footer .in .site-brand {
     margin-left: -100px;
     bottom: 17%;
   }
+  .landing-next-gen-gaming .sphere-title {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
   .landing-next-gen-gaming .main-bubble {
     bottom: 11%;
   }
   .landing-next-gen-gaming .parallax-bubble {
     right: -23px;
     bottom: -29px;
+  }
+  .landing-next-gen-gaming .parallax-bubble3 {
+    bottom: 113px;
   }
   .landing-next-gen-gaming .parallax-bubble4 {
     left: -32px;
@@ -3419,6 +3488,10 @@ footer.footer .in .site-brand {
   .landing-next-gen-gaming .orbit-content.in .itos-sphere {
     bottom: -69%;
     left: 95.5%;
+  }
+  .landing-next-gen-gaming .orbit-content.in .xborgid-sphere {
+    bottom: -95%;
+    left: 99.5%;
   }
   .landing-next-gen-gaming .orbit-content.in .sphere-title {
     left: initial !important;
@@ -3632,7 +3705,8 @@ footer.footer .in .site-brand {
 }
 .landing-next-gen-gaming .gamerbase-sphere,
 .landing-next-gen-gaming .launchpad-sphere,
-.landing-next-gen-gaming .itos-sphere {
+.landing-next-gen-gaming .itos-sphere,
+.landing-next-gen-gaming .xborgid-sphere {
   position: absolute;
   transform: translateX(-50%);
   width: 11.6883116883%;
@@ -3641,13 +3715,15 @@ footer.footer .in .site-brand {
 }
 .landing-next-gen-gaming .gamerbase-sphere img,
 .landing-next-gen-gaming .launchpad-sphere img,
-.landing-next-gen-gaming .itos-sphere img {
+.landing-next-gen-gaming .itos-sphere img,
+.landing-next-gen-gaming .xborgid-sphere img {
   opacity: 0;
   transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .landing-next-gen-gaming .gamerbase-sphere:after,
 .landing-next-gen-gaming .launchpad-sphere:after,
-.landing-next-gen-gaming .itos-sphere:after {
+.landing-next-gen-gaming .itos-sphere:after,
+.landing-next-gen-gaming .xborgid-sphere:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -3664,33 +3740,47 @@ footer.footer .in .site-brand {
   left: 30%;
 }
 .landing-next-gen-gaming .gamerbase-sphere .sphere-title {
-  left: 90px;
-  top: 20px;
+  left: 50px;
+  top: 34px;
+  z-index: -1;
 }
 .landing-next-gen-gaming .launchpad-sphere {
   bottom: 57%;
   left: 76%;
 }
 .landing-next-gen-gaming .launchpad-sphere .sphere-title {
-  left: -12px;
-  top: 104px;
+  left: 50px;
+  top: 34px;
+  z-index: -1;
+}
+.landing-next-gen-gaming .xborgid-sphere {
+  bottom: 57%;
+  left: 76%;
+}
+.landing-next-gen-gaming .xborgid-sphere .sphere-title {
+  left: 50px;
+  top: 34px;
+  z-index: -1;
 }
 .landing-next-gen-gaming .itos-sphere {
   bottom: 17%;
   left: 62.5%;
 }
 .landing-next-gen-gaming .itos-sphere .sphere-title {
-  left: -194px;
-  top: 77px;
+  left: 50px;
+  top: 34px;
+  z-index: -1;
 }
 .landing-next-gen-gaming .sphere-title {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   opacity: 0;
-  border-radius: 10px;
-  background: #3a3a3a;
-  padding: 13px 14px 13px 18px;
+  border-radius: 40px;
+  background: radial-gradient(497.12% 77.81% at 97.79% 94.55%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  padding: 16px 32px;
   white-space: nowrap;
   display: flex;
   transition: 0.6s ease-in;
@@ -3754,6 +3844,17 @@ footer.footer .in .site-brand {
   opacity: 1;
   transition-delay: 0.4s;
 }
+.landing-next-gen-gaming .orbit-content.in .xborgid-sphere {
+  bottom: 9%;
+  left: 9%;
+}
+.landing-next-gen-gaming .orbit-content.in .xborgid-sphere img {
+  opacity: 1;
+}
+.landing-next-gen-gaming .orbit-content.in .xborgid-sphere:after {
+  opacity: 1;
+  transition-delay: 0.4s;
+}
 .landing-next-gen-gaming .in h2 .word {
   opacity: 1;
   transform: translateY(0);
@@ -3803,12 +3904,19 @@ footer.footer .in .site-brand {
     margin-left: -100px;
     bottom: 17%;
   }
+  .landing-next-gen-gaming .sphere-title {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
   .landing-next-gen-gaming .main-bubble {
     bottom: 11%;
   }
   .landing-next-gen-gaming .parallax-bubble {
     right: -23px;
     bottom: -29px;
+  }
+  .landing-next-gen-gaming .parallax-bubble3 {
+    bottom: 113px;
   }
   .landing-next-gen-gaming .parallax-bubble4 {
     left: -32px;
@@ -3839,6 +3947,10 @@ footer.footer .in .site-brand {
   .landing-next-gen-gaming .orbit-content.in .itos-sphere {
     bottom: -69%;
     left: 95.5%;
+  }
+  .landing-next-gen-gaming .orbit-content.in .xborgid-sphere {
+    bottom: -95%;
+    left: 99.5%;
   }
   .landing-next-gen-gaming .orbit-content.in .sphere-title {
     left: initial !important;
@@ -3898,12 +4010,16 @@ footer.footer .in .site-brand {
   opacity: 0;
   transition: 0.6s ease-in;
 }
+.landing-launching .input-label {
+  max-width: 302px;
+}
 .landing-launching .video-container.in .token-video {
   opacity: 1;
-  transform: translateX(15%) translateY(0);
+  transform: translateX(5%) translateY(0);
 }
 .landing-launching .title-container {
-  max-width: 455px;
+  max-width: 508px;
+  transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .landing-launching h2 {
   margin-bottom: 56px;
@@ -3919,26 +4035,33 @@ footer.footer .in .site-brand {
 .landing-launching p {
   color: #cacace;
 }
-.landing-launching .description {
-  max-width: 270px;
-  margin-bottom: 32px;
+.landing-launching .subscribe {
+  width: 487px;
+  position: relative;
+  opacity: 0;
+  transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.landing-launching .registered-interest {
-  margin-left: 32px;
+.landing-launching .subscribe .btn {
+  position: absolute;
+  right: 4px;
+  top: 38px;
+  bottom: 4px;
 }
-.landing-launching .btn {
-  height: 56px;
-  font-weight: 400;
+.landing-launching .link {
+  margin-top: 24px;
 }
 .landing-launching .in .lexend-body-s {
   opacity: 1;
   transition-delay: 0.4s;
 }
+.landing-launching .in .title-container {
+  transform: translateX(-40px);
+}
 .landing-launching .in h2 .word {
   opacity: 1;
   transform: translateY(0) translateX(100px);
 }
-.landing-launching .in h2 .word:first-child {
+.landing-launching .in h2 .word:first-child, .landing-launching .in h2 .word:nth-child(2) {
   transform: translateY(0) translateX(0);
 }
 .landing-launching .in h2 .word:nth-child(1) {
@@ -3971,6 +4094,15 @@ footer.footer .in .site-brand {
 .landing-launching .in h2 .word:nth-child(10) {
   transition-delay: 0.65s;
 }
+.landing-launching .in .subscribe {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+@media (max-width: 1200px) {
+  .landing-launching .in .title-container {
+    transform: translateX(0);
+  }
+}
 @media (max-width: 992px) {
   .landing-launching .video-container {
     position: absolute;
@@ -3978,7 +4110,10 @@ footer.footer .in .site-brand {
     top: 164px;
   }
   .landing-launching .details {
-    transform: translateX(115px);
+    transform: translateX(0);
+  }
+  .landing-launching .subscribe {
+    width: 100%;
   }
   .landing-launching .container {
     align-items: flex-start;
@@ -3991,9 +4126,6 @@ footer.footer .in .site-brand {
   .landing-launching .token-video {
     width: 165px;
     height: 149.118px;
-  }
-  .landing-launching h2 {
-    max-width: 315px;
   }
 }
 @media (max-width: 576px) {
@@ -4295,7 +4427,7 @@ footer.footer .in .site-brand {
 .landing-roadmap {
   position: relative;
   z-index: 3;
-  padding-top: 257px;
+  padding-top: 120px;
   padding-bottom: 120px;
 }
 .landing-roadmap:after {
@@ -4339,6 +4471,9 @@ footer.footer .in .site-brand {
 .landing-roadmap .spring-swiper-container.in .swiper {
   opacity: 1;
   transform: translateY(0);
+}
+.landing-roadmap .roadmap-line {
+  margin-top: 8px;
 }
 .landing-roadmap .swiper-prev {
   right: 32px;
@@ -4497,6 +4632,7 @@ footer.footer .in .site-brand {
           backdrop-filter: blur(10px);
   padding: 32px 24px;
   opacity: 0;
+  height: 100%;
   transform: translateY(16px);
   position: relative;
   transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
@@ -4507,6 +4643,7 @@ footer.footer .in .site-brand {
 }
 .landing-news .news-article .description {
   margin-bottom: 12px;
+  flex: 1;
 }
 .landing-news .news-article .btn {
   height: 48px;
@@ -4619,12 +4756,25 @@ footer.footer .in .site-brand {
   opacity: 0;
   transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
 }
+.landing-learnmore .subscribe {
+  width: 100%;
+  position: relative;
+}
+.landing-learnmore .subscribe .btn {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  bottom: 4px;
+}
 .landing-learnmore .list {
   margin: 0 -12px;
 }
 .landing-learnmore .block-container {
   width: 50%;
   padding: 12px;
+}
+.landing-learnmore .block-container .lexend-body-md {
+  max-width: 311px;
 }
 .landing-learnmore .block {
   border-radius: 16px;

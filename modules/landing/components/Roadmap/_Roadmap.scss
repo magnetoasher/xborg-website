@@ -1,7 +1,7 @@
 .landing-roadmap {
   position: relative;
   z-index: 3;
-  padding-top: 257px;
+  padding-top: 120px;
   padding-bottom: 120px;
 
   &:after {
@@ -68,6 +68,10 @@
         // }
       }
     }
+  }
+
+  .roadmap-line {
+    margin-top: 8px;
   }
 
   .swiper-prev {

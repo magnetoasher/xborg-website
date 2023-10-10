@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Brand } from '@/components/Brand';
 import { useEffect, useState } from 'react';
 import { BtnDark } from '@/components/Buttons';
+import { scrollTo } from '@/modules/utils';
 
 export const Navigation = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -86,7 +87,16 @@ export const Navigation = () => {
       </div>
 
       <div className="explore-apps flex">
-        <BtnDark label="Explore Apps" href="" />
+        <BtnDark
+          label="Explore Apps"
+          href=""
+          onClick={(e: any) => {
+            e.preventDefault();
+            const hero = document.getElementsByClassName('landing-next-gen')[0];
+            const rect = hero.getBoundingClientRect();
+            scrollTo(window.scrollY, rect.y, 0);
+          }}
+        />
       </div>
     </nav>
   );

@@ -54,13 +54,24 @@ export const Onboarding = () => {
           >
             <SwiperSlide>
               <div className="swiper-slide-image">
-                <div className="shadow" />
-                <Image
-                  src={Images.landing.teambds}
-                  alt=""
-                  width={259}
-                  height={374}
-                />
+                <div className="image-container">
+                  <Image
+                    src={Images.landing.teambds}
+                    alt=""
+                    width={259}
+                    height={374}
+                    className="image"
+                  />
+                </div>
+
+                <div className="team-logo">
+                  <Image
+                    src={Images.landing.teambdsLogo}
+                    alt=""
+                    width={58}
+                    height={58}
+                  />
+                </div>
 
                 <div className="swiper-slide-title lexend-heading-l">
                   Team BDS
@@ -71,78 +82,48 @@ export const Onboarding = () => {
                   <br />
                   №1 CSGO Team
                 </div>
-
-                <Link className="link flex middle lexend-body-md sb" href="">
-                  <span>Get Early Access</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M15.7 11.6748L9.7 17.6748L8.3 16.2748L12.9 11.6748L8.3 7.0748L9.7 5.6748L15.7 11.6748Z"
-                      fill="#EB3A4A"
-                    />
-                  </svg>
-                </Link>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="swiper-slide-image">
-                <div className="shadow" />
-                <Image
-                  src={Images.landing.fox}
-                  alt=""
-                  width={259}
-                  height={374}
-                />
+                <div className="image-container">
+                  <Image
+                    src={Images.landing.fox}
+                    alt=""
+                    width={259}
+                    height={374}
+                    className="image"
+                  />
+                </div>
 
                 <div className="swiper-slide-title lexend-heading-l">Fox</div>
 
                 <div className="swiper-slide-fans lexend-body-sm l">
-                  200’000 fans
+                  100’000 fans
                   <br />
-                  №1 CSGO Team
+                  CS:GO pro player
                 </div>
-
-                <Link className="link flex middle lexend-body-md sb" href="">
-                  <span>Get Early Access</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M15.7 11.6748L9.7 17.6748L8.3 16.2748L12.9 11.6748L8.3 7.0748L9.7 5.6748L15.7 11.6748Z"
-                      fill="#EB3A4A"
-                    />
-                  </svg>
-                </Link>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="swiper-slide-image">
-                <div className="shadow" />
                 <Image
                   src={Images.landing.unknown}
                   alt=""
                   width={259}
                   height={374}
+                  className="image"
                 />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="swiper-slide-image">
-                <div className="shadow" />
                 <Image
                   src={Images.landing.unknown}
                   alt=""
                   width={259}
                   height={374}
+                  className="image"
                 />
               </div>
             </SwiperSlide>

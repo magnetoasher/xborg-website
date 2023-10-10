@@ -37,7 +37,7 @@ export default function LandingPage() {
       <NextGenApps />
       <NextGenGaming />
       <Launching />
-      <TokenizedEsports />
+      {/* <TokenizedEsports /> */}
       <Roadmap />
       <News />
       <Friends />

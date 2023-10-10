@@ -41,8 +41,8 @@ export const Footer = () => {
             <Brand />
 
             <p className="lexend-body-sm">
-              A collaborative credential infrastructure powering the next
-              generation of gaming with the world's leading esports teams.
+              The Gaming social layer, onboarding millions of players with a
+              gaming identity and application ecosystem
             </p>
           </ObserverContainer>
 
@@ -54,16 +54,10 @@ export const Footer = () => {
             <div className="col flex column top">
               <div className="category lexend-body-s">ECOSYSTEM</div>
               <Link href="">
-                <span>Infrastructure</span>
-              </Link>
-              <Link href="">
-                <span>Applications</span>
-              </Link>
-              <Link href="">
                 <span>Roadmap</span>
               </Link>
               <Link href="">
-                <span>XBG</span>
+                <span>We are hiring!</span>
               </Link>
             </div>
             <div className="col flex column top">
@@ -74,38 +68,14 @@ export const Footer = () => {
               <Link href="">
                 <span>Launchpad</span>
               </Link>
-              <Link href="">
-                <span>Explorer</span>
-              </Link>
             </div>
             <div className="col flex column top">
-              <div className="category lexend-body-s">COMMUNITY</div>
+              <div className="category lexend-body-s">LEGAL</div>
               <Link href="">
-                <span>Hub</span>
+                <span>Privacy Policy</span>
               </Link>
               <Link href="">
-                <span>Prometheus</span>
-              </Link>
-              <Link href="">
-                <span>Governance</span>
-              </Link>
-              <Link href="">
-                <span>Esports</span>
-              </Link>
-            </div>
-            <div className="col flex column top">
-              <div className="category lexend-body-s">COMPANY</div>
-              <Link href="">
-                <span>About</span>
-              </Link>
-              <Link href="">
-                <span>Blog</span>
-              </Link>
-              <Link href="">
-                <span>FAQ</span>
-              </Link>
-              <Link href="">
-                <span>Careers</span>
+                <span>Terms and conditions</span>
               </Link>
             </div>
           </div>

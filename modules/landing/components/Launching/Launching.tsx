@@ -1,15 +1,21 @@
 import { Images } from '@/assets/imgs';
 import { Videos } from '@/assets/videos';
 import { BtnRed } from '@/components/Buttons';
+import { TextInput } from '@/components/Forms';
 import { ObserverContainer } from '@/components/ObserverContainer';
+import { updateInput } from '@/helpers/inputs';
 import { splitLines } from '@/modules/utils/utils';
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
+import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
 import { Tween } from 'react-gsap';
 import { Scene } from 'react-scrollmagic';
 
 export const Launching = () => {
   const ref = useRef<HTMLHeadingElement>(null);
+
+  const [form, setForm] = useState<{ email: string }>({ email: '' });
+  const [errors, setErrors] = useState<any>({});
 
   useEffect(() => {
     if (ref.current) {
@@ -68,23 +74,47 @@ export const Launching = () => {
                 className="integralfc-h1 flex column reveal-from-bottom"
                 ref={ref}
               >
-                Launching in Q4 2023
+                XBG presale coming soon
               </h2>
             </div>
           </ObserverContainer>
 
           <ObserverContainer className="flex column details">
-            <p className="lexend-body-sm l description">
-              Register interest now to stand a chance of earning a presale spot
-              with discounted terms.
-            </p>
+            <div className="flex column actions">
+              <div className="subscribe flex w-full">
+                <TextInput
+                  id="subscribe"
+                  className="w-full"
+                  onChange={updateInput(
+                    'email',
+                    form,
+                    setForm,
+                    errors,
+                    setErrors,
+                  )}
+                  value={form.email}
+                  placeholder="Email"
+                  label="Get notified when the XBG presale with discounted terms goes live."
+                />
 
-            <div className="flex middle actions">
-              <BtnRed label="Register Interest" href="" />
+                <BtnRed label="Stay up to date" href="" />
+              </div>
 
-              <p className="lexend-body-sm l registered-interest">
-                $5m interest registered
-              </p>
+              <Link className="link flex middle" href="">
+                <span>View pitch deck</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M15.6998 11.675L9.6998 17.675L8.2998 16.275L12.8998 11.675L8.2998 7.07499L9.6998 5.67499L15.6998 11.675Z"
+                    fill="#EB3A4A"
+                  />
+                </svg>
+              </Link>
             </div>
           </ObserverContainer>
         </div>

@@ -84,7 +84,11 @@ export const NextGenApps = () => {
               The home of gaming communities.
             </div>
             <div className="flex">
-              <Link href="" className="flex middle lexend-body-md sb">
+              <Link
+                href="https://gamerbase.gg"
+                target="_blank"
+                className="flex middle lexend-body-md sb"
+              >
                 Visit GamerBase
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

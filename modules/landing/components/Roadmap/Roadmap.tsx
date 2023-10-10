@@ -18,13 +18,6 @@ export const Roadmap = () => {
 
   return (
     <div className="landing-roadmap">
-      <Image
-        src={Images.landing.circle}
-        alt=""
-        width={1223}
-        height={1191}
-        className="background-circle"
-      />
       <div className="container flex column">
         <ObserverContainer className="flex column">
           <h2
@@ -152,7 +145,113 @@ export const Roadmap = () => {
                 <div className="item lexend-body-md">Explorer dashboard</div>
               </div>
             </SwiperSlide>
+
+            <SwiperSlide className="flex column top start">
+              <div className="flex">
+                <div className="quarter integralfc-h2">
+                  <span className="gradient">Q1 2024</span>
+                  <span className="outline">Q1 2024</span>
+                </div>
+              </div>
+
+              <div className="swiper-slide-content flex column">
+                <div className="category lexend-body-s">GROWTH</div>
+                <div className="item lexend-body-md">
+                  Tier 1 gaming brand partnerships
+                </div>
+
+                <div className="item lexend-body-md">
+                  Tier 1 Esports team partnerships
+                </div>
+
+                <div className="category lexend-body-s">PRODUCT</div>
+                <div className="item lexend-body-md">
+                  First Tokenized Esports Team
+                </div>
+                <div className="item lexend-body-md">Gaming data graph</div>
+                <div className="item lexend-body-md">XBorg SDK & SSO</div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide className="flex column top start">
+              <div className="flex">
+                <div className="quarter integralfc-h2">
+                  <span className="gradient">Q2 2024</span>
+                  <span className="outline">Q2 2024</span>
+                </div>
+              </div>
+
+              <div className="swiper-slide-content flex column">
+                <div className="category lexend-body-s">GROWTH</div>
+                <div className="item lexend-body-md">
+                  Developer grant program
+                </div>
+
+                <div className="category lexend-body-s">PRODUCT</div>
+                <div className="item lexend-body-md">GamerBase.gg V1</div>
+                <div className="item lexend-body-md">New product</div>
+                <div className="item lexend-body-md">
+                  Soulbound launchpad V1
+                </div>
+              </div>
+            </SwiperSlide>
           </SpringSwiper>
+          <div className="flex bottom column">
+            <div className="xbg-launch quarter integralfc-h2">
+              <span className="gradient">XBG Token Launch</span>
+              <span className="outline">XBG Token Launch</span>
+            </div>
+            <div className="flex roadmap-line">
+              <Image
+                src={Images.landing.roadmap}
+                alt=""
+                height={7}
+                width={100}
+              />
+              <Image
+                src={Images.landing.roadmap}
+                alt=""
+                height={7}
+                width={100}
+              />
+              <Image
+                src={Images.landing.roadmap}
+                alt=""
+                height={7}
+                width={100}
+              />
+              <Image
+                src={Images.landing.roadmap}
+                alt=""
+                height={7}
+                width={100}
+              />
+              <Image
+                src={Images.landing.roadmap}
+                alt=""
+                height={7}
+                width={100}
+              />
+              <Image
+                src={Images.landing.roadmap}
+                alt=""
+                height={7}
+                width={100}
+              />
+              <Image
+                src={Images.landing.roadmap}
+                alt=""
+                height={7}
+                width={100}
+              />
+              <Image
+                src={Images.landing.roadmap}
+                alt=""
+                height={7}
+                width={100}
+              />
+            </div>
+          </div>
         </ObserverContainer>
       </div>
     </div>

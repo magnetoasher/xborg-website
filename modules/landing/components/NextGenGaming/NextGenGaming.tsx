@@ -82,6 +82,17 @@ export const NextGenGaming = () => {
                 Tokenized esports
               </span>
             </div>
+
+            <div className="xborgid-sphere">
+              <Image
+                src={Images.landing.sphere3}
+                alt=""
+                width={75}
+                height={75}
+              />
+
+              <span className="lexend-body-sxl sphere-title">XBorg ID</span>
+            </div>
           </ObserverContainer>
         </div>
       </div>

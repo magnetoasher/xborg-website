@@ -54,22 +54,29 @@ export const News = () => {
         <ObserverContainer className="flex news-list">
           <Swiper slidesPerView={'auto'} spaceBetween={24}>
             <SwiperSlide>
-              <NewsArticle />
+              <NewsArticle
+                title="XBorg sells out a $2m community seed round with more than $7m of interest"
+                date="13/07/2023"
+                description="The funds will facilitate the scaling and adoption efforts of XBorg’s infrastructure and applications to reach millions of players and fans worldwide."
+                href=""
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <NewsArticle />
+              <NewsArticle
+                title="XBorg partners with Team BDS"
+                date="30/03/2023"
+                description="We are proud to partner with Team BDS, the world’s fastest growing esports team to create the most innovative esports project to date."
+                href=""
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <NewsArticle />
-            </SwiperSlide>
-            <SwiperSlide>
-              <NewsArticle />
-            </SwiperSlide>
-            <SwiperSlide>
-              <NewsArticle />
-            </SwiperSlide>
-            <SwiperSlide>
-              <NewsArticle />
+              <NewsArticle
+                title="XBorg partners with
+                Brave"
+                date="22/02/2023"
+                description="XBorg and Brave combine forces to drive the growth of Web3 esports gaming and provide a platform to showcase Web3 players."
+                href=""
+              />
             </SwiperSlide>
           </Swiper>
         </ObserverContainer>

@@ -2,9 +2,19 @@ import { BtnDark } from '@/components/Buttons';
 import Link from 'next/link';
 import { useRef, useState } from 'react';
 
-export type NewsArticleProps = {};
+export type NewsArticleProps = {
+  title: string;
+  description: string;
+  date: string;
+  href: string;
+};
 
-export const NewsArticle = ({}: NewsArticleProps) => {
+export const NewsArticle = ({
+  title,
+  description,
+  date,
+  href,
+}: NewsArticleProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [mouse, setMouse] = useState<{
     y: number;
@@ -18,7 +28,7 @@ export const NewsArticle = ({}: NewsArticleProps) => {
 
   return (
     <div
-      className="news-article expand"
+      className="news-article expand flex column"
       onMouseMove={(e) => {
         if (ref.current) {
           const rect = ref.current.getBoundingClientRect();
@@ -44,19 +54,13 @@ export const NewsArticle = ({}: NewsArticleProps) => {
           left: mouse.x,
         }}
       />
-      <div className="date lexend-body-s l">13/07/2023</div>
-      <div className="lexend-body-sl title">
-        XBorg sells out $2m seed round.
-      </div>
+      <div className="date lexend-body-s l">{date}</div>
+      <div className="lexend-body-sl title">{title}</div>
 
-      <div className="lexend-body-md l description">
-        The funds will facilitate the scaling and adoption efforts of XBorg’s
-        infrastructure and applications to reach millions of players and fans
-        worldwide.
-      </div>
+      <div className="lexend-body-md l description">{description}</div>
 
       <div className="flex">
-        <BtnDark label="Read on BeInCrypto" href="" />
+        <BtnDark label="Read more" href={href} />
       </div>
     </div>
   );

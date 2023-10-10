@@ -34,6 +34,18 @@
     }
   }
 
+  .subscribe {
+    width: 100%;
+    position: relative;
+
+    .btn {
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      bottom: 4px;
+    }
+  }
+
   .list {
     margin: 0 -12px;
   }
@@ -41,6 +53,10 @@
   .block-container {
     width: 50%;
     padding: 12px;
+
+    .lexend-body-md {
+      max-width: 311px;
+    }
   }
 
   .block {

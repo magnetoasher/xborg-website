@@ -10,13 +10,11 @@ nav.navigation {
   transform: translateY(-30px);
 
   .brand {
-    transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
-  }
+    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
 
-  .nav-bar {
-    background-color: tomato;
-    display: flex;
-    align-items: center;
+    &:hover {
+      transform: rotate(180deg);
+    }
   }
 
   ul {
@@ -25,7 +23,6 @@ nav.navigation {
     justify-content: space-around;
     flex: 1;
     padding: 0;
-    display: none;
   }
 
   li {
@@ -77,11 +74,6 @@ nav.navigation {
   &.in {
     transform: translateY(0);
 
-    .brand {
-      transform: rotate(180deg);
-      transition-delay: 0.8s;
-    }
-
     li {
       opacity: 1;
     }
@@ -97,6 +89,10 @@ nav.navigation {
 
     .site-brand {
       padding: 0;
+    }
+
+    ul {
+      display: none;
     }
   }
 

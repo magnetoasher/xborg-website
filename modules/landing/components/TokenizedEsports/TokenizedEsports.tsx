@@ -77,13 +77,12 @@ export const TokenizedEsports = () => {
         <ObserverContainer className="flex column">
           <div className="lexend-body-s red-bold">The future of esports</div>
           <h2 className="integralfc-h2 reveal-from-bottom" ref={ref}>
-            The future of esports
+            Tokenised Esports Teams
           </h2>
 
           <p className="lexend-body-md">
-            XBorg creates a framework to enable the creation of fan-owned team,
-            at scale. The first large scale tokenized esports team goes live in
-            Q1 2024.
+            We enable the creation of fan-owned esports teams, at scale. The
+            first tier-1 tokenised esports team launches in 2024.
           </p>
         </ObserverContainer>
 

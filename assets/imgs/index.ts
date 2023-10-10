@@ -3,6 +3,7 @@ export const Images = {
 
   landing: {
     teambds: '/images/landing/teambds.jpg',
+    teambdsLogo: '/images/landing/Team_BDSlogo_square.png',
     fox: '/images/landing/fox.png',
     unknown: '/images/landing/unknown.png',
     bubbles_bot_right: '/images/landing/bubbles_bot_right.png',
@@ -45,6 +46,7 @@ export const Images = {
     launchingcoin: '/images/landing/launchingcoin.png',
     tokenizedesports: '/images/landing/tokenized-esports.png',
     circle: '/images/landing/circle.png',
+    roadmap: '/images/landing/roadmap.png',
   },
 
   badges: {
