@@ -10,11 +10,13 @@ import { ObserverContainer } from '@/components/ObserverContainer';
 import { TextInput } from '@/components/Forms';
 import { updateInput } from '@/helpers/inputs';
 import Link from 'next/link';
+import { postSubscribe } from '@/modules/queries';
 
 export const Onboarding = () => {
   const ref = useRef<HTMLHeadingElement>(null);
 
   const [form, setForm] = useState<{ email: string }>({ email: '' });
+  const [loading, setLoading] = useState<boolean>(false);
   const [errors, setErrors] = useState<any>({});
 
   useEffect(() => {
@@ -41,7 +43,17 @@ export const Onboarding = () => {
               label="Sign up for our newsletter"
             />
 
-            <BtnRed label="Stay up to date" href="" />
+            <BtnRed
+              label="Stay up to date"
+              href=""
+              loading={loading}
+              onClick={async (e: any) => {
+                e.preventDefault();
+                // setLoading(true);
+                // await postSubscribe(form);
+                // setLoading(false);
+              }}
+            />
           </div>
         </ObserverContainer>
 
