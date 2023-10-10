@@ -181,7 +181,15 @@
   color: $red100;
   transition: 0.15s ease-in;
 
+  svg path {
+    transition: 0.15s ease-in;
+  }
+
   &:hover {
     color: #fff;
+
+    svg path {
+      fill: #fff;
+    }
   }
 }

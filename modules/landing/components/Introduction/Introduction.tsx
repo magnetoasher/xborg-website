@@ -10,7 +10,6 @@ import { useEffect, useRef } from 'react';
 import { Tween } from 'react-gsap';
 import { useDispatch } from 'react-redux';
 import { Scene } from 'react-scrollmagic';
-import { throttle } from 'lodash';
 
 export const Introduction = () => {
   const ref = useRef<HTMLHeadingElement>(null);

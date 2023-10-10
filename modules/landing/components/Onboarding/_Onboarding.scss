@@ -23,6 +23,11 @@
     transition: 0.3s ease-in;
   }
 
+  .swiper-prev,
+  .swiper-next {
+    display: none;
+  }
+
   .swiper-slide-title {
     position: absolute;
     bottom: 24px;

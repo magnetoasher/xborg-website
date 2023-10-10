@@ -371,8 +371,14 @@ table {
   color: #eb3a4a;
   transition: 0.15s ease-in;
 }
+.link svg path {
+  transition: 0.15s ease-in;
+}
 .link:hover {
   color: #fff;
+}
+.link:hover svg path {
+  fill: #fff;
 }
 
 /* Brand animation */
@@ -1607,6 +1613,7 @@ nav.navigation ul {
   justify-content: space-around;
   flex: 1;
   padding: 0;
+  display: none;
 }
 nav.navigation li {
   opacity: 0;
@@ -2113,6 +2120,10 @@ footer.footer .in .site-brand {
   opacity: 0;
   transition: 0.3s ease-in;
 }
+.landing-onboarding .swiper-prev,
+.landing-onboarding .swiper-next {
+  display: none;
+}
 .landing-onboarding .swiper-slide-title {
   position: absolute;
   bottom: 24px;
@@ -2365,6 +2376,8 @@ footer.footer .in .site-brand {
   top: 0;
   right: 105px;
   z-index: -1;
+  opacity: 0;
+  transition: 0.3s ease-in;
 }
 .landing-empowering-players .cards img {
   position: absolute;
@@ -2433,6 +2446,9 @@ footer.footer .in .site-brand {
 }
 .landing-empowering-players .cols .block-container:nth-child(5) .block {
   margin-top: -50%;
+}
+.landing-empowering-players .cols .block-container:hover .cards {
+  opacity: 1;
 }
 .landing-empowering-players .in h2 .word {
   opacity: 1;
@@ -4463,6 +4479,39 @@ footer.footer .in .site-brand {
   width: 100%;
   height: 100%;
   background-color: #000;
+}
+.landing-roadmap .now {
+  position: relative;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-left: 32px;
+  margin-top: 8px;
+}
+.landing-roadmap .now span {
+  position: relative;
+  z-index: 2;
+}
+.landing-roadmap .now:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 4px;
+  background: linear-gradient(55deg, rgb(7, 7, 7) 0%, rgb(160, 40, 51) 61%, rgb(56, 18, 21) 99%);
+  z-index: -1;
+}
+.landing-roadmap .now:before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  border-radius: 4px;
+  background: #000;
+  z-index: 0;
 }
 .landing-roadmap .container {
   position: relative;

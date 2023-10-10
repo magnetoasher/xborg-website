@@ -37,7 +37,7 @@ export const Roadmap = () => {
             }}
           >
             <SwiperSlide className="flex column top start">
-              <div className="flex">
+              <div className="flex middle">
                 <div className="quarter integralfc-h2">
                   <span className="gradient">Q1 2023</span>
                   <span className="outline">Q1 2023</span>
@@ -90,10 +90,13 @@ export const Roadmap = () => {
             </SwiperSlide>
 
             <SwiperSlide className="flex column top start">
-              <div className="flex">
+              <div className="flex middle">
                 <div className="quarter integralfc-h2">
                   <span className="gradient">Q3 2023</span>
                   <span className="outline">Q3 2023</span>
+                </div>
+                <div className="now lexend-body-sm">
+                  <span>Now</span>
                 </div>
               </div>
 
