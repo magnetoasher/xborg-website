@@ -188,6 +188,19 @@
   }
 
   @media (max-width: $xs-max) {
+    .video-container {
+      display: none;
+    }
+
+    .content {
+      padding-left: 0;
+    }
+
+    .details {
+      width: 100%;
+      transform: translateX(0px);
+    }
+
     .actions {
       flex-direction: column;
       align-items: flex-start;

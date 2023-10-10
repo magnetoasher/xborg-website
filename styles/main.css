@@ -4144,6 +4144,16 @@ footer.footer .in .site-brand {
   }
 }
 @media (max-width: 576px) {
+  .landing-launching .video-container {
+    display: none;
+  }
+  .landing-launching .content {
+    padding-left: 0;
+  }
+  .landing-launching .details {
+    width: 100%;
+    transform: translateX(0px);
+  }
   .landing-launching .actions {
     flex-direction: column;
     align-items: flex-start;
