@@ -62,10 +62,10 @@ export const Footer = () => {
             </div>
             <div className="col flex column top">
               <div className="category lexend-body-s">PRODUCTS</div>
-              <Link href="">
+              <Link href="https://gamerbase.gg">
                 <span>GamerBase</span>
               </Link>
-              <Link href="">
+              <Link href="https://launchpad.xborg.com/">
                 <span>Launchpad</span>
               </Link>
             </div>
