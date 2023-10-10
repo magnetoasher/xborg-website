@@ -9,6 +9,7 @@ import { Timeline, Tween } from 'react-gsap';
 import { Scene } from 'react-scrollmagic';
 import VanillaTilt from 'vanilla-tilt';
 
+let timerId: any = null;
 export const Posibilities = () => {
   const ref = useRef<HTMLHeadingElement>(null);
 
@@ -21,7 +22,7 @@ export const Posibilities = () => {
   }, []);
 
   useEffect(() => {
-    const timerId = setInterval(() => {
+    timerId = setInterval(() => {
       if (active + 1 === data.length) setActive(0);
       else setActive(active + 1);
     }, 8000);
@@ -75,6 +76,13 @@ export const Posibilities = () => {
                 key={index}
                 onClick={(e) => {
                   e.preventDefault();
+                  clearInterval(timerId);
+                  setActive(index);
+
+                  timerId = setInterval(() => {
+                    if (active + 1 === data.length) setActive(0);
+                    else setActive(active + 1);
+                  }, 8000);
                 }}
               >
                 <div className="link-inner flex middle between w-full">
