@@ -4594,6 +4594,7 @@ footer.footer .in .site-brand {
 }
 .landing-roadmap .quarter {
   position: relative;
+  white-space: nowrap;
 }
 .landing-roadmap .quarter .gradient {
   position: relative;
@@ -4656,12 +4657,6 @@ footer.footer .in .site-brand {
 }
 .landing-roadmap .in h2 .word:nth-child(10) {
   transition-delay: 0.45s;
-}
-@media (max-width: 992px) {
-  .landing-roadmap {
-    padding-top: 120px;
-    padding-bottom: 0;
-  }
 }
 
 .landing-news {
