@@ -111,6 +111,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   line-height: 1;
   font-family: Lexend, sans-serif;
@@ -1740,6 +1745,7 @@ footer.footer .in .site-brand {
   }
   footer.footer .footer-about {
     margin-bottom: 32px;
+    width: 100%;
   }
   footer.footer .footer-about .social-icons {
     margin-top: 32px;
