@@ -62,7 +62,11 @@ export const EmpoweringPlayers = () => {
                 We combine a player’s gaming stats, achievements and reputation
                 to create their XBorg ID.
               </p>
-              <Link href="" className="flex middle lexend-body-md sb link">
+              <Link
+                href="https://gamerbase.gg/"
+                target="_blank"
+                className="flex middle lexend-body-md sb link"
+              >
                 Visit GamerBase
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

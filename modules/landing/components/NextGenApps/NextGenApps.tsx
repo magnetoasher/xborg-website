@@ -135,7 +135,11 @@ export const NextGenApps = () => {
                 Funding the most-promising gaming projects.
               </div>
               <div className="flex">
-                <Link href="" className="flex middle lexend-body-md sb">
+                <Link
+                  href="https://launchpad.xborg.com/"
+                  target="_blank"
+                  className="flex middle lexend-body-md sb"
+                >
                   Visit Launchpad
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -177,7 +181,7 @@ export const NextGenApps = () => {
                 </Link>
               </div>
 
-              <div className="badge lexend-body-sm l">Q4 2023</div>
+              <div className="badge lexend-body-sm l">Q1 2024</div>
             </NextGenAppBlock>
           </div>
         </div>
