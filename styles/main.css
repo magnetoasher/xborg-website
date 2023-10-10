@@ -2363,10 +2363,11 @@ footer.footer .in .site-brand {
 .landing-empowering-players .cards img {
   position: absolute;
   opacity: 0;
+  filter: grayscale(1);
   transition: 0.6s ease-in;
 }
-.landing-empowering-players .cards img:nth-child(2), .landing-empowering-players .cards img:nth-child(3) {
-  filter: grayscale(1);
+.landing-empowering-players .cards img:hover {
+  filter: grayscale(0);
 }
 .landing-empowering-players h2 {
   max-width: 703px;
@@ -4029,8 +4030,8 @@ footer.footer .in .site-brand {
   opacity: 0;
   transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.landing-launching h2 .word:first-child {
-  transform: translateY(16px) translateX(0);
+.landing-launching h2 .word:first-child, .landing-launching h2 .word:nth-child(2) {
+  transform: translateY(0) translateX(0);
 }
 .landing-launching p {
   color: #cacace;

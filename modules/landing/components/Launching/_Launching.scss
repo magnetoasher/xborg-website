@@ -75,8 +75,9 @@
       opacity: 0;
       transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
 
-      &:first-child {
-        transform: translateY(16px) translateX(0);
+      &:first-child,
+      &:nth-child(2) {
+        transform: translateY(0) translateX(0);
       }
     }
   }

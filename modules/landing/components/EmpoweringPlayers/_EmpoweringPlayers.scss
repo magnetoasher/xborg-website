@@ -27,11 +27,11 @@
     img {
       position: absolute;
       opacity: 0;
+      filter: grayscale(1);
       transition: 0.6s ease-in;
 
-      &:nth-child(2),
-      &:nth-child(3) {
-        filter: grayscale(1);
+      &:hover {
+        filter: grayscale(0);
       }
     }
   }
