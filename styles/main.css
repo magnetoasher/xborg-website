@@ -2364,7 +2364,7 @@ footer.footer .in .site-brand {
   position: absolute;
   opacity: 0;
   filter: grayscale(1);
-  transition: 0.6s ease-in;
+  transition: 0.3s ease-in;
 }
 .landing-empowering-players .cards img:hover {
   filter: grayscale(0);
@@ -4105,20 +4105,11 @@ footer.footer .in .site-brand {
   }
 }
 @media (max-width: 992px) {
-  .landing-launching .video-container {
-    position: absolute;
-    left: -16px;
-    top: 164px;
-  }
   .landing-launching .details {
     transform: translateX(0);
   }
   .landing-launching .subscribe {
     width: 100%;
-  }
-  .landing-launching .container {
-    align-items: flex-start;
-    justify-content: flex-start;
   }
   .landing-launching .content {
     transform: translate(0, 0);
@@ -4127,6 +4118,23 @@ footer.footer .in .site-brand {
   .landing-launching .token-video {
     width: 165px;
     height: 149.118px;
+  }
+  .landing-launching h2 .word {
+    transform: translateY(0) translateX(0) !important;
+  }
+}
+@media (max-width: 768px) {
+  .landing-launching .video-container {
+    position: absolute;
+    left: -56px;
+    top: 194px;
+  }
+  .landing-launching .container {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .landing-launching .details {
+    transform: translateX(-40px);
   }
 }
 @media (max-width: 576px) {
