@@ -195,6 +195,14 @@ export const LearnMore = () => {
                   </svg>
                 </Link>
               </div>
+
+              <Image
+                src={Images.landing.bubbles_right}
+                alt=""
+                width={591}
+                height={265}
+                className="bubbles-right"
+              />
             </div>
           </div>
         </div>

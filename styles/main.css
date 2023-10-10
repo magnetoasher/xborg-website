@@ -4893,6 +4893,14 @@ footer.footer .in .site-brand {
 .landing-learnmore .prometheus-nft .lexend-body-md {
   max-width: 229px;
 }
+.landing-learnmore .bubbles-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  z-index: -1;
+}
 .landing-learnmore .xbg-token .lexend-body-sl {
   max-width: 311px;
   margin-top: 4px;

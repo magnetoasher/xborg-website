@@ -7,6 +7,7 @@ export const Images = {
     fox: '/images/landing/fox.png',
     unknown: '/images/landing/unknown.png',
     bubbles_bot_right: '/images/landing/bubbles_bot_right.png',
+    bubbles_right: '/images/landing/bubbles_right.png',
     discovery1: '/images/landing/discovery1.png',
     discovery2: '/images/landing/discovery2.png',
     discovery3: '/images/landing/discovery3.png',
