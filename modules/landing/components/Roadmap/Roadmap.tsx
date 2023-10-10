@@ -174,6 +174,63 @@ export const Roadmap = () => {
                 <div className="item lexend-body-md">Gaming data graph</div>
                 <div className="item lexend-body-md">XBorg SDK & SSO</div>
               </div>
+
+              <div className="flex bottom column token-launch">
+                <div className="xbg-launch quarter integralfc-h2">
+                  <span className="gradient">XBG Token Launch</span>
+                  <span className="outline">XBG Token Launch</span>
+                </div>
+                <div className="flex roadmap-line">
+                  <Image
+                    src={Images.landing.roadmap}
+                    alt=""
+                    height={7}
+                    width={100}
+                  />
+                  <Image
+                    src={Images.landing.roadmap}
+                    alt=""
+                    height={7}
+                    width={100}
+                  />
+                  <Image
+                    src={Images.landing.roadmap}
+                    alt=""
+                    height={7}
+                    width={100}
+                  />
+                  <Image
+                    src={Images.landing.roadmap}
+                    alt=""
+                    height={7}
+                    width={100}
+                  />
+                  <Image
+                    src={Images.landing.roadmap}
+                    alt=""
+                    height={7}
+                    width={100}
+                  />
+                  <Image
+                    src={Images.landing.roadmap}
+                    alt=""
+                    height={7}
+                    width={100}
+                  />
+                  <Image
+                    src={Images.landing.roadmap}
+                    alt=""
+                    height={7}
+                    width={100}
+                  />
+                  <Image
+                    src={Images.landing.roadmap}
+                    alt=""
+                    height={7}
+                    width={100}
+                  />
+                </div>
+              </div>
             </SwiperSlide>
 
             <SwiperSlide className="flex column top start">
@@ -199,62 +256,6 @@ export const Roadmap = () => {
               </div>
             </SwiperSlide>
           </SpringSwiper>
-          <div className="flex bottom column">
-            <div className="xbg-launch quarter integralfc-h2">
-              <span className="gradient">XBG Token Launch</span>
-              <span className="outline">XBG Token Launch</span>
-            </div>
-            <div className="flex roadmap-line">
-              <Image
-                src={Images.landing.roadmap}
-                alt=""
-                height={7}
-                width={100}
-              />
-              <Image
-                src={Images.landing.roadmap}
-                alt=""
-                height={7}
-                width={100}
-              />
-              <Image
-                src={Images.landing.roadmap}
-                alt=""
-                height={7}
-                width={100}
-              />
-              <Image
-                src={Images.landing.roadmap}
-                alt=""
-                height={7}
-                width={100}
-              />
-              <Image
-                src={Images.landing.roadmap}
-                alt=""
-                height={7}
-                width={100}
-              />
-              <Image
-                src={Images.landing.roadmap}
-                alt=""
-                height={7}
-                width={100}
-              />
-              <Image
-                src={Images.landing.roadmap}
-                alt=""
-                height={7}
-                width={100}
-              />
-              <Image
-                src={Images.landing.roadmap}
-                alt=""
-                height={7}
-                width={100}
-              />
-            </div>
-          </div>
         </ObserverContainer>
       </div>
     </div>
