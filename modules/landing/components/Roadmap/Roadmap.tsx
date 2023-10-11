@@ -95,9 +95,6 @@ export const Roadmap = () => {
                   <span className="gradient">Q3 2023</span>
                   <span className="outline">Q3 2023</span>
                 </div>
-                <div className="now lexend-body-sm">
-                  <span>Now</span>
-                </div>
               </div>
 
               <div className="swiper-slide-content flex column">
@@ -118,10 +115,13 @@ export const Roadmap = () => {
             </SwiperSlide>
 
             <SwiperSlide className="flex column top start">
-              <div className="flex">
+              <div className="flex middle">
                 <div className="quarter integralfc-h2">
                   <span className="gradient">Q4 2023</span>
                   <span className="outline">Q4 2023</span>
+                </div>
+                <div className="now lexend-body-sm">
+                  <span>Now</span>
                 </div>
               </div>
 
@@ -146,33 +146,6 @@ export const Roadmap = () => {
                   New product announcement
                 </div>
                 <div className="item lexend-body-md">Explorer dashboard</div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide className="flex column top start">
-              <div className="flex">
-                <div className="quarter integralfc-h2">
-                  <span className="gradient">Q1 2024</span>
-                  <span className="outline">Q1 2024</span>
-                </div>
-              </div>
-
-              <div className="swiper-slide-content flex column">
-                <div className="category lexend-body-s">GROWTH</div>
-                <div className="item lexend-body-md">
-                  Tier 1 gaming brand partnerships
-                </div>
-
-                <div className="item lexend-body-md">
-                  Tier 1 Esports team partnerships
-                </div>
-
-                <div className="category lexend-body-s">PRODUCT</div>
-                <div className="item lexend-body-md">
-                  First Tokenized Esports Team
-                </div>
-                <div className="item lexend-body-md">Gaming data graph</div>
-                <div className="item lexend-body-md">XBorg SDK & SSO</div>
               </div>
 
               <div className="flex bottom column token-launch">
@@ -230,6 +203,33 @@ export const Roadmap = () => {
                     width={100}
                   />
                 </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide className="flex column top start">
+              <div className="flex">
+                <div className="quarter integralfc-h2">
+                  <span className="gradient">Q1 2024</span>
+                  <span className="outline">Q1 2024</span>
+                </div>
+              </div>
+
+              <div className="swiper-slide-content flex column">
+                <div className="category lexend-body-s">GROWTH</div>
+                <div className="item lexend-body-md">
+                  Tier 1 gaming brand partnerships
+                </div>
+
+                <div className="item lexend-body-md">
+                  Tier 1 Esports team partnerships
+                </div>
+
+                <div className="category lexend-body-s">PRODUCT</div>
+                <div className="item lexend-body-md">
+                  First Tokenized Esports Team
+                </div>
+                <div className="item lexend-body-md">Gaming data graph</div>
+                <div className="item lexend-body-md">XBorg SDK & SSO</div>
               </div>
             </SwiperSlide>
 

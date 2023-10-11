@@ -23,12 +23,10 @@
     top: 0;
     right: 105px;
     z-index: -1;
-    opacity: 0;
     transition: 0.3s ease-in;
 
     img {
       position: absolute;
-      opacity: 0;
       filter: grayscale(1);
       transition: 0.3s ease-in;
 
@@ -119,12 +117,6 @@
           margin-top: -50%;
         }
       }
-
-      &:hover {
-        .cards {
-          opacity: 1;
-        }
-      }
     }
   }
 
@@ -146,8 +138,6 @@
 
       .cards {
         img {
-          opacity: 1;
-
           &:first-child {
             transform: rotate(4.999deg);
             z-index: 2;

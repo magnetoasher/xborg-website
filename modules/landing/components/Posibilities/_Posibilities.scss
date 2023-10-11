@@ -85,7 +85,7 @@
           }
 
           &:after {
-            animation: 8s width forwards;
+            animation: 8s linear width forwards;
           }
 
           svg {

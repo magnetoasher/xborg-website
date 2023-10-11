@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const SocialIcons = () => {
   return (
     <div className="social-icons">
-      <Link href="">
+      <Link href="https://twitter.com/XBorgHQ" target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -17,7 +17,7 @@ export const SocialIcons = () => {
           />
         </svg>
       </Link>
-      <Link href="">
+      <Link href="https://discord.com/invite/xborg" target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="21"
@@ -33,7 +33,7 @@ export const SocialIcons = () => {
           />
         </svg>
       </Link>
-      <Link href="">
+      <Link href="https://www.youtube.com/@xborgofficial" target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -49,21 +49,7 @@ export const SocialIcons = () => {
           />
         </svg>
       </Link>
-      <Link href="">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="21"
-          height="20"
-          viewBox="0 0 21 20"
-          fill="none"
-        >
-          <path
-            d="M11.7812 9.91616C11.7812 13.0918 9.25579 15.6663 6.14049 15.6663C3.02519 15.6663 0.5 13.0926 0.5 9.91616C0.5 6.73976 3.02538 4.16626 6.14049 4.16626C9.2556 4.16626 11.7812 6.74054 11.7812 9.91616ZM17.9691 9.91616C17.9691 12.9056 16.7063 15.3288 15.1487 15.3288C13.5912 15.3288 12.3284 12.9048 12.3284 9.91616C12.3284 6.92748 13.5912 4.50349 15.1487 4.50349C16.7063 4.50349 17.9691 6.92748 17.9691 9.91616ZM20.5 9.91616C20.5 12.5946 20.0558 14.7657 19.508 14.7657C18.9603 14.7657 18.5161 12.5938 18.5161 9.91616C18.5161 7.23852 18.9603 5.06663 19.5082 5.06663C20.0562 5.06663 20.5 7.23794 20.5 9.91616Z"
-            fill="#CACACE"
-          />
-        </svg>
-      </Link>
-      <Link href="">
+      <Link href="https://www.twitch.tv/xborgofficial" target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"

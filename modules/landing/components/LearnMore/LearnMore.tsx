@@ -1,10 +1,10 @@
 import { BtnDark, BtnRed } from '@/components/Buttons';
 import { ObserverContainer } from '@/components/ObserverContainer';
 import { SpringSwiper } from '@/components/SpringSwiper';
-import { splitLines } from '@/modules/utils/utils';
+import { scrollTo, splitLines } from '@/modules/utils/utils';
 import { useEffect, useRef, useState } from 'react';
 import { SwiperSlide } from 'swiper/react';
-import { SocialIcons } from '@/modules/landing';
+import { SocialIcons, Subscribe } from '@/modules/landing';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Images } from '@/assets/imgs';
@@ -103,23 +103,8 @@ export const LearnMore = () => {
                 <div className="lexend-body-sl expand">
                   XBG is the native token of the XBorg ecosystem
                 </div>
-                <div className="subscribe flex w-full">
-                  <TextInput
-                    id="subscribe"
-                    className="w-full"
-                    onChange={updateInput(
-                      'email',
-                      form,
-                      setForm,
-                      errors,
-                      setErrors,
-                    )}
-                    value={form.email}
-                    placeholder="Email"
-                  />
 
-                  <BtnRed label="Sign Up" href="" />
-                </div>
+                <Subscribe button="Sign Up" />
               </div>
             </div>
           </div>
@@ -132,7 +117,11 @@ export const LearnMore = () => {
               </div>
 
               <div className="flex middle actions">
-                <BtnDark label="View OpenSea" href="" />
+                <BtnDark
+                  label="View OpenSea"
+                  href="https://opensea.io/collection/xborg-prometheus"
+                  target="_blank"
+                />
               </div>
 
               <Image
@@ -164,7 +153,11 @@ export const LearnMore = () => {
                 core.
               </div>
               <div className="flex column links">
-                <Link href="" className="flex middle link">
+                <Link
+                  href="https://www.youtube.com/@xborgofficial/videos"
+                  target="_blank"
+                  className="flex middle link"
+                >
                   <span>Watch our latest Cyberlink</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -179,7 +172,17 @@ export const LearnMore = () => {
                     />
                   </svg>
                 </Link>
-                <Link href="" className="flex middle link">
+                <Link
+                  href=""
+                  className="flex middle link"
+                  onClick={(e: any) => {
+                    e.preventDefault();
+                    const hero =
+                      document.getElementsByClassName('landing-roadmap')[0];
+                    const rect = hero.getBoundingClientRect();
+                    scrollTo(window.scrollY, rect.y, 0);
+                  }}
+                >
                   <span>View Roadmap</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

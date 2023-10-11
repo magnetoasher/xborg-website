@@ -9,6 +9,7 @@ import { Scene } from 'react-scrollmagic';
 import { Tween } from 'react-gsap';
 import Image from 'next/image';
 import { Images } from '@/assets/imgs';
+import { scrollTo } from '@/modules/utils';
 
 export const Footer = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -50,13 +51,25 @@ export const Footer = () => {
         </div>
 
         <div className="footer-actions flex column">
-          <div className="flex cols between">
+          <div className="flex cols end">
             <div className="col flex column top">
               <div className="category lexend-body-s">ECOSYSTEM</div>
-              <Link href="">
+              <Link
+                href=""
+                onClick={(e: any) => {
+                  e.preventDefault();
+                  const hero =
+                    document.getElementsByClassName('landing-roadmap')[0];
+                  const rect = hero.getBoundingClientRect();
+                  scrollTo(window.scrollY, rect.y, 0);
+                }}
+              >
                 <span>Roadmap</span>
               </Link>
-              <Link href="">
+              <Link
+                href="https://jobs.lever.co/swissborg?department=XBorg"
+                target="_blank"
+              >
                 <span>We are hiring!</span>
               </Link>
             </div>
@@ -69,7 +82,7 @@ export const Footer = () => {
                 <span>Launchpad</span>
               </Link>
             </div>
-            <div className="col flex column top">
+            {/* <div className="col flex column top">
               <div className="category lexend-body-s">LEGAL</div>
               <Link href="">
                 <span>Privacy Policy</span>
@@ -77,7 +90,7 @@ export const Footer = () => {
               <Link href="">
                 <span>Terms and conditions</span>
               </Link>
-            </div>
+            </div> */}
           </div>
           <div className="spacer" />
           <div className="copyright lexend-body-sm l">

@@ -52,13 +52,13 @@ export const News = () => {
         </ObserverContainer>
 
         <ObserverContainer className="flex news-list">
-          <Swiper slidesPerView={'auto'} spaceBetween={24}>
+          <Swiper slidesPerView={'auto'}>
             <SwiperSlide>
               <NewsArticle
                 title="XBorg sells out a $2m community seed round with more than $7m of interest"
                 date="13/07/2023"
                 description="The funds will facilitate the scaling and adoption efforts of XBorg’s infrastructure and applications to reach millions of players and fans worldwide."
-                href=""
+                href="https://cryptobriefing.com/xborg-sells-out-2-million-seed-round-community-allocation/"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -66,7 +66,7 @@ export const News = () => {
                 title="XBorg partners with Team BDS"
                 date="30/03/2023"
                 description="We are proud to partner with Team BDS, the world’s fastest growing esports team to create the most innovative esports project to date."
-                href=""
+                href="https://teambds.gg/en/news/xborg-team-bds-creating-future-of-esports#:~:text=%22Our%20partnership%20with%20Team%20BDS,Founder%20and%20CEO%20at%20XBorg."
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -75,7 +75,7 @@ export const News = () => {
                 Brave"
                 date="22/02/2023"
                 description="XBorg and Brave combine forces to drive the growth of Web3 esports gaming and provide a platform to showcase Web3 players."
-                href=""
+                href="https://brave.com/xborg/"
               />
             </SwiperSlide>
           </Swiper>

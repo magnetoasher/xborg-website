@@ -53,6 +53,8 @@ footer.footer {
   }
 
   .col {
+    padding-left: 64px;
+
     a {
       padding: 8px 0;
       color: #fff;
@@ -87,6 +89,14 @@ footer.footer {
       flex-direction: column;
     }
 
+    .cols {
+      justify-content: space-between;
+
+      .col {
+        padding-left: 0;
+      }
+    }
+
     .footer-actions {
       width: 100%;
     }
@@ -105,10 +115,10 @@ footer.footer {
     .col {
       flex: 0 0 50%;
 
-      &:last-child,
-      &:nth-child(3) {
-        margin-top: 48px;
-      }
+      // &:last-child,
+      // &:nth-child(3) {
+      //   margin-top: 48px;
+      // }
     }
 
     .cols {

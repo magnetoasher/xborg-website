@@ -87,16 +87,10 @@
   }
 
   .subscribe {
-    width: 487px;
-    position: relative;
     opacity: 0;
-    transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
 
     .btn {
-      position: absolute;
-      right: 4px;
-      top: 38px;
-      bottom: 4px;
+      top: 15px;
     }
   }
 

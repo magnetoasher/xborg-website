@@ -3,7 +3,7 @@ import { ObserverContainer } from '@/components/ObserverContainer';
 import { splitLines } from '@/modules/utils/utils';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { NextGenAppBlock } from './NextGenAppBlock';
 import { Scene } from 'react-scrollmagic';
 import { Tween } from 'react-gsap';
@@ -164,7 +164,11 @@ export const NextGenApps = () => {
                 Launching tokenised gaming communities.
               </div>
               <div className="flex">
-                <Link href="" className="flex middle lexend-body-md sb">
+                <Link
+                  href="https://www.mybds.gg/"
+                  target="_blank"
+                  className="flex middle lexend-body-md sb"
+                >
                   Register Interest
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

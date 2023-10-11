@@ -1,23 +1,16 @@
 import { Images } from '@/assets/imgs';
-import { BtnRed } from '@/components/Buttons';
 import { SpringSwiper } from '@/components/SpringSwiper';
 import { splitLines } from '@/modules/utils/utils';
 import Image from 'next/image';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { SwiperSlide } from 'swiper/react';
 import { ObserverContainer } from '@/components/ObserverContainer';
-import { TextInput } from '@/components/Forms';
-import { updateInput } from '@/helpers/inputs';
-import Link from 'next/link';
-import { postSubscribe } from '@/modules/queries';
+import { OnboardingSlide } from './OnboardingSlide';
+import { Subscribe } from '@/modules/landing';
 
 export const Onboarding = () => {
   const ref = useRef<HTMLHeadingElement>(null);
-
-  const [form, setForm] = useState<{ email: string }>({ email: '' });
-  const [loading, setLoading] = useState<boolean>(false);
-  const [errors, setErrors] = useState<any>({});
 
   useEffect(() => {
     if (ref.current) {
@@ -33,28 +26,10 @@ export const Onboarding = () => {
             onboarding millions of players with the world’s best teams
           </h2>
 
-          <div className="subscribe flex w-full">
-            <TextInput
-              id="subscribe"
-              className="w-full"
-              onChange={updateInput('email', form, setForm, errors, setErrors)}
-              value={form.email}
-              placeholder="Email"
-              label="Sign up for our newsletter"
-            />
-
-            <BtnRed
-              label="Stay up to date"
-              href=""
-              loading={loading}
-              onClick={async (e: any) => {
-                e.preventDefault();
-                // setLoading(true);
-                // await postSubscribe(form);
-                // setLoading(false);
-              }}
-            />
-          </div>
+          <Subscribe
+            label="Sign up for our newsletter"
+            button="Stay up to date"
+          />
         </ObserverContainer>
 
         <ObserverContainer className="slide">
@@ -118,7 +93,7 @@ export const Onboarding = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="swiper-slide-image">
+              <OnboardingSlide className="unknown">
                 <Image
                   src={Images.landing.unknown}
                   alt=""
@@ -126,10 +101,10 @@ export const Onboarding = () => {
                   height={374}
                   className="image"
                 />
-              </div>
+              </OnboardingSlide>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="swiper-slide-image">
+              <OnboardingSlide className="unknown">
                 <Image
                   src={Images.landing.unknown}
                   alt=""
@@ -137,7 +112,7 @@ export const Onboarding = () => {
                   height={374}
                   className="image"
                 />
-              </div>
+              </OnboardingSlide>
             </SwiperSlide>
           </SpringSwiper>
         </ObserverContainer>

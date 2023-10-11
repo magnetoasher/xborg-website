@@ -1586,6 +1586,15 @@ swiper-container .swiper-notification {
   z-index: 3;
   transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
+.btn-red.loading span {
+  opacity: 0;
+}
+.btn-red.loading .loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .btn-red:hover {
   background-color: #c71e2d;
 }
@@ -1722,6 +1731,9 @@ footer.footer .category {
 footer.footer .cols {
   padding-bottom: 49px;
 }
+footer.footer .col {
+  padding-left: 64px;
+}
 footer.footer .col a {
   padding: 8px 0;
   color: #fff;
@@ -1747,6 +1759,12 @@ footer.footer .in .site-brand {
   footer.footer .container {
     flex-direction: column;
   }
+  footer.footer .cols {
+    justify-content: space-between;
+  }
+  footer.footer .cols .col {
+    padding-left: 0;
+  }
   footer.footer .footer-actions {
     width: 100%;
   }
@@ -1761,9 +1779,6 @@ footer.footer .in .site-brand {
 @media (max-width: 768px) {
   footer.footer .col {
     flex: 0 0 50%;
-  }
-  footer.footer .col:last-child, footer.footer .col:nth-child(3) {
-    margin-top: 48px;
   }
   footer.footer .cols {
     flex-wrap: wrap;
@@ -2145,16 +2160,7 @@ footer.footer .in .site-brand {
   letter-spacing: -0.28px;
 }
 .landing-onboarding .subscribe {
-  width: 487px;
-  position: relative;
   opacity: 0;
-  transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
-}
-.landing-onboarding .subscribe .btn {
-  position: absolute;
-  right: 4px;
-  top: 23px;
-  bottom: 4px;
 }
 .landing-onboarding .swiper {
   margin: 56px -16px 104px;
@@ -2167,39 +2173,8 @@ footer.footer .in .site-brand {
   min-height: 244.944px;
   display: flex;
 }
-.landing-onboarding .swiper-slide .swiper-slide-image.unknown {
-  height: 100%;
-  overflow: initial;
-}
-.landing-onboarding .swiper-slide .swiper-slide-image.unknown:before {
-  content: "";
-  position: absolute;
-  left: -1px;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  height: initial;
-  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-  border-radius: 8px;
-  background: linear-gradient(45deg, #343434 0%, #161616 40%, #161616 60%, #343434 100%);
-  z-index: -1;
-  pointer-events: none;
-}
 .landing-onboarding .swiper-slide .swiper-slide-image.unknown:after {
-  content: "";
-  position: absolute;
-  left: 1px;
-  top: 1px;
-  right: 1px;
-  bottom: 1px;
-  height: initial;
-  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-  border-radius: 8px;
-  background: radial-gradient(51.87% 56.99% at 90.49% 94.65%, #242424 0%, #1a1a1a 100%), rgba(255, 255, 255, 0.06);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
-  z-index: 4;
-  opacity: 1;
+  display: none;
 }
 .landing-onboarding .swiper-slide .swiper-slide-image {
   overflow: hidden;
@@ -2230,6 +2205,23 @@ footer.footer .in .site-brand {
 }
 .landing-onboarding .swiper-slide .swiper-slide-image .image-container {
   transition: 0.3s ease-in;
+}
+.landing-onboarding .swiper-slide .swiper-slide-image .shadow {
+  width: 100px;
+  height: 100px;
+  margin: -50px 0 0 -50px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 50%;
+  filter: blur(50px);
+  transition: opacity 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.landing-onboarding .swiper-slide .swiper-slide-image .shadow.out {
+  opacity: 0;
 }
 .landing-onboarding .swiper-slide .swiper-slide-image:hover .team-logo {
   transform: translateY(0);
@@ -2376,12 +2368,10 @@ footer.footer .in .site-brand {
   top: 0;
   right: 105px;
   z-index: -1;
-  opacity: 0;
   transition: 0.3s ease-in;
 }
 .landing-empowering-players .cards img {
   position: absolute;
-  opacity: 0;
   filter: grayscale(1);
   transition: 0.3s ease-in;
 }
@@ -2447,9 +2437,6 @@ footer.footer .in .site-brand {
 .landing-empowering-players .cols .block-container:nth-child(5) .block {
   margin-top: -50%;
 }
-.landing-empowering-players .cols .block-container:hover .cards {
-  opacity: 1;
-}
 .landing-empowering-players .in h2 .word {
   opacity: 1;
   transform: translateY(0);
@@ -2487,9 +2474,6 @@ footer.footer .in .site-brand {
 .landing-empowering-players .in .block-container {
   opacity: 1;
   transform: translateY(0);
-}
-.landing-empowering-players .in .block-container .cards img {
-  opacity: 1;
 }
 .landing-empowering-players .in .block-container .cards img:first-child {
   transform: rotate(4.999deg);
@@ -2639,7 +2623,7 @@ footer.footer .in .site-brand {
   color: #e4e4e6;
 }
 .landing-posibilities .list.in a.active:after {
-  animation: 8s width forwards;
+  animation: 8s linear width forwards;
 }
 .landing-posibilities .list.in a.active svg {
   transform: translateX(0);
@@ -4059,16 +4043,10 @@ footer.footer .in .site-brand {
   color: #cacace;
 }
 .landing-launching .subscribe {
-  width: 487px;
-  position: relative;
   opacity: 0;
-  transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .landing-launching .subscribe .btn {
-  position: absolute;
-  right: 4px;
-  top: 38px;
-  bottom: 4px;
+  top: 15px;
 }
 .landing-launching .link {
   margin-top: 24px;
@@ -4483,7 +4461,7 @@ footer.footer .in .site-brand {
 .landing-roadmap .token-launch {
   position: absolute;
   bottom: -54px;
-  right: 0;
+  left: 0;
 }
 .landing-roadmap .now {
   position: relative;
@@ -4697,6 +4675,7 @@ footer.footer .in .site-brand {
 }
 .landing-news .swiper-slide {
   width: 33.3333%;
+  padding: 0 12px;
 }
 .landing-news .news-article {
   border-radius: 16px;
@@ -4834,11 +4813,9 @@ footer.footer .in .site-brand {
   width: 100%;
   position: relative;
 }
-.landing-learnmore .subscribe .btn {
-  position: absolute;
-  right: 4px;
+.landing-learnmore .subscribe .btn-container {
+  width: 93px;
   top: 4px;
-  bottom: 4px;
 }
 .landing-learnmore .list {
   margin: 0 -12px;
@@ -4997,6 +4974,52 @@ footer.footer .in .site-brand {
 }
 .social-icons a:hover svg path {
   fill: #eb3a4a;
+}
+
+.subscribe {
+  width: 487px;
+  position: relative;
+  transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.subscribe .btn-container {
+  position: absolute;
+  right: 4px;
+  top: 23px;
+  bottom: 4px;
+  width: 166px;
+  height: 48px;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.subscribe .btn-container .btn {
+  height: 100%;
+}
+.subscribe .success-message {
+  position: absolute;
+  color: #000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0;
+  transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.subscribe .success-message svg {
+  margin-left: 8px;
+}
+.subscribe .success .btn-container {
+  width: calc(100% - 8px);
+  transition-delay: 0.2s;
+}
+.subscribe .success .btn-container .btn {
+  background-color: #44ff57;
+}
+.subscribe .success .btn-container .btn span {
+  opacity: 0;
+}
+.subscribe .success .success-message {
+  opacity: 1;
+  z-index: 3;
+  transition-delay: 0.4s;
 }
 
 .page-scrollbar {

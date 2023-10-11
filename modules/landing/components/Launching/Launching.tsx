@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { Tween } from 'react-gsap';
 import { Scene } from 'react-scrollmagic';
+import { Subscribe } from '@/modules/landing';
 
 export const Launching = () => {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -81,26 +82,16 @@ export const Launching = () => {
 
           <ObserverContainer className="flex column details">
             <div className="flex column actions">
-              <div className="subscribe flex w-full">
-                <TextInput
-                  id="subscribe"
-                  className="w-full"
-                  onChange={updateInput(
-                    'email',
-                    form,
-                    setForm,
-                    errors,
-                    setErrors,
-                  )}
-                  value={form.email}
-                  placeholder="Email"
-                  label="Get notified when the XBG presale with discounted terms goes live."
-                />
+              <Subscribe
+                label="Get notified when the XBG presale with discounted terms goes live."
+                button="Stay up to date"
+              />
 
-                <BtnRed label="Stay up to date" href="" />
-              </div>
-
-              <Link className="link flex middle" href="">
+              <Link
+                className="link flex middle"
+                href="https://docsend.com/view/9iee42d832m32wnd"
+                target="_blank"
+              >
                 <span>View pitch deck</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
