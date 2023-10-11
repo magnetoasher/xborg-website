@@ -76,15 +76,35 @@ export const VideoCover = ({ progress }: { progress: number }) => {
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
-    // if (videoRef.current) {
-    //   videoRef.current.addEventListener(
-    //     'loadeddata',
-    //     function () {
-    dispatch(SiteActions.loadSite());
-    //     },
-    //     false,
-    //   );
-    // }
+    if (videoRef.current) {
+      const starttime = 0; // start at 0 seconds
+      const endtime = 3.2; // stop at 2 seconds
+
+      videoRef.current.addEventListener(
+        'timeupdate',
+        function () {
+          if (this.currentTime >= endtime && window.scrollY < 100) {
+            this.currentTime = 0; // change time index here
+          }
+        },
+        false,
+      );
+      //   videoRef.current.addEventListener(
+      //     'loadeddata',
+      //     function () {
+      dispatch(SiteActions.loadSite());
+      //     },
+      //     false,
+      //   );
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY < 100) {
+          videoRef.current?.play();
+        } else {
+          videoRef.current?.pause();
+        }
+      });
+    }
   }, []);
 
   useEffect(() => {
@@ -116,6 +136,7 @@ export const VideoCover = ({ progress }: { progress: number }) => {
       <video
         src={Videos.landing.intro}
         muted
+        autoPlay
         preload="auto"
         ref={videoRef}
         className="introduction-video"
