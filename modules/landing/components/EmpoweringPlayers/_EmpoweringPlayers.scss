@@ -46,6 +46,15 @@
     }
   }
 
+  .block-content {
+    pointer-events: none;
+
+    .block,
+    .cards {
+      pointer-events: all;
+    }
+  }
+
   .cols {
     margin: 80px -12px -12px;
     padding-bottom: 244px;
@@ -93,6 +102,7 @@
       opacity: 0;
       transition: 0.6s ease-in;
       position: relative;
+      pointer-events: none;
 
       &:nth-child(2) {
         .block {

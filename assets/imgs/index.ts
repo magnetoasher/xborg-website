@@ -65,4 +65,17 @@ export const Images = {
     messanger1: '/images/landing/messanger-1.png',
     messanger2: '/images/landing/messanger-2.png',
   },
+
+  friends: {
+    swissborg: '/images/friends/swissborg.svg',
+    polygon: '/images/friends/polygon.svg',
+    myria: '/images/friends/myria.svg',
+    brave: '/images/friends/brave.svg',
+    ultra: '/images/friends/ultra.svg',
+    bds: '/images/friends/bds.svg',
+    mante: '/images/friends/mante.svg',
+    zilliqa: '/images/friends/zilliqa.svg',
+    games: '/images/friends/games.svg',
+    communitygaming: '/images/friends/communitygaming.svg',
+  },
 };

@@ -2386,6 +2386,13 @@ footer.footer .in .site-brand {
   opacity: 0;
   transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
 }
+.landing-empowering-players .block-content {
+  pointer-events: none;
+}
+.landing-empowering-players .block-content .block,
+.landing-empowering-players .block-content .cards {
+  pointer-events: all;
+}
 .landing-empowering-players .cols {
   margin: 80px -12px -12px;
   padding-bottom: 244px;
@@ -2424,6 +2431,7 @@ footer.footer .in .site-brand {
   opacity: 0;
   transition: 0.6s ease-in;
   position: relative;
+  pointer-events: none;
 }
 .landing-empowering-players .cols .block-container:nth-child(2) .block {
   margin-top: 25%;
@@ -4757,7 +4765,7 @@ footer.footer .in .site-brand {
   position: relative;
   height: 100px;
 }
-.landing-friends svg {
+.landing-friends img {
   margin: 0 12px;
   transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
 }
