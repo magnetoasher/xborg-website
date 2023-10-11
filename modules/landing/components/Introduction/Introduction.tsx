@@ -13,10 +13,15 @@ import { Scene } from 'react-scrollmagic';
 
 export const Introduction = () => {
   const ref = useRef<HTMLHeadingElement>(null);
-
+  const offset = 700;
   return (
     <div className="landing-introduction" id="trigger2">
-      <Scene duration="100%" triggerElement="#trigger2" triggerHook="onLeave">
+      <Scene
+        offset={offset}
+        duration="50%"
+        triggerElement="#trigger2"
+        triggerHook={0.5}
+      >
         {(progress: any) => {
           return <VideoCover progress={progress} />;
         }}
@@ -83,7 +88,7 @@ export const VideoCover = ({ progress }: { progress: number }) => {
       videoRef.current.addEventListener(
         'timeupdate',
         function () {
-          if (this.currentTime >= endtime && window.scrollY < 100) {
+          if (this.currentTime >= endtime && window.scrollY < 220) {
             this.currentTime = 0; // change time index here
           }
         },
@@ -98,7 +103,7 @@ export const VideoCover = ({ progress }: { progress: number }) => {
       //   );
 
       window.addEventListener('scroll', () => {
-        if (window.scrollY < 100) {
+        if (window.scrollY < 220) {
           videoRef.current?.play();
         } else {
           videoRef.current?.pause();
