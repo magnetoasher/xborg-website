@@ -126,7 +126,7 @@ export const VideoCover = ({ progress }: { progress: number }) => {
         window.requestAnimationFrame(function () {
           const duration = 8.0;
           if (!seeking && videoRef.current)
-            videoRef.current.currentTime = 0.4 + duration * progress;
+            videoRef.current.currentTime = 0.8 + duration * progress;
 
           ticking = false;
         });
