@@ -29,15 +29,18 @@ function App({ Component, pageProps, router }: AppProps) {
     <Provider store={store}>
       <div className="landing-page">
         <Head>
-          <title>Enter the XBorg Universe</title>
+          <title>
+            XBorg - Revolutionising gaming with credential infrastructure.
+          </title>
           <meta
             name="description"
-            content="An epic adventure awaits, where challenges are many and legendary rewards are to be won."
+            content="XBorg empowers players with secure credentials and leading esports partnerships for the ultimate gaming experience."
           />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1, minimum-scale=1"
           />
+          <meta property="og:image" content={'/images/ogindex.png'} />
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
