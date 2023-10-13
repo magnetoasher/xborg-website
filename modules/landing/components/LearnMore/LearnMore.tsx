@@ -104,7 +104,11 @@ export const LearnMore = () => {
                   XBG is the native token of the XBorg ecosystem
                 </div>
 
-                <Subscribe button="Sign Up" source="xbg" />
+                <Subscribe
+                  button="Sign Up"
+                  source="xbg"
+                  id="learnmore-subscribe"
+                />
               </div>
             </div>
           </div>

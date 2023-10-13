@@ -83,6 +83,7 @@ export const Launching = () => {
           <ObserverContainer className="flex column details">
             <div className="flex column actions">
               <Subscribe
+                id="launching-subscribe"
                 label="Get notified when the XBG presale with discounted terms goes live."
                 button="Stay up to date"
                 source="xbg"

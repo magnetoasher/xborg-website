@@ -2010,6 +2010,8 @@ footer.footer .in .site-brand {
 .landing-introduction .introduction-video {
   position: absolute;
   height: calc(100vh + 120px);
+  right: 0;
+  top: 0;
 }
 .landing-introduction .parallax-bubble {
   position: absolute;
@@ -2204,6 +2206,16 @@ footer.footer .in .site-brand {
 .landing-onboarding .swiper-slide .swiper-slide-image .image-container {
   transition: 0.3s ease-in;
 }
+.landing-onboarding .swiper-slide .swiper-slide-image .soon {
+  position: absolute;
+  left: 50%;
+  top: 12px;
+  transform: translateX(-50%);
+  z-index: 3;
+  margin-top: -8px;
+  opacity: 0;
+  transition: 0.2s ease-in;
+}
 .landing-onboarding .swiper-slide .swiper-slide-image .shadow {
   width: 100px;
   height: 100px;
@@ -2237,6 +2249,10 @@ footer.footer .in .site-brand {
   bottom: 24px;
   opacity: 1;
   transition-delay: 0.1s;
+}
+.landing-onboarding .swiper-slide .swiper-slide-image:hover .soon {
+  margin-top: 0;
+  opacity: 1;
 }
 .landing-onboarding .swiper-slide .swiper-slide-image:hover:after {
   opacity: 0.8;
@@ -2863,10 +2879,6 @@ footer.footer .in .site-brand {
   transform: translateY(-50%);
   right: 100px;
   pointer-events: none;
-}
-.landing-next-gen .beta-logo path {
-  fill: transparent;
-  stroke: rgba(255, 255, 255, 0.1);
 }
 .landing-next-gen .section-description {
   text-align: center;
@@ -4060,6 +4072,7 @@ footer.footer .in .site-brand {
 }
 .landing-launching .input-label {
   max-width: 302px;
+  margin-bottom: 32px;
 }
 .landing-launching .video-container.in .token-video {
   opacity: 1;
@@ -4087,7 +4100,7 @@ footer.footer .in .site-brand {
   opacity: 0;
 }
 .landing-launching .subscribe .btn-container {
-  top: 56px;
+  top: 84px;
 }
 .landing-launching .link {
   margin-top: 24px;
@@ -4549,7 +4562,7 @@ footer.footer .in .site-brand {
   position: absolute;
   left: 0;
   top: 0;
-  width: 206px;
+  width: 20%;
   height: 100%;
   background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #000 100%);
   z-index: 6;
@@ -4560,7 +4573,7 @@ footer.footer .in .site-brand {
   position: absolute;
   right: 0;
   top: 0;
-  width: 206px;
+  width: 20%;
   height: 100%;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000 100%);
   z-index: 6;

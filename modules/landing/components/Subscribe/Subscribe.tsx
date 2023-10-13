@@ -12,9 +12,10 @@ export type SubscribeProps = {
   label?: string;
   button: string;
   source: 'newsletter' | 'xbg';
+  id: string;
 };
 
-export const Subscribe = ({ label, button, source }: SubscribeProps) => {
+export const Subscribe = ({ label, button, source, id }: SubscribeProps) => {
   const [form, setForm] = useState<{ email: string; source: string }>({
     email: '',
     source,
@@ -27,7 +28,7 @@ export const Subscribe = ({ label, button, source }: SubscribeProps) => {
     <div className="subscribe flex w-full">
       <div className={`flex w-full ${success ? 'success' : 'initial'}`}>
         <TextInput
-          id="subscribe"
+          id={id}
           className="w-full"
           onChange={updateInput('email', form, setForm, errors, setErrors)}
           value={form.email}
