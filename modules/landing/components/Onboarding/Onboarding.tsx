@@ -69,7 +69,7 @@ export const Onboarding = () => {
                 <div className="swiper-slide-fans lexend-body-sm l">
                   200’000 fans
                   <br />
-                  №1 CSGO Team
+                  World's fastest growing esports team
                 </div>
               </div>
             </SwiperSlide>
