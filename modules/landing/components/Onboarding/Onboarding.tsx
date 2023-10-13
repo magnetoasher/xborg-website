@@ -29,6 +29,7 @@ export const Onboarding = () => {
           <Subscribe
             label="Sign up for our newsletter"
             button="Stay up to date"
+            source="newsletter"
           />
         </ObserverContainer>
 

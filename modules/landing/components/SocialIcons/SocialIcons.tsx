@@ -6,8 +6,8 @@ export const SocialIcons = () => {
       <Link href="https://twitter.com/XBorgHQ" target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="18"
+          width="32"
+          height="32"
           viewBox="0 0 20 18"
           fill="none"
         >
@@ -20,8 +20,8 @@ export const SocialIcons = () => {
       <Link href="https://discord.com/invite/xborg" target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="21"
-          height="20"
+          width="32"
+          height="32"
           viewBox="0 0 21 20"
           fill="none"
         >
@@ -36,8 +36,8 @@ export const SocialIcons = () => {
       <Link href="https://www.youtube.com/@xborgofficial" target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
+          width="32"
+          height="32"
           viewBox="0 0 20 20"
           fill="none"
         >
@@ -52,8 +52,8 @@ export const SocialIcons = () => {
       <Link href="https://www.twitch.tv/xborgofficial" target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
+          width="32"
+          height="32"
           viewBox="0 0 20 20"
           fill="none"
         >

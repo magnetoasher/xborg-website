@@ -2,9 +2,16 @@
   position: relative;
   z-index: 3;
   padding-top: 61px;
-  background: url('/images/landing/bubbles_bot_right.png');
-  background-repeat: no-repeat;
-  background-position: bottom right;
+  overflow: hidden;
+
+  .background {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: auto;
+    z-index: -1;
+  }
 
   .parallax-bubble {
     position: absolute;
@@ -66,9 +73,14 @@
       background: rgba(9, 9, 9, 0.8);
       backdrop-filter: blur(10px);
       padding: 32px 24px;
+      pointer-events: all;
 
       .lexend-body-md {
         margin-top: 16px;
+      }
+
+      p.lexend-body-md {
+        color: #cacace;
       }
 
       .lexend-body-s {
@@ -113,18 +125,19 @@
       &:nth-child(3) {
         .block {
           margin-top: 75%;
+          min-height: 184px;
         }
       }
 
       &:nth-child(4) {
         .block {
-          margin-top: -75%;
+          margin-top: -52%;
         }
       }
 
       &:nth-child(5) {
         .block {
-          margin-top: -50%;
+          margin-top: -27%;
         }
       }
     }

@@ -42,7 +42,7 @@ export const TextInput = ({
       <div className="input-container flex column">
         {label && (
           <label
-            className="input-label lexend-heading-l l"
+            className="input-label lexend-body-md l"
             htmlFor={`input-${id}`}
           >
             {label}

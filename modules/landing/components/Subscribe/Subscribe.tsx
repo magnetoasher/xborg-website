@@ -3,14 +3,22 @@ import { TextInput } from '@/components/Forms';
 import { updateInput } from '@/helpers/inputs';
 import { postSubscribe } from '@/modules/queries';
 import { useState } from 'react';
+import { subscribeSchema } from '@/modules/landing';
+import { handleResponseErrors } from '@/providers/ErrorsProvider';
+
+const yupOptions = { abortEarly: false };
 
 export type SubscribeProps = {
   label?: string;
   button: string;
+  source: 'newsletter' | 'xbg';
 };
 
-export const Subscribe = ({ label, button }: SubscribeProps) => {
-  const [form, setForm] = useState<{ email: string }>({ email: '' });
+export const Subscribe = ({ label, button, source }: SubscribeProps) => {
+  const [form, setForm] = useState<{ email: string; source: string }>({
+    email: '',
+    source,
+  });
   const [success, setSuccess] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
   const [errors, setErrors] = useState<any>({});
@@ -36,19 +44,31 @@ export const Subscribe = ({ label, button }: SubscribeProps) => {
             onClick={async (e: any) => {
               e.preventDefault();
               setLoading(true);
-              await postSubscribe(form)
-                .then(() => {
-                  setSuccess(true);
+              subscribeSchema
+                .validate(form, yupOptions)
+                .then(async () => {
+                  await postSubscribe(form)
+                    .then(() => {
+                      setSuccess(true);
 
-                  setTimeout(() => {
-                    setSuccess(false);
-                  }, 2000);
+                      setTimeout(() => {
+                        setForm({
+                          email: '',
+                          source,
+                        });
+                        setSuccess(false);
+                      }, 2000);
+                    })
+                    .catch(() => {
+                      setErrors({ email: 'Something went wrong!' });
+                    })
+                    .finally(() => {
+                      setLoading(false);
+                    });
                 })
-                .catch(() => {
-                  setErrors({ email: 'Something went wrong!' });
-                })
-                .finally(() => {
+                .catch((err) => {
                   setLoading(false);
+                  handleResponseErrors(err, 'error_login_failed', setErrors);
                 });
             }}
           />

@@ -104,7 +104,7 @@ export const LearnMore = () => {
                   XBG is the native token of the XBorg ecosystem
                 </div>
 
-                <Subscribe button="Sign Up" />
+                <Subscribe button="Sign Up" source="xbg" />
               </div>
             </div>
           </div>
@@ -180,7 +180,7 @@ export const LearnMore = () => {
                     const hero =
                       document.getElementsByClassName('landing-roadmap')[0];
                     const rect = hero.getBoundingClientRect();
-                    scrollTo(window.scrollY, rect.y, 0);
+                    scrollTo(window.scrollY, window.scrollY + rect.y, 0);
                   }}
                 >
                   <span>View Roadmap</span>

@@ -29,6 +29,11 @@
     transform: translateY(-50%);
     right: 100px;
     pointer-events: none;
+
+    path {
+      fill: transparent;
+      stroke: rgba(255, 255, 255, 0.1);
+    }
   }
 
   .section-description {

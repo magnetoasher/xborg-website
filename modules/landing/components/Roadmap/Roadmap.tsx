@@ -27,8 +27,10 @@ export const Roadmap = () => {
             Our roadmap
           </h2>
         </ObserverContainer>
+      </div>
 
-        <ObserverContainer className="spring-swiper-container">
+      <ObserverContainer className="spring-swiper-container shadows">
+        <div className="container">
           <SpringSwiper
             options={{
               speed: 800,
@@ -256,8 +258,8 @@ export const Roadmap = () => {
               </div>
             </SwiperSlide>
           </SpringSwiper>
-        </ObserverContainer>
-      </div>
+        </div>
+      </ObserverContainer>
     </div>
   );
 };

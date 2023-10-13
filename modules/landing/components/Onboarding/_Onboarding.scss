@@ -52,6 +52,10 @@
 
   .subscribe {
     opacity: 0;
+
+    .btn-container {
+      top: 32px;
+    }
   }
 
   .swiper {
@@ -90,7 +94,7 @@
         height: 60%;
         pointer-events: none;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
-        opacity: 0;
+        opacity: 0.8;
         transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
       }
 
@@ -147,7 +151,7 @@
         }
 
         &:after {
-          opacity: 0.9;
+          opacity: 0.8;
         }
       }
     }

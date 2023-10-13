@@ -111,6 +111,48 @@ export const NextGenGamingBubbles = () => {
           </div>
         </Tween>
       </Scene>
+
+      <Scene duration="200%" triggerHook="onEnter">
+        <Tween
+          position="0"
+          from={{
+            y: -250,
+          }}
+          to={{
+            y: 50,
+          }}
+        >
+          <div className="parallax-bubble7">
+            <Image
+              src={Images.landing.sphere9}
+              alt=""
+              width={120}
+              height={120}
+            />
+          </div>
+        </Tween>
+      </Scene>
+
+      <Scene duration="200%" triggerHook="onEnter">
+        <Tween
+          position="0"
+          from={{
+            y: -250,
+          }}
+          to={{
+            y: 50,
+          }}
+        >
+          <div className="parallax-bubble8">
+            <Image
+              src={Images.landing.sphere_blur}
+              alt=""
+              width={48}
+              height={48}
+            />
+          </div>
+        </Tween>
+      </Scene>
     </>
   );
 };

@@ -60,8 +60,9 @@ export const Footer = () => {
                   e.preventDefault();
                   const hero =
                     document.getElementsByClassName('landing-roadmap')[0];
+
                   const rect = hero.getBoundingClientRect();
-                  scrollTo(window.scrollY, rect.y, 0);
+                  scrollTo(window.scrollY, window.scrollY + rect.y, 0);
                 }}
               >
                 <span>Roadmap</span>

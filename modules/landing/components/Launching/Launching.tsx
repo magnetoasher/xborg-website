@@ -85,6 +85,7 @@ export const Launching = () => {
               <Subscribe
                 label="Get notified when the XBG presale with discounted terms goes live."
                 button="Stay up to date"
+                source="xbg"
               />
 
               <Link

@@ -140,7 +140,7 @@ export const EmpoweringPlayers = () => {
                 and titles, to unlock unique opportunities and rewards.
               </p>
               <div className="flex">
-                <BtnDark href="">
+                <BtnDark href="https://gamerbase.gg" target="_blank">
                   <Image
                     src={Images.landing.discovery1}
                     alt=""
@@ -169,6 +169,26 @@ export const EmpoweringPlayers = () => {
           <div className="parallax-bubble-2">
             <Image src={Images.landing.sphere} alt="" width={39} height={39} />
           </div>
+        </Tween>
+      </Scene>
+
+      <Scene duration="100%" triggerHook="onEnter">
+        <Tween
+          position="0"
+          from={{
+            y: 0,
+          }}
+          to={{
+            y: 150,
+          }}
+        >
+          <Image
+            src={Images.landing.bubbles_bot_right}
+            width={1062}
+            height={883}
+            alt=""
+            className="background"
+          />
         </Tween>
       </Scene>
     </div>

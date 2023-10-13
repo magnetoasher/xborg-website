@@ -104,7 +104,11 @@ export const TokenizedEsports = () => {
             Gaming identity-based crowdfunding
           </div>
 
-          <Link href="" className="signin flex middle">
+          <Link
+            href="https://gamerbase.gg"
+            target="_blank"
+            className="signin flex middle"
+          >
             <Image
               src={Images.landing.discovery1}
               alt=""

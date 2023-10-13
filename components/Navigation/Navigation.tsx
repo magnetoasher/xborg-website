@@ -94,7 +94,7 @@ export const Navigation = () => {
             e.preventDefault();
             const hero = document.getElementsByClassName('landing-next-gen')[0];
             const rect = hero.getBoundingClientRect();
-            scrollTo(window.scrollY, rect.y, 0);
+            scrollTo(window.scrollY, window.scrollY + rect.y, 0);
           }}
         />
       </div>

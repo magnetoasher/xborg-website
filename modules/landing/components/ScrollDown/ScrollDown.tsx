@@ -68,7 +68,7 @@ export const ScrollDown = () => {
           e.preventDefault();
           const hero = document.getElementsByClassName('landing-onboarding')[0];
           const rect = hero.getBoundingClientRect();
-          scrollTo(window.scrollY, rect.y, 0);
+          scrollTo(window.scrollY, window.scrollY + rect.y, 0);
         }}
       >
         <span>Scroll down</span>

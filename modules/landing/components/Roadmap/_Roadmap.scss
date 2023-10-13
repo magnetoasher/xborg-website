@@ -67,6 +67,32 @@
     z-index: 4;
   }
 
+  .shadows {
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 206px;
+      height: 100%;
+      background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+      z-index: 6;
+      pointer-events: none;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 206px;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+      z-index: 6;
+      pointer-events: none;
+    }
+  }
+
   .background-circle {
     position: absolute;
     top: 50%;
