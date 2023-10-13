@@ -6,10 +6,10 @@ module.exports = {
         has: [
           {
             type: 'host',
-            value: 'www.xborg.com',
+            value: 'xborg.com',
           },
         ],
-        destination: 'https://xborg.com/:path*',
+        destination: 'https://www.xborg.com/:path*',
         basePath: false,
         permanent: true,
       },
