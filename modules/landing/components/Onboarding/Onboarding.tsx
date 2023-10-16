@@ -96,7 +96,6 @@ export const Onboarding = () => {
             </SwiperSlide>
             <SwiperSlide>
               <OnboardingSlide className="unknown">
-                <div className="soon lexend-body-sm l">Will be soon...</div>
                 <Image
                   src={Images.landing.unknown}
                   alt=""
@@ -108,7 +107,6 @@ export const Onboarding = () => {
             </SwiperSlide>
             <SwiperSlide>
               <OnboardingSlide className="unknown">
-                <div className="soon lexend-body-sm l">Will be soon...</div>
                 <Image
                   src={Images.landing.unknown}
                   alt=""

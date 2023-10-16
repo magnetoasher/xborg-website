@@ -469,6 +469,33 @@ table {
     width: 100%;
   }
 }
+@keyframes rotate360 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes prixClipFix {
+  0% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+            clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  75% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
 [data-simplebar] {
   position: relative;
   flex-direction: column;
@@ -2206,16 +2233,6 @@ footer.footer .in .site-brand {
 .landing-onboarding .swiper-slide .swiper-slide-image .image-container {
   transition: 0.3s ease-in;
 }
-.landing-onboarding .swiper-slide .swiper-slide-image .soon {
-  position: absolute;
-  left: 50%;
-  top: 12px;
-  transform: translateX(-50%);
-  z-index: 3;
-  margin-top: -8px;
-  opacity: 0;
-  transition: 0.2s ease-in;
-}
 .landing-onboarding .swiper-slide .swiper-slide-image .shadow {
   width: 100px;
   height: 100px;
@@ -2249,10 +2266,6 @@ footer.footer .in .site-brand {
   bottom: 24px;
   opacity: 1;
   transition-delay: 0.1s;
-}
-.landing-onboarding .swiper-slide .swiper-slide-image:hover .soon {
-  margin-top: 0;
-  opacity: 1;
 }
 .landing-onboarding .swiper-slide .swiper-slide-image:hover:after {
   opacity: 0.8;
