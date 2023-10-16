@@ -24,7 +24,7 @@ export const BtnRed = ({
       ${loading ? ' loading' : ''}`}
       onClick={onClick}
     >
-      <LoadingSpinner />
+      {loading && <LoadingSpinner />}
       {children ?? (
         <span className="flex middle center expand">
           {icon}
