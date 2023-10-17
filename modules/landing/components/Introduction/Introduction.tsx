@@ -82,8 +82,7 @@ export const VideoCover = ({ progress }: { progress: number }) => {
 
   useEffect(() => {
     if (videoRef.current) {
-      const starttime = 0; // start at 0 seconds
-      const endtime = 3.2; // stop at 2 seconds
+      const endtime = 3.2;
 
       videoRef.current.addEventListener(
         'timeupdate',
@@ -94,13 +93,8 @@ export const VideoCover = ({ progress }: { progress: number }) => {
         },
         false,
       );
-      //   videoRef.current.addEventListener(
-      //     'loadeddata',
-      //     function () {
+
       dispatch(SiteActions.loadSite());
-      //     },
-      //     false,
-      //   );
 
       window.addEventListener('scroll', () => {
         if (window.scrollY < 220) {
