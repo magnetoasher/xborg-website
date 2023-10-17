@@ -226,4 +226,10 @@
       position: relative;
     }
   }
+
+  @media (max-width: $sm-max) {
+    .background {
+      width: 100%;
+    }
+  }
 }

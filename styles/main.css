@@ -2603,6 +2603,11 @@ footer.footer .in .site-brand {
     position: relative;
   }
 }
+@media (max-width: 768px) {
+  .landing-empowering-players .background {
+    width: 100%;
+  }
+}
 
 .landing-posibilities {
   position: relative;
@@ -2851,11 +2856,12 @@ footer.footer .in .site-brand {
     padding-bottom: 371px;
   }
   .landing-posibilities .list {
-    display: none;
+    min-width: initial;
+    width: 100%;
+    margin-top: 90px;
   }
   .landing-posibilities .content {
-    top: initial;
-    bottom: -100px;
+    top: 130px;
     max-width: 300px;
     width: 100%;
     left: 50%;
@@ -2867,6 +2873,12 @@ footer.footer .in .site-brand {
   }
   .landing-posibilities .content-image img {
     width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .landing-posibilities .content {
+    top: 70px;
   }
 }
 
