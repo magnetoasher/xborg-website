@@ -78,9 +78,16 @@
     }
   }
 
+  @media (max-width: $lg-max) {
+    .introduction-video {
+      right: -25%;
+    }
+  }
+
   @media (max-width: $md-max) {
-    .video {
+    .introduction-video {
       height: 100vh;
+      top: 15%;
       right: -50%;
     }
 

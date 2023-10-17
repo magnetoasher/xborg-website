@@ -21,7 +21,7 @@ export const Subscribe = ({ label, button, source, id }: SubscribeProps) => {
     source,
   });
   const [success, setSuccess] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
   const [errors, setErrors] = useState<any>({});
 
   return (

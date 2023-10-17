@@ -471,7 +471,7 @@ table {
 }
 @keyframes rotate360 {
   100% {
-    transform: rotate(360deg);
+    transform: rotate(360deg) translate(-50%, -50%);
   }
 }
 @keyframes prixClipFix {
@@ -2120,9 +2120,15 @@ footer.footer .in .site-brand {
 .landing-introduction .in h1 .word:nth-child(10) {
   transition-delay: 0.45s;
 }
+@media (max-width: 1200px) {
+  .landing-introduction .introduction-video {
+    right: -25%;
+  }
+}
 @media (max-width: 992px) {
-  .landing-introduction .video {
+  .landing-introduction .introduction-video {
     height: 100vh;
+    top: 15%;
     right: -50%;
   }
   .landing-introduction .introduction-content {
