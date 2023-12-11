@@ -1,0 +1,119 @@
+.stats-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 120px 16px;
+  background-color: #101010;
+
+  .inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    h1 {
+      width: 100%;
+      max-width: 638px;
+      font-family: $integralCF;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 48px;
+      color: $red200;
+    }
+
+    .details {
+      width: 100%;
+      max-width: 489px;
+      font-family: $lexend;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 20px;
+      color: $gray200;
+      margin-top: 24px;
+      margin-bottom: 56px;
+    }
+
+    .block-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 60px;
+
+      .block {
+        width: auto;
+        max-width: 352px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 32px;
+        z-index: 2;
+
+        p:first-child {
+          text-align: center;
+          font-family: $lexend;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 30.426px;
+          color: $gray300;
+        }
+
+        p:last-child {
+          text-align: center;
+          font-family: $lexend;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 24px;
+          color: $gray300;
+        }
+      }
+
+      .layout-object1 {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      .layout-object2 {
+        position: absolute;
+        bottom: -40px;
+        left: 20%;
+      }
+
+      .layout-object3 {
+        position: absolute;
+        top: 15%;
+        left: 35%;
+      }
+
+      .layout-object4 {
+        position: absolute;
+        top: 5%;
+        right: 30%;
+      }
+
+      .layout-object5 {
+        position: absolute;
+        top: 50%;
+        right: 0;
+      }
+
+      @media screen and (max-width: 424px) {
+        .layout-object1,
+        .layout-object2,
+        .layout-object3,
+        .layout-object4,
+        .layout-object5 {
+          display: none;
+        }
+      }
+    }
+  }
+}

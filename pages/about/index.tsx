@@ -1,4 +1,10 @@
-import { EmpoweringPlayers, Beliefs, Partners, NewEra } from '@/modules/about';
+import {
+  EmpoweringPlayers,
+  Beliefs,
+  Partners,
+  NewEra,
+  Stats,
+} from '@/modules/about';
 
 export default function AboutUs() {
   return (
@@ -7,6 +13,7 @@ export default function AboutUs() {
       <Beliefs />
       <Partners />
       <NewEra />
+      <Stats />
     </div>
   );
 }
