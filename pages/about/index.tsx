@@ -4,6 +4,7 @@ import {
   Partners,
   NewEra,
   Stats,
+  Team,
 } from '@/modules/about';
 
 export default function AboutUs() {
@@ -14,6 +15,7 @@ export default function AboutUs() {
       <Partners />
       <NewEra />
       <Stats />
+      <Team />
     </div>
   );
 }
