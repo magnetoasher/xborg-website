@@ -5,6 +5,7 @@ import {
   NewEra,
   Stats,
   Team,
+  BrandDetails,
 } from '@/modules/about';
 
 export default function AboutUs() {
@@ -16,6 +17,7 @@ export default function AboutUs() {
       <NewEra />
       <Stats />
       <Team />
+      <BrandDetails />
     </div>
   );
 }
