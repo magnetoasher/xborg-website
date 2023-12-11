@@ -1,4 +1,18 @@
-export const Images = {
+type ImagePaths = {
+  [key: string]: string;
+};
+
+interface Images {
+  logo: string;
+  landing: ImagePaths;
+  badges: ImagePaths;
+  games: ImagePaths;
+  messanger: ImagePaths;
+  friends: ImagePaths;
+  about: ImagePaths;
+}
+
+export const Images: Images = {
   logo: '/images/logo.svg',
 
   landing: {
@@ -77,5 +91,37 @@ export const Images = {
     zilliqa: '/images/friends/zilliqa.svg',
     games: '/images/friends/games.svg',
     communitygaming: '/images/friends/communitygaming.svg',
+  },
+
+  about: {
+    spheres: '/images/about/Spheres.png',
+    arrowDown: '/images/about/common/arrow-down.svg',
+    chevronDown: '/images/about/common/chevron-down.svg',
+    chevronRight: '/images/about/common/chevron-right.svg',
+    cross: '/images/about/common/cross.svg',
+    icon1: '/images/about/common/icon-1.svg',
+    icon2: '/images/about/common/icon-2.svg',
+    icon3: '/images/about/common/icon-3.svg',
+    swissBorg: '/images/about/common/swiss-borg-icon.svg',
+    p1: 'images/about/team/p1.png',
+    p2: 'images/about/team/p2.png',
+    p3: 'images/about/team/p3.png',
+    p4: 'images/about/team/p4.png',
+    p5: 'images/about/team/p5.png',
+    p6: 'images/about/team/p6.png',
+    p7: 'images/about/team/p7.png',
+    p8: 'images/about/team/p8.png',
+    p9: 'images/about/team/p9.png',
+    p10: 'images/about/team/p10.png',
+    p11: 'images/about/team/p11.png',
+    p12: 'images/about/team/p12.png',
+    p13: 'images/about/team/p13.png',
+    p14: 'images/about/team/p14.png',
+    p15: 'images/about/team/p15.png',
+    p16: 'images/about/team/p16.png',
+    p17: 'images/about/team/p17.png',
+    p18: 'images/about/team/p18.png',
+    p19: 'images/about/team/p19.png',
+    p20: 'images/about/team/p20.png',
   },
 };
