@@ -39,7 +39,7 @@
         align-items: flex-start;
 
         p:nth-of-type(1) {
-          color: var(--red100);
+          color: $red100;
           font-family: Lexend;
           font-size: 12px;
           font-style: normal;
@@ -49,7 +49,7 @@
         }
 
         h1 {
-          color: var(--gray100);
+          color: $gray100;
           font-family: Integral CF;
           font-size: 64px;
           font-style: normal;
@@ -60,7 +60,7 @@
         }
 
         p:nth-of-type(2) {
-          color: var(--gray300);
+          color: $gray300;
           font-family: $lexend;
           font-size: 14px;
           font-style: normal;
