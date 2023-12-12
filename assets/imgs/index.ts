@@ -133,7 +133,7 @@ export const Images: Images = {
     spheres2: '/images/about/Spheres2.png',
     spheres3: '/images/about/Spheres3.png',
     spheres4: '/images/about/Spheres4.png',
-    spheres5: '/images/about/Spheres5.png',
+    spheres5: '/images/about/spheres5.png',
     x3dIcon: '/images/about/x3dIcon.png',
   },
 };
