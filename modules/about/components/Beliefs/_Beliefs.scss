@@ -14,6 +14,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin: 0 auto;
+
     h1 {
       font-family: $integralCF;
       font-size: 64px;
@@ -23,6 +24,7 @@
       color: var(--gray100);
       margin-bottom: 10%;
     }
+
     .cards-container {
       width: 100%;
       display: flex;
@@ -31,6 +33,7 @@
       flex-wrap: wrap;
       gap: 100px;
       padding: 0 16px;
+
       .card {
         width: 100%;
         max-width: 285px;
@@ -40,6 +43,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         gap: 24px;
+
         .content {
           h3 {
             font-family: Lexend;
@@ -50,6 +54,7 @@
             color: var(--gray100);
             margin-bottom: 16px;
           }
+
           p {
             font-family: Lexend;
             font-size: 16px;
@@ -73,11 +78,13 @@
         line-height: 48px;
         margin-left: 8%;
       }
+
       .layout-image {
         visibility: hidden !important;
       }
     }
   }
+
   @media screen and (max-width: $sm-max) {
     .layout-image {
       visibility: hidden;

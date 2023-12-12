@@ -7,6 +7,7 @@
   gap: 40px;
   padding: 120px 16px;
   background-color: #101010;
+
   h1 {
     color: $gray100;
     text-align: center;
@@ -16,6 +17,7 @@
     font-weight: 400;
     line-height: 48px;
   }
+
   .logo-container {
     display: flex;
     flex-direction: row;
@@ -24,6 +26,7 @@
     flex-wrap: wrap;
     gap: 50px;
   }
+
   .bottom-logo-container {
     position: relative;
     padding: 30px 45px;
