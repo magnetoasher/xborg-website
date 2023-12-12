@@ -1,3 +1,4 @@
+import { Footer } from '@/components/Footer';
 import {
   EmpoweringPlayers,
   Beliefs,
@@ -6,6 +7,7 @@ import {
   Stats,
   Team,
   BrandDetails,
+  LearnMore,
 } from '@/modules/about';
 
 export default function AboutUs() {
@@ -18,6 +20,8 @@ export default function AboutUs() {
       <Stats />
       <Team />
       <BrandDetails />
+      <LearnMore />
+      <Footer />
     </div>
   );
 }

@@ -5,3 +5,4 @@ export * from './NewEra';
 export * from './Stats';
 export * from './Team';
 export * from './BrandDetails';
+export * from './LeanrMore';
