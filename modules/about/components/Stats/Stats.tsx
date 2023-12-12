@@ -8,6 +8,7 @@ export const Stats = () => {
     alt,
     width,
     height,
+    number,
     description,
   }: {
     header: string;
@@ -15,11 +16,15 @@ export const Stats = () => {
     alt: string;
     width: number;
     height: number;
+    number: string;
     description: string;
   }) => (
     <div className="block">
       <p>{header}</p>
-      <Image src={img} alt={alt} width={width} height={height} />
+      <div className="box">
+        <span className="gradient">{number}</span>
+        <span className="outline">{number}</span>
+      </div>
       <p>{description}</p>
     </div>
   );
@@ -77,6 +82,7 @@ export const Stats = () => {
             alt: '20',
             width: 160,
             height: 90,
+            number: '20',
             description: 'Example* Esports team already using platform',
           })}
           {renderGameFi({
@@ -85,6 +91,7 @@ export const Stats = () => {
             alt: '400k',
             width: 220,
             height: 90,
+            number: '400K',
             description: 'Example* Credentials added to our website',
           })}
           {renderGameFi({
@@ -93,6 +100,7 @@ export const Stats = () => {
             alt: '1m',
             width: 160,
             height: 90,
+            number: '1M',
             description: 'Example* Users registered and using our website',
           })}
           {images.map((image, index) => (

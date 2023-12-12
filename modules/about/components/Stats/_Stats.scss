@@ -51,8 +51,56 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        gap: 32px;
+        padding-top: 32px;
         z-index: 2;
+
+        .box {
+          position: relative;
+          white-space: nowrap;
+
+          span {
+            color: #1d1d1d;
+            text-align: center;
+            font-family: $integralCF;
+            font-size: 120px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+          }
+
+          .gradient {
+            position: relative;
+            z-index: 3;
+            background: radial-gradient(
+              140.26% 135.18% at 108.36% -24%,
+              #303030 0%,
+              #141414 100%
+            );
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+
+          .outline {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background: linear-gradient(
+              10deg,
+              rgba(204, 204, 204, 0.3) 0%,
+              rgba(204, 204, 204, 0.3) 41%,
+              rgba(204, 204, 204, 0.8) 61%,
+              rgb(255, 255, 255) 100%
+            );
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-stroke: 2px transparent;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+          }
+        }
 
         p:first-child {
           text-align: center;
@@ -72,6 +120,7 @@
           font-weight: 300;
           line-height: 24px;
           color: $gray300;
+          margin-top: 32px;
         }
       }
 
