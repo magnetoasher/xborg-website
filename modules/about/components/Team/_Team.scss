@@ -121,4 +121,10 @@
       line-height: 48px;
     }
   }
+
+  @media screen and (max-width: 430px) {
+    .tabs-container {
+      flex-wrap: wrap;
+    }
+  }
 }
