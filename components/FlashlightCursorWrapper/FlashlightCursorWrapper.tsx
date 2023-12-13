@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { FlashlightCursor } from '@/components/FlashlightCursor';
+import { ObserverContainer } from '../ObserverContainer';
 
 interface IFlashlightCursorWrapper
   extends React.HTMLAttributes<HTMLDivElement> {
@@ -36,21 +37,23 @@ export const FlashlightCursorWrapper = ({
   };
 
   return (
-    <div
-      className={`flashlight-wrapper ${className}`}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onMouseMove={handleMouseMove}
-      {...restProps} // Spread additional props for the div element
-    >
-      <FlashlightCursor
-        isActive={isMouseOverCard}
-        position={{
-          top: cursorRelativePosition.y,
-          left: cursorRelativePosition.x,
-        }}
-      />
-      {children}
-    </div>
+    <ObserverContainer className="flashlight-container">
+      <div
+        className={`flashlight-wrapper ${className}`}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onMouseMove={handleMouseMove}
+        {...restProps} // Spread additional props for the div element
+      >
+        <FlashlightCursor
+          isActive={isMouseOverCard}
+          position={{
+            top: cursorRelativePosition.y,
+            left: cursorRelativePosition.x,
+          }}
+        />
+        {children}
+      </div>
+    </ObserverContainer>
   );
 };

@@ -9,7 +9,7 @@ interface IFlashlightCursor {
 export const FlashlightCursor = ({ isActive, position }: IFlashlightCursor) => {
   return (
     <div
-      className={`shadow ${isActive ? 'shadow-in' : 'shadow-out'}`}
+      className={`shadow ${isActive ? 'in' : 'out'}`}
       style={{
         top: `${position?.top}px`,
         left: `${position?.left}px`,

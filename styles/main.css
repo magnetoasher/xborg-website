@@ -1853,10 +1853,10 @@ footer.footer {
     border-radius: 50%;
     filter: blur(50px);
     transition: opacity 0.6s cubic-bezier(0.19, 1, 0.22, 1); }
-  .shadow-out {
-    opacity: 0; }
-  .shadow-in {
-    opacity: 1; } }
+    .shadow.out {
+      opacity: 0; }
+    .shadow.in {
+      opacity: 1; } }
 
 .flashlight-wrapper {
   position: relative; }
