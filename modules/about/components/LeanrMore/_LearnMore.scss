@@ -15,13 +15,17 @@
 
     .card {
       width: 100%;
-      //   height: 265px;
       max-width: 590px;
       border-radius: 16px;
       border: 1px solid #343434;
       background: rgba(9, 9, 9, 0.8);
       backdrop-filter: blur(10px);
       padding: 40px;
+      overflow: hidden;
+
+      &:hover {
+        border: 1px solid $red100;
+      }
 
       p {
         font-family: $lexend;
@@ -146,11 +150,6 @@
       justify-content: flex-start;
       align-items: flex-start;
       gap: 12px;
-      //   padding-right: 15%;
-
-      //   p {
-      //     max-width: 311px;
-      //   }
     }
 
     @media screen and (max-width: 530px) {

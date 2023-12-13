@@ -4922,7 +4922,10 @@ footer.footer {
       border: 1px solid #343434;
       background: rgba(9, 9, 9, 0.8);
       backdrop-filter: blur(10px);
-      padding: 40px; }
+      padding: 40px;
+      overflow: hidden; }
+      .learn-more .inner-container .card:hover {
+        border: 1px solid #eb3a4a; }
       .learn-more .inner-container .card p {
         font-family: Lexend, sans-serif;
         font-size: 16px;
