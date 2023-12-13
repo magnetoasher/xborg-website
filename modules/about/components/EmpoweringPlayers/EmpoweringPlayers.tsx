@@ -24,9 +24,7 @@ export const EmpoweringPlayers = () => {
               gaming, where players and fans experience ownership, and
               governance and are rewarded for their contributions.
             </p>
-            <div className="btn-container">
-              <BtnRed label="Join Discord" href="" />
-            </div>
+            <BtnRed label="Join Discord" href="" className="btn-discord" />
           </div>
         </div>
         <div className="right-content">

@@ -17,6 +17,7 @@
   padding: 10% 16px;
 
   h1 {
+    z-index: 2;
     text-align: center;
     font-family: $integralCF;
     font-size: 88px;
@@ -93,8 +94,24 @@
     margin: 0 auto;
 
     .grid-item {
+      position: relative;
+      width: 100px;
+      height: 100px;
       margin-bottom: 20px;
       cursor: pointer;
+
+      @media screen and (min-width: $container-max-width) {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    .overlay {
+      filter: grayscale(100%) brightness(150%);
+    }
+
+    .blur {
+      filter: grayscale(100%) blur(4px) opacity(80%);
     }
   }
 
