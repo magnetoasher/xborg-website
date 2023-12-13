@@ -4824,13 +4824,12 @@ footer.footer {
     gap: 24px; }
     .learn-more .inner-container .card {
       width: 100%;
-      height: 265px;
       max-width: 590px;
       border-radius: 16px;
       border: 1px solid #343434;
       background: rgba(9, 9, 9, 0.8);
       backdrop-filter: blur(10px);
-      padding: 40px 24px 42px 24px; }
+      padding: 40px; }
       .learn-more .inner-container .card p {
         font-family: Lexend, sans-serif;
         font-size: 16px;
@@ -4863,7 +4862,7 @@ footer.footer {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        gap: 16px; }
+        gap: 24px; }
         .learn-more .inner-container .card1 .card1-content p {
           color: #eb3a4a; }
         .learn-more .inner-container .card1 .card1-content h4 {
@@ -4879,8 +4878,7 @@ footer.footer {
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      padding-left: 46px;
-      gap: 40px; }
+      gap: 60px; }
       .learn-more .inner-container .card2 .card2-top {
         width: 100%;
         max-width: 229px;
@@ -4905,7 +4903,6 @@ footer.footer {
         width: 100%;
         max-width: 311px; }
         .learn-more .inner-container .card3 .card3-top p {
-          margin-top: 16px;
           margin-bottom: 24px; }
       .learn-more .inner-container .card3 .card3-bottom {
         display: flex;
@@ -4922,11 +4919,8 @@ footer.footer {
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      gap: 16px;
-      padding-right: 15%; }
-      .learn-more .inner-container .card4 p {
-        max-width: 311px; }
-    @media screen and (max-width: 425px) {
+      gap: 12px; }
+    @media screen and (max-width: 530px) {
       .learn-more .inner-container .card1 {
         background-size: 50%; }
         .learn-more .inner-container .card1 .card1-content {
