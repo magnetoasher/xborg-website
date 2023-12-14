@@ -67,8 +67,8 @@ export const Stats = () => {
   ];
 
   return (
-    <div className="stats-container">
-      <div className="inner-container">
+    <div className="stats">
+      <div className="container inner-container">
         <h1>The fastest growing GameFi ecosystem</h1>
         <p className="details">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis

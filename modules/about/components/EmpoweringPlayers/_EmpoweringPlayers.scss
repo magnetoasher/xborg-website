@@ -21,12 +21,28 @@
     justify-content: flex-start;
     align-items: flex-start;
 
+    .layout-image {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      min-height: 718px;
+      background-color: transparent;
+      background-image: url('/images/about/aboutImage1.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right 0 bottom 0;
+
+      @media screen and (max-width: $sm-max) {
+        background-size: 80%;
+      }
+    }
+
     .left-content {
       width: 50%;
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
-      padding-left: 5%;
       padding-right: 16px;
       padding-top: 200px;
       z-index: 2;
@@ -101,23 +117,6 @@
       text-align: right;
       background-color: transparent;
       z-index: 1;
-
-      .layout-image {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        min-height: 718px;
-        background-color: transparent;
-        background-image: url('/images/about/aboutImage1.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: right 0 bottom 0;
-
-        @media screen and (max-width: $sm-max) {
-          background-size: 80%;
-        }
-      }
 
       @media screen and (max-width: $sm-max) {
         min-height: 600px;

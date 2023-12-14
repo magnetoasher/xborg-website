@@ -5,7 +5,7 @@ import { Images } from '@/assets/imgs';
 export const BrandDetails = () => {
   return (
     <div className="brand-container">
-      <div className="inner-container">
+      <div className="container inner-container">
         <div className="title-container">
           <div className="title-wrapper1">
             <Image

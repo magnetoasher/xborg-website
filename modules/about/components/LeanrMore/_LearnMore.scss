@@ -8,6 +8,8 @@
 
   .inner-container {
     display: flex;
+    width: 100%;
+    max-width: 1210px;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -25,6 +27,7 @@
 
       &:hover {
         border: 1px solid $red100;
+        transition: 0.2s ease-in;
       }
 
       p {
@@ -54,6 +57,10 @@
         display: flex;
         flex-direction: column;
         gap: 8px;
+      }
+
+      @media screen and (max-width: $lg-max) {
+        max-width: 100%;
       }
     }
 
@@ -92,7 +99,6 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      //   padding-left: 46px;
       gap: 60px;
 
       .card2-top {
@@ -126,7 +132,6 @@
         max-width: 311px;
 
         p {
-          //   margin-top: 16px;
           margin-bottom: 24px;
         }
       }
@@ -152,7 +157,7 @@
       gap: 12px;
     }
 
-    @media screen and (max-width: 530px) {
+    @media screen and (max-width: 550px) {
       .card1 {
         background-size: 50%;
 
@@ -163,7 +168,8 @@
       }
 
       .card2 {
-        background-size: 50%;
+        background-size: 70%;
+        background-position: bottom -20px right -20px;
 
         .card2-bottom {
           flex-direction: column;

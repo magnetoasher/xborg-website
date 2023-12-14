@@ -173,67 +173,69 @@ export const Team = () => {
 
   return (
     <div className="team-container">
-      <h1>Our team</h1>
-      <div className="tabs-container">
-        {Tabs?.map((tab, index: number) => (
-          <div
-            key={index}
-            className={`tab ${activeTab === index ? 'active' : ''} `}
-            onClick={() => setActiveTab(index)}
-          >
-            {tab}
-          </div>
-        ))}
-      </div>
-      <div className="grid-container">{renderGridItems()}</div>
-      {(isMobileView || isTabletView) && TeamData.length > 6 && (
-        <BtnDark href="" onClick={() => setShowMore(!showMore)}>
-          {showMore ? 'View All' : 'View less'}
-        </BtnDark>
-      )}
+      <div className="container flex column">
+        <h1>Our team</h1>
+        <div className="tabs-container">
+          {Tabs?.map((tab, index: number) => (
+            <div
+              key={index}
+              className={`tab ${activeTab === index ? 'active' : ''} `}
+              onClick={() => setActiveTab(index)}
+            >
+              {tab}
+            </div>
+          ))}
+        </div>
+        <div className="grid-container">{renderGridItems()}</div>
+        {(isMobileView || isTabletView) && TeamData.length > 6 && (
+          <BtnDark href="" onClick={() => setShowMore(!showMore)}>
+            {showMore ? 'View All' : 'View less'}
+          </BtnDark>
+        )}
 
-      {selectedMember && (
-        <MemberModal member={selectedMember} onClose={closePopup} />
-      )}
-      <div className="layout-object1">
-        <Image
-          src={Images.about.spheres}
-          width={40}
-          height={50}
-          alt="layout-object1"
-        />
-      </div>
-      <div className="layout-object2">
-        <Image
-          src={Images.about.spheres3}
-          width={100}
-          height={100}
-          alt="layout-object2"
-        />
-      </div>
-      <div className="layout-object3">
-        <Image
-          src={Images.about.spheres4}
-          width={62}
-          height={62}
-          alt="layout-object3"
-        />
-      </div>
-      <div className="layout-object4">
-        <Image
-          src={Images.about.spheres4}
-          width={40}
-          height={40}
-          alt="layout-object4"
-        />
-      </div>
-      <div className="layout-object5">
-        <Image
-          src={Images.about.spheres5}
-          width={84}
-          height={84}
-          alt="layout-object5"
-        />
+        {selectedMember && (
+          <MemberModal member={selectedMember} onClose={closePopup} />
+        )}
+        <div className="layout-object1">
+          <Image
+            src={Images.about.spheres}
+            width={40}
+            height={50}
+            alt="layout-object1"
+          />
+        </div>
+        <div className="layout-object2">
+          <Image
+            src={Images.about.spheres3}
+            width={100}
+            height={100}
+            alt="layout-object2"
+          />
+        </div>
+        <div className="layout-object3">
+          <Image
+            src={Images.about.spheres4}
+            width={62}
+            height={62}
+            alt="layout-object3"
+          />
+        </div>
+        <div className="layout-object4">
+          <Image
+            src={Images.about.spheres4}
+            width={40}
+            height={40}
+            alt="layout-object4"
+          />
+        </div>
+        <div className="layout-object5">
+          <Image
+            src={Images.about.spheres5}
+            width={84}
+            height={84}
+            alt="layout-object5"
+          />
+        </div>
       </div>
     </div>
   );

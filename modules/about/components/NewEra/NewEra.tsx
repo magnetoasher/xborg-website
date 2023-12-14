@@ -6,7 +6,7 @@ export const NewEra = () => {
   return (
     <div className="new-era-container">
       <h1>Unlocking a new era of play</h1>
-      <div className="card-container">
+      <div className="container card-container">
         <div className="card-column">
           <FlashlightCursorWrapper className="card">
             <h3>Community first</h3>

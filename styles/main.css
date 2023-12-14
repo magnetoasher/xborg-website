@@ -4263,12 +4263,25 @@ footer.footer {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start; }
+    .empowering-container .content-wrapper .layout-image {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      min-height: 718px;
+      background-color: transparent;
+      background-image: url("/images/about/aboutImage1.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right 0 bottom 0; }
+      @media screen and (max-width: 768px) {
+        .empowering-container .content-wrapper .layout-image {
+          background-size: 80%; } }
     .empowering-container .content-wrapper .left-content {
       width: 50%;
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
-      padding-left: 5%;
       padding-right: 16px;
       padding-top: 200px;
       z-index: 2; }
@@ -4327,20 +4340,6 @@ footer.footer {
       text-align: right;
       background-color: transparent;
       z-index: 1; }
-      .empowering-container .content-wrapper .right-content .layout-image {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        min-height: 718px;
-        background-color: transparent;
-        background-image: url("/images/about/aboutImage1.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: right 0 bottom 0; }
-        @media screen and (max-width: 768px) {
-          .empowering-container .content-wrapper .right-content .layout-image {
-            background-size: 80%; } }
       @media screen and (max-width: 768px) {
         .empowering-container .content-wrapper .right-content {
           min-height: 600px;
@@ -4365,9 +4364,7 @@ footer.footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
-    padding-left: 5%;
-    padding-right: 5%; }
+    align-items: flex-start; }
     .about-container .content h1 {
       font-family: Integral CF;
       font-size: 64px;
@@ -4385,6 +4382,7 @@ footer.footer {
       .about-container .content .cards-container .card {
         width: 100%;
         min-width: 150px;
+        max-width: 285px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -4563,7 +4561,7 @@ footer.footer {
     .new-era-container {
       background-size: 100%; } }
 
-.stats-container {
+.stats {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -4573,12 +4571,12 @@ footer.footer {
   padding-left: 5%;
   padding-right: 5%;
   background-color: #101010; }
-  .stats-container .inner-container {
+  .stats .inner-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start; }
-    .stats-container .inner-container h1 {
+    .stats .inner-container h1 {
       width: 100%;
       max-width: 638px;
       font-family: Integral CF;
@@ -4587,7 +4585,7 @@ footer.footer {
       font-weight: 400;
       line-height: 48px;
       color: #f0f0f0; }
-    .stats-container .inner-container .details {
+    .stats .inner-container .details {
       width: 100%;
       max-width: 489px;
       font-family: Lexend, sans-serif;
@@ -4598,14 +4596,14 @@ footer.footer {
       color: #e4e4e6;
       margin-top: 24px;
       margin-bottom: 56px; }
-    .stats-container .inner-container .block-wrapper {
+    .stats .inner-container .block-wrapper {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: flex-start;
       flex-wrap: wrap;
       gap: 60px; }
-      .stats-container .inner-container .block-wrapper .block {
+      .stats .inner-container .block-wrapper .block {
         width: auto;
         max-width: 373px;
         display: flex;
@@ -4614,10 +4612,10 @@ footer.footer {
         align-items: center;
         padding-top: 32px;
         z-index: 2; }
-        .stats-container .inner-container .block-wrapper .block .box {
+        .stats .inner-container .block-wrapper .block .box {
           position: relative;
           white-space: nowrap; }
-          .stats-container .inner-container .block-wrapper .block .box span {
+          .stats .inner-container .block-wrapper .block .box span {
             color: #1d1d1d;
             text-align: center;
             font-family: Integral CF;
@@ -4625,14 +4623,14 @@ footer.footer {
             font-style: normal;
             font-weight: 600;
             line-height: normal; }
-          .stats-container .inner-container .block-wrapper .block .box .gradient {
+          .stats .inner-container .block-wrapper .block .box .gradient {
             position: relative;
             z-index: 3;
             background: radial-gradient(140.26% 135.18% at 108.36% -24%, #303030 0%, #141414 100%);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent; }
-          .stats-container .inner-container .block-wrapper .block .box .outline {
+          .stats .inner-container .block-wrapper .block .box .outline {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -4644,7 +4642,7 @@ footer.footer {
             z-index: -1;
             transform: translate(-50%, -50%);
             white-space: nowrap; }
-        .stats-container .inner-container .block-wrapper .block p:first-child {
+        .stats .inner-container .block-wrapper .block p:first-child {
           text-align: center;
           font-family: Lexend, sans-serif;
           font-size: 20px;
@@ -4652,7 +4650,7 @@ footer.footer {
           font-weight: 300;
           line-height: 30.426px;
           color: #cacace; }
-        .stats-container .inner-container .block-wrapper .block p:last-child {
+        .stats .inner-container .block-wrapper .block p:last-child {
           text-align: center;
           font-family: Lexend, sans-serif;
           font-size: 16px;
@@ -4661,32 +4659,32 @@ footer.footer {
           line-height: 24px;
           color: #cacace;
           margin-top: 32px; }
-      .stats-container .inner-container .block-wrapper .layout-object1 {
+      .stats .inner-container .block-wrapper .layout-object1 {
         position: absolute;
         left: 0;
         top: 0; }
-      .stats-container .inner-container .block-wrapper .layout-object2 {
+      .stats .inner-container .block-wrapper .layout-object2 {
         position: absolute;
         bottom: -40px;
         left: 20%; }
-      .stats-container .inner-container .block-wrapper .layout-object3 {
+      .stats .inner-container .block-wrapper .layout-object3 {
         position: absolute;
         top: 15%;
         left: 35%; }
-      .stats-container .inner-container .block-wrapper .layout-object4 {
+      .stats .inner-container .block-wrapper .layout-object4 {
         position: absolute;
         top: 5%;
         right: 30%; }
-      .stats-container .inner-container .block-wrapper .layout-object5 {
+      .stats .inner-container .block-wrapper .layout-object5 {
         position: absolute;
         top: 50%;
         right: 0; }
       @media screen and (max-width: 424px) {
-        .stats-container .inner-container .block-wrapper .layout-object1,
-        .stats-container .inner-container .block-wrapper .layout-object2,
-        .stats-container .inner-container .block-wrapper .layout-object3,
-        .stats-container .inner-container .block-wrapper .layout-object4,
-        .stats-container .inner-container .block-wrapper .layout-object5 {
+        .stats .inner-container .block-wrapper .layout-object1,
+        .stats .inner-container .block-wrapper .layout-object2,
+        .stats .inner-container .block-wrapper .layout-object3,
+        .stats .inner-container .block-wrapper .layout-object4,
+        .stats .inner-container .block-wrapper .layout-object5 {
           display: none; } }
 
 .popup-container {
@@ -4740,7 +4738,6 @@ footer.footer {
 
 .team-container {
   position: relative;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -4806,10 +4803,10 @@ footer.footer {
     width: 100%;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
     margin: 0 auto; }
     .team-container .grid-container .grid-item {
       position: relative;
@@ -4817,10 +4814,10 @@ footer.footer {
       height: 100px;
       margin-bottom: 20px;
       cursor: pointer; }
-      @media screen and (min-width: 1440px) {
+      @media screen and (min-width: 1265px) {
         .team-container .grid-container .grid-item {
-          width: 200px;
-          height: 200px; } }
+          width: 160px;
+          height: 160px; } }
     .team-container .grid-container .overlay {
       filter: grayscale(100%) brightness(150%); }
     .team-container .grid-container .blur {
@@ -4836,6 +4833,7 @@ footer.footer {
 .brand-container {
   position: relative;
   width: 100%;
+  min-height: 431px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4916,6 +4914,8 @@ footer.footer {
   background-color: #000000; }
   .learn-more .inner-container {
     display: flex;
+    width: 100%;
+    max-width: 1210px;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -4930,7 +4930,8 @@ footer.footer {
       padding: 40px;
       overflow: hidden; }
       .learn-more .inner-container .card:hover {
-        border: 1px solid #eb3a4a; }
+        border: 1px solid #eb3a4a;
+        transition: 0.2s ease-in; }
       .learn-more .inner-container .card p {
         font-family: Lexend, sans-serif;
         font-size: 16px;
@@ -4952,6 +4953,9 @@ footer.footer {
         display: flex;
         flex-direction: column;
         gap: 8px; }
+      @media screen and (max-width: 1200px) {
+        .learn-more .inner-container .card {
+          max-width: 100%; } }
     .learn-more .inner-container .card1 {
       background-image: url("/images/about/x3dIcon.png");
       background-repeat: no-repeat;
@@ -5021,14 +5025,15 @@ footer.footer {
       justify-content: flex-start;
       align-items: flex-start;
       gap: 12px; }
-    @media screen and (max-width: 530px) {
+    @media screen and (max-width: 550px) {
       .learn-more .inner-container .card1 {
         background-size: 50%; }
         .learn-more .inner-container .card1 .card1-content {
           margin-left: 0;
           margin-top: 30%; }
       .learn-more .inner-container .card2 {
-        background-size: 50%; }
+        background-size: 70%;
+        background-position: bottom -20px right -20px; }
         .learn-more .inner-container .card2 .card2-bottom {
           flex-direction: column; } }
 

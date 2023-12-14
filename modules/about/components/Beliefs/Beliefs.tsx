@@ -15,7 +15,7 @@ export const Beliefs = () => {
         />
       </div>
 
-      <div className="content">
+      <div className="container content">
         <h1>Our beliefs</h1>
         <div className="cards-container">
           {CardData?.map((cardData, index: number) => (
