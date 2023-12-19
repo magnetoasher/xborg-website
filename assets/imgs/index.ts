@@ -78,4 +78,22 @@ export const Images = {
     games: '/images/friends/games.svg',
     communitygaming: '/images/friends/communitygaming.svg',
   },
+
+  xbg: {
+    animatedLine: '/images/xbg/animated-line.png',
+    heroData: '/images/xbg/hero-data.png',
+    heroBubbles: '/images/xbg/hero-bubbles.png',
+    backgroundBubbles: '/images/xbg/background-bubbles.png',
+    bubbles_bot_left: '/images/xbg/bubbles_bot_left.png',
+    empoweringPlayersBg: '/images/xbg/empowering-players-bg.png',
+    discovery5: '/images/xbg/discovery5.png',
+    discovery6: '/images/xbg/discovery6.png',
+    discovery7: '/images/xbg/discovery7.png',
+    discovery8: '/images/xbg/discovery8.png',
+    discovery9: '/images/xbg/discovery9.png',
+    sphere11: '/images/xbg/sphere11.png',
+    roadmapVertical: '/images/xbg/roadmap-vertical.png',
+    plus: '/images/xbg/plus.svg',
+    smoke: '/images/xbg/smoke.png',
+  },
 };
