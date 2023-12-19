@@ -1,25 +1,15 @@
 import Link from 'next/link';
-
-import { Brand } from '@/components/Brand';
-import { useEffect, useState } from 'react';
-import { BtnDark } from '@/components/Buttons';
 import { ObserverContainer } from '../ObserverContainer';
-import { SocialIcons } from '@/modules/landing';
+import { SocialIcons } from '@/components/SocialIcons';
 import { Scene } from 'react-scrollmagic';
 import { Tween } from 'react-gsap';
 import Image from 'next/image';
 import { Images } from '@/assets/imgs';
-import { scrollTo } from '@/modules/utils';
+import { FooterLinksData } from '@/constants';
 
 export const Footer = () => {
-  const [loading, setLoading] = useState<boolean>(true);
-
-  useEffect(() => {
-    setLoading(false);
-  }, []);
-
   return (
-    <footer className="footer flex">
+    <footer className="footer">
       <Scene duration="200%" triggerHook="onEnter">
         <Tween
           position="0"
@@ -35,67 +25,55 @@ export const Footer = () => {
           </div>
         </Tween>
       </Scene>
-
-      <div className="container flex">
-        <div className="footer-about flex column between">
+      <div className="inner-container">
+        <div className="footer-about">
           <ObserverContainer className="flex column top" rootMargin="0%">
-            <Brand />
-
-            <p className="lexend-body-sm">
-              The Gaming social layer, onboarding millions of players with a
-              gaming identity and application ecosystem
-            </p>
+            <div className="top-box">
+              <Link href="/">
+                <Image src="/images/logo.svg" alt="" width={35} height={35} />
+              </Link>
+              <p>
+                A collaborative credential infrastructure powering the next
+                generation of gaming with the world&apos;s leading esports
+                teams.
+              </p>
+            </div>
           </ObserverContainer>
-
-          <SocialIcons />
-        </div>
-
-        <div className="footer-actions flex column">
-          <div className="flex cols end">
-            <div className="col flex column top">
-              <div className="category lexend-body-s">ECOSYSTEM</div>
-              <Link
-                href=""
-                onClick={(e: any) => {
-                  e.preventDefault();
-                  const hero =
-                    document.getElementsByClassName('landing-roadmap')[0];
-
-                  const rect = hero.getBoundingClientRect();
-                  scrollTo(window.scrollY, window.scrollY + rect.y, 0);
-                }}
-              >
-                <span>Roadmap</span>
-              </Link>
-              <Link
-                href="https://jobs.lever.co/swissborg?department=XBorg"
-                target="_blank"
-              >
-                <span>We are hiring!</span>
-              </Link>
+          <div className="bottom-box">
+            <div className="icons-box">
+              <SocialIcons />
             </div>
-            <div className="col flex column top">
-              <div className="category lexend-body-s">PRODUCTS</div>
-              <Link href="https://gamerbase.gg">
-                <span>GamerBase</span>
-              </Link>
-              <Link href="https://launchpad.xborg.com/">
-                <span>Launchpad</span>
-              </Link>
-            </div>
-            {/* <div className="col flex column top">
-              <div className="category lexend-body-s">LEGAL</div>
-              <Link href="">
-                <span>Privacy Policy</span>
-              </Link>
-              <Link href="">
-                <span>Terms and conditions</span>
-              </Link>
-            </div> */}
+            <div className="line" />
           </div>
-          <div className="spacer" />
-          <div className="copyright lexend-body-sm l">
-            © XBorg. 2023 — All rights reserved.
+        </div>
+        <div className="footer-actions">
+          <div className="footer-links">
+            {FooterLinksData?.map((linkData, index: number) => (
+              <div key={index} className="link-list">
+                <p>{linkData?.type}</p>
+                {linkData.links.map((link, i: number) => (
+                  <Link key={i} href={link.to} className="link">
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            ))}
+          </div>
+          <div className="bottom-box">
+            <div className="line" />
+            <div className="inner-box">
+              <span>
+                &copy; XBorg. 2023 &mdash; All rights reserved.&rsquo;
+              </span>
+              <div className="link-box">
+                <Link href="" className="link">
+                  Privacy Policy
+                </Link>
+                <Link href="" className="link">
+                  Terms & Conditions
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
