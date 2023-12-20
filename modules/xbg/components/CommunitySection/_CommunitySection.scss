@@ -3,6 +3,10 @@
   gap: 56px;
   padding: 120px 16px;
 
+  .btn {
+    height: 56px;
+  }
+
   h2 {
     max-width: 489px;
     text-align: center;
@@ -61,7 +65,6 @@
 
       p {
         max-width: 220px;
-
         &:first-child {
           color: $red100;
           text-transform: uppercase;
@@ -88,12 +91,10 @@
       p {
         max-width: 230px;
         text-align: left;
-
         &:first-child {
           color: $red100;
           text-transform: uppercase;
         }
-
         span {
           color: $red100;
         }
@@ -125,7 +126,7 @@
         background-repeat: no-repeat;
         background-size: contain;
         opacity: 0;
-        transition: opacity 0.3s ease-in-out; /* Adjust the transition speed as needed */
+        transition: opacity 0.3s ease-in-out;
         z-index: -1;
       }
 
@@ -136,16 +137,19 @@
 
     @media (max-width: $sm-max) {
       flex-direction: column;
+
       .card-1,
       .card-2 {
         max-width: 100%;
       }
+
       .card-2 {
         justify-content: flex-start;
         padding-top: 57px;
         padding-left: 24px;
       }
     }
+
     @media (max-width: $xs-max) {
       .card-2 {
         height: 400px;

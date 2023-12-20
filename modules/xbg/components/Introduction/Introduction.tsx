@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useRef, useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { SiteActions } from '@/redux/site/actions';
 import { AppDispatch } from '@/store';
@@ -39,6 +39,68 @@ export const Introduction = () => {
             </p>
           </div>
         </ObserverContainer>
+        <div className="flex column  start vertical-line">
+          <Image
+            src={Images.xbg.roadmapVertical}
+            alt=""
+            height={100}
+            width={7}
+          />
+          <Image
+            src={Images.xbg.roadmapVertical}
+            alt=""
+            height={100}
+            width={7}
+          />
+          <Image
+            src={Images.xbg.roadmapVertical}
+            alt=""
+            height={100}
+            width={7}
+          />
+          <Image
+            src={Images.xbg.roadmapVertical}
+            alt=""
+            height={100}
+            width={7}
+          />
+          <Image
+            src={Images.xbg.roadmapVertical}
+            alt=""
+            height={100}
+            width={7}
+          />
+          <Image
+            src={Images.xbg.roadmapVertical}
+            alt=""
+            height={100}
+            width={7}
+          />
+        </div>
+        <Image
+          src={Images.xbg.plus}
+          alt=""
+          height={15}
+          width={15}
+          className="plus"
+        />
+        <div className="flex start middle horizontal-line">
+          <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
+          <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
+          <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
+          <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
+          <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
+          <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
+          <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
+          <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
+          <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
+          <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
+          <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
+          <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
+          <div className="last-image">
+            <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
+          </div>
+        </div>
       </div>
 
       <div className="introduction-bg">
@@ -63,43 +125,6 @@ export const Introduction = () => {
           height={714}
           className="bg"
         />
-      </div>
-
-      <div className="flex column  start vertical-line">
-        <Image src={Images.xbg.roadmapVertical} alt="" height={100} width={7} />
-        <Image src={Images.xbg.roadmapVertical} alt="" height={100} width={7} />
-        <Image src={Images.xbg.roadmapVertical} alt="" height={100} width={7} />
-        <Image src={Images.xbg.roadmapVertical} alt="" height={100} width={7} />
-        <Image src={Images.xbg.roadmapVertical} alt="" height={100} width={7} />
-        <Image src={Images.xbg.roadmapVertical} alt="" height={100} width={7} />
-      </div>
-      <Image
-        src={Images.xbg.plus}
-        alt=""
-        height={15}
-        width={15}
-        className="plus"
-      />
-      <div className="flex start middle horizontal-line">
-        <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
-        <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
-        <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
-        <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
-        <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
-        <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
-        <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
-        <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
-        <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
-        <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
-        <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
-        <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
-        <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
-        <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
-        <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
-        <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
-        <div className="last-image">
-          <Image src={Images.landing.roadmap} alt="" height={7} width={100} />
-        </div>
       </div>
     </div>
   );

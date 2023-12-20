@@ -59,9 +59,11 @@
   }
 
   .video-container.in {
+    width: 100px;
+
     .token-video {
       opacity: 1;
-      transform: translateX(5%) translateY(0);
+      transform: translateX(-55%) translateY(0%);
     }
   }
 
@@ -141,10 +143,8 @@
   }
 
   @media (max-width: $sm-max) {
-    .video-container {
-      position: absolute;
-      left: 40px;
-      top: 170px;
+    .token-video {
+      transform: translateX(5%) translateY(30%) !important;
     }
   }
 
@@ -152,29 +152,17 @@
     .lexend-body-s {
       transform: translateX(0px) !important;
     }
-
     .title-container {
       transform: translateX(0px) !important;
       width: 400px;
     }
-
     h2 {
       font-size: 40px !important;
     }
-
     .token-video {
       width: 120px;
       height: 100px;
-    }
-
-    .video-container {
-      position: absolute;
-      left: -15px;
-      top: 150px;
-    }
-
-    .subscribe {
-      width: 100% !important;
+      transform: translateX(95%) translateY(50%) !important;
     }
   }
 }

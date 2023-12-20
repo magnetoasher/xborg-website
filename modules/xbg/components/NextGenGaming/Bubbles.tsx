@@ -1,11 +1,11 @@
+import { Images } from '@/assets/imgs';
 import Image from 'next/image';
 import { Tween } from 'react-gsap';
 import { Scene } from 'react-scrollmagic';
-import { Images } from '@/assets/imgs';
 
 export const NextGenGamingBubbles = () => {
   return (
-    <>
+    <div className="bubbles-container">
       <Scene duration="200%" triggerHook="onEnter">
         <Tween
           position="0"
@@ -158,6 +158,6 @@ export const NextGenGamingBubbles = () => {
           </div>
         </Tween>
       </Scene>
-    </>
+    </div>
   );
 };

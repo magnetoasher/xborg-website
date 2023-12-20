@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
+import { Tween } from 'react-gsap';
+import { Scene } from 'react-scrollmagic';
 import { Images } from '@/assets/imgs';
 import { BtnRed } from '@/components/Buttons';
 import { ObserverContainer } from '@/components/ObserverContainer';
 import { splitLines } from '@/modules/utils/utils';
-import Image from 'next/image';
-import { Tween } from 'react-gsap';
-import { Scene } from 'react-scrollmagic';
 
 export const CommunitySection = () => {
   const ref = useRef<HTMLHeadingElement>(null);

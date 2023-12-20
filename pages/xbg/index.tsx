@@ -5,15 +5,15 @@ import {
   Introduction,
   Launching,
   NextGenGaming,
-  Posibilities,
+  Possibilities,
   Stats,
 } from '@/modules/xbg';
 
-export default function AboutUs() {
+export default function Xbg() {
   return (
     <div className="about-us">
       <Introduction />
-      <Posibilities />
+      <Possibilities />
       <Growing />
       <Stats />
       <CommunitySection />

@@ -8,10 +8,10 @@ import { useEffect, useRef, useState } from 'react';
 import { Timeline, Tween } from 'react-gsap';
 import { Scene } from 'react-scrollmagic';
 import VanillaTilt from 'vanilla-tilt';
-import { PosibilitiesData } from '@/constants';
+import { PossibilitiesData } from '@/constants';
 
 let timerId: any = null;
-export const Posibilities = () => {
+export const Possibilities = () => {
   const ref = useRef<HTMLHeadingElement>(null);
 
   const [active, setActive] = useState<number>(0);
@@ -24,7 +24,7 @@ export const Posibilities = () => {
 
   useEffect(() => {
     timerId = setInterval(() => {
-      if (active + 1 === PosibilitiesData.length) setActive(0);
+      if (active + 1 === PossibilitiesData.length) setActive(0);
       else setActive(active + 1);
     }, 8000);
 
@@ -32,17 +32,17 @@ export const Posibilities = () => {
   });
 
   return (
-    <div className="xbg-posibilities">
+    <div className="possibilities">
       <div className="container">
         <ObserverContainer className="flex column">
           <h2 className="integralfc-h2 reveal-from-bottom" ref={ref}>
-            One token, for millions of players
+            Unlocking a new world of possibilities
           </h2>
         </ObserverContainer>
 
         <div className="flex between">
           <ObserverContainer className="list flex column lexend-body-sl">
-            {PosibilitiesData.map((item, index) => (
+            {PossibilitiesData.map((item, index) => (
               <Link
                 href=""
                 className={`flex expand ${
@@ -55,7 +55,7 @@ export const Posibilities = () => {
                   setActive(index);
 
                   timerId = setInterval(() => {
-                    if (active + 1 === PosibilitiesData.length) setActive(0);
+                    if (active + 1 === PossibilitiesData.length) setActive(0);
                     else setActive(active + 1);
                   }, 8000);
                 }}
@@ -81,7 +81,7 @@ export const Posibilities = () => {
             <div className="flex middle list-index lexend-body-md">
               <span className="current">0{active + 1}</span>
               <div className="spacer" />
-              <span className="total">0{PosibilitiesData.length}</span>
+              <span className="total">0{PossibilitiesData.length}</span>
             </div>
           </ObserverContainer>
 
@@ -90,10 +90,12 @@ export const Posibilities = () => {
               active === 0 ? 'active' : 'inactive'
             }`}
           >
-            <ImageComponent img={PosibilitiesData[0].icon} />
-            <div className="lexend-heading-xl">{PosibilitiesData[0].title}</div>
+            <ImageComponent img={PossibilitiesData[0].icon} />
+            <div className="lexend-heading-xl">
+              {PossibilitiesData[0].title}
+            </div>
             <div className="lexend-body-md l">
-              {PosibilitiesData[0].description}
+              {PossibilitiesData[0].description}
             </div>
           </div>
           <div
@@ -101,10 +103,12 @@ export const Posibilities = () => {
               active === 1 ? 'active' : 'inactive'
             }`}
           >
-            <ImageComponent img={PosibilitiesData[1].icon} />
-            <div className="lexend-heading-xl">{PosibilitiesData[1].title}</div>
+            <ImageComponent img={PossibilitiesData[1].icon} />
+            <div className="lexend-heading-xl">
+              {PossibilitiesData[1].title}
+            </div>
             <div className="lexend-body-md l">
-              {PosibilitiesData[1].description}
+              {PossibilitiesData[1].description}
             </div>
           </div>
           <div
@@ -112,10 +116,12 @@ export const Posibilities = () => {
               active === 2 ? 'active' : 'inactive'
             }`}
           >
-            <ImageComponent img={PosibilitiesData[2].icon} />
-            <div className="lexend-heading-xl">{PosibilitiesData[2].title}</div>
+            <ImageComponent img={PossibilitiesData[2].icon} />
+            <div className="lexend-heading-xl">
+              {PossibilitiesData[2].title}
+            </div>
             <div className="lexend-body-md l">
-              {PosibilitiesData[2].description}
+              {PossibilitiesData[2].description}
             </div>
           </div>
           <div
@@ -123,10 +129,12 @@ export const Posibilities = () => {
               active === 3 ? 'active' : 'inactive'
             }`}
           >
-            <ImageComponent img={PosibilitiesData[3].icon} />
-            <div className="lexend-heading-xl">{PosibilitiesData[3].title}</div>
+            <ImageComponent img={PossibilitiesData[3].icon} />
+            <div className="lexend-heading-xl">
+              {PossibilitiesData[3].title}
+            </div>
             <div className="lexend-body-md l">
-              {PosibilitiesData[3].description}
+              {PossibilitiesData[3].description}
             </div>
           </div>
           <div
@@ -134,10 +142,12 @@ export const Posibilities = () => {
               active === 4 ? 'active' : 'inactive'
             }`}
           >
-            <ImageComponent img={PosibilitiesData[4].icon} />
-            <div className="lexend-heading-xl">{PosibilitiesData[4].title}</div>
+            <ImageComponent img={PossibilitiesData[4].icon} />
+            <div className="lexend-heading-xl">
+              {PossibilitiesData[4].title}
+            </div>
             <div className="lexend-body-md l">
-              {PosibilitiesData[4].description}
+              {PossibilitiesData[4].description}
             </div>
           </div>
         </div>

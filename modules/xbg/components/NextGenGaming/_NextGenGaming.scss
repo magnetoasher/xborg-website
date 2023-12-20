@@ -3,19 +3,22 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  padding-bottom: 0;
 
   .tokenomics-container {
     position: relative;
     z-index: 3;
     width: 100%;
+    max-width: 1440px;
     min-height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     gap: 53px;
-    padding-top: 56px;
+    padding-top: 80px;
 
+    margin: 0 auto;
     .header {
       display: flex;
       flex-direction: column;
@@ -23,7 +26,6 @@
       align-items: flex-start;
       gap: 24px;
       color: $gray100;
-
       .top-container {
         display: flex;
         justify-content: flex-start;
@@ -37,15 +39,12 @@
           align-items: flex-start;
         }
       }
-
       h1 {
         font-size: 88px;
       }
     }
-
     .spheres-container {
       width: 100%;
-
       .t-sphere {
         position: absolute;
         display: flex;
@@ -53,7 +52,6 @@
         justify-content: flex-start;
         align-items: center;
         gap: 15px;
-
         .text-box {
           display: flex;
           flex-direction: column;
@@ -67,7 +65,6 @@
             color: $gray300;
             line-height: 16px;
           }
-
           span:nth-child(2) {
             background: linear-gradient(
               335deg,
@@ -80,52 +77,41 @@
           }
         }
       }
-
       .t-sphere-1 {
         top: 220px;
         right: 25px;
       }
-
       .t-sphere-2 {
         top: 360px;
         right: 25%;
       }
-
       .t-sphere-3 {
         top: 330px;
         right: 45%;
       }
-
       .t-sphere-4 {
         top: 370px;
         left: 30%;
       }
-
       .t-sphere-5 {
         top: 300px;
         left: 20%;
       }
-
       .t-sphere-6 {
         top: 175px;
         left: 10%;
       }
-
       .t-sphere-7 {
         top: 0;
         left: 51px;
       }
     }
-
     @media (max-width: $sm-max) {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-
       .header {
-        align-items: center;
-
         h1 {
           font-size: 56px;
         }
@@ -140,7 +126,6 @@
         align-items: flex-start;
         gap: 48px;
         margin-bottom: 50px;
-
         .t-sphere {
           position: relative !important;
           flex-direction: row;
@@ -149,14 +134,12 @@
           right: 0;
           bottom: 0;
           gap: 45px;
-
           .image {
             width: 166px;
             display: flex;
             justify-content: center;
             align-items: center;
           }
-
           .text-box {
             align-items: flex-start;
             span:nth-child(1),
@@ -165,28 +148,24 @@
             }
           }
         }
-
         .t-sphere-1 {
           img {
             width: 166px;
             height: 166px;
           }
         }
-
         .t-sphere-2 {
           img {
             width: 136px;
             height: 136px;
           }
         }
-
         .t-sphere-3 {
           img {
             width: 100px;
             height: 100px;
           }
         }
-
         .t-sphere-4,
         .t-sphere-5,
         .t-sphere-6,
@@ -207,13 +186,15 @@
     position: relative;
     height: 1039px;
     z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
     h2 {
       max-width: 630px;
       margin: 0 auto;
       text-align: center;
-      font-size: 40px;
-      line-height: 42px;
 
       .word {
         transform: translateY(16px);
@@ -228,7 +209,6 @@
       max-width: 511px;
       opacity: 0;
       transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
-      color: $gray300;
     }
 
     .background-container {
@@ -380,12 +360,19 @@
       right: 89px;
       bottom: 188px;
     }
+    .bubbles-container {
+      bottom: 0;
+      position: relative;
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      flex: 1;
+    }
 
     .parallax-bubble {
       position: absolute;
       right: 122px;
       bottom: -32px;
-
       .title {
         width: max-content;
         position: absolute;
@@ -409,7 +396,6 @@
       position: absolute;
       left: 69px;
       bottom: 332px;
-
       .title {
         width: max-content;
         position: absolute;
@@ -426,7 +412,6 @@
       position: absolute;
       left: -32px;
       bottom: 64px;
-
       .title {
         width: max-content;
         position: absolute;
@@ -443,7 +428,6 @@
       position: absolute;
       left: 132px;
       bottom: -32px;
-
       .title {
         width: max-content;
         position: absolute;
@@ -466,7 +450,6 @@
       position: absolute;
       right: -24px;
       bottom: 122px;
-
       .title {
         width: max-content;
         position: absolute;
@@ -510,7 +493,7 @@
     .xborgid-sphere {
       position: absolute;
       transform: translateX(-50%);
-      width: 17.688311688311687%;
+      width: 11.688311688311687%;
       z-index: 3;
       transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 
@@ -518,7 +501,6 @@
         opacity: 0;
         transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
       }
-
       .sphere-title {
         background: linear-gradient(90deg, #ababab 0%, #2d2d2d 102.73%);
         background-clip: text;
@@ -664,12 +646,10 @@
 
     @media (max-width: $md-max) {
       height: 700px;
-
       .container {
         position: relative;
         z-index: 3;
       }
-
       .background-container {
         width: 1476px;
         height: 904px;
@@ -694,7 +674,6 @@
       .parallax-bubble3 {
         bottom: 113px;
       }
-
       .parallax-bubble2 {
         display: none;
       }
@@ -728,13 +707,13 @@
           }
 
           .launchpad-sphere {
-            left: 90%;
-            bottom: -59%;
+            left: 88%;
+            bottom: -50%;
           }
 
           .xborgid-sphere {
-            bottom: -90%;
-            left: 100%;
+            bottom: -70%;
+            left: 95%;
           }
 
           .sphere-title {
@@ -750,43 +729,30 @@
         }
       }
     }
-
     @media (max-width: $xs-max) {
       .blur-spheres {
         display: none;
       }
-
       margin-bottom: 100px;
       .parallax-bubble {
         right: 100px;
         bottom: -100px;
       }
-
       .parallax-bubble7 {
         bottom: 15px;
       }
-
       .parallax-bubble5 {
         left: 50%;
         bottom: 180px;
       }
-
       .parallax-bubble4 {
         left: 25%;
         bottom: 90px;
       }
-
       .parallax-bubble3 {
         left: -50px;
         bottom: 120px;
       }
-    }
-  }
-
-  @media screen and (max-width: $sm-max) {
-    .next-gen-gaming {
-      padding-top: 0;
-      margin-top: 25px;
     }
   }
 }

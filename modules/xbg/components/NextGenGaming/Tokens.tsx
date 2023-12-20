@@ -1,7 +1,7 @@
+import { Images } from '@/assets/imgs';
 import Image from 'next/image';
 import { Tween } from 'react-gsap';
 import { Scene } from 'react-scrollmagic';
-import { Images } from '@/assets/imgs';
 
 export const NextGenGamingTokens = () => {
   return (

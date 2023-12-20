@@ -1420,10 +1420,12 @@ nav.navigation {
     transition-delay: 0.54s; }
   nav.navigation .left li:nth-child(2) {
     transition-delay: 0.5s; }
-  nav.navigation .right li:nth-child(1) {
-    transition-delay: 0.6s; }
-  nav.navigation .right li:nth-child(2) {
-    transition-delay: 0.7s; }
+  nav.navigation .right {
+    transform: translateX(-24px); }
+    nav.navigation .right li:nth-child(1) {
+      transition-delay: 0.6s; }
+    nav.navigation .right li:nth-child(2) {
+      transition-delay: 0.7s; }
   nav.navigation .explore-apps {
     position: absolute;
     right: 40px;
@@ -4169,30 +4171,34 @@ footer.footer {
 .xbg-introduction {
   position: relative;
   width: 100vw;
-  min-height: 714px; }
+  min-height: 714px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
   .xbg-introduction .introduction-bg {
     position: absolute;
-    top: 0;
+    bottom: 0;
     right: 0;
     width: 100%;
     height: 714px;
     z-index: -1; }
     .xbg-introduction .introduction-bg .bg {
       position: absolute;
-      top: 0;
+      bottom: 0;
       right: 0; }
   .xbg-introduction .parallax-bubble {
     position: absolute;
     bottom: -111px;
     left: -20px; }
   .xbg-introduction .introduction-content {
-    position: absolute;
-    top: 16vh;
-    left: 50%;
-    transform: translate(-50%, -16%);
+    width: max-content !important;
+    position: relative;
     z-index: 2;
     width: 100%;
-    min-height: 100%; }
+    min-height: 100%;
+    padding: 120px 0;
+    flex: 1; }
     .xbg-introduction .introduction-content .lexend-text-sm {
       color: #eb3a4a;
       text-transform: uppercase;
@@ -4220,6 +4226,26 @@ footer.footer {
       .xbg-introduction .introduction-content .actions .btn {
         color: #fff;
         height: 56px; }
+    .xbg-introduction .introduction-content .vertical-line {
+      position: absolute;
+      left: -75px;
+      bottom: 75px;
+      width: 7px; }
+    .xbg-introduction .introduction-content .plus {
+      position: absolute;
+      left: -80px;
+      bottom: 38px; }
+    .xbg-introduction .introduction-content .horizontal-line {
+      position: absolute;
+      left: -40px;
+      bottom: 41px;
+      height: 7px; }
+      .xbg-introduction .introduction-content .horizontal-line .last-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 7px;
+        border-right: 1px solid #fff; }
   .xbg-introduction .in .lexend-text-sm {
     opacity: 1;
     transition-delay: 0.4s; }
@@ -4249,50 +4275,38 @@ footer.footer {
       transition-delay: 0.415s; }
     .xbg-introduction .in h1 .word:nth-child(10) {
       transition-delay: 0.45s; }
-  .xbg-introduction .vertical-line {
-    position: absolute;
-    left: 34px;
-    bottom: 70px;
-    width: 7px; }
-  .xbg-introduction .plus {
-    position: absolute;
-    left: 31px;
-    bottom: 36px; }
-  .xbg-introduction .horizontal-line {
-    position: absolute;
-    left: 69px;
-    bottom: 41px;
-    height: 7px; }
-    .xbg-introduction .horizontal-line .last-image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 7px;
-      border-right: 1px solid #fff; }
+  @media (max-width: 576px) {
+    .xbg-introduction .introduction-bg {
+      top: 40%;
+      right: -13% !important; } }
   @media (max-width: 768px) {
     .xbg-introduction {
-      min-height: 1200px; }
+      min-height: 1200px;
+      justify-content: flex-start;
+      align-items: flex-start; }
+      .xbg-introduction .introduction-content {
+        flex: 1; }
+        .xbg-introduction .introduction-content .horizontal-line {
+          bottom: 40px;
+          left: 0; }
+        .xbg-introduction .introduction-content .vertical-line,
+        .xbg-introduction .introduction-content .plus {
+          display: none; }
       .xbg-introduction .introduction-bg {
         top: 40%;
         right: -5%; } }
   @media (max-width: 1400px) {
-    .xbg-introduction .vertical-line,
-    .xbg-introduction .plus {
-      display: none; }
-    .xbg-introduction .horizontal-line {
-      left: 0; } }
+    .xbg-introduction {
+      align-items: flex-start !important; } }
   @media (max-width: 992px) {
     .xbg-introduction .introduction-content {
-      top: 120px;
-      left: 0;
-      transform: translate(0, 0);
-      align-items: flex-start;
+      align-items: flex-start !important;
       justify-content: flex-start; }
       .xbg-introduction .introduction-content h1,
       .xbg-introduction .introduction-content p {
         max-width: 396px; } }
 
-.xbg-posibilities {
+.possibilities {
   position: relative;
   z-index: 3;
   padding-top: 120px;
@@ -4300,32 +4314,31 @@ footer.footer {
   background-repeat: no-repeat;
   background-position: bottom right;
   background-color: #101010; }
-  .xbg-posibilities h2 {
-    max-width: 570px;
-    font-size: 40px; }
-    .xbg-posibilities h2 .word {
+  .possibilities h2 {
+    max-width: 570px; }
+    .possibilities h2 .word {
       transform: translateY(16px);
       opacity: 0;
       transition: 3s cubic-bezier(0.19, 1, 0.22, 1); }
-  .xbg-posibilities .parallax-bubble {
+  .possibilities .parallax-bubble {
     position: absolute;
     left: 192px;
     bottom: 19px; }
-  .xbg-posibilities .list {
+  .possibilities .list {
     margin-top: 40px;
     min-width: 417px; }
-    .xbg-posibilities .list a {
+    .possibilities .list a {
       padding: 16px 0;
       color: #95959d;
       transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
       position: relative; }
-      .xbg-posibilities .list a .link-inner {
+      .possibilities .list a .link-inner {
         transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
         transform: translateX(-16px);
         opacity: 0; }
-      .xbg-posibilities .list a span {
+      .possibilities .list a span {
         transition: 1s cubic-bezier(0.19, 1, 0.22, 1); }
-      .xbg-posibilities .list a:before {
+      .possibilities .list a:before {
         content: '';
         position: absolute;
         bottom: 0;
@@ -4334,7 +4347,7 @@ footer.footer {
         background-color: #242424;
         height: 1px;
         transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1); }
-      .xbg-posibilities .list a:after {
+      .possibilities .list a:after {
         content: '';
         position: absolute;
         bottom: 0;
@@ -4343,167 +4356,169 @@ footer.footer {
         background-color: #eb3a4a;
         height: 1px;
         transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1); }
-      .xbg-posibilities .list a:hover span {
+      .possibilities .list a:hover span {
         color: #fff; }
-    .xbg-posibilities .list svg {
+    .possibilities .list svg {
       transform: translateX(-15px);
       opacity: 0;
       transition: 1s cubic-bezier(0.19, 1, 0.22, 1); }
-    .xbg-posibilities .list.in a.active span {
+    .possibilities .list.in a.active span {
       color: #e4e4e6; }
-    .xbg-posibilities .list.in a.active:after {
+    .possibilities .list.in a.active:after {
       animation: 8s linear width forwards; }
-    .xbg-posibilities .list.in a.active svg {
+    .possibilities .list.in a.active svg {
       transform: translateX(0);
       opacity: 1; }
-    .xbg-posibilities .list.in a:before {
+    .possibilities .list.in a:before {
       width: 100%; }
-    .xbg-posibilities .list.in a:nth-child(1) .link-inner {
+    .possibilities .list.in a:nth-child(1) .link-inner {
       transition-delay: 0.3s; }
-    .xbg-posibilities .list.in a:nth-child(1):before {
+    .possibilities .list.in a:nth-child(1):before {
       transition-delay: 0.25s; }
-    .xbg-posibilities .list.in a:nth-child(2) .link-inner {
+    .possibilities .list.in a:nth-child(2) .link-inner {
       transition-delay: 0.4s; }
-    .xbg-posibilities .list.in a:nth-child(2):before {
+    .possibilities .list.in a:nth-child(2):before {
       transition-delay: 0.3s; }
-    .xbg-posibilities .list.in a:nth-child(3) .link-inner {
+    .possibilities .list.in a:nth-child(3) .link-inner {
       transition-delay: 0.5s; }
-    .xbg-posibilities .list.in a:nth-child(3):before {
+    .possibilities .list.in a:nth-child(3):before {
       transition-delay: 0.35s; }
-    .xbg-posibilities .list.in a:nth-child(4) .link-inner {
+    .possibilities .list.in a:nth-child(4) .link-inner {
       transition-delay: 0.6s; }
-    .xbg-posibilities .list.in a:nth-child(4):before {
+    .possibilities .list.in a:nth-child(4):before {
       transition-delay: 0.4s; }
-    .xbg-posibilities .list.in a:nth-child(5) .link-inner {
+    .possibilities .list.in a:nth-child(5) .link-inner {
       transition-delay: 0.7s; }
-    .xbg-posibilities .list.in a:nth-child(5):before {
+    .possibilities .list.in a:nth-child(5):before {
       transition-delay: 0.45s; }
-    .xbg-posibilities .list.in a:nth-child(6) .link-inner {
+    .possibilities .list.in a:nth-child(6) .link-inner {
       transition-delay: 0.8s; }
-    .xbg-posibilities .list.in a:nth-child(6):before {
+    .possibilities .list.in a:nth-child(6):before {
       transition-delay: 0.5s; }
-    .xbg-posibilities .list.in a:nth-child(7) .link-inner {
+    .possibilities .list.in a:nth-child(7) .link-inner {
       transition-delay: 0.9s; }
-    .xbg-posibilities .list.in a:nth-child(7):before {
+    .possibilities .list.in a:nth-child(7):before {
       transition-delay: 0.55s; }
-    .xbg-posibilities .list.in a:nth-child(8) .link-inner {
+    .possibilities .list.in a:nth-child(8) .link-inner {
       transition-delay: 1s; }
-    .xbg-posibilities .list.in a:nth-child(8):before {
+    .possibilities .list.in a:nth-child(8):before {
       transition-delay: 0.6s; }
-    .xbg-posibilities .list.in a:nth-child(9) .link-inner {
+    .possibilities .list.in a:nth-child(9) .link-inner {
       transition-delay: 1.1s; }
-    .xbg-posibilities .list.in a:nth-child(9):before {
+    .possibilities .list.in a:nth-child(9):before {
       transition-delay: 0.65s; }
-    .xbg-posibilities .list.in a:nth-child(10) .link-inner {
+    .possibilities .list.in a:nth-child(10) .link-inner {
       transition-delay: 1.2s; }
-    .xbg-posibilities .list.in a:nth-child(10):before {
+    .possibilities .list.in a:nth-child(10):before {
       transition-delay: 0.7s; }
-    .xbg-posibilities .list.in a .link-inner {
+    .possibilities .list.in a .link-inner {
       opacity: 1;
       transform: translateX(0); }
-  .xbg-posibilities .list-index {
+  .possibilities .list-index {
     margin-top: 48px; }
-    .xbg-posibilities .list-index .current {
+    .possibilities .list-index .current {
       color: #cacace; }
-    .xbg-posibilities .list-index .total {
+    .possibilities .list-index .total {
       color: #62626a; }
-  .xbg-posibilities .spacer {
+  .possibilities .spacer {
     margin: 0 12px;
     width: 21px;
     height: 1px;
     background-color: #62626a; }
-  .xbg-posibilities .container {
+  .possibilities .container {
     position: relative; }
-  .xbg-posibilities .content {
+  .possibilities .content {
     position: absolute;
     right: 0;
     top: 0;
     max-width: 382px;
     pointer-events: none; }
-    .xbg-posibilities .content img {
+    .possibilities .content img {
       transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
       opacity: 0;
       transform: translateY(-16px); }
-    .xbg-posibilities .content .js-tilt-glare-inner {
-      background-image: linear-gradient(0deg, #101010 0%, rgba(255, 255, 255, 0) 100%) !important; }
-    .xbg-posibilities .content .lexend-heading-xl {
+    .possibilities .content .js-tilt-glare-inner {
+      background-image: none !important; }
+    .possibilities .content .lexend-heading-xl {
       text-align: center;
       transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
       opacity: 0;
       transform: translateY(16px); }
-    .xbg-posibilities .content .lexend-body-md {
+    .possibilities .content .lexend-body-md {
       text-align: center;
       margin-top: 16px;
       color: #cacace;
       opacity: 0;
       transform: translateY(16px);
       transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1); }
-    .xbg-posibilities .content.active {
+    .possibilities .content.active {
       pointer-events: initial; }
-      .xbg-posibilities .content.active .lexend-heading-xl,
-      .xbg-posibilities .content.active .lexend-body-md,
-      .xbg-posibilities .content.active img {
+      .possibilities .content.active .lexend-heading-xl,
+      .possibilities .content.active .lexend-body-md,
+      .possibilities .content.active img {
         opacity: 1;
         transform: translateY(0); }
-  .xbg-posibilities .in h2 .word {
+  .possibilities .in h2 .word {
     opacity: 1;
     transform: translateY(0); }
-    .xbg-posibilities .in h2 .word:nth-child(1) {
+    .possibilities .in h2 .word:nth-child(1) {
       transition-delay: 0.335s; }
-    .xbg-posibilities .in h2 .word:nth-child(2) {
+    .possibilities .in h2 .word:nth-child(2) {
       transition-delay: 0.37s; }
-    .xbg-posibilities .in h2 .word:nth-child(3) {
+    .possibilities .in h2 .word:nth-child(3) {
       transition-delay: 0.405s; }
-    .xbg-posibilities .in h2 .word:nth-child(4) {
+    .possibilities .in h2 .word:nth-child(4) {
       transition-delay: 0.44s; }
-    .xbg-posibilities .in h2 .word:nth-child(5) {
+    .possibilities .in h2 .word:nth-child(5) {
       transition-delay: 0.475s; }
-    .xbg-posibilities .in h2 .word:nth-child(6) {
+    .possibilities .in h2 .word:nth-child(6) {
       transition-delay: 0.51s; }
-    .xbg-posibilities .in h2 .word:nth-child(7) {
+    .possibilities .in h2 .word:nth-child(7) {
       transition-delay: 0.545s; }
-    .xbg-posibilities .in h2 .word:nth-child(8) {
+    .possibilities .in h2 .word:nth-child(8) {
       transition-delay: 0.58s; }
-    .xbg-posibilities .in h2 .word:nth-child(9) {
+    .possibilities .in h2 .word:nth-child(9) {
       transition-delay: 0.615s; }
-    .xbg-posibilities .in h2 .word:nth-child(10) {
+    .possibilities .in h2 .word:nth-child(10) {
       transition-delay: 0.65s; }
   @media (max-width: 1400px) {
-    .xbg-posibilities .content {
+    .possibilities .content {
       right: 16px; } }
   @media (max-width: 992px) {
-    .xbg-posibilities h2 {
+    .possibilities h2 {
       max-width: 396px;
       text-align: center;
       align-self: center;
-      padding-bottom: 371px;
-      line-height: 48px; }
-    .xbg-posibilities .list {
+      padding-bottom: 371px; }
+    .possibilities .list {
       min-width: initial;
       width: 100%;
       margin-top: 90px; }
-    .xbg-posibilities .content {
+    .possibilities .content {
       top: 130px;
       max-width: 300px;
       width: 100%;
       left: 50%;
       right: initial;
       transform: translateX(-50%); }
-    .xbg-posibilities .content-image {
+    .possibilities .content-image {
       max-width: 300px; }
-      .xbg-posibilities .content-image img {
+      .possibilities .content-image img {
         width: 100%;
         height: auto; } }
+  @media (max-width: 768px) {
+    .possibilities .content {
+      top: 70px; } }
 
 .growing {
   position: relative;
-  padding-top: 61px;
+  padding: 120px 16px;
   overflow: hidden;
+  min-height: 837px;
   z-index: 3; }
   .growing .blocks-container {
     gap: 24px;
-    margin-top: 72px;
-    margin-bottom: 169px; }
+    margin-top: 72px; }
   .growing .background1 {
     position: absolute;
     bottom: 0;
@@ -4610,7 +4625,7 @@ footer.footer {
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 800px;
+    min-height: 837px;
     z-index: -1; }
     .growing .growing-background-wrapper img {
       transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
@@ -4979,6 +4994,8 @@ footer.footer {
   position: relative;
   gap: 56px;
   padding: 120px 16px; }
+  .community-section .btn {
+    height: 56px; }
   .community-section h2 {
     max-width: 489px;
     text-align: center;
@@ -5064,7 +5081,6 @@ footer.footer {
         background-size: contain;
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
-        /* Adjust the transition speed as needed */
         z-index: -1; }
       .community-section .cards-container .card-2:hover::before {
         opacity: 1; }
@@ -5086,18 +5102,21 @@ footer.footer {
   width: 100%;
   overflow: hidden;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding-bottom: 0; }
   .main-container .tokenomics-container {
     position: relative;
     z-index: 3;
     width: 100%;
+    max-width: 1440px;
     min-height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     gap: 53px;
-    padding-top: 56px; }
+    padding-top: 80px;
+    margin: 0 auto; }
     .main-container .tokenomics-container .header {
       display: flex;
       flex-direction: column;
@@ -5169,10 +5188,8 @@ footer.footer {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center; }
-        .main-container .tokenomics-container .header {
-          align-items: center; }
-          .main-container .tokenomics-container .header h1 {
-            font-size: 56px; }
+        .main-container .tokenomics-container .header h1 {
+          font-size: 56px; }
         .main-container .tokenomics-container .spheres-container {
           height: auto;
           width: auto;
@@ -5221,13 +5238,15 @@ footer.footer {
     padding-top: 23px;
     position: relative;
     height: 1039px;
-    z-index: 0; }
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
     .main-container .next-gen-gaming h2 {
       max-width: 630px;
       margin: 0 auto;
-      text-align: center;
-      font-size: 40px;
-      line-height: 42px; }
+      text-align: center; }
       .main-container .next-gen-gaming h2 .word {
         transform: translateY(16px);
         opacity: 0;
@@ -5237,8 +5256,7 @@ footer.footer {
       margin: 24px auto 0;
       max-width: 511px;
       opacity: 0;
-      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
-      color: #cacace; }
+      transition: 1s cubic-bezier(0.19, 1, 0.22, 1); }
     .main-container .next-gen-gaming .background-container {
       position: absolute;
       bottom: -94%;
@@ -5343,6 +5361,13 @@ footer.footer {
       position: absolute;
       right: 89px;
       bottom: 188px; }
+    .main-container .next-gen-gaming .bubbles-container {
+      bottom: 0;
+      position: relative;
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      flex: 1; }
     .main-container .next-gen-gaming .parallax-bubble {
       position: absolute;
       right: 122px;
@@ -5438,7 +5463,7 @@ footer.footer {
     .main-container .next-gen-gaming .xborgid-sphere {
       position: absolute;
       transform: translateX(-50%);
-      width: 17.688311688311687%;
+      width: 11.688311688311687%;
       z-index: 3;
       transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1); }
       .main-container .next-gen-gaming .gamerbase-sphere img,
@@ -5592,11 +5617,11 @@ footer.footer {
             left: 77%;
             bottom: -34%; }
           .main-container .next-gen-gaming .orbit-content.in .launchpad-sphere {
-            left: 90%;
-            bottom: -59%; }
+            left: 88%;
+            bottom: -50%; }
           .main-container .next-gen-gaming .orbit-content.in .xborgid-sphere {
-            bottom: -90%;
-            left: 100%; }
+            bottom: -70%;
+            left: 95%; }
           .main-container .next-gen-gaming .orbit-content.in .sphere-title {
             left: initial !important;
             right: 32px !important;
@@ -5625,10 +5650,6 @@ footer.footer {
         .main-container .next-gen-gaming .parallax-bubble3 {
           left: -50px;
           bottom: 120px; } }
-  @media screen and (max-width: 768px) {
-    .main-container .next-gen-gaming {
-      padding-top: 0;
-      margin-top: 25px; } }
 
 .launching {
   width: 100%;
@@ -5673,9 +5694,11 @@ footer.footer {
   .launching .input-label {
     max-width: 302px;
     margin-bottom: 32px; }
-  .launching .video-container.in .token-video {
-    opacity: 1;
-    transform: translateX(5%) translateY(0); }
+  .launching .video-container.in {
+    width: 100px; }
+    .launching .video-container.in .token-video {
+      opacity: 1;
+      transform: translateX(-55%) translateY(0%); }
   .launching .title-container {
     max-width: 508px;
     transition: 2s cubic-bezier(0.19, 1, 0.22, 1); }
@@ -5733,10 +5756,8 @@ footer.footer {
       width: 165px;
       height: 149.118px; } }
   @media (max-width: 768px) {
-    .launching .video-container {
-      position: absolute;
-      left: 40px;
-      top: 170px; } }
+    .launching .token-video {
+      transform: translateX(5%) translateY(30%) !important; } }
   @media (max-width: 576px) {
     .launching .lexend-body-s {
       transform: translateX(0px) !important; }
@@ -5747,13 +5768,8 @@ footer.footer {
       font-size: 40px !important; }
     .launching .token-video {
       width: 120px;
-      height: 100px; }
-    .launching .video-container {
-      position: absolute;
-      left: -15px;
-      top: 150px; }
-    .launching .subscribe {
-      width: 100% !important; } }
+      height: 100px;
+      transform: translateX(95%) translateY(50%) !important; } }
 
 .page-scrollbar {
   height: 100vh;

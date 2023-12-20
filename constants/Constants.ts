@@ -1,5 +1,4 @@
 import { Images } from '@/assets/imgs';
-import { Posibilities } from './../modules/landing/components/Posibilities/Posibilities';
 export const FooterLinksData = [
   {
     type: 'ECOSYSTEM',
@@ -83,7 +82,7 @@ export const FooterLinksData = [
   },
 ];
 
-export const PosibilitiesData = [
+export const PossibilitiesData = [
   {
     title: 'Payments & fees',
     description:

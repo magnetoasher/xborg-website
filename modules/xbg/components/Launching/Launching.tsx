@@ -1,12 +1,11 @@
-import { useEffect, useRef } from 'react';
-import Link from 'next/link';
-import { Tween } from 'react-gsap';
-import { Scene } from 'react-scrollmagic';
 import { Videos } from '@/assets/videos';
 import { ObserverContainer } from '@/components/ObserverContainer';
 import { splitLines } from '@/modules/utils/utils';
+import Link from 'next/link';
+import { useEffect, useRef } from 'react';
+import { Tween } from 'react-gsap';
+import { Scene } from 'react-scrollmagic';
 import { Subscribe } from '@/modules/landing';
-import { BtnRed } from '@/components/Buttons';
 
 export const Launching = () => {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -19,7 +18,7 @@ export const Launching = () => {
 
   return (
     <div className="flex center middle launching">
-      <div className="container flex center top" id="trigger">
+      <div className="container flex  center top" id="trigger">
         <ObserverContainer className="video-container">
           <Scene duration="100%" triggerElement="#trigger">
             {(progress: any) => {

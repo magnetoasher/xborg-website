@@ -1,4 +1,4 @@
-.xbg-posibilities {
+.possibilities {
   position: relative;
   z-index: 3;
   padding-top: 120px;
@@ -9,7 +9,6 @@
 
   h2 {
     max-width: 570px;
-    font-size: 40px;
 
     .word {
       transform: translateY(16px);
@@ -159,11 +158,7 @@
     }
 
     .js-tilt-glare-inner {
-      background-image: linear-gradient(
-        0deg,
-        #101010 0%,
-        rgba(255, 255, 255, 0) 100%
-      ) !important;
+      background-image: none !important;
     }
 
     .lexend-heading-xl {
@@ -219,7 +214,6 @@
       text-align: center;
       align-self: center;
       padding-bottom: 371px;
-      line-height: 48px;
     }
 
     .list {
@@ -244,6 +238,12 @@
         width: 100%;
         height: auto;
       }
+    }
+  }
+
+  @media (max-width: $sm-max) {
+    .content {
+      top: 70px;
     }
   }
 }
