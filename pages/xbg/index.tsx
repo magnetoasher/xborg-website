@@ -1,5 +1,11 @@
 import { Footer } from '@/components/Footer';
-import { Growing, Introduction, Posibilities, Stats } from '@/modules/xbg';
+import {
+  CommunitySection,
+  Growing,
+  Introduction,
+  Posibilities,
+  Stats,
+} from '@/modules/xbg';
 
 export default function AboutUs() {
   return (
@@ -8,6 +14,7 @@ export default function AboutUs() {
       <Posibilities />
       <Growing />
       <Stats />
+      <CommunitySection />
       <Footer />
     </div>
   );

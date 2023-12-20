@@ -95,5 +95,6 @@ export const Images = {
     roadmapVertical: '/images/xbg/roadmap-vertical.png',
     plus: '/images/xbg/plus.svg',
     smoke: '/images/xbg/smoke.png',
+    community: '/images/xbg/community.svg',
   },
 };
