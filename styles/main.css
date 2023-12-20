@@ -5169,8 +5169,10 @@ footer.footer {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center; }
-        .main-container .tokenomics-container .header h1 {
-          font-size: 56px; }
+        .main-container .tokenomics-container .header {
+          align-items: center; }
+          .main-container .tokenomics-container .header h1 {
+            font-size: 56px; }
         .main-container .tokenomics-container .spheres-container {
           height: auto;
           width: auto;
