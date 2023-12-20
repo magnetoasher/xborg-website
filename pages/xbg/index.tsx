@@ -3,6 +3,7 @@ import {
   CommunitySection,
   Growing,
   Introduction,
+  NextGenGaming,
   Posibilities,
   Stats,
 } from '@/modules/xbg';
@@ -15,6 +16,7 @@ export default function AboutUs() {
       <Growing />
       <Stats />
       <CommunitySection />
+      <NextGenGaming />
       <Footer />
     </div>
   );
