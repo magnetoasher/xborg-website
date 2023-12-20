@@ -1,0 +1,249 @@
+.xbg-posibilities {
+  position: relative;
+  z-index: 3;
+  padding-top: 120px;
+  padding-bottom: 121px;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-color: #101010;
+
+  h2 {
+    max-width: 570px;
+    font-size: 40px;
+
+    .word {
+      transform: translateY(16px);
+      opacity: 0;
+      transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  .parallax-bubble {
+    position: absolute;
+    left: 192px;
+    bottom: 19px;
+  }
+
+  .list {
+    margin-top: 40px;
+    min-width: 417px;
+
+    a {
+      padding: 16px 0;
+      color: #95959d;
+      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+      position: relative;
+
+      .link-inner {
+        transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+        transform: translateX(-16px);
+        opacity: 0;
+      }
+
+      span {
+        transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        background-color: #242424;
+        height: 1px;
+        transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        background-color: $red100;
+        height: 1px;
+        transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      &:hover {
+        span {
+          color: #fff;
+        }
+      }
+    }
+
+    svg {
+      transform: translateX(-15px);
+      opacity: 0;
+      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    &.in {
+      a {
+        &.active {
+          span {
+            color: #e4e4e6;
+          }
+
+          &:after {
+            animation: 8s linear width forwards;
+          }
+
+          svg {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        &:before {
+          width: 100%;
+        }
+      }
+
+      a {
+        @for $i from 1 through 10 {
+          &:nth-child(#{$i}) {
+            .link-inner {
+              transition-delay: 0.2s + ($i * 0.1s);
+            }
+
+            &:before {
+              transition-delay: 0.2s + ($i * 0.05s);
+            }
+          }
+        }
+
+        .link-inner {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+
+  .list-index {
+    margin-top: 48px;
+
+    .current {
+      color: #cacace;
+    }
+
+    .total {
+      color: #62626a;
+    }
+  }
+
+  .spacer {
+    margin: 0 12px;
+    width: 21px;
+    height: 1px;
+    background-color: #62626a;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .content {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 382px;
+    pointer-events: none;
+
+    img {
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      opacity: 0;
+      transform: translateY(-16px);
+    }
+
+    .js-tilt-glare-inner {
+      background-image: linear-gradient(
+        0deg,
+        #101010 0%,
+        rgba(255, 255, 255, 0) 100%
+      ) !important;
+    }
+
+    .lexend-heading-xl {
+      text-align: center;
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      opacity: 0;
+      transform: translateY(16px);
+    }
+
+    .lexend-body-md {
+      text-align: center;
+      margin-top: 16px;
+      color: #cacace;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    &.active {
+      pointer-events: initial;
+
+      .lexend-heading-xl,
+      .lexend-body-md,
+      img {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .in {
+    h2 .word {
+      opacity: 1;
+      transform: translateY(0);
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: 0.3s + ($i * 0.035s);
+        }
+      }
+    }
+  }
+
+  @media (max-width: $xl-max) {
+    .content {
+      right: 16px;
+    }
+  }
+
+  @media (max-width: $md-max) {
+    h2 {
+      max-width: 396px;
+      text-align: center;
+      align-self: center;
+      padding-bottom: 371px;
+      line-height: 48px;
+    }
+
+    .list {
+      min-width: initial;
+      width: 100%;
+      margin-top: 90px;
+    }
+
+    .content {
+      top: 130px;
+      max-width: 300px;
+      width: 100%;
+      left: 50%;
+      right: initial;
+      transform: translateX(-50%);
+    }
+
+    .content-image {
+      max-width: 300px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

@@ -1,3 +1,5 @@
+import { Images } from '@/assets/imgs';
+import { Posibilities } from './../modules/landing/components/Posibilities/Posibilities';
 export const FooterLinksData = [
   {
     type: 'ECOSYSTEM',
@@ -78,5 +80,38 @@ export const FooterLinksData = [
         to: '',
       },
     ],
+  },
+];
+
+export const PosibilitiesData = [
+  {
+    title: 'Payments & fees',
+    description:
+      '$XBG is used for all payments and transaction fees within the XBorg ecosystem.',
+    icon: Images.xbg.discovery5,
+  },
+  {
+    title: 'Governance',
+    description:
+      'Enjoy unique in-game experiences tailored to who you are as a player.',
+    icon: Images.xbg.discovery6,
+  },
+  {
+    title: 'Reward pool',
+    description:
+      'Use your gaming reputation as your proof-of-skill collateral when lending GameFi assets.',
+    icon: Images.xbg.discovery7,
+  },
+  {
+    title: 'Ecosystem status',
+    description:
+      'Unlock investment opportunities in the most promising upcoming games because of your gaming credentials.',
+    icon: Images.xbg.discovery8,
+  },
+  {
+    title: 'Gas token',
+    description:
+      'Unlock investment opportunities in the most promising upcoming games because of your gaming credentials.',
+    icon: Images.xbg.discovery9,
   },
 ];
