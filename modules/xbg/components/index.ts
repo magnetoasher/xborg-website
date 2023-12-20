@@ -4,3 +4,4 @@ export * from './Growing';
 export * from './Stats';
 export * from './CommunitySection';
 export * from './NextGenGaming';
+export * from './Launching';

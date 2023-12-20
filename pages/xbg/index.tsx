@@ -3,6 +3,7 @@ import {
   CommunitySection,
   Growing,
   Introduction,
+  Launching,
   NextGenGaming,
   Posibilities,
   Stats,
@@ -17,6 +18,7 @@ export default function AboutUs() {
       <Stats />
       <CommunitySection />
       <NextGenGaming />
+      <Launching />
       <Footer />
     </div>
   );
