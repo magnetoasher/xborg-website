@@ -59,7 +59,7 @@ export const Stats = () => {
   ];
 
   return (
-    <div className="stats">
+    <div className="xbg-stats">
       <div className="container inner-container">
         <h1 className="integralfc-h2 reveal-from-bottom">
           Onboarding the next generation of players
