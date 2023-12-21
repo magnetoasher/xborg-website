@@ -1,0 +1,101 @@
+.new-era-container {
+  width: 100%;
+  background-color: $black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 56px;
+  padding: 90px 16px 240px 16px;
+  background-image: url('/images/about/aboutImage5.png');
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: bottom right;
+
+  h1 {
+    width: 100%;
+    max-width: 434px;
+    text-align: center;
+    font-family: $integralCF;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    color: $gray100;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    .card-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 24px;
+
+      .card {
+        position: relative;
+        width: 100%;
+        max-width: 387px;
+        min-height: 262px;
+        padding: 32px 24px;
+        border-radius: 16px;
+        border: 1px solid #343434;
+        background: rgba(9, 9, 9, 0.8);
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 16px;
+        overflow: hidden;
+
+        &:hover {
+          border: 1px solid $red100;
+        }
+
+        h3 {
+          color: $gray100;
+          font-family: Lexend;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 32px;
+        }
+        p {
+          color: $gray200;
+          font-family: Lexend;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 24px;
+        }
+      }
+    }
+
+    .extra-space {
+      padding-top: 120px;
+    }
+
+    @media screen and (max-width: $sm-max) {
+      .card-column {
+        padding-top: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: $sm-max) {
+    background-size: 110%;
+    padding-bottom: 120px;
+  }
+
+  @media screen and (min-width: 1921px) {
+    background-size: 100%;
+  }
+}

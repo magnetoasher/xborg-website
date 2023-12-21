@@ -17,6 +17,7 @@ import { Controller } from 'react-scrollmagic';
 import { LoaderPage } from '@/components/Loader';
 import { Provider } from 'react-redux';
 import store from '@/store';
+import '@/styles/main.scss';
 
 function App({ Component, pageProps, router }: AppProps) {
   const variants = {
