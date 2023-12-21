@@ -1,0 +1,159 @@
+.community-section {
+  position: relative;
+  gap: 56px;
+  padding: 120px 16px;
+
+  .btn {
+    height: 56px;
+  }
+
+  h2 {
+    max-width: 489px;
+    text-align: center;
+    color: $gray100;
+    &:first-child {
+      margin-bottom: 24px;
+    }
+  }
+
+  p {
+    max-width: 346px;
+    text-align: center;
+    color: $gray300;
+  }
+
+  .sphere {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .sphere1 {
+    top: -45px;
+    left: -50px;
+  }
+
+  .sphere2 {
+    top: 53px;
+    right: -20px;
+  }
+
+  .cards-container {
+    width: 100%;
+    gap: 24px;
+    margin: 0 auto;
+
+    .card-1 {
+      position: relative;
+      width: 100%;
+      max-width: 488px;
+      height: 265px;
+      border-radius: 16px;
+      border: 1px solid #343434;
+      background: radial-gradient(
+          90.18% 44.15% at 51.58% 45.28%,
+          rgba(255, 255, 255, 0.1) 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        rgba(9, 9, 9, 0.8);
+      backdrop-filter: blur(10px);
+      z-index: 2;
+
+      h2 {
+        font-size: 56px;
+        margin-bottom: 16px;
+      }
+
+      p {
+        max-width: 220px;
+        &:first-child {
+          color: $red100;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .card-2 {
+      position: relative;
+      width: 100%;
+      max-width: 695px;
+      height: 265px;
+      border-radius: 16px;
+      border: 1px solid #343434;
+      background: rgba(9, 9, 9, 0.8);
+      backdrop-filter: blur(10px);
+      padding-left: 72px;
+      overflow: hidden;
+
+      h2 {
+        margin-bottom: 16px;
+      }
+
+      p {
+        max-width: 230px;
+        text-align: left;
+        &:first-child {
+          color: $red100;
+          text-transform: uppercase;
+        }
+        span {
+          color: $red100;
+        }
+      }
+
+      .smoke {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+
+      .prometheus {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/images/xbg/community.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        z-index: -1;
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: $sm-max) {
+      flex-direction: column;
+
+      .card-1,
+      .card-2 {
+        max-width: 100%;
+      }
+
+      .card-2 {
+        justify-content: flex-start;
+        padding-top: 57px;
+        padding-left: 24px;
+      }
+    }
+
+    @media (max-width: $xs-max) {
+      .card-2 {
+        height: 400px;
+      }
+    }
+  }
+}

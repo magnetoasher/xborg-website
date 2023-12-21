@@ -30,12 +30,7 @@ export const Footer = () => {
           <ObserverContainer className="flex column top" rootMargin="0%">
             <div className="top-box">
               <Link href="/">
-                <Image
-                  src="/images/about/common/logo.svg"
-                  alt=""
-                  width={35}
-                  height={35}
-                />
+                <Image src="/images/logo.svg" alt="" width={35} height={35} />
               </Link>
               <p>
                 A collaborative credential infrastructure powering the next

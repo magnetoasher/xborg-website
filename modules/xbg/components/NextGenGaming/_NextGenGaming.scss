@@ -1,0 +1,758 @@
+.main-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+
+  .tokenomics-container {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 1440px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 53px;
+    padding-top: 80px;
+
+    margin: 0 auto;
+    .header {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 24px;
+      color: $gray100;
+      .top-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 90px;
+
+        .box {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+      }
+      h1 {
+        font-size: 88px;
+      }
+    }
+    .spheres-container {
+      width: 100%;
+      .t-sphere {
+        position: absolute;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 15px;
+        .text-box {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 4px;
+
+          span:nth-child(1) {
+            max-width: 132px;
+            text-align: center;
+            color: $gray300;
+            line-height: 16px;
+          }
+          span:nth-child(2) {
+            background: linear-gradient(
+              335deg,
+              #bcbcbc -19.34%,
+              rgba(188, 188, 188, 0) 105.96%
+            );
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+      .t-sphere-1 {
+        top: 220px;
+        right: 25px;
+      }
+      .t-sphere-2 {
+        top: 360px;
+        right: 25%;
+      }
+      .t-sphere-3 {
+        top: 330px;
+        right: 45%;
+      }
+      .t-sphere-4 {
+        top: 370px;
+        left: 30%;
+      }
+      .t-sphere-5 {
+        top: 300px;
+        left: 20%;
+      }
+      .t-sphere-6 {
+        top: 175px;
+        left: 10%;
+      }
+      .t-sphere-7 {
+        top: 0;
+        left: 51px;
+      }
+    }
+    @media (max-width: $sm-max) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      .header {
+        h1 {
+          font-size: 56px;
+        }
+      }
+
+      .spheres-container {
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 48px;
+        margin-bottom: 50px;
+        .t-sphere {
+          position: relative !important;
+          flex-direction: row;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          gap: 45px;
+          .image {
+            width: 166px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .text-box {
+            align-items: flex-start;
+            span:nth-child(1),
+            span:nth-child(2) {
+              text-align: left;
+            }
+          }
+        }
+        .t-sphere-1 {
+          img {
+            width: 166px;
+            height: 166px;
+          }
+        }
+        .t-sphere-2 {
+          img {
+            width: 136px;
+            height: 136px;
+          }
+        }
+        .t-sphere-3 {
+          img {
+            width: 100px;
+            height: 100px;
+          }
+        }
+        .t-sphere-4,
+        .t-sphere-5,
+        .t-sphere-6,
+        .t-sphere-7 {
+          img {
+            width: 60px;
+            height: 60px;
+          }
+        }
+      }
+    }
+  }
+
+  .next-gen-gaming {
+    position: relative;
+    z-index: 3;
+    padding-top: 23px;
+    position: relative;
+    height: 1039px;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    h2 {
+      max-width: 630px;
+      margin: 0 auto;
+      text-align: center;
+
+      .word {
+        transform: translateY(16px);
+        opacity: 0;
+        transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+    }
+
+    .section-description {
+      text-align: center;
+      margin: 24px auto 0;
+      max-width: 511px;
+      opacity: 0;
+      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .background-container {
+      position: absolute;
+      bottom: -94%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2828px;
+      height: auto;
+      z-index: -1;
+
+      img {
+        width: 100%;
+        height: auto;
+        margin-bottom: -4px;
+      }
+    }
+
+    .parallax-token {
+      position: absolute;
+      left: 32px;
+      top: 0;
+    }
+
+    .parallax-token2 {
+      position: absolute;
+      left: 105px;
+      top: 20%;
+      filter: blur(0.5px);
+    }
+
+    .parallax-token3 {
+      position: absolute;
+      left: 69px;
+      top: 30%;
+      filter: blur(0.5px);
+    }
+
+    .parallax-token4 {
+      position: absolute;
+      left: 105px;
+      top: 35%;
+      filter: blur(0.5px);
+    }
+
+    .parallax-token5 {
+      position: absolute;
+      left: 105px;
+      top: 40%;
+      filter: blur(0.5px);
+    }
+
+    .parallax-token6 {
+      position: absolute;
+      left: 42px;
+      bottom: 216px;
+      filter: blur(0.5px);
+    }
+
+    .parallax-token7 {
+      position: absolute;
+      left: 62px;
+      bottom: 141px;
+      filter: blur(2.4163451194763184px);
+    }
+
+    .parallax-token8 {
+      position: absolute;
+      left: 42px;
+      bottom: 10px;
+    }
+
+    .parallax-token9 {
+      position: absolute;
+      left: 144px;
+      bottom: 112px;
+    }
+
+    .parallax-token10 {
+      position: absolute;
+      left: 252px;
+      bottom: 0;
+    }
+
+    .parallax-token11 {
+      position: absolute;
+      left: 40%;
+      bottom: 0;
+      filter: blur(3.0391697883605957px);
+    }
+
+    .parallax-token12 {
+      position: absolute;
+      left: 35%;
+      bottom: 229px;
+      opacity: 0.4;
+    }
+
+    .parallax-token13 {
+      position: absolute;
+      left: 37%;
+      bottom: 289px;
+    }
+
+    .parallax-token14 {
+      position: absolute;
+      right: 30%;
+      top: -32px;
+    }
+
+    .parallax-token15 {
+      position: absolute;
+      right: 127px;
+      top: 80px;
+    }
+
+    .parallax-token16 {
+      position: absolute;
+      right: 107px;
+      top: 120px;
+    }
+
+    .parallax-token17 {
+      position: absolute;
+      right: 247px;
+      top: 120px;
+    }
+
+    .parallax-token18 {
+      position: absolute;
+      right: 128px;
+      top: 30%;
+    }
+
+    .parallax-token19 {
+      position: absolute;
+      right: 24px;
+      bottom: 74px;
+    }
+
+    .parallax-token20 {
+      position: absolute;
+      right: 89px;
+      bottom: 172px;
+    }
+
+    .parallax-token21 {
+      position: absolute;
+      right: 89px;
+      bottom: 188px;
+    }
+    .bubbles-container {
+      bottom: 0;
+      position: relative;
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      flex: 1;
+    }
+
+    .parallax-bubble {
+      position: absolute;
+      right: 122px;
+      bottom: -32px;
+      .title {
+        width: max-content;
+        position: absolute;
+        right: 170px;
+        bottom: 70px;
+        background: linear-gradient(90deg, #2d2d2d 0%, #ababab 102.73%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .parallax-bubble2 {
+      position: absolute;
+      right: 122px;
+      top: 0;
+      z-index: 2;
+    }
+
+    .parallax-bubble3 {
+      position: absolute;
+      left: 69px;
+      bottom: 332px;
+      .title {
+        width: max-content;
+        position: absolute;
+        left: 80px;
+        bottom: 30px;
+        background: linear-gradient(90deg, #2d2d2d 0%, #ababab 102.73%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .parallax-bubble4 {
+      position: absolute;
+      left: -32px;
+      bottom: 64px;
+      .title {
+        width: max-content;
+        position: absolute;
+        left: 120px;
+        bottom: 50px;
+        background: linear-gradient(90deg, #2d2d2d 0%, #ababab 102.73%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .parallax-bubble5 {
+      position: absolute;
+      left: 132px;
+      bottom: -32px;
+      .title {
+        width: max-content;
+        position: absolute;
+        left: 100px;
+        bottom: 50px;
+        background: linear-gradient(90deg, #2d2d2d 0%, #ababab 102.73%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .parallax-bubble6 {
+      position: absolute;
+      left: 40%;
+      bottom: 79px;
+    }
+
+    .parallax-bubble7 {
+      position: absolute;
+      right: -24px;
+      bottom: 122px;
+      .title {
+        width: max-content;
+        position: absolute;
+        right: 130px;
+        bottom: 55px;
+        background: linear-gradient(90deg, #2d2d2d 0%, #ababab 102.73%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .parallax-bubble8 {
+      position: absolute;
+      right: 60px;
+      bottom: 330px;
+    }
+
+    .main-bubble {
+      position: absolute;
+      bottom: 47%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 5.763790664780764%;
+
+      img {
+        width: 100%;
+        height: auto;
+        transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      &.in {
+        img {
+          transform: rotate(0);
+        }
+      }
+    }
+
+    .gamerbase-sphere,
+    .launchpad-sphere,
+    .xborgid-sphere {
+      position: absolute;
+      transform: translateX(-50%);
+      width: 11.688311688311687%;
+      z-index: 3;
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+
+      img {
+        opacity: 0;
+        transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+      .sphere-title {
+        background: linear-gradient(90deg, #ababab 0%, #2d2d2d 102.73%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .gamerbase-sphere {
+      bottom: 74%;
+      left: 30%;
+
+      .sphere-title {
+        left: 50px;
+        top: 34px;
+        z-index: -1;
+      }
+    }
+
+    .launchpad-sphere {
+      bottom: 57%;
+      left: 76%;
+
+      .sphere-title {
+        left: 50px;
+        top: 34px;
+        z-index: -1;
+      }
+    }
+
+    .xborgid-sphere {
+      bottom: 57%;
+      left: 76%;
+
+      .sphere-title {
+        left: 50px;
+        top: 34px;
+        z-index: -1;
+      }
+    }
+
+    .sphere-title {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      padding: 16px 32px;
+      white-space: nowrap;
+      display: flex;
+      transition: 0.6s ease-in;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .orbit {
+      width: 21.782178217821784%;
+      height: 21.782178217821784%;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 39%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .orbit-content {
+      animation: circle 60s linear infinite;
+
+      & > div {
+        animation: ccircle 60s linear infinite;
+      }
+
+      &.in {
+        .sphere-title {
+          opacity: 1;
+          transition-delay: 0.6s;
+        }
+
+        .launchpad-sphere {
+          bottom: 69%;
+          left: 86%;
+          transition-delay: 0.1s;
+
+          img {
+            opacity: 1;
+            transition-delay: 0.1s;
+          }
+
+          &:after {
+            opacity: 1;
+            transition-delay: 0.5s;
+          }
+        }
+
+        .gamerbase-sphere {
+          bottom: 86%;
+          left: 17%;
+
+          img {
+            opacity: 1;
+          }
+
+          &:after {
+            opacity: 1;
+            transition-delay: 0.4s;
+          }
+        }
+
+        .xborgid-sphere {
+          bottom: 9%;
+          left: 9%;
+
+          img {
+            opacity: 1;
+          }
+
+          &:after {
+            opacity: 1;
+            transition-delay: 0.4s;
+          }
+        }
+      }
+    }
+
+    .in {
+      h2 .word {
+        opacity: 1;
+        transform: translateY(0);
+
+        @for $i from 1 through 10 {
+          &:nth-child(#{$i}) {
+            transition-delay: 0.3s + ($i * 0.035s);
+          }
+        }
+      }
+
+      .section-description {
+        opacity: 1;
+        transition-delay: 0.4s;
+      }
+    }
+
+    @media (max-width: $md-max) {
+      height: 700px;
+      .container {
+        position: relative;
+        z-index: 3;
+      }
+      .background-container {
+        width: 1476px;
+        height: 904px;
+        margin-left: -100px;
+        bottom: 17%;
+      }
+
+      .sphere-title {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+
+      .main-bubble {
+        bottom: 14%;
+      }
+
+      .parallax-bubble {
+        right: -23px;
+        bottom: -29px;
+      }
+
+      .parallax-bubble3 {
+        bottom: 113px;
+      }
+      .parallax-bubble2 {
+        display: none;
+      }
+
+      .parallax-bubble4 {
+        left: -32px;
+        bottom: 138px;
+      }
+
+      .parallax-token10 {
+        left: 252px;
+        bottom: 21px;
+      }
+
+      .parallax-token21 {
+        right: 89px;
+        bottom: 248px;
+      }
+
+      .orbit-content {
+        animation: initial;
+
+        & > div {
+          animation: initial;
+        }
+
+        &.in {
+          .gamerbase-sphere {
+            left: 77%;
+            bottom: -34%;
+          }
+
+          .launchpad-sphere {
+            left: 88%;
+            bottom: -50%;
+          }
+
+          .xborgid-sphere {
+            bottom: -70%;
+            left: 95%;
+          }
+
+          .sphere-title {
+            left: initial !important;
+            right: 32px !important;
+            top: 50% !important;
+            background-color: transparent;
+            background: linear-gradient(90deg, #2d2d2d 0%, #ababab 102.73%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+    }
+    @media (max-width: $xs-max) {
+      .blur-spheres {
+        display: none;
+      }
+      margin-bottom: 100px;
+      .parallax-bubble {
+        right: 100px;
+        bottom: -100px;
+      }
+      .parallax-bubble7 {
+        bottom: 15px;
+      }
+      .parallax-bubble5 {
+        left: 50%;
+        bottom: 180px;
+      }
+      .parallax-bubble4 {
+        left: 25%;
+        bottom: 90px;
+      }
+      .parallax-bubble3 {
+        left: -50px;
+        bottom: 120px;
+      }
+    }
+  }
+}

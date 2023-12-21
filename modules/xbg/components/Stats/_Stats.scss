@@ -1,4 +1,4 @@
-.stats {
+.xbg-stats {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -44,12 +44,12 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      flex-wrap: nowrap;
-      gap: 60px;
+      flex-wrap: wrap;
+      gap: 100px;
 
       .block {
         width: auto;
-        max-width: 373px;
+        max-width: 437px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -170,8 +170,15 @@
 
     @media screen and (max-width: $xl-max) {
       .block-wrapper {
-        flex-wrap: wrap;
+        gap: 60px;
       }
     }
+  }
+}
+
+@media screen and (max-width: $sm-max) {
+  .stats {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
