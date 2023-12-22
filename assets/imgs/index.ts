@@ -82,6 +82,7 @@ export const Images = {
   xbg: {
     animatedLine: '/images/xbg/animated-line.png',
     heroData: '/images/xbg/hero-data.png',
+    data: '/images/xbg/data.png',
     heroBubbles: '/images/xbg/hero-bubbles.png',
     backgroundBubbles: '/images/xbg/background-bubbles.png',
     bubbles_bot_left: '/images/xbg/bubbles_bot_left.png',

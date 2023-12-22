@@ -11,7 +11,7 @@ import {
 
 export default function Xbg() {
   return (
-    <div className="about-us">
+    <div className="xbg">
       <Introduction />
       <Possibilities />
       <Growing />

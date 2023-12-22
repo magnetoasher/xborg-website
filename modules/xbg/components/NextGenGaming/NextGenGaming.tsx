@@ -26,7 +26,7 @@ export const NextGenGaming = () => {
               The next generation of gaming is decentralised
             </h2>
 
-            <p className=" section-description lexend-body-sm l">
+            <p className="section-description lexend-body-sm l">
               Shape the trajectory of next-gen gaming applications and vote on
               key ecosystem decisions with $XBG.
             </p>

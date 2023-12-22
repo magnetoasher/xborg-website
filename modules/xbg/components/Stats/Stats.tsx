@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Images } from '@/assets/imgs';
+import { ObserverContainer } from '@/components/ObserverContainer';
 
 export const Stats = () => {
   const renderGameFi = ({
@@ -11,8 +12,8 @@ export const Stats = () => {
     number: string;
     description: string;
   }) => (
-    <div className="block">
-      <p>{header}</p>
+    <div className="flex column start middle card">
+      <p className="lexend-body-smd l">{header}</p>
       <div className="box">
         <span className="gradient">{number}</span>
         <span className="outline">{number}</span>
@@ -25,51 +26,53 @@ export const Stats = () => {
       width: 45,
       height: 45,
       src: Images.landing.sphere7,
-      className: 'layout-object1',
+      className: 'sphere sphere1',
       alt: 'Object1',
     },
     {
       width: 45,
       height: 45,
       src: Images.landing.sphere7,
-      className: 'layout-object2',
+      className: 'sphere sphere2',
       alt: 'Object2',
     },
     {
       width: 25,
       height: 25,
       src: Images.landing.sphere7,
-      className: 'layout-object3',
+      className: 'sphere sphere3',
       alt: 'Object3',
     },
     {
       width: 45,
       height: 45,
       src: Images.landing.sphere7,
-      className: 'layout-object4',
+      className: 'sphere sphere4',
       alt: 'Object4',
     },
     {
       width: 45,
       height: 45,
       src: Images.landing.sphere7,
-      className: 'layout-object5',
+      className: 'sphere sphere5',
       alt: 'Object5',
     },
   ];
 
   return (
-    <div className="stats">
-      <div className="container inner-container">
-        <h1 className="integralfc-h2 reveal-from-bottom">
-          Onboarding the next generation of players
-        </h1>
-        <p className="lexend-body-sm-1 details">
-          We’ve partnered with the world’s leading esports teams and gaming
-          brands to revolutionise the way they interact with their players and
-          fans.
-        </p>
-        <div className="block-wrapper">
+    <div className="flex middle start w-full xbg-stats">
+      <div className="flex column start inner-container">
+        <ObserverContainer className="flex column start">
+          <h2 className="integralfc-h2 reveal-from-bottom">
+            Onboarding the next generation of players
+          </h2>
+          <p className="lexend-body-sm-1">
+            We’ve partnered with the world’s leading esports teams and gaming
+            brands to revolutionise the way they interact with their players and
+            fans.
+          </p>
+        </ObserverContainer>
+        <div className="flex center start cards-container">
           {renderGameFi({
             header: 'more than',
             number: '10',

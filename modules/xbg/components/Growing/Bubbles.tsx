@@ -1,6 +1,12 @@
 import { Images } from '@/assets/imgs';
+import { BtnDark } from '@/components/Buttons';
 import { ObserverContainer } from '@/components/ObserverContainer';
+import { splitLines } from '@/modules/utils/utils';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
+import { Timeline, Tween } from 'react-gsap';
+import { Scene } from 'react-scrollmagic';
 
 const Bubbles = () => {
   return (

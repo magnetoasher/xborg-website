@@ -19,6 +19,7 @@
     padding-top: 80px;
 
     margin: 0 auto;
+
     .header {
       display: flex;
       flex-direction: column;
@@ -26,6 +27,8 @@
       align-items: flex-start;
       gap: 24px;
       color: $gray100;
+      z-index: 1;
+
       .top-container {
         display: flex;
         justify-content: flex-start;
@@ -39,12 +42,15 @@
           align-items: flex-start;
         }
       }
+
       h1 {
         font-size: 88px;
       }
     }
+
     .spheres-container {
       width: 100%;
+
       .t-sphere {
         position: absolute;
         display: flex;
@@ -52,6 +58,7 @@
         justify-content: flex-start;
         align-items: center;
         gap: 15px;
+
         .text-box {
           display: flex;
           flex-direction: column;
@@ -65,6 +72,7 @@
             color: $gray300;
             line-height: 16px;
           }
+
           span:nth-child(2) {
             background: linear-gradient(
               335deg,
@@ -77,40 +85,49 @@
           }
         }
       }
+
       .t-sphere-1 {
         top: 220px;
         right: 25px;
       }
+
       .t-sphere-2 {
         top: 360px;
         right: 25%;
       }
+
       .t-sphere-3 {
         top: 330px;
         right: 45%;
       }
+
       .t-sphere-4 {
         top: 370px;
         left: 30%;
       }
+
       .t-sphere-5 {
         top: 300px;
         left: 20%;
       }
+
       .t-sphere-6 {
         top: 175px;
         left: 10%;
       }
+
       .t-sphere-7 {
         top: 0;
         left: 51px;
       }
     }
-    @media (max-width: $sm-max) {
+
+    @media (max-width: 865px) {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
+
       .header {
         h1 {
           font-size: 56px;
@@ -126,6 +143,7 @@
         align-items: flex-start;
         gap: 48px;
         margin-bottom: 50px;
+
         .t-sphere {
           position: relative !important;
           flex-direction: row;
@@ -134,12 +152,14 @@
           right: 0;
           bottom: 0;
           gap: 45px;
+
           .image {
             width: 166px;
             display: flex;
             justify-content: center;
             align-items: center;
           }
+
           .text-box {
             align-items: flex-start;
             span:nth-child(1),
@@ -148,24 +168,28 @@
             }
           }
         }
+
         .t-sphere-1 {
           img {
             width: 166px;
             height: 166px;
           }
         }
+
         .t-sphere-2 {
           img {
             width: 136px;
             height: 136px;
           }
         }
+
         .t-sphere-3 {
           img {
             width: 100px;
             height: 100px;
           }
         }
+
         .t-sphere-4,
         .t-sphere-5,
         .t-sphere-6,
@@ -209,6 +233,7 @@
       max-width: 511px;
       opacity: 0;
       transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+      color: #cacace;
     }
 
     .background-container {
@@ -733,25 +758,78 @@
       .blur-spheres {
         display: none;
       }
+
       margin-bottom: 100px;
       .parallax-bubble {
         right: 100px;
         bottom: -100px;
       }
+
       .parallax-bubble7 {
         bottom: 15px;
       }
+
       .parallax-bubble5 {
         left: 50%;
         bottom: 180px;
       }
+
       .parallax-bubble4 {
         left: 25%;
         bottom: 90px;
       }
+
       .parallax-bubble3 {
         left: -50px;
         bottom: 120px;
+      }
+    }
+  }
+  @media (max-width: $lg-max) {
+    .spheres-container {
+      .t-sphere-2 {
+        top: 70% !important;
+        right: 30% !important;
+      }
+
+      .t-sphere-3 {
+        top: 70% !important;
+        right: 50% !important;
+      }
+
+      .t-sphere-4 {
+        top: 70% !important;
+        left: 18% !important;
+      }
+
+      .t-sphere-5 {
+        top: 60% !important;
+        left: 6% !important;
+      }
+
+      .t-sphere-6 {
+        left: 2% !important;
+      }
+    }
+  }
+
+  @media (max-width: 865px) {
+    .header {
+      align-items: center !important;
+    }
+    .spheres-container {
+      .t-sphere-4 {
+        top: 70% !important;
+        left: 0% !important;
+      }
+
+      .t-sphere-5 {
+        top: 60% !important;
+        left: 0% !important;
+      }
+
+      .t-sphere-6 {
+        left: 0% !important;
       }
     }
   }

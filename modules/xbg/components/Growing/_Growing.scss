@@ -4,7 +4,6 @@
   overflow: hidden;
   min-height: 837px;
   z-index: 3;
-
   .blocks-container {
     gap: 24px;
     margin-top: 72px;
@@ -18,7 +17,6 @@
     height: auto;
     z-index: -1;
   }
-
   .background2 {
     position: absolute;
     bottom: 0;
@@ -45,7 +43,6 @@
       pointer-events: all;
     }
   }
-
   .block-container {
     display: flex;
     flex-direction: column;
@@ -126,6 +123,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    // transform: translate(-50%, -50%);
     width: 100%;
     min-height: 837px;
     z-index: -1;
@@ -133,6 +131,12 @@
       transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
       height: 100%;
     }
+
+    // img {
+    //   width: 100%;
+    //   height: auto;
+    //   margin-bottom: -4px;
+    // }
   }
 
   .main-bubble {
@@ -147,7 +151,6 @@
     align-items: center;
     width: 100%;
     height: 700px;
-
     img {
       rotate: -5deg;
       transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
@@ -159,10 +162,9 @@
         transform: rotate(0);
       }
     }
-
     .orbit {
-      width: 60%;
-      height: 80%;
+      width: 600px;
+      height: 560px;
       border-radius: 50%;
       position: absolute;
       top: 10%;
@@ -200,7 +202,7 @@
       .sphere {
         color: #fff;
         max-width: 108px;
-        font-size: 10px;
+        font-size: 13px;
       }
 
       .sphere-1 {
@@ -297,6 +299,18 @@
         width: 94px;
         text-align: right;
       }
+
+      @media screen and (max-width: $sm-max) {
+        .sphere {
+          font-size: 12px;
+        }
+      }
+
+      @media screen and (max-width: $xs-max) {
+        .sphere {
+          font-size: 10px;
+        }
+      }
     }
   }
 
@@ -310,67 +324,59 @@
       font-weight: 400;
       line-height: 48px;
     }
-
     .background1,
     .background2 {
       width: 100%;
     }
-
     .main-bubble {
       top: 40%;
       height: 400px;
-
+      .orbit {
+        width: 450px;
+        height: 320px;
+      }
       .orbit-content {
         .circle-1 {
           width: 1000px;
           height: 1000px;
         }
-
         .circle-2 {
           width: 700px;
           height: 700px;
         }
-
         .sphere-1 {
-          top: -80px;
+          top: -70px;
           left: 44%;
           transform: translateX(-44%);
         }
-
         .sphere-2 {
           top: 0px;
-          right: -5%;
+          right: -3%;
         }
-
         .sphere-3 {
           top: 36%;
-          right: -90px;
+          right: -80px;
         }
-
         .sphere-4 {
           bottom: 13%;
-          right: -50px;
+          right: -40px;
         }
-
         .sphere-5 {
           bottom: -60px;
           left: 58%;
           transform: translateX(-58%);
         }
-
         .sphere-6 {
           bottom: 8px;
-          left: -5%;
+          left: -3%;
         }
-
         .sphere-7 {
-          top: 45%;
-          left: -90px;
+          top: 48%;
+          left: -80px;
         }
-
         .sphere-8 {
-          top: 5%;
-          left: -50px;
+          top: 8%;
+          left: -30px;
         }
       }
     }
@@ -380,6 +386,10 @@
     .main-bubble {
       height: 400px;
 
+      .orbit {
+        width: 300px;
+        height: 310px;
+      }
       .orbit-content {
         .circle-1 {
           width: 850px;
@@ -392,55 +402,59 @@
         }
 
         .sphere-1 {
-          top: -80px;
+          top: -70px;
           left: 40%;
           transform: translateX(-48%);
         }
 
         .sphere-2 {
           top: -30px;
-          right: -30%;
+          right: -20%;
         }
 
         .sphere-3 {
-          top: 45%;
-          right: -80px;
+          top: 48%;
+          right: -70px;
           max-width: 96px;
           text-align: center;
         }
 
         .sphere-4 {
-          bottom: 0;
-          right: -100px;
+          bottom: -3%;
+          right: -50px;
         }
 
         .sphere-5 {
-          bottom: -55px;
+          bottom: -70px;
           left: 60%;
           transform: translateX(-55%);
         }
 
         .sphere-6 {
           bottom: -30px;
-          left: -30%;
+          left: -18%;
         }
 
         .sphere-7 {
-          top: 60%;
-          left: -80px;
+          top: 62%;
+          left: -62px;
           max-width: 96px;
           text-align: center;
         }
 
         .sphere-8 {
-          top: 0;
-          left: -100px;
+          top: -3%;
+          left: -70px;
         }
       }
     }
   }
 
   @media (max-width: $xl-max) {
+    h2 {
+      margin-top: -60px;
+    }
+
     .growing-background-wrapper {
       display: block;
     }

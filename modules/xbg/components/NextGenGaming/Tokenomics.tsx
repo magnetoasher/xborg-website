@@ -104,5 +104,4 @@ const Tokenomics = () => {
     </div>
   );
 };
-
 export default Tokenomics;

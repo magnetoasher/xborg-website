@@ -2,13 +2,16 @@ import { Videos } from '@/assets/videos';
 import { ObserverContainer } from '@/components/ObserverContainer';
 import { splitLines } from '@/modules/utils/utils';
 import Link from 'next/link';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Tween } from 'react-gsap';
 import { Scene } from 'react-scrollmagic';
 import { Subscribe } from '@/modules/landing';
 
 export const Launching = () => {
   const ref = useRef<HTMLHeadingElement>(null);
+
+  const [form, setForm] = useState<{ email: string }>({ email: '' });
+  const [errors, setErrors] = useState<any>({});
 
   useEffect(() => {
     if (ref.current) {
@@ -41,34 +44,32 @@ export const Launching = () => {
           </ObserverContainer>
 
           <ObserverContainer className="flex column details">
-            <div className="flex column actions">
-              <Subscribe
-                id="launching-subscribe"
-                label="Get notified when the XBG presale with discounted terms goes live."
-                button="Stay up to date"
-                source="xbg"
-              />
+            <Subscribe
+              id="launching-subscribe"
+              label="Get notified when the XBG presale with discounted terms goes live."
+              button="Stay up to date"
+              source="xbg"
+            />
 
-              <Link
-                className="link flex middle"
-                href="https://docsend.com/view/9iee42d832m32wnd"
-                target="_blank"
+            <Link
+              className="link flex middle"
+              href="https://docsend.com/view/9iee42d832m32wnd"
+              target="_blank"
+            >
+              <span>View pitch deck</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
               >
-                <span>View pitch deck</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M15.6998 11.675L9.6998 17.675L8.2998 16.275L12.8998 11.675L8.2998 7.07499L9.6998 5.67499L15.6998 11.675Z"
-                    fill="#EB3A4A"
-                  />
-                </svg>
-              </Link>
-            </div>
+                <path
+                  d="M15.6998 11.675L9.6998 17.675L8.2998 16.275L12.8998 11.675L8.2998 7.07499L9.6998 5.67499L15.6998 11.675Z"
+                  fill="#EB3A4A"
+                />
+              </svg>
+            </Link>
           </ObserverContainer>
         </div>
       </div>

@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react';
-import Image from 'next/image';
-import { Tween } from 'react-gsap';
-import { Scene } from 'react-scrollmagic';
 import { Images } from '@/assets/imgs';
 import { BtnRed } from '@/components/Buttons';
 import { ObserverContainer } from '@/components/ObserverContainer';
 import { splitLines } from '@/modules/utils/utils';
+import Image from 'next/image';
+import { Tween } from 'react-gsap';
+import { Scene } from 'react-scrollmagic';
 
 export const CommunitySection = () => {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -39,6 +39,7 @@ export const CommunitySection = () => {
           <Image
             src={Images.landing.sphere8}
             alt=""
+            quality={100}
             width={92}
             height={92}
             className="sphere sphere1"
@@ -56,6 +57,7 @@ export const CommunitySection = () => {
             <Image
               src={Images.xbg.smoke}
               alt=""
+              quality={100}
               width={500}
               height={250}
               className="smoke"
@@ -73,6 +75,7 @@ export const CommunitySection = () => {
               <Image
                 src={Images.landing.prometheus}
                 alt=""
+                quality={100}
                 width={326}
                 height={250}
                 className="prometheus"
@@ -84,6 +87,7 @@ export const CommunitySection = () => {
       <Image
         src={Images.landing.sphere9}
         alt=""
+        quality={100}
         width={92}
         height={92}
         className="sphere sphere2"
