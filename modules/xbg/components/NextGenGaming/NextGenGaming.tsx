@@ -19,14 +19,14 @@ export const NextGenGaming = () => {
   return (
     <div className="main-container">
       <Tokenomics />
-      <div className="next-gen-gaming">
+      <div className="xbg-next-gen-gaming">
         <div className="container">
           <ObserverContainer className="flex column">
             <h2 className="integralfc-h2 reveal-from-bottom" ref={ref}>
               The next generation of gaming is decentralised
             </h2>
 
-            <p className="section-description lexend-body-sm l">
+            <p className=" section-description lexend-body-sm l">
               Shape the trajectory of next-gen gaming applications and vote on
               key ecosystem decisions with $XBG.
             </p>
@@ -79,9 +79,9 @@ export const NextGenGaming = () => {
                   height={75}
                 />
 
-                <span className="lexend-body-sxl sphere-title">
+                <div className="lexend-body-sxl sphere-title">
                   Decentralised esports
-                </span>
+                </div>
               </div>
             </ObserverContainer>
           </div>

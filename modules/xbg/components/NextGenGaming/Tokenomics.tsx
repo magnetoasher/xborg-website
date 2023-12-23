@@ -1,8 +1,5 @@
 import { Images } from '@/assets/imgs';
-import { ObserverContainer } from '@/components/ObserverContainer';
-import { splitLines } from '@/modules/utils';
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
 
 const Tokenomics = () => {
   return (
