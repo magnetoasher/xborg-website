@@ -1547,6 +1547,12 @@ footer.footer {
             line-height: normal;
             text-transform: uppercase;
             color: #eb3a4a; }
+        @media screen and (min-width: 954px) and (max-width: 1251px) {
+          footer.footer .inner-container .footer-actions .footer-links .link-list {
+            min-width: auto; } }
+        @media screen and (max-width: 1251px) {
+          footer.footer .inner-container .footer-actions .footer-links .link-list {
+            flex: 1 1 50%; } }
       footer.footer .inner-container .footer-actions .bottom-box {
         width: 100%;
         display: flex;
@@ -1571,11 +1577,9 @@ footer.footer {
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            gap: 32px; }
-          @media screen and (max-width: 768px) {
-            footer.footer .inner-container .footer-actions .bottom-box .inner-box .link-box {
-              display: none; } }
-    @media screen and (max-width: 768px) {
+            gap: 32px;
+            margin-top: 12px; }
+    @media screen and (max-width: 953px) {
       footer.footer .inner-container {
         flex-direction: column;
         gap: 0; }
@@ -1588,7 +1592,9 @@ footer.footer {
               display: block;
               margin: 24px 0; }
         footer.footer .inner-container .footer-actions .bottom-box {
-          padding-right: 0; } }
+          padding-right: 0; }
+          footer.footer .inner-container .footer-actions .bottom-box .inner-box {
+            flex-direction: column; } }
   @media (max-width: 1400px) {
     footer.footer .parallax-bubble {
       display: none; } }
@@ -4333,7 +4339,7 @@ footer.footer {
       .xbg-introduction .introduction-content p {
         max-width: 396px; } }
 
-.possibilities {
+.xbg-possibilities {
   position: relative;
   z-index: 3;
   padding-top: 120px;
@@ -4341,31 +4347,34 @@ footer.footer {
   background-repeat: no-repeat;
   background-position: bottom right;
   background-color: #101010; }
-  .possibilities h2 {
-    max-width: 570px; }
-    .possibilities h2 .word {
+  .xbg-possibilities h2 {
+    max-width: 570px;
+    font-size: 40px;
+    line-height: 48px; }
+    .xbg-possibilities h2 .word {
       transform: translateY(16px);
       opacity: 0;
       transition: 3s cubic-bezier(0.19, 1, 0.22, 1); }
-  .possibilities .parallax-bubble {
+  .xbg-possibilities .parallax-bubble {
     position: absolute;
     left: 192px;
     bottom: 19px; }
-  .possibilities .list {
+  .xbg-possibilities .list-container {
+    flex-direction: column;
     margin-top: 40px;
     min-width: 417px; }
-    .possibilities .list a {
+    .xbg-possibilities .list-container a {
       padding: 16px 0;
       color: #95959d;
       transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
       position: relative; }
-      .possibilities .list a .link-inner {
+      .xbg-possibilities .list-container a .link-inner {
         transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
         transform: translateX(-16px);
         opacity: 0; }
-      .possibilities .list a span {
+      .xbg-possibilities .list-container a span {
         transition: 1s cubic-bezier(0.19, 1, 0.22, 1); }
-      .possibilities .list a:before {
+      .xbg-possibilities .list-container a:before {
         content: '';
         position: absolute;
         bottom: 0;
@@ -4374,7 +4383,7 @@ footer.footer {
         background-color: #242424;
         height: 1px;
         transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1); }
-      .possibilities .list a:after {
+      .xbg-possibilities .list-container a:after {
         content: '';
         position: absolute;
         bottom: 0;
@@ -4383,194 +4392,254 @@ footer.footer {
         background-color: #eb3a4a;
         height: 1px;
         transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1); }
-      .possibilities .list a:hover span {
+      .xbg-possibilities .list-container a:hover span {
         color: #fff; }
-    .possibilities .list svg {
+    .xbg-possibilities .list-container svg {
       transform: translateX(-15px);
       opacity: 0;
       transition: 1s cubic-bezier(0.19, 1, 0.22, 1); }
-    .possibilities .list.in a.active span {
+    .xbg-possibilities .list-container.in a.active span {
       color: #e4e4e6; }
-    .possibilities .list.in a.active:after {
+    .xbg-possibilities .list-container.in a.active:after {
       animation: 8s linear width forwards; }
-    .possibilities .list.in a.active svg {
+    .xbg-possibilities .list-container.in a.active svg {
       transform: translateX(0);
       opacity: 1; }
-    .possibilities .list.in a:before {
+    .xbg-possibilities .list-container.in a:before {
       width: 100%; }
-    .possibilities .list.in a:nth-child(1) .link-inner {
+    .xbg-possibilities .list-container.in a:nth-child(1) .link-inner {
       transition-delay: 0.3s; }
-    .possibilities .list.in a:nth-child(1):before {
+    .xbg-possibilities .list-container.in a:nth-child(1):before {
       transition-delay: 0.25s; }
-    .possibilities .list.in a:nth-child(2) .link-inner {
+    .xbg-possibilities .list-container.in a:nth-child(2) .link-inner {
       transition-delay: 0.4s; }
-    .possibilities .list.in a:nth-child(2):before {
+    .xbg-possibilities .list-container.in a:nth-child(2):before {
       transition-delay: 0.3s; }
-    .possibilities .list.in a:nth-child(3) .link-inner {
+    .xbg-possibilities .list-container.in a:nth-child(3) .link-inner {
       transition-delay: 0.5s; }
-    .possibilities .list.in a:nth-child(3):before {
+    .xbg-possibilities .list-container.in a:nth-child(3):before {
       transition-delay: 0.35s; }
-    .possibilities .list.in a:nth-child(4) .link-inner {
+    .xbg-possibilities .list-container.in a:nth-child(4) .link-inner {
       transition-delay: 0.6s; }
-    .possibilities .list.in a:nth-child(4):before {
+    .xbg-possibilities .list-container.in a:nth-child(4):before {
       transition-delay: 0.4s; }
-    .possibilities .list.in a:nth-child(5) .link-inner {
+    .xbg-possibilities .list-container.in a:nth-child(5) .link-inner {
       transition-delay: 0.7s; }
-    .possibilities .list.in a:nth-child(5):before {
+    .xbg-possibilities .list-container.in a:nth-child(5):before {
       transition-delay: 0.45s; }
-    .possibilities .list.in a:nth-child(6) .link-inner {
+    .xbg-possibilities .list-container.in a:nth-child(6) .link-inner {
       transition-delay: 0.8s; }
-    .possibilities .list.in a:nth-child(6):before {
+    .xbg-possibilities .list-container.in a:nth-child(6):before {
       transition-delay: 0.5s; }
-    .possibilities .list.in a:nth-child(7) .link-inner {
+    .xbg-possibilities .list-container.in a:nth-child(7) .link-inner {
       transition-delay: 0.9s; }
-    .possibilities .list.in a:nth-child(7):before {
+    .xbg-possibilities .list-container.in a:nth-child(7):before {
       transition-delay: 0.55s; }
-    .possibilities .list.in a:nth-child(8) .link-inner {
+    .xbg-possibilities .list-container.in a:nth-child(8) .link-inner {
       transition-delay: 1s; }
-    .possibilities .list.in a:nth-child(8):before {
+    .xbg-possibilities .list-container.in a:nth-child(8):before {
       transition-delay: 0.6s; }
-    .possibilities .list.in a:nth-child(9) .link-inner {
+    .xbg-possibilities .list-container.in a:nth-child(9) .link-inner {
       transition-delay: 1.1s; }
-    .possibilities .list.in a:nth-child(9):before {
+    .xbg-possibilities .list-container.in a:nth-child(9):before {
       transition-delay: 0.65s; }
-    .possibilities .list.in a:nth-child(10) .link-inner {
+    .xbg-possibilities .list-container.in a:nth-child(10) .link-inner {
       transition-delay: 1.2s; }
-    .possibilities .list.in a:nth-child(10):before {
+    .xbg-possibilities .list-container.in a:nth-child(10):before {
       transition-delay: 0.7s; }
-    .possibilities .list.in a .link-inner {
+    .xbg-possibilities .list-container.in a .link-inner {
       opacity: 1;
       transform: translateX(0); }
-  .possibilities .list-index {
+    .xbg-possibilities .list-container .pagination {
+      display: none;
+      justify-content: flex-end;
+      align-items: flex-end;
+      gap: 8px; }
+      .xbg-possibilities .list-container .pagination span:first-child {
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1); }
+      .xbg-possibilities .list-container .pagination svg {
+        transform: none;
+        opacity: 1;
+        color: #62626a; }
+      .xbg-possibilities .list-container .pagination span {
+        cursor: not-allowed; }
+      .xbg-possibilities .list-container .pagination .active {
+        cursor: pointer !important; }
+        .xbg-possibilities .list-container .pagination .active svg {
+          color: #fff !important; }
+  .xbg-possibilities .list-index {
     margin-top: 48px; }
-    .possibilities .list-index .current {
+    .xbg-possibilities .list-index .current {
       color: #cacace; }
-    .possibilities .list-index .total {
+    .xbg-possibilities .list-index .total {
       color: #62626a; }
-  .possibilities .spacer {
+  .xbg-possibilities .spacer {
     margin: 0 12px;
     width: 21px;
     height: 1px;
     background-color: #62626a; }
-  .possibilities .container {
+  .xbg-possibilities .container {
     position: relative; }
-  .possibilities .content {
+  .xbg-possibilities .inner-container {
+    position: relative; }
+  .xbg-possibilities .content {
     position: absolute;
     right: 0;
     top: 0;
     max-width: 382px;
     pointer-events: none; }
-    .possibilities .content img {
+    .xbg-possibilities .content img {
       transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
       opacity: 0;
       transform: translateY(-16px); }
-    .possibilities .content .js-tilt-glare-inner {
+    .xbg-possibilities .content .js-tilt-glare-inner {
       background-image: none !important; }
-    .possibilities .content .lexend-heading-xl {
+    .xbg-possibilities .content .lexend-heading-xl {
       text-align: center;
       transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
       opacity: 0;
       transform: translateY(16px); }
-    .possibilities .content .lexend-body-md {
+    .xbg-possibilities .content .lexend-body-md {
       text-align: center;
       margin-top: 16px;
       color: #cacace;
       opacity: 0;
       transform: translateY(16px);
       transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1); }
-    .possibilities .content.active {
+    .xbg-possibilities .content.active {
       pointer-events: initial; }
-      .possibilities .content.active .lexend-heading-xl,
-      .possibilities .content.active .lexend-body-md,
-      .possibilities .content.active img {
+      .xbg-possibilities .content.active .lexend-heading-xl,
+      .xbg-possibilities .content.active .lexend-body-md,
+      .xbg-possibilities .content.active img {
         opacity: 1;
         transform: translateY(0); }
-  .possibilities .in h2 .word {
+  .xbg-possibilities .in h2 .word {
     opacity: 1;
     transform: translateY(0); }
-    .possibilities .in h2 .word:nth-child(1) {
+    .xbg-possibilities .in h2 .word:nth-child(1) {
       transition-delay: 0.335s; }
-    .possibilities .in h2 .word:nth-child(2) {
+    .xbg-possibilities .in h2 .word:nth-child(2) {
       transition-delay: 0.37s; }
-    .possibilities .in h2 .word:nth-child(3) {
+    .xbg-possibilities .in h2 .word:nth-child(3) {
       transition-delay: 0.405s; }
-    .possibilities .in h2 .word:nth-child(4) {
+    .xbg-possibilities .in h2 .word:nth-child(4) {
       transition-delay: 0.44s; }
-    .possibilities .in h2 .word:nth-child(5) {
+    .xbg-possibilities .in h2 .word:nth-child(5) {
       transition-delay: 0.475s; }
-    .possibilities .in h2 .word:nth-child(6) {
+    .xbg-possibilities .in h2 .word:nth-child(6) {
       transition-delay: 0.51s; }
-    .possibilities .in h2 .word:nth-child(7) {
+    .xbg-possibilities .in h2 .word:nth-child(7) {
       transition-delay: 0.545s; }
-    .possibilities .in h2 .word:nth-child(8) {
+    .xbg-possibilities .in h2 .word:nth-child(8) {
       transition-delay: 0.58s; }
-    .possibilities .in h2 .word:nth-child(9) {
+    .xbg-possibilities .in h2 .word:nth-child(9) {
       transition-delay: 0.615s; }
-    .possibilities .in h2 .word:nth-child(10) {
+    .xbg-possibilities .in h2 .word:nth-child(10) {
       transition-delay: 0.65s; }
   @media (max-width: 1400px) {
-    .possibilities .content {
+    .xbg-possibilities .content {
       right: 16px; } }
   @media (max-width: 992px) {
-    .possibilities h2 {
+    .xbg-possibilities h2 {
       max-width: 396px;
       text-align: center;
-      align-self: center;
-      padding-bottom: 371px; }
-    .possibilities .list {
+      align-self: center; }
+    .xbg-possibilities .inner-container {
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 20px; }
+      .xbg-possibilities .inner-container .content {
+        position: relative;
+        top: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        transform: translateX(0%) !important;
+        max-width: 500px !important; }
+        .xbg-possibilities .inner-container .content .dec {
+          height: 104px; }
+        .xbg-possibilities .inner-container .content .content-image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          max-width: 300px;
+          min-height: 141px;
+          height: 260px; }
+          .xbg-possibilities .inner-container .content .content-image img {
+            width: 100%;
+            height: auto; }
+    .xbg-possibilities .list-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
       min-width: initial;
       width: 100%;
-      margin-top: 90px; }
-    .possibilities .content {
+      margin-top: 20px; }
+      .xbg-possibilities .list-container .list {
+        display: none; }
+      .xbg-possibilities .list-container .list-index {
+        margin-top: 0; }
+      .xbg-possibilities .list-container .pagination {
+        display: flex; }
+    .xbg-possibilities .content {
       top: 130px;
       max-width: 300px;
       width: 100%;
       left: 50%;
       right: initial;
       transform: translateX(-50%); }
-    .possibilities .content-image {
+    .xbg-possibilities .content-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       max-width: 300px; }
-      .possibilities .content-image img {
+      .xbg-possibilities .content-image img {
         width: 100%;
         height: auto; } }
   @media (max-width: 768px) {
-    .possibilities .content {
-      top: 70px; } }
+    .xbg-possibilities .content {
+      top: 70px;
+      max-width: 100%; } }
 
-.growing {
+.xbg-growing {
   position: relative;
   padding: 120px 16px;
   overflow: hidden;
-  min-height: 837px;
+  min-height: 1000px;
   z-index: 3; }
-  .growing .blocks-container {
+  .xbg-growing .blocks-container {
     gap: 24px;
     margin-top: 72px; }
-  .growing .background1 {
+  .xbg-growing h2 {
+    margin-top: -60px;
+    text-align: center; }
+  .xbg-growing .background1 {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 30%;
     height: auto;
     z-index: -1; }
-  .growing .background2 {
+  .xbg-growing .background2 {
     position: absolute;
     bottom: 0;
     right: 0;
     width: 50%;
     height: auto;
     z-index: -1; }
-  .growing h2 {
+  .xbg-growing h2 {
     max-width: 396px; }
-    .growing h2 .word {
+    .xbg-growing h2 .word {
       transform: translateY(16px);
       opacity: 0;
       transition: 3s cubic-bezier(0.19, 1, 0.22, 1); }
-  .growing .block-content {
+  .xbg-growing .block-content {
     pointer-events: none; }
-    .growing .block-content .block {
+    .xbg-growing .block-content .block {
       pointer-events: all; }
-  .growing .block-container {
+  .xbg-growing .block-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -4579,7 +4648,7 @@ footer.footer {
     transition: 0.6s ease-in;
     position: relative;
     pointer-events: none; }
-  .growing .block-container .block {
+  .xbg-growing .block-container .block {
     min-width: 284px;
     min-height: 84px;
     border-radius: 16px;
@@ -4588,76 +4657,76 @@ footer.footer {
     backdrop-filter: blur(10px);
     padding: 32px 24px;
     pointer-events: all; }
-    .growing .block-container .block p.lexend-body-sm {
+    .xbg-growing .block-container .block p.lexend-body-sm {
       color: #cacace; }
-    .growing .block-container .block .btn-dark-container {
+    .xbg-growing .block-container .block .btn-dark-container {
       margin-top: 16px;
       border-radius: 300px; }
-    .growing .block-container .block .btn-dark {
+    .xbg-growing .block-container .block .btn-dark {
       border-radius: 300px; }
-      .growing .block-container .block .btn-dark:before {
+      .xbg-growing .block-container .block .btn-dark:before {
         background: linear-gradient(45deg, #787878 0%, #1e1e1e 60%, #1e1e1e 100%); }
-  .growing .in h2 .word {
+  .xbg-growing .in h2 .word {
     opacity: 1;
     transform: translateY(0); }
-    .growing .in h2 .word:nth-child(1) {
+    .xbg-growing .in h2 .word:nth-child(1) {
       transition-delay: 0.135s; }
-    .growing .in h2 .word:nth-child(2) {
+    .xbg-growing .in h2 .word:nth-child(2) {
       transition-delay: 0.17s; }
-    .growing .in h2 .word:nth-child(3) {
+    .xbg-growing .in h2 .word:nth-child(3) {
       transition-delay: 0.205s; }
-    .growing .in h2 .word:nth-child(4) {
+    .xbg-growing .in h2 .word:nth-child(4) {
       transition-delay: 0.24s; }
-    .growing .in h2 .word:nth-child(5) {
+    .xbg-growing .in h2 .word:nth-child(5) {
       transition-delay: 0.275s; }
-    .growing .in h2 .word:nth-child(6) {
+    .xbg-growing .in h2 .word:nth-child(6) {
       transition-delay: 0.31s; }
-    .growing .in h2 .word:nth-child(7) {
+    .xbg-growing .in h2 .word:nth-child(7) {
       transition-delay: 0.345s; }
-    .growing .in h2 .word:nth-child(8) {
+    .xbg-growing .in h2 .word:nth-child(8) {
       transition-delay: 0.38s; }
-    .growing .in h2 .word:nth-child(9) {
+    .xbg-growing .in h2 .word:nth-child(9) {
       transition-delay: 0.415s; }
-    .growing .in h2 .word:nth-child(10) {
+    .xbg-growing .in h2 .word:nth-child(10) {
       transition-delay: 0.45s; }
-  .growing .in .block-container {
+  .xbg-growing .in .block-container {
     opacity: 1;
     transform: translateY(0); }
-    .growing .in .block-container:nth-child(1) {
+    .xbg-growing .in .block-container:nth-child(1) {
       transition-delay: 0.3s; }
-    .growing .in .block-container:nth-child(2) {
+    .xbg-growing .in .block-container:nth-child(2) {
       transition-delay: 0.4s; }
-    .growing .in .block-container:nth-child(3) {
+    .xbg-growing .in .block-container:nth-child(3) {
       transition-delay: 0.5s; }
-    .growing .in .block-container:nth-child(4) {
+    .xbg-growing .in .block-container:nth-child(4) {
       transition-delay: 0.6s; }
-    .growing .in .block-container:nth-child(5) {
+    .xbg-growing .in .block-container:nth-child(5) {
       transition-delay: 0.7s; }
-    .growing .in .block-container:nth-child(6) {
+    .xbg-growing .in .block-container:nth-child(6) {
       transition-delay: 0.8s; }
-    .growing .in .block-container:nth-child(7) {
+    .xbg-growing .in .block-container:nth-child(7) {
       transition-delay: 0.9s; }
-    .growing .in .block-container:nth-child(8) {
+    .xbg-growing .in .block-container:nth-child(8) {
       transition-delay: 1s; }
-    .growing .in .block-container:nth-child(9) {
+    .xbg-growing .in .block-container:nth-child(9) {
       transition-delay: 1.1s; }
-    .growing .in .block-container:nth-child(10) {
+    .xbg-growing .in .block-container:nth-child(10) {
       transition-delay: 1.2s; }
   @media (max-width: 992px) {
-    .growing h2 {
+    .xbg-growing h2 {
       max-width: 396px; } }
-  .growing .growing-background-wrapper {
-    display: none;
+  .xbg-growing .xbg-growing-background-wrapper {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     min-height: 837px;
     z-index: -1; }
-    .growing .growing-background-wrapper img {
+    .xbg-growing .xbg-growing-background-wrapper img {
       transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
       height: 100%; }
-  .growing .main-bubble {
+  .xbg-growing .main-bubble {
     position: absolute;
     top: 28%;
     left: 50%;
@@ -4669,13 +4738,13 @@ footer.footer {
     align-items: center;
     width: 100%;
     height: 700px; }
-    .growing .main-bubble img {
+    .xbg-growing .main-bubble img {
       rotate: -5deg;
       transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
       height: 100%; }
-    .growing .main-bubble.in img {
+    .xbg-growing .main-bubble.in img {
       transform: rotate(0); }
-    .growing .main-bubble .orbit {
+    .xbg-growing .main-bubble .orbit {
       width: 600px;
       height: 560px;
       border-radius: 50%;
@@ -4683,69 +4752,69 @@ footer.footer {
       top: 10%;
       left: 50%;
       transform: translateX(-50%); }
-    .growing .main-bubble .orbit-content img {
+    .xbg-growing .main-bubble .orbit-content img {
       rotate: 0deg;
       width: 100% !important;
       height: 100% !important; }
-    .growing .main-bubble .orbit-content .circle-1 {
+    .xbg-growing .main-bubble .orbit-content .circle-1 {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: -1;
-      width: 1250px;
-      height: 1250px; }
-    .growing .main-bubble .orbit-content .circle-2 {
+      width: 1600px;
+      height: 1600px; }
+    .xbg-growing .main-bubble .orbit-content .circle-2 {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: -1;
-      width: 900px;
-      height: 900px; }
-    .growing .main-bubble .orbit-content .sphere {
+      width: 1150px;
+      height: 1150px; }
+    .xbg-growing .main-bubble .orbit-content .sphere {
       color: #fff;
-      max-width: 108px;
-      font-size: 13px; }
-    .growing .main-bubble .orbit-content .sphere-1 {
+      max-width: 120px;
+      font-size: 12px; }
+    .xbg-growing .main-bubble .orbit-content .sphere-1 {
       background: linear-gradient(189deg, #3d3d3d -44.26%, #f3f3f3 185.8%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       position: absolute;
-      top: -90px;
+      top: -105px;
       left: 44%;
       transform: translateX(-44%);
       width: max-content;
       text-align: center; }
-    .growing .main-bubble .orbit-content .sphere-2 {
+    .xbg-growing .main-bubble .orbit-content .sphere-2 {
       background: linear-gradient(91deg, #f3f3f3 -37.01%, #3d3d3d 110.8%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       position: absolute;
       top: 3%;
-      right: -20px;
+      right: -40px;
       width: max-content; }
-    .growing .main-bubble .orbit-content .sphere-3 {
+    .xbg-growing .main-bubble .orbit-content .sphere-3 {
       background: linear-gradient(91deg, #f3f3f3 -37.01%, #3d3d3d 110.8%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       position: absolute;
       top: 38%;
-      right: -120px;
+      right: -150px;
       width: max-content; }
-    .growing .main-bubble .orbit-content .sphere-4 {
+    .xbg-growing .main-bubble .orbit-content .sphere-4 {
       background: linear-gradient(91deg, #f3f3f3 -37.01%, #3d3d3d 110.8%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       position: absolute;
       bottom: 15%;
-      right: -60px;
+      right: -85px;
       width: max-content; }
-    .growing .main-bubble .orbit-content .sphere-5 {
+    .xbg-growing .main-bubble .orbit-content .sphere-5 {
       background: linear-gradient(354deg, #3d3d3d -32.65%, #f3f3f3 153.06%);
       background-clip: text;
       -webkit-background-clip: text;
@@ -4756,145 +4825,220 @@ footer.footer {
       transform: translateX(-58%);
       width: max-content;
       text-align: center; }
-    .growing .main-bubble .orbit-content .sphere-6 {
+    .xbg-growing .main-bubble .orbit-content .sphere-6 {
       background: linear-gradient(96deg, #3d3d3d 27.8%, #f3f3f3 129.25%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       position: absolute;
       bottom: 8%;
-      left: -20px;
+      left: -45px;
       width: max-content;
       text-align: right; }
-    .growing .main-bubble .orbit-content .sphere-7 {
+    .xbg-growing .main-bubble .orbit-content .sphere-7 {
       background: linear-gradient(96deg, #3d3d3d 27.8%, #f3f3f3 129.25%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       position: absolute;
       top: 50%;
-      left: -120px;
+      left: -145px;
       width: max-content;
       text-align: right; }
-    .growing .main-bubble .orbit-content .sphere-8 {
+    .xbg-growing .main-bubble .orbit-content .sphere-8 {
       background: linear-gradient(96deg, #3d3d3d 27.8%, #f3f3f3 129.25%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       position: absolute;
       top: 8%;
-      left: -50px;
+      left: -70px;
       width: 94px;
       text-align: right; }
-    @media screen and (max-width: 768px) {
-      .growing .main-bubble .orbit-content .sphere {
-        font-size: 12px; } }
-    @media screen and (max-width: 576px) {
-      .growing .main-bubble .orbit-content .sphere {
-        font-size: 10px; } }
+    @media screen and (max-width: 992px) {
+      .xbg-growing .main-bubble .orbit-content .sphere {
+        max-width: 104px; }
+      .xbg-growing .main-bubble .orbit-content .sphere-1 {
+        top: -90px;
+        left: 44%; }
+      .xbg-growing .main-bubble .orbit-content .sphere-2 {
+        top: 3%;
+        right: -20px; }
+      .xbg-growing .main-bubble .orbit-content .sphere-3 {
+        top: 38%;
+        right: -120px; }
+      .xbg-growing .main-bubble .orbit-content .sphere-4 {
+        bottom: 15%;
+        right: -60px; }
+      .xbg-growing .main-bubble .orbit-content .sphere-6 {
+        bottom: 8%;
+        left: -20px; }
+      .xbg-growing .main-bubble .orbit-content .sphere-7 {
+        top: 50%;
+        left: -120px; }
+      .xbg-growing .main-bubble .orbit-content .sphere-8 {
+        top: 8%;
+        left: -50px; } }
+    @media screen and (max-width: 863px) {
+      .xbg-growing .main-bubble .orbit-content .sphere {
+        font-size: 10px;
+        max-width: 90px; }
+      .xbg-growing .main-bubble .orbit-content .sphere-1 {
+        top: -110px;
+        left: 44%; }
+      .xbg-growing .main-bubble .orbit-content .sphere-2 {
+        top: 1%;
+        right: -2px; }
+      .xbg-growing .main-bubble .orbit-content .sphere-3 {
+        top: 38%;
+        right: -100px; }
+      .xbg-growing .main-bubble .orbit-content .sphere-4 {
+        bottom: 13%;
+        right: -40px; }
+      .xbg-growing .main-bubble .orbit-content .sphere-5 {
+        bottom: -82px;
+        left: 58px; }
+      .xbg-growing .main-bubble .orbit-content .sphere-6 {
+        bottom: 8%;
+        left: -20px; }
+      .xbg-growing .main-bubble .orbit-content .sphere-7 {
+        top: 50%;
+        left: -120px; }
+      .xbg-growing .main-bubble .orbit-content .sphere-8 {
+        top: 8%;
+        left: -50px; } }
+    @media screen and (max-width: 815px) {
+      .xbg-growing .main-bubble .orbit-content .sphere-3 {
+        top: 28%;
+        right: -75px; } }
   @media (max-width: 768px) {
-    .growing {
+    .xbg-growing {
       min-height: 800px !important; }
-      .growing .integralfc-h2 {
+      .xbg-growing .integralfc-h2 {
         text-align: center;
         font-size: 40px;
         font-style: normal;
         font-weight: 400;
         line-height: 48px; }
-      .growing .background1,
-      .growing .background2 {
+      .xbg-growing .background1,
+      .xbg-growing .background2 {
         width: 100%; }
-      .growing .main-bubble {
+      .xbg-growing .main-bubble {
         top: 40%;
         height: 400px; }
-        .growing .main-bubble .orbit {
+        .xbg-growing .main-bubble .orbit {
           width: 450px;
           height: 320px; }
-        .growing .main-bubble .orbit-content .circle-1 {
+        .xbg-growing .main-bubble .orbit-content .circle-1 {
           width: 1000px;
           height: 1000px; }
-        .growing .main-bubble .orbit-content .circle-2 {
+        .xbg-growing .main-bubble .orbit-content .circle-2 {
           width: 700px;
           height: 700px; }
-        .growing .main-bubble .orbit-content .sphere-1 {
-          top: -70px;
+        .xbg-growing .main-bubble .orbit-content .sphere {
+          font-size: 11px; }
+        .xbg-growing .main-bubble .orbit-content .sphere-1 {
+          top: -85px;
           left: 44%;
           transform: translateX(-44%); }
-        .growing .main-bubble .orbit-content .sphere-2 {
-          top: 0px;
-          right: -3%; }
-        .growing .main-bubble .orbit-content .sphere-3 {
+        .xbg-growing .main-bubble .orbit-content .sphere-2 {
+          top: -8px;
+          right: -2%; }
+        .xbg-growing .main-bubble .orbit-content .sphere-3 {
           top: 36%;
-          right: -80px; }
-        .growing .main-bubble .orbit-content .sphere-4 {
-          bottom: 13%;
-          right: -40px; }
-        .growing .main-bubble .orbit-content .sphere-5 {
-          bottom: -60px;
+          right: -55px; }
+        .xbg-growing .main-bubble .orbit-content .sphere-4 {
+          bottom: 7%;
+          right: -20px; }
+        .xbg-growing .main-bubble .orbit-content .sphere-5 {
+          bottom: -78px;
           left: 58%;
           transform: translateX(-58%); }
-        .growing .main-bubble .orbit-content .sphere-6 {
+        .xbg-growing .main-bubble .orbit-content .sphere-6 {
           bottom: 8px;
           left: -3%; }
-        .growing .main-bubble .orbit-content .sphere-7 {
-          top: 48%;
-          left: -80px; }
-        .growing .main-bubble .orbit-content .sphere-8 {
+        .xbg-growing .main-bubble .orbit-content .sphere-7 {
+          top: 42%;
+          left: -55px; }
+        .xbg-growing .main-bubble .orbit-content .sphere-8 {
           top: 8%;
-          left: -30px; } }
+          left: -21px; } }
   @media (max-width: 576px) {
-    .growing .main-bubble {
+    .xbg-growing .main-bubble {
       height: 400px; }
-      .growing .main-bubble .orbit {
+      .xbg-growing .main-bubble .orbit {
         width: 300px;
         height: 310px; }
-      .growing .main-bubble .orbit-content .circle-1 {
+      .xbg-growing .main-bubble .orbit-content .circle-1 {
         width: 850px;
         height: 850px; }
-      .growing .main-bubble .orbit-content .circle-2 {
+      .xbg-growing .main-bubble .orbit-content .circle-2 {
         width: 600px;
         height: 600px; }
-      .growing .main-bubble .orbit-content .sphere-1 {
-        top: -70px;
-        left: 40%;
+      .xbg-growing .main-bubble .orbit-content .sphere {
+        font-size: 10px; }
+      .xbg-growing .main-bubble .orbit-content .sphere-1 {
+        top: -65px;
+        left: 43%;
         transform: translateX(-48%); }
-      .growing .main-bubble .orbit-content .sphere-2 {
-        top: -30px;
-        right: -20%; }
-      .growing .main-bubble .orbit-content .sphere-3 {
-        top: 48%;
-        right: -70px;
+      .xbg-growing .main-bubble .orbit-content .sphere-2 {
+        top: -33px;
+        right: -5%;
+        max-width: 104px; }
+      .xbg-growing .main-bubble .orbit-content .sphere-3 {
+        top: 50%;
+        right: -68px;
         max-width: 96px;
         text-align: center; }
-      .growing .main-bubble .orbit-content .sphere-4 {
-        bottom: -3%;
-        right: -50px; }
-      .growing .main-bubble .orbit-content .sphere-5 {
-        bottom: -70px;
+      .xbg-growing .main-bubble .orbit-content .sphere-4 {
+        bottom: -1%;
+        right: -25px; }
+      .xbg-growing .main-bubble .orbit-content .sphere-5 {
+        bottom: -64px;
         left: 60%;
         transform: translateX(-55%); }
-      .growing .main-bubble .orbit-content .sphere-6 {
-        bottom: -30px;
-        left: -18%; }
-      .growing .main-bubble .orbit-content .sphere-7 {
+      .xbg-growing .main-bubble .orbit-content .sphere-6 {
+        bottom: -34px;
+        left: -5%; }
+      .xbg-growing .main-bubble .orbit-content .sphere-7 {
         top: 62%;
-        left: -62px;
+        left: -50px;
         max-width: 96px;
         text-align: center; }
-      .growing .main-bubble .orbit-content .sphere-8 {
+      .xbg-growing .main-bubble .orbit-content .sphere-8 {
         top: -3%;
-        left: -70px; } }
+        left: -50px; } }
+  @media screen and (min-width: 442px) and (max-width: 577px) {
+    .xbg-growing .main-bubble .orbit-content .sphere-3 {
+      max-width: 96px;
+      text-align: center; }
+    .xbg-growing .main-bubble .orbit-content .sphere-7 {
+      max-width: 96px; } }
+  @media screen and (max-width: 441px) {
+    .xbg-growing .main-bubble .orbit-content .sphere-3 {
+      max-width: 80px;
+      right: -37px; }
+    .xbg-growing .main-bubble .orbit-content .sphere-7 {
+      max-width: 80px; } }
   @media (max-width: 1400px) {
-    .growing {
+    .xbg-growing {
       min-height: 950px;
       overflow: hidden; }
-      .growing h2 {
-        margin-top: -60px; }
-      .growing .growing-background-wrapper {
+      .xbg-growing .xbg-growing-background-wrapper {
         display: block; }
-      .growing .background1,
-      .growing .background2,
-      .growing .blocks-container {
+      .xbg-growing .orbit-content img {
+        rotate: 0deg;
+        width: 100% !important;
+        height: 100% !important; }
+      .xbg-growing .orbit-content .circle-1 {
+        width: 1250px;
+        height: 1250px; }
+      .xbg-growing .orbit-content .circle-2 {
+        width: 900px;
+        height: 900px; }
+      .xbg-growing .background1,
+      .xbg-growing .background2,
+      .xbg-growing .blocks-container {
         display: none; } }
 
 .xbg-stats {
@@ -4965,8 +5109,7 @@ footer.footer {
         font-style: normal;
         font-weight: 300;
         line-height: 24px;
-        color: #cacace;
-        margin-top: 32px; }
+        color: #cacace; }
     .xbg-stats .cards-container .sphere {
       position: absolute;
       z-index: 1; }
@@ -4988,6 +5131,10 @@ footer.footer {
   @media (max-width: 1200px) {
     .xbg-stats .cards-container .sphere {
       display: none; } }
+  @media screen and (min-width: 686px) and (max-width: 950px) {
+    .xbg-stats .inner-container .in {
+      align-items: center;
+      text-align: center; } }
   @media (max-width: 950px) {
     .xbg-stats .cards-container {
       flex-direction: column;
@@ -5093,7 +5240,7 @@ footer.footer {
         z-index: -1; }
       .community-section .cards-container .card-2:hover::before {
         opacity: 1; }
-    @media (max-width: 768px) {
+    @media (max-width: 1072px) {
       .community-section .cards-container {
         flex-direction: column; }
         .community-section .cards-container .card-1,
@@ -5103,6 +5250,9 @@ footer.footer {
           justify-content: flex-start;
           padding-top: 57px;
           padding-left: 24px; } }
+    @media screen and (min-width: 768px) and (max-width: 1072px) {
+      .community-section .cards-container .card-2 {
+        align-items: center; } }
     @media (max-width: 576px) {
       .community-section .cards-container .card-2 {
         height: 400px; } }
@@ -5132,8 +5282,7 @@ footer.footer {
       justify-content: flex-start;
       align-items: flex-start;
       gap: 24px;
-      color: #f0f0f0;
-      z-index: 1; }
+      color: #f0f0f0; }
       .main-container .tokenomics-container .header .top-container {
         display: flex;
         justify-content: flex-start;
@@ -5144,8 +5293,6 @@ footer.footer {
           flex-direction: column;
           justify-content: flex-start;
           align-items: flex-start; }
-      .main-container .tokenomics-container .header h1 {
-        font-size: 88px; }
     .main-container .tokenomics-container .spheres-container {
       width: 100%; }
       .main-container .tokenomics-container .spheres-container .t-sphere {
@@ -5192,26 +5339,27 @@ footer.footer {
       .main-container .tokenomics-container .spheres-container .t-sphere-7 {
         top: 0;
         left: 51px; }
-    @media (max-width: 865px) {
+    @media (max-width: 992px) {
+      .main-container .tokenomics-container .header {
+        align-items: center; } }
+    @media (max-width: 885px) {
       .main-container .tokenomics-container {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center; }
-        .main-container .tokenomics-container .header h1 {
-          font-size: 56px; }
         .main-container .tokenomics-container .spheres-container {
           height: auto;
           width: auto;
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
-          align-items: flex-start;
+          align-items: flex-start !important;
           gap: 48px;
           margin-bottom: 50px; }
           .main-container .tokenomics-container .spheres-container .t-sphere {
             position: relative !important;
-            flex-direction: row;
+            flex-direction: row !important;
             top: 0;
             left: 0;
             right: 0;
@@ -5236,13 +5384,28 @@ footer.footer {
           .main-container .tokenomics-container .spheres-container .t-sphere-3 img {
             width: 100px;
             height: 100px; }
-          .main-container .tokenomics-container .spheres-container .t-sphere-4 img,
-          .main-container .tokenomics-container .spheres-container .t-sphere-5 img,
-          .main-container .tokenomics-container .spheres-container .t-sphere-6 img,
-          .main-container .tokenomics-container .spheres-container .t-sphere-7 img {
-            width: 60px;
-            height: 60px; } }
-  .main-container .next-gen-gaming {
+          .main-container .tokenomics-container .spheres-container .t-sphere-4,
+          .main-container .tokenomics-container .spheres-container .t-sphere-5,
+          .main-container .tokenomics-container .spheres-container .t-sphere-6,
+          .main-container .tokenomics-container .spheres-container .t-sphere-7 {
+            top: 0% !important;
+            left: 0% !important; }
+            .main-container .tokenomics-container .spheres-container .t-sphere-4 img,
+            .main-container .tokenomics-container .spheres-container .t-sphere-5 img,
+            .main-container .tokenomics-container .spheres-container .t-sphere-6 img,
+            .main-container .tokenomics-container .spheres-container .t-sphere-7 img {
+              width: 60px;
+              height: 60px; } }
+    @media (min-width: 885px) {
+      .main-container .tokenomics-container .header h1 {
+        font-size: 88px; } }
+    @media screen and (min-width: 420px) and (max-width: 885px) {
+      .main-container .tokenomics-container .header h1 {
+        font-size: 56px; } }
+    @media (max-width: 420px) {
+      .main-container .tokenomics-container .header h1 {
+        font-size: 44px; } }
+  .main-container .xbg-next-gen-gaming {
     position: relative;
     z-index: 3;
     padding-top: 23px;
@@ -5253,22 +5416,23 @@ footer.footer {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center; }
-    .main-container .next-gen-gaming h2 {
+    .main-container .xbg-next-gen-gaming h2 {
       max-width: 630px;
       margin: 0 auto;
       text-align: center; }
-      .main-container .next-gen-gaming h2 .word {
+      .main-container .xbg-next-gen-gaming h2 .word {
         transform: translateY(16px);
         opacity: 0;
         transition: 3s cubic-bezier(0.19, 1, 0.22, 1); }
-    .main-container .next-gen-gaming .section-description {
+    .main-container .xbg-next-gen-gaming .blur-spheres {
+      z-index: -1; }
+    .main-container .xbg-next-gen-gaming .section-description {
       text-align: center;
       margin: 24px auto 0;
       max-width: 511px;
       opacity: 0;
-      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
-      color: #cacace; }
-    .main-container .next-gen-gaming .background-container {
+      transition: 1s cubic-bezier(0.19, 1, 0.22, 1); }
+    .main-container .xbg-next-gen-gaming .background-container {
       position: absolute;
       bottom: -94%;
       left: 50%;
@@ -5276,114 +5440,115 @@ footer.footer {
       width: 2828px;
       height: auto;
       z-index: -1; }
-      .main-container .next-gen-gaming .background-container img {
+      .main-container .xbg-next-gen-gaming .background-container img {
         width: 100%;
         height: auto;
         margin-bottom: -4px; }
-    .main-container .next-gen-gaming .parallax-token {
+    .main-container .xbg-next-gen-gaming .parallax-token {
       position: absolute;
       left: 32px;
       top: 0; }
-    .main-container .next-gen-gaming .parallax-token2 {
+    .main-container .xbg-next-gen-gaming .parallax-token2 {
       position: absolute;
       left: 105px;
       top: 20%;
       filter: blur(0.5px); }
-    .main-container .next-gen-gaming .parallax-token3 {
+    .main-container .xbg-next-gen-gaming .parallax-token3 {
       position: absolute;
       left: 69px;
       top: 30%;
       filter: blur(0.5px); }
-    .main-container .next-gen-gaming .parallax-token4 {
+    .main-container .xbg-next-gen-gaming .parallax-token4 {
       position: absolute;
       left: 105px;
       top: 35%;
       filter: blur(0.5px); }
-    .main-container .next-gen-gaming .parallax-token5 {
+    .main-container .xbg-next-gen-gaming .parallax-token5 {
       position: absolute;
       left: 105px;
       top: 40%;
       filter: blur(0.5px); }
-    .main-container .next-gen-gaming .parallax-token6 {
+    .main-container .xbg-next-gen-gaming .parallax-token6 {
       position: absolute;
       left: 42px;
       bottom: 216px;
       filter: blur(0.5px); }
-    .main-container .next-gen-gaming .parallax-token7 {
+    .main-container .xbg-next-gen-gaming .parallax-token7 {
       position: absolute;
       left: 62px;
       bottom: 141px;
       filter: blur(2.41635px); }
-    .main-container .next-gen-gaming .parallax-token8 {
+    .main-container .xbg-next-gen-gaming .parallax-token8 {
       position: absolute;
       left: 42px;
       bottom: 10px; }
-    .main-container .next-gen-gaming .parallax-token9 {
+    .main-container .xbg-next-gen-gaming .parallax-token9 {
       position: absolute;
       left: 144px;
       bottom: 112px; }
-    .main-container .next-gen-gaming .parallax-token10 {
+    .main-container .xbg-next-gen-gaming .parallax-token10 {
       position: absolute;
       left: 252px;
       bottom: 0; }
-    .main-container .next-gen-gaming .parallax-token11 {
+    .main-container .xbg-next-gen-gaming .parallax-token11 {
       position: absolute;
       left: 40%;
       bottom: 0;
       filter: blur(3.03917px); }
-    .main-container .next-gen-gaming .parallax-token12 {
+    .main-container .xbg-next-gen-gaming .parallax-token12 {
       position: absolute;
       left: 35%;
       bottom: 229px;
       opacity: 0.4; }
-    .main-container .next-gen-gaming .parallax-token13 {
+    .main-container .xbg-next-gen-gaming .parallax-token13 {
       position: absolute;
       left: 37%;
       bottom: 289px; }
-    .main-container .next-gen-gaming .parallax-token14 {
+    .main-container .xbg-next-gen-gaming .parallax-token14 {
       position: absolute;
       right: 30%;
       top: -32px; }
-    .main-container .next-gen-gaming .parallax-token15 {
+    .main-container .xbg-next-gen-gaming .parallax-token15 {
       position: absolute;
       right: 127px;
       top: 80px; }
-    .main-container .next-gen-gaming .parallax-token16 {
+    .main-container .xbg-next-gen-gaming .parallax-token16 {
       position: absolute;
       right: 107px;
       top: 120px; }
-    .main-container .next-gen-gaming .parallax-token17 {
+    .main-container .xbg-next-gen-gaming .parallax-token17 {
       position: absolute;
       right: 247px;
       top: 120px; }
-    .main-container .next-gen-gaming .parallax-token18 {
+    .main-container .xbg-next-gen-gaming .parallax-token18 {
       position: absolute;
       right: 128px;
       top: 30%; }
-    .main-container .next-gen-gaming .parallax-token19 {
+    .main-container .xbg-next-gen-gaming .parallax-token19 {
       position: absolute;
       right: 24px;
       bottom: 74px; }
-    .main-container .next-gen-gaming .parallax-token20 {
+    .main-container .xbg-next-gen-gaming .parallax-token20 {
       position: absolute;
       right: 89px;
       bottom: 172px; }
-    .main-container .next-gen-gaming .parallax-token21 {
+    .main-container .xbg-next-gen-gaming .parallax-token21 {
       position: absolute;
       right: 89px;
       bottom: 188px; }
-    .main-container .next-gen-gaming .bubbles-container {
+    .main-container .xbg-next-gen-gaming .bubbles-container {
       bottom: 0;
       position: relative;
       width: 100%;
       max-width: 1440px;
       margin: 0 auto;
-      flex: 1; }
-    .main-container .next-gen-gaming .parallax-bubble {
+      flex: 1;
+      z-index: 3; }
+    .main-container .xbg-next-gen-gaming .parallax-bubble {
       position: absolute;
       right: 122px;
       bottom: -32px; }
-      .main-container .next-gen-gaming .parallax-bubble .title {
+      .main-container .xbg-next-gen-gaming .parallax-bubble .title {
         width: max-content;
         position: absolute;
         right: 170px;
@@ -5392,16 +5557,16 @@ footer.footer {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent; }
-    .main-container .next-gen-gaming .parallax-bubble2 {
+    .main-container .xbg-next-gen-gaming .parallax-bubble2 {
       position: absolute;
       right: 122px;
       top: 0;
       z-index: 2; }
-    .main-container .next-gen-gaming .parallax-bubble3 {
+    .main-container .xbg-next-gen-gaming .parallax-bubble3 {
       position: absolute;
       left: 69px;
       bottom: 332px; }
-      .main-container .next-gen-gaming .parallax-bubble3 .title {
+      .main-container .xbg-next-gen-gaming .parallax-bubble3 .title {
         width: max-content;
         position: absolute;
         left: 80px;
@@ -5410,11 +5575,11 @@ footer.footer {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent; }
-    .main-container .next-gen-gaming .parallax-bubble4 {
+    .main-container .xbg-next-gen-gaming .parallax-bubble4 {
       position: absolute;
       left: -32px;
       bottom: 64px; }
-      .main-container .next-gen-gaming .parallax-bubble4 .title {
+      .main-container .xbg-next-gen-gaming .parallax-bubble4 .title {
         width: max-content;
         position: absolute;
         left: 120px;
@@ -5423,11 +5588,11 @@ footer.footer {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent; }
-    .main-container .next-gen-gaming .parallax-bubble5 {
+    .main-container .xbg-next-gen-gaming .parallax-bubble5 {
       position: absolute;
       left: 132px;
       bottom: -32px; }
-      .main-container .next-gen-gaming .parallax-bubble5 .title {
+      .main-container .xbg-next-gen-gaming .parallax-bubble5 .title {
         width: max-content;
         position: absolute;
         left: 100px;
@@ -5436,15 +5601,15 @@ footer.footer {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent; }
-    .main-container .next-gen-gaming .parallax-bubble6 {
+    .main-container .xbg-next-gen-gaming .parallax-bubble6 {
       position: absolute;
       left: 40%;
       bottom: 79px; }
-    .main-container .next-gen-gaming .parallax-bubble7 {
+    .main-container .xbg-next-gen-gaming .parallax-bubble7 {
       position: absolute;
       right: -24px;
       bottom: 122px; }
-      .main-container .next-gen-gaming .parallax-bubble7 .title {
+      .main-container .xbg-next-gen-gaming .parallax-bubble7 .title {
         width: max-content;
         position: absolute;
         right: 130px;
@@ -5453,75 +5618,74 @@ footer.footer {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent; }
-    .main-container .next-gen-gaming .parallax-bubble8 {
+    .main-container .xbg-next-gen-gaming .parallax-bubble8 {
       position: absolute;
       right: 60px;
       bottom: 330px; }
-    .main-container .next-gen-gaming .main-bubble {
+    .main-container .xbg-next-gen-gaming .main-bubble {
       position: absolute;
       bottom: 47%;
       left: 50%;
       transform: translateX(-50%);
       width: 5.763790664780764%; }
-      .main-container .next-gen-gaming .main-bubble img {
+      .main-container .xbg-next-gen-gaming .main-bubble img {
         width: 100%;
         height: auto;
         transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1); }
-      .main-container .next-gen-gaming .main-bubble.in img {
+      .main-container .xbg-next-gen-gaming .main-bubble.in img {
         transform: rotate(0); }
-    .main-container .next-gen-gaming .gamerbase-sphere,
-    .main-container .next-gen-gaming .launchpad-sphere,
-    .main-container .next-gen-gaming .xborgid-sphere {
+    .main-container .xbg-next-gen-gaming .gamerbase-sphere,
+    .main-container .xbg-next-gen-gaming .launchpad-sphere,
+    .main-container .xbg-next-gen-gaming .xborgid-sphere {
       position: absolute;
       transform: translateX(-50%);
-      width: 11.688311688311687%;
+      width: 72px;
       z-index: 3;
       transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1); }
-      .main-container .next-gen-gaming .gamerbase-sphere img,
-      .main-container .next-gen-gaming .launchpad-sphere img,
-      .main-container .next-gen-gaming .xborgid-sphere img {
+      .main-container .xbg-next-gen-gaming .gamerbase-sphere img,
+      .main-container .xbg-next-gen-gaming .launchpad-sphere img,
+      .main-container .xbg-next-gen-gaming .xborgid-sphere img {
         opacity: 0;
         transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1); }
-      .main-container .next-gen-gaming .gamerbase-sphere .sphere-title,
-      .main-container .next-gen-gaming .launchpad-sphere .sphere-title,
-      .main-container .next-gen-gaming .xborgid-sphere .sphere-title {
+      .main-container .xbg-next-gen-gaming .gamerbase-sphere .sphere-title,
+      .main-container .xbg-next-gen-gaming .launchpad-sphere .sphere-title,
+      .main-container .xbg-next-gen-gaming .xborgid-sphere .sphere-title {
         background: linear-gradient(90deg, #ababab 0%, #2d2d2d 102.73%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent; }
-    .main-container .next-gen-gaming .gamerbase-sphere {
+    .main-container .xbg-next-gen-gaming .gamerbase-sphere {
       bottom: 74%;
       left: 30%; }
-      .main-container .next-gen-gaming .gamerbase-sphere .sphere-title {
+      .main-container .xbg-next-gen-gaming .gamerbase-sphere .sphere-title {
         left: 50px;
         top: 34px;
         z-index: -1; }
-    .main-container .next-gen-gaming .launchpad-sphere {
+    .main-container .xbg-next-gen-gaming .launchpad-sphere {
       bottom: 57%;
       left: 76%; }
-      .main-container .next-gen-gaming .launchpad-sphere .sphere-title {
+      .main-container .xbg-next-gen-gaming .launchpad-sphere .sphere-title {
         left: 50px;
         top: 34px;
         z-index: -1; }
-    .main-container .next-gen-gaming .xborgid-sphere {
+    .main-container .xbg-next-gen-gaming .xborgid-sphere {
       bottom: 57%;
       left: 76%; }
-      .main-container .next-gen-gaming .xborgid-sphere .sphere-title {
+      .main-container .xbg-next-gen-gaming .xborgid-sphere .sphere-title {
         left: 50px;
         top: 34px;
         z-index: -1; }
-    .main-container .next-gen-gaming .sphere-title {
+    .main-container .xbg-next-gen-gaming .sphere-title {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       opacity: 0;
       padding: 16px 32px;
-      white-space: nowrap;
       display: flex;
       transition: 0.6s ease-in; }
-    .main-container .next-gen-gaming .container {
+    .main-container .xbg-next-gen-gaming .container {
       position: relative; }
-    .main-container .next-gen-gaming .orbit {
+    .main-container .xbg-next-gen-gaming .orbit {
       width: 21.782178217821784%;
       height: 21.782178217821784%;
       border-radius: 50%;
@@ -5529,138 +5693,199 @@ footer.footer {
       bottom: 39%;
       left: 50%;
       transform: translateX(-50%); }
-    .main-container .next-gen-gaming .orbit-content {
+    .main-container .xbg-next-gen-gaming .orbit-content {
       animation: circle 60s linear infinite; }
-      .main-container .next-gen-gaming .orbit-content > div {
+      .main-container .xbg-next-gen-gaming .orbit-content > div {
         animation: ccircle 60s linear infinite; }
-      .main-container .next-gen-gaming .orbit-content.in .sphere-title {
+      .main-container .xbg-next-gen-gaming .orbit-content.in .sphere-title {
         opacity: 1;
         transition-delay: 0.6s; }
-      .main-container .next-gen-gaming .orbit-content.in .launchpad-sphere {
+      .main-container .xbg-next-gen-gaming .orbit-content.in .launchpad-sphere {
         bottom: 69%;
         left: 86%;
         transition-delay: 0.1s; }
-        .main-container .next-gen-gaming .orbit-content.in .launchpad-sphere img {
+        .main-container .xbg-next-gen-gaming .orbit-content.in .launchpad-sphere img {
           opacity: 1;
           transition-delay: 0.1s; }
-        .main-container .next-gen-gaming .orbit-content.in .launchpad-sphere:after {
+        .main-container .xbg-next-gen-gaming .orbit-content.in .launchpad-sphere:after {
           opacity: 1;
           transition-delay: 0.5s; }
-      .main-container .next-gen-gaming .orbit-content.in .gamerbase-sphere {
+      .main-container .xbg-next-gen-gaming .orbit-content.in .gamerbase-sphere {
         bottom: 86%;
         left: 17%; }
-        .main-container .next-gen-gaming .orbit-content.in .gamerbase-sphere img {
+        .main-container .xbg-next-gen-gaming .orbit-content.in .gamerbase-sphere img {
           opacity: 1; }
-        .main-container .next-gen-gaming .orbit-content.in .gamerbase-sphere:after {
+        .main-container .xbg-next-gen-gaming .orbit-content.in .gamerbase-sphere:after {
           opacity: 1;
           transition-delay: 0.4s; }
-      .main-container .next-gen-gaming .orbit-content.in .xborgid-sphere {
+      .main-container .xbg-next-gen-gaming .orbit-content.in .xborgid-sphere {
         bottom: 9%;
         left: 9%; }
-        .main-container .next-gen-gaming .orbit-content.in .xborgid-sphere img {
+        .main-container .xbg-next-gen-gaming .orbit-content.in .xborgid-sphere img {
           opacity: 1; }
-        .main-container .next-gen-gaming .orbit-content.in .xborgid-sphere:after {
+        .main-container .xbg-next-gen-gaming .orbit-content.in .xborgid-sphere:after {
           opacity: 1;
           transition-delay: 0.4s; }
-    .main-container .next-gen-gaming .in h2 .word {
+    .main-container .xbg-next-gen-gaming .in h2 .word {
       opacity: 1;
       transform: translateY(0); }
-      .main-container .next-gen-gaming .in h2 .word:nth-child(1) {
+      .main-container .xbg-next-gen-gaming .in h2 .word:nth-child(1) {
         transition-delay: 0.335s; }
-      .main-container .next-gen-gaming .in h2 .word:nth-child(2) {
+      .main-container .xbg-next-gen-gaming .in h2 .word:nth-child(2) {
         transition-delay: 0.37s; }
-      .main-container .next-gen-gaming .in h2 .word:nth-child(3) {
+      .main-container .xbg-next-gen-gaming .in h2 .word:nth-child(3) {
         transition-delay: 0.405s; }
-      .main-container .next-gen-gaming .in h2 .word:nth-child(4) {
+      .main-container .xbg-next-gen-gaming .in h2 .word:nth-child(4) {
         transition-delay: 0.44s; }
-      .main-container .next-gen-gaming .in h2 .word:nth-child(5) {
+      .main-container .xbg-next-gen-gaming .in h2 .word:nth-child(5) {
         transition-delay: 0.475s; }
-      .main-container .next-gen-gaming .in h2 .word:nth-child(6) {
+      .main-container .xbg-next-gen-gaming .in h2 .word:nth-child(6) {
         transition-delay: 0.51s; }
-      .main-container .next-gen-gaming .in h2 .word:nth-child(7) {
+      .main-container .xbg-next-gen-gaming .in h2 .word:nth-child(7) {
         transition-delay: 0.545s; }
-      .main-container .next-gen-gaming .in h2 .word:nth-child(8) {
+      .main-container .xbg-next-gen-gaming .in h2 .word:nth-child(8) {
         transition-delay: 0.58s; }
-      .main-container .next-gen-gaming .in h2 .word:nth-child(9) {
+      .main-container .xbg-next-gen-gaming .in h2 .word:nth-child(9) {
         transition-delay: 0.615s; }
-      .main-container .next-gen-gaming .in h2 .word:nth-child(10) {
+      .main-container .xbg-next-gen-gaming .in h2 .word:nth-child(10) {
         transition-delay: 0.65s; }
-    .main-container .next-gen-gaming .in .section-description {
+    .main-container .xbg-next-gen-gaming .in .section-description {
       opacity: 1;
       transition-delay: 0.4s; }
     @media (max-width: 992px) {
-      .main-container .next-gen-gaming {
+      .main-container .xbg-next-gen-gaming {
         height: 700px; }
-        .main-container .next-gen-gaming .container {
+        .main-container .xbg-next-gen-gaming .container {
           position: relative;
           z-index: 3; }
-        .main-container .next-gen-gaming .background-container {
+        .main-container .xbg-next-gen-gaming .background-container {
           width: 1476px;
           height: 904px;
           margin-left: -100px;
           bottom: 17%; }
-        .main-container .next-gen-gaming .sphere-title {
+        .main-container .xbg-next-gen-gaming .sphere-title {
           padding: 8px 16px;
           font-size: 14px; }
-        .main-container .next-gen-gaming .main-bubble {
+        .main-container .xbg-next-gen-gaming .main-bubble {
           bottom: 14%; }
-        .main-container .next-gen-gaming .parallax-bubble {
+        .main-container .xbg-next-gen-gaming .parallax-bubble6 {
+          display: none; }
+        .main-container .xbg-next-gen-gaming .parallax-bubble {
           right: -23px;
           bottom: -29px; }
-        .main-container .next-gen-gaming .parallax-bubble3 {
-          bottom: 113px; }
-        .main-container .next-gen-gaming .parallax-bubble2 {
+          .main-container .xbg-next-gen-gaming .parallax-bubble img {
+            width: 100%;
+            height: 110px; }
+          .main-container .xbg-next-gen-gaming .parallax-bubble .title {
+            right: 120px;
+            bottom: 50px; }
+        .main-container .xbg-next-gen-gaming .parallax-bubble3 {
+          bottom: 50%;
+          left: 10px; }
+          .main-container .xbg-next-gen-gaming .parallax-bubble3 img {
+            width: 100%;
+            height: 60px; }
+          .main-container .xbg-next-gen-gaming .parallax-bubble3 .title {
+            left: 70px;
+            bottom: 20px; }
+        .main-container .xbg-next-gen-gaming .parallax-bubble2 {
           display: none; }
-        .main-container .next-gen-gaming .parallax-bubble4 {
+        .main-container .xbg-next-gen-gaming .parallax-bubble4 {
           left: -32px;
           bottom: 138px; }
-        .main-container .next-gen-gaming .parallax-token10 {
+          .main-container .xbg-next-gen-gaming .parallax-bubble4 .title {
+            left: 90px;
+            bottom: 40px; }
+          .main-container .xbg-next-gen-gaming .parallax-bubble4 img {
+            width: 100%;
+            height: 80px; }
+        .main-container .xbg-next-gen-gaming .parallax-bubble5 {
+          left: 52px; }
+          .main-container .xbg-next-gen-gaming .parallax-bubble5 img {
+            width: 100%;
+            height: 70px; }
+          .main-container .xbg-next-gen-gaming .parallax-bubble5 .title {
+            left: 80px;
+            bottom: 30px; }
+        .main-container .xbg-next-gen-gaming .parallax-bubble7 {
+          right: -40px; }
+          .main-container .xbg-next-gen-gaming .parallax-bubble7 img {
+            width: 100%;
+            height: 90px; }
+          .main-container .xbg-next-gen-gaming .parallax-bubble7 .title {
+            right: 100px;
+            bottom: 40px; }
+        .main-container .xbg-next-gen-gaming .parallax-token10 {
           left: 252px;
           bottom: 21px; }
-        .main-container .next-gen-gaming .parallax-token21 {
+          .main-container .xbg-next-gen-gaming .parallax-token10 img {
+            width: 100%;
+            height: auto; }
+        .main-container .xbg-next-gen-gaming .parallax-token21 {
           right: 89px;
           bottom: 248px; }
-        .main-container .next-gen-gaming .orbit-content {
+          .main-container .xbg-next-gen-gaming .parallax-token21 img {
+            width: 100%;
+            height: auto; }
+        .main-container .xbg-next-gen-gaming .orbit-content {
           animation: initial; }
-          .main-container .next-gen-gaming .orbit-content > div {
+          .main-container .xbg-next-gen-gaming .orbit-content > div {
             animation: initial; }
-          .main-container .next-gen-gaming .orbit-content.in .gamerbase-sphere {
-            left: 77%;
-            bottom: -34%; }
-          .main-container .next-gen-gaming .orbit-content.in .launchpad-sphere {
-            left: 88%;
-            bottom: -50%; }
-          .main-container .next-gen-gaming .orbit-content.in .xborgid-sphere {
-            bottom: -70%;
-            left: 95%; }
-          .main-container .next-gen-gaming .orbit-content.in .sphere-title {
+          .main-container .xbg-next-gen-gaming .orbit-content.in .gamerbase-sphere,
+          .main-container .xbg-next-gen-gaming .orbit-content.in .launchpad-sphere,
+          .main-container .xbg-next-gen-gaming .orbit-content.in .xborgid-sphere {
+            width: 72px; }
+          .main-container .xbg-next-gen-gaming .orbit-content.in .gamerbase-sphere {
+            left: 70%;
+            bottom: -33%; }
+          .main-container .xbg-next-gen-gaming .orbit-content.in .launchpad-sphere {
+            left: 92%;
+            bottom: -65%; }
+          .main-container .xbg-next-gen-gaming .orbit-content.in .xborgid-sphere {
+            bottom: -110%;
+            left: 100%; }
+          .main-container .xbg-next-gen-gaming .orbit-content.in .sphere-title {
             left: initial !important;
-            right: 32px !important;
+            right: -110px !important;
             top: 50% !important;
             background-color: transparent;
             background: linear-gradient(90deg, #2d2d2d 0%, #ababab 102.73%);
             background-clip: text;
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent; } }
+            -webkit-text-fill-color: transparent; }
+          .main-container .xbg-next-gen-gaming .orbit-content.in .xborgid-sphere {
+            bottom: -110%;
+            left: 100%; }
+            .main-container .xbg-next-gen-gaming .orbit-content.in .xborgid-sphere .sphere-title {
+              right: -180px !important; } }
     @media (max-width: 576px) {
-      .main-container .next-gen-gaming {
+      .main-container .xbg-next-gen-gaming .orbit-content {
+        animation: initial; }
+        .main-container .xbg-next-gen-gaming .orbit-content > div {
+          animation: initial; }
+        .main-container .xbg-next-gen-gaming .orbit-content.in .xborgid-sphere .sphere-title {
+          width: 100px;
+          right: -95px !important; } }
+    @media (max-width: 576px) {
+      .main-container .xbg-next-gen-gaming {
         margin-bottom: 100px; }
-        .main-container .next-gen-gaming .blur-spheres {
-          display: none; }
-        .main-container .next-gen-gaming .parallax-bubble {
+        .main-container .xbg-next-gen-gaming .blur-spheres {
+          display: none;
+          z-index: -2; }
+        .main-container .xbg-next-gen-gaming .parallax-bubble {
           right: 100px;
           bottom: -100px; }
-        .main-container .next-gen-gaming .parallax-bubble7 {
+        .main-container .xbg-next-gen-gaming .parallax-bubble7 {
           bottom: 15px; }
-        .main-container .next-gen-gaming .parallax-bubble5 {
+        .main-container .xbg-next-gen-gaming .parallax-bubble5 {
           left: 50%;
-          bottom: 180px; }
-        .main-container .next-gen-gaming .parallax-bubble4 {
+          bottom: 150px; }
+        .main-container .xbg-next-gen-gaming .parallax-bubble4 {
           left: 25%;
-          bottom: 90px; }
-        .main-container .next-gen-gaming .parallax-bubble3 {
-          left: -50px;
-          bottom: 120px; } }
+          bottom: 70px; }
+        .main-container .xbg-next-gen-gaming .parallax-bubble3 {
+          bottom: 113px;
+          left: -41px; } }
   @media (max-width: 1200px) {
     .main-container .spheres-container .t-sphere-2 {
       top: 70% !important;
@@ -5676,53 +5901,42 @@ footer.footer {
       left: 6% !important; }
     .main-container .spheres-container .t-sphere-6 {
       left: 2% !important; } }
-  @media (max-width: 865px) {
-    .main-container .header {
-      align-items: center !important; }
-    .main-container .spheres-container .t-sphere-4 {
-      top: 70% !important;
-      left: 0% !important; }
-    .main-container .spheres-container .t-sphere-5 {
-      top: 60% !important;
-      left: 0% !important; }
-    .main-container .spheres-container .t-sphere-6 {
-      left: 0% !important; } }
 
-.launching {
+.xbg-launching {
   width: 100%;
   position: relative;
   z-index: 3;
   padding-top: 120px;
   padding-bottom: 120px;
   background: #101010; }
-  .launching .container {
+  .xbg-launching .container {
     width: auto;
     margin: 0 auto;
     position: relative; }
-  .launching .parallax-bubble {
+  .xbg-launching .parallax-bubble {
     position: absolute;
     right: 63px;
     bottom: -32px; }
-  .launching .parallax-bubble2 {
+  .xbg-launching .parallax-bubble2 {
     position: absolute;
     right: 39px;
     bottom: -180px; }
-  .launching .lexend-body-s {
+  .xbg-launching .lexend-body-s {
     color: #eb3a4a;
     text-transform: uppercase;
     transform: translateX(-40px);
     opacity: 0;
     transition: 0.6s ease-in; }
-  .launching .details {
+  .xbg-launching .details {
     width: 100%;
     transform: translateX(45px);
     opacity: 0;
-    transition: 0.6s ease-in; }
-    .launching .details.in {
+    transition: 0.6s ease-in;
+    margin-left: 50px; }
+    .xbg-launching .details.in {
       opacity: 1;
       transition-delay: 0.4s; }
-  .launching .token-video {
-    transform: translateX(20%) translateY(16px);
+  .xbg-launching .token-video {
     position: relative;
     z-index: 2;
     width: 374px;
@@ -5730,95 +5944,112 @@ footer.footer {
     pointer-events: none;
     opacity: 0;
     transition: 0.6s ease-in; }
-  .launching .input-label {
+  .xbg-launching .input-label {
     max-width: 302px;
     margin-bottom: 32px; }
-  .launching .video-container {
-    position: relative; }
-  .launching .video-container.in {
-    width: 100px; }
-    .launching .video-container.in .token-video {
-      opacity: 2;
-      transform: translateX(-55%) translateY(0%); }
-  .launching .title-container {
+  .xbg-launching .video-container {
+    position: absolute;
+    top: 50px;
+    left: -50%; }
+  .xbg-launching .video-container.in {
+    width: 10px; }
+    .xbg-launching .video-container.in .token-video {
+      opacity: 2; }
+  .xbg-launching .title-container {
     max-width: 508px;
     transition: 2s cubic-bezier(0.19, 1, 0.22, 1); }
-  .launching h2 {
+  .xbg-launching h2 {
     margin-bottom: 56px; }
-    .launching h2 .word {
+    .xbg-launching h2 .word {
       transform: translateY(16px) translateX(100px);
       opacity: 0;
       transition: 3s cubic-bezier(0.19, 1, 0.22, 1); }
-      .launching h2 .word:first-child, .launching h2 .word:nth-child(2) {
+      .xbg-launching h2 .word:first-child, .xbg-launching h2 .word:nth-child(2) {
         transform: translateY(0) translateX(0); }
-  .launching p {
+  .xbg-launching p {
     color: #cacace; }
-  .launching .subscribe {
+  .xbg-launching .subscribe {
     opacity: 0; }
-    .launching .subscribe .btn-container {
+    .xbg-launching .subscribe .btn-container {
       top: 84px; }
-  .launching .link {
+  .xbg-launching .link {
     margin-top: 24px; }
-  .launching .in .lexend-body-s {
+  .xbg-launching .in .lexend-body-s {
     opacity: 1;
     transition-delay: 0.4s; }
-  .launching .in .title-container {
+  .xbg-launching .in .title-container {
     transform: translateX(-40px); }
-  .launching .in h2 .word {
+  .xbg-launching .in h2 .word {
     opacity: 1;
     transform: translateY(0) translateX(100px); }
-    .launching .in h2 .word:first-child, .launching .in h2 .word:nth-child(2) {
+    .xbg-launching .in h2 .word:first-child, .xbg-launching .in h2 .word:nth-child(2) {
       transform: translateY(0) translateX(0); }
-    .launching .in h2 .word:nth-child(1) {
+    .xbg-launching .in h2 .word:nth-child(1) {
       transition-delay: 0.335s; }
-    .launching .in h2 .word:nth-child(2) {
+    .xbg-launching .in h2 .word:nth-child(2) {
       transition-delay: 0.37s; }
-    .launching .in h2 .word:nth-child(3) {
+    .xbg-launching .in h2 .word:nth-child(3) {
       transition-delay: 0.405s; }
-    .launching .in h2 .word:nth-child(4) {
+    .xbg-launching .in h2 .word:nth-child(4) {
       transition-delay: 0.44s; }
-    .launching .in h2 .word:nth-child(5) {
+    .xbg-launching .in h2 .word:nth-child(5) {
       transition-delay: 0.475s; }
-    .launching .in h2 .word:nth-child(6) {
+    .xbg-launching .in h2 .word:nth-child(6) {
       transition-delay: 0.51s; }
-    .launching .in h2 .word:nth-child(7) {
+    .xbg-launching .in h2 .word:nth-child(7) {
       transition-delay: 0.545s; }
-    .launching .in h2 .word:nth-child(8) {
+    .xbg-launching .in h2 .word:nth-child(8) {
       transition-delay: 0.58s; }
-    .launching .in h2 .word:nth-child(9) {
+    .xbg-launching .in h2 .word:nth-child(9) {
       transition-delay: 0.615s; }
-    .launching .in h2 .word:nth-child(10) {
+    .xbg-launching .in h2 .word:nth-child(10) {
       transition-delay: 0.65s; }
-  .launching .in .subscribe {
+  .xbg-launching .in .subscribe {
     opacity: 1;
     transition-delay: 0.3s; }
   @media (max-width: 992px) {
-    .launching .token-video {
-      width: 165px;
-      height: 149.118px; } }
+    .xbg-launching .video-container {
+      top: -25px;
+      left: -40%; }
+      .xbg-launching .video-container .token-video {
+        width: 300px; } }
+  @media (max-width: 9930px) {
+    .xbg-launching .video-container {
+      top: -25px;
+      left: -15%; }
+      .xbg-launching .video-container .token-video {
+        width: 200px; } }
   @media (max-width: 768px) {
-    .launching .details {
-      transform: translateX(0%) !important; }
-    .launching .token-video {
-      transform: translateX(5%) translateY(30%) !important; } }
+    .xbg-launching .video-container {
+      top: -60px;
+      left: -7%; }
+      .xbg-launching .video-container .token-video {
+        width: 150px; } }
   @media (max-width: 576px) {
-    .launching .lexend-body-s {
+    .xbg-launching .lexend-body-s {
       transform: translateX(0px) !important; }
-    .launching .title-container {
+    .xbg-launching .title-container {
       transform: translateX(0px) !important;
       width: 400px; }
-    .launching h2 {
-      font-size: 40px !important; }
-    .launching .video-container {
-      width: 0 !important;
-      position: absolute !important;
-      top: 15%;
-      left: 0px; }
-    .launching .token-video {
-      width: 120px;
-      height: 100px;
-      transform: translateX(0%) translateY(0%) !important;
-      z-index: 2; } }
+    .xbg-launching .details {
+      margin-left: 0;
+      transform: translateX(0%) !important; }
+    .xbg-launching .video-container {
+      top: -69px;
+      left: -7%; } }
+  @media (max-width: 636px) {
+    .xbg-launching .title-container {
+      max-width: 416px; }
+    .xbg-launching h2 {
+      font-size: 40px !important; } }
+  @media (max-width: 430px) {
+    .xbg-launching .container .content {
+      padding-left: 8px;
+      padding-right: 2px; }
+    .xbg-launching .title-container {
+      width: 345px !important; }
+    .xbg-launching .line .word {
+      font-size: 32px !important; } }
 
 .page-scrollbar {
   height: 100vh;
