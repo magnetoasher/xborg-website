@@ -10,7 +10,7 @@ import { Scene } from 'react-scrollmagic';
 
 const Bubbles = () => {
   return (
-    <div className="growing-background-wrapper">
+    <div className="xbg-growing-background-wrapper">
       <ObserverContainer className="main-bubble">
         <Image
           src={Images.xbg.empoweringPlayersBg}

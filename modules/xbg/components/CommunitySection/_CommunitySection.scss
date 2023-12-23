@@ -138,7 +138,7 @@
       }
     }
 
-    @media (max-width: $sm-max) {
+    @media (max-width: 1072px) {
       flex-direction: column;
 
       .card-1,
@@ -152,6 +152,13 @@
         padding-left: 24px;
       }
     }
+
+    @media screen and (min-width: $sm-max) and (max-width: 1072px) {
+      .card-2 {
+        align-items: center;
+      }
+    }
+
     @media (max-width: $xs-max) {
       .card-2 {
         height: 400px;

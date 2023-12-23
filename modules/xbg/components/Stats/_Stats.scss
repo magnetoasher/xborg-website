@@ -32,6 +32,7 @@
       }
 
       z-index: 2;
+
       .box {
         position: relative;
         white-space: nowrap;
@@ -98,7 +99,6 @@
         font-weight: 300;
         line-height: 24px;
         color: $gray300;
-        margin-top: 32px;
       }
     }
 
@@ -136,10 +136,20 @@
     }
   }
 
+  @media screen and (min-width: 686px) and (max-width: 950px) {
+    .inner-container {
+      .in {
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+
   @media (max-width: 950px) {
     .cards-container {
       flex-direction: column;
       gap: 56px;
+
       .sphere {
         display: none;
       }

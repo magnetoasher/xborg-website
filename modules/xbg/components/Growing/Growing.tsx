@@ -18,7 +18,7 @@ export const Growing = () => {
   }, []);
 
   return (
-    <div className="growing">
+    <div className="xbg-growing">
       <div className="container">
         <ObserverContainer className="flex column middle">
           <h2 className="integralfc-h2 reveal-from-bottom" ref={ref}>
@@ -26,7 +26,7 @@ export const Growing = () => {
           </h2>
         </ObserverContainer>
         <Bubbles />
-        <div
+        {/* <div
           className={`flex start middle blocks-container ${
             loading ? 'out' : 'in'
           }`}
@@ -89,10 +89,10 @@ export const Growing = () => {
               </h4>
             </div>
           </ObserverContainer>
-        </div>
+        </div> */}
       </div>
 
-      <Scene duration="100%" triggerHook="onEnter">
+      {/* <Scene duration="100%" triggerHook="onEnter">
         <Tween
           position="0"
           from={{
@@ -103,7 +103,7 @@ export const Growing = () => {
           }}
         >
           <Image
-            src={Images.xbg.bubbles_bot_left}
+            src={Images.landing.bubbles_bot_left}
             width={400}
             height={305}
             alt=""
@@ -129,7 +129,7 @@ export const Growing = () => {
             className="background2"
           />
         </Tween>
-      </Scene>
+      </Scene> */}
     </div>
   );
 };
