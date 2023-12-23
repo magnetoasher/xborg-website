@@ -10,9 +10,6 @@ import { Subscribe } from '@/modules/landing';
 export const Launching = () => {
   const ref = useRef<HTMLHeadingElement>(null);
 
-  const [form, setForm] = useState<{ email: string }>({ email: '' });
-  const [errors, setErrors] = useState<any>({});
-
   useEffect(() => {
     if (ref.current) {
       splitLines(ref.current);
@@ -20,16 +17,8 @@ export const Launching = () => {
   }, []);
 
   return (
-    <div className="flex center middle launching">
+    <div className="flex center middle xbg-launching">
       <div className="container flex  center top" id="trigger">
-        <ObserverContainer className="video-container">
-          <Scene duration="100%" triggerElement="#trigger">
-            {(progress: any) => {
-              return <LaunchingCoin progress={progress} />;
-            }}
-          </Scene>
-        </ObserverContainer>
-
         <div className="flex column middle center content">
           <ObserverContainer className="flex column">
             <div className="lexend-body-s">The XBG Token</div>
@@ -40,6 +29,13 @@ export const Launching = () => {
               >
                 XBG presale coming soon
               </h2>
+              <ObserverContainer className="video-container">
+                <Scene duration="100%" triggerElement="#trigger">
+                  {(progress: any) => {
+                    return <LaunchingCoin progress={progress} />;
+                  }}
+                </Scene>
+              </ObserverContainer>
             </div>
           </ObserverContainer>
 

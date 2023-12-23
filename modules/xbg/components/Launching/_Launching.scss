@@ -1,10 +1,11 @@
-.launching {
+.xbg-launching {
   width: 100%;
   position: relative;
   z-index: 3;
   padding-top: 120px;
   padding-bottom: 120px;
   background: #101010;
+
   .container {
     width: auto;
     margin: 0 auto;
@@ -36,6 +37,7 @@
     transform: translateX(45px);
     opacity: 0;
     transition: 0.6s ease-in;
+    margin-left: 50px;
 
     &.in {
       opacity: 1;
@@ -44,7 +46,6 @@
   }
 
   .token-video {
-    transform: translateX(20%) translateY(16px);
     position: relative;
     z-index: 2;
     width: 374px;
@@ -58,14 +59,18 @@
     max-width: 302px;
     margin-bottom: 32px;
   }
+
   .video-container {
-    position: relative;
+    position: absolute;
+    top: 50px;
+    left: -50%;
   }
+
   .video-container.in {
-    width: 100px;
+    width: 10px;
+
     .token-video {
       opacity: 2;
-      transform: translateX(-55%) translateY(0%);
     }
   }
 
@@ -138,18 +143,32 @@
   }
 
   @media (max-width: $md-max) {
-    .token-video {
-      width: 165px;
-      height: 149.118px;
+    .video-container {
+      top: -25px;
+      left: -40%;
+      .token-video {
+        width: 300px;
+      }
+    }
+  }
+
+  @media (max-width: 9930px) {
+    .video-container {
+      top: -25px;
+      left: -15%;
+      .token-video {
+        width: 200px;
+      }
     }
   }
 
   @media (max-width: $sm-max) {
-    .details {
-      transform: translateX(0%) !important;
-    }
-    .token-video {
-      transform: translateX(5%) translateY(30%) !important;
+    .video-container {
+      top: -60px;
+      left: -7%;
+      .token-video {
+        width: 150px;
+      }
     }
   }
 
@@ -157,24 +176,49 @@
     .lexend-body-s {
       transform: translateX(0px) !important;
     }
+
     .title-container {
       transform: translateX(0px) !important;
       width: 400px;
     }
+
+    .details {
+      margin-left: 0;
+      transform: translateX(0%) !important;
+    }
+
+    .video-container {
+      top: -69px;
+      left: -7%;
+    }
+  }
+
+  @media (max-width: 636px) {
+    .title-container {
+      max-width: 416px;
+    }
+
     h2 {
       font-size: 40px !important;
     }
-    .video-container {
-      width: 0 !important;
-      position: absolute !important;
-      top: 15%;
-      left: 0px;
+  }
+
+  @media (max-width: 430px) {
+    .container {
+      .content {
+        padding-left: 8px;
+        padding-right: 2px;
+      }
     }
-    .token-video {
-      width: 120px;
-      height: 100px;
-      transform: translateX(0%) translateY(0%) !important;
-      z-index: 2;
+
+    .title-container {
+      width: 345px !important;
+    }
+
+    .line {
+      .word {
+        font-size: 32px !important;
+      }
     }
   }
 }
