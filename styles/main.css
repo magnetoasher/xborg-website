@@ -106,7 +106,8 @@ section {
   display: block; }
 
 html {
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent; }
 
 html,
 body {
