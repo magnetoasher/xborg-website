@@ -274,13 +274,13 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          max-width: 300px;
+          max-width: 340px;
           min-height: 141px;
-          height: 260px;
+          height: 340px;
 
           img {
             width: 100%;
-            height: auto;
+            height: 100%;
           }
         }
       }
@@ -320,11 +320,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      max-width: 300px;
+      max-width: 340px;
 
       img {
         width: 100%;
-        height: auto;
+        height: 100%;
       }
     }
   }

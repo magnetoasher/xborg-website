@@ -17,6 +17,9 @@
     p {
       max-width: 489px;
       color: #cacace;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 20px;
     }
   }
 
@@ -89,6 +92,7 @@
         font-weight: 300;
         line-height: 30.426px;
         color: $gray300;
+        margin-bottom: -45px;
       }
 
       p:last-child {
@@ -99,6 +103,7 @@
         font-weight: 300;
         line-height: 24px;
         color: $gray300;
+        margin-top: -10px;
       }
     }
 

@@ -4339,6 +4339,13 @@ footer.footer {
       .xbg-introduction .introduction-content h1,
       .xbg-introduction .introduction-content p {
         max-width: 396px; } }
+  @media (max-width: 420px) {
+    .xbg-introduction .introduction-content h1 {
+      font-size: 41px; }
+    .xbg-introduction .introduction-content p {
+      max-width: 344px; }
+    .xbg-introduction .introduction-content .container .actions {
+      gap: 16px; } }
 
 .xbg-possibilities {
   position: relative;
@@ -4565,12 +4572,12 @@ footer.footer {
           display: flex;
           justify-content: center;
           align-items: center;
-          max-width: 300px;
+          max-width: 340px;
           min-height: 141px;
-          height: 260px; }
+          height: 340px; }
           .xbg-possibilities .inner-container .content .content-image img {
             width: 100%;
-            height: auto; }
+            height: 100%; }
     .xbg-possibilities .list-container {
       flex-direction: row;
       justify-content: space-between;
@@ -4595,10 +4602,10 @@ footer.footer {
       display: flex;
       justify-content: center;
       align-items: center;
-      max-width: 300px; }
+      max-width: 340px; }
       .xbg-possibilities .content-image img {
         width: 100%;
-        height: auto; } }
+        height: 100%; } }
   @media (max-width: 768px) {
     .xbg-possibilities .content {
       top: 70px;
@@ -4753,6 +4760,9 @@ footer.footer {
       top: 10%;
       left: 50%;
       transform: translateX(-50%); }
+      .xbg-growing .main-bubble .orbit .lexend-body-sm.l {
+        font-weight: 400;
+        line-height: 15px; }
     .xbg-growing .main-bubble .orbit-content img {
       rotate: 0deg;
       width: 100% !important;
@@ -5008,7 +5018,7 @@ footer.footer {
         text-align: center; }
       .xbg-growing .main-bubble .orbit-content .sphere-8 {
         top: -3%;
-        left: -50px; } }
+        left: -40px; } }
   @media screen and (min-width: 442px) and (max-width: 577px) {
     .xbg-growing .main-bubble .orbit-content .sphere-3 {
       max-width: 96px;
@@ -5021,6 +5031,12 @@ footer.footer {
       right: -37px; }
     .xbg-growing .main-bubble .orbit-content .sphere-7 {
       max-width: 80px; } }
+  @media (max-width: 389px) {
+    .xbg-growing .main-bubble .orbit-content .lexend-body-sm.l {
+      font-size: 8px; }
+    .xbg-growing .main-bubble .orbit-content .sphere-7 {
+      left: -27px;
+      text-align: left; } }
   @media (max-width: 1400px) {
     .xbg-growing {
       min-height: 950px;
@@ -5056,7 +5072,10 @@ footer.footer {
       line-height: 48px; }
     .xbg-stats .inner-container p {
       max-width: 489px;
-      color: #cacace; }
+      color: #cacace;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 20px; }
   .xbg-stats .cards-container {
     position: relative;
     gap: 89px; }
@@ -5102,7 +5121,8 @@ footer.footer {
         font-style: normal;
         font-weight: 300;
         line-height: 30.426px;
-        color: #cacace; }
+        color: #cacace;
+        margin-bottom: -45px; }
       .xbg-stats .cards-container .card p:last-child {
         text-align: center;
         font-family: Lexend, sans-serif;
@@ -5110,7 +5130,8 @@ footer.footer {
         font-style: normal;
         font-weight: 300;
         line-height: 24px;
-        color: #cacace; }
+        color: #cacace;
+        margin-top: -10px; }
     .xbg-stats .cards-container .sphere {
       position: absolute;
       z-index: 1; }
@@ -5193,7 +5214,8 @@ footer.footer {
         max-width: 220px; }
         .community-section .cards-container .card-1 p:first-child {
           color: #eb3a4a;
-          text-transform: uppercase; }
+          text-transform: uppercase;
+          margin-bottom: 4px; }
     .community-section .cards-container .card-2 {
       position: relative;
       width: 100%;
@@ -5255,6 +5277,8 @@ footer.footer {
       .community-section .cards-container .card-2 {
         align-items: center; } }
     @media (max-width: 576px) {
+      .community-section .cards-container .card-1 h2 {
+        font-size: 52px; }
       .community-section .cards-container .card-2 {
         height: 400px; } }
 
@@ -5887,6 +5911,42 @@ footer.footer {
         .main-container .xbg-next-gen-gaming .parallax-bubble3 {
           bottom: 113px;
           left: -41px; } }
+    @media (max-width: 445px) {
+      .main-container .xbg-next-gen-gaming {
+        margin-bottom: 150px; }
+        .main-container .xbg-next-gen-gaming .background-container {
+          bottom: 10%; }
+        .main-container .xbg-next-gen-gaming .parallax-bubble {
+          right: 115px;
+          bottom: -140px; }
+        .main-container .xbg-next-gen-gaming .parallax-bubble4 {
+          left: 17%;
+          bottom: 35px; }
+        .main-container .xbg-next-gen-gaming .parallax-bubble5 {
+          left: 46%;
+          bottom: 96px; }
+        .main-container .xbg-next-gen-gaming .parallax-bubble7 {
+          bottom: -40px;
+          right: -15px; } }
+    @media (max-width: 400px) {
+      .main-container .xbg-next-gen-gaming .background-container .orbit .orbit-content .gamerbase-sphere,
+      .main-container .xbg-next-gen-gaming .background-container .orbit .orbit-content .launchpad-sphere,
+      .main-container .xbg-next-gen-gaming .background-container .orbit .orbit-content .xborgid-sphere {
+        width: 56px; }
+        .main-container .xbg-next-gen-gaming .background-container .orbit .orbit-content .gamerbase-sphere .sphere-title,
+        .main-container .xbg-next-gen-gaming .background-container .orbit .orbit-content .launchpad-sphere .sphere-title,
+        .main-container .xbg-next-gen-gaming .background-container .orbit .orbit-content .xborgid-sphere .sphere-title {
+          right: -92px !important; }
+      .main-container .xbg-next-gen-gaming .parallax-bubble img {
+        height: 100px; }
+      .main-container .xbg-next-gen-gaming .parallax-bubble4 img {
+        height: 70px; }
+      .main-container .xbg-next-gen-gaming .parallax-bubble5 img {
+        height: 60px; }
+      .main-container .xbg-next-gen-gaming .parallax-bubble7 img {
+        height: 80px; }
+      .main-container .xbg-next-gen-gaming .lexend-body-sxl {
+        font-size: 12px; } }
   @media (max-width: 1200px) {
     .main-container .spheres-container .t-sphere-2 {
       top: 70% !important;

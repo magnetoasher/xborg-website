@@ -888,6 +888,80 @@
         left: -41px;
       }
     }
+
+    @media (max-width: 445px) {
+      margin-bottom: 150px;
+
+      .background-container {
+        bottom: 10%;
+      }
+
+      .parallax-bubble {
+        right: 115px;
+        bottom: -140px;
+      }
+
+      .parallax-bubble4 {
+        left: 17%;
+        bottom: 35px;
+      }
+
+      .parallax-bubble5 {
+        left: 46%;
+        bottom: 96px;
+      }
+
+      .parallax-bubble7 {
+        bottom: -40px;
+        right: -15px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .background-container {
+        .orbit {
+          .orbit-content {
+            .gamerbase-sphere,
+            .launchpad-sphere,
+            .xborgid-sphere {
+              width: 56px;
+
+              .sphere-title {
+                right: -92px !important;
+              }
+            }
+          }
+        }
+      }
+
+      .parallax-bubble {
+        img {
+          height: 100px;
+        }
+      }
+
+      .parallax-bubble4 {
+        img {
+          height: 70px;
+        }
+      }
+
+      .parallax-bubble5 {
+        img {
+          height: 60px;
+        }
+      }
+
+      .parallax-bubble7 {
+        img {
+          height: 80px;
+        }
+      }
+
+      .lexend-body-sxl {
+        font-size: 12px;
+      }
+    }
   }
 
   @media (max-width: $lg-max) {

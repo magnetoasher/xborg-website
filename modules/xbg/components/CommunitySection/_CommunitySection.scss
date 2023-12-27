@@ -70,6 +70,7 @@
         &:first-child {
           color: $red100;
           text-transform: uppercase;
+          margin-bottom: 4px;
         }
       }
     }
@@ -160,6 +161,11 @@
     }
 
     @media (max-width: $xs-max) {
+      .card-1 {
+        h2 {
+          font-size: 52px;
+        }
+      }
       .card-2 {
         height: 400px;
       }

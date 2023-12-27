@@ -209,4 +209,22 @@
       }
     }
   }
+
+  @media (max-width: 420px) {
+    .introduction-content {
+      h1 {
+        font-size: 41px;
+      }
+
+      p {
+        max-width: 344px;
+      }
+
+      .container {
+        .actions {
+          gap: 16px;
+        }
+      }
+    }
+  }
 }
