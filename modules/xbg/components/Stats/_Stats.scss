@@ -1,0 +1,171 @@
+.xbg-stats {
+  padding: 120px 16px;
+  background-color: #101010;
+
+  .inner-container {
+    gap: 56px;
+    margin: 0 auto;
+
+    h2 {
+      max-width: 638px;
+      margin-bottom: 24px;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 48px;
+    }
+
+    p {
+      max-width: 489px;
+      color: #cacace;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 20px;
+    }
+  }
+
+  .cards-container {
+    position: relative;
+    gap: 89px;
+
+    .card {
+      gap: 32px;
+
+      p {
+        text-align: center;
+      }
+
+      z-index: 2;
+
+      .box {
+        position: relative;
+        white-space: nowrap;
+
+        span {
+          color: #1d1d1d;
+          text-align: center;
+          font-family: $integralCF;
+          font-size: 120px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+
+        .gradient {
+          position: relative;
+          z-index: 3;
+          background: radial-gradient(
+            140.26% 135.18% at 108.36% -24%,
+            #303030 0%,
+            #141414 100%
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .outline {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          background: linear-gradient(
+            10deg,
+            rgba(204, 204, 204, 0.3) 0%,
+            rgba(204, 204, 204, 0.3) 41%,
+            rgba(204, 204, 204, 0.8) 61%,
+            rgb(255, 255, 255) 100%
+          );
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          -webkit-text-stroke: 2px transparent;
+          z-index: -1;
+          transform: translate(-50%, -50%);
+          white-space: nowrap;
+        }
+      }
+
+      p:first-child {
+        text-align: center;
+        font-family: $lexend;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 30.426px;
+        color: $gray300;
+        margin-bottom: -45px;
+      }
+
+      p:last-child {
+        text-align: center;
+        font-family: $lexend;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 24px;
+        color: $gray300;
+        margin-top: -10px;
+      }
+    }
+
+    .sphere {
+      position: absolute;
+      z-index: 1;
+    }
+    .sphere1 {
+      top: -30px;
+      left: -40px;
+    }
+    .sphere2 {
+      top: 110%;
+      left: 25%;
+    }
+    .sphere3 {
+      top: 15%;
+      left: 35%;
+    }
+    .sphere4 {
+      top: -10px;
+      right: 35%;
+    }
+    .sphere5 {
+      top: 48%;
+      right: -50px;
+    }
+  }
+
+  @media (max-width: $lg-max) {
+    .cards-container {
+      .sphere {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (min-width: 686px) and (max-width: 950px) {
+    .inner-container {
+      .in {
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 950px) {
+    .cards-container {
+      flex-direction: column;
+      gap: 56px;
+
+      .sphere {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: $sm-max) {
+    .card {
+      p {
+        max-width: 288px;
+      }
+    }
+  }
+}

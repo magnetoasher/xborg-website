@@ -1,0 +1,698 @@
+.xbg-growing {
+  position: relative;
+  padding: 120px 16px;
+  overflow: hidden;
+  min-height: 1000px;
+  z-index: 3;
+
+  .blocks-container {
+    gap: 24px;
+    margin-top: 72px;
+  }
+
+  h2 {
+    margin-top: -60px;
+    text-align: center;
+  }
+
+  .background1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    height: auto;
+    z-index: -1;
+  }
+
+  .background2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: auto;
+    z-index: -1;
+  }
+
+  h2 {
+    max-width: 396px;
+
+    .word {
+      transform: translateY(16px);
+      opacity: 0;
+      transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  .block-content {
+    pointer-events: none;
+
+    .block {
+      pointer-events: all;
+    }
+  }
+
+  .block-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    transition: 0.6s ease-in;
+    position: relative;
+    pointer-events: none;
+  }
+
+  .block-container {
+    .block {
+      min-width: 284px;
+      min-height: 84px;
+      border-radius: 16px;
+      border: 1px solid #343434;
+      background: rgba(9, 9, 9, 0.8);
+      backdrop-filter: blur(10px);
+      padding: 32px 24px;
+      pointer-events: all;
+
+      p.lexend-body-sm {
+        color: $gray300;
+      }
+
+      .btn-dark-container {
+        margin-top: 16px;
+        border-radius: 300px;
+      }
+
+      .btn-dark {
+        border-radius: 300px;
+        &:before {
+          background: linear-gradient(
+            45deg,
+            #787878 0%,
+            #1e1e1e 60%,
+            #1e1e1e 100%
+          );
+        }
+      }
+    }
+  }
+
+  .in {
+    h2 .word {
+      opacity: 1;
+      transform: translateY(0);
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: 0.1s + ($i * 0.035s);
+        }
+      }
+    }
+
+    .block-container {
+      opacity: 1;
+      transform: translateY(0);
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: 0.2s + ($i * 0.1s);
+        }
+      }
+    }
+  }
+
+  @media (max-width: $md-max) {
+    h2 {
+      max-width: 396px;
+    }
+  }
+
+  .xbg-growing-background-wrapper {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 837px;
+    z-index: -1;
+
+    img {
+      transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+      height: 100%;
+    }
+  }
+
+  .main-bubble {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+
+    img {
+      rotate: -5deg;
+      transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+      height: 100%;
+    }
+
+    &.in {
+      img {
+        transform: rotate(0);
+      }
+    }
+
+    .orbit {
+      width: 600px;
+      height: 560px;
+      border-radius: 50%;
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .lexend-body-sm.l {
+        font-weight: 400;
+        line-height: 15px;
+      }
+    }
+
+    .orbit-content {
+      img {
+        rotate: 0deg;
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      .circle-1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        width: 1600px;
+        height: 1600px;
+      }
+
+      .circle-2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        width: 1150px;
+        height: 1150px;
+      }
+
+      .sphere {
+        color: #fff;
+        max-width: 120px;
+        font-size: 12px;
+      }
+
+      .sphere-1 {
+        background: linear-gradient(189deg, #3d3d3d -44.26%, #f3f3f3 185.8%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        top: -105px;
+        left: 44%;
+        transform: translateX(-44%);
+        width: max-content;
+        text-align: center;
+      }
+
+      .sphere-2 {
+        background: linear-gradient(91deg, #f3f3f3 -37.01%, #3d3d3d 110.8%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        top: 3%;
+        right: -40px;
+        width: max-content;
+      }
+
+      .sphere-3 {
+        background: linear-gradient(91deg, #f3f3f3 -37.01%, #3d3d3d 110.8%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        top: 38%;
+        right: -150px;
+        width: max-content;
+      }
+
+      .sphere-4 {
+        background: linear-gradient(91deg, #f3f3f3 -37.01%, #3d3d3d 110.8%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        bottom: 15%;
+        right: -85px;
+        width: max-content;
+      }
+
+      .sphere-5 {
+        background: linear-gradient(354deg, #3d3d3d -32.65%, #f3f3f3 153.06%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        bottom: -75px;
+        left: 58%;
+        transform: translateX(-58%);
+        width: max-content;
+        text-align: center;
+      }
+
+      .sphere-6 {
+        background: linear-gradient(96deg, #3d3d3d 27.8%, #f3f3f3 129.25%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        bottom: 8%;
+        left: -45px;
+        width: max-content;
+        text-align: right;
+      }
+
+      .sphere-7 {
+        background: linear-gradient(96deg, #3d3d3d 27.8%, #f3f3f3 129.25%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        top: 50%;
+        left: -145px;
+        width: max-content;
+        text-align: right;
+      }
+
+      .sphere-8 {
+        background: linear-gradient(96deg, #3d3d3d 27.8%, #f3f3f3 129.25%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        top: 8%;
+        left: -70px;
+        width: 94px;
+        text-align: right;
+      }
+
+      @media screen and (max-width: $md-max) {
+        .sphere {
+          max-width: 104px;
+        }
+
+        .sphere-1 {
+          top: -90px;
+          left: 44%;
+        }
+
+        .sphere-2 {
+          top: 3%;
+          right: -20px;
+        }
+
+        .sphere-3 {
+          top: 38%;
+          right: -120px;
+        }
+
+        .sphere-4 {
+          bottom: 15%;
+          right: -60px;
+        }
+
+        .sphere-6 {
+          bottom: 8%;
+          left: -20px;
+        }
+
+        .sphere-7 {
+          top: 50%;
+          left: -120px;
+        }
+
+        .sphere-8 {
+          top: 8%;
+          left: -50px;
+        }
+      }
+
+      @media screen and (max-width: 863px) {
+        .sphere {
+          font-size: 10px;
+          max-width: 90px;
+        }
+
+        .sphere-1 {
+          top: -110px;
+          left: 44%;
+        }
+
+        .sphere-2 {
+          top: 1%;
+          right: -2px;
+        }
+
+        .sphere-3 {
+          top: 38%;
+          right: -100px;
+        }
+
+        .sphere-4 {
+          bottom: 13%;
+          right: -40px;
+        }
+
+        .sphere-5 {
+          bottom: -82px;
+          left: 58px;
+        }
+
+        .sphere-6 {
+          bottom: 8%;
+          left: -20px;
+        }
+
+        .sphere-7 {
+          top: 50%;
+          left: -120px;
+        }
+
+        .sphere-8 {
+          top: 8%;
+          left: -50px;
+        }
+      }
+
+      @media screen and (max-width: 815px) {
+        .sphere-3 {
+          top: 28%;
+          right: -75px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $sm-max) {
+    min-height: 800px !important;
+
+    .integralfc-h2 {
+      text-align: center;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 48px;
+    }
+
+    .background1,
+    .background2 {
+      width: 100%;
+    }
+
+    .main-bubble {
+      top: 40%;
+      height: 400px;
+
+      .orbit {
+        width: 450px;
+        height: 320px;
+      }
+
+      .orbit-content {
+        .circle-1 {
+          width: 1000px;
+          height: 1000px;
+        }
+
+        .circle-2 {
+          width: 700px;
+          height: 700px;
+        }
+
+        .sphere {
+          font-size: 11px;
+        }
+
+        .sphere-1 {
+          top: -85px;
+          left: 44%;
+          transform: translateX(-44%);
+        }
+
+        .sphere-2 {
+          top: -8px;
+          right: -2%;
+        }
+
+        .sphere-3 {
+          top: 36%;
+          right: -55px;
+        }
+
+        .sphere-4 {
+          bottom: 7%;
+          right: -20px;
+        }
+
+        .sphere-5 {
+          bottom: -78px;
+          left: 58%;
+          transform: translateX(-58%);
+        }
+
+        .sphere-6 {
+          bottom: 8px;
+          left: -3%;
+        }
+
+        .sphere-7 {
+          top: 42%;
+          left: -55px;
+        }
+
+        .sphere-8 {
+          top: 8%;
+          left: -21px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $xs-max) {
+    .main-bubble {
+      height: 400px;
+
+      .orbit {
+        width: 300px;
+        height: 310px;
+      }
+
+      .orbit-content {
+        .circle-1 {
+          width: 850px;
+          height: 850px;
+        }
+
+        .circle-2 {
+          width: 600px;
+          height: 600px;
+        }
+
+        .sphere {
+          font-size: 10px;
+        }
+
+        .sphere-1 {
+          top: -65px;
+          left: 43%;
+          transform: translateX(-48%);
+        }
+
+        .sphere-2 {
+          top: -33px;
+          right: -5%;
+          max-width: 104px;
+        }
+
+        .sphere-3 {
+          top: 50%;
+          right: -68px;
+          max-width: 96px;
+          text-align: center;
+        }
+
+        .sphere-4 {
+          bottom: -1%;
+          right: -25px;
+        }
+
+        .sphere-5 {
+          bottom: -64px;
+          left: 60%;
+          transform: translateX(-55%);
+        }
+
+        .sphere-6 {
+          bottom: -34px;
+          left: -5%;
+        }
+
+        .sphere-7 {
+          top: 62%;
+          left: -50px;
+          max-width: 96px;
+          text-align: center;
+        }
+
+        .sphere-8 {
+          top: -3%;
+          left: -40px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 442px) and (max-width: 577px) {
+    .main-bubble {
+      .orbit-content {
+        .sphere-3 {
+          max-width: 96px;
+          text-align: center;
+        }
+
+        .sphere-7 {
+          max-width: 96px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 441px) {
+    .main-bubble {
+      .orbit-content {
+        .sphere-3 {
+          max-width: 80px;
+          right: -43px;
+        }
+
+        .sphere-4 {
+          bottom: -4%;
+        }
+
+        .sphere-6 {
+          bottom: -42px;
+        }
+
+        .sphere-7 {
+          max-width: 80px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 399px) {
+    .main-bubble {
+      img {
+        height: 85%;
+      }
+
+      .orbit-content {
+        .circle-1 {
+          width: 800px;
+          height: 800px;
+        }
+
+        .circle-2 {
+          width: 550px;
+          height: 550px;
+        }
+
+        .sphere-1 {
+          top: -38px;
+        }
+
+        .sphere-2 {
+          top: -7px;
+          right: -2%;
+        }
+
+        .sphere-3 {
+          right: -30px;
+        }
+
+        .sphere-4 {
+          bottom: 0;
+          right: -19px;
+        }
+
+        .sphere-5 {
+          bottom: -35px;
+          left: 58%;
+        }
+
+        .sphere-6 {
+          bottom: -20px;
+          left: 5%;
+          text-align: center;
+        }
+
+        .sphere-7 {
+          left: -16px;
+          text-align: left;
+        }
+
+        .sphere-8 {
+          top: 7%;
+          left: -5px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $xl-max) {
+    .xbg-growing-background-wrapper {
+      display: block;
+    }
+
+    .orbit-content {
+      img {
+        rotate: 0deg;
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      .circle-1 {
+        width: 1250px;
+        height: 1250px;
+      }
+
+      .circle-2 {
+        width: 900px;
+        height: 900px;
+      }
+    }
+
+    min-height: 950px;
+    overflow: hidden;
+
+    .background1,
+    .background2,
+    .blocks-container {
+      display: none;
+    }
+  }
+}

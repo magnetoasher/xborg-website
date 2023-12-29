@@ -19,7 +19,7 @@
 @import '../components/Forms/Forms';
 @import '../components/Progressbar/Progressbar';
 @import '../components/Loader/Loader';
-@import '../components/ScrollDown//ScrollDown';
+@import '../components/ScrollDown/ScrollDown';
 @import '../components/Buttons/LinkButton/LinkButton';
 @import '../components/CardBlock/CardBlock';
 @import '../components/SocialIcons/SocialIcons';
@@ -29,6 +29,7 @@
 // MODULES
 @import '../modules/landing/landing';
 @import '../modules/about/about';
+@import '../modules/xbg/xbg';
 
 // PAGES
 @import '../pages/landing/landing';
@@ -37,4 +38,8 @@
 .page-scrollbar {
   height: 100vh;
   width: 100%;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
 }

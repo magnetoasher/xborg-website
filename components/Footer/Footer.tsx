@@ -31,8 +31,8 @@ export const Footer = () => {
             <div className="top-box">
               <Link href="/">
                 <Image
-                  src="/images/about/common/logo.svg"
-                  alt=""
+                  src="/images/logo.svg"
+                  alt="logo"
                   width={35}
                   height={35}
                 />

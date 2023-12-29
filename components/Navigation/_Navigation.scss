@@ -53,6 +53,7 @@ nav.navigation {
   }
 
   .right {
+    transform: translateX(-24px);
     li:nth-child(1) {
       transition-delay: 0.6s;
     }

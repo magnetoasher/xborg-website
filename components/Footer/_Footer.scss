@@ -125,6 +125,18 @@ footer.footer {
             color: $red100;
           }
         }
+
+        @media screen and (min-width: 954px) and (max-width: 1251px) {
+          .link-list {
+            min-width: auto;
+          }
+        }
+
+        @media screen and (max-width: 1251px) {
+          .link-list {
+            flex: 1 1 50%;
+          }
+        }
       }
 
       .bottom-box {
@@ -156,18 +168,13 @@ footer.footer {
             justify-content: flex-end;
             align-items: center;
             gap: 32px;
-          }
-
-          @media screen and (max-width: $sm-max) {
-            .link-box {
-              display: none;
-            }
+            margin-top: 12px;
           }
         }
       }
     }
 
-    @media screen and (max-width: $sm-max) {
+    @media screen and (max-width: 953px) {
       flex-direction: column;
       gap: 0;
 
@@ -188,6 +195,10 @@ footer.footer {
       .footer-actions {
         .bottom-box {
           padding-right: 0;
+
+          .inner-box {
+            flex-direction: column;
+          }
         }
       }
     }
