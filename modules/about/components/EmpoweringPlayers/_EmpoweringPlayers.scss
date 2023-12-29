@@ -1,0 +1,136 @@
+.empowering-container {
+  position: relative;
+  width: 100%;
+  background-color: $black;
+  min-height: 718px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url('/images/about/aboutImage2.png');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: top left;
+  background-size: 60%;
+  padding-bottom: 20px;
+
+  .content-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .layout-image {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      min-height: 718px;
+      background-color: transparent;
+      background-image: url('/images/about/aboutImage1.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right 0 bottom 0;
+
+      @media screen and (max-width: $sm-max) {
+        background-size: 80%;
+      }
+    }
+
+    .left-content {
+      width: 50%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-right: 16px;
+      padding-top: 200px;
+      z-index: 2;
+
+      .content {
+        width: 100%;
+        max-width: 648px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        p:nth-of-type(1) {
+          color: $red100;
+          font-family: Lexend;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          text-transform: uppercase;
+        }
+
+        h1 {
+          color: $gray100;
+          font-family: Integral CF;
+          font-size: 64px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 64px;
+          margin-top: 21px;
+          margin-bottom: 24px;
+        }
+
+        p:nth-of-type(2) {
+          color: $gray300;
+          font-family: $lexend;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 20px;
+          margin-bottom: 64px;
+        }
+
+        .btn-discord {
+          width: 180px;
+          height: 56px;
+        }
+
+        @media screen and (max-width: $sm-max) {
+          h1 {
+            font-size: 48px;
+            line-height: 48px;
+          }
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        padding-top: 100px;
+      }
+    }
+
+    .right-content {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      min-height: 718px;
+      background-image: url('/images/about/aboutImage4.png');
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-position: right 35% bottom 50%;
+      background-size: contain;
+      text-align: right;
+      background-color: transparent;
+      z-index: 1;
+
+      @media screen and (max-width: $sm-max) {
+        min-height: 600px;
+        min-height: 600px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $sm-max) {
+    background-size: 80%;
+
+    .right-content {
+      min-height: 500px;
+      min-height: 500px;
+    }
+  }
+}

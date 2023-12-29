@@ -1,0 +1,180 @@
+.learn-more {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 120px 16px;
+  background-color: $black;
+
+  .inner-container {
+    display: flex;
+    width: 100%;
+    max-width: 1210px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    .card {
+      width: 100%;
+      max-width: 590px;
+      border-radius: 16px;
+      border: 1px solid #343434;
+      background: rgba(9, 9, 9, 0.8);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      overflow: hidden;
+
+      &:hover {
+        border: 1px solid $red100;
+        transition: 0.2s ease-in;
+      }
+
+      p {
+        font-family: $lexend;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        color: $gray300;
+      }
+
+      h4 {
+        font-family: $lexend;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: $gray100;
+      }
+
+      .card-btn {
+        width: 163px;
+        height: 48px;
+      }
+
+      .card-links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      @media screen and (max-width: $lg-max) {
+        max-width: 100%;
+      }
+    }
+
+    .card1 {
+      background-image: url('/images/about/x3dIcon.png');
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-position: left top;
+
+      .card1-content {
+        margin-left: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 24px;
+
+        p {
+          color: $red100;
+        }
+
+        h4 {
+          width: 100%;
+          max-width: 311px;
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    .card2 {
+      background-image: url('/images/about/prometheus.png');
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-position: bottom right;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 60px;
+
+      .card2-top {
+        width: 100%;
+        max-width: 229px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 24px;
+      }
+
+      .card2-bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 24px;
+      }
+    }
+
+    .card3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 24px;
+
+      .card3-top {
+        width: 100%;
+        max-width: 311px;
+
+        p {
+          margin-bottom: 24px;
+        }
+      }
+
+      .card3-bottom {
+        display: flex;
+        justify-content: flex-start;
+        align-self: flex-start;
+        gap: 24px;
+      }
+    }
+
+    .card4 {
+      background-image: url('/images/about/aboutImage6.png');
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-position: bottom right;
+      background-blend-mode: saturation;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    @media screen and (max-width: 550px) {
+      .card1 {
+        background-size: 50%;
+
+        .card1-content {
+          margin-left: 0;
+          margin-top: 30%;
+        }
+      }
+
+      .card2 {
+        background-size: 70%;
+        background-position: bottom -20px right -20px;
+
+        .card2-bottom {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

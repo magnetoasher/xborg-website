@@ -19,9 +19,16 @@
 @import '../components/Forms/Forms';
 @import '../components/Progressbar/Progressbar';
 @import '../components/Loader/Loader';
+@import '../components/ScrollDown//ScrollDown';
+@import '../components/Buttons/LinkButton/LinkButton';
+@import '../components/CardBlock/CardBlock';
+@import '../components/SocialIcons/SocialIcons';
+@import '../components/FlashlightCursor/FlashlightCursor';
+@import '../components/FlashlightCursorWrapper/FlashlightCursorWrapper';
 
 // MODULES
 @import '../modules/landing/landing';
+@import '../modules/about/about';
 
 // PAGES
 @import '../pages/landing/landing';

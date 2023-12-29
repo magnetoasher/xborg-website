@@ -1,4 +1,18 @@
-export const Images = {
+type ImagePaths = {
+  [key: string]: string;
+};
+
+interface Images {
+  logo: string;
+  landing: ImagePaths;
+  badges: ImagePaths;
+  games: ImagePaths;
+  messanger: ImagePaths;
+  friends: ImagePaths;
+  about: ImagePaths;
+}
+
+export const Images: Images = {
   logo: '/images/logo.svg',
 
   landing: {
@@ -77,5 +91,49 @@ export const Images = {
     zilliqa: '/images/friends/zilliqa.svg',
     games: '/images/friends/games.svg',
     communitygaming: '/images/friends/communitygaming.svg',
+  },
+
+  about: {
+    spheres: '/images/about/Spheres.png',
+    arrowDown: '/images/about/common/arrow-down.svg',
+    chevronDown: '/images/about/common/chevron-down.svg',
+    chevronRight: '/images/about/common/chevron-right.svg',
+    cross: '/images/about/common/cross.svg',
+    icon1: '/images/about/common/icon-1.svg',
+    icon2: '/images/about/common/icon-2.svg',
+    icon3: '/images/about/common/icon-3.svg',
+    swissBorg: '/images/about/common/swiss-borg-icon.svg',
+    swissBorgLogo: '/images/about/partnerBrands/swiss-borg.svg',
+    polygonLogo: '/images/about/partnerBrands/polygon.svg',
+    myriaLogo: '/images/about/partnerBrands/myria.svg',
+    braveLogo: '/images/about/partnerBrands/brave.svg',
+    immutableLogo: '/images/about/partnerBrands/immutable.svg',
+    heroicLogo: '/images/about/partnerBrands/heroic.svg',
+    teamLiquidLogo: '/images/about/partnerBrands/team-liquid.svg',
+    tezosLogo: '/images/about/partnerBrands/tezos.svg',
+    plrLogo: '/images/about/partnerBrands/plr.svg',
+    ultraLogo: '/images/about/partnerBrands/ultra.svg',
+    mantleLogo: '/images/about/partnerBrands/mantle.svg',
+    zilliqaLogo: '/images/about/partnerBrands/zilliqa.svg',
+    ethereumLogo: '/images/about/partnerBrands/ethereum.svg',
+    eslLogo: '/images/about/partnerBrands/esl.svg',
+    shieldLogo: '/images/about/partnerBrands/shield.svg',
+    aaveLogo: '/images/about/partnerBrands/aave.svg',
+    faceitLogo: '/images/about/partnerBrands/faceit.svg',
+    oneM: '/images/about/1m.png',
+    twnt: '/images/about/20.png',
+    fourK: '/images/about/400k.png',
+    aboutImage1: '/images/about/aboutImage1.png',
+    aboutImage2: '/images/about/aboutImage2.png',
+    aboutImage3: '/images/about/aboutImage3.png',
+    aboutImage4: '/images/about/aboutImage4.png',
+    aboutImage5: '/images/about/aboutImage5.png',
+    aboutImage6: '/images/about/aboutImage6.png',
+    prometheus: '/images/about/prometheus',
+    spheres2: '/images/about/Spheres2.png',
+    spheres3: '/images/about/Spheres3.png',
+    spheres4: '/images/about/Spheres4.png',
+    spheres5: '/images/about/spheres5.png',
+    x3dIcon: '/images/about/x3dIcon.png',
   },
 };

@@ -1,0 +1,130 @@
+@import './MemberModal/MemberModal';
+
+.team-container {
+  position: relative;
+  // width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  background-color: $black;
+  background-image: url('/images/about/common/bg-1.svg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: top center;
+  background-size: 50%;
+  padding: 10% 16px;
+
+  h1 {
+    z-index: 2;
+    text-align: center;
+    font-family: $integralCF;
+    font-size: 88px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: $gray100;
+  }
+
+  .layout-object1 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+  }
+
+  .layout-object2 {
+    position: absolute;
+    left: 10%;
+    bottom: 10px;
+  }
+
+  .layout-object3 {
+    position: absolute;
+    left: 40%;
+    top: 30%;
+  }
+
+  .layout-object4 {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+  }
+
+  .layout-object5 {
+    position: absolute;
+    right: 0;
+    bottom: 40%;
+  }
+
+  .tabs-container {
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 27px;
+    margin-bottom: 24px;
+
+    .tab {
+      font-family: $lexend;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      color: $gray100;
+      text-transform: capitalize;
+      cursor: pointer;
+    }
+
+    .active {
+      color: $red100 !important;
+    }
+  }
+
+  .grid-container {
+    z-index: 2;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 auto;
+
+    .grid-item {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+      cursor: pointer;
+
+      @media screen and (min-width: 1265px) {
+        width: 160px;
+        height: 160px;
+      }
+    }
+
+    .overlay {
+      filter: grayscale(100%) brightness(150%);
+    }
+
+    .blur {
+      filter: grayscale(100%) blur(4px) opacity(80%);
+    }
+  }
+
+  @media screen and (max-width: $sm-max) {
+    h1 {
+      font-size: 40px;
+      line-height: 48px;
+    }
+  }
+
+  @media screen and (max-width: 430px) {
+    .tabs-container {
+      flex-wrap: wrap;
+    }
+  }
+}
