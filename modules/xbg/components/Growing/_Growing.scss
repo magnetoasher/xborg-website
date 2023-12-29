@@ -585,7 +585,15 @@
       .orbit-content {
         .sphere-3 {
           max-width: 80px;
-          right: -37px;
+          right: -43px;
+        }
+
+        .sphere-4 {
+          bottom: -4%;
+        }
+
+        .sphere-6 {
+          bottom: -42px;
         }
 
         .sphere-7 {
@@ -595,16 +603,61 @@
     }
   }
 
-  @media (max-width: 389px) {
+  @media (max-width: 399px) {
     .main-bubble {
+      img {
+        height: 85%;
+      }
+
       .orbit-content {
-        .lexend-body-sm.l {
-          font-size: 8px;
+        .circle-1 {
+          width: 800px;
+          height: 800px;
+        }
+
+        .circle-2 {
+          width: 550px;
+          height: 550px;
+        }
+
+        .sphere-1 {
+          top: -38px;
+        }
+
+        .sphere-2 {
+          top: -7px;
+          right: -2%;
+        }
+
+        .sphere-3 {
+          right: -30px;
+        }
+
+        .sphere-4 {
+          bottom: 0;
+          right: -19px;
+        }
+
+        .sphere-5 {
+          bottom: -35px;
+          left: 58%;
+        }
+
+        .sphere-6 {
+          bottom: -20px;
+          left: 5%;
+          text-align: center;
         }
 
         .sphere-7 {
-          left: -27px;
+          left: -16px;
           text-align: left;
+        }
+
+        .sphere-8 {
+          top: 7%;
+          left: -5px;
+          text-align: center;
         }
       }
     }

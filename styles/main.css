@@ -5028,15 +5028,46 @@ footer.footer {
   @media screen and (max-width: 441px) {
     .xbg-growing .main-bubble .orbit-content .sphere-3 {
       max-width: 80px;
-      right: -37px; }
+      right: -43px; }
+    .xbg-growing .main-bubble .orbit-content .sphere-4 {
+      bottom: -4%; }
+    .xbg-growing .main-bubble .orbit-content .sphere-6 {
+      bottom: -42px; }
     .xbg-growing .main-bubble .orbit-content .sphere-7 {
       max-width: 80px; } }
-  @media (max-width: 389px) {
-    .xbg-growing .main-bubble .orbit-content .lexend-body-sm.l {
-      font-size: 8px; }
+  @media (max-width: 399px) {
+    .xbg-growing .main-bubble img {
+      height: 85%; }
+    .xbg-growing .main-bubble .orbit-content .circle-1 {
+      width: 800px;
+      height: 800px; }
+    .xbg-growing .main-bubble .orbit-content .circle-2 {
+      width: 550px;
+      height: 550px; }
+    .xbg-growing .main-bubble .orbit-content .sphere-1 {
+      top: -38px; }
+    .xbg-growing .main-bubble .orbit-content .sphere-2 {
+      top: -7px;
+      right: -2%; }
+    .xbg-growing .main-bubble .orbit-content .sphere-3 {
+      right: -30px; }
+    .xbg-growing .main-bubble .orbit-content .sphere-4 {
+      bottom: 0;
+      right: -19px; }
+    .xbg-growing .main-bubble .orbit-content .sphere-5 {
+      bottom: -35px;
+      left: 58%; }
+    .xbg-growing .main-bubble .orbit-content .sphere-6 {
+      bottom: -20px;
+      left: 5%;
+      text-align: center; }
     .xbg-growing .main-bubble .orbit-content .sphere-7 {
-      left: -27px;
-      text-align: left; } }
+      left: -16px;
+      text-align: left; }
+    .xbg-growing .main-bubble .orbit-content .sphere-8 {
+      top: 7%;
+      left: -5px;
+      text-align: center; } }
   @media (max-width: 1400px) {
     .xbg-growing {
       min-height: 950px;
