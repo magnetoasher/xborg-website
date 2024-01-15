@@ -7262,7 +7262,6 @@ footer.footer {
   .infrastructure-gaming-web .gaming-main {
     position: relative;
     display: flex;
-    align-items: center;
     justify-content: space-between; }
     @media screen and (max-width: 992px) {
       .infrastructure-gaming-web .gaming-main {
