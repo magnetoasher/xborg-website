@@ -7983,6 +7983,7 @@ footer.footer {
   position: relative;
   z-index: 1; }
   .infrastructure-login h1 {
+    max-width: 827px;
     margin-bottom: 24px;
     margin-left: auto;
     margin-right: auto;
@@ -7992,7 +7993,8 @@ footer.footer {
     @media screen and (max-width: 992px) {
       .infrastructure-login h1 {
         font-size: 40px;
-        max-width: 396px; } }
+        max-width: 396px;
+        line-height: 48px; } }
   .infrastructure-login p {
     max-width: 533px;
     margin-left: auto;
