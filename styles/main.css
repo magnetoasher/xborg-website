@@ -7282,6 +7282,10 @@ footer.footer {
           .infrastructure-gaming-web .gaming-main .left .integralfc-h2 {
             margin-left: auto;
             margin-right: auto; } }
+        @media screen and (max-width: 768px) {
+          .infrastructure-gaming-web .gaming-main .left .integralfc-h2 {
+            font-size: 40px;
+            line-height: 48px; } }
         @media screen and (max-width: 576px) {
           .infrastructure-gaming-web .gaming-main .left .integralfc-h2 {
             margin-left: unset; } }
