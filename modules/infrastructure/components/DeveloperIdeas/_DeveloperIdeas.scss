@@ -43,6 +43,9 @@
       padding: 1px;
 
       &.sm-grow {
+        max-width: 284px;
+        min-width: 181px;
+
         @media screen and (min-width: $md-start) {
           flex-grow: 1;
         }
