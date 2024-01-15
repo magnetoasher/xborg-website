@@ -99,12 +99,6 @@
           }
         }
 
-        .xborg-id {
-          max-width: 68px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-
         .inner-content {
           position: relative;
           display: flex;
@@ -120,6 +114,20 @@
 
             @media screen and (max-width: $md-max) {
               min-height: 140px;
+            }
+          }
+
+          .text-center {
+            text-align: center;
+
+            .lexend-body-xs {
+              font-size: 10px;
+            }
+
+            .xborg-id {
+              max-width: 68px;
+              margin-left: auto;
+              margin-right: auto;
             }
           }
 

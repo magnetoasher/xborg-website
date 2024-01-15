@@ -7087,10 +7087,6 @@ footer.footer {
           @media screen and (max-width: 576px) {
             .infrastructure-introduction .introduction-content .introduction-main .introduction-right .bg:not(.sm) {
               display: none; } }
-        .infrastructure-introduction .introduction-content .introduction-main .introduction-right .xborg-id {
-          max-width: 68px;
-          margin-left: auto;
-          margin-right: auto; }
         .infrastructure-introduction .introduction-content .introduction-main .introduction-right .inner-content {
           position: relative;
           display: flex;
@@ -7105,6 +7101,14 @@ footer.footer {
             @media screen and (max-width: 992px) {
               .infrastructure-introduction .introduction-content .introduction-main .introduction-right .inner-content .first {
                 min-height: 140px; } }
+          .infrastructure-introduction .introduction-content .introduction-main .introduction-right .inner-content .text-center {
+            text-align: center; }
+            .infrastructure-introduction .introduction-content .introduction-main .introduction-right .inner-content .text-center .lexend-body-xs {
+              font-size: 10px; }
+            .infrastructure-introduction .introduction-content .introduction-main .introduction-right .inner-content .text-center .xborg-id {
+              max-width: 68px;
+              margin-left: auto;
+              margin-right: auto; }
           @media screen and (max-width: 768px) {
             .infrastructure-introduction .introduction-content .introduction-main .introduction-right .inner-content .intro-logo {
               width: 78px;
