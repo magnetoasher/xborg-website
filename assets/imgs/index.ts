@@ -11,6 +11,7 @@ interface Images {
   friends: ImagePaths;
   about: ImagePaths;
   xbg: ImagePaths;
+  infrastructure: ImagePaths;
 }
 
 export const Images: Images = {
@@ -156,5 +157,32 @@ export const Images: Images = {
     spheres4: '/images/about/Spheres4.png',
     spheres5: '/images/about/spheres5.png',
     x3dIcon: '/images/about/x3dIcon.png',
+  },
+
+  infrastructure: {
+    topLeft: '/images/infrastructure/top-left.png',
+    introductionRight: '/images/infrastructure/introduction-right.png',
+    introductionRightSm: '/images/infrastructure/introduction-right-sm.png',
+    introductionLogo: '/images/infrastructure/introduction-logo.png',
+    lock: '/images/infrastructure/lock.svg',
+    valueNetwork1: '/images/infrastructure/value-network-1.png',
+    valueNetwork2: '/images/infrastructure/value-network-2.png',
+    valueNetworkBubbles: '/images/infrastructure/value-network-bubbles.png',
+    gamingWebLogo1: '/images/infrastructure/gaming-web-logo-1.png',
+    gamingWebLogo2: '/images/infrastructure/gaming-web-logo-2.png',
+    gamingWebLogo3: '/images/infrastructure/gaming-web-logo-3.png',
+    gamingWebLogo4: '/images/infrastructure/gaming-web-logo-4.png',
+    gamingWebLogo5: '/images/infrastructure/gaming-web-logo-5.png',
+    gamingWebLogo6: '/images/infrastructure/gaming-web-logo-6.png',
+    gamingWebBubbles: '/images/infrastructure/gaming-web-bubbles.png',
+    gamingWebBubblesSm: '/images/infrastructure/gaming-web-bubbles-sm.png',
+    marble1: '/images/infrastructure/marble-1.png',
+    marble2: '/images/infrastructure/marble-2.png',
+    marble3: '/images/infrastructure/marble-3.png',
+    key: '/images/infrastructure/developer-toolkit-key.png',
+    user: '/images/infrastructure/user.png',
+    games: '/images/infrastructure/games.png',
+    communities: '/images/infrastructure/communities.png',
+    arrowRight: '/images/infrastructure/arrow-right.png',
   },
 };

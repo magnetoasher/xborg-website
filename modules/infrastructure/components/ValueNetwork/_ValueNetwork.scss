@@ -1,0 +1,82 @@
+.infrastructure-value-network {
+  padding-top: 120px;
+  padding-bottom: 80px;
+  position: relative;
+
+  @media screen and (max-width: $xs-max) {
+    padding-top: 217px;
+  }
+
+  .bubbles {
+    position: absolute;
+    left: 0;
+    top: 120px;
+
+    @media screen and (max-width: $md-max) {
+      display: none;
+    }
+  }
+
+  .integralfc-h1 {
+    max-width: 760px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+
+    @media screen and (max-width: $xs-max) {
+      font-size: 40px;
+    }
+  }
+
+  .lexend-body-md {
+    max-width: 510px;
+    margin-left: auto;
+    margin-right: auto;
+    color: $gray300;
+
+    @media screen and (max-width: $xs-max) {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 20px;
+    }
+  }
+
+  .boxes {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 798px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 56px;
+
+    .box {
+      flex-grow: 1;
+      flex-shrink: 0;
+      padding: 24px;
+      border: 1px solid #343434;
+      background-color: #090909cc;
+      border-radius: 16px;
+
+      .lexend-body-md {
+        margin: 0;
+      }
+
+      @media screen and (max-width: $md-max) {
+        flex-shrink: unset;
+      }
+
+      .box-heading {
+        font-size: 24px;
+        margin-bottom: 16px;
+      }
+
+      img {
+        margin-top: 40px;
+      }
+    }
+  }
+}

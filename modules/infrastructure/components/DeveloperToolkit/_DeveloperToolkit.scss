@@ -1,0 +1,186 @@
+.infrastructure-developer-toolkit {
+  padding: 120px 0 180px;
+  position: relative;
+  z-index: 1;
+
+  @media screen and (max-width: $lg-max) {
+    padding-bottom: 120px;
+  }
+
+  @media screen and (max-width: $md-max) {
+    padding-bottom: 48px;
+  }
+
+  .toolkit-main {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $lg-max) {
+      gap: 56px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .left {
+      flex-grow: 1;
+      max-width: 490px;
+
+      @media screen and (max-width: 634px) {
+        max-width: unset;
+      }
+
+      .integralfc-h2 {
+        margin-bottom: 32px;
+        line-height: 48px;
+        font-weight: 300;
+
+        @media screen and (max-width: 634px) {
+          font-size: 40px;
+        }
+      }
+
+      .lexend-body-sm {
+        font-weight: 300;
+        color: $gray300;
+      }
+    }
+
+    .right {
+      flex-grow: 1;
+      flex-shrink: 0;
+      max-width: 592px;
+
+      @media screen and (max-width: 634px) {
+        max-width: 340px;
+      }
+
+      .keys {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+
+        .key-container {
+          background: linear-gradient(
+              93.23deg,
+              #868686 -1.74%,
+              rgba(0, 0, 0, 0) 78.61%
+            ),
+            linear-gradient(0deg, rgba(52, 52, 52, 0.5), rgba(52, 52, 52, 0.5));
+          padding: 1px;
+          border-radius: 999px;
+
+          .key {
+            padding: 0 16px 0 8px;
+            background: linear-gradient(0deg, #080808, #080808),
+              linear-gradient(
+                0deg,
+                rgba(52, 52, 52, 0.5),
+                rgba(52, 52, 52, 0.5)
+              ),
+              linear-gradient(93.23deg, #868686 -1.74%, rgba(0, 0, 0, 0) 78.61%);
+            border-radius: 999px;
+            min-width: 138px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .text {
+              background: linear-gradient(90deg, #ababab 0%, #2d2d2d 102.73%),
+                linear-gradient(
+                  88.95deg,
+                  rgba(255, 255, 255, 0) 80.46%,
+                  #ffffff 112.56%
+                );
+
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+
+              @media screen and (max-width: 634px) {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+
+      .retrieve {
+        border-bottom: 1px solid #343434;
+        padding-bottom: 12px;
+        width: 100%;
+        max-width: 360px;
+        margin: 16px auto 0;
+        position: relative;
+        font-size: 12px;
+        font-weight: 300;
+        color: $gray300;
+        text-align: center;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          width: 1px;
+          height: 8px;
+          background-color: #343434;
+        }
+
+        &::before {
+          left: 0;
+        }
+
+        &::after {
+          right: 0;
+        }
+      }
+
+      .line {
+        width: 1px;
+        height: 24px;
+        background-color: #343434;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .pills-container {
+        border: 1px solid #343434;
+        background: linear-gradient(0deg, #090909, #090909),
+          linear-gradient(0deg, #343434, #343434);
+        padding: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        border-radius: 16px;
+
+        .pill-box {
+          width: 271px;
+          flex-grow: 1;
+          flex-shrink: 0;
+          border-radius: 999px;
+          padding: 8px 16px 8px 8px;
+          background: linear-gradient(
+            0deg,
+            rgba(235, 58, 74, 0.1),
+            rgba(235, 58, 74, 0.1)
+          );
+          border: 1px solid #eb3a4a80;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 16px;
+
+          img {
+            border-radius: 50%;
+          }
+
+          .text {
+            color: #eb3a4a;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import { Images } from '@/assets/imgs';
-import { TeamMember } from './types';
+import { TeamMember, Metadata, User } from './types';
 
 export const CardData = [
   {
@@ -258,5 +258,110 @@ export const PossibilitiesData = [
     description:
       'Unlock investment opportunities in the most promising upcoming games because of your gaming credentials.',
     icon: Images.xbg.discovery9,
+  },
+];
+
+export const GamingUserData: User[] = [
+  {
+    img: Images.infrastructure.gamingWebLogo1,
+    name: 'MonkeyIslander872',
+    player_metadata: {
+      'player _name': 'JohnDoe1',
+      gaming_platform: 'PC',
+      game_level: 25,
+      achievements: ['Master of the Arena', 'Legendary Explorer'],
+      total_score: 2000,
+      preferred_game_mode: 'Team Deathmatch',
+      'collected items': {
+        weapon: 'Legendary Sword',
+        armor: 'Epic Plate Armor',
+        pet: 'Fire Dragon',
+      },
+    },
+  },
+  {
+    img: Images.infrastructure.gamingWebLogo2,
+    name: 'mean_deal_',
+    player_metadata: {
+      'player _name': 'JohnDoe12',
+      gaming_platform: 'PC',
+      game_level: 25,
+      achievements: ['Master of the Arena', 'Legendary Explorer'],
+      total_score: 2000,
+      preferred_game_mode: 'Team Deathmatch',
+      'collected items': {
+        weapon: 'Legendary Sword',
+        armor: 'Epic Plate Armor',
+        pet: 'Fire Dragon',
+      },
+    },
+  },
+  {
+    img: Images.infrastructure.gamingWebLogo3,
+    name: 'TennisChallenger',
+    player_metadata: {
+      'player _name': 'JohnDoe123',
+      gaming_platform: 'PC',
+      game_level: 25,
+      achievements: ['Master of the Arena', 'Legendary Explorer'],
+      total_score: 2000,
+      preferred_game_mode: 'Team Deathmatch',
+      'collected items': {
+        weapon: 'Legendary Sword',
+        armor: 'Epic Plate Armor',
+        pet: 'Fire Dragon',
+      },
+    },
+  },
+  {
+    img: Images.infrastructure.gamingWebLogo4,
+    name: 'DoozieWoozie',
+    player_metadata: {
+      'player _name': 'JohnDoe12',
+      gaming_platform: 'PC',
+      game_level: 25,
+      achievements: ['Master of the Arena', 'Legendary Explorer'],
+      total_score: 2000,
+      preferred_game_mode: 'Team Deathmatch',
+      'collected items': {
+        weapon: 'Legendary Sword',
+        armor: 'Epic Plate Armor',
+        pet: 'Fire Dragon',
+      },
+    },
+  },
+  {
+    img: Images.infrastructure.gamingWebLogo5,
+    name: 'tiredOfbeIngWired',
+    player_metadata: {
+      'player _name': 'JohnDoe12',
+      gaming_platform: 'PC',
+      game_level: 25,
+      achievements: ['Master of the Arena', 'Legendary Explorer'],
+      total_score: 2000,
+      preferred_game_mode: 'Team Deathmatch',
+      'collected items': {
+        weapon: 'Legendary Sword',
+        armor: 'Epic Plate Armor',
+        pet: 'Fire Dragon',
+      },
+    },
+  },
+  {
+    img: Images.infrastructure.gamingWebLogo6,
+    name: 'Greendragon_',
+    player_metadata: {
+      'player _name': 'JohnDoe123',
+      gaming_platform: 'PC',
+      game_level: 25,
+      achievements: ['Master of the Arena', 'Legendary Explorer'],
+      total_score: 2000,
+      preferred_game_mode: 'Team Deathmatch',
+      'collected items': {
+        weapon: 'Legendary Sword',
+        armor: 'Epic Plate Armor',
+        pet: 'Fire Dragon',
+      },
+    },
   },
 ];

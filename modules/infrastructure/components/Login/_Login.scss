@@ -1,0 +1,129 @@
+.infrastructure-login {
+  position: relative;
+  z-index: 1;
+
+  h1 {
+    max-width: 827px;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 88px;
+    line-height: 104px;
+
+    @media screen and (max-width: $md-max) {
+      font-size: 40px;
+      max-width: 396px;
+      line-height: 48px;
+    }
+  }
+
+  p {
+    max-width: 533px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: 300;
+    color: $gray300;
+  }
+
+  .boxes {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 56px auto 0;
+    gap: 60px;
+    position: relative;
+
+    @media screen and (max-width: $sm-max) {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 320px;
+      background-color: #343434;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      @media screen and (max-width: $sm-max) {
+        width: 1px;
+        height: 100px;
+      }
+    }
+
+    .box {
+      width: 348px;
+      height: 224px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 16px;
+      text-align: center;
+      position: relative;
+
+      @media screen and (max-width: $md-max) {
+        height: 120px;
+      }
+
+      @media screen and (max-width: $sm-max) {
+        height: 80px;
+      }
+
+      &.red {
+        background: linear-gradient(
+          0deg,
+          rgba(235, 58, 74, 0.1),
+          rgba(235, 58, 74, 0.1)
+        );
+        border: 1px solid #eb3a4a80;
+        color: #eb3a4a;
+      }
+
+      &.black {
+        background: linear-gradient(0deg, #090909, #090909),
+          linear-gradient(0deg, #343434, #343434);
+        border: 1px solid #343434;
+      }
+    }
+
+    .pill-box-container {
+      position: relative;
+      background: linear-gradient(
+          93.23deg,
+          #868686 -1.74%,
+          rgba(0, 0, 0, 0) 78.61%
+        ),
+        linear-gradient(0deg, rgba(52, 52, 52, 0.5), rgba(52, 52, 52, 0.5));
+      padding: 1px;
+      border-radius: 999px;
+
+      .pill-box {
+        border-radius: 999px;
+        background: linear-gradient(0deg, #080808, #080808),
+          linear-gradient(0deg, rgba(52, 52, 52, 0.5), rgba(52, 52, 52, 0.5)),
+          linear-gradient(93.23deg, #868686 -1.74%, rgba(0, 0, 0, 0) 78.61%);
+        display: flex;
+        align-items: center;
+        padding: 4px 16px 4px 10px;
+        width: 194px;
+
+        .text {
+          background: linear-gradient(90deg, #ababab 0%, #2d2d2d 102.73%),
+            linear-gradient(
+              88.95deg,
+              rgba(255, 255, 255, 0) 80.46%,
+              #ffffff 112.56%
+            );
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+        }
+      }
+    }
+  }
+}
