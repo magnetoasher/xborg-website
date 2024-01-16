@@ -56,8 +56,13 @@
             font-size: 40px;
           }
 
-          @media screen and (max-width: 390px) {
-            font-size: 30px;
+          @media screen and (min-width: 361px) and (max-width: 390px) {
+            font-size: 36px;
+            line-height: 1.2;
+          }
+
+          @media screen and (max-width: 360px) {
+            font-size: 34px;
             line-height: 1.2;
           }
         }
