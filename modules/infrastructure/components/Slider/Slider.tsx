@@ -210,9 +210,10 @@ export const Slider = () => {
                 <div className="profile-box equal with-line">
                   <Image
                     src={Images.infrastructure.games}
+                    className="social"
                     alt="player-profile"
-                    width={64}
-                    height={64}
+                    width={78}
+                    height={88}
                   />
 
                   <div className="text lexend-body-md">Games</div>
@@ -220,9 +221,10 @@ export const Slider = () => {
                 <div className="profile-box equal with-line">
                   <Image
                     src={Images.infrastructure.communities}
+                    className="social"
                     alt="player-profile"
-                    width={64}
-                    height={64}
+                    width={72}
+                    height={88}
                   />
 
                   <div className="text lexend-body-md">Communities</div>

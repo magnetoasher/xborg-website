@@ -51,6 +51,7 @@
 
         .integralfc-h1 {
           margin-bottom: 24px;
+          color: #e4e4e7;
 
           @media screen and (max-width: $xs-max) {
             font-size: 40px;
@@ -74,6 +75,7 @@
 
           line-height: 20px;
           color: $gray300;
+          font-weight: 300;
         }
       }
 

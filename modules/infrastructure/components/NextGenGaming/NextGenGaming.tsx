@@ -65,7 +65,7 @@ export const NextGenGaming = () => {
                   height={75}
                 />
 
-                <div className="lexend-body-sxl sphere-title">Super Apps</div>
+                <div className="lexend-body-sxl sphere-title">SuperApps</div>
               </div>
             </ObserverContainer>
           </div>

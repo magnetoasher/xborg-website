@@ -23,6 +23,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 24px;
+    color: #e4e4e7;
 
     @media screen and (max-width: $xs-max) {
       font-size: 40px;
@@ -38,12 +39,9 @@
     margin-left: auto;
     margin-right: auto;
     color: $gray300;
-
-    @media screen and (max-width: $xs-max) {
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 20px;
-    }
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
   }
 
   .boxes {
@@ -59,6 +57,7 @@
 
     .box {
       flex-grow: 1;
+      width: calc(50% - 12px);
       flex-shrink: 0;
       padding: 24px;
       border: 1px solid #343434;
@@ -66,11 +65,18 @@
       border-radius: 16px;
 
       .lexend-body-md {
-        margin: 0;
+        margin-left: unset;
+        margin-right: unset;
+        font-weight: 300;
+        font-size: 14px;
       }
 
       @media screen and (max-width: $md-max) {
         flex-shrink: unset;
+      }
+
+      @media screen and (max-width: $sm-max) {
+        width: 100%;
       }
 
       .box-heading {
@@ -79,7 +85,7 @@
       }
 
       img {
-        margin-top: 40px;
+        margin-top: 20px;
       }
     }
   }

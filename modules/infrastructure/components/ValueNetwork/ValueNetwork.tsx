@@ -20,21 +20,22 @@ export const ValueNetwork = () => {
 
         <div className="boxes">
           <div className="box">
-            <div className="box-heading">Gaming social layer</div>
+            <div className="box-heading">The gaming social layer</div>
             <div className="lexend-body-md gray300">
-              Gamers take control of their data.
+              Players take control of their data by building their gaming
+              identity.
             </div>
             <Image
               src={Images.infrastructure.valueNetwork1}
               alt="Gaming social"
-              width={72}
+              width={88}
               height={88}
             />
           </div>
           <div className="box">
             <div className="box-heading">Build next-gen fat dapps</div>
             <div className="lexend-body-md gray300">
-              Plug any apps on top of the gaming social layer.
+              Plug apps into our gaming credential infrastructure.
             </div>
             <Image
               src={Images.infrastructure.valueNetwork2}

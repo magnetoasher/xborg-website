@@ -25,6 +25,10 @@
       padding: 40px;
       overflow: hidden;
 
+      @media screen and (max-width: $sm-max) {
+        padding: 24px;
+      }
+
       &:hover {
         border: 1px solid $red100;
         transition: 0.2s ease-in;
@@ -80,12 +84,23 @@
 
         p {
           color: $red100;
+          font-weight: 500;
+
+          @media screen and (max-width: $sm-max) {
+            font-size: 12px;
+          }
         }
 
         h4 {
           width: 100%;
           max-width: 311px;
           margin-bottom: 24px;
+          font-weight: 400;
+
+          @media screen and (max-width: $sm-max) {
+            line-height: 30px;
+            margin-bottom: 8;
+          }
         }
       }
     }
@@ -100,6 +115,10 @@
       justify-content: flex-start;
       align-items: flex-start;
       gap: 60px;
+
+      @media screen and (max-width: $sm-max) {
+        gap: 47px;
+      }
 
       .card2-top {
         width: 100%;
@@ -117,6 +136,31 @@
         justify-content: flex-start;
         align-items: center;
         gap: 24px;
+
+        @media screen and (max-width: $sm-max) {
+          align-items: flex-start;
+          flex-direction: column;
+
+          svg {
+            display: none;
+          }
+        }
+      }
+
+      h4 {
+        @media screen and (max-width: $sm-max) {
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 30px;
+        }
+      }
+
+      p {
+        @media screen and (max-width: $sm-max) {
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 20px;
+        }
       }
     }
 
@@ -131,8 +175,24 @@
         width: 100%;
         max-width: 311px;
 
+        h4 {
+          @media screen and (max-width: $sm-max) {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 30px;
+            margin-bottom: 16px;
+          }
+        }
+
         p {
           margin-bottom: 24px;
+
+          @media screen and (max-width: $sm-max) {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 20px;
+            margin-bottom: 40px;
+          }
         }
       }
 
@@ -155,6 +215,22 @@
       justify-content: flex-start;
       align-items: flex-start;
       gap: 12px;
+
+      h4 {
+        @media screen and (max-width: $sm-max) {
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 30px;
+        }
+      }
+
+      p {
+        @media screen and (max-width: $sm-max) {
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 20px;
+        }
+      }
     }
 
     @media screen and (max-width: 550px) {
@@ -170,10 +246,6 @@
       .card2 {
         background-size: 70%;
         background-position: bottom -20px right -20px;
-
-        .card2-bottom {
-          flex-direction: column;
-        }
       }
     }
   }

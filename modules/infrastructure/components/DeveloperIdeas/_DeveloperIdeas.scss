@@ -13,6 +13,7 @@
   .integralfc-h2 {
     margin-bottom: 56px;
     text-align: center;
+    color: #f0f0f0;
     line-height: 48px;
 
     @media screen and (max-width: $sm-max) {
@@ -80,6 +81,7 @@
           -webkit-text-fill-color: transparent;
           -webkit-background-clip: text;
           line-height: 18px;
+          font-size: 14px;
 
           @media screen and (max-width: $sm-max) {
             font-size: 12px;

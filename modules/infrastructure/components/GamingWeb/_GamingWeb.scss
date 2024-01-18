@@ -68,6 +68,7 @@
       .integralfc-h2 {
         max-width: 280px;
         margin-bottom: 32px;
+        color: #f0f0f0;
 
         @media screen and (max-width: $md-max) {
           margin-left: auto;
@@ -144,7 +145,7 @@
 
         &.active {
           opacity: 1;
-          pointer-events: all;
+          // pointer-events: all;
         }
 
         .user-badge {

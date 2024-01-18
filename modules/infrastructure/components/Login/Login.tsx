@@ -16,7 +16,7 @@ export const Login = () => {
 
         <div className="boxes">
           <div className="box red lexend-body-md">
-            Xborg <br />
+            XBorg <br />
             player profile
           </div>
           <div className="pill-box-container lexend-body-sm">
@@ -31,7 +31,7 @@ export const Login = () => {
             </div>
           </div>
           <div className="box black lexend-body-md">
-            Xborg-powered <br />
+            XBorg-powered <br />
             applications
           </div>
         </div>
